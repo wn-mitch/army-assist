@@ -1,0 +1,38 @@
+Xenos - T'au Empire - FNF - 1/7/2025 - [990pts]
+
+# ++ Army Roster ++ [990pts]
+## Configuration
+Battle Size: Incursion (1000 Point limit)
+Detachment: Retaliation Cadre
+Show/Hide Options
+
+## Epic Hero [95pts]
+Commander Farsight [95pts]: Dawn Blade, High-intensity plasma rifle, Warlord
+
+## Character [50pts]
+Cadre Fireblade [50pts]: Close combat weapon, Fireblade pulse rifle
+
+## Battleline [100pts]
+Breacher Team [100pts]:
+• 1x Breacher Fire Warrior Shas'ui: Close combat weapon, Pulse blaster, Pulse pistol, Support turret
+• 9x Breacher Fire Warriors: Close combat weapon, Pulse blaster, Pulse pistol
+
+## Infantry [195pts]
+Kroot Carnivores [65pts]:
+• 1x Long-quill: Close combat weapon, Kroot pistol, Kroot rifle
+• 9x Kroot Carnivores: Close combat weapon, Kroot rifle
+Vespid Stingwings [130pts]:
+• 1x Vespid Strain Leader: Neutron blaster, Oversight Drone, Stingwing claws
+• 6x Vespid Stingwings w/ Neutron Blaster: Neutron blaster, Stingwing claws
+• 1x Vespid Stingwings w/ Neutron Grenade Launcher: Neutron grenade launcher, Stingwing claws
+• 1x Vespid Stingwings w/ Neutron Rail Rifle: Neutron rail rifle, Stingwing claws
+• 1x Vespid Stingwings w/ T'au Flamer: Stingwing claws, T'au flamer
+
+## Vehicle [550pts]
+Broadside Battlesuits [90pts]:
+• 1x Broadside Shas’vre: Crushing bulk, Heavy rail rifle
+Crisis Starscythe Battlesuits [110pts]:
+• 1x Crisis Starscythe Shas’vre: Battlesuit fists, Burst cannon, T'au flamer
+• 2x Crisis Starscythe Shas’ui: Battlesuit fists, Burst cannon, T'au flamer
+Ghostkeel Battlesuit [160pts]: Ghostkeel fists, Fusion collider, Twin burst cannon
+Riptide Battlesuit [190pts]: Riptide fists, Heavy burst cannon, Twin fusion blaster

@@ -1,0 +1,18 @@
+Chaos - World Eaters - Rip n Tear
+
+# ++ Army Roster ++ [765pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Blessings of Khorne Reference
+Detachment Choice: Berzerker Warband
+Show/Hide Options: Khorne Daemons are visible
+
+## Epic Hero [675pts]
+Angron [435pts]: Samni’arius and Spinegrinder, Warlord
+Khârn the Betrayer [100pts]: Gorechild, Khârn's plasma pistol
+Lord Invocatus [140pts]: Bolt pistol, Coward's Bane, Juggernaught's bladed horn
+
+## Battleline [90pts]
+Khorne Berserkers [90pts]:
+• 1x Khorne Berserker Champion: Berserker chainblade, Bolt pistol
+• 4x Khorne Berserker: Berserker chainblade, Bolt pistol

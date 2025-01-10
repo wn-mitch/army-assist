@@ -1,0 +1,67 @@
+Xenos - T'au Empire - Base Tau - [2000pts]
+
+# ++ Army Roster ++ [2000pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Auxiliary Cadre
+Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Epic Hero [95pts]
+Commander Farsight [95pts]: Dawn Blade, High-intensity plasma rifle, Warlord
+
+## Character [310pts]
+Cadre Fireblade [50pts]: Close combat weapon, Fireblade pulse rifle
+Commander in Coldstar Battlesuit [120pts]: Transponder Lock Module, Battlesuit fists, Cyclic ion blaster, Plasma rifle, Shield generator, Weapon support system, 2x Shield Drone
+Kroot Lone-spear [90pts]: Close combat weapon, Kalamandra's bite, Kroot long gun
+Kroot War Shaper [50pts]: Kroot pistol, Shaper's blade, Dart-bow and tri-blade
+
+## Battleline [75pts]
+Strike Team [75pts]:
+• 1x Fire Warrior Shas'ui: Close combat weapon, Pulse pistol, Pulse rifle, Support turret, Guardian Drone, Shield Drone
+• 9x Fire Warrior w/ pulse rifle: Close combat weapon, Pulse pistol, Pulse rifle
+
+## Infantry [340pts]
+Kroot Carnivores [65pts]:
+• 1x Long-quill: Close combat weapon, Kroot pistol, Kroot rifle
+• 9x Kroot Carnivores: Close combat weapon, Kroot rifle
+Kroot Farstalkers [85pts]:
+• 1x Kroot Kill-broker: Kroot pistol, Ritual blade, T'au tech rifle
+• 7x Kroot Farstalker: Close combat weapon, Farstalker firearm, Kroot pistol
+• 1x Kroot Farstalker w/ Farstalker firearm and Pech'ra: Close combat weapon, Farstalker firearm, Kroot pistol
+• 1x Kroot Farstalker w/ Londaxi tribalest: Close combat weapon, Kroot pistol, Londaxi tribalest
+• 2x Kroot Hounds: Ripping fangs
+Stealth Battlesuits [60pts]:
+• 1x Stealth Shas'vre: Battlesuit fists, Battlesuit support system, Homing beacon, Burst cannon
+• 2x Stealth Shas'ui w/ burst cannon: Battlesuit fists, Burst cannon
+Vespid Stingwings [65pts]:
+• 1x Vespid Strain Leader: Neutron blaster, Stingwing claws
+• 4x Vespid Stingwings w/ Neutron Blaster: Neutron blaster, Stingwing claws
+Vespid Stingwings [65pts]:
+• 1x Vespid Strain Leader: Neutron blaster, Stingwing claws
+• 4x Vespid Stingwings w/ Neutron Blaster: Neutron blaster, Stingwing claws
+
+## Mounted [285pts]
+Krootox Rampagers [190pts]:
+• 6x Krootox Rampagers: Hunting blades, Kroot pistol and hunting javelins, Rampager fists
+Krootox Rampagers [95pts]:
+• 3x Krootox Rampagers: Hunting blades, Kroot pistol and hunting javelins, Rampager fists
+
+## Beast [40pts]
+Kroot Hounds [40pts]:
+• 5x Kroot Hounds: Ripping fangs
+
+## Vehicle [855pts]
+Broadside Battlesuits [90pts]:
+• 1x Broadside Shas’vre: Crushing bulk, 2x Shield Drone, Heavy rail rifle, Seeker missile, Twin plasma rifle
+Broadside Battlesuits [90pts]:
+• 1x Broadside Shas’vre: Crushing bulk, 2x Shield Drone, Heavy rail rifle, Seeker missile, Twin plasma rifle
+Broadside Battlesuits [90pts]:
+• 1x Broadside Shas’vre: Crushing bulk, 2x Shield Drone, Heavy rail rifle, Seeker missile, Twin plasma rifle
+Crisis Fireknife Battlesuits [130pts]:
+• 1x Crisis Fireknife Shas’vre: Battlesuit fists, Missile pod, Plasma rifle, Gun Drone (Twin pulse carbine), Shield Drone
+• 2x Crisis Fireknife Shas’ui: Battlesuit fists, Missile pod, Plasma rifle, Gun Drone (Twin pulse carbine), Shield Drone
+Crisis Sunforge Battlesuits [150pts]:
+• 1x Crisis Sunforge Shas’vre: Battlesuit fists, 2x Fusion blaster, Gun Drone (Twin pulse carbine), Shield Drone
+• 2x Crisis Sunforge Shas’ui: Battlesuit fists, 2x Fusion blaster, Gun Drone (Twin pulse carbine), Shield Drone
+Ghostkeel Battlesuit [160pts]: Ghostkeel fists, Fusion collider, Twin fusion blaster
+Hammerhead Gunship [145pts]: Armoured hull, Railgun, 2x Seeker missile, 2 Smart missile systems (2x Smart missile system)
