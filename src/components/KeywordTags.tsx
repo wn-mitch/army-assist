@@ -2,6 +2,7 @@ import TagDetail from "@/types/TagDetail";
 import React from "react";
 import {
   GiBirdClaw,
+  GiBrainTentacle,
   GiAntiAircraftGun,
   GiBrainstorm,
   GiCrosshair,
@@ -135,6 +136,11 @@ const tagDetails: { [key: string]: TagDetail } = {
     bgColor: "bg-indigo-700",
     ringColor: "ring-indigo-800",
   },
+  "Anti-psyker": {
+    icon: <GiBrainTentacle className="h-5 w-5" />,
+    bgColor: "bg-indigo-700",
+    ringColor: "ring-indigo-800",
+  },
   Lance: {
     icon: <GiSpearHook className="h-5 w-5" />,
     bgColor: "bg-pink-800",
@@ -175,6 +181,11 @@ const tagDetails: { [key: string]: TagDetail } = {
     bgColor: "bg-cyan-800",
     ringColor: "ring-cyan-900",
   },
+  "conversion": {
+    icon: <GiBrainstorm className="h-5 w-5" />,
+    bgColor: "bg-purple-800",
+    ringColor: "ring-purple-900",
+  }
 };
 
 function KeywordTags({ keywords }: { keywords: string[] | undefined }) {

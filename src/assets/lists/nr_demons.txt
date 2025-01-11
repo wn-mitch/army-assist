@@ -1,0 +1,131 @@
+Chaos - Chaos Daemons - Tester - [12900pts]
+
+# ++ Army Roster ++ [12900pts]
+## Configuration
+Battle Size
+Detachment Choice
+Khorne Daemons are visible
+Nurgle Daemons are visible
+Slaanesh Daemons are visible
+Tzeentch Daemons are visible
+Show/Hide Options: Chaos Knights are visible, Legends are visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Epic Hero [3600pts]
+Aetaos'rau'keres [Legends] [315pts]: Bolt of Tzeentch, Staff of cataclysm, Warpfire talons
+An'ggrath the Unbound [Legends] [415pts]: Axe of Khorne, Bloodlash
+Be'lakor [325pts]: Betraying Shades, The Blade of Shadows
+Epidemius [80pts]: Balesword and nurgling attendants
+Horticulous Slimux [120pts]: Acidic maw, Lopping shears
+Kairos Fateweaver [270pts]: Infernal Gateway, Staff of Tomorrow
+Karanak [65pts]: Collar of Khorne, Soul-rending fangs
+Rotigus [230pts]: Gnarlrod, Streams of brackish filth
+Scabeiathrax the Bloated [Legends] [275pts]: Blade of decay, Putrid vomit
+Shalaxi Helbane [425pts]: Lash of Slaanesh, Pavane of Slaanesh, Snapping claws, Soulpiercer
+Skarbrand [305pts]: Bellow of endless fury, Slaughter and Carnage
+Skulltaker [85pts]: The Slayer Sword
+Syll'esske [120pts]: Axe of Dominion, Cacophonic choir, Scourging whip
+The Blue Scribes [75pts]: Sharp quills
+The Changeling [90pts]: Infernal Flames, The Trickster's Staff
+The Masque of Slaanesh [85pts]: Serrated claws
+Zarakynel [Legends] [320pts]: Phantasmagoria, Snapping claws, Souleater blade
+
+## Character [2645pts]
+Bloodmaster [65pts]: Blade of blood
+Bloodthirster [305pts]: Hellfire breath, Great axe of Khorne
+Changecaster [60pts]: Arcane Fireball, Herald combat weapon
+Contorted Epitome [80pts]: Coiled tentacles, Ravaging claws
+Daemon Prince of Chaos [190pts]: Hellforged weapons, Infernal cannon, Khorne
+Daemon Prince of Chaos with wings [180pts]: Hellforged weapons, Infernal cannon, Khorne
+Exalted Flamer [65pts]: Fires of Tzeentch, Flamer mouths
+Fateskimmer [95pts]: Arcane Fireball, Herald combat weapon, Screamer bites
+Fluxmaster [60pts]: Arcane Fireball, Herald combat weapon
+Great Unclean One [230pts]: Putrid vomit, Bilesword, Plague flail
+Herald of Slaanesh on Steed of Slaanesh [Legends] [70pts]: Lashing tongue, Ravaging claws
+Infernal Enrapturess [60pts]: Heartstring lyre, Ravaging claws
+Keeper of Secrets [290pts]: Phantasmagoria, Snapping claws, Witstealer sword
+Lord of Change [260pts]: Bolt of Change, Staff of Tzeentch
+Poxbringer [55pts]: Foul balesword
+Rendmaster on Blood Throne [165pts]: Attendant's hellblades, Blade of blood
+Skullmaster [100pts]: Blade of blood, Juggernaut's bladed horn
+Sloppity Bilepiper [55pts]: Marotter
+Spoilpox Scrivener [60pts]: Disgusting Sneezes, Plaguesword and distended maw
+Tormentbringer on Exalted Seeker Chariot [140pts]: Exalted Seeker tongues, Lashes of torment, Ravaging claws
+Tranceweaver [60pts]: Ravaging claws
+
+## Battleline [625pts]
+Bloodletters [110pts]:
+• 10x Bloodletter: Hellblade
+Blue Horrors [125pts]:
+• 10x Blue Horror: Blue claws, Coruscating Blue flames
+Daemonettes [100pts]:
+• 10x Daemonette: Slashing claws
+Nurglings [40pts]:
+• 3x Nurgling Swarm: Diseased claws and teeth
+Pink Horrors [140pts]:
+• 10x Pink Horror: Coruscating Pink flames, Pink claws
+Plaguebearers [110pts]:
+• 10x Plaguebearer: Plaguesword
+
+## Infantry [115pts]
+Flamers [75pts]:
+• 3x Flamer: Flamer mouths, Flickering Flames
+Furies [Legends] [40pts]: Khorne
+• 5x Fury: Daemonic claws
+
+## Mounted [1070pts]
+Bloodcrushers [110pts]:
+• 2x Bloodcrusher: Hellblade, Juggernaut's bladed horn
+• 1x Bloodhunter: Hellblade, Juggernaut's bladed horn
+Burning Chariot [115pts]: Fires of Tzeentch, Flamer mouths, Screamer bites
+Burning Chariot [115pts]: Fires of Tzeentch, Flamer mouths, Screamer bites
+Exalted Seeker Chariot [115pts]: Lashes of torment, Seeker tongues, Slashing claws
+Hellflayer [105pts]:
+• 1x Hellflayer [105pts]: Bladed axle, Lashes of torment, Seeker tongues, Slashing claws
+Plague Drones [110pts]:
+• 3x Plague Drone: Death's heads, Foul mouthparts, Plaguesword
+Pox Riders [Legends] [160pts]:
+• 3x Pox Rider: Grasping tongue, Pox rider plaguesword, Yawning maw
+Seeker Chariot [65pts]:
+• 1x Seeker Chariot [65pts]: Lashes of torment, Seeker tongues, Slashing claws
+Seekers [80pts]:
+• 5x Seeker: Lashing tongues, Slashing claws
+Skull Cannon [95pts]: Attendant's hellblades, Biting maw, Skull cannon
+
+## Beast [445pts]
+Beasts of Nurgle [65pts]:
+• 1x Beast of Nurgle [65pts]: Putrid appendages
+Fiends [105pts]:
+• 3x Fiends: Barbed tail and dissecting claws
+Flesh Hounds [70pts]:
+• 4x Flesh Hound: Collar of Khorne, Gore-drenched fangs
+• 1x Gore Hound: Burning maw, Collar of Khorne, Gore-drenched fangs
+Plague Toads [Legends] [120pts]:
+• 3x Plague Toad: Grasping tongue, Yawning maw
+Screamers [85pts]:
+• 3x Screamer: Lamprey bite
+
+## Monster [275pts]
+Giant Chaos Spawn [Legends] [130pts]: Churning fangs and claws, Khorne
+Spined Chaos Beast [Legends] [145pts]: Jagged claws and tusked maw, Khorne
+
+## Vehicle [360pts]
+Khorne Soul Grinder [180pts]: Harvester cannon, Iron claw, Torrent of burning blood, Warpsword
+Nurgle Soul Grinder [180pts]: Harvester cannon, Iron claw, Phlegm bombardment, Warpsword
+
+## Fortification [3765pts]
+Aegis Defence Line with Weapon Emplacement [Legends] [145pts]: Quad-gun
+Bastion [Legends] [275pts]
+Feculent Gnarlmaw [100pts]
+Firestorm Redoubt [Legends] [260pts]: 2x Quad lascannon
+Fortress of Redemption [Legends] [480pts]: Redemptor lascannons, Redemptor missile silo
+Macro-cannon Aquila Strongpoint [Legends] [550pts]: Aquila macro-cannon
+Plasma Obliterator [Legends] [225pts]: Plasma obliterator
+Primaris Redoubt [Legends] [220pts]: Primaris Redoubt turbo-laser destructor
+Skull Altar [105pts]
+Skyshield Landing Pad [Legends] [125pts]
+Vengeance Weapon Battery [Legends] [140pts]: Battle cannon
+Void Shield Generator [Legends] [155pts]
+Vortex Missile Strongpoint [Legends] [525pts]: Vortex missile battery
+Wall of Martyrs Bunker [Legends] [180pts]
+Wall of Martyrs Defence Emplacement [Legends] [140pts]
+Wall of Martyrs Defence Line [Legends] [140pts]

@@ -1,0 +1,51 @@
+Xenos - Tyranids - Nids - [2475pts]
+
+# ++ Army Roster ++ [2475pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Unending Swarm
+Show/Hide Options
+
+## Epic Hero [80pts]
+Deathleaper [80pts]: Lictor Claws and Talons
+
+## Character [565pts]
+Broodlord [80pts]: Broodlord Claws and Talons, Warlord
+Hive Tyrant [235pts]: Monstrous Bonesword and Lash Whip, Monstrous Scything Talons
+Neurotyrant [105pts]: Neurotyrant claws and lashes, Psychic scream
+Parasite of Mortrex [80pts]: Barbed Ovipositor, Clawed Limbs
+Winged Tyranid Prime [65pts]: Prime Talons
+
+## Battleline [540pts]
+Gargoyles [170pts]:
+• 20x Gargoyles: Blinding Venom, Fleshborer
+Hormagaunts [130pts]:
+• 20x Hormagaunts: Hormagaunt talons
+Termagants [120pts]:
+• 20x Termagants: Chitinous Claws and Teeth, Fleshborer
+Termagants [120pts]:
+• 20x Termagants: Chitinous Claws and Teeth, Fleshborer
+
+## Infantry [585pts]
+Barbgaunts [55pts]:
+• 5x Barbgaunt: Barblauncher, Chitinous claws and teeth
+Biovores [50pts]:
+• 1x Biovore [50pts]: Chitin-barbed Limbs, Spore Mine Launcher
+Genestealers [150pts]:
+• 10x Genestealer: Genestealers claws and talons
+Genestealers [150pts]:
+• 10x Genestealer: Genestealers claws and talons
+Neurogaunts [45pts]:
+• 1x Neurogant Nodebeast: Chitinous claws and teeth
+• 10x Neurogaunt: Chitinous claws and teeth
+Tyranid Warriors with Ranged Bio-Weapons [65pts]:
+• 1x Tyranid Prime: Tyranid Warrior Claws and Talons, Venom Cannon
+• 2x Tyranid Warrior: Tyranid Warrior Claws and Talons, Devourer
+Von Ryan's Leapers [70pts]:
+• 3x Von Ryan's Leaper: Leaper's Talons
+
+## Monster [705pts]
+Norn Assimilator [275pts]: Monstrous scything talons, Toxinjecter harpoon
+Psychophage [95pts]: Psycholastic Torrent, Talons and Betentacled Maw
+Screamer-killer [145pts]: Bio-plasmic Scream, Screamer-killer Talons
+Tyrannofex [190pts]: Powerful Limbs, Stinger Salvoes, Rupture Cannon

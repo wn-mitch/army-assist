@@ -1,0 +1,33 @@
+Chaos - Chaos Knights - Tester - [7500pts]
+
+# ++ Army Roster ++ [7500pts]
+## Configuration
+Battle Size
+Detachment Choice
+Show/Hide Options: Khorne Daemons are visible, Legends are visible, Nurgle Daemons are visible, Slaanesh Daemons are visible, Titans are visible, Tzeentch Daemons are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Character [5300pts]
+Chaos Cerastus Knight Acheron [420pts]: Acheron flame cannon, Reaper chainfist, Twin heavy bolter
+Chaos Cerastus Knight Atrapos [420pts]: Atrapos lascutter, Graviton singularity cannon
+Chaos Cerastus Knight Castigator [445pts]: Castigator bolt cannon, Tempest warblade
+Chaos Cerastus Knight Lancer [420pts]: Cerastus shock lance
+Chaos Questoris Knight Magaera [435pts]: Lightning cannon, Phased plasma-fusil, Reaper chainsword
+Chaos Questoris Knight Styrix [430pts]: Graviton crusher, Volkite chierovile, Reaper chainsword
+Knight Abominant [365pts]: Balemace, Diabolus heavy stubber, Electroscourge, Volkite combustor
+Knight Desecrator [410pts]: Desecrator laser destructor, Diabolus heavy stubber, Reaper chainsword
+Knight Despoiler [415pts]: Titanic feet, Reaper chainsword, Warpstrike claw, Daemonbreath meltagun
+Knight Rampager [380pts]: Diabolus heavy stubber, Reaper chainsword, Warpstrike claw
+Knight Tyrant [510pts]: Titanic feet, 2x Twin daemonbreath meltagun, 2 Gheiststrike missile launchers and 1 twin desecrator cannon (2x Gheiststrike missile launcher, Twin desecrator cannon), Brimstone volcano lance and ectoplasma decimator
+Knight Tyrant [510pts]: Titanic feet, 2x Twin daemonbreath meltagun, 2 Gheiststrike missile launchers and 1 twin desecrator cannon (2x Gheiststrike missile launcher, Twin desecrator cannon), Brimstone volcano lance and ectoplasma decimator
+War Dog Stalker [140pts]: Diabolus heavy stubber, Avenger chaincannon, Slaughterclaw
+
+## Battleline [735pts]
+War Dog Brigand [165pts]: Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber
+War Dog Executioner [130pts]: Armoured feet, 2x War Dog autocannon, Diabolus heavy stubber
+War Dog Huntsman [140pts]: Daemonbreath spear, Reaper chaintalon, Diabolus heavy stubber
+War Dog Karnivore [140pts]: Reaper chaintalon, Slaughterclaw, Diabolus heavy stubber
+War Dog Moirax [160pts]: Armoured feet, Graviton pulsar, Volkite veuglaire
+
+## Vehicle [1465pts]
+Chaos Acastus Knight Asterius [765pts]: 2x Asterius volkite culverin, Karacnos mortar battery, Titanic feet, 2x Twin conversion beam cannon
+Chaos Acastus Knight Porphyrion [700pts]: Titanic feet, 2x Twin magna lascannon, Acastus ironstorm missile pod, 2x Acastus autocannon

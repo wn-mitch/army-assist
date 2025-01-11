@@ -1,0 +1,180 @@
+Imperium - Adeptus Astartes - Black Templars - Astartes Test - [11785pts]
+
+# ++ Army Roster ++ [11785pts]
+## Configuration
+Battle Size
+Detachment
+Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible
+
+## Epic Hero [335pts]
+Chaplain Grimaldus [130pts]: Artificer Crozius, Plasma Pistol
+• 3x Cenobyte Servitor: Close Combat Weapon
+High Marshal Helbrecht [130pts]: Ferocity, Sword of the High Marshals
+The Emperor's Champion [75pts]: Black Sword, Bolt Pistol
+
+## Character [1490pts]
+Ancient [50pts]: Bolt Pistol, Bolt Rifle & Close Combat Weapon (Bolt Rifle, Close Combat Weapon)
+Ancient in Terminator Armor [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)
+Apothecary [50pts]: Absolver Bolt Pistol, Close Combat Weapon, Reductor Pistol
+Apothecary Biologis [70pts]: Absolver Bolt Pistol, Close Combat Weapon
+Bladeguard Ancient [45pts]: Close Combat Weapon, Heavy Bolt Pistol
+Captain [80pts]: Bolt Pistol, Master-crafted Bolt Rifle, Melee Weapon (Bolt Pistol, Master-crafted Bolt Rifle, Close Combat Weapon)
+Captain in Gravis Armour [80pts]: Master-crafted Heavy Bolt Rifle and Master-crafted Power Weapon (Master-crafted Heavy Bolt Rifle, Master-crafted Power Weapon)
+Captain in Phobos Armour [70pts]: Bolt Pistol, Combat Knife, Instigator Bolt Carbine
+Captain in Terminator Armour [95pts]: Storm Bolter, Relic Weapon
+Captain with Jump Pack [85pts]: Melee and Pistol (Astartes Chainsword, Heavy Bolt Pistol)
+Castellan [60pts]: Master-crafted Power Weapon, Combi-weapon
+Chaplain [60pts]: Absolver Bolt Pistol, Crozius Arcanum
+Chaplain in Terminator Armour [75pts]: Crozius Arcanum, Storm Bolter
+Chaplain on Bike [75pts]: Absolver Bolt Pistol, Crozius Arcanum, Twin Bolt Rifle
+Chaplain with Jump Pack [75pts]: Crozius Arcanum, Bolt Pistol
+Judiciar [70pts]: Absolver Bolt Pistol, Executioner Relic Blade
+Lieutenant [65pts]: Pistol, Master-crafted Bolt Rifle & Melee Weapon (Close Combat Weapon, Bolt Pistol, Master-crafted Bolt Rifle)
+Lieutenant in Phobos Armour [55pts]: Bolt Pistol, Master-crafted Scoped Bolt Carbine, Paired Combat Blades
+Lieutenant in Reiver Armour [55pts]: Combat Knife, Master-crafted Special Issue Bolt Pistol
+Lieutenant with Combi-weapon [70pts]: Combi-weapon, Paired Combat Blades
+Marshal [75pts]: Master-crafted Power Weapon, Plasma Pistol
+Techmarine [55pts]: Forge Bolter, Grav-pistol, Omnissian Power Axe, Servo-arm
+
+## Battleline [640pts]
+Assault Intercessor Squad [75pts]:
+• 1x Assault Intercessor Sergeant: Heavy Bolt Pistol, Astartes Chainsword
+• 4x Assault Intercessors: Astartes Chainsword, Heavy Bolt Pistol
+Crusader Squad [85pts]:
+• 4x Initiate w/Boltgun: Bolt Pistol, Boltgun
+• 1x Sword Brother: Close Combat Weapon, Bolt Pistol, Boltgun
+Heavy Intercessor Squad [110pts]:
+• 1x Heavy Intercessor Sergeant: Heavy Bolt Rifle (Bolt Pistol, Close Combat Weapon)
+• 4x Heavy Intercessors: Bolt Pistol, Close Combat Weapon, Heavy Bolt Rifle
+Intercessor Squad [80pts]:
+• 1x Intercessor Sergeant: Bolt Pistol, Bolt Rifle, Close Combat Weapon
+• 4x Intercessors: Bolt Pistol, Bolt Rifle, Close Combat Weapon
+Primaris Crusader Squad [150pts]:
+• 1x Primaris Sword Brother: Power Weapon, Heavy Bolt Pistol
+• 5x Primaris Initiate w/Bolt Rifle: Bolt Pistol, Bolt Rifle, Close Combat Weapon
+• 4x Primaris Neophyte w/Astartes Chainsword: Astartes Chainsword, Bolt Pistol
+Tactical Squad [140pts]:
+• 9x Tactical Marine: Bolt Pistol, Boltgun, Close Combat Weapon
+• 1x Tactical Marine Sergeant: Close Combat Weapon, Bolt Pistol, Boltgun
+
+## Infantry [2755pts]
+Aggressor Squad [120pts]:
+• 1x Aggressor Sergeant: Twin Power Fist, Flamestorm Gauntlets
+• 2x Aggressors: Twin Power Fist, Flamestorm Gauntlets
+Assault Intercessors with Jump Packs [90pts]:
+• 1x Assault Intercessor Sergeant with Jump Pack: Heavy Bolt Pistol, Astartes Chainsword
+• 4x Assault Intercessors with Jump Pack: Astartes Chainsword, Heavy Bolt Pistol
+Bladeguard Veteran Squad [90pts]:
+• 1x Bladeguard Veteran Sergeant: Master-crafted Power Weapon, Heavy Bolt Pistol
+• 2x Bladeguard Veterans: Heavy Bolt Pistol, Master-crafted Power Weapon
+Centurion Assault Squad [150pts]:
+• 2x Assault Centurion: Siege Drills, Centurion Bolters, Twin Flamer
+• 1x Assault Centurion Sergeant: Siege Drills, Centurion Bolters, Twin Flamer
+Centurion Devastator Squad [185pts]:
+• 2x Devastator Centurion: Centurion Fists, Centurion Bolters, Grav-cannon
+• 1x Devastator Centurion Sergeant: Centurion Fists, Centurion Bolters, Grav-cannon
+Company Heroes [95pts]:
+• 1x Ancient: Bolt Pistol, Bolt Rifle, Close Combat Weapon
+• 1x Company Champion: Bolt Pistol, Master-crafted Power Weapon
+• 1x Company Veteran w/ Bolt Rifle: Bolt Pistol, Close Combat Weapon, Master-crafted Bolt Rifle
+• 1x Company Veteran w/ Heavy Bolter: Bolt Pistol, Close Combat Weapon, Master-crafted Heavy Bolter (Close Combat Weapon)
+Desolation Squad [200pts]:
+• 4x Desolation Marine: Bolt Pistol, Castellan Launcher, Close Combat Weapon, Superfrag Rocket Launcher
+• 1x Desolation Sergeant: Bolt Pistol, Castellan Launcher, Close Combat Weapon, Superfrag Rocket Launcher
+Devastator Squad [120pts]:
+• 4x Devastator Marine w/ Heavy Weapon: Bolt Pistol, Close Combat Weapon, Grav-cannon
+• 1x Devastator Sergeant: Close Combat Weapon, 2x Astartes Chainsword
+Eliminator Squad [85pts]:
+• 2x Eliminator: Bolt Pistol, Close Combat Weapon, Bolt Sniper Rifle
+• 1x Eliminator Sergeant: Bolt Pistol, Close Combat Weapon, Bolt Sniper Rifle
+Eradicator Squad [100pts]:
+• 2x Eradicator: Bolt Pistol, Close Combat Weapon, Melta Rifle
+• 1x Eradicator Sergeant: Bolt Pistol, Close Combat Weapon, Melta Rifle
+Hellblaster Squad [115pts]:
+• 4x Hellblaster: Bolt Pistol, Close Combat Weapon, Plasma Incinerator
+• 1x Hellblaster Sergeant: Close Combat Weapon, Plasma Incinerator, Bolt Pistol
+Inceptor Squad [120pts]: Assault Bolters
+• 2x Inceptor: Close Combat Weapon
+• 1x Inceptor Sergeant: Close Combat Weapon
+Incursor Squad [80pts]:
+• 4x Incursor: Bolt Pistol, Occulus Bolt Carbine, Paired Combat Blades
+• 1x Incursor Sergeant: Bolt Pistol, Occulus Bolt Carbine, Paired Combat Blades
+Incursor Squad [80pts]:
+• 4x Incursor: Bolt Pistol, Occulus Bolt Carbine, Paired Combat Blades
+• 1x Incursor Sergeant: Bolt Pistol, Occulus Bolt Carbine, Paired Combat Blades
+Infernus Squad [90pts]:
+• 4x Infernus Marines: Bolt Pistol, Close Combat Weapon, Pyreblaster
+• 1x Infernus Sergeant: Bolt Pistol, Close Combat Weapon, Pyreblaster
+Infiltrator Squad [100pts]:
+• 4x Infiltrator: Bolt Pistol, Close Combat Weapon, Marksman Bolt Carbine
+• 1x Infiltrator Sergeant: Bolt Pistol, Close Combat Weapon, Marksman Bolt Carbine
+Primaris Sword Brethren [150pts]:
+• 4x Primaris Sword Brother: Astartes Chainsword, Heavy Bolt Pistol
+• 1x Sword Brother Castellan: Astartes Chainsword, Heavy Bolt Pistol
+Reiver Squad [80pts]:
+• 1x Reiver Sergeant: Combat Knife, Special Issue Bolt Pistol
+• 4x Reivers: Special Issue Bolt Pistol, Combat Knife
+Scout Squad [70pts]:
+• 1x Scout Sergeant: Bolt Pistol, Close Combat Weapon, Boltgun
+• 4x Scouts w/ Boltgun: Bolt Pistol, Boltgun, Close Combat Weapon
+Sternguard Veteran Squad [100pts]:
+• 1x Sternguard Veteran Sergeant: Close Combat Weapon, Sternguard Bolt Pistol, Sternguard Bolt Rifle
+• 4x Sternguard Veteran w/ Bolt Rifle: Close Combat Weapon, Sternguard Bolt Pistol, Sternguard Bolt Rifle
+Suppressor Squad [75pts]:
+• 2x Suppressor: Accelerator Autocannon, Bolt Pistol, Close Combat Weapon
+• 1x Suppressor Sergeant: Accelerator Autocannon, Bolt Pistol, Close Combat Weapon
+Terminator Assault Squad [180pts]:
+• 1x Assault Terminator Sergeant: Thunder Hammer & Storm Shield (Storm Shield, Thunder Hammer)
+• 4x Assault Terminator w/ Thunder Hammer & Storm Shield: Storm Shield, Thunder Hammer
+Terminator Squad [170pts]:
+• 1x Terminator Sergeant: Storm Bolter, Power Fist
+• 4x Terminator w/ Power Fist: Power Fist, Storm Bolter
+Vanguard Veteran Squad with Jump Packs [110pts]:
+• 1x Vanguard Veteran Sergeant with Jump Pack: Vanguard Veteran Weapon, Bolt Pistol
+• 4x Vanguard Veterans with Jump Packs: Vanguard Veteran Weapon, Bolt Pistol
+
+## Mounted [140pts]
+Invader ATV [60pts]: Bolt Pistol, Close Combat Weapon, Twin Bolt Rifle, Onslaught Gatling Cannon
+Outrider Squad [80pts]:
+• 2x Outrider: Astartes Chainsword, Heavy Bolt Pistol, Twin Bolt Rifle
+• 1x Outrider Sergeant: Astartes Chainsword, Heavy Bolt Pistol, Twin Bolt Rifle
+
+## Vehicle [5990pts]
+Astraeus [525pts]: Armoured hull, Ironhail Heavy Stubber, Storm bolter, Twin macro-accelerator cannon, Twin heavy bolter, Two Astraeus las-rippers (2x Astraeus las-ripper)
+Ballistus Dreadnought [130pts]: Armoured Feet, Ballistus Lascannon, Ballistus Missile Launcher, Twin Storm Bolter
+Black Templars Gladiator Lancer [170pts]: Armoured Hull, Lancer Laser Destroyer, 2 Storm Bolters (2x Storm Bolter)
+Black Templars Gladiator Reaper [170pts]: Armoured Hull, 2x Tempest Bolter, Twin Heavy Onslaught Gatling Cannon
+Black Templars Gladiator Valiant [170pts]: Armoured Hull, 2x Multi-melta, Twin Las-talon
+Black Templars Repulsor [190pts]: Armoured Hull, Hunter-slayer Missile, Repulsor Defensive Array, Twin Heavy Bolter, Heavy Onslaught Gatling Cannon
+Black Templars Repulsor Executioner [230pts]: Armoured Hull, Heavy Onslaught Gatling Cannon, Repulsor Executioner Defensive Array, Twin Heavy Bolter, Twin Icarus Ironhail Heavy Stubber, Heavy Laser Destroyer
+Black Templars Repulsor Executioner [230pts]: Armoured Hull, Heavy Onslaught Gatling Cannon, Repulsor Executioner Defensive Array, Twin Heavy Bolter, Twin Icarus Ironhail Heavy Stubber, Heavy Laser Destroyer
+Brutalis Dreadnought [160pts]: Twin Icarus Ironhail Heavy Stubber, Brutalis Fists & Brutalis Bolt Rifles (Brutalis Bolt Rifles, Brutalis Fists), Twin Heavy Bolter
+Dreadnought [135pts]: Close Combat Weapon w/ Missile Launcher (Close Combat Weapon, Missile Launcher), Assault Cannon
+Drop Pod [70pts]: Storm Bolter
+Firestrike Servo-Turrets [75pts]:
+• 1x Firestrike Servo-Turret [75pts]: Close Combat Weapon, Twin Firestrike Las-talon
+Invictor Tactical Warsuit [125pts]: Fragstorm Grenade Launcher, Heavy Bolter, Invictor Fist, Twin Ironhail Heavy Stubber, Incendium Cannon
+Land Raider [240pts]: Armoured Tracks, 2x Godhammer Lascannon, Twin Heavy Bolter
+Land Raider Crusader [220pts]: Armoured Tracks, 2x Hurricane Bolter, Twin Assault Cannon
+Land Raider Redeemer [285pts]: Armoured Tracks, 2x Flamestorm Cannon, Twin Assault Cannon
+Predator Annihilator [130pts]: Armoured Tracks, Predator Twin Lascannon
+Predator Destructor [130pts]: Armoured Tracks, Predator Autocannon
+Redemptor Dreadnought [210pts]: Redemptor Fist, Heavy Onslaught Gatling Cannon, Heavy Flamer, Twin Fragstorm Grenade Launcher
+Redemptor Dreadnought [210pts]: Redemptor Fist, Heavy Onslaught Gatling Cannon, Heavy Flamer, Twin Fragstorm Grenade Launcher
+Storm Speeder Hailstrike [115pts]: Close Combat Weapon, 2x Fragstorm Grenade Launcher, Onslaught Gatling Cannon, Twin Ironhail Heavy Stubber
+Storm Speeder Hammerstrike [125pts]: Close Combat Weapon, Hammerstrike Missile Launcher, 2x Krakstorm Grenade Launcher, Melta Destroyer
+Storm Speeder Thunderstrike [150pts]: Close Combat Weapon, Stormfury Missiles, Thunderstrike Las-talon, Twin Icarus Rocket Pod
+Stormhawk Interceptor [155pts]: Armoured Hull, Twin Assault Cannon, Las-talon, Skyhammer Missile Launcher
+Stormraven Gunship [280pts]: Armoured Hull, 2x Stormstrike Missiles, Twin Assault Cannon, Typhoon Missile Launcher
+Stormtalon Gunship [165pts]: Armoured Hull, Twin Assault Cannon, Skyhammer Missile Launcher
+Thunderhawk Gunship [840pts]: Armoured hull, 2x Lascannon, 4x Twin heavy bolter, Thunderhawk cluster bombs, Thunderhawk heavy cannon
+Vindicator [175pts]: Armoured Tracks, Demolisher Cannon
+Whirlwind [180pts]: Armoured Tracks, Whirlwind Vengeance Launcher
+
+## Dedicated Transport [260pts]
+Black Templars Impulsor [90pts]: Armoured Hull, 2 Storm Bolters (2x Storm Bolter)
+Razorback [95pts]: Armoured Tracks, Twin Heavy Bolter
+Rhino [75pts]: Armoured Tracks, Storm Bolter
+
+## Fortification [175pts]
+Hammerfall Bunker [175pts]: Hammerfall Missile Launcher, Hammerfall Heavy Bolter Array
