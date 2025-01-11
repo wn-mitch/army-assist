@@ -1,13 +1,17 @@
 import React from "react";
 
-import ListUnit from "@/types/ListUnit";
 import useStore from "@/store/store";
+
 import datasheetsModels from "@/assets/json/Datasheets_models.json";
 import datasheets from "@/assets/json/Datasheets.json";
 import datasheetWargear from "@/assets/json/Datasheets_wargear.json";
+import datasheetAbilities from "@/assets/json/Datasheets_abilities.json";
+
+import ListUnit from "@/types/ListUnit";
 import Datasheet from "@/types/Datasheet";
 import DatasheetModel from "@/types/DatasheetModel";
 import Phase from "@/types/Phase";
+
 import WeaponPhaseTable from "@/components/WeaponPhaseTable";
 
 const CommandPhase = ({ datasheetModel }: { datasheetModel: DatasheetModel }): [React.ReactNode, boolean] => [
@@ -53,6 +57,25 @@ const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; data
   return [
     <WeaponPhaseTable unit={unit} datasheet={datasheet} />,
     toggled,
+  ];
+};
+
+const SavesPhase = ({ datasheetModel }: { datasheetModel: DatasheetModel }): [React.ReactNode, boolean] => {
+  const save = datasheetModel.Sv;
+  const invSave = datasheetModel.inv_sv;
+ 
+  const feelNoPainId = "000008338";
+  const fnp = datasheetAbilities.find((ability) => ability.ability_id === feelNoPainId && ability.datasheet_id === datasheetModel.datasheet_id);
+
+  const saveText = `${save}`;
+  const invSaveText = invSave !== "-" ? `${invSave}++` : "-";
+  const fnpText = fnp ? `FNP ${fnp.parameter}` : "-";
+
+  return [
+    <div className="text-center text-xl font-extrabold">
+      {saveText} / {invSaveText} / {fnpText}
+    </div>,
+    true,
   ];
 };
 
@@ -103,13 +126,12 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     case Phase.Charge:
       [characteristic, toggled] = ChargePhase();
       break;
+    case Phase.Saves:
+      [characteristic, toggled] = SavesPhase({datasheetModel});
+      break;
     default:
       characteristic = <div className="text-center text-xl font-extrabold">BROKEN</div>;
       toggled = false;
-  }
-
-  if (toggled && !unit.toggled) {
-    toggleUnit(unit);
   }
 
   const fadedClasses = unit.toggled && toggled ? "" : "opacity-50";

@@ -20,6 +20,7 @@ interface StoreState {
     [Phase.Shooting]: boolean;
     [Phase.Charge]: boolean;
     [Phase.Fight]: boolean;
+    [Phase.Saves]: boolean;
   };
   reset: () => void;
   setText: (text: string) => void;
@@ -43,6 +44,7 @@ const useStore = create<StoreState>()(
         [Phase.Shooting]: true,
         [Phase.Charge]: true,
         [Phase.Fight]: true,
+        [Phase.Saves]: true,
       },
       faction: null,
       reset: () =>

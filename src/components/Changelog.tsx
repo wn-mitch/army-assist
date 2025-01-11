@@ -59,10 +59,22 @@ function Changelog() {
                 <li>Please report any issues you find in the discord linked in the header.</li>
               </ol>
             </Description>
+            
+            <ChangelogEntry
+              version="1.0.1"
+              date="01/11/2025"
+              changes={[
+                "Cards are now pre-toggled if there is not any information available for them during that phase (ie, no guns during the shooting phase)",
+                "Adds a settings modal with the ability to filter out phases you don't need (World Eaters don't need a Shooting Phase)",
+                "Improved the look of the mobile layout",
+                "Fixed a slew of bugs related to missing Keyword Tags",
+                "Added support for Saves",
+              ]}
+            />
 
             <ChangelogEntry
               version="1.0.0"
-              date="01/09/2025"
+              date="01/10/2025"
               changes={[
                 "Initial release",
                 "Supports own player phases, with limited support for the Charge phase",
