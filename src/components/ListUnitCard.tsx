@@ -114,6 +114,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
 
   if (!datasheetModel) {
     window.alert(`Datasheet model not found for unit ${unit.name}`);
+    return null;
   }
 
   let characteristic: React.ReactNode;
