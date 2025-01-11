@@ -10,32 +10,26 @@ import DatasheetModel from "@/types/DatasheetModel";
 import Phase from "@/types/Phase";
 import WeaponPhaseTable from "@/components/WeaponPhaseTable";
 
-const CommandPhase: React.FC<{ datasheetModel: DatasheetModel }> = ({ datasheetModel }) => ({
-  component: (
-    <div className="text-center text-xl font-extrabold">
-      {datasheetModel.Ld}
-    </div>
-  ),
-  toggled: true,
-});
+const CommandPhase = ({ datasheetModel }: { datasheetModel: DatasheetModel }): [React.ReactNode, boolean] => [
+  <div className="text-center text-xl font-extrabold">
+    {datasheetModel.Ld}
+  </div>,
+  true,
+];
 
-const MovementPhase: React.FC<{ datasheetModel: DatasheetModel }> = ({ datasheetModel }) => ({
-  component: (
-    <div className="text-center text-xl font-extrabold">
-      {datasheetModel.M}
-    </div>
-  ),
-  toggled: true,
-});
+const MovementPhase = ({ datasheetModel }: { datasheetModel: DatasheetModel }): [React.ReactNode, boolean] => [
+  <div className="text-center text-xl font-extrabold">
+    {datasheetModel.M}
+  </div>,
+  true,
+];
 
-const ChargePhase: {React.FC} = () => ({
-  component: (
-    <div className="text-center text-xl font-extrabold">2d6</div>
-  ),
-  toggled: true,
-});
+const ChargePhase = (): [React.ReactNode, boolean] => [
+  <div className="text-center text-xl font-extrabold">2d6</div>,
+  true,
+];
 
-const ShootingOrFightPhase = ({ unit, datasheet, phase }) => {
+const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; datasheet: Datasheet; phase: Phase }): [React.ReactNode, boolean] => {
   const weapons = unit.details
     ?.split(", ")
     .filter((name) => name !== "Warlord" && name !== "")
@@ -56,12 +50,10 @@ const ShootingOrFightPhase = ({ unit, datasheet, phase }) => {
 
   const toggled = availableWeaponDatasheets.length > 0;
 
-  return {
-    component: (
-      <WeaponPhaseTable unit={unit} datasheet={datasheet} />
-    ),
+  return [
+    <WeaponPhaseTable unit={unit} datasheet={datasheet} />,
     toggled,
-  };
+  ];
 };
 
 function ListUnitCard({ unit }: { unit: ListUnit }) {
@@ -94,29 +86,29 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     throw new Error(`Datasheet model not found for unit ${unit.name}`);
   }
 
-  let characteristic;
+  let characteristic: React.ReactNode;
   let toggled = true;
 
   switch (phase) {
     case Phase.Command:
-      ({ component: characteristic, toggled } = CommandPhase({ datasheetModel }));
+      [characteristic, toggled] = CommandPhase({ datasheetModel });
       break;
     case Phase.Movement:
-      ({ component: characteristic, toggled } = MovementPhase({ datasheetModel }));
+      [characteristic, toggled] = MovementPhase({ datasheetModel });
       break;
     case Phase.Shooting:
     case Phase.Fight:
-      ({ component: characteristic, toggled } = ShootingOrFightPhase({ unit, datasheet, phase }));
+      [characteristic, toggled] = ShootingOrFightPhase({ unit, datasheet, phase });
       break;
     case Phase.Charge:
-      ({ component: characteristic, toggled } = ChargePhase());
+      [characteristic, toggled] = ChargePhase();
       break;
     default:
       characteristic = <div className="text-center text-xl font-extrabold">BROKEN</div>;
       toggled = false;
   }
 
-  if(toggled && !unit.toggled) {
+  if (toggled && !unit.toggled) {
     toggleUnit(unit);
   }
 
