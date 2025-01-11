@@ -3027,6 +3027,23 @@
   },
   {
     "id": "000000724",
+    "name": "Ratling Snipers",
+    "faction_id": "AM",
+    "source_id": "000000307",
+    "legend": "Diminutive, keen-eyed and instinctively stealthy, the abhuman Ratlings serve the Astra Militarum primarily as outstanding snipers; it is said they can take the head off a heretic with their rifles from over a mile away. Ratlings are also employed as infiltrators and forward scouts, able to observe the enemy unseen.",
+    "role": "Other",
+    "loadout": "<b>Every model is equipped with:</b> sniper rifle; close combat weapon.",
+    "transport": "",
+    "virtual": "false",
+    "leader_head": "",
+    "leader_footer": "",
+    "damaged_w": "",
+    "damaged_description": "",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/astra-militarum/Ratlings",
+    "": ""
+  },
+  {
+    "id": "000000724",
     "name": "Ratlings",
     "faction_id": "AM",
     "source_id": "000000307",
@@ -3945,7 +3962,7 @@
   },
   {
     "id": "000001396",
-    "name": "Tech-Priest Enginseer",
+    "name": "Regimental Enginseer",
     "faction_id": "AM",
     "source_id": "000000016",
     "legend": "Adepts of the Omnissiah, Enginseers are robed machine-mystics tasked with using arcane lore and cybernetic arrays to effect battlefield repairs upon damaged fighting machines. To them, every war engine is a priceless artefact of technology, whose spirit need only be roused once more to take revenge on the enemy.",
@@ -6529,7 +6546,24 @@
   },
   {
     "id": "000001151",
-    "name": "Soul Grinder",
+    "name": "Khorne Soul Grinder",
+    "faction_id": "CD",
+    "source_id": "000000025",
+    "legend": "Daemons desperate to gain power above their station may strike an unwise bargain with the master of the Forge of Souls. Thus are they remade into the hulking war engines known as Soul Grinders, and given the might to crush and blast all in their path \u2013 for a steep and ultimately never-ending price\u2026",
+    "role": "Other",
+    "loadout": "<b>This model is equipped with:</b> harvester cannon; iron claw; warpsword.",
+    "transport": "",
+    "virtual": "false",
+    "leader_head": "",
+    "leader_footer": "",
+    "damaged_w": "1-5",
+    "damaged_description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the <a href=\"/wh40k10ed/the-rules/core-rules/#1.-Hit-Roll\">Hit roll</a>.",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-daemons/Soul-Grinder",
+    "": ""
+  },
+  {
+    "id": "000001151",
+    "name": "Nurgle Soul Grinder",
     "faction_id": "CD",
     "source_id": "000000025",
     "legend": "Daemons desperate to gain power above their station may strike an unwise bargain with the master of the Forge of Souls. Thus are they remade into the hulking war engines known as Soul Grinders, and given the might to crush and blast all in their path \u2013 for a steep and ultimately never-ending price\u2026",
@@ -8365,7 +8399,7 @@
   },
   {
     "id": "000003582",
-    "name": "Khorne Berzerkers",
+    "name": "Khorne Berserkers",
     "faction_id": "CSM",
     "source_id": "000000210",
     "legend": "",
@@ -22918,7 +22952,7 @@
   {
     "id": "000000867",
     "name": "Warhound Titan",
-    "faction_id": "TL",
+    "faction_id": "QI",
     "source_id": "000000270",
     "legend": "Warhounds are the eyes and ears of the Titan Legions, used to perform dangerous reconnaissance or raiding missions. Despite being the smallest Titan class, a single Warhound can easily turn the tide of battle when used to support ground forces, the sheer power of its weaponry and armour being more than most foes can overcome.",
     "role": "Other",
@@ -22935,7 +22969,7 @@
   {
     "id": "000000868",
     "name": "Reaver Titan",
-    "faction_id": "TL",
+    "faction_id": "QI",
     "source_id": "000000270",
     "legend": "Reaver Titans are vast god-machines possessed of truly devastating firepower. From the apocalypse missile launcher mounted on their carapace to their arm-mounted laser blaster, Reavers are more than capable of wiping out ground troops, their void shields and thick adamantine hulls nullifying all but the most piercing enemy strikes.",
     "role": "Other",
@@ -22952,7 +22986,7 @@
   {
     "id": "000000869",
     "name": "Warlord Titan",
-    "faction_id": "TL",
+    "faction_id": "QI",
     "source_id": "000000270",
     "legend": "Warlord Titans are gargantuan embodiments of the Omnissiah\u2019s wrath. With the destructive power of a small void warship and the resilience of a fortress, Warlords reign supreme over almost all adversaries, dispensing doom with every thundering weapons salvo and crushing any survivors beneath their earth-shattering stride.",
     "role": "Other",
@@ -22969,7 +23003,7 @@
   {
     "id": "000002077",
     "name": "Warbringer Nemesis Titan",
-    "faction_id": "TL",
+    "faction_id": "QI",
     "source_id": "000000270",
     "legend": "The Warbringer Nemesis Titan is an immense war engine designed to destroy enemy Titan-class targets at range. Acting as a dedicated fire support platform, the Nemesis\u2019 reinforced frontal plating allows it to weather most return fire with ease, while its defence batteries grant it ample protection from aerial attacks.",
     "role": "Other",

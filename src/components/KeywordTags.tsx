@@ -1,6 +1,7 @@
 import TagDetail from "@/types/TagDetail";
 import React from "react";
 import {
+  GiPentacle,
   GiBirdClaw,
   GiBrainTentacle,
   GiAntiAircraftGun,
@@ -66,7 +67,17 @@ const tagDetails: { [key: string]: TagDetail } = {
     bgColor: "bg-orange-700",
     ringColor: "ring-orange-800",
   },
+  "Melta d": {
+    icon: <GiFlamer className="h-5 w-5" />,
+    bgColor: "bg-orange-700",
+    ringColor: "ring-orange-800",
+  },
   "Rapid Fire": {
+    icon: <GiMinigun className="h-5 w-5" />,
+    bgColor: "bg-purple-700",
+    ringColor: "ring-purple-800",
+  },
+  "Rapid Fire d": {
     icon: <GiMinigun className="h-5 w-5" />,
     bgColor: "bg-purple-700",
     ringColor: "ring-purple-800",
@@ -116,6 +127,11 @@ const tagDetails: { [key: string]: TagDetail } = {
     bgColor: "bg-indigo-700",
     ringColor: "ring-indigo-800",
   },
+  "Anti-walker": {
+    icon: <GiMeeple className="h-5 w-5" />,
+    bgColor: "bg-indigo-700",
+    ringColor: "ring-indigo-800",
+  },
   "Anti-fly": {
     icon: <GiAntiAircraftGun className="h-5 w-5" />,
     bgColor: "bg-indigo-700",
@@ -133,6 +149,11 @@ const tagDetails: { [key: string]: TagDetail } = {
   },
   "Anti-vehicle": {
     icon: <GiTank className="h-5 w-5" />,
+    bgColor: "bg-indigo-700",
+    ringColor: "ring-indigo-800",
+  },
+  "Anti-chaos": {
+    icon: <GiPentacle className="h-5 w-5" />,
     bgColor: "bg-indigo-700",
     ringColor: "ring-indigo-800",
   },
@@ -185,6 +206,11 @@ const tagDetails: { [key: string]: TagDetail } = {
     icon: <GiBrainstorm className="h-5 w-5" />,
     bgColor: "bg-purple-800",
     ringColor: "ring-purple-900",
+  },
+  "plasma warhead": {
+    icon: <GiBrainstorm className="h-5 w-5" />,
+    bgColor: "bg-purple-800",
+    ringColor: "ring-purple-900",
   }
 };
 
@@ -209,9 +235,15 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
               const count = match[2] ? match[2] : "";
 
               const tagDetail = tagDetails[baseTag];
+
               if (!tagDetail) {
                 window.alert(`Unknown tag: ${baseTag}`);
                 return null;
+              }
+
+              let dice = false;
+              if (baseTag.charAt(baseTag.length - 1) === "d") {
+                dice = true;
               }
 
               return (
@@ -221,7 +253,7 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
                 >
                   {tagDetail.icon}
                   <span className="font-bold whitespace-nowrap">
-                    {baseTag} {count}
+                    {dice ? `${baseTag}${count}` : `${baseTag} ${count}` } 
                   </span>
                 </div>
               );

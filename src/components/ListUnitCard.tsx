@@ -34,6 +34,12 @@ const ChargePhase = (): [React.ReactNode, boolean] => [
 ];
 
 const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; datasheet: Datasheet; phase: Phase }): [React.ReactNode, boolean] => {
+  if (unit.children && unit.children.length > 0) {
+    const details = unit.children.map((child) => child.details).join(", ");
+    unit.details = unit.details ? [...unit.details.split(", "), details].join(", ") : details;
+    unit.children = [];
+  }
+  
   const weapons = unit.details
     ?.split(", ")
     .filter((name) => name !== "Warlord" && name !== "")
@@ -55,7 +61,7 @@ const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; data
   const toggled = availableWeaponDatasheets.length > 0;
 
   return [
-    <WeaponPhaseTable unit={unit} datasheet={datasheet} />,
+    <WeaponPhaseTable weaponDatasheets={availableWeaponDatasheets} />,
     toggled,
   ];
 };
@@ -85,11 +91,11 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   const faction = useStore((state) => state.faction);
 
   if (!phase) {
-    throw new Error("Phase not set");
+    window.alert("Phase not set");
   }
 
   if (!faction) {
-    throw new Error("Faction not set");
+    window.alert("Faction not set");
   }
 
   const datasheet = datasheets
@@ -97,7 +103,8 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     .filter((item) => item.name.toLowerCase() === unit.name.toLowerCase())[0];
 
   if (!datasheet) {
-    throw new Error(`Datasheet not found for unit ${unit.name}`);
+    window.alert(`Datasheet not found for unit ${unit.name}`);
+    return null;
   }
 
   const datasheetModel = datasheetsModels.find(
@@ -106,7 +113,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   );
 
   if (!datasheetModel) {
-    throw new Error(`Datasheet model not found for unit ${unit.name}`);
+    window.alert(`Datasheet model not found for unit ${unit.name}`);
   }
 
   let characteristic: React.ReactNode;

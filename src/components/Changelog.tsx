@@ -6,9 +6,20 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
+import { useEffect } from "react";
+import  useStore  from "@/store/store";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
+  const isFirstVisit = useStore((state) => state.isFirstVisit);
+  const setFirstVisit = useStore((state) => state.setFirstVisit);
+
+  useEffect(() => {
+    if (isFirstVisit) {
+      setIsOpen(true);
+      setFirstVisit(false);
+    }
+  }, [isFirstVisit, setFirstVisit]);
 
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
@@ -50,7 +61,7 @@ function Changelog() {
             </DialogTitle>
             <Description className="mt-2">
               <ol className="list-decimal list-inside">
-                <li>Create a list on NewRecruit.eu</li>
+                <li>Create a list on NewRecruit.eu. If you don't know what that is, or just want to explore the site's features before deciding to rebuild a list, you can click here to copy a sample to the clipboard.</li>
                 <li>Click Export</li>
                 <li>Click the Text Option</li>
                 <li>Select the Format as NR</li>

@@ -1,46 +1,14 @@
 import React from "react";
 
-import Datasheet from "@/types/Datasheet";
-import useStore from "@/store/store";
-import ListUnit from "@/types/ListUnit";
+import DatasheetWargear from "@/types/DatasheetWargear";
 
-import datasheetWargear from "@/assets/json/Datasheets_wargear.json";
 import KeywordTags from "./KeywordTags";
 
 function WeaponPhaseTable({
-  unit,
-  datasheet,
+  weaponDatasheets,
 }: {
-  unit: ListUnit;
-  datasheet: Datasheet;
+  weaponDatasheets: DatasheetWargear[];
 }) {
-  const phase = useStore((state) => state.phase);
-  const toggleUnit = useStore((state) => state.toggleUnit);
-
-  if (unit.children && unit.children.length > 0) {
-    const details = unit.children.map((child) => child.details).join(", ");
-    unit.details = [unit.details, details].join(", ");
-    unit.children = [];
-  }
-
-  const weapons = unit.details
-    ?.split(", ")
-    .filter((name) => name !== "Warlord" && name !== "")
-    .map((name) => name.replace(/^\d+x?\s*/, "").trim());
-
-
-  const availableWeaponDatasheets = datasheetWargear
-    .filter((wargear) =>
-      phase === "Shooting"
-        ? wargear.type === "Ranged"
-        : wargear.type === "Melee"
-    )
-    .filter((wargear) => datasheet.id === wargear.datasheet_id)
-    .filter((weapon) =>
-      (weapons ?? []).some((name) => {
-        return weapon.name?.toLowerCase().includes(name.toLowerCase());
-      })
-    );
 
   return (
     <table className="table-auto bg-slate-800 mt-1 mb-0.5 py-1 px-1 rounded-lg border-separate border-spacing-0 max-w-full overflow-auto">
@@ -57,7 +25,7 @@ function WeaponPhaseTable({
         </tr>
       </thead>
       <tbody>
-        {availableWeaponDatasheets.map((weapon, index) => (
+        {weaponDatasheets.map((weapon, index) => (
           <tr
             key={index}
             className={`${

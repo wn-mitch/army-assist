@@ -26,7 +26,7 @@ export default function Pastebox() {
           id="comment"
           name="comment"
           rows={5}
-          placeholder="Paste in your Army List in the NR format (NewRecruit.eu)"
+          placeholder="Paste in your Army List in the NR format (NewRecruit.eu). There are some bugs with some lists, so if you encounter an error, please let me know! I'll fix it as soon as I can."
           className="block w-full resize-none h-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
           value={text}
           onChange={handleChange}
