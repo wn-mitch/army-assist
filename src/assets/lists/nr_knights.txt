@@ -1,0 +1,36 @@
+Imperium - Adeptus Titanicus - Tester - [18275pts]
+
+# ++ Army Roster ++ [18275pts]
+## Configuration
+Battle Size
+Show/Hide Options: Imperial Knights are visible
+
+## Vehicle [9400pts]
+Reaver Titan [2200pts]: Reaver apocalypse launcher, Reaver feet, Reaver gatling blaster, Reaver laser blaster
+Warbringer Nemesis Titan [2600pts]: 2x Anvillus defence battery, 3x Ardex-defensor mauler, Nemesis feet, Nemesis quake cannon, Reaver gatling blaster, Reaver laser blaster
+Warhound Titan [1100pts]: Warhound feet, Warhound plasma blastgun, Warhound vulcan mega-bolter
+Warlord Titan [3500pts]: 2x Ardex-defensor lascannon, 2x Ardex-defensor mauler, Warlord feet, Two apocalypse launchers (2x Apocalypse launcher), Arioch power claw, Macro gatling blaster
+
+## Allied Units [8875pts]
+Acastus Knight Asterius [765pts]: 2x Asterius volkite culverin, Karacnos mortar battery, Titanic feet, 2x Twin conversion beam cannon
+Acastus Knight Porphyrion [710pts]: Titanic feet, 2x Twin magna lascannon, 2 Acastus autocannons (2x Acastus autocannon), Acastus ironstorm missile pod
+Armiger Helverin [130pts]: 2x Armiger autocannon, Armoured feet, Questoris heavy stubber
+Armiger Moirax [160pts]: Armoured feet, Graviton pulsar, Volkite veuglaire
+Armiger Warglaive [140pts]: Reaper chain-cleaver, Thermal spear, Questoris heavy stubber
+Canis Rex [450pts]: Chainbreaker las-impulsor, Chainbreaker multi-laser, Freedom's Hand
+• 1x Sir Hekhtur: Close combat weapon, Hekhtur's pistol
+Cerastus Knight Acheron [425pts]: Acheron flame cannon, Reaper chainfist, Twin heavy bolter
+Cerastus Knight Atrapos [425pts]: Atrapos lascutter, Graviton singularity cannon
+Cerastus Knight Castigator [465pts]: Castigator bolt cannon, Tempest warblade
+Cerastus Knight Lancer [430pts]: Cerastus shock lance
+Knight Castellan [510pts]: Plasma decimator, Titanic feet, 2x Twin meltagun, Volcano lance, 2 shieldbreaker missile launchers and twin siegebreaker cannon (2x Shieldbreaker missile launcher, Twin siegebreaker cannon)
+Knight Crusader [445pts]: Avenger gatling cannon, Heavy flamer, Titanic feet, Meltagun, Thermal cannon
+Knight Errant [390pts]: Thermal cannon, Meltagun, Reaper chainsword
+Knight Gallant [380pts]: Reaper chainsword, Thunderstrike gauntlet, Meltagun
+Knight Paladin [405pts]: Questoris heavy stubber, Rapid-fire battle cannon, Meltagun, Reaper chainsword
+Knight Preceptor [405pts]: Las-impulsor, Preceptor multi-laser, Reaper chainsword
+Knight Valiant [510pts]: Conflagration cannon, Thundercoil Harpoon, Titanic feet, 2x Twin meltagun, 2 shieldbreaker missile launchers and twin siegebreaker cannon (2x Shieldbreaker missile launcher, Twin siegebreaker cannon)
+Knight Warden [450pts]: Avenger gatling cannon, Heavy flamer, Meltagun, Reaper chainsword
+Questoris Knight Magaera [425pts]: Lightning cannon, Phased plasma-fusil, Reaper chainsword
+Questoris Knight Magaera [425pts]: Lightning cannon, Phased plasma-fusil, Reaper chainsword
+Questoris Knight Styrix [430pts]: Graviton crusher, Volkite chierovile, Reaper chainsword

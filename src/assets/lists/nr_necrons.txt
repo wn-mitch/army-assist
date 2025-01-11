@@ -1,0 +1,108 @@
+Xenos - Necrons - Tester - [8135pts]
+
+# ++ Army Roster ++ [8135pts]
+## Configuration
+Battle Size
+Detachment Choice
+Show/Hide Options: Legends are visible
+
+## Epic Hero [2070pts]
+Anrakyr the Traveller [Legends] [95pts]: Tachyon arrow, Warscythe
+C'tan Shard of the Deceiver [265pts]: Cosmic insanity, Golden fists
+C'tan Shard of the Nightbringer [305pts]: Gaze of death, Scythe of the Nightbringer
+C'tan Shard of the Void Dragon [300pts]: Canoptek tail blades, Spear of the Void Dragon, Voltaic storm
+Illuminor Szeras [175pts]: Eldritch lance, Impaling legs
+Imotekh the Stormlord [100pts]: Gauntlet of Fire, Staff of the Destroyer
+Nemesor Zahndrekh [Legends] [85pts]: Staff of light
+Orikan the Diviner [80pts]: Staff of Tomorrow
+The Silent King [420pts]: Warlord
+• 1x Szarekh: Sceptre of Eternal Glory, Staff of Stars, Weapons of the Final Triarch
+• 2x Triarchal Menhir: Annihilator beam, Armoured bulk
+Trazyn the Infinite [75pts]: Empathic Obliterator
+Varguard Obyron [Legends] [85pts]: Warscythe
+Varguard Obyron [Legends] [85pts]: Warscythe
+
+## Character [1200pts]
+Catacomb Command Barge [120pts]: Gauss cannon, Staff of light
+Chronomancer [65pts]: Chronomancer's stave
+Hexmark Destroyer [75pts]: Close combat weapon, Enmitic disintegrator pistols
+Lokhust Lord [80pts]: Staff of light
+Lord [Legends] [65pts]: Staff of light
+Overlord [85pts]: Overlord's blade and tachyon arrow (Overlord's blade, Tachyon arrow)
+Overlord with Translocation Shroud [85pts]: Overlord's blade, Resurrection orb
+Plasmancer [60pts]: Plasmic lance
+Psychomancer [55pts]: Abyssal lance
+Royal Warden [50pts]: Close combat weapon, Relic gauss blaster
+Skorpekh Lord [80pts]: Enmitic annihilator, Flensing claw, Hyperphase harvester
+Technomancer [85pts]: Staff of light
+Transcendant C'tan [295pts]: Crackling tendrils, Seismic assault
+
+## Battleline [160pts]
+Immortals [70pts]:
+• 5x Immortal: Close combat weapon, Gauss blaster
+Necron Warriors [90pts]:
+• 10x Warrior w/ gauss flayer: Close combat weapon, Gauss flayer
+
+## Infantry [540pts]
+Cryptothralls [60pts]:
+• 2x Cryptothrall: Scouring eye, Scythed limbs
+Deathmarks [65pts]:
+• 5x Deathmark: Close combat weapon, Synaptic disintegrator
+Flayed Ones [60pts]:
+• 5x Flayed One: Flayer claws
+Lychguard [85pts]:
+• 5x Lychguard: Warscythe
+Ophydian Destroyers [80pts]:
+• 3x Ophydian Destroyer: Ophydian hyperphase weapons
+Skorpekh Destroyers [90pts]:
+• 3x Skorpekh Destroyer: Skorpekh hyperphase weapons
+Triarch Praetorians [100pts]:
+• 5x Triarch Praetorian: Rod of covenant
+
+## Swarm [40pts]
+Canoptek Scarab Swarms [40pts]:
+• 3x Canoptek Scarab Swarm: Feeder mandibles
+
+## Mounted [165pts]
+Lokhust Destroyers [35pts]:
+• 1x Lokhust Destroyer: Close combat weapon, Gauss cannon
+Lokhust Heavy Destroyers [55pts]:
+• 1x Destroyer w/ enmitic exterminator [55pts]: Close combat weapon, Enmitic exterminator
+Tomb Blades [75pts]:
+• 3x Tomb Blade: Close combat weapon, Twin gauss blaster
+
+## Beast [200pts]
+Canoptek Acanthrites [Legends] [85pts]:
+• 3x Canoptek Acanthrite: Cutting beam, Voidblade
+Canoptek Wraiths [115pts]:
+• 3x Wraith w/ claws: Vicious claws
+
+## Monster [245pts]
+Canoptek Tomb Sentinel [Legends] [115pts]: Exile cannon, Gloom prism, Tomb Sentinel claws
+Canoptek Tomb Stalker [Legends] [130pts]: Gauss slicers, Gloom prism, Tomb Stalker claws
+
+## Vehicle [3010pts]
+Annihilation Barge [105pts]: Armoured bulk, Twin tesla destructor, Gauss cannon
+Canoptek Doomstalker [145pts]: Doomsday blaster, Doomstalker limbs, Twin gauss flayer
+Canoptek Reanimator [75pts]: 2x Atomiser beam, Reanimator's claws
+Canoptek Spyders [75pts]:
+• 1x Canoptek Spyder [75pts]: Automaton claws
+Doom Scythe [230pts]: Armoured bulk, Heavy death ray, Twin tesla destructor
+Doomsday Ark [190pts]: Armoured bulk, Doomsday cannon, 2x Gauss flayer array
+Monolith [400pts]: Particle whip, Portal of exile, Four gauss flux arcs (4x Gauss flux arc)
+Night Scythe [145pts]: Armoured bulk, Twin tesla destructor
+Night Shroud [Legends] [140pts]: Armoured bulk, Twin tesla destructor
+Obelisk [300pts]: Armoured bulk, 4x Tesla sphere
+Seraptek Heavy Construct [540pts]: Titanic forelimbs, Two singularity generators (2x Singularity generator)
+Tesseract Ark [Legends] [130pts]: Armoured bulk, Tesseract singularity chamber, Two tesla cannons (2x Tesla cannon)
+Tesseract Vault [425pts]: Armoured bulk, C'tan Powers, 4x Tesla sphere
+Triarch Stalker [110pts]: Stalker's forelimbs, Heat ray
+
+## Dedicated Transport [115pts]
+Ghost Ark [115pts]: Armoured bulk, 2x Gauss flayer array
+
+## Fortification [390pts]
+Convergence of Dominion [60pts]:
+• 1x Convergence of Dominion Starstele [60pts]: Transdimensional abductor
+Gauss Pylon [Legends] [210pts]: Gauss annihilator, Tesla arc
+Sentry Pylon [Legends] [120pts]: Gauss exterminator

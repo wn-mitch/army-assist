@@ -1,0 +1,101 @@
+Chaos - Death Guard - Tester - [12010pts]
+
+# ++ Army Roster ++ [12010pts]
+## Configuration
+Battle Size
+Detachment Choice
+Show/Hide Options: Chaos Knights are visible, Legends are visible, Nurgle Daemons are visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Epic Hero [380pts]
+Mortarion [300pts]: Rotwind, Silence, The Lantern, Warlord
+Typhus [80pts]: Master-crafted manreaper
+
+## Character [1265pts]
+Biologus Putrifier [50pts]: Hyper blight grenades, Injector pistol, Plague knives
+Chaos Lord on Palanquin of Nurgle [Legends] [90pts]: Close combat weapon, Nurgling's claws and teeth, Astartes chainsword, Bolt pistol
+Death Guard Chaos Lord [65pts]: Astartes chainsword, Plague bolt pistol
+Death Guard Chaos Lord in Terminator Armour [85pts]: Plague combi-bolter, Plague-encrusted exalted weapon
+Death Guard Daemon Prince [160pts]: Hellforged weapons, Plague spewer
+Death Guard Daemon Prince with wings [195pts]: Hellforged weapons, Plague spewer
+Death Guard Icon Bearer [45pts]: Plague boltgun, Plague knife
+Death Guard Sorcerer in Terminator Armour [70pts]: Curse of the Leper, Plague combi-bolter, Force weapon
+Foul Blightspawn [60pts]: Close combat weapon, Plague sprayer
+Lord of Contagion [80pts]: Plagueblade
+Lord of Virulence [80pts]: Heavy plague fist, Twin plague spewer
+Malignant Plaguecaster [65pts]: Corrupted staff, Plague bolt pistol, Plague Wind
+Noxious Blightbringer [45pts]: Cursed plague bell, Plasma pistol
+Plague Surgeon [50pts]: Balesword, Plague bolt pistol
+Sorcerer on Palanquin of Nurgle [Legends] [80pts]: Force weapon, Infernal Gaze, Nurgling's claws and teeth, Bolt pistol
+Tallyman [45pts]: Close combat weapon, Infected plasma pistol
+
+## Battleline [90pts]
+Plague Marines [90pts]:
+• 1x Plague Champion: Plague boltgun, Plague knives
+• 4x Plague Marine w/ boltgun: Plague boltgun, Plague knives
+
+## Infantry [645pts]
+Blightlord Terminators [155pts]:
+• 5x Terminator w/ plague combi-bolter: Bubotic blade, Plague combi-bolter
+Death Guard Cultists [50pts]:
+• 1x Cultist Champion: Brutal assault weapon, Cultist firearm
+• 9x Cultist: Brutal assault weapon, Cultist firearm
+Death Guard Possessed [Legends] [155pts]:
+• 5x Possessed: Hideous mutations
+Deathshroud Terminators [110pts]:
+• 1x Deathshroud Terminator Champion: Manreaper, Plaguespurt gauntlet
+• 2x Deathshroud Terminator: Manreaper, Plaguespurt gauntlet
+Gellerpox Infected [Legends] [125pts]:
+• 3x Gellerpox Mutant: Brutal weapons
+• 3x Nightmare Hulk: Hideous mutations
+• 1x Nightmare Hulk w/ belly flamer: Belly flamer, Hideous mutations
+Poxwalkers [50pts]:
+• 10x Poxwalker: Improvised weapons
+
+## Swarm [85pts]
+Mutoid Vermin [Legends] [85pts]:
+• 16x Mutoid Vermin: Diseased claws and fangs
+
+## Beast [70pts]
+Death Guard Chaos Spawn [70pts]:
+• 2x Chaos Spawn: Hideous Mutations
+
+## Vehicle [9200pts]
+Cerberus [Legends] [285pts]: Armoured tracks, Cerberus neutron pulse array
+Chaos Thunderhawk [Legends] [840pts]: Armoured hull, 2x Lascannon, 4x Twin heavy bolter, Thunderhawk cluster bombs, Thunderhawk heavy cannon
+Death Guard Defiler [190pts]: Defiler cannon, Defiler claws, Reaper autocannon, Twin heavy flamer
+Death Guard Helbrute [130pts]: Close combat weapon, Missile launcher, Multi-melta
+Death Guard Land Raider [240pts]: Armoured tracks, 2x Soulshatter lascannon, Twin plague heavy bolter
+Death Guard Predator Annihilator [130pts]: Armoured tracks, Predator twin lascannon
+Death Guard Predator Annihilator [130pts]: Armoured tracks, Predator twin lascannon
+Death Guard Predator Destructor [130pts]: Armoured tracks, Predator autocannon
+Deredeo Dreadnought [Legends] [170pts]: Armoured feet, Twin heavy bolter, Anvilus autocannon battery
+Falchion [Legends] [515pts]: Armoured tracks, Twin Falchion volcano cannon, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Fellblade [Legends] [535pts]: Armoured tracks, Demolisher cannon, Fellblade accelerator cannon, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Fire Raptor Gunship [Legends] [290pts]: Armoured hull, Twin avenger bolt cannon, Two twin autocannons (2x Twin autocannon), Two twin hellstrike launchers (2x Twin hellstrike launcher)
+Foetid Bloat-drone [90pts]: Plague probe, Fleshmower
+Greater Blight Drone [Legends] [150pts]: Bile maw, Blightreaper cannon, Greater plague probe
+Hell Talon [Legends] [140pts]: Armoured hull, Twin lascannon, Autocannon
+Hellblade [Legends] [115pts]: Armoured hull, Two twin autocannons (2x Twin autocannon)
+Kratos [Legends] [265pts]: Armoured tracks, Autocannon, 2x Two heavy bolters (2x Heavy bolter), Kratos battlecannon
+Land Raider Achilles [Legends] [285pts]: Armoured tracks, Quad launcher, Two twin volkite culverins (2x Twin volkite culverin)
+Land Raider Proteus [Legends] [250pts]: Armoured tracks, 2x Twin lascannon
+Leviathan Dreadnought [Legends] [215pts]: Armoured feet, 2x Grav-flux bombard, Two heavy flamers (2x Heavy flamer)
+Mastodon [Legends] [610pts]: Armoured tracks, Siege melta array, Skyreaper battery, Two heavy flamers (2x Heavy flamer), Two lascannons (2x Lascannon)
+Myphitic Blight-haulers [90pts]:
+• 1x Myphitic Blight-hauler [90pts]: Bile spurt, Gnashing maw, Missile launcher, Multi-melta
+Plagueburst Crawler [180pts]: Armoured tracks, Plagueburst mortar, Heavy slugger, 2 entropy cannons (2x Entropy cannon)
+Rapier Carrier [Legends] [100pts]: Boltgun, Close combat weapon, Quad heavy bolter
+Relic Contemptor Dreadnought [Legends] [180pts]: Armoured feet, 2x Heavy plasma cannon
+Sicaran Battle Tank [Legends] [220pts]: Armoured tracks, Heavy bolter, Herakles-pattern autocannon
+Sicaran Punisher [Legends] [220pts]: Armoured tracks, Heavy bolter, Punisher rotary cannon
+Sicaran Venator [Legends] [220pts]: Armoured tracks, Heavy bolter, Venator neutron laser
+Sokar-pattern Stormbird [Legends] [1100pts]: Armoured hull, Hellstrike missile battery, 3x Twin heavy bolter, 4x Twin lascannon
+Spartan [Legends] [315pts]: Armoured tracks, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Storm Eagle Gunship [Legends] [255pts]: Armoured hull, Vengeance launcher, Twin heavy bolter, Two twin hellstrike launchers (2x Twin hellstrike launcher)
+Typhon [Legends] [385pts]: Armoured tracks, Dreadhammer siege cannon
+Whirlwind Scorpius [Legends] [115pts]: Armoured tracks, Scorpius multi-launcher
+Xiphon Interceptor [Legends] [115pts]: Armoured hull, 2x Twin lascannon, Xiphon missile battery
+
+## Dedicated Transport [275pts]
+Death Guard Rhino [75pts]: Armoured tracks, Plague combi-bolter
+Terrax-pattern Termite [Legends] [200pts]: Termite drill, Terrax melta cutter, Two storm bolters (2x Storm bolter)

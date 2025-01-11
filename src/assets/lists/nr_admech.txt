@@ -1,0 +1,80 @@
+Imperium - Adeptus Mechanicus - Tester - [3215pts]
+
+# ++ Army Roster ++ [3215pts]
+## Configuration
+Battle Size
+Detachment: Cohort Cybernetica
+Show/Hide Options
+
+## Epic Hero [150pts]
+Belisarius Cawl [150pts]: Arc scourge, Cawl's Omnissian axe, Mechadendrite hive, Solar atomiser, Warlord
+
+## Character [350pts]
+Cybernetica Datasmith [35pts]: Mechanicus pistol, Power fist
+Skitarii Marshal [35pts]: Control stave, Mechanicus pistol
+Sydonian Skatros [50pts]: Mechanicus pistol, Sydonian Feet, Radium Jezzail
+Tech-Priest Dominus [70pts]: Omnissian axe, Macrostubber, Volkite blaster
+Tech-Priest Enginseer [55pts]: Mechanicus pistol, Omnissian axe, Servo arm
+Tech-Priest Manipulus [60pts]: Omnissian staff, Magnarail lance
+Technoarcheologist [45pts]: Mechanicus pistol, Servo-arc claw
+
+## Battleline [180pts]
+Skitarii Rangers [85pts]:
+• 1x Skitarii Ranger Alpha: Close combat weapon, Galvanic rifle
+• 9x Skitarii Ranger w/ galvanic rifle: Close combat weapon, Galvanic rifle
+Skitarii Vanguard [95pts]:
+• 1x Skitarii Vanguard Alpha: Close combat weapon, Radium carbine
+• 9x Skitarii Vanguard w/ radium carbine: Close combat weapon, Radium carbine
+
+## Infantry [800pts]
+Corpuscarii Electro-Priests [65pts]:
+• 5x Corpuscarii Electro-Priests: Electrostatic gauntlets
+Fulgurite Electro-Priests [70pts]:
+• 5x Fulgurite Electro-Priests: Electroleech stave
+Kataphron Breachers [160pts]:
+• 3x Kataphron Breacher (Heavy arc rifle & arc claw): Arc claw, Heavy arc rifle
+Kataphron Destroyers [105pts]:
+• 3x Kataphron Destroyer (Heavy grav-cannon & phosphor blaster): Close combat weapon, Heavy grav cannon, Phosphor blaster
+Kataphron Destroyers [105pts]:
+• 3x Kataphron Destroyer (Heavy grav-cannon & phosphor blaster): Close combat weapon, Heavy grav cannon, Phosphor blaster
+Pteraxii Skystalkers [70pts]:
+• 1x Pteraxii Skystalker Alpha: Flechette blaster, Taser goad
+• 4x Pteraxii Skystalkers: Close combat weapon, Flechette carbine
+Pteraxii Sterylizors [80pts]:
+• 1x Pteraxii Sterylizor Alpha: Flechette blaster, Pteraxii talons, Taser goad
+• 4x Pteraxii Sterylizors: Phosphor torch, Pteraxii talons
+Sicarian Infiltrators [70pts]:
+• 4x Sicarian Infiltrator (Power weapon & stubcarbine): Power weapon, Stubcarbine
+• 1x Sicarian Infiltrator Princeps (Power weapon & stub carbine): Power weapon, Stubcarbine
+Sicarian Ruststalkers [75pts]:
+• 4x Sicarian Ruststalker (Transonic razor & chordclaw): Transonic razor & chordclaw
+• 1x Sicarian Ruststalker Princeps (Transonic razor & chordclaw): Transonic razor & chordclaw
+
+## Mounted [115pts]
+Serberys Raiders [60pts]:
+• 1x Serberys Raider Alpha: Cavalry sabre & clawed limbs, Galvanic carbine, Mechanicus pistol
+• 2x Serberys Raider: Cavalry sabre & clawed limbs, Galvanic carbine
+Serberys Sulphurhounds [55pts]:
+• 1x Serberys Sulphurhound Alpha: Cavalry arc maul, Clawed limbs, Mechanicus pistol, Sulphur breath
+• 2x Serberys Sulphurhound (Twin phosphor pistols): Clawed limbs, 2x Phosphor pistol, Sulphur breath
+
+## Vehicle [1535pts]
+Archaeopter Fusilave [160pts]: Armoured hull, Cognis heavy stubber array, Command Uplink
+Archaeopter Stratoraptor [185pts]: Armoured hull, 2x Cognis heavy stubber, 2x Heavy phosphor blaster, Twin cognis lascannon, Command Uplink
+Archaeopter Transvector [150pts]: Armoured hull, Cognis heavy stubber array, Command Uplink
+Archaeopter Transvector [150pts]: Armoured hull, Cognis heavy stubber array, Command Uplink
+Ironstrider Ballistarii [75pts]:
+• 1x Ironstrider Ballistarius (Twin cognis autocannon) [75pts]: Ironstrider feet, Twin cognis autocannon
+Kastelan Robots [180pts]:
+• 2x Kastelan Robot: Twin Kastelan fist, Incendine combustor
+Kastelan Robots [180pts]:
+• 2x Kastelan Robot: Twin Kastelan fist, Incendine combustor
+Onager Dunecrawler [155pts]: Dunecrawler legs, Eradication beamer
+Skorpius Disintegrator [175pts]: Armoured hull, 3x Cognis heavy stubber, Disruptor missile launcher, Belleros energy cannon
+Sydonian Dragoons with radium jezzails [55pts]:
+• 1x Sydonian Dragoon with radium jezzail: Ironstrider feet, Phosphor serpenta, Radium jezzail
+Sydonian Dragoons with taser lances [70pts]:
+• 1x Sydonian Dragoon with taser lance [70pts]: Phosphor serpenta, Taser lance
+
+## Dedicated Transport [85pts]
+Skorpius Dunerider [85pts]: Armoured hull, Cognis heavy stubber array

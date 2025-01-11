@@ -1,0 +1,57 @@
+Xenos - Genestealer Cults - Tester - [1715pts]
+
+# ++ Army Roster ++ [1715pts]
+## Configuration
+Battle Size
+Detachment
+Show/Hide Options: Legends are visible
+
+## Character [855pts]
+Abominant [95pts]: Power Sledgehammer
+Acolyte Iconward [50pts]: Autopistol, Cult Claws
+Benefictus [70pts]: Close Combat Weapon, Psionic Cascade
+Biophagus [50pts]: Alchemicus Familiar, Autopistol, Chemical Vials, Injector Goad
+Clamavus [50pts]: Autopistol, Close Combat Weapon
+Jackal Alphus [55pts]: Autopistol, Close Combat Weapon, Cult Sniper Rifle
+Kelermorph [60pts]: Close Combat Weapon, Liberator Autostubs
+Locus [45pts]: Locus Blades
+Magus [50pts]: Autopistol, Magus Stave
+Nexos [60pts]: Autopistol, Close Combat Weapon
+Patriarch [75pts]: Patriarch's Claws, Warlord
+Primus [80pts]: Cult Bonesword, Scoped Needle Pistol, Toxin Injector Claw
+Reductus Saboteur [65pts]: Autopistol, Close Combat Weapon, Demolition Charges, Remote Explosives
+Sanctus [50pts]: Sanctus Bio-dagger
+
+## Battleline [200pts]
+Acolyte Hybrids with Autopistols [65pts]:
+• 1x Acolyte Leader: Autopistol, Cult Claws and Knife
+• 4x Acolyte Hybrid w/ Auto Pistol: Autopistol, Cult Claws and Knife
+Acolyte Hybrids with Hand Flamers [70pts]:
+• 1x Acolyte Leader: Hand Flamer, Cult Claws and Knife
+• 4x Acolyte Hybrid w/ Hand Flamer: Cult Claws and Knife, Hand Flamer
+Neophyte Hybrids [65pts]:
+• 1x Neophyte Leader: Autopistol, Hybrid Firearm, and Close Combat Weapon (Autopistol, Close Combat Weapon, Hybrid Firearm)
+• 9x Neophyte Hybrid w/ Hybrid Firearm: Autopistol, Close Combat Weapon, Hybrid Firearm
+
+## Infantry [290pts]
+Aberrants [135pts]:
+• 4x Aberrant: Aberrant Weapons
+• 1x Aberrant Hypermorph: Aberrant Weapons
+Hybrid Metamorphs [80pts]:
+• 1x Metamorph Leader: Leader's Bio-weapons, Autopistol
+• 4x Hybrid Metamorph w/ Autopistol: Autopistol, Metamorph Mutations
+Purestrain Genestealers [75pts]:
+• 5x Purestrain Genestealer: Cult Claws and Talons
+
+## Mounted [80pts]
+Atalan Jackals [80pts]:
+• 1x Atalan Wolfquad: Atalan Small Arms, Close Combat Weapon, Heavy Stubber
+• 4x Atalan Jackal: Atalan Small Arms, Close Combat Weapon
+
+## Vehicle [205pts]
+Achilles Ridgerunners [85pts]:
+• 1x Achilles Ridgerunner [85pts]: Armoured Hull, Twin Heavy Stubber, Flare Launcher, Heavy Mining Laser
+Goliath Rockgrinder [120pts]: Demolition Charge Cache, Drilldozer Blade, Heavy Stubber, Heavy Mining Laser
+
+## Dedicated Transport [85pts]
+Goliath Truck [85pts]: Demolition Charge Cache, Goliath Wheels, Heavy Stubber, Twin Autocannon

@@ -1,0 +1,87 @@
+Imperium - Adepta Sororitas - Tester - [3565pts]
+
+# ++ Army Roster ++ [3565pts]
+## Configuration
+Battle Size
+Detachment Choice
+Show/Hide Options: Legends are visible
+
+## Epic Hero [885pts]
+Aestred Thurga and Agathae Dolan [85pts]:
+• 1x Aestred Thurga: Blade of Vigil, Bolt pistol
+• 1x Agathae Dolan: Scribe's staff
+Celestian Sacresant Aveline [Legends] [45pts]: Ministorum hand flamer, The Thorn of the White Rose
+Daemonifuge [85pts]:
+• 1x Ephrael Stern: Bolt pistol, Sanctity
+• 1x Kyganil of the Bloody Tears: The Outcast's Blades
+Junith Eruita [90pts]: Mace of Castigation, Twin Ministorum Heavy Flamer
+Morvenn Vahl [170pts]: Fidelis, Lance of Illumination, Paragon missile launcher, Warlord
+Saint Celestine [160pts]: The Ardent Blade
+• 2x Geminae Superia: Bolt Pistol, Power Weapon
+Triumph of Saint Katherine [250pts]: Bolt Pistols, Relic Weapons
+
+## Character [425pts]
+Canoness [50pts]: Blessed blade, Bolt Pistol
+Canoness with Jump Pack [75pts]: Blessed Halberd
+Dialogus [40pts]: Bolt pistol, Dialogus Staff
+Dogmata [45pts]: Bolt pistol, Mace of the Righteous
+Hospitaller [50pts]: Bolt pistol, Chirugeon's tools
+Imagifier [65pts]: Bolt pistol, Boltgun, Close combat weapon
+Ministorum Priest [50pts]: Zealot's vindictor
+Palatine [50pts]: Palatine blade, Bolt pistol
+
+## Battleline [105pts]
+Battle Sisters Squad [105pts]:
+• 1x Sister Superior: Bolt pistol, Close combat weapon, Boltgun
+• 9x Battle Sister: Bolt pistol, Boltgun, Close combat weapon
+
+## Infantry [905pts]
+Arco-Flagellants [45pts]:
+• 3x Arco-Flagellant: Arco-flails
+Celestian Sacresants [75pts]:
+• 1x Sacresant Superior: Hallowed Mace, Bolt pistol
+• 4x Celestian Sacresant (Hallowed Mace): Bolt pistol, Hallowed Mace
+Celestian Sacresants [75pts]:
+• 1x Sacresant Superior: Hallowed Mace, Bolt pistol
+• 4x Celestian Sacresant (Hallowed Mace): Bolt pistol, Hallowed Mace
+Crusaders [Legends] [40pts]:
+• 2x Crusader: Power Weapon
+Death Cult Assassins [Legends] [55pts]:
+• 2x Death Cult Assassin: Death Cult power blades
+Dominion Squad [125pts]:
+• 1x Dominion Superior: Bolt pistol, Close combat weapon, Boltgun
+• 9x Dominion: Bolt pistol, Boltgun, Close combat weapon
+Repentia Squad [90pts]:
+• 1x Repentia Superior: Bolt pistol, Neural Whips
+• 4x Sister Repentia: Penitent Eviscerator
+Retributor Squad [125pts]:
+• 1x Retributor Superior: Bolt pistol, Close combat weapon, Boltgun
+• 4x Retributor: Bolt pistol, Close combat weapon, Heavy bolter
+Seraphim Squad [90pts]:
+• 1x Seraphim Superior: Close combat weapon, 2 Bolt Pistols (2x Bolt pistol)
+• 4x Seraphim: 2 Bolt Pistols (2x Bolt pistol), Close combat weapon
+Sisters Novitiate Squad [100pts]:
+• 1x Novitiate Superior: Bolt Pistol and Boltgun (Bolt pistol, Boltgun)
+• 9x Sister Novitiate (Autogun): Autopistol, Close combat weapon, Novitiate autogun
+Zephyrim Squad [85pts]:
+• 4x Zephyrim: Bolt pistol, Power Weapon
+• 1x Zephyrim Superior: Power Weapon, Bolt pistol
+
+## Vehicle [745pts]
+Castigator [170pts]: Armoured tracks, 3x Heavy bolter, Castigator autocannons
+Exorcist [210pts]: Armoured tracks, Heavy Bolter, Exorcist Missile Launcher
+Mortifiers [70pts]:
+• 1x Mortifier: Twin Penitent Buzz-Blades, 2 Heavy Bolters (2x Heavy Bolter)
+Paragon Warsuits [220pts]:
+• 1x Paragon Superior: Bolt pistol, Paragon Storm Bolters, Paragon War Blade, Heavy Bolter
+• 2x Paragon Warsuit: Bolt pistol, Paragon Storm Bolters, Paragon War Blade, Heavy Bolter
+Penitent Engines [75pts]:
+• 1x Penitent Engine: Penitent Flamers, Twin Penitent Buzz-Blades
+
+## Dedicated Transport [330pts]
+Immolator [125pts]: Armoured tracks, Heavy Bolter, Immolation Flamers
+Repressor [Legends] [130pts]: Armoured tracks, Dozer Ram, Repressor twin heavy flamer, Storm bolter
+Sororitas Rhino [75pts]: Armoured tracks, Storm bolter
+
+## Fortification [170pts]
+Battle Sanctum [Legends] [170pts]

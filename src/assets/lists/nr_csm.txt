@@ -1,0 +1,199 @@
+Chaos - Chaos Space Marines - Tester - [19275pts]
+
+# ++ Army Roster ++ [19275pts]
+## Configuration
+Battle Size
+Detachment Choice
+Show/Hide Options: Chaos Knights are visible, Khorne Daemons are visible, Legends are visible, Nurgle Daemons are visible, Slaanesh Daemons are visible, Titans are visible, Tzeentch Daemons are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Epic Hero [1080pts]
+Abaddon the Despoiler [280pts]: Drach'nyen, Talon of Horus, Warlord
+Abaddon the Despoiler [280pts]: Drach'nyen, Talon of Horus, Warlord
+Cypher [90pts]: Cypher's bolt pistol, Cypher's plasma pistol
+Fabius Bile [85pts]: Rod of Torment, The Chirurgeon, Xyclos needler
+• 1x Surgeon Acolyte: Surgeon Acolyte's tools
+Haarken Worldclaimer [90pts]: Hellspear, Herald's Talon
+Huron Blackheart [80pts]: Exalted weapon, Tyrant's Claw
+Vashtorr the Arkifane [175pts]: Vashtorr's claw, Vashtorr's hammer
+
+## Character [2605pts]
+Chaos Lord [90pts]: Daemon hammer, Plasma pistol
+Chaos Lord in Terminator Armour [95pts]: Combi-bolter, Exalted weapon
+Chaos Lord on Bike [Legends] [95pts]: Close combat weapon, Combi-bolter, Astartes chainsword, Bolt pistol
+Chaos Lord on Disc of Tzeentch [Legends] [100pts]: Close combat weapon, Astartes chainsword, Bolt pistol
+Chaos Lord on Juggernaut [Legends] [115pts]: Bladed horn, Close combat weapon, Astartes chainsword, Bolt pistol
+Chaos Lord on Palanquin of Nurgle [Legends] [90pts]: Close combat weapon, Nurgling's claws and teeth, Astartes chainsword, Bolt pistol
+Chaos Lord on Steed of Slaanesh [Legends] [100pts]: Close combat weapon, Lashing tongue, Astartes chainsword, Bolt pistol
+Chaos Lord with Jump Pack [90pts]: Accursed weapon, Bolt pistol
+Cultist Firebrand [45pts]: Balefire pike, Close combat weapon
+Dark Apostle [75pts]: Accursed crozius, Bolt pistol
+• 2x Dark Disciple: Close combat weapon
+Dark Commune [80pts]:
+• 2x Blessed Blades: Commune blade
+• 1x Cult Demagogue: Autopistol, Commune stave
+• 1x Iconarch: Autopistol, Chaos icon, Close combat weapon
+• 1x Mindwitch: Close combat weapon, Warp Curse
+Exalted Champion [Legends] [70pts]: Bolt pistol, Combi-weapon, Exalted weapon
+Heretic Astartes Daemon Prince [165pts]: Hellforged weapons, Infernal cannon
+Heretic Astartes Daemon Prince with wings [180pts]: Hellforged weapons, Infernal cannon
+Lord Discordant on Helstalker [175pts]: Bladed limbs, Bolt pistol, Impaler chainglaive, Helstalker autocannon, Techno-virus injector
+Master of Executions [80pts]: Axe of dismemberment, Bolt pistol
+Master of Possession [70pts]: Bolt pistol, Rite of Possession, Staff of possession
+Renegade Enforcer [Legends] [65pts]: Enforcer melee weapon, Enforcer pistol
+Rogue Psyker [Legends] [60pts]: Chaos stave, Laspistol, Psychic Strike
+Sorcerer [60pts]: Bolt pistol, Force weapon, Infernal Gaze
+Sorcerer in Terminator Armour [80pts]: Force weapon, Infernal Gaze, Combi-bolter
+Sorcerer on Bike [Legends] [75pts]: Combi-bolter, Force weapon, Infernal Gaze, Bolt pistol
+Sorcerer on Bike [Legends] [75pts]: Combi-bolter, Force weapon, Infernal Gaze, Bolt pistol
+Sorcerer on Disc of Tzeentch [Legends] [80pts]: Force weapon, Infernal Gaze, Bolt pistol
+Sorcerer on Palanquin of Nurgle [Legends] [80pts]: Force weapon, Infernal Gaze, Nurgling's claws and teeth, Bolt pistol
+Sorcerer on Palanquin of Nurgle [Legends] [80pts]: Force weapon, Infernal Gaze, Nurgling's claws and teeth, Bolt pistol
+Sorcerer on Palanquin of Nurgle [Legends] [80pts]: Force weapon, Infernal Gaze, Nurgling's claws and teeth, Bolt pistol
+Sorcerer on Steed of Slaanesh [Legends] [85pts]: Force weapon, Infernal Gaze, Lashing tongue, Bolt pistol
+Warpsmith [70pts]: Flamer tendril, Forge weapon, Melta tendril, Plasma pistol
+
+## Battleline [430pts]
+Cultist Mob [50pts]:
+• 1x Cultist Champion: Brutal assault weapon, Autopistol
+• 9x Cultist w/ autopistol and brutal assault weapon: Autopistol, Brutal assault weapon
+Khorne Berserkers [90pts]:
+• 1x Khorne Berserker Champion: Berserker chainblade, Bolt pistol
+• 4x Khorne Berserker: Berserker chainblade, Bolt pistol
+Legionaries [90pts]:
+• 1x Aspiring Champion: Close combat weapon, Bolt pistol, Boltgun
+• 4x Legionary w/ boltgun: Bolt pistol, Boltgun, Close combat weapon
+Plague Marines [90pts]:
+• 1x Plague Champion: Plague boltgun, Plague knives
+• 4x Plague Marine w/ boltgun: Plague boltgun, Plague knives
+Rubric Marines [110pts]:
+• 1x Aspiring Sorcerer: Force weapon, Warpsmite, Inferno bolt pistol
+• 4x Rubric Marine w/ inferno boltgun: Close combat weapon, Inferno boltgun
+
+## Infantry [2455pts]
+Accursed Cultists [90pts]:
+• 5x Mutant: Blasphemous appendages
+• 3x Torment: Hideous mutations
+Chaos Terminator Squad [180pts]:
+• 5x Accursed weapon and combi-bolter: Accursed weapon, Combi-bolter
+Chosen [125pts]:
+• 5x Chosen w/ boltgun: Accursed weapon, Bolt pistol, Boltgun
+Fellgor Beastmen [85pts]:
+• 1x Fellgor Champion: Chainsword, Bolt pistol
+• 9x Beastman: Autopistol, Close combat weapon
+Gellerpox Infected [Legends] [125pts]:
+• 3x Gellerpox Mutant: Brutal weapons
+• 3x Nightmare Hulk: Hideous mutations
+• 1x Nightmare Hulk w/ belly flamer: Belly flamer, Hideous mutations
+Gellerpox Infected [Legends] [125pts]:
+• 3x Gellerpox Mutant: Brutal weapons
+• 3x Nightmare Hulk: Hideous mutations
+• 1x Nightmare Hulk w/ belly flamer: Belly flamer, Hideous mutations
+Havocs [125pts]:
+• 1x Havoc Champion: Astartes chainsword, Flamer
+• 2x Havoc w/ autocannon: Close combat weapon, Havoc autocannon
+• 2x Havoc w/ lascannon: Close combat weapon, Havoc lascannon
+Mutilators [Legends] [185pts]:
+• 3x Mutilator: Fleshmetal weapons
+Negavolt Cultists [Legends] [55pts]:
+• 4x Negavolt Cultist: Electro-goads
+Nemesis Claw [110pts]:
+• 1x Visionary: Nostraman chainblade, Bolt pistol
+• 4x Legionary w/ boltgun: Bolt pistol, Boltgun, Close combat weapon
+Noise Marines [85pts]:
+• 1x Noise Champion: Close combat weapon, Bolt pistol, Boltgun
+• 4x Noise Marine w/ sonic blaster: Bolt pistol, Close combat weapon, Sonic blaster
+Noise Marines [85pts]:
+• 1x Noise Champion: Close combat weapon, Bolt pistol, Boltgun
+• 4x Noise Marine w/ sonic blaster: Bolt pistol, Close combat weapon, Sonic blaster
+Obliterators [160pts]:
+• 2x Obliterator: Crushing fists, Fleshmetal guns
+Obliterators [160pts]:
+• 2x Obliterator: Crushing fists, Fleshmetal guns
+Possessed [120pts]:
+• 5x Possessed: Hideous mutations
+Raptors [90pts]:
+• 1x Raptor Champion: Astartes chainsword, Bolt pistol
+• 4x Raptor: Astartes chainsword, Bolt pistol
+Raptors [90pts]:
+• 1x Raptor Champion: Astartes chainsword, Bolt pistol
+• 4x Raptor: Astartes chainsword, Bolt pistol
+Renegade Heavy Weapons Squad [Legends] [75pts]:
+• 3x Heavy Weapons Team: Close combat weapons, Renegade firearm, Heavy stubber
+Renegade Ogryn Brutes [Legends] [95pts]:
+• 3x Brute w/ Ogryn weapon: Ogryn weapon
+Renegade Plague Ogryns [Legends] [95pts]:
+• 3x Renegade Plague Ogryn: Ogryn plague claws
+Traitor Guardsmen Squad [70pts]:
+• 1x Traitor Sergeant: Close combat weapon, Corrupted pistol
+• 9x Guardsman w/ lasgun: Close combat weapon, Lasgun
+Warp Talons [125pts]:
+• 5x Warp Talon: Warp claws
+
+## Swarm [85pts]
+Mutoid Vermin [Legends] [85pts]:
+• 16x Mutoid Vermin: Diseased claws and fangs
+
+## Mounted [70pts]
+Chaos Bikers [70pts]:
+• 1x Biker Champion: Close combat weapon, Combi-bolter, Bolt pistol
+• 2x Biker w/ combi-bolter and bolt pistol: Bolt pistol, Close combat weapon, Combi-bolter
+
+## Beast [110pts]
+Chaos Spawn [70pts]:
+• 2x Chaos Spawn: Hideous Mutations
+Renegade Ogryn Beast Handler [Legends] [40pts]:
+• 3x Chaos Mauler Hound: Befouled fangs and claws
+• 1x Ogryn Pack Master: Mauler goad and ripper claw
+
+## Vehicle [12020pts]
+Blood Slaughterer [Legends] [160pts]: Impaler harpoon and slaughter blade (Impaler harpoon, Slaughter blade)
+Cerberus [Legends] [285pts]: Armoured tracks, Cerberus neutron pulse array
+Chaos Deimos Predator [Legends] [115pts]: Armoured tracks, Plasma destroyer
+Chaos Land Raider [240pts]: Armoured tracks, 2x Soulshatter lascannon, Twin heavy bolter
+Chaos Predator Annihilator [130pts]: Armoured tracks, Predator twin lascannon
+Chaos Predator Destructor [140pts]: Armoured tracks, Predator autocannon
+Chaos Thunderhawk [Legends] [840pts]: Armoured hull, 2x Lascannon, 4x Twin heavy bolter, Thunderhawk cluster bombs, Thunderhawk heavy cannon
+Chaos Vindicator [185pts]: Armoured tracks, Demolisher cannon
+Decimator [Legends] [170pts]: 2x Decimator butcher cannon
+Defiler [190pts]: Defiler cannon, Defiler claws, Reaper autocannon, Twin heavy flamer
+Deredeo Dreadnought [Legends] [170pts]: Armoured feet, Twin heavy bolter, Anvilus autocannon battery
+Dreadclaw Drop Pod [Legends] [115pts]: Blade struts
+Falchion [Legends] [515pts]: Armoured tracks, Twin Falchion volcano cannon, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Fellblade [Legends] [535pts]: Armoured tracks, Demolisher cannon, Fellblade accelerator cannon, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Fire Raptor Gunship [Legends] [290pts]: Armoured hull, Twin avenger bolt cannon, Two twin autocannons (2x Twin autocannon), Two twin hellstrike launchers (2x Twin hellstrike launcher)
+Forgefiend [190pts]: 2 ectoplasma cannons (2x Ectoplasma cannon), Forgefiend jaws
+Greater Blight Drone [Legends] [150pts]: Bile maw, Blightreaper cannon, Greater plague probe
+Greater Blight Drone [Legends] [150pts]: Bile maw, Blightreaper cannon, Greater plague probe
+Greater Brass Scorpion [Legends] [560pts]: Demolisher cannon, Hellcrusher claws, Hellmaw flame cannons, Scorpion cannon
+Helbrute [130pts]: Close combat weapon, Missile launcher, Multi-melta
+Heldrake [205pts]: Heldrake claws, Hades autocannon
+Hell Talon [Legends] [140pts]: Armoured hull, Twin lascannon, Autocannon
+Hellblade [Legends] [115pts]: Armoured hull, Two twin autocannons (2x Twin autocannon)
+Kharybdis Assault Claw [Legends] [325pts]: Blade struts, Kharybdis storm launcher, Melta array
+Khorne Lord of Skulls [450pts]: Great cleaver of Khorne, Hades gatling cannon, Gorestorm cannon
+Kratos [Legends] [265pts]: Armoured tracks, Autocannon, 2x Two heavy bolters (2x Heavy bolter), Kratos battlecannon
+Kytan Ravager [Legends] [425pts]: Kytan cleaver, Kytan gatling cannon
+Land Raider Achilles [Legends] [285pts]: Armoured tracks, Quad launcher, Two twin volkite culverins (2x Twin volkite culverin)
+Land Raider Proteus [Legends] [250pts]: Armoured tracks, 2x Twin lascannon
+Leviathan Dreadnought [Legends] [215pts]: Armoured feet, 2x Grav-flux bombard, Two heavy flamers (2x Heavy flamer)
+Mastodon [Legends] [610pts]: Armoured tracks, Siege melta array, Skyreaper battery, Two heavy flamers (2x Heavy flamer), Two lascannons (2x Lascannon)
+Maulerfiend [130pts]: Maulerfiend fists, Lasher tendrils
+Rapier Carrier [Legends] [100pts]: Boltgun, Close combat weapon, Quad heavy bolter
+Relic Contemptor Dreadnought [Legends] [180pts]: Armoured feet, 2x Heavy plasma cannon
+Sicaran Battle Tank [Legends] [220pts]: Armoured tracks, Heavy bolter, Herakles-pattern autocannon
+Sicaran Punisher [Legends] [220pts]: Armoured tracks, Heavy bolter, Punisher rotary cannon
+Sicaran Venator [Legends] [220pts]: Armoured tracks, Heavy bolter, Venator neutron laser
+Sokar-pattern Stormbird [Legends] [1100pts]: Armoured hull, Hellstrike missile battery, 3x Twin heavy bolter, 4x Twin lascannon
+Spartan [Legends] [315pts]: Armoured tracks, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Storm Eagle Gunship [Legends] [255pts]: Armoured hull, Vengeance launcher, Twin heavy bolter, Two twin hellstrike launchers (2x Twin hellstrike launcher)
+Typhon [Legends] [385pts]: Armoured tracks, Dreadhammer siege cannon
+Venomcrawler [120pts]: 2x Excruciator cannon, Soulflayer tendrils and claws
+Whirlwind Scorpius [Legends] [115pts]: Armoured tracks, Scorpius multi-launcher
+Xiphon Interceptor [Legends] [115pts]: Armoured hull, 2x Twin lascannon, Xiphon missile battery
+
+## Dedicated Transport [275pts]
+Chaos Rhino [75pts]: Armoured tracks, Combi-bolter
+Terrax-pattern Termite [Legends] [200pts]: Termite drill, Terrax melta cutter, Two storm bolters (2x Storm bolter)
+
+## Fortification [145pts]
+Aegis Defence Line with Weapon Emplacement [Legends] [145pts]: Quad-gun

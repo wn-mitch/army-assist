@@ -1,0 +1,47 @@
+Xenos - Leagues of Votann - Tester - [1290pts]
+
+# ++ Army Roster ++ [1290pts]
+## Configuration
+Battle Size
+Detachment Choice
+Show/Hide Options: Legends are visible
+
+## Epic Hero [80pts]
+Ûthar the Destined [80pts]: Blade of the Ancestors, Rampart crest, Volkanite disintegrator
+
+## Character [260pts]
+Brôkhyr Iron-master [65pts]: Graviton hammer, Graviton rifle
+• 1x E-COG: Autoch-pattern bolt pistol, Close combat weapon
+• 1x E-COG: Plasma torch
+• 1x E-COG: Manipulator arms
+• 1x Ironkyn Assistant: Close combat weapon, Las-beam cutter
+Einhyr Champion [60pts]: Autoch-pattern combi-bolter, Weavefield crest, Mass hammer
+Grimnyr [65pts]: Ancestral ward stave, Ancestral Wrath
+• 2x CORV: Autoch-pattern bolter, Close combat weapon
+Kâhl [70pts]: Rampart crest, Forgewrought plasma axe, Autoch-pattern combi-bolter
+
+## Battleline [100pts]
+Hearthkyn Warriors [100pts]:
+• 9x Hearthkyn Warrior: Autoch-pattern bolt pistol, Close combat weapon, Autoch-pattern bolter
+• 1x Theyn: Close combat weapon, Weavefield crest, Autoch-pattern bolt pistol, Autoch-pattern bolter
+
+## Infantry [420pts]
+Brôkhyr Thunderkyn [80pts]:
+• 3x Brôkhyr Thunderkyn: Close combat weapon, Bolt cannon
+Cthonian Beserks [100pts]:
+• 5x Beserk: Heavy plasma axe
+Einhyr Hearthguard [150pts]:
+• 1x Hesyr: Exo-armour grenade launcher, Weavefield crest, Concussion gauntlet, EtaCarn plasma gun
+• 4x Einhyr Hearthguard: Exo-armour grenade launcher, Concussion gauntlet, EtaCarn plasma gun
+Hernkyn Yaegirs [90pts]:
+• 10x Hernkyn Yaegir: Close combat weapon, Bolt shotgun
+
+## Mounted [90pts]
+Hernkyn Pioneers [90pts]:
+• 3x Hernkyn Pioneer: Bolt revolver, Bolt shotgun, Magna-coil autocannon, Plasma knife
+
+## Vehicle [225pts]
+Hekaton Land Fortress [225pts]: Armoured wheels, MATR autocannon, Cyclic ion cannon, 2x Twin bolt cannon, Pan spectral scanner
+
+## Dedicated Transport [115pts]
+Sagitaur [115pts]: Armoured wheels, Twin bolt cannon, HYLas beam cannon

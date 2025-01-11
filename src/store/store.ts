@@ -22,12 +22,14 @@ interface StoreState {
     [Phase.Fight]: boolean;
     [Phase.Saves]: boolean;
   };
+  isFirstVisit: boolean;
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
   setPhase: (phase: Phase) => void;
   toggleUnit: (unit: ListUnit) => void;
   togglePhase: (phase: Phase) => void;
+  setFirstVisit: (isFirstVisit: boolean) => void;
 }
 
 const useStore = create<StoreState>()(
@@ -47,6 +49,7 @@ const useStore = create<StoreState>()(
         [Phase.Saves]: true,
       },
       faction: null,
+      isFirstVisit: true,
       reset: () =>
         set({
           text: "",
@@ -82,10 +85,10 @@ const useStore = create<StoreState>()(
 
         lines.forEach((line, index) => {
           const parentMatch = line.match(
-            /^([\w\s-]+)\s\[\d+pts\]:\s?([\w\s,’'-]+)?$/
+            /^([A-Za-zÀ-ÖØ-öø-ÿ\s-]+)\s\[\d+pts\]:\s?([A-Za-zÀ-ÖØ-öø-ÿ\s,’'-]+)?$/
           );
           const childMatch = line.match(
-            /•\s(\d+)x\s([\w\s\-’'/&]+)([\s[\]\d\w]+)?:\s([()\w\s,'&-]+)$/
+            /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&-]+)$/
           );
 
           if (parentMatch) {
@@ -148,6 +151,7 @@ const useStore = create<StoreState>()(
           },
         }));
       },
+      setFirstVisit: (isFirstVisit: boolean) => set({ isFirstVisit }),
     }),
     {
       name: "store", // name of the item in the storage (must be unique)

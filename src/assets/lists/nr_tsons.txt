@@ -1,0 +1,67 @@
+Chaos - Thousand Sons - Tester - [4485pts, 29Cabal Points]
+
+# ++ Army Roster ++ [4485pts, 29Cabal Points]
+## Configuration
+Battle Size
+Detachment Choice
+Rituals reference
+Show/Hide Options
+
+## Epic Hero [895pts, 13Cabal Points]
+Ahriman [140pts, 3Cabal Points]: Black Staff of Ahriman, Inferno bolt pistol, Psychic Stalk
+Ahriman [140pts, 3Cabal Points]: Black Staff of Ahriman, Inferno bolt pistol, Psychic Stalk
+Ahriman on Disc of Tzeentch [150pts, 3Cabal Points]: Black Staff of Ahriman, Inferno bolt pistol, Psychic Stalk
+Magnus the Red [465pts, 4Cabal Points]: Blade of Magnus, Gaze of Magnus, Tzeentch's Firestorm, Warlord
+
+## Character [1060pts, 14Cabal Points]
+Chaos Lord on Disc of Tzeentch [Legends] [100pts]: Close combat weapon, Astartes chainsword, Bolt pistol
+Exalted Sorcerer [110pts, 2Cabal Points]: Astral Blast, Force weapon, Inferno bolt pistol
+Exalted Sorcerer on Disc of Tzeentch [115pts, 2Cabal Points]: Arcane Fire, Force weapon, Inferno bolt pistol
+Infernal Master [105pts, 2Cabal Points]: Force weapon, Inferno bolt pistol, Screamer Invocation
+Thousand Sons Daemon Prince [170pts, 2Cabal Points]: Hellforged weapons, Infernal cannon
+Thousand Sons Daemon Prince with wings [180pts, 2Cabal Points]: Hellforged weapons, Infernal cannon
+Thousand Sons Sorcerer [105pts, 1Cabal Points]: Fires of the Abyss, Force weapon, Inferno bolt pistol
+Thousand Sons Sorcerer in Terminator Armour [115pts, 2Cabal Points]: Coruscating Flames, Force weapon, Inferno combi-bolter
+Tzaangor Shaman [60pts, 1Cabal Points]: Mutating orbs, Shaman's stave
+
+## Battleline [175pts, 1Cabal Points]
+Rubric Marines [110pts, 1Cabal Points]:
+• 1x Aspiring Sorcerer [1Cabal Points]: Force weapon, Warpsmite, Inferno bolt pistol
+• 4x Rubric Marine w/ inferno boltgun: Close combat weapon, Inferno boltgun
+Tzaangors [65pts]:
+• 1x Twistbray: Tzaangor blades (Tzaangor blades)
+• 9x Tzaangor w/ Tzaangor blades: Tzaangor blades
+
+## Infantry [245pts, 1Cabal Points]
+Scarab Occult Terminators [190pts, 1Cabal Points]:
+• 1x Scarab Occult Sorcerer [1Cabal Points]: Force weapon, Warpsmite, Inferno combi-bolter
+• 4x Scarab Occult Terminator: Inferno combi-bolter, Prosperine khopesh
+Thousand Sons Cultists [55pts]:
+• 1x Thousand Sons Cultist Champion: Brutal assault weapon, Cultist firearm
+• 9x Cultist: Brutal assault weapon, Cultist firearm
+
+## Mounted [50pts]
+Tzaangor Enlightened [50pts]:
+• 3x Divining spear Enlightened: Divining spear
+
+## Beast [65pts]
+Thousand Sons Chaos Spawn [65pts]:
+• 2x Chaos Spawn: Hideous Mutations
+
+## Monster [160pts]
+Mutalith Vortex Beast [160pts]: Betentacled maw, Mutalith claws, Warp vortex
+
+## Vehicle [1760pts]
+Cerberus [Legends] [285pts]: Armoured tracks, Cerberus neutron pulse array
+Thousand Sons Defiler [190pts]: Defiler cannon, Defiler claws, Reaper autocannon, Twin heavy flamer
+Thousand Sons Forgefiend [145pts]: 2 Hades autocannons (2x Hades autocannon), Forgefiend jaws
+Thousand Sons Helbrute [130pts]: Close combat weapon, Missile launcher, Multi-melta
+Thousand Sons Heldrake [195pts]: Heldrake claws, Hades autocannon
+Thousand Sons Land Raider [240pts]: Armoured tracks, 2x Soulshatter lascannon, Twin inferno heavy bolter
+Thousand Sons Maulerfiend [140pts]: Maulerfiend fists, Lasher tendrils
+Thousand Sons Predator Annihilator [130pts]: Armoured tracks, Predator twin lascannon
+Thousand Sons Predator Destructor [130pts]: Armoured tracks, Predator autocannon
+Thousand Sons Vindicator [175pts]: Armoured tracks, Demolisher cannon
+
+## Dedicated Transport [75pts]
+Thousand Sons Rhino [75pts]: Armoured tracks, Inferno combi-bolter
