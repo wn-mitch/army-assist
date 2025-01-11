@@ -15,6 +15,7 @@ function WeaponPhaseTable({
   datasheet: Datasheet;
 }) {
   const phase = useStore((state) => state.phase);
+  const toggleUnit = useStore((state) => state.toggleUnit);
 
   if (unit.children && unit.children.length > 0) {
     const details = unit.children.map((child) => child.details).join(", ");
@@ -24,8 +25,9 @@ function WeaponPhaseTable({
 
   const weapons = unit.details
     ?.split(", ")
-    .filter((name) => name === "Warlord")
+    .filter((name) => name !== "Warlord" && name !== "")
     .map((name) => name.replace(/^\d+x?\s*/, "").trim());
+
 
   const availableWeaponDatasheets = datasheetWargear
     .filter((wargear) =>
@@ -41,7 +43,7 @@ function WeaponPhaseTable({
     );
 
   return (
-    <table className="table-auto bg-slate-800 mt-1 mb-0.5 py-1 px-1 rounded-lg border-separate border-spacing-0 w-full">
+    <table className="table-auto bg-slate-800 mt-1 mb-0.5 py-1 px-1 rounded-lg border-separate border-spacing-0 max-w-full overflow-auto">
       <thead>
         <tr>
           <TableHeaderCell className="w-1/4">Name</TableHeaderCell>

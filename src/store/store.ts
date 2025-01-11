@@ -14,11 +14,19 @@ interface StoreState {
   turn: Side;
   phase: Phase;
   faction: string | null;
+  activePhases: {
+    [Phase.Command]: boolean;
+    [Phase.Movement]: boolean;
+    [Phase.Shooting]: boolean;
+    [Phase.Charge]: boolean;
+    [Phase.Fight]: boolean;
+  };
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
   setPhase: (phase: Phase) => void;
   toggleUnit: (unit: ListUnit) => void;
+  togglePhase: (phase: Phase) => void;
 }
 
 const useStore = create<StoreState>()(
@@ -29,6 +37,13 @@ const useStore = create<StoreState>()(
       round: 1,
       turn: Side.Me,
       phase: Phase.Command,
+      activePhases: {
+        [Phase.Command]: true,
+        [Phase.Movement]: true,
+        [Phase.Shooting]: true,
+        [Phase.Charge]: true,
+        [Phase.Fight]: true,
+      },
       faction: null,
       reset: () =>
         set({
@@ -39,7 +54,7 @@ const useStore = create<StoreState>()(
           phase: Phase.Command,
         }),
       setText: (text: string) => set({ text }),
-      parseText: (text: string):boolean => {
+      parseText: (text: string): boolean => {
         const lines = text.split("\n");
 
         const faction = lines[0].trim().match(/[\w]+ - ([\w'\s]+) -/);
@@ -52,6 +67,12 @@ const useStore = create<StoreState>()(
         const factionAbbreviation = factions?.find(
           (f) => f.name === faction[1]
         )?.id;
+
+        if (!factionAbbreviation) {
+          console.error("Faction abbreviation not found in the list");
+          return false;
+        }
+
         set({ faction: factionAbbreviation });
 
         const listUnits: ListUnit[] = [];
@@ -116,6 +137,14 @@ const useStore = create<StoreState>()(
           units[index] = { ...units[index], toggled: !units[index].toggled };
           set({ units });
         }
+      },
+      togglePhase: (phase: Phase) => {
+        set((state) => ({
+          activePhases: {
+            ...state.activePhases,
+            [phase]: !state.activePhases[phase],
+          },
+        }));
       },
     }),
     {

@@ -14,7 +14,7 @@ export default function Pastebox() {
     const result = store.parseText(text);
 
     if(!result) {
-      window.alert("Error: Invalid List Format. Use the NR format (NewRecruit.eu)");
+      window.alert("Error: Invalid List Format. Use the NR format (NewRecruit.eu). If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!");
       setText("");
     }
   };

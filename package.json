@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "deploy:wrangler": "wrangler pages deploy dist"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
