@@ -8,6 +8,7 @@ import {
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { useEffect } from "react";
 import  useStore  from "@/store/store";
+import nrWorldEaters from "@/assets/lists/nr_world_eaters.txt";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,17 @@ function Changelog() {
     </div>
   );
 
+    const copySampleToClipboard = async () => {
+    try {
+      const response = await fetch(nrWorldEaters);
+      const text = await response.text();
+      await navigator.clipboard.writeText(text);
+      alert("Sample copied to clipboard!");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
+
   return (
     <>
       <button onClick={handleShow} className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-4">
@@ -49,7 +61,7 @@ function Changelog() {
 
       <Dialog
         open={isOpen}
-        onClose={handleClose}
+        onClose={() => {}}
         className="fixed z-10 inset-0 overflow-y-auto"
       >
         <div className="flex items-center justify-center min-h-screen">
@@ -61,7 +73,7 @@ function Changelog() {
             </DialogTitle>
             <Description className="mt-2">
               <ol className="list-decimal list-inside">
-                <li>Create a list on NewRecruit.eu. If you don't know what that is, or just want to explore the site's features before deciding to rebuild a list, you can click here to copy a sample to the clipboard.</li>
+                <li>Create a list on NewRecruit.eu. If you don't know what that is, or just want to explore the site's features before deciding to rebuild a list, you can <a href="#" onClick={copySampleToClipboard} className="text-blue-500 underline z-20">click here to copy a sample to the clipboard</a>.</li>
                 <li>Click Export</li>
                 <li>Click the Text Option</li>
                 <li>Select the Format as NR</li>
@@ -70,6 +82,16 @@ function Changelog() {
                 <li>Please report any issues you find in the discord linked in the header.</li>
               </ol>
             </Description>
+            
+            <ChangelogEntry
+              version="1.0.2"
+              date="01/12/2025"
+              changes={[
+                "Fixed a slew of bugs related to missing Keyword Tags",
+                "Added support for allied units in factions. This is something that I have to manually update, so please let me know if you see any issues or missing units. I tried to make tester list with every faction but I am not sure on all of the ally rules.",
+                "The copy to clipboard sample actually works now"
+              ]}
+            />
             
             <ChangelogEntry
               version="1.0.1"
@@ -97,7 +119,7 @@ function Changelog() {
                 onClick={handleClose}
                 className="px-4 py-2 bg-red-700 font-bold text-white rounded w-full"
               >
-                Tap Anywhere to Close
+                Tap Here to Close
               </button>
             </div>
 

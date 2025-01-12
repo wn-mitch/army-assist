@@ -28,7 +28,6 @@ import {
   GiTank,
   GiLinkedRings,
   GiCatch,
-
 } from "react-icons/gi";
 
 const tagDetails: { [key: string]: TagDetail } = {
@@ -152,6 +151,16 @@ const tagDetails: { [key: string]: TagDetail } = {
     bgColor: "bg-indigo-700",
     ringColor: "ring-indigo-800",
   },
+  "Anti-titanic": {
+    icon: <GiPentacle className="h-5 w-5" />,
+    bgColor: "bg-red-700",
+    ringColor: "ring-red-800",
+  },
+  "Anti-daemon": {
+    icon: <GiPentacle className="h-5 w-5" />,
+    bgColor: "bg-red-700",
+    ringColor: "ring-red-800",
+  },
   "Anti-chaos": {
     icon: <GiPentacle className="h-5 w-5" />,
     bgColor: "bg-indigo-700",
@@ -211,6 +220,11 @@ const tagDetails: { [key: string]: TagDetail } = {
     icon: <GiBrainstorm className="h-5 w-5" />,
     bgColor: "bg-purple-800",
     ringColor: "ring-purple-900",
+  },
+  "psychic assassin" : {
+    icon: <GiBrainTentacle className="h-5 w-5" />,
+    bgColor: "bg-indigo-800",
+    ringColor: "ring-indigo-900",
   }
 };
 

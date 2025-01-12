@@ -1,10 +1,10 @@
-Chaos - Death Guard - Tester - [12010pts]
+Chaos - Death Guard - Tester - [30645pts]
 
-# ++ Army Roster ++ [12010pts]
+# ++ Army Roster ++ [30645pts]
 ## Configuration
 Battle Size
 Detachment Choice
-Show/Hide Options: Chaos Knights are visible, Legends are visible, Nurgle Daemons are visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+Show/Hide Options: Chaos Knights are visible, Legends are visible, Nurgle Daemons are visible, Titans are visible
 
 ## Epic Hero [380pts]
 Mortarion [300pts]: Rotwind, Silence, The Lantern, Warlord
@@ -99,3 +99,55 @@ Xiphon Interceptor [Legends] [115pts]: Armoured hull, 2x Twin lascannon, Xiphon 
 ## Dedicated Transport [275pts]
 Death Guard Rhino [75pts]: Armoured tracks, Plague combi-bolter
 Terrax-pattern Termite [Legends] [200pts]: Termite drill, Terrax melta cutter, Two storm bolters (2x Storm bolter)
+
+## Allied Units [18635pts]
+Beasts of Nurgle [65pts]:
+• 1x Beast of Nurgle [65pts]: Putrid appendages
+Chaos Acastus Knight Asterius [765pts]: 2x Asterius volkite culverin, Karacnos mortar battery, Titanic feet, 2x Twin conversion beam cannon
+Chaos Acastus Knight Porphyrion [700pts]: Titanic feet, 2x Twin magna lascannon, Acastus ironstorm missile pod, 2x Acastus autocannon
+Chaos Cerastus Knight Acheron [420pts]: Acheron flame cannon, Reaper chainfist, Twin heavy bolter
+Chaos Cerastus Knight Atrapos [420pts]: Atrapos lascutter, Graviton singularity cannon
+Chaos Cerastus Knight Castigator [445pts]: Castigator bolt cannon, Tempest warblade
+Chaos Cerastus Knight Lancer [420pts]: Cerastus shock lance
+Chaos Questoris Knight Magaera [435pts]: Lightning cannon, Phased plasma-fusil, Reaper chainsword
+Daemon Prince of Chaos [190pts]: Hellforged weapons, Infernal cannon, Nurgle
+Daemon Prince of Chaos with wings [180pts]: Hellforged weapons, Infernal cannon, Nurgle
+Epidemius [80pts]: Balesword and nurgling attendants
+Feculent Gnarlmaw [100pts]
+Furies [Legends] [40pts]: Nurgle
+• 5x Fury: Daemonic claws
+Giant Chaos Spawn [Legends] [130pts]: Churning fangs and claws, Nurgle
+Great Unclean One [230pts]: Putrid vomit, Bilesword, Plague flail
+Horticulous Slimux [120pts]: Acidic maw, Lopping shears
+Knight Abominant [365pts]: Balemace, Diabolus heavy stubber, Electroscourge, Volkite combustor
+Knight Desecrator [410pts]: Desecrator laser destructor, Diabolus heavy stubber, Reaper chainsword
+Knight Despoiler [415pts]: Titanic feet, Reaper chainsword, Warpstrike claw, Daemonbreath meltagun
+Knight Rampager [380pts]: Diabolus heavy stubber, Reaper chainsword, Warpstrike claw
+Knight Tyrant [510pts]: Titanic feet, 2x Twin daemonbreath meltagun, 2 Gheiststrike missile launchers and 1 twin desecrator cannon (2x Gheiststrike missile launcher, Twin desecrator cannon), Brimstone volcano lance and ectoplasma decimator
+Nurgle Soul Grinder [180pts]: Harvester cannon, Iron claw, Phlegm bombardment, Warpsword
+Nurglings [40pts]:
+• 3x Nurgling Swarm: Diseased claws and teeth
+Plague Drones [110pts]:
+• 3x Plague Drone: Death's heads, Foul mouthparts, Plaguesword
+Plague Toads [Legends] [120pts]:
+• 3x Plague Toad: Grasping tongue, Yawning maw
+Plaguebearers [110pts]:
+• 10x Plaguebearer: Plaguesword
+Pox Riders [Legends] [160pts]:
+• 3x Pox Rider: Grasping tongue, Pox rider plaguesword, Yawning maw
+Poxbringer [55pts]: Foul balesword
+Reaver Titan [2200pts]: Reaver apocalypse launcher, Reaver feet, Reaver gatling blaster, Reaver laser blaster
+Rotigus [230pts]: Gnarlrod, Streams of brackish filth
+Scabeiathrax the Bloated [Legends] [275pts]: Blade of decay, Putrid vomit
+Sloppity Bilepiper [55pts]: Marotter
+Spined Chaos Beast [Legends] [145pts]: Jagged claws and tusked maw, Nurgle
+Spoilpox Scrivener [60pts]: Disgusting Sneezes, Plaguesword and distended maw
+War Dog Brigand [165pts]: Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber
+War Dog Executioner [130pts]: Armoured feet, 2x War Dog autocannon, Diabolus heavy stubber
+War Dog Huntsman [140pts]: Daemonbreath spear, Reaper chaintalon, Diabolus heavy stubber
+War Dog Karnivore [140pts]: Reaper chaintalon, Slaughterclaw, Diabolus heavy stubber
+War Dog Moirax [160pts]: Armoured feet, Graviton pulsar, Volkite veuglaire
+War Dog Stalker [140pts]: Diabolus heavy stubber, Avenger chaincannon, Slaughterclaw
+Warbringer Nemesis Titan [2600pts]: 2x Anvillus defence battery, 3x Ardex-defensor mauler, Nemesis feet, Nemesis quake cannon, Reaver gatling blaster, Reaver laser blaster
+Warhound Titan [1100pts]: Warhound feet, Warhound plasma blastgun, Warhound vulcan mega-bolter
+Warlord Titan [3500pts]: 2x Ardex-defensor lascannon, 2x Ardex-defensor mauler, Warlord feet, Two apocalypse launchers (2x Apocalypse launcher), Arioch power claw, Macro gatling blaster

@@ -12,6 +12,12 @@
     "": ""
   },
   {
+    "id": "AM",
+    "name": "Genestealer Cults",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/genestealer-cults",
+    "": ""
+  },
+  {
     "id": "GC",
     "name": "Genestealer Cults",
     "link": "https://wahapedia.ru/wh40k10ed/factions/genestealer-cults",
@@ -21,6 +27,18 @@
     "id": "NEC",
     "name": "Necrons",
     "link": "https://wahapedia.ru/wh40k10ed/factions/necrons",
+    "": ""
+  },
+  {
+    "id": "AE",
+    "name": "Ynnari",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/aeldari",
+    "": ""
+  },
+  {
+    "id": "DRU",
+    "name": "Ynnari",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/aeldari",
     "": ""
   },
   {
@@ -84,6 +102,24 @@
     "": ""
   },
   {
+    "id": "QI",
+    "name": "Death Guard",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
+    "": ""
+  },
+  {
+    "id": "QT",
+    "name": "Death Guard",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
+    "": ""
+  },
+  {
+    "id": "CD",
+    "name": "Death Guard",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
+    "": ""
+  },
+  {
     "id": "DG",
     "name": "Death Guard",
     "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
@@ -121,14 +157,62 @@
   },
   {
     "id": "TYR",
+    "name": "Genestealer Cults",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids",
+    "": ""
+  },
+  {
+    "id": "TYR",
     "name": "Tyranids",
     "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids",
+    "": ""
+  },
+  {
+    "id": "AoI",
+    "name": "Adeptus Custodes",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
+    "": ""
+  },
+  {
+    "id": "QI",
+    "name": "Adeptus Custodes",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
     "": ""
   },
   {
     "id": "AC",
     "name": "Adeptus Custodes",
     "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
+    "": ""
+  },
+  {
+    "id": "AC",
+    "name": "Adeptus Custodes",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
+    "": ""
+  },
+  {
+    "id": "AC",
+    "name": "Adeptus Custodes",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
+    "": ""
+  },
+  {
+    "id": "AoI",
+    "name": "Adepta Sororitas",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
+    "": ""
+  },
+  {
+    "id": "QI",
+    "name": "Adepta Sororitas",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
+    "": ""
+  },
+  {
+    "id": "TL",
+    "name": "Adepta Sororitas",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
     "": ""
   },
   {

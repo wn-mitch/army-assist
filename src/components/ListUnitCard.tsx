@@ -40,10 +40,20 @@ const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; data
     unit.children = [];
   }
   
-  const weapons = unit.details
+  let weapons = unit.details
     ?.split(", ")
     .filter((name) => name !== "Warlord" && name !== "")
     .map((name) => name.replace(/^\d+x?\s*/, "").trim());
+  
+  weapons = weapons?.flatMap((weapon) => {
+    const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
+    if (match) {
+      const count = parseInt(match[1], 10);
+      const weaponName = match[2];
+      return Array(count).fill(weaponName);
+    }
+    return weapon;
+  });
 
   const availableWeaponDatasheets = datasheetWargear
     .filter((wargear) =>
@@ -54,6 +64,7 @@ const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; data
     .filter((wargear) => datasheet.id === wargear.datasheet_id)
     .filter((weapon) =>
       (weapons ?? []).some((name) => {
+
         return weapon.name?.toLowerCase().includes(name.toLowerCase());
       })
     );
@@ -99,7 +110,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   }
 
   const datasheet = datasheets
-    .filter((item) => item.faction_id === faction)
+    .filter((item) => faction.some((f) => item.faction_id === f.id))
     .filter((item) => item.name.toLowerCase() === unit.name.toLowerCase())[0];
 
   if (!datasheet) {

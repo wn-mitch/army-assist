@@ -1,10 +1,10 @@
-Imperium - Adepta Sororitas - Tester - [3565pts]
+Imperium - Adepta Sororitas - Tester - [20240pts]
 
-# ++ Army Roster ++ [3565pts]
+# ++ Army Roster ++ [20240pts]
 ## Configuration
 Battle Size
 Detachment Choice
-Show/Hide Options: Legends are visible
+Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible, Legends are visible, Titans are visible
 
 ## Epic Hero [885pts]
 Aestred Thurga and Agathae Dolan [85pts]:
@@ -85,3 +85,71 @@ Sororitas Rhino [75pts]: Armoured tracks, Storm bolter
 
 ## Fortification [170pts]
 Battle Sanctum [Legends] [170pts]
+
+## Allied Units [16675pts]
+Acastus Knight Asterius [765pts]: 2x Asterius volkite culverin, Karacnos mortar battery, Titanic feet, 2x Twin conversion beam cannon
+Acastus Knight Porphyrion [710pts]: Titanic feet, 2x Twin magna lascannon, 2 Acastus autocannons (2x Acastus autocannon), Acastus ironstorm missile pod
+Armiger Helverin [130pts]: 2x Armiger autocannon, Armoured feet, Questoris heavy stubber
+Armiger Moirax [160pts]: Armoured feet, Graviton pulsar, Volkite veuglaire
+Armiger Warglaive [140pts]: Reaper chain-cleaver, Thermal spear, Questoris heavy stubber
+Callidus Assassin [100pts]: Neural shredder, Phase sword and poison blades
+Canis Rex [450pts]: Chainbreaker las-impulsor, Chainbreaker multi-laser, Freedom's Hand
+• 1x Sir Hekhtur: Close combat weapon, Hekhtur's pistol
+Cerastus Knight Acheron [425pts]: Acheron flame cannon, Reaper chainfist, Twin heavy bolter
+Cerastus Knight Acheron [425pts]: Acheron flame cannon, Reaper chainfist, Twin heavy bolter
+Cerastus Knight Atrapos [425pts]: Atrapos lascutter, Graviton singularity cannon
+Cerastus Knight Castigator [465pts]: Castigator bolt cannon, Tempest warblade
+Cerastus Knight Lancer [430pts]: Cerastus shock lance
+Corvus Blackstar [180pts]: Armoured hull, Twin assault cannon, 2 Blackstar rocket launchers (2x Blackstar rocket launcher)
+Culexus Assassin [100pts]: Animus speculum, Life-draining touch
+Daemonhost [Legends] [40pts]:
+• 1x Daemonhost [40pts]: Unholy gaze, Warp grasp
+Damned Legionnaires [Legends] [90pts]:
+• 1x Legionnaire Sergeant: Close combat weapon, Boltgun
+• 4x Legionnaire w/ boltgun: Boltgun, Close combat weapon
+Deathwatch Kill Team [100pts]:
+• 5x Model w/ boltgun and power weapon: Boltgun, Power weapon
+Deathwatch Terminator Squad [Legends] [210pts]:
+• 4x Deathwatch Terminator: Power fist & storm bolter (Power fist, Storm bolter)
+• 1x Deathwatch Terminator Sergeant: Power fist & storm bolter (Power fist, Storm bolter)
+Espern Locarno [Legends] [40pts]: Force-orb cane, Laspistol
+Eversor Assassin [120pts]: Executioner pistol, Power sword and neuro gauntlet
+Exaction Squad [90pts]:
+• 9x Exaction Vigilant w/ shotgun: Arbites combat shotgun, Arbites shotpistol, Close combat weapon
+• 1x Proctor-Exactant: Arbites combat shotgun, Arbites shotpistol, Close combat weapon
+• 1x Cyber-mastiff: Mechanical bite
+Fortis Kill Team [Legends] [100pts]:
+• 5x Kill Team Intercessor: Bolt pistol, Bolt Rifle, Close combat weapon
+Grey Knights Terminator Squad [210pts]:
+• 1x Terminator Justicar: Nemesis force weapon, Storm bolter
+• 4x Terminator: Nemesis force weapon, Storm bolter
+Imperial Navy Breachers [90pts]:
+• 7x Navis Armsman: Close combat weapon, Navis shotgun
+• 1x Navis Armsman w/ special weapon: Close combat weapon, Navis las-volley
+• 1x Navis Armsman w/ heavy shotgun: Close combat weapon, Endurant shield, Navis heavy shotgun
+• 1x Navis Sergeant-at-Arms: Close combat weapon, Navis shotgun
+Imperial Rhino [75pts]: Armoured tracks, Storm bolter
+Indomitor Kill Team [Legends] [120pts]:
+• 5x Kill Team Heavy Intercessor: Bolt pistol, Close combat weapon, Heavy bolt rifle
+Inquisitor [55pts]: Inquisitorial melee weapon, Bolt pistol, Blessed wardings
+Inquisitor Coteaz [95pts]: Bolt pistol, Glovodan Psyber-eagle, Nemesis daemon hammer, Psychic Blast
+Inquisitor Coteaz [95pts]: Bolt pistol, Glovodan Psyber-eagle, Nemesis daemon hammer, Psychic Blast
+Inquisitor Draxus [95pts]: Dirgesinger, Power fist, Psychic Tempest
+Inquisitor Eisenhorn [Legends] [65pts]: Artificer bolt pistol, Mind Assault, Runestaff and Barbarisater
+Inquisitor Greyfax [65pts]: Castigation, Condemnor stake, Master-crafted power sword
+Inquisitor in Terminator Armour [Legends] [70pts]: Inquisitorial melee weapon, Storm bolter, Blessed wardings
+Inquisitor Karamazov [Legends] [130pts]: Master-crafted multi-melta, Master-crafted power sword
+Inquisitorial Agents [60pts]:
+• 5x Agent: Agent firearm, Agent melee weapon
+• 1x Servitor w/ heavy bolter: Agent melee weapon, Heavy bolter
+Inquisitorial Agents [60pts]:
+• 5x Agent: Agent firearm, Agent melee weapon
+• 1x Servitor w/ heavy bolter: Agent melee weapon, Heavy bolter
+Inquisitorial Chimera [70pts]: Armoured tracks, Lasgun array, Heavy bolter, Multi-laser
+Janus Draik [Legends] [55pts]: Heirloom pistol, Monomolecular rapier
+Reaver Titan [2200pts]: Reaver apocalypse launcher, Reaver feet, Reaver gatling blaster, Reaver laser blaster
+Warbringer Nemesis Titan [2600pts]: 2x Anvillus defence battery, 3x Ardex-defensor mauler, Nemesis feet, Nemesis quake cannon, Reaver gatling blaster, Reaver laser blaster
+Warhound Titan [1100pts]: Warhound feet, Warhound plasma blastgun, Warhound vulcan mega-bolter
+Warlord Titan [3500pts]: 2x Ardex-defensor lascannon, 2x Ardex-defensor mauler, Warlord feet, Two apocalypse launchers (2x Apocalypse launcher), Arioch power claw, Macro gatling blaster
+Watch Captain Artemis [65pts]: Hellfire Extremis, Master-crafted power weapon
+Watch Master [105pts]: Vigil spear

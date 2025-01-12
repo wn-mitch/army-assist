@@ -1,0 +1,55 @@
+Aeldari - Ynnari - Dhdb - [1995pts]
+
+# ++ Army Roster ++ [1995pts]
+## Configuration
+Battle Size
+Detachment
+Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Epic Hero [195pts]
+Illic Nightspear [70pts]: Aeldari power sword, Shuriken Pistol, Voidbringer
+Yvraine [125pts]: Kha-vir, the Sword of Sorrows, Storm of Whispers
+
+## Character [145pts]
+Farseer [80pts]: Eldritch Storm, Shuriken Pistol, Witchblade
+Spiritseer [65pts]: Shuriken Pistol, Witch Staff
+
+## Battleline [330pts]
+Kabalite Warriors [110pts]:
+• 9x Kabalite Warrior: Close Combat Weapon, Splinter rifle
+• 1x Sybarite: Close Combat Weapon, Splinter Rifle
+Kabalite Warriors [110pts]:
+• 9x Kabalite Warrior: Close Combat Weapon, Splinter rifle
+• 1x Sybarite: Close Combat Weapon, Splinter Rifle
+Kabalite Warriors [110pts]:
+• 9x Kabalite Warrior: Close Combat Weapon, Splinter rifle
+• 1x Sybarite: Close Combat Weapon, Splinter Rifle
+
+## Infantry [580pts]
+Rangers [55pts]:
+• 5x Ranger: Close Combat Weapon, Ranger long rifle, Shuriken Pistol
+Rangers [55pts]:
+• 5x Ranger: Close Combat Weapon, Ranger long rifle, Shuriken Pistol
+Rangers [55pts]:
+• 5x Ranger: Close Combat Weapon, Ranger long rifle, Shuriken Pistol
+Troupe [75pts]:
+• 1x Lead Player: Harlequin's Blade, Shuriken Pistol
+• 4x Player: Harlequin's Blade, Shuriken Pistol
+Wraithblades [340pts]:
+• 10x Wraithblade: Ghostswords
+
+## Mounted [185pts]
+Shroud Runners [80pts]:
+• 3x Shroud Runner: Close Combat Weapon, Ranger long rifle, Scatter Laser, Shuriken Pistol
+Skyweavers [105pts]:
+• 2x Skyweaver: Close Combat Weapon, Shuriken Cannon, Star Bolas
+
+## Vehicle [350pts]
+Falcon [130pts]: Pulse Laser, Wraithbone hull, Shuriken Cannon, Twin Shuriken Catapult
+Ravager [110pts]: Bladevanes, 3x Dark Lance
+Ravager [110pts]: Bladevanes, 3x Dark Lance
+
+## Dedicated Transport [210pts]
+Venom [70pts]: Bladevanes, Splinter Cannon, Twin Splinter Rifle
+Venom [70pts]: Bladevanes, Splinter Cannon, Twin Splinter Rifle
+Venom [70pts]: Bladevanes, Splinter Cannon, Twin Splinter Rifle
