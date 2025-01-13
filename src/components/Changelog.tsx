@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Description,
   Dialog,
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
-import { useEffect } from "react";
-import  useStore  from "@/store/store";
+import { QuestionMarkCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
+import useStore from "@/store/store";
 import nrWorldEaters from "@/assets/lists/nr_world_eaters.txt";
+import PatreonButton from "./Patreon";
+import DiscordButton from "./Discord";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,12 +63,18 @@ function Changelog() {
       <Dialog
         open={isOpen}
         onClose={() => {}}
-        className="fixed z-10 inset-0 overflow-y-auto"
+        className="fixed z-10 inset-0 overflow-y-scroll"
       >
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
 
           <div className="bg-white rounded w-2/3 mx-auto p-6 relative z-20">
+            <button
+              onClick={handleClose}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              <XCircleIcon className="h-6 w-6" />
+            </button>
             <DialogTitle className="text-xl font-bold text-center">
               Instructions & Changelog
             </DialogTitle>
@@ -113,6 +120,9 @@ function Changelog() {
                 "Supports own player phases, with limited support for the Charge phase",
               ]}
             />
+
+          <PatreonButton />
+          <DiscordButton />
 
             <div className="mt-4">
               <button

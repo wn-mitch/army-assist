@@ -138,6 +138,12 @@
     "": ""
   },
   {
+    "id": "QT",
+    "name": "Chaos Space Marines",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-space-marines",
+    "": ""
+  },
+  {
     "id": "CD",
     "name": "Chaos Daemons",
     "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-daemons",
@@ -219,6 +225,12 @@
     "id": "AS",
     "name": "Adepta Sororitas",
     "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
+    "": ""
+  },
+  {
+    "id": "CD",
+    "name": "Chaos Space Marines",
+    "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-space-marines",
     "": ""
   },
   {

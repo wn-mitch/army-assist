@@ -13,18 +13,24 @@ import DatasheetModel from "@/types/DatasheetModel";
 import Phase from "@/types/Phase";
 
 import WeaponPhaseTable from "@/components/WeaponPhaseTable";
+import ModelSaveTable from "@/components/ModelSaveTable";
+import PhaseAbilities from "@/components/PhaseAbilities";
 
-const CommandPhase = ({ datasheetModel }: { datasheetModel: DatasheetModel }): [React.ReactNode, boolean] => [
-  <div className="text-center text-xl font-extrabold">
-    {datasheetModel.Ld}
-  </div>,
+const CommandPhase = ({
+  datasheetModel,
+}: {
+  datasheetModel: DatasheetModel;
+}): [React.ReactNode, boolean] => [
+  <div className="text-center text-xl font-extrabold">{datasheetModel.Ld}</div>,
   true,
 ];
 
-const MovementPhase = ({ datasheetModel }: { datasheetModel: DatasheetModel }): [React.ReactNode, boolean] => [
-  <div className="text-center text-xl font-extrabold">
-    {datasheetModel.M}
-  </div>,
+const MovementPhase = ({
+  datasheetModel,
+}: {
+  datasheetModel: DatasheetModel;
+}): [React.ReactNode, boolean] => [
+  <div className="text-center text-xl font-extrabold">{datasheetModel.M}</div>,
   true,
 ];
 
@@ -33,18 +39,28 @@ const ChargePhase = (): [React.ReactNode, boolean] => [
   true,
 ];
 
-const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; datasheet: Datasheet; phase: Phase }): [React.ReactNode, boolean] => {
+const ShootingOrFightPhase = ({
+  unit,
+  datasheet,
+  phase,
+}: {
+  unit: ListUnit;
+  datasheet: Datasheet;
+  phase: Phase;
+}): [React.ReactNode, boolean] => {
   if (unit.children && unit.children.length > 0) {
     const details = unit.children.map((child) => child.details).join(", ");
-    unit.details = unit.details ? [...unit.details.split(", "), details].join(", ") : details;
+    unit.details = unit.details
+      ? [...unit.details.split(", "), details].join(", ")
+      : details;
     unit.children = [];
   }
-  
+
   let weapons = unit.details
     ?.split(", ")
     .filter((name) => name !== "Warlord" && name !== "")
     .map((name) => name.replace(/^\d+x?\s*/, "").trim());
-  
+
   weapons = weapons?.flatMap((weapon) => {
     const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
     if (match) {
@@ -64,7 +80,6 @@ const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; data
     .filter((wargear) => datasheet.id === wargear.datasheet_id)
     .filter((weapon) =>
       (weapons ?? []).some((name) => {
-
         return weapon.name?.toLowerCase().includes(name.toLowerCase());
       })
     );
@@ -77,21 +92,33 @@ const ShootingOrFightPhase = ({ unit, datasheet, phase }: { unit: ListUnit; data
   ];
 };
 
-const SavesPhase = ({ datasheetModel }: { datasheetModel: DatasheetModel }): [React.ReactNode, boolean] => {
+const SavesPhase = ({
+  datasheetModel,
+}: {
+  datasheetModel: DatasheetModel;
+}): [React.ReactNode, boolean] => {
   const save = datasheetModel.Sv;
   const invSave = datasheetModel.inv_sv;
- 
+
   const feelNoPainId = "000008338";
-  const fnp = datasheetAbilities.find((ability) => ability.ability_id === feelNoPainId && ability.datasheet_id === datasheetModel.datasheet_id);
+  const fnp = datasheetAbilities.find(
+    (ability) =>
+      ability.ability_id === feelNoPainId &&
+      ability.datasheet_id === datasheetModel.datasheet_id
+  );
 
   const saveText = `${save}`;
   const invSaveText = invSave !== "-" ? `${invSave}++` : "-";
   const fnpText = fnp ? `FNP ${fnp.parameter}` : "-";
 
   return [
-    <div className="text-center text-xl font-extrabold">
-      {saveText} / {invSaveText} / {fnpText}
-    </div>,
+    <ModelSaveTable
+      save={saveText}
+      invSave={invSaveText}
+      fnp={fnpText}
+      toughness={datasheetModel.T}
+      wounds={datasheetModel.W}
+    />,
     true,
   ];
 };
@@ -140,16 +167,22 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       break;
     case Phase.Shooting:
     case Phase.Fight:
-      [characteristic, toggled] = ShootingOrFightPhase({ unit, datasheet, phase });
+      [characteristic, toggled] = ShootingOrFightPhase({
+        unit,
+        datasheet,
+        phase,
+      });
       break;
     case Phase.Charge:
       [characteristic, toggled] = ChargePhase();
       break;
     case Phase.Saves:
-      [characteristic, toggled] = SavesPhase({datasheetModel});
+      [characteristic, toggled] = SavesPhase({ datasheetModel });
       break;
     default:
-      characteristic = <div className="text-center text-xl font-extrabold">BROKEN</div>;
+      characteristic = (
+        <div className="text-center text-xl font-extrabold">BROKEN</div>
+      );
       toggled = false;
   }
 
@@ -158,13 +191,14 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   return (
     <li
       key={unit.id}
-      className={`col-span-1 border-4 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-1 first:mt-0 shadow bg-slate-600 text-gray-200 ${fadedClasses}`}
+      className={`col-span-1 border-4 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-2 first:mt-0 shadow bg-slate-600 text-gray-200 ${fadedClasses}`}
       onClick={() => toggleUnit(unit)}
     >
       <div className="text-center text-lg font-bold rounded-lg bg-slate-900">
         {unit.name}
       </div>
       {characteristic}
+      <PhaseAbilities unit={datasheetModel} phase={phase} />
     </li>
   );
 }
