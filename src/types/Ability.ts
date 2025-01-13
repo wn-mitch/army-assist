@@ -9,5 +9,5 @@ export default interface Ability {
     description: string;
     type: string;
     parameter: string;
-    phases: Phase[];
+    phases: Phase[] | string[];
 }

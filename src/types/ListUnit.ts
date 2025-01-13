@@ -1,6 +1,6 @@
 interface ListUnit {
   id: number;
-  datasheet_id: string;
+  datasheet_id: string | null;
   name: string;
   count: number | null;
   points: number | null;

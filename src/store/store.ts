@@ -103,6 +103,7 @@ const useStore = create<StoreState>((set) => ({
             toggled: true,
             count: null,
             points: null,
+            datasheet_id: null,
           };
 
           listUnits.push(lastParentUnit);
@@ -116,6 +117,7 @@ const useStore = create<StoreState>((set) => ({
           toggled: true,
           count: parseInt(count),
           points: null,
+          datasheet_id: null,
         };
 
         if (lastParentUnit && lastParentUnit.children) {
