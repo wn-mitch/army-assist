@@ -4,23 +4,24 @@ import Phase from "@/types/Phase";
 import Ability from "@/types/Ability";
 import DatasheetModel from "@/types/DatasheetModel";
 
-const PhaseAbilities: React.FC<{ unit: DatasheetModel; phase: Phase }> = ({
-  unit,
+const PhaseAbilities: React.FC<{ datasheetModel: DatasheetModel; phase: Phase }> = ({
+  datasheetModel,
   phase,
 }) => {
   const [abilities, setAbilities] = useState<Ability[]>([]);
 
   useEffect(() => {
     const matchingAbilities = Abilities.filter(
-    // @ts-expect-error - Phases are strings, and the engine can't read that
+      // @ts-expect-error - Phases are strings, and the engine can't read that
       (ability: Ability) =>
-        ability.datasheet_id === unit.datasheet_id &&
+        ability.datasheet_id === datasheetModel.datasheet_id &&
         ability.phases.includes(phase)
     );
-    setAbilities(matchingAbilities as Ability[]);
-  }, [unit, phase]);
 
-  return (
+    setAbilities(matchingAbilities as Ability[]);
+  }, [datasheetModel, phase]);
+
+    const abilitiesList = (
     <div className="gap-2">
       {abilities.map((ability) => (
         <li
@@ -37,6 +38,8 @@ const PhaseAbilities: React.FC<{ unit: DatasheetModel; phase: Phase }> = ({
       ))}
     </div>
   );
+
+  return [abilitiesList, abilities.length > 0];
 };
 
 export default PhaseAbilities;

@@ -225,6 +225,11 @@ const tagDetails: { [key: string]: TagDetail } = {
     icon: <GiBrainTentacle className="h-5 w-5" />,
     bgColor: "bg-indigo-800",
     ringColor: "ring-indigo-900",
+  },
+  "harpooned" : {
+    icon: <GiBrainTentacle className="h-5 w-5" />,
+    bgColor: "bg-indigo-800",
+    ringColor: "ring-indigo-900",
   }
 };
 

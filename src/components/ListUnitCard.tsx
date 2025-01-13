@@ -15,13 +15,14 @@ import Phase from "@/types/Phase";
 import WeaponPhaseTable from "@/components/WeaponPhaseTable";
 import ModelSaveTable from "@/components/ModelSaveTable";
 import PhaseAbilities from "@/components/PhaseAbilities";
+import LeadershipOCTable from "./LeadershipOCTable";
 
 const CommandPhase = ({
   datasheetModel,
 }: {
   datasheetModel: DatasheetModel;
 }): [React.ReactNode, boolean] => [
-  <div className="text-center text-xl font-extrabold">{datasheetModel.Ld}</div>,
+  <LeadershipOCTable leadership={datasheetModel.Ld} oc={datasheetModel.OC} />,
   true,
 ];
 
@@ -186,7 +187,8 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       toggled = false;
   }
 
-  const fadedClasses = unit.toggled && toggled ? "" : "opacity-50";
+  const [phasedAbilities, abilitiesToggle] = PhaseAbilities({ datasheetModel, phase });
+  const fadedClasses = unit.toggled && (toggled || abilitiesToggle)? "" : "opacity-50";
 
   return (
     <li
@@ -198,7 +200,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
         {unit.name}
       </div>
       {characteristic}
-      <PhaseAbilities unit={datasheetModel} phase={phase} />
+      {phasedAbilities}
     </li>
   );
 }

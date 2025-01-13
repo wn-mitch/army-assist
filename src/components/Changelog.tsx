@@ -111,6 +111,14 @@ function Changelog() {
             </Description>
             
             <ChangelogEntry
+              version="1.1.1"
+              date="01/13/2025"
+              changes={[
+                "Fixed spelling errors for the Norn Assimilator"
+              ]}
+            />
+            
+            <ChangelogEntry
               version="1.1.0"
               date="01/13/2025"
               changes={[
