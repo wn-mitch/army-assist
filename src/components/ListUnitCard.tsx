@@ -62,6 +62,15 @@ const ShootingOrFightPhase = ({
     .filter((name) => name !== "Warlord" && name !== "")
     .map((name) => name.replace(/^\d+x?\s*/, "").trim());
 
+  if (datasheet.id === "000000613") {
+    weapons = weapons ? [...weapons, "Wraithbone fists"] : ["Wraithbone fists"];
+  }
+
+  if (datasheet.id === "000002565") {
+    weapons = weapons ? [...weapons, "Armoured limbs"] : ["Armoured limbs"];
+  }
+
+
   weapons = weapons?.flatMap((weapon) => {
     const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
     if (match) {
@@ -137,9 +146,20 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     window.alert("Faction not set");
   }
 
-  const datasheet = datasheets
-    .filter((item) => faction.some((f) => item.faction_id === f.id))
-    .filter((item) => item.name.toLowerCase() === unit.name.toLowerCase())[0];
+  const datasheetsMatchingName = datasheets
+    .filter((item) => item.name.toLowerCase() === unit.name.toLowerCase());
+
+  console.log(datasheetsMatchingName)
+  // Create an array of all unique factions in the datasheets
+  const uniqueFactions = Array.from(new Set(datasheetsMatchingName.map((item) => item.faction_id)));
+  console.log(uniqueFactions)
+
+  // @ts-expect-error - Line 145 has a check that should prevent this from being null
+  const datasheet = uniqueFactions.includes(faction)
+    ? datasheetsMatchingName.filter((item) => item.faction_id === faction)[0]
+    : datasheetsMatchingName[0];
+
+    console.log(datasheet)
 
   if (!datasheet) {
     window.alert(`Datasheet not found for unit ${unit.name}`);
@@ -187,12 +207,13 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       toggled = false;
   }
 
+  // @ts-expect-error - This works. Not sure why flagged.
   const [phasedAbilities, abilitiesToggle] = PhaseAbilities({ datasheetModel, phase });
   const fadedClasses = unit.toggled && (toggled || abilitiesToggle)? "" : "opacity-50";
 
   return (
     <li
-      key={unit.id}
+      key={unit.datasheet_id}
       className={`col-span-1 border-4 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-2 first:mt-0 shadow bg-slate-600 text-gray-200 ${fadedClasses}`}
       onClick={() => toggleUnit(unit)}
     >

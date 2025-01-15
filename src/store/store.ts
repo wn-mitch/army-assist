@@ -5,7 +5,6 @@ import { create } from "zustand";
 // import { persist, createJSONStorage } from "zustand/middleware";
 
 import factions from "@/assets/json/Factions.json";
-import Faction from "@/types/Faction";
 
 interface StoreState {
   text: string;
@@ -13,7 +12,7 @@ interface StoreState {
   round: number;
   turn: Side;
   phase: Phase;
-  faction: Faction[];
+  faction: string | undefined;
   activePhases: {
     [Phase.Command]: boolean;
     [Phase.Movement]: boolean;
@@ -46,14 +45,14 @@ const useStore = create<StoreState>((set) => ({
     [Phase.Fight]: true,
     [Phase.Saves]: true,
   },
-  faction: [],
+  faction: undefined,
   isFirstVisit: true,
   reset: () =>
     set({
       text: "",
       units: [],
       round: 1,
-      faction: [],
+      faction: undefined,
       turn: Side.Me,
       phase: Phase.Command,
     }),
@@ -68,23 +67,22 @@ const useStore = create<StoreState>((set) => ({
       return false;
     }
 
-    const factionAbbreviations = factions
-      .filter((f) => f.name === factionMatch[1])
-      .map((f) => f);
+    const factionAbbreviation = factions
+      .filter((f) => f.name === factionMatch[1])[0].id
 
-    if (factionAbbreviations.length === 0) {
+    if (!factionAbbreviation) {
       console.error("Faction abbreviation not found in the list");
       return false;
     }
 
-    set({ faction: factionAbbreviations });
+    set({ faction: factionAbbreviation });
 
     const listUnits: ListUnit[] = [];
     let lastParentUnit: ListUnit | null = null;
 
     lines.forEach((line, index) => {
       const parentMatch = line.match(
-        /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]]+)\s\[\d+pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s,’'-]+)?$/
+        /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]']+)\s\[\d+pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
       );
       const childMatch = line.match(
         /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/

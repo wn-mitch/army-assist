@@ -114,7 +114,8 @@ function Changelog() {
               version="1.1.1"
               date="01/13/2025"
               changes={[
-                "Fixed spelling errors for the Norn Assimilator"
+                "Fixed spelling errors for the Norn Assimilator",
+                "Made cards not grayed out if the have an available ability in that phase"
               ]}
             />
             

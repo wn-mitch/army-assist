@@ -1,0 +1,438 @@
+Imperium - Adeptus Astartes - Dark Angels - asdf - [49985pts]
+
+# ++ Army Roster ++ [49985pts]
+## Configuration
+Battle Size
+Detachment
+Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible, Legends are visible, Titans are visible
+
+## Epic Hero [1095pts]
+Asmodai [70pts]: Crozius Arcanum and Power Weapon, Heavy Bolt Pistol
+Azrael [115pts]: Lion's Wrath, The Sword of Secrets
+Belial [85pts]: Master-crafted storm bolter, The Sword of Silence
+Carab Culln the Risen [Legends] [250pts]: Heavy Bolter, 2x Heavy Flamer, 3x Hunter Killer Missile, Tarsus Scorpii, Twin Assault Cannon
+Ezekiel [75pts]: Mind Wipe, The Deliverer, Traitor's Bane
+Lazarus [70pts]: Bolt pistol, Enmity’s Edge
+Lion El'Jonson [315pts]: Arma Luminis, Fealty, Warlord
+Sammael [115pts]: Bolt Pistol, Master-crafted plasma cannon, The Raven Sword, Twin storm bolter
+
+## Character [2590pts]
+Ancient [50pts]: Bolt Pistol, Bolt Rifle & Close Combat Weapon (Bolt Rifle, Close Combat Weapon)
+Ancient in Terminator Armor [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)
+Ancient on Bike [Legends] [90pts]: Astartes Chainsword, Twin Boltgun, Bolt Pistol
+Apothecary [50pts]: Absolver Bolt Pistol, Close Combat Weapon, Reductor Pistol
+Apothecary [50pts]: Absolver Bolt Pistol, Close Combat Weapon, Reductor Pistol
+Apothecary Biologis [70pts]: Absolver Bolt Pistol, Close Combat Weapon
+Apothecary on Bike [Legends] [65pts]: Astartes Chainsword, Bolt Pistol, Twin Boltgun
+Bladeguard Ancient [45pts]: Close Combat Weapon, Heavy Bolt Pistol
+Captain [80pts]: Bolt Pistol, Master-crafted Bolt Rifle, Melee Weapon (Bolt Pistol, Master-crafted Bolt Rifle, Close Combat Weapon)
+Captain in Gravis Armour [80pts]: Master-crafted Heavy Bolt Rifle and Master-crafted Power Weapon (Master-crafted Heavy Bolt Rifle, Master-crafted Power Weapon)
+Captain in Phobos Armour [70pts]: Bolt Pistol, Combat Knife, Instigator Bolt Carbine
+Captain in Terminator Armour [95pts]: Storm Bolter, Relic Weapon
+Captain on Bike [Legends] [95pts]: Twin Boltgun, Astartes Chainsword, Bolt Pistol
+Captain with Jump Pack [85pts]: Melee and Pistol (Astartes Chainsword, Heavy Bolt Pistol)
+Chaplain [60pts]: Absolver Bolt Pistol, Crozius Arcanum
+Chaplain in Terminator Armour [75pts]: Crozius Arcanum, Storm Bolter
+Chaplain on Bike [75pts]: Absolver Bolt Pistol, Crozius Arcanum, Twin Bolt Rifle
+Chaplain with Jump Pack [75pts]: Crozius Arcanum, Bolt Pistol
+Company Champion on Bike [Legends] [60pts]: Bolt Pistol, Master-crafted Power Weapon, Twin Boltgun
+Deathwing Strikemaster [Legends] [80pts]: Storm Bolter
+Imperial Space Marine [Legends] [40pts]: Close Combat Weapon, Disintegration Combi-gun, Disintegration Pistol
+Judiciar [70pts]: Absolver Bolt Pistol, Executioner Relic Blade
+Librarian [65pts]: Bolt Pistol, Force Weapon, Smite
+Librarian in Phobos Armour [70pts]: Bolt Pistol, Force Weapon, Smite
+Librarian in Terminator Armour [75pts]: Force Weapon, Smite
+Librarian on Bike [Legends] [80pts]: Force Weapon, Smite, Bolt Pistol
+Librarian with Jump Pack [Legends] [75pts]: Force Weapon, Smite, Bolt Pistol
+Lieutenant [65pts]: Pistol, Master-crafted Bolt Rifle & Melee Weapon (Close Combat Weapon, Bolt Pistol, Master-crafted Bolt Rifle)
+Lieutenant in Phobos Armour [55pts]: Bolt Pistol, Master-crafted Scoped Bolt Carbine, Paired Combat Blades
+Lieutenant in Reiver Armour [55pts]: Combat Knife, Master-crafted Special Issue Bolt Pistol
+Lieutenant with Combi-weapon [70pts]: Combi-weapon, Paired Combat Blades
+Primaris Company Champion [Legends] [55pts]: Bolt Pistol, Master-crafted Power Weapon
+Ravenwing Command Squad [120pts]:
+• 1x Ravenwing Ancient: Black Knight combat weapon, Bolt Pistol, Plasma talon
+• 1x Ravenwing Apothecary: Black Knight combat weapon, Bolt Pistol, Plasma talon
+• 1x Ravenwing Champion: Bolt Pistol, Master-crafted power weapon, Plasma talon
+Ravenwing Talonmaster [Legends] [105pts]: Power Weapon, Twin Assault Cannon, Twin Heavy Bolter
+Techmarine [55pts]: Forge Bolter, Grav-pistol, Omnissian Power Axe, Servo-arm
+Techmarine on Bike [Legends] [110pts]: Omnissian Power Axe, Bolt Pistol, Conversion Beamer
+
+## Battleline [405pts]
+Assault Intercessor Squad [75pts]:
+• 1x Assault Intercessor Sergeant: Heavy Bolt Pistol, Astartes Chainsword
+• 4x Assault Intercessors: Astartes Chainsword, Heavy Bolt Pistol
+Heavy Intercessor Squad [110pts]:
+• 1x Heavy Intercessor Sergeant: Heavy Bolt Rifle (Bolt Pistol, Close Combat Weapon)
+• 4x Heavy Intercessors: Bolt Pistol, Close Combat Weapon, Heavy Bolt Rifle
+Intercessor Squad [80pts]:
+• 1x Intercessor Sergeant: Bolt Pistol, Bolt Rifle, Close Combat Weapon
+• 4x Intercessors: Bolt Pistol, Bolt Rifle, Close Combat Weapon
+Tactical Squad [140pts]:
+• 9x Tactical Marine: Bolt Pistol, Boltgun, Close Combat Weapon
+• 1x Tactical Marine Sergeant: Close Combat Weapon, Bolt Pistol, Boltgun
+
+## Infantry [4255pts]
+Aggressor Squad [120pts]:
+• 1x Aggressor Sergeant: Twin Power Fist, Flamestorm Gauntlets
+• 2x Aggressors: Twin Power Fist, Flamestorm Gauntlets
+Assault Intercessors with Jump Packs [90pts]:
+• 1x Assault Intercessor Sergeant with Jump Pack: Heavy Bolt Pistol, Astartes Chainsword
+• 4x Assault Intercessors with Jump Pack: Astartes Chainsword, Heavy Bolt Pistol
+Assault Squad [Legends] [95pts]:
+• 4x Assault Marine: Astartes Chainsword, Bolt Pistol
+• 1x Assault Sergeant: Astartes Chainsword, Bolt Pistol
+Assault Squad with Jump Packs [Legends] [115pts]:
+• 4x Assault Marine with Jump Pack: Astartes Chainsword, Bolt Pistol
+• 1x Assault Sergeant with Jump Pack: Astartes Chainsword, Bolt Pistol
+Astartes Servitors [Legends] [55pts]:
+• 4x Astartes Servitor: Servitor Servo Arm
+Bladeguard Veteran Squad [90pts]:
+• 1x Bladeguard Veteran Sergeant: Master-crafted Power Weapon, Heavy Bolt Pistol
+• 2x Bladeguard Veterans: Heavy Bolt Pistol, Master-crafted Power Weapon
+Centurion Assault Squad [150pts]:
+• 2x Assault Centurion: Siege Drills, Centurion Bolters, Twin Flamer
+• 1x Assault Centurion Sergeant: Siege Drills, Centurion Bolters, Twin Flamer
+Centurion Devastator Squad [185pts]:
+• 2x Devastator Centurion: Centurion Fists, Centurion Bolters, Grav-cannon
+• 1x Devastator Centurion Sergeant: Centurion Fists, Centurion Bolters, Grav-cannon
+Centurion Devastator Squad [185pts]:
+• 2x Devastator Centurion: Centurion Fists, Centurion Bolters, Grav-cannon
+• 1x Devastator Centurion Sergeant: Centurion Fists, Centurion Bolters, Grav-cannon
+Command Squad [Legends] [165pts]:
+• 1x Apothecary: Astartes Chainsword, Bolt Pistol
+• 1x Company Ancient: Close Combat Weapon, Bolt Pistol
+• 1x Company Champion: Astartes Shield, Champion's Blade, Bolt Pistol
+• 2x Company Veterans: Bolt Pistol, Astartes Chainsword
+Company Heroes [95pts]:
+• 1x Ancient: Bolt Pistol, Bolt Rifle, Close Combat Weapon
+• 1x Company Champion: Bolt Pistol, Master-crafted Power Weapon
+• 1x Company Veteran w/ Bolt Rifle: Bolt Pistol, Close Combat Weapon, Master-crafted Bolt Rifle
+• 1x Company Veteran w/ Heavy Bolter: Bolt Pistol, Close Combat Weapon, Master-crafted Heavy Bolter (Close Combat Weapon)
+Deathwing Command Squad [Legends] [200pts]:
+• 1x Deathwing Ancient: Power Fist, Storm Bolter
+• 1x Deathwing Apothecary: Chainfist, Storm Bolter
+• 1x Deathwing Champion: Halberd of Caliban
+• 2x Deathwing Command Terminator: Power Fist, Storm Bolter
+Deathwing Knights [250pts]: Mace of absolution
+• 4x Deathwing Knight
+• 1x Knight Master: Great Weapon of the Unforgiven
+Deathwing Terminator Squad [180pts]:
+• 1x Deathwing Sergeant: Power Weapon, Storm Bolter
+• 4x Deathwing Terminator: Power Fist, Storm Bolter
+Desolation Squad [200pts]:
+• 4x Desolation Marine: Bolt Pistol, Castellan Launcher, Close Combat Weapon, Superfrag Rocket Launcher
+• 1x Desolation Sergeant: Bolt Pistol, Castellan Launcher, Close Combat Weapon, Superfrag Rocket Launcher
+Devastator Squad [120pts]:
+• 4x Devastator Marine w/ Heavy Weapon: Bolt Pistol, Close Combat Weapon, Grav-cannon
+• 1x Devastator Sergeant: Close Combat Weapon, 2x Astartes Chainsword
+Eliminator Squad [85pts]:
+• 2x Eliminator: Bolt Pistol, Close Combat Weapon, Bolt Sniper Rifle
+• 1x Eliminator Sergeant: Bolt Pistol, Close Combat Weapon, Bolt Sniper Rifle
+Eradicator Squad [100pts]:
+• 2x Eradicator: Bolt Pistol, Close Combat Weapon, Melta Rifle
+• 1x Eradicator Sergeant: Bolt Pistol, Close Combat Weapon, Melta Rifle
+Hellblaster Squad [115pts]:
+• 4x Hellblaster: Bolt Pistol, Close Combat Weapon, Plasma Incinerator
+• 1x Hellblaster Sergeant: Close Combat Weapon, Plasma Incinerator, Bolt Pistol
+Inceptor Squad [120pts]: Assault Bolters
+• 2x Inceptor: Close Combat Weapon
+• 1x Inceptor Sergeant: Close Combat Weapon
+Incursor Squad [80pts]:
+• 4x Incursor: Bolt Pistol, Occulus Bolt Carbine, Paired Combat Blades
+• 1x Incursor Sergeant: Bolt Pistol, Occulus Bolt Carbine, Paired Combat Blades
+Infernus Squad [90pts]:
+• 4x Infernus Marines: Bolt Pistol, Close Combat Weapon, Pyreblaster
+• 1x Infernus Sergeant: Bolt Pistol, Close Combat Weapon, Pyreblaster
+Infiltrator Squad [100pts]:
+• 4x Infiltrator: Bolt Pistol, Close Combat Weapon, Marksman Bolt Carbine
+• 1x Infiltrator Sergeant: Bolt Pistol, Close Combat Weapon, Marksman Bolt Carbine
+Inner Circle Companions [90pts]:
+• 3x Inner Circle Companion: Calibanite Greatsword, Heavy Bolt Pistol
+Reiver Squad [80pts]:
+• 1x Reiver Sergeant: Combat Knife, Special Issue Bolt Pistol
+• 4x Reivers: Special Issue Bolt Pistol, Combat Knife
+Relic Terminator Squad [Legends] [200pts]:
+• 1x Relic Terminator Sergeant: Power Fist, Combi-bolter
+• 4x Relic Terminator w/ Power Fist: Combi-bolter, Power Fist
+Scout Sniper Squad [Legends] [75pts]:
+• 1x Scout Sniper Sergeant: Bolt Pistol, Close Combat Weapon, Scout Sniper Rifle
+• 4x Scout Snipers: Bolt Pistol, Close Combat Weapon, Scout Sniper Rifle
+Scout Squad [70pts]:
+• 1x Scout Sergeant: Bolt Pistol, Close Combat Weapon, Boltgun
+• 4x Scouts w/ Boltgun: Bolt Pistol, Boltgun, Close Combat Weapon
+Sternguard Veteran Squad [100pts]:
+• 1x Sternguard Veteran Sergeant: Close Combat Weapon, Sternguard Bolt Pistol, Sternguard Bolt Rifle
+• 4x Sternguard Veteran w/ Bolt Rifle: Close Combat Weapon, Sternguard Bolt Pistol, Sternguard Bolt Rifle
+Suppressor Squad [75pts]:
+• 2x Suppressor: Accelerator Autocannon, Bolt Pistol, Close Combat Weapon
+• 1x Suppressor Sergeant: Accelerator Autocannon, Bolt Pistol, Close Combat Weapon
+Terminator Assault Squad [180pts]:
+• 1x Assault Terminator Sergeant: Thunder Hammer & Storm Shield (Storm Shield, Thunder Hammer)
+• 4x Assault Terminator w/ Thunder Hammer & Storm Shield: Storm Shield, Thunder Hammer
+Terminator Squad [170pts]:
+• 1x Terminator Sergeant: Storm Bolter, Power Fist
+• 4x Terminator w/ Power Fist: Power Fist, Storm Bolter
+Vanguard Veteran Squad [Legends] [120pts]:
+• 1x Vanguard Veteran Sergeant: Vanguard Veteran Weapon, Bolt Pistol
+• 4x Vanguard Veterans: Heirloom Weapon, Bolt Pistol
+Vanguard Veteran Squad with Jump Packs [110pts]:
+• 1x Vanguard Veteran Sergeant with Jump Pack: Vanguard Veteran Weapon, Bolt Pistol
+• 4x Vanguard Veterans with Jump Packs: Vanguard Veteran Weapon, Bolt Pistol
+
+## Mounted [550pts]
+Attack Bike Squad [Legends] [55pts]:
+• 1x Attack Bike [55pts]: Bolt Pistol, Close Combat Weapon, Twin Boltgun, Heavy Bolter
+Bike Squad [Legends] [80pts]:
+• 1x Biker Sergeant: Close Combat Weapon, Twin Boltgun, Bolt Pistol
+• 2x Space Marine Bikers w/ Bolt Pistol: Bolt Pistol, Close Combat Weapon, Twin Boltgun
+Company Veterans on Bikes [Legends] [110pts]:
+• 1x Veteran Biker Sergeant: Twin Boltgun, Astartes Chainsword, Bolt Pistol
+• 1x Veteran Bikers: Twin Boltgun, Astartes Chainsword, Bolt Pistol
+Invader ATV [60pts]: Bolt Pistol, Close Combat Weapon, Twin Bolt Rifle, Onslaught Gatling Cannon
+Outrider Squad [80pts]:
+• 2x Outrider: Astartes Chainsword, Heavy Bolt Pistol, Twin Bolt Rifle
+• 1x Outrider Sergeant: Astartes Chainsword, Heavy Bolt Pistol, Twin Bolt Rifle
+Ravenwing Black Knights [90pts]:
+• 2x Ravenwing Black Knight: Black Knight combat weapon, Bolt Pistol, Plasma talon
+• 1x Ravenwing Huntmaster: Black Knight combat weapon, Bolt Pistol, Plasma talon
+Scout Bike Squad [Legends] [75pts]:
+• 1x Scout Biker Sergeant: Astartes Shotgun, Combat Knife, Twin Boltgun, Astartes Chainsword
+• 2x Scout Biker w/ Twin Boltgun: Astartes Shotgun, Combat Knife, Twin Boltgun
+
+## Vehicle [17310pts]
+Astraeus [525pts]: Armoured hull, Ironhail Heavy Stubber, Storm bolter, Twin macro-accelerator cannon, Twin heavy bolter, Two Astraeus las-rippers (2x Astraeus las-ripper)
+Ballistus Dreadnought [130pts]: Armoured Feet, Ballistus Lascannon, Ballistus Missile Launcher, Twin Storm Bolter
+Brutalis Dreadnought [160pts]: Twin Icarus Ironhail Heavy Stubber, Brutalis Fists & Brutalis Bolt Rifles (Brutalis Bolt Rifles, Brutalis Fists), Twin Heavy Bolter
+Caestus Assault Ram [Legends] [215pts]: Armoured Hull, Firefury Missile Batteries, Twin Magna-Melta
+Cerberus [Legends] [285pts]: Armoured tracks, Cerberus neutron pulse array
+Chaplain Venerable Dreadnought [Legends] [150pts]: Assault Cannon, Dreadnought Combat Weapon w/ Storm Bolter (Dreadnought Combat Weapon, Storm Bolter)
+Deathstorm Drop Pod [Legends] [95pts]: Deathstorm cannon array
+Deimos Predator [Legends] [115pts]: Armoured Tracks, Plasma Destroyer
+Deredeo Dreadnought [Legends] [170pts]: Armoured feet, Twin heavy bolter, Anvilus autocannon battery
+Deredeo Dreadnought [Legends] [170pts]: Armoured feet, Twin heavy bolter, Anvilus autocannon battery
+Dreadnought [135pts]: Close Combat Weapon w/ Missile Launcher (Close Combat Weapon, Missile Launcher), Assault Cannon
+Dreadnought Drop Pod [Legends] [75pts]
+Drop Pod [70pts]: Storm Bolter
+Falchion [Legends] [515pts]: Armoured tracks, Twin Falchion volcano cannon, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Fellblade [Legends] [535pts]: Armoured tracks, Demolisher cannon, Fellblade accelerator cannon, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Fire Raptor Gunship [Legends] [290pts]: Armoured hull, Twin avenger bolt cannon, Two twin autocannons (2x Twin autocannon), Two twin hellstrike launchers (2x Twin hellstrike launcher)
+Firestrike Servo-Turrets [75pts]:
+• 1x Firestrike Servo-Turret [75pts]: Close Combat Weapon, Twin Firestrike Las-talon
+Gladiator Lancer [160pts]: Armoured Hull, Lancer Laser Destroyer, Two fragstorm grenade launchers (2x Fragstorm Grenade Launcher)
+Gladiator Reaper [160pts]: Armoured Hull, 2x Tempest Bolter, Twin Heavy Onslaught Gatling Cannon
+Gladiator Valiant [160pts]: Armoured Hull, 2x Multi-melta, Twin Las-talon
+Hunter [Legends] [100pts]: Armoured Tracks, Skyspear Missile Launcher
+Invictor Tactical Warsuit [125pts]: Fragstorm Grenade Launcher, Heavy Bolter, Invictor Fist, Twin Ironhail Heavy Stubber, Incendium Cannon
+Ironclad Dreadnought [Legends] [150pts]: Dreadnought Combat Weapon w/ Storm Bolter (Dreadnought Combat Weapon, Storm Bolter), Seismic Hammer, Meltagun
+Javelin Attack Speeder [Legends] [110pts]: Close combat weapon, Heavy bolter, Javelin missile launcher
+Kratos [Legends] [265pts]: Armoured tracks, Autocannon, 2x Two heavy bolters (2x Heavy bolter), Kratos battlecannon
+Land Raider [240pts]: Armoured Tracks, 2x Godhammer Lascannon, Twin Heavy Bolter
+Land Raider Achilles [Legends] [285pts]: Armoured tracks, Quad launcher, Two twin volkite culverins (2x Twin volkite culverin)
+Land Raider Crusader [220pts]: Armoured Tracks, 2x Hurricane Bolter, Twin Assault Cannon
+Land Raider Excelsior [Legends] [310pts]: Armoured Tracks, 2x Godhammer Lascannons, Grav-cannon
+Land Raider Helios [Legends] [265pts]: Armoured Tracks, 2x Godhammer Lascannons, Helios Launcher
+Land Raider Prometheus [Legends] [275pts]: Armoured Tracks, Multi-melta, 2x Quad Heavy Bolter
+Land Raider Proteus [Legends] [250pts]: Armoured tracks, 2x Twin lascannon
+Land Raider Redeemer [285pts]: Armoured Tracks, 2x Flamestorm Cannon, Twin Assault Cannon
+Land Speeder [Legends] [80pts]: Close Combat Weapon, Heavy Bolter
+Land Speeder Tempest [Legends] [95pts]: Armoured Hull, Assault Cannon, Tempest Salvo Launcher
+Land Speeder Tornado [Legends] [95pts]: Close Combat Weapon, Heavy Bolter, Assault Cannon
+Land Speeder Typhoon [Legends] [100pts]: Close Combat Weapon, Typhoon Missile Launcher, Heavy Bolter
+Land Speeder Vengeance [120pts]: Close Combat Weapon, Plasma storm battery, Heavy bolter
+Leviathan Dreadnought [Legends] [215pts]: Armoured feet, 2x Grav-flux bombard, Two heavy flamers (2x Heavy flamer)
+Mastodon [Legends] [610pts]: Armoured tracks, Siege melta array, Skyreaper battery, Two heavy flamers (2x Heavy flamer), Two lascannons (2x Lascannon)
+Mortis Dreadnought [Legends] [130pts]: Armoured Feet, 2 Twin Heavy Bolters (2x Twin Heavy Bolter)
+Nephilim Jetfighter [195pts]: Armoured hull, Blacksword missiles, Twin heavy bolter, Avenger mega bolter
+Predator Annihilator [130pts]: Armoured Tracks, Predator Twin Lascannon
+Predator Destructor [130pts]: Armoured Tracks, Predator Autocannon
+Rapier Carrier [Legends] [100pts]: Boltgun, Close combat weapon, Quad heavy bolter
+Ravenwing Dark Talon [210pts]: Armoured Hull, Hurricane bolter, Rift cannon
+Ravenwing Darkshroud [115pts]: Close Combat Weapon, Heavy bolter
+Redemptor Dreadnought [210pts]: Redemptor Fist, Heavy Onslaught Gatling Cannon, Heavy Flamer, Twin Fragstorm Grenade Launcher
+Relic Contemptor Dreadnought [Legends] [180pts]: Armoured feet, 2x Heavy plasma cannon
+Repulsor [180pts]: Armoured Hull, Hunter-slayer Missile, Repulsor Defensive Array, Twin Heavy Bolter, Heavy Onslaught Gatling Cannon
+Repulsor Executioner [220pts]: Armoured Hull, Heavy Onslaught Gatling Cannon, Repulsor Executioner Defensive Array, Twin Heavy Bolter, Twin Icarus Ironhail Heavy Stubber, Macro Plasma Incinerator
+Rhino Primaris [Legends] [95pts]: Armoured Tracks, Twin Plasma Gun
+Sicaran Arcus [Legends] [200pts]: Arcus multi-launcher, Armoured tracks, Heavy bolter
+Sicaran Battle Tank [Legends] [220pts]: Armoured tracks, Heavy bolter, Herakles-pattern autocannon
+Sicaran Omega [Legends] [235pts]: Armoured tracks, Heavy bolter, Omega plasma array
+Sicaran Punisher [Legends] [220pts]: Armoured tracks, Heavy bolter, Punisher rotary cannon
+Sicaran Venator [Legends] [220pts]: Armoured tracks, Heavy bolter, Venator neutron laser
+Sokar-pattern Stormbird [Legends] [1100pts]: Armoured hull, Hellstrike missile battery, 3x Twin heavy bolter, 4x Twin lascannon
+Spartan [Legends] [315pts]: Armoured tracks, Twin heavy bolter, Two quad lascannons (2x Quad lascannon)
+Stalker [Legends] [140pts]: Armoured Tracks, 2x Icarus Stormcannon
+Storm Eagle Gunship [Legends] [255pts]: Armoured hull, Vengeance launcher, Twin heavy bolter, Two twin hellstrike launchers (2x Twin hellstrike launcher)
+Storm Speeder Hailstrike [115pts]: Close Combat Weapon, 2x Fragstorm Grenade Launcher, Onslaught Gatling Cannon, Twin Ironhail Heavy Stubber
+Storm Speeder Hammerstrike [125pts]: Close Combat Weapon, Hammerstrike Missile Launcher, 2x Krakstorm Grenade Launcher, Melta Destroyer
+Storm Speeder Thunderstrike [150pts]: Close Combat Weapon, Stormfury Missiles, Thunderstrike Las-talon, Twin Icarus Rocket Pod
+Stormhawk Interceptor [155pts]: Armoured Hull, Twin Assault Cannon, Las-talon, Skyhammer Missile Launcher
+Stormraven Gunship [280pts]: Armoured Hull, 2x Stormstrike Missiles, Twin Assault Cannon, Typhoon Missile Launcher
+Stormtalon Gunship [165pts]: Armoured Hull, Twin Assault Cannon, Skyhammer Missile Launcher
+Tarantula Air Defense Battery [Legends] [70pts]: Armoured Hull, Tarantula Air Defence Missiles
+Tarantula Sentry Battery [Legends] [45pts]: Twin heavy bolter
+Terminus Ultra [Legends] [285pts]: Armoured Tracks, 2x Lascannon, 3x Terminus Lascannon
+Thunderfire Cannon [Legends] [90pts]:
+• 1x Techmarine Gunner: Bolt Pistol, Close Combat Weapon, Flamer, Gunner's Servo Arms, Plasma Cutter
+• 1x Thunderfire Cannon: Close Combat Weapon, Thunderfire Cannon
+Thunderhawk Gunship [840pts]: Armoured hull, 2x Lascannon, 4x Twin heavy bolter, Thunderhawk cluster bombs, Thunderhawk heavy cannon
+Thunderhawk Transporter [Legends] [495pts]: Armoured Hull, Hellstrike missile battery, 4x Twin heavy bolter
+Typhon [Legends] [385pts]: Armoured tracks, Dreadhammer siege cannon
+Venerable Dreadnought [Legends] [165pts]: Armoured Feet, Dreadnought Combat Weapon w/ Storm Bolter (Dreadnought Combat Weapon, Storm Bolter), Assault Cannon
+Vindicator [175pts]: Armoured Tracks, Demolisher Cannon
+Vindicator Laser Destroyer [Legends] [175pts]: Armoured tracks, Laservolley cannon
+Whirlwind [180pts]: Armoured Tracks, Whirlwind Vengeance Launcher
+Whirlwind Scorpius [Legends] [115pts]: Armoured tracks, Scorpius multi-launcher
+Xiphon Interceptor [Legends] [115pts]: Armoured hull, 2x Twin lascannon, Xiphon missile battery
+
+## Dedicated Transport [625pts]
+Impulsor [80pts]: Armoured Hull, 2 Fragstorm Grenade Launchers (2x Fragstorm Grenade Launcher)
+Land Speeder Storm [Legends] [70pts]: Cerberus Launcher, Heavy Bolter
+Razorback [95pts]: Armoured Tracks, Twin Heavy Bolter
+Relic Razorback [Legends] [105pts]: Armoured Tracks, Multi-melta
+Rhino [75pts]: Armoured Tracks, Storm Bolter
+Terrax-pattern Termite [Legends] [200pts]: Termite drill, Terrax melta cutter, Two storm bolters (2x Storm bolter)
+
+## Fortification [175pts]
+Hammerfall Bunker [175pts]: Hammerfall Missile Launcher, Hammerfall Heavy Bolter Array
+
+## Allied Units [22980pts]
+Acastus Knight Asterius [765pts]: 2x Asterius volkite culverin, Karacnos mortar battery, Titanic feet, 2x Twin conversion beam cannon
+Acastus Knight Porphyrion [710pts]: Titanic feet, 2x Twin magna lascannon, 2 Acastus autocannons (2x Acastus autocannon), Acastus ironstorm missile pod
+Armiger Helverin [130pts]: 2x Armiger autocannon, Armoured feet, Questoris heavy stubber
+Armiger Moirax [160pts]: Armoured feet, Graviton pulsar, Volkite veuglaire
+Armiger Warglaive [140pts]: Reaper chain-cleaver, Thermal spear, Questoris heavy stubber
+Callidus Assassin [100pts]: Neural shredder, Phase sword and poison blades
+Canis Rex [450pts]: Chainbreaker las-impulsor, Chainbreaker multi-laser, Freedom's Hand
+• 1x Sir Hekhtur: Close combat weapon, Hekhtur's pistol
+Cerastus Knight Acheron [425pts]: Acheron flame cannon, Reaper chainfist, Twin heavy bolter
+Cerastus Knight Atrapos [425pts]: Atrapos lascutter, Graviton singularity cannon
+Cerastus Knight Castigator [465pts]: Castigator bolt cannon, Tempest warblade
+Cerastus Knight Lancer [430pts]: Cerastus shock lance
+Corvus Blackstar [180pts]: Armoured hull, Twin assault cannon, 2 Blackstar rocket launchers (2x Blackstar rocket launcher)
+Culexus Assassin [100pts]: Animus speculum, Life-draining touch
+Daemonhost [Legends] [40pts]:
+• 1x Daemonhost [40pts]: Unholy gaze, Warp grasp
+Damned Legionnaires [Legends] [90pts]:
+• 1x Legionnaire Sergeant: Close combat weapon, Boltgun
+• 4x Legionnaire w/ boltgun: Boltgun, Close combat weapon
+Deathwatch Kill Team [100pts]:
+• 5x Model w/ boltgun and power weapon: Boltgun, Power weapon
+Deathwatch Terminator Squad [Legends] [210pts]:
+• 4x Deathwatch Terminator: Power fist & storm bolter (Power fist, Storm bolter)
+• 1x Deathwatch Terminator Sergeant: Power fist & storm bolter (Power fist, Storm bolter)
+Eversor Assassin [120pts]: Executioner pistol, Power sword and neuro gauntlet
+Exaction Squad [90pts]:
+• 9x Exaction Vigilant w/ shotgun: Arbites combat shotgun, Arbites shotpistol, Close combat weapon
+• 1x Proctor-Exactant: Arbites combat shotgun, Arbites shotpistol, Close combat weapon
+• 1x Cyber-mastiff: Mechanical bite
+Fortis Kill Team [Legends] [100pts]:
+• 5x Kill Team Intercessor: Bolt pistol, Bolt Rifle, Close combat weapon
+Fortis Kill Team [Legends] [100pts]:
+• 5x Kill Team Intercessor: Bolt pistol, Bolt Rifle, Close combat weapon
+Grey Knights Terminator Squad [210pts]:
+• 1x Terminator Justicar: Nemesis force weapon, Storm bolter
+• 4x Terminator: Nemesis force weapon, Storm bolter
+Imperial Navy Breachers [90pts]:
+• 7x Navis Armsman: Close combat weapon, Navis shotgun
+• 1x Navis Armsman w/ special weapon: Close combat weapon, Navis las-volley
+• 1x Navis Armsman w/ heavy shotgun: Close combat weapon, Endurant shield, Navis heavy shotgun
+• 1x Navis Sergeant-at-Arms: Close combat weapon, Navis shotgun
+Imperial Rhino [75pts]: Armoured tracks, Storm bolter
+Indomitor Kill Team [Legends] [120pts]:
+• 5x Kill Team Heavy Intercessor: Bolt pistol, Close combat weapon, Heavy bolt rifle
+Inquisitor [55pts]: Inquisitorial melee weapon, Bolt pistol, Blessed wardings
+Inquisitor Coteaz [95pts]: Bolt pistol, Glovodan Psyber-eagle, Nemesis daemon hammer, Psychic Blast
+Inquisitor Draxus [95pts]: Dirgesinger, Power fist, Psychic Tempest
+Inquisitor Eisenhorn [Legends] [65pts]: Artificer bolt pistol, Mind Assault, Runestaff and Barbarisater
+Inquisitor Greyfax [65pts]: Castigation, Condemnor stake, Master-crafted power sword
+Inquisitor in Terminator Armour [Legends] [70pts]: Inquisitorial melee weapon, Storm bolter, Blessed wardings
+Inquisitor Karamazov [Legends] [130pts]: Master-crafted multi-melta, Master-crafted power sword
+Inquisitorial Agents [60pts]:
+• 5x Agent: Agent firearm, Agent melee weapon
+• 1x Servitor w/ heavy bolter: Agent melee weapon, Heavy bolter
+Inquisitorial Chimera [70pts]: Armoured tracks, Lasgun array, Heavy bolter, Multi-laser
+Janus Draik [Legends] [55pts]: Heirloom pistol, Monomolecular rapier
+Janus Draik [Legends] [55pts]: Heirloom pistol, Monomolecular rapier
+Janus Draik [Legends] [55pts]: Heirloom pistol, Monomolecular rapier
+Jokaero Weaponsmith [Legends] [30pts]: Close combat weapon, Jokaero weapons
+Kill Team Cassius [Legends] [220pts]:
+• 1x Antor Delassio: Long Vigil melee weapon, Long Vigil ranged weapon
+• 1x Chaplain Cassius: Artificer crozius, Bolt pistol
+• 1x Drenn Redblade: Boltgun, Long Vigil melee weapon
+• 1x Edryc Setorax: Twin lightning claws
+• 1x Ennox Sorrlock: Close combat weapon, Long Vigil ranged weapon
+• 1x Garran Branatar: Heavy Flamer, Long Vigil ranged weapon, Power fist
+• 1x Jensus Natorian: Bolt pistol, Force weapon, Psychic Cleanse
+• 1x Jetek Suberei: Deathwatch twin boltgun, Long Vigil melee weapon
+• 1x Rodricus Grytt: Bolt pistol, Close combat weapon, Frag cannon
+• 1x Vael Donatus: Bolt pistol, Boltgun, Close combat weapon
+• 1x Zameon Gydrael: Long Vigil melee weapon, Long Vigil ranged weapon
+Kill Team Cassius [Legends] [220pts]:
+• 1x Antor Delassio: Long Vigil melee weapon, Long Vigil ranged weapon
+• 1x Chaplain Cassius: Artificer crozius, Bolt pistol
+• 1x Drenn Redblade: Boltgun, Long Vigil melee weapon
+• 1x Edryc Setorax: Twin lightning claws
+• 1x Ennox Sorrlock: Close combat weapon, Long Vigil ranged weapon
+• 1x Garran Branatar: Heavy Flamer, Long Vigil ranged weapon, Power fist
+• 1x Jensus Natorian: Bolt pistol, Force weapon, Psychic Cleanse
+• 1x Jetek Suberei: Deathwatch twin boltgun, Long Vigil melee weapon
+• 1x Rodricus Grytt: Bolt pistol, Close combat weapon, Frag cannon
+• 1x Vael Donatus: Bolt pistol, Boltgun, Close combat weapon
+• 1x Zameon Gydrael: Long Vigil melee weapon, Long Vigil ranged weapon
+Knight Castellan [510pts]: Plasma decimator, Titanic feet, 2x Twin meltagun, Volcano lance, 2 shieldbreaker missile launchers and twin siegebreaker cannon (2x Shieldbreaker missile launcher, Twin siegebreaker cannon)
+Knight Crusader [445pts]: Avenger gatling cannon, Heavy flamer, Titanic feet, Meltagun, Thermal cannon
+Knight Errant [390pts]: Thermal cannon, Meltagun, Reaper chainsword
+Knight Gallant [380pts]: Reaper chainsword, Thunderstrike gauntlet, Meltagun
+Knight Paladin [405pts]: Questoris heavy stubber, Rapid-fire battle cannon, Meltagun, Reaper chainsword
+Knight Preceptor [405pts]: Las-impulsor, Preceptor multi-laser, Reaper chainsword
+Knight Valiant [510pts]: Conflagration cannon, Thundercoil Harpoon, Titanic feet, 2x Twin meltagun, 2 shieldbreaker missile launchers and twin siegebreaker cannon (2x Shieldbreaker missile launcher, Twin siegebreaker cannon)
+Knight Warden [450pts]: Avenger gatling cannon, Heavy flamer, Meltagun, Reaper chainsword
+Knight Warden [450pts]: Avenger gatling cannon, Heavy flamer, Meltagun, Reaper chainsword
+Ministorum Priest [40pts]: Zealot's vindictor
+Ministorum Priest [40pts]: Zealot's vindictor
+Navigator [75pts]: Force-orb cane, Laspistol
+Neyam Shai Murad [Legends] [55pts]: Close combat weapon, 2x Negotiator pistol
+Proteus Kill Team [Legends] [160pts]:
+• 5x Kill Team Veteran: Boltgun & Long Vigil melee weapon (Boltgun, Long Vigil melee weapon)
+Questoris Knight Magaera [425pts]: Lightning cannon, Phased plasma-fusil, Reaper chainsword
+Questoris Knight Styrix [430pts]: Graviton crusher, Volkite chierovile, Reaper chainsword
+Reaver Titan [2200pts]: Reaver apocalypse launcher, Reaver feet, Reaver gatling blaster, Reaver laser blaster
+Rogue Trader Entourage [105pts]:
+• 1x Death Cult Assassin: Dartmask, Death Cult power blade
+• 1x Lectro-maester: Close combat weapon, Voltaic pistol
+• 1x Rejuvenant Adept: Close combat weapon, Healing Serum, Laspistol
+• 1x Rogue Trader: Household pistol, Monomolecular cane-rapier
+Rogue Trader Entourage [105pts]:
+• 1x Death Cult Assassin: Dartmask, Death Cult power blade
+• 1x Lectro-maester: Close combat weapon, Voltaic pistol
+• 1x Rejuvenant Adept: Close combat weapon, Healing Serum, Laspistol
+• 1x Rogue Trader: Household pistol, Monomolecular cane-rapier
+Sisters of Battle Immolator [115pts]: Armoured tracks, Heavy bolter, Immolation flamers
+Sisters of Battle Squad [115pts]:
+• 1x Sister Superior: Bolt pistol, Close combat weapon, Boltgun
+• 9x Battle Sister: Bolt pistol, Boltgun, Close combat weapon
+Spectrus Kill Team [Legends] [90pts]:
+• 5x Kill Team Infiltrator: Bolt pistol, Close combat weapon, Marksman bolt carbine
+Subductor Squad [100pts]:
+• 9x Subductor: Arbites shotpistol, Shock maul
+• 1x Cyber-mastiff: Mechanical bite
+• 1x Proctor Subductor: Arbites shotpistol, Shock maul
+UR-025 [Legends] [55pts]: Mk 1 assault weapon, Power claw
+Veteran Bike Squad [Legends] [70pts]:
+• 2x Veteran Biker: Bolt pistol, Close combat weapon, Twin boltgun
+• 1x Veteran Biker Sergeant: Bolt pistol, Twin boltgun
+Vigilant Squad [85pts]:
+• 9x Vigilant w/ shotgun: Arbites combat shotgun, Arbites shotpistol, Close combat weapon
+• 1x Proctor-Vigilant: Arbites combat shotgun, Close combat weapon
+• 1x Cyber-mastiff: Mechanical bite
+Vindicare Assassin [125pts]: Exitus pistol, Exitus rifle, Vindicare combat knife
+Voidsmen-at-Arms [70pts]:
+• 1x Voidmaster: Artificer shotgun, Close combat weapon, Laspistol
+• 3x Voidsman: Close combat weapon, Lasgun, Laspistol
+• 1x Voidsman w/ rotor cannon: Close combat weapon, Laspistol, Voidsman rotor cannon
+• 1x Canid: Vicious bite
+Warbringer Nemesis Titan [2600pts]: 2x Anvillus defence battery, 3x Ardex-defensor mauler, Nemesis feet, Nemesis quake cannon, Reaver gatling blaster, Reaver laser blaster
+Warhound Titan [1100pts]: Warhound feet, Warhound plasma blastgun, Warhound vulcan mega-bolter
+Warlord Titan [3500pts]: 2x Ardex-defensor lascannon, 2x Ardex-defensor mauler, Warlord feet, Two apocalypse launchers (2x Apocalypse launcher), Arioch power claw, Macro gatling blaster
+Watch Captain Artemis [65pts]: Hellfire Extremis, Master-crafted power weapon
+Watch Master [105pts]: Vigil spear

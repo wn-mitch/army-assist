@@ -12,12 +12,6 @@
     "": ""
   },
   {
-    "id": "AM",
-    "name": "Genestealer Cults",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/genestealer-cults",
-    "": ""
-  },
-  {
     "id": "GC",
     "name": "Genestealer Cults",
     "link": "https://wahapedia.ru/wh40k10ed/factions/genestealer-cults",
@@ -31,31 +25,13 @@
   },
   {
     "id": "AE",
-    "name": "Ynnari",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/aeldari",
-    "": ""
-  },
-  {
-    "id": "DRU",
-    "name": "Ynnari",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/aeldari",
-    "": ""
-  },
-  {
-    "id": "AE",
-    "name": "Craftworlds",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/aeldari",
-    "": ""
-  },
-  {
-    "id": "AE",
     "name": "Aeldari",
     "link": "https://wahapedia.ru/wh40k10ed/factions/aeldari",
     "": ""
   },
   {
     "id": "TL",
-    "name": "Adeptus Titanicus Legion",
+    "name": "Adeptus Titanicus",
     "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-titanicus",
     "": ""
   },
@@ -102,24 +78,6 @@
     "": ""
   },
   {
-    "id": "QI",
-    "name": "Death Guard",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
-    "": ""
-  },
-  {
-    "id": "QT",
-    "name": "Death Guard",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
-    "": ""
-  },
-  {
-    "id": "CD",
-    "name": "Death Guard",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
-    "": ""
-  },
-  {
     "id": "DG",
     "name": "Death Guard",
     "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
@@ -138,12 +96,6 @@
     "": ""
   },
   {
-    "id": "QT",
-    "name": "Chaos Space Marines",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-space-marines",
-    "": ""
-  },
-  {
     "id": "CD",
     "name": "Chaos Daemons",
     "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-daemons",
@@ -151,7 +103,7 @@
   },
   {
     "id": "QI",
-    "name": "Adeptus Titanicus",
+    "name": "Imperial Knights",
     "link": "https://wahapedia.ru/wh40k10ed/factions/imperial-knights",
     "": ""
   },
@@ -163,74 +115,20 @@
   },
   {
     "id": "TYR",
-    "name": "Genestealer Cults",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids",
-    "": ""
-  },
-  {
-    "id": "TYR",
     "name": "Tyranids",
     "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids",
     "": ""
   },
   {
-    "id": "AoI",
-    "name": "Adeptus Custodes",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
-    "": ""
-  },
-  {
-    "id": "QI",
-    "name": "Adeptus Custodes",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
-    "": ""
-  },
-  {
     "id": "AC",
     "name": "Adeptus Custodes",
     "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
-    "": ""
-  },
-  {
-    "id": "AC",
-    "name": "Adeptus Custodes",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
-    "": ""
-  },
-  {
-    "id": "AC",
-    "name": "Adeptus Custodes",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
-    "": ""
-  },
-  {
-    "id": "AoI",
-    "name": "Adepta Sororitas",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
-    "": ""
-  },
-  {
-    "id": "QI",
-    "name": "Adepta Sororitas",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
-    "": ""
-  },
-  {
-    "id": "TL",
-    "name": "Adepta Sororitas",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
     "": ""
   },
   {
     "id": "AS",
     "name": "Adepta Sororitas",
     "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
-    "": ""
-  },
-  {
-    "id": "CD",
-    "name": "Chaos Space Marines",
-    "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-space-marines",
     "": ""
   },
   {

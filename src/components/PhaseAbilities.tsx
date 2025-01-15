@@ -26,7 +26,7 @@ const PhaseAbilities: React.FC<{ datasheetModel: DatasheetModel; phase: Phase }>
       {abilities.map((ability) => (
         <li
           key={ability.ability_id}
-          className={`border-2 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-1 first:mt-0 shadow bg-slate-600 text-gray-200 gap-1`}
+          className={`border-2 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-1 first:mt-0 shadow bg-slate-500 text-gray-200 gap-1`}
         >
           <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
             {ability.name}

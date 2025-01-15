@@ -19,8 +19,6 @@ The Silent King [420pts]: Warlord
 • 1x Szarekh: Sceptre of Eternal Glory, Staff of Stars, Weapons of the Final Triarch
 • 2x Triarchal Menhir: Annihilator beam, Armoured bulk
 Trazyn the Infinite [75pts]: Empathic Obliterator
-Varguard Obyron [Legends] [85pts]: Warscythe
-Varguard Obyron [Legends] [85pts]: Warscythe
 
 ## Character [1200pts]
 Catacomb Command Barge [120pts]: Gauss cannon, Staff of light

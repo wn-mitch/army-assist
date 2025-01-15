@@ -168,7 +168,6 @@ Greater Brass Scorpion [Legends] [560pts]: Demolisher cannon, Hellcrusher claws,
 Helbrute [130pts]: Close combat weapon, Missile launcher, Multi-melta
 Heldrake [205pts]: Heldrake claws, Hades autocannon
 Hell Talon [Legends] [140pts]: Armoured hull, Twin lascannon, Autocannon
-Hellblade [Legends] [115pts]: Armoured hull, Two twin autocannons (2x Twin autocannon)
 Kharybdis Assault Claw [Legends] [325pts]: Blade struts, Kharybdis storm launcher, Melta array
 Khorne Lord of Skulls [450pts]: Great cleaver of Khorne, Hades gatling cannon, Gorestorm cannon
 Kratos [Legends] [265pts]: Armoured tracks, Autocannon, 2x Two heavy bolters (2x Heavy bolter), Kratos battlecannon
@@ -194,6 +193,3 @@ Xiphon Interceptor [Legends] [115pts]: Armoured hull, 2x Twin lascannon, Xiphon 
 ## Dedicated Transport [275pts]
 Chaos Rhino [75pts]: Armoured tracks, Combi-bolter
 Terrax-pattern Termite [Legends] [200pts]: Termite drill, Terrax melta cutter, Two storm bolters (2x Storm bolter)
-
-## Fortification [145pts]
-Aegis Defence Line with Weapon Emplacement [Legends] [145pts]: Quad-gun
