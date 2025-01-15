@@ -7,7 +7,7 @@ export default interface Ability {
     model: string;
     name: string;
     description: string;
-    type: string;
+    type: string | null;
     parameter: string;
     phases: Phase[] | string[];
 }

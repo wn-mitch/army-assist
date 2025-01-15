@@ -1,8 +1,6 @@
 describe('template spec', () => {
   beforeEach(() => {
-    cy.visit('/');
     cy.pasteListWithArgument('nr_tau.txt');
-    cy.get("button[type='submit']").click();
   })
   it('Toggles one item', () => {
     cy.get('.columns-2 > :nth-child(1)').click();

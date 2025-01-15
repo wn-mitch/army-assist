@@ -11,7 +11,7 @@ function WeaponPhaseTable({
 }) {
 
   return (
-    <table className="table-auto bg-slate-800 mt-1 mb-0.5 py-1 px-1 rounded-lg border-separate border-spacing-0 max-w-full overflow-auto">
+    <table className="table-auto bg-slate-800 mt-1 mb-0.5 pb-1 px-1 rounded-lg border-separate border-spacing-0 max-w-full overflow-auto">
       <thead>
         <tr>
           <TableHeaderCell className="w-1/4">Name</TableHeaderCell>

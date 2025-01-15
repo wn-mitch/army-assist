@@ -1,6 +1,8 @@
 describe("Invalid list submission to verify the presence of the error", () => {
   beforeEach(() => {
     cy.visit("/");
+    // Click the button with the "close-changelog" id
+    cy.get("button#close-changelog").click();
     // Find the Pastebox textarea and paste the text into it
     cy.get("textarea#comment").type("asdf", {
       delay: 0,

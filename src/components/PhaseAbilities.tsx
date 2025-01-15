@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Abilities from "@/assets/json/Abilities_modified.json";
+import Abilities from "@/assets/json/Datasheets_abilities_modified.json";
 import Phase from "@/types/Phase";
 import Ability from "@/types/Ability";
 import DatasheetModel from "@/types/DatasheetModel";
@@ -15,8 +15,9 @@ const PhaseAbilities: React.FC<{ datasheetModel: DatasheetModel; phase: Phase }>
       // @ts-expect-error - Phases are strings, and the engine can't read that
       (ability: Ability) =>
         ability.datasheet_id === datasheetModel.datasheet_id &&
-        ability.phases.includes(phase)
-    );
+        ability.phases.includes(phase) &&
+        ability.name !== ""
+    )
 
     setAbilities(matchingAbilities as Ability[]);
   }, [datasheetModel, phase]);

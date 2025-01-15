@@ -9,9 +9,9 @@ import {
   QuestionMarkCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import {FaDiscord, FaPatreon} from "react-icons/fa";
+import { FaDiscord, FaPatreon } from "react-icons/fa";
 import useStore from "@/store/store";
-import nrWorldEaters from "@/assets/lists/nr_world_eaters.txt";
+import nrWorldEaters from "@/assets/lists/nr_tau.txt";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +24,24 @@ function Changelog() {
       setFirstVisit(false);
     }
   }, [isFirstVisit, setFirstVisit]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleClose();
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      window.removeEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
 
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
@@ -56,6 +74,9 @@ function Changelog() {
     }
   };
 
+  const buttonClasses =
+    "button flex flex-row items-center gap-x-1.5 rounded-md px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-2";
+
   return (
     <>
       <button
@@ -75,6 +96,7 @@ function Changelog() {
 
           <div className="bg-white rounded w-2/3 mx-auto p-6 relative z-20">
             <button
+              id="close-changelog"
               onClick={handleClose}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
             >
@@ -94,9 +116,8 @@ function Changelog() {
                     onClick={copySampleToClipboard}
                     className="text-blue-500 underline z-20"
                   >
-                    click here to copy a sample to the clipboard
+                    click here to copy a sample to the clipboard.
                   </a>
-                  .
                 </li>
                 <li>Click Export</li>
                 <li>Click the Text Option</li>
@@ -109,16 +130,16 @@ function Changelog() {
                 </li>
               </ol>
             </Description>
-            
+
             <ChangelogEntry
               version="1.1.1"
               date="01/13/2025"
               changes={[
                 "Fixed spelling errors for the Norn Assimilator",
-                "Made cards not grayed out if the have an available ability in that phase"
+                "Made cards not grayed out if the have an available ability in that phase",
               ]}
             />
-            
+
             <ChangelogEntry
               version="1.1.0"
               date="01/13/2025"
@@ -162,32 +183,40 @@ function Changelog() {
               ]}
             />
 
-            <div className="mt-4">
+            <div className="mt-4 flex flex-row w-full">
               <button
                 onClick={handleClose}
-                className="inline-flex items-center gap-x-1.5 rounded-md bg-red-700 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700"
+                className={`${buttonClasses} bg-red-600 hover:bg-red-500`}
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Tap Here to Close
               </button>
-              <a
-                href="https://patreon.com/ListAssist"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-x-1.5 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 my-2"
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://patreon.com/ArmyAssist",
+                    "_blank",
+                    "noopener noreferrer"
+                  )
+                }
+                className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
               >
                 <FaPatreon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Support me on Patreon
-              </a>
-              <a
-                href="https://discord.gg/hVVtGuybhw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 my-2"
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://discord.gg/hVVtGuybhw",
+                    "_blank",
+                    "noopener noreferrer"
+                  )
+                }
+                className={`${buttonClasses} bg-indigo-600 hover:bg-indigo-500`}
               >
                 <FaDiscord aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Join the Discord
-              </a>
+              </button>
             </div>
 
             <div className="mt-4 text-center text-gray-500">

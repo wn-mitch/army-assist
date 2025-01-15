@@ -11,7 +11,6 @@ Tzeentch Daemons are visible
 Show/Hide Options: Chaos Knights are visible, Legends are visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
 
 ## Epic Hero [3600pts]
-Aetaos'rau'keres [Legends] [315pts]: Bolt of Tzeentch, Staff of cataclysm, Warpfire talons
 An'ggrath the Unbound [Legends] [415pts]: Axe of Khorne, Bloodlash
 Be'lakor [325pts]: Betraying Shades, The Blade of Shadows
 Epidemius [80pts]: Balesword and nurgling attendants

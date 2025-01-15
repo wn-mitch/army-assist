@@ -1,0 +1,9 @@
+Imperium - Adeptus Astartes - Black Templars - Astartes Test - [11785pts]
+
+# ++ Army Roster ++ [11785pts]
+## Configuration
+Battle Size
+Detachment
+Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible
+
+Brutalis Dreadnought [160pts]: Twin Icarus Ironhail Heavy Stubber, Brutalis Fists & Brutalis Bolt Rifles (Brutalis Bolt Rifles, Brutalis Fists), Twin Heavy Bolter

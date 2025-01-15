@@ -11,12 +11,15 @@
 
 Cypress.Commands.add('pasteListWithArgument', (filename: string) => {
   // Read the text from the file
-  cy.readFile(`cypress/lists/${filename}`).then((text) => {
+  cy.readFile(`src/assets/lists/${filename}`).then((text) => {
     // Normalize newlines in the text from the file
     const normalizedText = text.replace(/\r\n/g, "\n");
 
     // Visit the application page
     cy.visit("/");
+
+    // Click the button with the "close-changelog" id
+    cy.get("button#close-changelog").click();
 
     // Find the Pastebox textarea and paste the text into it
     cy.get("textarea#comment").type(normalizedText, {

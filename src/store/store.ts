@@ -13,6 +13,7 @@ interface StoreState {
   turn: Side;
   phase: Phase;
   faction: string | undefined;
+  detachment: string | undefined;
   activePhases: {
     [Phase.Command]: boolean;
     [Phase.Movement]: boolean;
@@ -46,6 +47,7 @@ const useStore = create<StoreState>((set) => ({
     [Phase.Saves]: true,
   },
   faction: undefined,
+  detachment: undefined,
   isFirstVisit: true,
   reset: () =>
     set({
@@ -53,6 +55,7 @@ const useStore = create<StoreState>((set) => ({
       units: [],
       round: 1,
       faction: undefined,
+      detachment: undefined,
       turn: Side.Me,
       phase: Phase.Command,
     }),
@@ -81,6 +84,12 @@ const useStore = create<StoreState>((set) => ({
     let lastParentUnit: ListUnit | null = null;
 
     lines.forEach((line, index) => {
+      const detachmentMatch = line.match(/Detachment: ([\w\s]+)/);
+
+      if (detachmentMatch) {
+        set({ detachment: detachmentMatch[1] });
+      } 
+      
       const parentMatch = line.match(
         /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]']+)\s\[\d+pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
       );

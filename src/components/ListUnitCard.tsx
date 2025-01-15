@@ -15,7 +15,7 @@ import Phase from "@/types/Phase";
 import WeaponPhaseTable from "@/components/WeaponPhaseTable";
 import ModelSaveTable from "@/components/ModelSaveTable";
 import PhaseAbilities from "@/components/PhaseAbilities";
-import LeadershipOCTable from "./LeadershipOCTable";
+import LeadershipOCTable from "./PhaseDisplays/LeadershipOCTable";
 
 const CommandPhase = ({
   datasheetModel,
@@ -58,9 +58,14 @@ const ShootingOrFightPhase = ({
   }
 
   let weapons = unit.details
-    ?.split(", ")
+    ?.split(/,(?![^(]*\))/)
     .filter((name) => name !== "Warlord" && name !== "")
-    .map((name) => name.replace(/^\d+x?\s*/, "").trim());
+    .map((name) => name.replace(/^\d+x?\s*/, "").trim())
+    .flatMap((name) => {
+      // Remove content within parentheses and split by '&' if present
+      const cleanedName = name.replace(/\s*\(.*?\)\s*/g, "").trim();
+      return cleanedName.split("&").map((part) => part.trim());
+    });
 
   if (datasheet.id === "000000613") {
     weapons = weapons ? [...weapons, "Wraithbone fists"] : ["Wraithbone fists"];
@@ -69,7 +74,6 @@ const ShootingOrFightPhase = ({
   if (datasheet.id === "000002565") {
     weapons = weapons ? [...weapons, "Armoured limbs"] : ["Armoured limbs"];
   }
-
 
   weapons = weapons?.flatMap((weapon) => {
     const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
@@ -146,20 +150,21 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     window.alert("Faction not set");
   }
 
-  const datasheetsMatchingName = datasheets
-    .filter((item) => item.name.toLowerCase() === unit.name.toLowerCase());
+  const datasheetsMatchingName = datasheets.filter(
+    (item) => item.name.toLowerCase() === unit.name.toLowerCase()
+  );
 
-  console.log(datasheetsMatchingName)
+  console.log(datasheetsMatchingName);
   // Create an array of all unique factions in the datasheets
-  const uniqueFactions = Array.from(new Set(datasheetsMatchingName.map((item) => item.faction_id)));
-  console.log(uniqueFactions)
+  const uniqueFactions = Array.from(
+    new Set(datasheetsMatchingName.map((item) => item.faction_id))
+  );
+  console.log(uniqueFactions);
 
   // @ts-expect-error - Line 145 has a check that should prevent this from being null
   const datasheet = uniqueFactions.includes(faction)
     ? datasheetsMatchingName.filter((item) => item.faction_id === faction)[0]
     : datasheetsMatchingName[0];
-
-    console.log(datasheet)
 
   if (!datasheet) {
     window.alert(`Datasheet not found for unit ${unit.name}`);
@@ -208,8 +213,12 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   }
 
   // @ts-expect-error - This works. Not sure why flagged.
-  const [phasedAbilities, abilitiesToggle] = PhaseAbilities({ datasheetModel, phase });
-  const fadedClasses = unit.toggled && (toggled || abilitiesToggle)? "" : "opacity-50";
+  const [phasedAbilities, abilitiesToggle] = PhaseAbilities({
+    datasheetModel,
+    phase,
+  });
+  const fadedClasses =
+    unit.toggled && (toggled || abilitiesToggle) ? "" : "opacity-50";
 
   return (
     <li
