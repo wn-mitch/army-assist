@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import armyAbilities from "@/assets/json/Abilities_modified.json";
 import detachmentAbilities from "@/assets/json/Detachment_abilities_modified.json";
 import factions from "@/assets/json/Factions.json";
-import Ability from "@/types/Ability";
 import useStore from "@/store/store";
+import Ability from "@/types/Ability";
 
 const ArmyRuleDisplay = () => {
   const faction = useStore((state) => state.faction);
@@ -19,7 +19,7 @@ const ArmyRuleDisplay = () => {
       .filter(
         (ability) => ability.faction_id === faction && ability.phases.includes(phase)
       )
-      .map((x) => ({ ...x, type: "Army" }));
+      .map((x) => ({ ...x, type: "Army", datasheet_id: "", line: "", ability_id: "", model: "", parameter: "" }));
     const filteredDetachmentAbilities = detachmentAbilities
       .filter(
         (ability) =>
@@ -27,7 +27,7 @@ const ArmyRuleDisplay = () => {
           ability.detachment === detachment &&
           ability.phases.includes(phase)
       )
-      .map((x) => ({ ...x, type: "Detachment" }));
+      .map((x) => ({ ...x, type: "Detachment", datasheet_id: "", line: "", ability_id: "", model: "", parameter: "" }));
 
     setAbilities([...filteredArmyAbilities, ...filteredDetachmentAbilities]);
   }, [faction, detachment, phase]);

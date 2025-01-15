@@ -154,12 +154,10 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     (item) => item.name.toLowerCase() === unit.name.toLowerCase()
   );
 
-  console.log(datasheetsMatchingName);
   // Create an array of all unique factions in the datasheets
   const uniqueFactions = Array.from(
     new Set(datasheetsMatchingName.map((item) => item.faction_id))
   );
-  console.log(uniqueFactions);
 
   // @ts-expect-error - Line 145 has a check that should prevent this from being null
   const datasheet = uniqueFactions.includes(faction)
