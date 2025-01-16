@@ -1,0 +1,31 @@
+Aeldari - Craftworlds - Aeldari - [930pts]
+
+# ++ Army Roster ++ [930pts]
+## Configuration
+Battle Size: Incursion (1000 Point limit)
+Detachment: Battle Host
+Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Character [160pts]
+Farseer [95pts]: Eldritch Storm, Shuriken Pistol, Warlord, Fate's Messenger, Witchblade
+Spiritseer [65pts]: Shuriken Pistol, Witch Staff
+
+## Battleline [100pts]
+Guardian Defenders [100pts]:
+• 10x Guardian Defender: Close Combat Weapon, Shuriken Catapult
+• 1x Heavy Weapon Platform: Close Combat Weapon, Scatter Laser
+
+## Infantry [305pts]
+Fire Dragons [180pts]:
+• 9x Fire Dragon: Close combat weapon, Dragon Fusion Gun
+• 1x Fire Dragon Exarch: Close combat weapon, Firepike
+Warp Spiders [125pts]:
+• 4x Warp Spider: Close combat weapon, Deathspinner
+• 1x Warp Spider Exarch: Close combat weapon, 2x Deathspinner
+
+## Monster [145pts]
+Wraithlord [145pts]: Wraithbone Fists, 2x Aeldari Flamer, Aeldari Missile Launcher, Bright Lance
+
+## Dedicated Transport [220pts]
+Wave Serpent [110pts]: Wraithbone Hull, Shuriken Cannon, Twin Scatter Laser
+Wave Serpent [110pts]: Wraithbone Hull, Shuriken Cannon, Twin Scatter Laser

@@ -6,24 +6,14 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import {
+  ClipboardDocumentListIcon,
   QuestionMarkCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 import { FaDiscord, FaPatreon } from "react-icons/fa";
-import useStore from "@/store/store";
-import nrWorldEaters from "@/assets/lists/nr_tau.txt";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
-  const isFirstVisit = useStore((state) => state.isFirstVisit);
-  const setFirstVisit = useStore((state) => state.setFirstVisit);
-
-  useEffect(() => {
-    if (isFirstVisit) {
-      setIsOpen(true);
-      setFirstVisit(false);
-    }
-  }, [isFirstVisit, setFirstVisit]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -63,27 +53,13 @@ function Changelog() {
     </div>
   );
 
-  const copySampleToClipboard = async () => {
-    try {
-      const response = await fetch(nrWorldEaters);
-      const text = await response.text();
-      await navigator.clipboard.writeText(text);
-      alert("Sample copied to clipboard!");
-    } catch (err) {
-      console.error("Failed to copy: ", err);
-    }
-  };
-
-  const buttonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded-md px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-2";
-
   return (
     <>
       <button
         onClick={handleShow}
         className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-4"
       >
-        <QuestionMarkCircleIcon className="h-6 w-6" />
+        <ClipboardDocumentListIcon className="h-6 w-6" />
       </button>
 
       <Dialog
@@ -103,33 +79,29 @@ function Changelog() {
               <XCircleIcon className="h-6 w-6" />
             </button>
             <DialogTitle className="text-xl font-bold text-center">
-              Instructions & Changelog
+              Changelog
             </DialogTitle>
-            <Description className="mt-2">
-              <ol className="list-decimal list-inside">
-                <li>
-                  Create a list on NewRecruit.eu. If you don't know what that
-                  is, or just want to explore the site's features before
-                  deciding to rebuild a list, you can{" "}
-                  <a
-                    href="#"
-                    onClick={copySampleToClipboard}
-                    className="text-blue-500 underline z-20"
-                  >
-                    click here to copy a sample to the clipboard.
-                  </a>
-                </li>
-                <li>Click Export</li>
-                <li>Click the Text Option</li>
-                <li>Select the Format as NR</li>
-                <li>Click Copy to Clipboard</li>
-                <li>Paste into the pastebox</li>
-                <li>
-                  Please report any issues you find in the discord linked in the
-                  header.
-                </li>
-              </ol>
-            </Description>
+            <Description className="mt-2"></Description>
+            
+            <ChangelogEntry
+              version="1.2.1"
+              date="01/16/2025"
+              changes={[
+                "Fixed more spelling errors",
+                "Fixed a bug where abilities without text would be displayed",
+                "Fixed a bug that caused certain weapons to get excluded"
+              ]}
+            />
+
+            <ChangelogEntry
+              version="1.2.0"
+              date="01/15/2025"
+              changes={[
+                "Added support for the Army and Detachment Rules",
+                "Fixed more spelling errors",
+                "Fixed (what should be) the last of the allied faction bugs",
+              ]}
+            />
 
             <ChangelogEntry
               version="1.1.1"
@@ -182,42 +154,6 @@ function Changelog() {
                 "Supports own player phases, with limited support for the Charge phase",
               ]}
             />
-
-            <div className="mt-4 flex flex-row w-full">
-              <button
-                onClick={handleClose}
-                className={`${buttonClasses} bg-red-600 hover:bg-red-500`}
-              >
-                <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Tap Here to Close
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://patreon.com/ArmyAssist",
-                    "_blank",
-                    "noopener noreferrer"
-                  )
-                }
-                className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
-              >
-                <FaPatreon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Support me on Patreon
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://discord.gg/hVVtGuybhw",
-                    "_blank",
-                    "noopener noreferrer"
-                  )
-                }
-                className={`${buttonClasses} bg-indigo-600 hover:bg-indigo-500`}
-              >
-                <FaDiscord aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Join the Discord
-              </button>
-            </div>
 
             <div className="mt-4 text-center text-gray-500">
               Powered by Wahapedia
