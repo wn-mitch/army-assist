@@ -1,0 +1,39 @@
+Xenos - T'au Empire - FNF - 1/17/2025 - [990pts]
+
+# ++ Army Roster ++ [990pts]
+## Configuration
+Battle Size: Incursion (1000 Point limit)
+Detachment: Retaliation Cadre
+Show/Hide Options
+
+## Epic Hero [95pts]
+Commander Farsight [95pts]: Dawn Blade, High-intensity plasma rifle, Warlord
+
+## Infantry [345pts]
+Kroot Carnivores [65pts]:
+• 1x Long-quill: Close combat weapon, Kroot pistol, Kroot rifle
+• 1x Kroot Carnivore w/ tanglebomb launcher: Close combat weapon, Tanglebomb launcher
+• 8x Kroot Carnivores: Close combat weapon, Kroot rifle
+Pathfinder Team [90pts]:
+• 1x Pathfinder Shas'ui: Close combat weapon, Pulse carbine, Pulse pistol, Semi-automatic grenade launcher, 2x Gun Drone (Twin pulse carbine)
+• 6x Pathfinders w/ pulse carbine: Close combat weapon, Pulse carbine, Pulse pistol
+• 2x Pathfinders w/ ion rifle: Close combat weapon, Ion rifle, Pulse pistol
+• 1x Pathfinders w/ rail rifle: Close combat weapon, Pulse pistol, Rail rifle
+Stealth Battlesuits [60pts]:
+• 1x Stealth Shas'vre: Battlesuit fists, Battlesuit support system, Homing beacon, Fusion blaster, Marker Drone, Shield Drone
+• 2x Stealth Shas'ui w/ burst cannon: Battlesuit fists, Burst cannon
+Vespid Stingwings [130pts]:
+• 1x Vespid Strain Leader: Neutron blaster, Oversight Drone, Stingwing claws
+• 6x Vespid Stingwings w/ Neutron Blaster: Neutron blaster, Stingwing claws
+• 1x Vespid Stingwings w/ Neutron Grenade Launcher: Neutron grenade launcher, Stingwing claws
+• 1x Vespid Stingwings w/ Neutron Rail Rifle: Neutron rail rifle, Stingwing claws
+• 1x Vespid Stingwings w/ T'au Flamer: Stingwing claws, T'au flamer
+
+## Vehicle [550pts]
+Broadside Battlesuits [90pts]:
+• 1x Broadside Shas’vre: Crushing bulk, Heavy rail rifle, Seeker missile, Twin plasma rifle
+Crisis Starscythe Battlesuits [110pts]:
+• 1x Crisis Starscythe Shas’vre: Battlesuit fists, Burst cannon, T'au flamer, Gun Drone (Twin pulse carbine), Shield Drone
+• 2x Crisis Starscythe Shas’ui: Battlesuit fists, Burst cannon, T'au flamer, Gun Drone (Twin pulse carbine), Shield Drone
+Ghostkeel Battlesuit [160pts]: Ghostkeel fists, Battlesuit support system, Fusion collider, Twin T'au flamer
+Riptide Battlesuit [190pts]: Riptide fists, Heavy burst cannon, 2x Missile Drone (Missile pod), Twin plasma rifle

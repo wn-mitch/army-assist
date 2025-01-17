@@ -12,10 +12,10 @@ import Datasheet from "@/types/Datasheet";
 import DatasheetModel from "@/types/DatasheetModel";
 import Phase from "@/types/Phase";
 
-import WeaponPhaseTable from "@/components/WeaponPhaseTable";
-import ModelSaveTable from "@/components/ModelSaveTable";
+import WeaponPhaseTable from "@/components/PhaseDisplays/WeaponPhaseTable";
+import ModelSaveTable from "@/components/PhaseDisplays/ModelSaveTable";
 import PhaseAbilities from "@/components/PhaseAbilities";
-import LeadershipOCTable from "./PhaseDisplays/LeadershipOCTable";
+import LeadershipOCTable from "@/components/PhaseDisplays/LeadershipOCTable";
 
 const CommandPhase = ({
   datasheetModel,
@@ -63,9 +63,11 @@ const ShootingOrFightPhase = ({
     .map((name) => name.replace(/^\d+x?\s*/, "").trim())
     .flatMap((name) => {
       // Remove content within parentheses and split by '&' if present
-      const cleanedName = name.replace(/\s*\(.*?\)\s*/g, "").trim();
-      return cleanedName.split("&").map((part) => part.trim());
+      const cleanedName = name.replace(/\s*\((.*?)\)\s*/g, ", $1").trim();
+      return cleanedName.split(",").map((part) => part.trim());
     });
+  
+  console.log(weapons);
 
   if (datasheet.id === "000000613") {
     weapons = weapons ? [...weapons, "Wraithbone fists"] : ["Wraithbone fists"];
@@ -221,7 +223,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   return (
     <li
       key={unit.datasheet_id}
-      className={`col-span-1 border-4 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-2 first:mt-0 shadow bg-slate-600 text-gray-200 ${fadedClasses}`}
+      className={`col-span-1 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-2 first:mt-0 shadow bg-slate-600 text-gray-200 ${fadedClasses}`}
       onClick={() => toggleUnit(unit)}
     >
       <div className="text-center text-lg font-bold rounded-lg bg-slate-900">

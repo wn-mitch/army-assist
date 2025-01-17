@@ -19424,6 +19424,22 @@
     "": ""
   },
   {
+    "datasheet_id": "000000421",
+    "line": "7",
+    "line_in_wargear": "1",
+    "dice": "",
+    "name": "Missile Pod",
+    "description": "",
+    "range": "30",
+    "type": "Ranged",
+    "A": "2",
+    "BS_WS": "5",
+    "S": "7",
+    "AP": "-1",
+    "D": "2",
+    "": ""
+  },
+  {
     "datasheet_id": "000000422",
     "line": "1",
     "line_in_wargear": "1",

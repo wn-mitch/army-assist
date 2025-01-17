@@ -28,7 +28,7 @@ function PhaseFilter() {
       middle: "-ml-px",
       right: "rounded-r-md -ml-px",
     };
-    const activeClasses = isActivePhase(currentPhase) ? "bg-slate-900 text-white" : "bg-white text-gray-900 hover:bg-gray-50";
+    const activeClasses = isActivePhase(currentPhase) ? "bg-slate-900 text-white" : "bg-slate-700 text-gray-300 hover:bg-gray-50";
 
     return (
       <button
@@ -59,7 +59,7 @@ function PhaseFilter() {
       {isDropdown ? (
         renderDropdown()
       ) : (
-        <span className="isolate inline-flex rounded-md shadow-sm border-4 border-slate-900 w-full">
+        <span className="isolate inline-flex rounded-md shadow-sm w-full ring-2 ring-slate-600">
           {Object.keys(Phase).map((phase, index, array) => (
             activePhases[phase as Phase] && renderButton(phase as Phase, index === 0 ? "left" : index === array.length - 1 ? "right" : "middle")
           ))}

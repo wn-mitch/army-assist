@@ -3,6 +3,7 @@ import useStore from '@/store/store';
 import ListUnitCard from './ListUnitCard';
 import FilterPanel from './FilterPanel';
 import ArmyRuleDisplay from './ArmyRuleDisplay';
+import StratagemPanel from './StratagemPanel';
 
 function ListDisplay() {
   const units = useStore((state) => state.units);
@@ -17,6 +18,7 @@ function ListDisplay() {
           <ListUnitCard key={unit.id} unit={unit} />
         ))}
       </ul>
+      <StratagemPanel />
     </div>
   );
 }

@@ -58,7 +58,7 @@ function Settings() {
 
   return (
     <>
-      <button onClick={handleShow} className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-4">
+      <button onClick={handleShow} className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1">
         <CogIcon className="h-6 w-6" />
       </button>
 

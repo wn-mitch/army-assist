@@ -6,6 +6,7 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import {
+  ClipboardIcon,
   QuestionMarkCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
@@ -46,23 +47,6 @@ function Instructions() {
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
-  const ChangelogEntry: React.FC<{
-    version: string;
-    date: string;
-    changes: string[];
-  }> = ({ version, date, changes }) => (
-    <div className="mt-4">
-      <h2 className="text-lg font-semibold">
-        {version} - {date}
-      </h2>
-      <ul className="list-disc list-inside">
-        {changes.map((change, index) => (
-          <li key={index}>{change}</li>
-        ))}
-      </ul>
-    </div>
-  );
-
   const copySampleToClipboard = async () => {
     try {
       const response = await fetch(nrWorldEaters);
@@ -74,14 +58,18 @@ function Instructions() {
     }
   };
 
+  const openLink = (url: string) => {
+    window.open(url, "_blank", "noopener noreferrer");
+  };
+
   const buttonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded-md px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-2";
+    "button flex flex-row items-center gap-x-1.5 rounded-md px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
 
   return (
     <>
       <button
         onClick={handleShow}
-        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-4"
+        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
       </button>
@@ -89,7 +77,7 @@ function Instructions() {
       <Dialog
         open={isOpen}
         onClose={() => {}}
-        className="fixed z-10 inset-0 overflow-y-scroll"
+        className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap"
       >
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
@@ -110,14 +98,16 @@ function Instructions() {
                 <li>
                   Create a list on NewRecruit.eu. If you don't know what that
                   is, or just want to explore the site's features before
-                  deciding to rebuild a list, you can{" "}
-                  <a
-                    href="#"
+                  deciding to rebuild a list, you can click the button to copy a
+                  sample to your clipboard
+                  <button
                     onClick={copySampleToClipboard}
-                    className="text-blue-500 underline z-20"
+                    onTouchEnd={copySampleToClipboard}
+                    className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
                   >
-                    click here to copy a sample to the clipboard.
-                  </a>
+                    <ClipboardIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
+                    Copy Sample
+                  </button>
                 </li>
                 <li>Click Export</li>
                 <li>Click the Text Option</li>
@@ -130,36 +120,27 @@ function Instructions() {
                 </li>
               </ol>
             </Description>
-            
-            <div className="mt-4 flex flex-row w-full">
+
+            <div className="mt-4 flex lg:flex-row w-full flex-col sm:flex-col">
               <button
                 onClick={handleClose}
+                onTouchEnd={handleClose}
                 className={`${buttonClasses} bg-red-600 hover:bg-red-500`}
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Tap Here to Close
               </button>
               <button
-                onClick={() =>
-                  window.open(
-                    "https://patreon.com/ArmyAssist",
-                    "_blank",
-                    "noopener noreferrer"
-                  )
-                }
+                onClick={() => openLink("https://patreon.com/ArmyAssist")}
+                onTouchEnd={() => openLink("https://patreon.com/ArmyAssist")}
                 className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
               >
                 <FaPatreon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Support me on Patreon
               </button>
               <button
-                onClick={() =>
-                  window.open(
-                    "https://discord.gg/hVVtGuybhw",
-                    "_blank",
-                    "noopener noreferrer"
-                  )
-                }
+                onClick={() => openLink("https://discord.gg/hVVtGuybhw")}
+                onTouchEnd={() => openLink("https://discord.gg/hVVtGuybhw")}
                 className={`${buttonClasses} bg-indigo-600 hover:bg-indigo-500`}
               >
                 <FaDiscord aria-hidden="true" className="-ml-0.5 h-5 w-5" />

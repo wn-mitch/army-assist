@@ -7,10 +7,8 @@ import {
 } from "@headlessui/react";
 import {
   ClipboardDocumentListIcon,
-  QuestionMarkCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { FaDiscord, FaPatreon } from "react-icons/fa";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,14 +55,14 @@ function Changelog() {
     <>
       <button
         onClick={handleShow}
-        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-4"
+        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1"
       >
         <ClipboardDocumentListIcon className="h-6 w-6" />
       </button>
 
       <Dialog
         open={isOpen}
-        onClose={() => {}}
+        onClose={handleClose}
         className="fixed z-10 inset-0 overflow-y-scroll"
       >
         <div className="flex items-center justify-center min-h-screen">
@@ -82,6 +80,16 @@ function Changelog() {
               Changelog
             </DialogTitle>
             <Description className="mt-2"></Description>
+            
+            <ChangelogEntry
+              version="1.3.0"
+              date="01/17/2025"
+              changes={[
+                "Stratagems: Now supported in a flyout menu! They are filtered by phase and detachment. Please report any errors in the discord.",
+                "Fixed more spelling errors. Abilities should be ready for feedback on which phases they show up in.",
+                "Further improved the mobile and tablet layouts to better support touch devices.",
+              ]}
+            />
             
             <ChangelogEntry
               version="1.2.1"
@@ -154,10 +162,6 @@ function Changelog() {
                 "Supports own player phases, with limited support for the Charge phase",
               ]}
             />
-
-            <div className="mt-4 text-center text-gray-500">
-              Powered by Wahapedia
-            </div>
           </div>
         </div>
       </Dialog>

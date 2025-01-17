@@ -13,7 +13,16 @@ phase_patterns = {
 
     "Fight": ["each time a model in that unit makes a melee attack", "to the Attacks characteristic of this model’s melee weapons", "choppa", "melee weapons equipped by models in that unit", "from the Toughness characteristic of models in that unit", "urty syringe", "unit Consolidates", "At the start of the Fight phase", "Each time this model makes a melee attack", "dread klaw", "Each time this model is selected to fight", "heroic intervention", "dread killsaws", "this unit is selected to fight", "unit is selected to fight", "this model destroys an enemy unit", "model in that unit makes an attack", "model fights", "crushing teeth and claws", "improve the Ballistic Skill and Weapon Skill", "attack has been allocated to this model", "this unit makes an attack", "synapse", "at the end of any phase", "melee weapons", "melee attack", "melee attacks", "melee weapon", "destroys an enemy", "Fights First", "making a Hit roll for a model in this unit", "power axe", "model is destroyed", "use a Fate dice", "at the start of any phase", "attack with a Psychic weapon", "enemy unit finishes making its attacks", "select a PSYKER unit as the target", "bearer’s unit makes an attack", "end of the Fight phase", "Dark Pact", "pain token", "cabal point", "Miracle dice", "contagion range", "model in that unit makes a Psychic Attack", "when an attack is allocated to the bearer", "helbrute fists", "hellforged weapons", "In the Fight phase", "las-talon", "opponent gains a CP as the result of an ability", "At the end of each phase", "Once per Fight phase", "Acts of Faith", "Weapon Skill characteristic", "this model makes an attack", "that unit can ignore any or all modifiers to its characteristics and to any roll or test made for it", "this unit contains no", "to the Attacks characteristic of weapons"],
 
-    "Saves": ["attack targets this model", "fire overwatch", "attack is allocated to this model", "Feel No Pain", "models in that unit have the Benefit of Cover", "each time an attack targets this unit", "invulnerable save", "bearer’s Toughness", "bearer has a Wounds characteristic", "Bodyguard unit is destroyed", "Lone Operative", "models in that unit have the Stealth", "destroyed by a melee attack", "make a saving throw", "each time an attack targets that unit", "attack targets this unit", "bearer has the SMOKE", "declares a charge against the bearer’s unit", "Enemy units cannot start or end an Advance move", "this unit or an enemy unit ends a move", "has a Save characteristic", "bearer has the Stealth", "you can ignore any or all modifiers to the characteristics of models in that unit and to any roll or test made for models in that unit", "at the end of any phase", "as the target of a charge", "SMOKE keyword", "bearer’s Wounds characteristic", "its Toughness characteristic", "use a Fate dice", "attack is allocated to a model in that unit", "attack is allocated to a model in this unit", "Wounds characteristic", "saving throw is failed for this model", "at the start of any phase", "Deadly Demise ability", "crew token", "enemy unit finishes making its attacks", "enemy unit fails a Battle-shock test", "cult ambush", "Dark Pact", "pain token", "cabal point", "attack is allocated to this FORTIFICATION", "Toughness characteristic", "Enemy units that are set up on the battlefield as Reinforcements", "Miracle dice", "model in that unit makes a Psychic Attack", "against this PSYKER", "Foul spores", "FORTIFICATION suffers a mortal wound", "model in this unit is destroyed, any remaining", "each time an attack is allocated to that model", "opponent gains a CP as the result of an ability", "select this model as the target of an attack", "At the end of each phase", "has the Benefits of Cover", "models from this unit were destroyed", "in this unit is destroyed", "enemy unit must take a Desperate Escape test", "to any armour saving throw made against that attack", "a saving throw is failed for the bearer’s unit", "Acts of Faith", "Act of Faith", "attack is made against this unit", "that unit can ignore any or all modifiers to its characteristics and to any roll or test made for it", "model has the Benefit of Cover", "this unit contains no", "kustom force field"],
+    "Saves": ["attack targets this model", "fire overwatch", "attack is allocated to this model", "Feel No Pain", "models in that unit have the Benefit of Cover", "each time an attack targets this unit", "invulnerable save", "bearer’s Toughness", "bearer has a Wounds characteristic", "Bodyguard unit is destroyed", "Lone Operative", "models in that unit have the Stealth", "destroyed by a melee attack", "make a saving throw", "each time an attack targets that unit", "attack targets this unit", "bearer has the SMOKE", "declares a charge against the bearer’s unit", "Enemy units cannot start or end an Advance move", "this unit or an enemy unit ends a move", "has a Save characteristic", "bearer has the Stealth", "you can ignore any or all modifiers to the characteristics of models in that unit and to any roll or test made for models in that unit", "at the end of any phase", "as the target of a charge", "SMOKE keyword", "bearer’s Wounds characteristic", "its Toughness characteristic", "use a Fate dice", "attack is allocated to a model in that unit", "attack is allocated to a model in this unit", "Wounds characteristic", "saving throw is failed for this model", "at the start of any phase", "Deadly Demise ability", "crew token", "enemy unit finishes making its attacks", "enemy unit fails a Battle-shock test", "cult ambush", "Dark Pact", "pain token", "cabal point", "attack is allocated to this FORTIFICATION", "Toughness characteristic", "Enemy units that are set up on the battlefield as Reinforcements", "Miracle dice", "model in that unit makes a Psychic Attack", "against this PSYKER", "Foul spores", "FORTIFICATION suffers a mortal wound", "model in this unit is destroyed, any remaining", "each time an attack is allocated to that model", "opponent gains a CP as the result of an ability", "select this model as the target of an attack", "At the end of each phase", "has the Benefits of Cover", "models from this unit were destroyed", "in this unit is destroyed", "enemy unit must take a Desperate Escape test", "to any armour saving throw made against that attack", "a saving throw is failed for the bearer’s unit", "Acts of Faith", "Act of Faith", "attack is made against this unit", "that unit can ignore any or all modifiers to its characteristics and to any roll or test made for it", "model has the Benefit of Cover", "this unit contains no", "kustom force field", "Opponent's"],
+}
+
+stratagems_phase_patterns = {
+    "Command": ["Command", "Any"],
+    "Movement": ["Movement", "Any"],
+    "Shooting": ["Shooting", "Any"],
+    "Charge": ["Charge", "Any"],
+    "Fight": ["Fight", "Any"],
+    "Saves": ["Fight", "Shooting", "Charge", "Movement", "Command", "Any"],
 }
 
 # Define a mapping of datasheet_ids to phases
@@ -27,32 +36,50 @@ datasheet_phase_mapping = {
 }
 
 
-def determine_phases(description, datasheet_id):
+def determine_phases(description, datasheet_id, is_stratagem=False):
     phases = []
-    for phase, patterns in phase_patterns.items():
-        for pattern in patterns:
-            if re.search(pattern, description, re.IGNORECASE):
-                phases.append(phase)
-                break
-    for phase, ids in datasheet_phase_mapping.items():
-        if datasheet_id in ids:
-            if phase not in phases:
-                phases.append(phase)
-    return phases
+
+    if is_stratagem:
+        for phase, patterns in stratagems_phase_patterns.items():
+            for pattern in patterns:
+                if re.search(pattern, description, re.IGNORECASE):
+                    phases.append(phase)
+                    break
+        return phases
+    else:
+        for phase, patterns in phase_patterns.items():
+            for pattern in patterns:
+                if re.search(pattern, description, re.IGNORECASE):
+                    phases.append(phase)
+                    break
+        for phase, ids in datasheet_phase_mapping.items():
+            if datasheet_id in ids:
+                if phase not in phases:
+                    phases.append(phase)
+        return phases
 
 # <[\w]+[\w=\\"\-\d\s#/\.]*>([\w\d\s\+\\[\],:\.\-]+)</[\w]+>
 # Tag extraction regex
 
 
-def process_abilities(input_file, output_file):
+def process_abilities(input_file, output_file, is_stratagem=False):
     with open(input_file, 'r') as infile:
         abilities = json.load(infile)
 
-    for ability in abilities:
-        description = ability.get("description", "")
-        datasheet_id = ability.get("datasheet_id", "")
-        ability["description"] = description
-        ability["phases"] = determine_phases(description, datasheet_id)
+    if not is_stratagem:
+        for ability in abilities:
+            description = ability.get("description", "")
+            datasheet_id = ability.get("datasheet_id", "")
+            ability["description"] = description
+            ability["phases"] = determine_phases(
+                description, datasheet_id, is_stratagem)
+    else:
+        for ability in abilities:
+            phase = ability.get("phase", "")
+            datasheet_id = ability.get("datasheet_id", "")
+            ability["phase"] = phase
+            ability["phases"] = determine_phases(
+                phase, datasheet_id, is_stratagem)
 
     with open(output_file, 'w') as outfile:
         json.dump(abilities, outfile, indent=4)
@@ -70,3 +97,7 @@ if __name__ == "__main__":
     input_file = './src/assets/json/Detachment_abilities.json'  # Corrected file path
     output_file = './src/assets/json/Detachment_abilities_modified.json'
     process_abilities(input_file, output_file)
+
+    input_file = './src/assets/json/Stratagems.json'  # Corrected file path
+    output_file = './src/assets/json/Stratagems_modified.json'
+    process_abilities(input_file, output_file, is_stratagem=True)
