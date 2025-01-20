@@ -112,7 +112,7 @@ export default function StratagemPanel() {
                       </div>
                     </div>
                   </div>
-                  <div className="relative mt-6 flex-1 px-4 sm:px-6">
+                  <div className="relative mt-6 flex-1 px-4 sm:px-6 xl:columns-2 lg:columns-1 md:columns-1 sm:columns-1">
                     {filteredStratagems.map((stratagem) => (
                       <li
                         key={stratagem.id}

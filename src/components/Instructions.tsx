@@ -10,7 +10,7 @@ import {
   QuestionMarkCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { FaDiscord, FaPatreon } from "react-icons/fa";
+import { FaDiscord, FaLinkedin, FaPatreon } from "react-icons/fa";
 import useStore from "@/store/store";
 import nrWorldEaters from "@/assets/lists/nr_tau.txt";
 
@@ -105,7 +105,10 @@ function Instructions() {
                     onTouchEnd={copySampleToClipboard}
                     className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
                   >
-                    <ClipboardIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
+                    <ClipboardIcon
+                      aria-hidden="true"
+                      className="-ml-0.5 h-5 w-5"
+                    />
                     Copy Sample
                   </button>
                 </li>
@@ -121,6 +124,23 @@ function Instructions() {
               </ol>
             </Description>
 
+            <DialogTitle className="text-xl font-bold text-center">
+              About Me
+            </DialogTitle>
+            <p>
+              Hi, I’m Will Mitchell (aka TheAlpacalypse), the developer behind
+              ArmyAssist. By day, I’m a technical project manager, but I’ve
+              always enjoyed keeping my web development skills sharp. As a
+              Warhammer 40k enthusiast looking to streamline my own gaming
+              experience, I created this tool to make playing more seamless and
+              fun.
+              <br />
+              I’ve always been passionate about blending technology and gaming,
+              and I’m thrilled to share this resource with the community. Your
+              feedback and suggestions are invaluable—feel free to connect with
+              me on Discord or Patreon. Let’s build something awesome together!
+            </p>
+
             <div className="mt-4 flex lg:flex-row w-full flex-col sm:flex-col">
               <button
                 onClick={handleClose}
@@ -129,6 +149,18 @@ function Instructions() {
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Tap Here to Close
+              </button>
+              <button
+                onClick={() =>
+                  openLink("https://www.linkedin.com/in/will--mitch/")
+                }
+                onTouchEnd={() =>
+                  openLink("https://www.linkedin.com/in/will--mitch/")
+                }
+                className={`${buttonClasses} bg-sky-700 hover:bg-sky-800`}
+              >
+                <FaLinkedin aria-hidden="true" className="-ml-0.5 h-5 w-5" />
+                Contact me on LinkedIn
               </button>
               <button
                 onClick={() => openLink("https://patreon.com/ArmyAssist")}

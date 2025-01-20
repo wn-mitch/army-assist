@@ -30,6 +30,7 @@ const ArmyRuleDisplay = () => {
         model: "",
         parameter: "",
       }));
+    
     const filteredDetachmentAbilities = detachmentAbilities
       .filter(
         (ability) =>

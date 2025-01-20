@@ -67,8 +67,6 @@ const ShootingOrFightPhase = ({
       return cleanedName.split(",").map((part) => part.trim());
     });
   
-  console.log(weapons);
-
   if (datasheet.id === "000000613") {
     weapons = weapons ? [...weapons, "Wraithbone fists"] : ["Wraithbone fists"];
   }
@@ -134,6 +132,7 @@ const SavesPhase = ({
       fnp={fnpText}
       toughness={datasheetModel.T}
       wounds={datasheetModel.W}
+      leadership={datasheetModel.Ld}
     />,
     true,
   ];
@@ -221,7 +220,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     unit.toggled && (toggled || abilitiesToggle) ? "" : "opacity-50";
 
   return (
-    <li
+    <ul
       key={unit.datasheet_id}
       className={`col-span-1 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-2 first:mt-0 shadow bg-slate-600 text-gray-200 ${fadedClasses}`}
       onClick={() => toggleUnit(unit)}
@@ -231,7 +230,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       </div>
       {characteristic}
       {phasedAbilities}
-    </li>
+    </ul>
   );
 }
 

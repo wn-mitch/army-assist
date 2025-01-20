@@ -81,6 +81,14 @@ function Changelog() {
             </DialogTitle>
             <Description className="mt-2"></Description>
             
+            <ChangelogEntry version="1.3.1"
+              date="01/20/2025"
+              changes={[
+                "Fixed a bug where variations in the Detachment selection line could cause detachments to not be detected properly.",
+                "Added Leadership saves to the Saves cards to account for battleshock tests forced by enemies",
+              ]}
+            />
+            
             <ChangelogEntry
               version="1.3.0"
               date="01/17/2025"

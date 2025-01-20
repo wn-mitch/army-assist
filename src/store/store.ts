@@ -84,7 +84,7 @@ const useStore = create<StoreState>((set) => ({
     let lastParentUnit: ListUnit | null = null;
 
     lines.forEach((line, index) => {
-      const detachmentMatch = line.match(/Detachment: ([\w\s]+)/);
+      const detachmentMatch = line.match(/Detachment[\sChoice]*: ([\w\s]+)/);
 
       if (detachmentMatch) {
         set({ detachment: detachmentMatch[1] });
