@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 import useStore from "@/store/store";
 
@@ -98,8 +99,8 @@ const ShootingOrFightPhase = ({
       (weapons ?? []).some((name) => {
         return weapon.name?.toLowerCase().includes(name.toLowerCase());
       })
-  );
- 
+    );
+
   const toggled = availableWeaponDatasheets.length > 0;
 
   return [
@@ -144,6 +145,9 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   const phase = useStore((state) => state.phase);
   const toggleUnit = useStore((state) => state.toggleUnit);
   const faction = useStore((state) => state.faction);
+
+  const cardsCollapse = useStore((state) => state.cardsCollapse);
+  const showKeywords = useStore((state) => state.showKeywords);
 
   if (!phase) {
     window.alert("Phase not set");
@@ -218,23 +222,48 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     datasheetModel,
     phase,
   });
-  const fadedClasses =
-    unit.toggled && (toggled || abilitiesToggle) ? "" : "opacity-50";
-  
-  const unitFilteredKeywords = datasheetKeywords.filter((keyword) => keyword.datasheet_id === datasheet.id).map(x => x.keyword).join(", ");
+
+  const cardToggled = unit.toggled && (toggled || abilitiesToggle);
+  const fadedClasses = cardToggled ? "" : "opacity-50";
+
+  const unitFilteredKeywords = datasheetKeywords
+    .filter((keyword) => keyword.datasheet_id === datasheet.id)
+    .map((x) => x.keyword)
+    .join(", ");
 
   return (
     <ul
       key={unit.datasheet_id}
-      className={`col-span-1 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-4 mx-1 first:mt-0 shadow bg-slate-600 text-gray-200 ${fadedClasses}`}
+      className={`col-span-1 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-4 mx-1 first:mt-0 bg-slate-600 text-gray-200 cursor-pointer ${fadedClasses}`}
       onClick={() => toggleUnit(unit)}
     >
-      <div className="text-center text-lg font-bold rounded-lg bg-slate-900">
-        {unit.name}
+      <div className="flex flex-row justify-between gap-1">
+        <div
+          className={`flex-grow text-center text-lg font-bold rounded-lg bg-slate-900 ${fadedClasses}`}
+        >
+          {unit.name}
+        </div>
+        {cardsCollapse && (
+          <div className="flex flex-shrink rounded-lg bg-slate-900 items-center">
+            {cardToggled ? (
+              <ChevronDownIcon className="h-6 w-6 text-gray-200" />
+            ) : (
+              <ChevronUpIcon className="h-6 w-6 text-gray-200" />
+            )}
+          </div>
+        )}
       </div>
-      {characteristic}
-      {phasedAbilities}
-      <div className="text-md font-semibold bg-slate-700 rounded-lg px-2 border-2 border-gray-900">{unitFilteredKeywords}</div>
+      {!(cardsCollapse && !cardToggled) && (
+        <>
+          {characteristic}
+          {phasedAbilities}
+          {showKeywords && (
+            <div className="text-md font-semibold bg-slate-700 rounded-lg px-2 border-2 border-gray-900">
+              {unitFilteredKeywords}
+            </div>
+          )}
+        </>
+      )}
     </ul>
   );
 }

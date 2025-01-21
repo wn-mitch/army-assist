@@ -25,6 +25,8 @@ interface StoreState {
   };
   isFirstVisit: boolean;
   listSort: SortOptions;
+  cardsCollapse: boolean;
+  showKeywords: boolean;
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
@@ -33,6 +35,7 @@ interface StoreState {
   togglePhase: (phase: Phase) => void;
   setFirstVisit: (isFirstVisit: boolean) => void;
   setListSort: (listSort: SortOptions) => void;
+  setCardsCollapse: (cardsCollapse: boolean) => void;
 }
 
 const useStore = create<StoreState>((set) => ({
@@ -53,6 +56,8 @@ const useStore = create<StoreState>((set) => ({
   detachment: undefined,
   isFirstVisit: true,
   listSort: SortOptions.Name,
+  cardsCollapse: true,
+  showKeywords: true,
   reset: () =>
     set({
       text: "",
@@ -169,6 +174,8 @@ const useStore = create<StoreState>((set) => ({
   },
   setFirstVisit: (isFirstVisit: boolean) => set({ isFirstVisit }),
   setListSort: (listSort: SortOptions) => set({ listSort }),
+  setCardsCollapse: (cardsCollapse: boolean) => set({ cardsCollapse }),
+  setShowKeywords: (showKeywords: boolean) => set({ showKeywords }),
 }));
 
 export default useStore;

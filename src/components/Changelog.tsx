@@ -84,9 +84,10 @@ function Changelog() {
             <ChangelogEntry version="1.3.2"
               date="01/21/2025"
               changes={[
-                "Added Sort Options to the settings menu",
-                "Added support for datasheet keywords.",
+                "Added Sort Options to the settings menu. This allows you to select between alphabetical order and the order your list was pasted in from NewRecruit.",
+                "Added support for datasheet keywords. Added a setting to disable them if you don't want to see them.",
                 "Added support for the following CORE abilities: Fights First, Infiltrators, Scout, Deadly Demise, Firing Deck, Lone Op, Stealth, and more.",
+                "Added a toggle button that collapses the cards after they are clicked. Added a setting to disable this feature if you don't want it.",
               ]}
             />
             

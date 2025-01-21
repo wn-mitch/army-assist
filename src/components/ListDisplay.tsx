@@ -6,6 +6,7 @@ import ArmyRuleDisplay from "./ArmyRuleDisplay";
 import StratagemPanel from "./StratagemPanel";
 import SortOptions from "@/types/SortOptions";
 import ListUnit from "@/types/ListUnit";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 function ListDisplay() {
   const units = useStore((state) => state.units);
@@ -35,6 +36,7 @@ function ListDisplay() {
         ))}
       </ul>
       <StratagemPanel />
+      <ScrollToTopButton />
     </div>
   );
 }

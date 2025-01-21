@@ -93,37 +93,36 @@ function Instructions() {
             <DialogTitle className="text-xl font-bold text-center">
               Instructions & Changelog
             </DialogTitle>
-            <Description className="mt-2">
-              <ol className="list-decimal list-inside">
-                <li>
-                  Create a list on NewRecruit.eu. If you don't know what that
-                  is, or just want to explore the site's features before
-                  deciding to rebuild a list, you can click the button to copy a
-                  sample to your clipboard
-                  <button
-                    onClick={copySampleToClipboard}
-                    onTouchEnd={copySampleToClipboard}
-                    className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
-                  >
-                    <ClipboardIcon
-                      aria-hidden="true"
-                      className="-ml-0.5 h-5 w-5"
-                    />
-                    Copy Sample
-                  </button>
-                </li>
-                <li>Click Export</li>
-                <li>Click the Text Option</li>
-                <li>Select the Format as NR</li>
-                <li>Click Copy to Clipboard</li>
-                <li>Paste into the pastebox</li>
-                <li>
-                  Please report any issues you find in the discord linked in the
-                  header.
-                </li>
-              </ol>
-            </Description>
+            <ol className="list-decimal list-inside">
+              <li>
+                Create a list on NewRecruit.eu. If you don't know what that is,
+                or just want to explore the site's features before deciding to
+                rebuild a list, you can click the button to copy a sample to
+                your clipboard
+                <button
+                  onClick={copySampleToClipboard}
+                  onTouchEnd={copySampleToClipboard}
+                  className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
+                >
+                  <ClipboardIcon
+                    aria-hidden="true"
+                    className="-ml-0.5 h-5 w-5"
+                  />
+                  Copy Sample
+                </button>
+              </li>
+              <li>Click Export</li>
+              <li>Click the Text Option</li>
+              <li>Select the Format as NR</li>
+              <li>Click Copy to Clipboard</li>
+              <li>Paste into the pastebox</li>
+              <li>
+                Please report any issues you find in the discord linked in this
+                modal.
+              </li>
+            </ol>
 
+            <br />
             <DialogTitle className="text-xl font-bold text-center">
               About Me
             </DialogTitle>
@@ -134,6 +133,7 @@ function Instructions() {
               Warhammer 40k enthusiast looking to streamline my own gaming
               experience, I created this tool to make playing more seamless and
               fun.
+              <br />
               <br />
               I’ve always been passionate about blending technology and gaming,
               and I’m thrilled to share this resource with the community. Your

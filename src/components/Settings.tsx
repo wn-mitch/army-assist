@@ -13,6 +13,12 @@ function Settings() {
   const activeSort = useStore((state) => state.listSort);
   const setListSort = useStore((state) => state.setListSort);
 
+  const cardsCollapse = useStore((state) => state.cardsCollapse);
+  const setCardsCollapse = useStore((state) => state.setCardsCollapse);
+
+  const showKeywords = useStore((state) => state.showKeywords);
+  const setShowKeywords = useStore((state) => state.setShowKeywords);
+
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
@@ -23,9 +29,7 @@ function Settings() {
   }> = ({ label, checked, onChange }) => (
     <div className="relative flex gap-3 py-4">
       <div className="min-w-0 flex-1 text-sm/6">
-        <label className="select-none font-medium text-gray-900">
-          {label}
-        </label>
+        <label className="select-none font-medium text-gray-900">{label}</label>
       </div>
       <div className="flex h-6 shrink-0 items-center">
         <div className="group grid size-4 grid-cols-1">
@@ -62,7 +66,10 @@ function Settings() {
 
   return (
     <>
-      <button onClick={handleShow} className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1">
+      <button
+        onClick={handleShow}
+        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1"
+      >
         <CogIcon className="h-6 w-6" />
       </button>
 
@@ -72,7 +79,10 @@ function Settings() {
         className="fixed z-10 inset-0 overflow-y-auto"
       >
         <div className="flex items-center justify-center min-h-screen">
-          <div className="fixed inset-0 bg-black opacity-50" aria-hidden="true" />
+          <div
+            className="fixed inset-0 bg-black opacity-50"
+            aria-hidden="true"
+          />
           <DialogPanel className="bg-white rounded w-full md:w-2/3 max-w-lg p-6 z-20">
             <DialogTitle className="text-xl font-bold text-center">
               Settings
@@ -90,7 +100,7 @@ function Settings() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-2">
               <h2 className="text-lg font-semibold">List Sort</h2>
               <div className="mt-4 divide-y divide-gray-200 border-b border-t border-gray-200">
@@ -102,6 +112,28 @@ function Settings() {
                     onChange={() => setListSort(sortOption as SortOptions)}
                   />
                 ))}
+              </div>
+            </div>
+
+            <div className="mt-2">
+              <h2 className="text-lg font-semibold">Cards Collapse</h2>
+              <div className="mt-4 divide-y divide-gray-200 border-b border-t border-gray-200">
+                <SettingsOption
+                  label="Collapse all cards"
+                  checked={cardsCollapse}
+                  onChange={() => setCardsCollapse(!cardsCollapse)}
+                />
+              </div>
+            </div>
+            
+            <div className="mt-2">
+              <h2 className="text-lg font-semibold">Show Datacard Keywords</h2>
+              <div className="mt-4 divide-y divide-gray-200 border-b border-t border-gray-200">
+                <SettingsOption
+                  label="Show Datacard Keywords"
+                  checked={showKeywords}
+                  onChange={() => setShowKeywords(!showKeywords)}
+                />
               </div>
             </div>
 
