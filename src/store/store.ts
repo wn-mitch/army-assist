@@ -36,6 +36,7 @@ interface StoreState {
   setFirstVisit: (isFirstVisit: boolean) => void;
   setListSort: (listSort: SortOptions) => void;
   setCardsCollapse: (cardsCollapse: boolean) => void;
+  setShowKeywords: (showKeywords: boolean) => void;
 }
 
 const useStore = create<StoreState>((set) => ({

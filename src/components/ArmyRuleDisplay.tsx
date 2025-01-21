@@ -47,6 +47,8 @@ const ArmyRuleDisplay = () => {
         model: "",
         parameter: "",
       }));
+    
+    console.log(filteredArmyAbilities, filteredDetachmentAbilities);
 
     setAbilities([...filteredArmyAbilities, ...filteredDetachmentAbilities]);
   }, [faction, detachment, phase]);
