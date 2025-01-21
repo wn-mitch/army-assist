@@ -89,6 +89,7 @@ function Changelog() {
                 "Added support for the following CORE abilities: Fights First, Infiltrators, Scout, Deadly Demise, Firing Deck, Lone Op, Stealth, and more.",
                 "Added a toggle button that collapses the cards after they are clicked. Added a setting to disable this feature if you don't want it.",
                 "Fixed some detachment rules displaying for the wrong factions",
+                "Improved table displays that bleed off the edge of the card"
               ]}
             />
             
