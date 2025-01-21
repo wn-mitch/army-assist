@@ -1,6 +1,6 @@
 import React from "react";
 import useStore from "@/store/store";
-import ListUnitCard from "./ListUnitCard";
+import ListUnitCard from "./CardComponents/ListUnitCard";
 import FilterPanel from "./FilterPanel";
 import ArmyRuleDisplay from "./ArmyRuleDisplay";
 import StratagemPanel from "./StratagemPanel";

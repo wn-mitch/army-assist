@@ -20,7 +20,7 @@ export default function Pastebox() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col w-full h-full">
+    <form onSubmit={handleSubmit} className="flex flex-col w-full h-full bg-slate-950">
       <div className="h-full">
         <textarea
           id="comment"

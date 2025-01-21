@@ -81,6 +81,15 @@ function Changelog() {
             </DialogTitle>
             <Description className="mt-2"></Description>
             
+            <ChangelogEntry version="1.3.2"
+              date="01/21/2025"
+              changes={[
+                "Added Sort Options to the settings menu",
+                "Added support for datasheet keywords.",
+                "Added support for the following CORE abilities: Fights First, Infiltrators, Scout, Deadly Demise, Firing Deck, Lone Op, Stealth, and more.",
+              ]}
+            />
+            
             <ChangelogEntry version="1.3.1"
               date="01/20/2025"
               changes={[

@@ -35,8 +35,17 @@ datasheet_phase_mapping = {
     "Saves": ["000000508", "000000941", "000000855", "000002544", "000001476"],
 }
 
+ability_id_phase_mapping = {
+    "Movement": ["000008342", "000008343"],
+    "Shooting": ["000008334"],
+    "Charge": [],
+    "Fight": ["000008339"],
+    "Command": ["000008344", "000008345", "000008342"],
+    "Saves": ["000008339", "000008337", "000008336"],
+}
 
-def determine_phases(description, datasheet_id, is_stratagem=False):
+
+def determine_phases(description, datasheet_id, is_stratagem=False, ability_id=None):
     phases = []
 
     if is_stratagem:
@@ -56,6 +65,12 @@ def determine_phases(description, datasheet_id, is_stratagem=False):
             if datasheet_id in ids:
                 if phase not in phases:
                     phases.append(phase)
+
+        if (ability_id):
+            for phase, ids in ability_id_phase_mapping.items():
+                if ability_id in ids:
+                    if phase not in phases:
+                        phases.append(phase)
         return phases
 
 # <[\w]+[\w=\\"\-\d\s#/\.]*>([\w\d\s\+\\[\],:\.\-]+)</[\w]+>
@@ -70,9 +85,10 @@ def process_abilities(input_file, output_file, is_stratagem=False):
         for ability in abilities:
             description = ability.get("description", "")
             datasheet_id = ability.get("datasheet_id", "")
+            ability_id = ability.get("ability_id", "")
             ability["description"] = description
             ability["phases"] = determine_phases(
-                description, datasheet_id, is_stratagem)
+                description, datasheet_id, is_stratagem, ability_id)
     else:
         for ability in abilities:
             phase = ability.get("phase", "")

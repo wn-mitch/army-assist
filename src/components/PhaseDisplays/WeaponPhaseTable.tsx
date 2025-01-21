@@ -2,7 +2,7 @@ import React from "react";
 
 import DatasheetWargear from "@/types/DatasheetWargear";
 
-import KeywordTags from "@/components/KeywordTags";
+import KeywordTags from "@/components/CardComponents/KeywordTags";
 
 function WeaponPhaseTable({
   weaponDatasheets,
