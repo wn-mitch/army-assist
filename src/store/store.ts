@@ -5,6 +5,7 @@ import { create } from "zustand";
 // import { persist, createJSONStorage } from "zustand/middleware";
 
 import factions from "@/assets/json/Factions.json";
+import SortOptions from "@/types/SortOptions";
 
 interface StoreState {
   text: string;
@@ -23,6 +24,7 @@ interface StoreState {
     [Phase.Saves]: boolean;
   };
   isFirstVisit: boolean;
+  listSort: SortOptions;
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
@@ -30,6 +32,7 @@ interface StoreState {
   toggleUnit: (unit: ListUnit) => void;
   togglePhase: (phase: Phase) => void;
   setFirstVisit: (isFirstVisit: boolean) => void;
+  setListSort: (listSort: SortOptions) => void;
 }
 
 const useStore = create<StoreState>((set) => ({
@@ -49,6 +52,7 @@ const useStore = create<StoreState>((set) => ({
   faction: undefined,
   detachment: undefined,
   isFirstVisit: true,
+  listSort: SortOptions.Name,
   reset: () =>
     set({
       text: "",
@@ -164,6 +168,7 @@ const useStore = create<StoreState>((set) => ({
     }));
   },
   setFirstVisit: (isFirstVisit: boolean) => set({ isFirstVisit }),
+  setListSort: (listSort: SortOptions) => set({ listSort }),
 }));
 
 export default useStore;

@@ -3,11 +3,15 @@ import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { CogIcon } from "@heroicons/react/24/outline";
 import Phase from "@/types/Phase";
 import useStore from "@/store/store";
+import SortOptions from "@/types/SortOptions";
 
 function Settings() {
   const [isOpen, setIsOpen] = useState(false);
   const activePhases = useStore((state) => state.activePhases);
   const togglePhase = useStore((state) => state.togglePhase);
+
+  const activeSort = useStore((state) => state.listSort);
+  const setListSort = useStore((state) => state.setListSort);
 
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
@@ -82,6 +86,20 @@ function Settings() {
                     label={phase}
                     checked={activePhases[phase as Phase]}
                     onChange={() => togglePhase(phase as Phase)}
+                  />
+                ))}
+              </div>
+            </div>
+            
+            <div className="mt-2">
+              <h2 className="text-lg font-semibold">List Sort</h2>
+              <div className="mt-4 divide-y divide-gray-200 border-b border-t border-gray-200">
+                {Object.values(SortOptions).map((sortOption) => (
+                  <SettingsOption
+                    key={sortOption}
+                    label={sortOption}
+                    checked={sortOption === activeSort}
+                    onChange={() => setListSort(sortOption as SortOptions)}
                   />
                 ))}
               </div>
