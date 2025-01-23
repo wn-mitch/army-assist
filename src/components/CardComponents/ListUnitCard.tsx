@@ -124,7 +124,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
           <div className="flex-row flex-grow text-black dark:text-gray-50">{unit.name}</div>
 
           {showKeywords && (
-            <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-400 dark:font-normal">
+            <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-300 dark:font-normal">
               {unitFilteredKeywords}
             </div>
           )}

@@ -119,13 +119,13 @@ export default function StratagemPanel() {
                         className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600`}
                       >
                         <div className="flex flex-row justify-center items-center">
-                          <div className="text-xl font-semibold flex-row flex-grow text-black dark:text-gray-50">
+                          <div className="flex-shrink text-xl font-semibold text-black dark:text-gray-50">
                             {stratagem.name}
                           </div>
                           <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-400 dark:font-normal">
                             {stratagem.type}
                           </div>
-                          <div className="flex-shrink m-2 px-0.5 shadow-md rounded-lg bg-gray-700 my-1 text-gray-100 dark:bg-gray-200 dark:text-gray-800 dark:font-semibold">
+                          <div className="m-2 px-0.5 shadow-md rounded-lg bg-gray-700 my-1 text-gray-100 dark:bg-gray-200 dark:text-gray-800 dark:font-semibold">
                             {stratagem.cp_cost} CP
                           </div>
                         </div>

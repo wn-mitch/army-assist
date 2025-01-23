@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.4.1",
+    "date": "01/23/2025",
+    "changes": [
+      "Improved the layout of the army rule panel on XS screens like phones in portrait"
+    ]
+  },
+  {
     "version": "1.4.0",
     "date": "01/23/2025",
     "changes": [
