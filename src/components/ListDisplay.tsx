@@ -1,12 +1,12 @@
 import React from "react";
 import useStore from "@/store/store";
 import ListUnitCard from "./CardComponents/ListUnitCard";
-import FilterPanel from "./FilterPanel";
 import ArmyRuleDisplay from "./ArmyRuleDisplay";
 import StratagemPanel from "./StratagemPanel";
 import SortOptions from "@/types/SortOptions";
 import ListUnit from "@/types/ListUnit";
 import ScrollToTopButton from "./ScrollToTopButton";
+import PhaseFilter from "./PhaseFilter";
 
 function ListDisplay() {
   const units = useStore((state) => state.units);
@@ -24,8 +24,8 @@ function ListDisplay() {
   const sortedUnits = units.toSorted(sortByListSort);
 
   return (
-    <div className="flex flex-col gap-1 w-full">
-      <FilterPanel />
+    <div className="flex flex-col gap-2 w-full">
+      <PhaseFilter />
       <ArmyRuleDisplay />
       <ul
         role="list"

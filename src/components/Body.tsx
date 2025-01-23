@@ -6,19 +6,13 @@ import ListDisplay from "./ListDisplay";
 function Body() {
   const hasUnits = useStore((state) => state.units.length > 0);
 
-  if (!hasUnits) {
+  const bodyContent = hasUnits ? <ListDisplay /> : <Pastebox />;
+
     return (
-      <div className="flex flex-1">
-        <Pastebox />
+      <div className="flex flex-1 bg-gray-200 dark:bg-gray-900">
+        {bodyContent}
       </div>
     );
-  } else {
-    return (
-      <div className="flex flex-1">
-        <ListDisplay />
-      </div>
-    );
-  }
 }
 
 export default Body;

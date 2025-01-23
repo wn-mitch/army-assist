@@ -1,4 +1,6 @@
 import React from "react";
+import TableCell from "./TableComponents.tsx/TableCell";
+import TableHeaderCell from "./TableComponents.tsx/TableHeaderCell";
 
 function ModelSaveTable({
   save,
@@ -16,10 +18,10 @@ function ModelSaveTable({
   leadership: string;
 }) {
   return (
-    <table className="table-auto w-full overflow-auto text-center">
-      <thead className="border">
+    <table className="table-auto w-full overflow-auto">
+      <thead className="border dark:border-gray-600">
         <tr>
-          <TableHeaderCell className="w-1/6">Sv</TableHeaderCell>
+          <TableHeaderCell className="w-1/6 pl-1">Sv</TableHeaderCell>
           <TableHeaderCell className="w-1/6">Inv</TableHeaderCell>
           <TableHeaderCell className="w-1/6">FNP</TableHeaderCell>
           <TableHeaderCell className="w-1/6">T</TableHeaderCell>
@@ -28,32 +30,17 @@ function ModelSaveTable({
         </tr>
       </thead>
       <tbody>
-        <tr className="text-sm border">
-          <TableCell className="w-1/6">{save}</TableCell>
-          <TableCell className="w-1/6">{invSave !== "-" ? `${invSave}` : "-"}</TableCell>
-          <TableCell className="w-1/6">{fnp ? `${fnp}` : "-"}</TableCell>
-          <TableCell className="w-1/6">{toughness}</TableCell>
-          <TableCell className="w-1/6">{wounds}</TableCell>
-          <TableCell className="w-1/6">{leadership}</TableCell>
+        <tr className="text-sm border dark:border-gray-600">
+          <TableCell className="w-1/6 pl-1 dark:font-semibold">{save}</TableCell>
+          <TableCell className="w-1/6 dark:font-semibold">{invSave !== "-" ? `${invSave}` : "-"}</TableCell>
+          <TableCell className="w-1/6 dark:font-semibold">{fnp ? `${fnp}` : "-"}</TableCell>
+          <TableCell className="w-1/6 dark:font-semibold">{toughness}</TableCell>
+          <TableCell className="w-1/6 dark:font-semibold">{wounds}</TableCell>
+          <TableCell className="w-1/6 dark:font-semibold">{leadership}</TableCell>
         </tr>
       </tbody>
     </table>
   );
 }
-
-const TableHeaderCell: React.FC<{ className?: string; children: React.ReactNode }> = ({ children, className }) => (
-    <th
-      scope="col"
-      className={`font-thin text-xs text-gray-700 ${className}`}
-    >
-    {children}
-  </th>
-);
-
-const TableCell: React.FC<{ className?: string; children: React.ReactNode }> = ({ children, className }) => (
-  <td className={`${className}`}>
-    {children}
-  </td>
-);
 
 export default ModelSaveTable;

@@ -113,24 +113,25 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   return (
     <ul
       key={unit.datasheet_id}
-      className={`m-4 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm`}
+      tabIndex={0}
+      className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}  
       onClick={() => toggleUnit(unit)}
     >
       <div className="flex flex-row">
         <div
           className={`flex flex-row font-semibold text-xl align-middle items-center flex-grow ${fadedClasses}`}
         >
-          <div className="flex-row flex-grow">{unit.name}</div>
+          <div className="flex-row flex-grow text-black dark:text-gray-50">{unit.name}</div>
 
           {showKeywords && (
-            <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right">
+            <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-400 dark:font-normal">
               {unitFilteredKeywords}
             </div>
           )}
         </div>
         {cardsCollapse && (
           <div className="flex justify-center items-center">
-            <div className="m-auto flex flex-shrink shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200">
+            <div className="m-auto flex flex-shrink shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200 dark:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-100">
               {cardToggled ? (
                 <ChevronDownIcon className="h-8 w-8" />
               ) : (
@@ -142,11 +143,8 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       </div>
 
       {!(cardsCollapse && !cardToggled) && (
-        // <div className="flex flex-col lg:flex-row gap-1">
         <div className="flex flex-col gap-1">
-          {/* <div className="lg:w-1/2">{characteristic}</div> */}
           <div className="">{characteristic}</div>
-          {/* <div className="lg:w-1/2">{phasedAbilities}</div> */}
           <div className="">{phasedAbilities}</div>
         </div>
       )}

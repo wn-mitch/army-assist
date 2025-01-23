@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Description,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
+import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import {
   ClipboardIcon,
   QuestionMarkCircleIcon,
@@ -63,13 +58,13 @@ function Instructions() {
   };
 
   const buttonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded-md px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
+    "button flex flex-row items-center gap-x-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
 
   return (
     <>
       <button
         onClick={handleShow}
-        className="bg-gray-500 text-white rounded p-2 font-bold hover:bg-gray-700 mx-1"
+        className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
       </button>
@@ -77,23 +72,23 @@ function Instructions() {
       <Dialog
         open={isOpen}
         onClose={() => {}}
-        className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap"
+        className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap text-black dark:text-gray-100"
       >
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
 
-          <div className="bg-white rounded w-2/3 mx-auto p-6 relative z-20">
+          <div className="my-5 bg-white dark:bg-gray-900 rounded-lg w-3/4 mx-auto p-6 relative z-20">
             <button
               id="close-changelog"
               onClick={handleClose}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200"
             >
               <XCircleIcon className="h-6 w-6" />
             </button>
-            <DialogTitle className="text-xl font-bold text-center">
+            <DialogTitle className="text-lg font-bold text-center pb-1">
               Instructions & Changelog
             </DialogTitle>
-            <ol className="list-decimal list-inside">
+            <ol className="list-decimal list-inside text-base">
               <li>
                 Create a list on NewRecruit.eu. If you don't know what that is,
                 or just want to explore the site's features before deciding to
@@ -102,7 +97,7 @@ function Instructions() {
                 <button
                   onClick={copySampleToClipboard}
                   onTouchEnd={copySampleToClipboard}
-                  className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
+                  className={`${buttonClasses} bg-gray-600 hover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400 dark:hover:text-gray-800 shadow-md`}
                 >
                   <ClipboardIcon
                     aria-hidden="true"
@@ -112,40 +107,29 @@ function Instructions() {
                 </button>
               </li>
               <li>Click Export</li>
-              <li>Click the Text Option</li>
-              <li>Select the Format as NR</li>
+              <li>Click the "Text" Option</li>
+              <li>Select the Format as "NR"</li>
+              <li>Under the "Export Options" dropdown, ensure "Include constant selections" is checked</li>
               <li>Click Copy to Clipboard</li>
               <li>Paste into the pastebox</li>
-              <li>
-                Please report any issues you find in the discord linked in this
-                modal.
-              </li>
+              <li>Please report any issues you find in the discord below</li>
             </ol>
 
-            <br />
-            <DialogTitle className="text-xl font-bold text-center">
+            <DialogTitle className="text-lg font-bold text-center py-1">
               About Me
             </DialogTitle>
-            <p>
+            <p className="text-base">
               Hi, I’m Will Mitchell (aka TheAlpacalypse), the developer behind
-              ArmyAssist. By day, I’m a technical project manager, but I’ve
-              always enjoyed keeping my web development skills sharp. As a
-              Warhammer 40k enthusiast looking to streamline my own gaming
-              experience, I created this tool to make playing more seamless and
-              fun.
-              <br />
-              <br />
-              I’ve always been passionate about blending technology and gaming,
-              and I’m thrilled to share this resource with the community. Your
-              feedback and suggestions are invaluable—feel free to connect with
-              me on Discord or Patreon. Let’s build something awesome together!
+              ArmyAssist. Your feedback and suggestions are invaluable — please
+              come connect with me on Discord or Patreon. Let’s build something
+              awesome together!
             </p>
 
             <div className="mt-4 flex lg:flex-row w-full flex-col sm:flex-col">
               <button
                 onClick={handleClose}
                 onTouchEnd={handleClose}
-                className={`${buttonClasses} bg-red-600 hover:bg-red-500`}
+                className={`${buttonClasses} bg-red-700 hover:bg-red-600`}
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Tap Here to Close

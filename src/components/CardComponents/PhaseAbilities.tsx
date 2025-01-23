@@ -100,10 +100,10 @@ const PhaseAbilities: React.FC<{
           key={index}
           className={`flex flex-col break-inside-avoid first:mt-0`}
         >
-          <div className="text-md">
+          <div className="text-md dark:font-semibold dark:text-gray-100">
             {ability.name}
           </div>
-          <div className="font-thin text-sm text-gray-800">
+          <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200">
             {ability.description}
           </div>
         </li>
