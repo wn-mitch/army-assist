@@ -5,10 +5,8 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import {
-  ClipboardDocumentListIcon,
-  XCircleIcon,
-} from "@heroicons/react/24/outline";
+import { XCircleIcon } from "@heroicons/react/24/outline";
+import changelogData from "@/assets/json/Changelog.json";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,154 +32,57 @@ function Changelog() {
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
-  const ChangelogEntry: React.FC<{
-    version: string;
-    date: string;
-    changes: string[];
-  }> = ({ version, date, changes }) => (
-    <div className="mt-4">
-      <h2 className="text-lg font-semibold">
-        {version} - {date}
-      </h2>
-      <ul className="list-disc list-inside">
-        {changes.map((change, index) => (
-          <li key={index}>{change}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  const currentVersion = changelogData[0].version;
 
   return (
     <>
       <button
         onClick={handleShow}
-        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1"
+        className="bg-gray-500 text-gray-200 rounded p-2 font-semibold hover:bg-gray-700 mx-2"
       >
-        <ClipboardDocumentListIcon className="h-6 w-6" />
+        v{currentVersion}
       </button>
 
       <Dialog
         open={isOpen}
         onClose={handleClose}
-        className="fixed z-10 inset-0 overflow-y-scroll"
+        className="fixed z-10 inset-0 overflow-y-auto"
       >
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
 
-          <div className="bg-white rounded w-2/3 mx-auto p-6 relative z-20">
+          <div className="bg-white dark:bg-gray-800 rounded-lg w-5/6 lg:w-3/4 mx-auto p-6 relative z-20">
             <button
               id="close-changelog"
-              onClick={handleClose}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              onPointerDown={handleClose}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300"
             >
               <XCircleIcon className="h-6 w-6" />
             </button>
-            <DialogTitle className="text-xl font-bold text-center">
+            <DialogTitle className="text-xl font-bold text-center dark:text-gray-200">
               Changelog
             </DialogTitle>
             <Description className="mt-2"></Description>
-            
-            <ChangelogEntry version="1.3.2"
-              date="01/21/2025"
-              changes={[
-                "Added Sort Options to the settings menu. This allows you to select between alphabetical order and the order your list was pasted in from NewRecruit.",
-                "Added support for datasheet keywords. Added a setting to disable them if you don't want to see them.",
-                "Added support for the following CORE abilities: Fights First, Infiltrators, Scout, Deadly Demise, Firing Deck, Lone Op, Stealth, and more.",
-                "Added a toggle button that collapses the cards after they are clicked. Added a setting to disable this feature if you don't want it.",
-                "Fixed some detachment rules displaying for the wrong factions",
-                "Improved table displays that bleed off the edge of the card"
-              ]}
-            />
-            
-            <ChangelogEntry version="1.3.1"
-              date="01/20/2025"
-              changes={[
-                "Fixed a bug where variations in the Detachment selection line could cause detachments to not be detected properly.",
-                "Added Leadership saves to the Saves cards to account for battleshock tests forced by enemies",
-              ]}
-            />
-            
-            <ChangelogEntry
-              version="1.3.0"
-              date="01/17/2025"
-              changes={[
-                "Stratagems: Now supported in a flyout menu! They are filtered by phase and detachment. Please report any errors in the discord.",
-                "Fixed more spelling errors. Abilities should be ready for feedback on which phases they show up in.",
-                "Further improved the mobile and tablet layouts to better support touch devices.",
-              ]}
-            />
-            
-            <ChangelogEntry
-              version="1.2.1"
-              date="01/16/2025"
-              changes={[
-                "Fixed more spelling errors",
-                "Fixed a bug where abilities without text would be displayed",
-                "Fixed a bug that caused certain weapons to get excluded"
-              ]}
-            />
 
-            <ChangelogEntry
-              version="1.2.0"
-              date="01/15/2025"
-              changes={[
-                "Added support for the Army and Detachment Rules",
-                "Fixed more spelling errors",
-                "Fixed (what should be) the last of the allied faction bugs",
-              ]}
-            />
-
-            <ChangelogEntry
-              version="1.1.1"
-              date="01/13/2025"
-              changes={[
-                "Fixed spelling errors for the Norn Assimilator",
-                "Made cards not grayed out if the have an available ability in that phase",
-              ]}
-            />
-
-            <ChangelogEntry
-              version="1.1.0"
-              date="01/13/2025"
-              changes={[
-                "Ability Support: Abilities on datasheet cards are now displayed in the relevant phase. This includes abilities that are not tied to a specific phase. This was a pretty massive undertaking and there are almost certainly cards in the wrong phase. Please let me know if you see any issues. The game has over 3500 abilities and I have to programatically assign them to phases.",
-                "Please join the discord to offer feedback and report issues! Link at the bottom of the Changelog.",
-                "Further worked to improve the look of the mobile layout",
-                "Added Toughness to the Saves cards",
-                "Fixed more allied faction bugs",
-              ]}
-            />
-
-            <ChangelogEntry
-              version="1.0.2"
-              date="01/12/2025"
-              changes={[
-                "Fixed a slew of bugs related to missing Keyword Tags",
-                "Added support for allied units in factions. This is something that I have to manually update, so please let me know if you see any issues or missing units. I tried to make tester list with every faction but I am not sure on all of the ally rules.",
-                "The copy to clipboard sample actually works now",
-              ]}
-            />
-
-            <ChangelogEntry
-              version="1.0.1"
-              date="01/11/2025"
-              changes={[
-                "Cards are now pre-toggled if there is not any information available for them during that phase (ie, no guns during the shooting phase)",
-                "Adds a settings modal with the ability to filter out phases you don't need (World Eaters don't need a Shooting Phase)",
-                "Improved the look of the mobile layout",
-                "Fixed a slew of bugs related to missing Keyword Tags",
-                "Added support for Saves",
-              ]}
-            />
-
-            <ChangelogEntry
-              version="1.0.0"
-              date="01/10/2025"
-              changes={[
-                "Initial release",
-                "Supports own player phases, with limited support for the Charge phase",
-              ]}
-            />
+            <div className="mt-2">
+              {changelogData.map((entry, index) => (
+                <div key={index} className="mb-4 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700">
+                  <div className="flex flex-row align-middle items-center">
+                    <h3 className="text-lg font-bold dark:text-gray-200">{entry.version}</h3>
+                    <p className="ml-2 text-sm text-gray-500 dark:text-gray-300">
+                      {entry.date}
+                    </p>
+                  </div>
+                  <ul className="list-disc list-inside">
+                    {entry.changes.map((change, idx) => (
+                      <li key={idx} className="text-sm text-gray-700 dark:text-gray-300">
+                        {change}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Dialog>

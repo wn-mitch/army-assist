@@ -1,0 +1,110 @@
+[
+  {
+    "version": "1.4.0",
+    "date": "01/23/2025",
+    "changes": [
+      "I decided I wanted this app to actually look good, so I found a UI design handbook and refactored the entire UI. This release includes beta bugfixes (join the Discord!).",
+      "Split the UI into a Light Mode and a Dark Mode. Dark mode is the default. Please let me know if you have problems with visibility! I am not color blind and do care about accessibility.",
+      "Combined the army/detachment header with the Army Rule Button to save screen space",
+      "Adjusted the changelog button to make it clearer what that is",
+      "Improved the layout of the army rule panel on XS screens (phones in portrait mode)",
+      "Made adjustments to the modal display to unify their design",
+      "Finally fixed the 'Copy Sample' button for iOS. I actually intend to do a blog post about this because it screwed me up for a while.",
+      "Tweaks to the appearance of the changelog"
+    ]
+  },
+  {
+    "version": "1.3.2",
+    "date": "01/21/2025",
+    "changes": [
+      "Added Sort Options to the settings menu. This allows you to select between alphabetical order and the order your list was pasted in from NewRecruit.",
+      "Added support for datasheet keywords. Added a setting to disable them if you don't want to see them.",
+      "Added support for the following CORE abilities: Fights First, Infiltrators, Scout, Deadly Demise, Firing Deck, Lone Op, Stealth, and more.",
+      "Added a toggle button that collapses the cards after they are clicked. Added a setting to disable this feature if you don't want it.",
+      "Fixed some detachment rules displaying for the wrong factions",
+      "Improved table displays that bleed off the edge of the card"
+    ]
+  },
+  {
+    "version": "1.3.1",
+    "date": "01/20/2025",
+    "changes": [
+      "Fixed a bug where variations in the Detachment selection line could cause detachments to not be detected properly.",
+      "Added Leadership saves to the Saves cards to account for battleshock tests forced by enemies"
+    ]
+  },
+  {
+    "version": "1.3.0",
+    "date": "01/17/2025",
+    "changes": [
+      "Stratagems: Now supported in a flyout menu! They are filtered by phase and detachment. Please report any errors in the discord.",
+      "Fixed more spelling errors. Abilities should be ready for feedback on which phases they show up in.",
+      "Further improved the mobile and tablet layouts to better support touch devices."
+    ]
+  },
+  {
+    "version": "1.2.1",
+    "date": "01/16/2025",
+    "changes": [
+      "Fixed more spelling errors",
+      "Fixed a bug where abilities without text would be displayed",
+      "Fixed a bug that caused certain weapons to get excluded"
+    ]
+  },
+  {
+    "version": "1.2.0",
+    "date": "01/15/2025",
+    "changes": [
+      "Added support for the Army and Detachment Rules",
+      "Fixed more spelling errors",
+      "Fixed (what should be) the last of the allied faction bugs"
+    ]
+  },
+  {
+    "version": "1.1.1",
+    "date": "01/13/2025",
+    "changes": [
+      "Fixed spelling errors for the Norn Assimilator",
+      "Made cards not grayed out if the have an available ability in that phase"
+    ]
+  },
+  {
+    "version": "1.1.0",
+    "date": "01/13/2025",
+    "changes": [
+      "Ability Support: Abilities on datasheet cards are now displayed in the relevant phase. This includes abilities that are not tied to a specific phase. This was a pretty massive undertaking and there are almost certainly cards in the wrong phase. Please let me know if you see any issues. The game has over 3500 abilities and I have to programatically assign them to phases.",
+      "Please join the discord to offer feedback and report issues! Link at the bottom of the Changelog.",
+      "Further worked to improve the look of the mobile layout",
+      "Added Toughness to the Saves cards",
+      "Fixed more allied faction bugs"
+    ]
+  },
+  {
+    "version": "1.0.2",
+    "date": "01/12/2025",
+    "changes": [
+      "Fixed a slew of bugs related to missing Keyword Tags",
+      "Added support for allied units in factions. This is something that I have to manually update, so please let me know if you see any issues or missing units. I tried to make tester list with every faction but I am not sure on all of the ally rules.",
+      "The copy to clipboard sample actually works now"
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "01/11/2025",
+    "changes": [
+      "Cards are now pre-toggled if there is not any information available for them during that phase (ie, no guns during the shooting phase)",
+      "Adds a settings modal with the ability to filter out phases you don't need (World Eaters don't need a Shooting Phase)",
+      "Improved the look of the mobile layout",
+      "Fixed a slew of bugs related to missing Keyword Tags",
+      "Added support for Saves"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "date": "01/10/2025",
+    "changes": [
+      "Initial release",
+      "Supports own player phases, with limited support for the Charge phase"
+    ]
+  }
+]

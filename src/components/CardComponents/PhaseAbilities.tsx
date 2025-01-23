@@ -94,16 +94,16 @@ const PhaseAbilities: React.FC<{
   }, [datasheetModel, phase]);
 
   const abilitiesList = (
-    <div className="gap-2">
+    <div className="ml-1">
       {abilities.map((ability, index) => (
         <li
           key={index}
-          className={`border-2 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid my-1 first:mt-0 shadow bg-slate-500 text-gray-200 gap-1`}
+          className={`flex flex-col break-inside-avoid first:mt-0`}
         >
-          <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
+          <div className="text-md dark:font-semibold dark:text-gray-100">
             {ability.name}
           </div>
-          <div className="px-2 py-1 text-left text-sm font-semibold rounded-lg bg-slate-800">
+          <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200">
             {ability.description}
           </div>
         </li>

@@ -69,8 +69,8 @@ export default function StratagemPanel() {
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
-        className="fixed bottom-4 left-4 bg-blue-600 text-white rounded p-2 font-bold hover:bg-blue-700 shadow-xl ring-4 ring-blue-600 ring-offset-2"
+        onTouchEnd={() => setOpen(true)}
+        className="fixed bottom-4 left-4 bg-blue-600 text-white rounded p-2 font-bold hover:bg-blue-700 shadow-xl z-10"
       >
         Open Stratagem Panel
       </button>
@@ -93,17 +93,17 @@ export default function StratagemPanel() {
                 transition
                 className="pointer-events-auto w-screen max-w-2xl transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700"
               >
-                <div className="flex h-full flex-col overflow-y-scroll  bg-gray-800 py-6 shadow-xl">
+                <div className="flex h-full flex-col overflow-y-scroll  bg-gray-200 dark:bg-gray-900 py-6 shadow-xl">
                   <div className="px-4 sm:px-6">
                     <div className="flex items-start justify-between">
-                      <DialogTitle className="text-xl font-bold text-white inline-flex">
+                      <DialogTitle className="text-md font-normal text-gray-800 inline-flex dark:text-gray-200">
                         {phase} Phase Stratagems
                       </DialogTitle>
                       <div className="ml-3 flex h-7 items-center">
                         <button
                           type="button"
-                          onClick={() => setOpen(false)}
-                          className="relative rounded-md text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                          onTouchEnd={() => setOpen(false)}
+                          className="relative rounded-md text-gray-800 dark:text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                         >
                           <span className="absolute -inset-2.5" />
                           <span className="sr-only">Close panel</span>
@@ -116,20 +116,21 @@ export default function StratagemPanel() {
                     {filteredStratagems.map((stratagem) => (
                       <li
                         key={stratagem.id}
-                        className={`border-2 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid first:mt-0 shadow bg-slate-500 text-gray-200 gap-1 my-2`}
+                        className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600`}
                       >
-                        <div className="flex flex-row gap-1">
-                          <div className="flex-grow px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
+                        <div className="flex flex-row justify-center items-center">
+                          <div className="flex-shrink text-xl font-semibold text-black dark:text-gray-50">
                             {stratagem.name}
                           </div>
-                          <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
+                          <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-400 dark:font-normal">
                             {stratagem.type}
                           </div>
-                          <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
+                          <div className="m-2 px-0.5 shadow-md rounded-lg bg-gray-700 my-1 text-gray-100 dark:bg-gray-200 dark:text-gray-800 dark:font-semibold">
                             {stratagem.cp_cost} CP
                           </div>
                         </div>
-                        <div className="px-2 py-1 text-left text-sm font-semibold rounded-lg bg-slate-800">
+
+                        <div className="font-normal dark:font-semibold text-sm text-gray-800 dark:text-gray-200">
                           {formatDescription(stratagem.description)}
                         </div>
                       </li>

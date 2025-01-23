@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import useStore from "@/store/store";
 import Phase from "@/types/Phase";
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+  Radio,
+  RadioGroup,
+} from "@headlessui/react";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/outline";
 
 function PhaseFilter() {
   const phase = useStore((state) => state.phase);
-  const setPhase = useStore((state) => state.setPhase);
   const activePhases = useStore((state) => state.activePhases);
+  const setPhase = useStore((state) => state.setPhase);
   const [isDropdown, setIsDropdown] = useState(window.innerWidth <= 768);
 
   const handleResize = () => {
@@ -19,51 +28,76 @@ function PhaseFilter() {
     };
   }, []);
 
-  const isActivePhase = (currentPhase: Phase) => currentPhase === phase;
-
-  const renderButton = (currentPhase: Phase, position: "left" | "middle" | "right") => {
-    const baseClasses = "relative inline-flex items-center px-3 py-2 text-2xl font-bold ring-1 ring-inset ring-gray-300 focus:z-10 w-full text-center justify-center cursor-pointer select-none";
-    const positionClasses = {
-      left: "rounded-l-md",
-      middle: "-ml-px",
-      right: "rounded-r-md -ml-px",
-    };
-    const activeClasses = isActivePhase(currentPhase) ? "bg-slate-900 text-white" : "bg-slate-700 text-gray-300 hover:bg-gray-50";
-
-    return (
-      <button
-        key={currentPhase}
-        type="button"
-        className={`${baseClasses} ${positionClasses[position]} ${activeClasses}`}
-        onClick={() => setPhase(currentPhase)}
-      >
-        {currentPhase}
-      </button>
-    );
-  };
-
-  const renderDropdown = () => (
-    <select
-      value={phase}
-      onChange={(e) => setPhase(e.target.value as Phase)}
-      className="w-full p-2 text-2xl font-bold bg-white border-4 border-slate-900 rounded-md"
-    >
-      {Object.keys(Phase).map((phase) => (
-        activePhases[phase as Phase] && <option key={phase} value={phase}>{phase}</option>
-      ))}
-    </select>
-  );
+  function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(" ");
+  }
 
   return (
     <div className="w-full">
       {isDropdown ? (
-        renderDropdown()
+        <div className="px-3 mt-2 mb-1">
+          <Listbox value={phase} onChange={setPhase}>
+            <ListboxButton className="cursor-pointer grid w-full grid-cols-1 rounded-md bg-white py-1.5 pl-3 pr-2 text-left text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 sm:text-sm shadow-sm dark:bg-gray-800 dark:text-gray-300 dark:outline-gray-600 dark:focus:outline-gray-600 dark:shadow-md">
+              <span className="col-start-1 row-start-1 truncate pr-6">
+                {phase}
+              </span>
+              <ChevronUpDownIcon
+                aria-hidden="true"
+                className="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4 dark:text-gray-300"
+              />
+            </ListboxButton>
+
+            <ListboxOptions
+              transition
+              className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-xl shadow-lg ring-1 ring-black/5 focus:outline-none data-[closed]:data-[leave]:opacity-0 data-[leave]:transition data-[leave]:duration-100 data-[leave]:ease-in sm:text-sm left-0 right-0 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-600"
+            >
+              {Object.values(Phase).map(
+                (currentPhase) =>
+                  activePhases[currentPhase] && (
+                    <ListboxOption
+                      key={currentPhase}
+                      value={currentPhase}
+                      className="group relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 data-[focus]:bg-gray-600 data-[focus]:text-white data-[focus]:outline-none dark:text-gray-100"
+                    >
+                      <span className="block truncate font-normal group-data-[selected]:font-semibold">
+                        {currentPhase}
+                      </span>
+
+                      <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-gray-600 group-[&:not([data-selected])]:hidden group-data-[focus]:text-white">
+                        <CheckIcon aria-hidden="true" className="size-5" />
+                      </span>
+                    </ListboxOption>
+                  )
+              )}
+            </ListboxOptions>
+          </Listbox>
+        </div>
       ) : (
-        <span className="isolate inline-flex rounded-md shadow-sm w-full ring-2 ring-slate-600">
-          {Object.keys(Phase).map((phase, index, array) => (
-            activePhases[phase as Phase] && renderButton(phase as Phase, index === 0 ? "left" : index === array.length - 1 ? "right" : "middle")
-          ))}
-        </span>
+        <RadioGroup
+          value={phase}
+          onChange={setPhase}
+          className="mx-4 mt-2 flex flex-row gap-2"
+        >
+          {Object.values(Phase).map(
+            (currentPhase) =>
+              activePhases[currentPhase] && (
+                <Radio
+                  key={currentPhase}
+                  value={currentPhase}
+                  className={({ checked }) =>
+                    classNames(
+                      "flex flex-grow items-center justify-center rounded-md px-3 py-3 text-sm font-semibold uppercase dark:ring-gray-200 shadow-sm dark:font-bold cursor-pointer focus:outline-none outline outline-2 -outline-offset-1 focus:outline-gray-800 dark:outline-gray-600",
+                      checked
+                        ? "bg-gray-600  hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 text-white dark:hover:text-gray-100"
+                        : "bg-white hover:bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+                    )
+                  }
+                >
+                  {currentPhase}
+                </Radio>
+              )
+          )}
+        </RadioGroup>
       )}
     </div>
   );
