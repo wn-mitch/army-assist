@@ -61,7 +61,7 @@ const useStore = create<StoreState>((set) => ({
   listSort: SortOptions.Name,
   cardsCollapse: true,
   showKeywords: true,
-  isDarkMode: false,
+  isDarkMode: true,
   reset: () =>
     set({
       text: "",

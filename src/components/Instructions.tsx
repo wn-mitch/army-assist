@@ -77,7 +77,7 @@ function Instructions() {
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
 
-          <div className="my-5 bg-white dark:bg-gray-900 rounded-lg w-3/4 mx-auto p-6 relative z-20">
+          <div className="my-5 bg-white dark:bg-gray-800 rounded-lg w-3/4 mx-auto p-6 relative z-20">
             <button
               id="close-changelog"
               onClick={handleClose}

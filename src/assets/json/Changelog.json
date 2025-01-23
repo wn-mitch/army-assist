@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.4.0",
+    "date": "01/23/2025",
+    "changes": [
+      "I decided I wanted this app to actually look good, so I found a UI design handbook and refactored the entire UI",
+      "Split the UI into a Light Mode and a Dark Mode. Dark mode is the default. Please let me know if you have problems with visibility! I am not color blind and do care about accessibility.",
+      "Combined the army/detachment header with the Army Rule Button to save screen space",
+      "Adjusted the changelog button to make it clearer what that is"
+    ]
+  },
+  {
     "version": "1.3.2",
     "date": "01/21/2025",
     "changes": [

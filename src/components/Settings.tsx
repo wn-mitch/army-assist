@@ -87,12 +87,12 @@ function Settings() {
             className="fixed inset-0 bg-black opacity-50"
             aria-hidden="true"
           />
-          <DialogPanel className="bg-white dark:bg-gray-900 rounded w-full md:w-2/3 max-w-lg p-4 z-20">
+          <DialogPanel className="bg-white dark:bg-gray-800 rounded w-full md:w-2/3 max-w-lg p-4 z-20">
             <DialogTitle className="text-xl font-bold text-center dark:text-gray-200">
               Settings
             </DialogTitle>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-800">
+            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700">
               <h2 className="text-lg font-semibold dark:text-gray-200">
                 Active Phases
               </h2>
@@ -103,17 +103,17 @@ function Settings() {
                     label={phase}
                     checked={activePhases[phase as Phase]}
                     onChange={() => togglePhase(phase as Phase)}
-                    className={`outline outline-2 -outline-offset-1 focus:outline-gray-800 dark:outline-gray-gray-600 m-1 rounded-lg first:mt-0 p-1 font-semibold text-gray-200 ${
+                    className={`outline outline-2 -outline-offset-1 focus:outline-gray-700 dark:outline-gray-gray-600 m-1 rounded-lg first:mt-0 p-1 font-semibold text-gray-200 ${
                       activePhases[phase as Phase]
                         ? "bg-gray-600  hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-700 dark:text-gray-200 text-white dark:hover:text-gray-100"
-                        : "bg-white hover:bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+                        : "bg-white hover:bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200"
                     }`}
                   />
                 ))}
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
               <h2 className="text-lg font-semibold dark:text-gray-200">
                 List Sort
               </h2>
@@ -129,7 +129,7 @@ function Settings() {
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
               <h2 className="text-lg font-semibold dark:text-gray-200">
                 Cards Collapse
               </h2>
@@ -140,7 +140,7 @@ function Settings() {
               />
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
               <h2 className="text-lg font-semibold dark:text-gray-200">
                 Show Datacard Keywords
               </h2>
@@ -151,7 +151,7 @@ function Settings() {
               />
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
               <h2 className="text-lg font-semibold">Enable Dark Mode</h2>
               <SettingsOption
                 label="This website has a fully functional dark mode. Enable it here."
