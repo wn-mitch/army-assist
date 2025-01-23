@@ -28,209 +28,264 @@ import {
   GiTank,
   GiLinkedRings,
   GiCatch,
+  GiAlienBug,
+  GiMissileMech,
+  GiHelmet,
+  GiGiant,
+  GiGunshot,
+  GiHood,
+  GiWhaleTail,
+  GiPlasmaBolt,
+  GiBodySwapping,
 } from "react-icons/gi";
 
 const tagDetails: { [key: string]: TagDetail } = {
   Precision: {
     icon: <GiCrosshair className="h-5 w-5" />,
-    bgColor: "bg-zinc-700",
-    ringColor: "ring-zinc-800",
+    bgColor: "bg-zinc-200",
+    ringColor: "ring-zinc-900",
+    textColor: "text-zinc-800"
   },
   "Lethal Hits": {
     icon: <GiPoisonBottle className="h-5 w-5" />,
-    bgColor: "bg-lime-700",
-    ringColor: "ring-lime-800",
+    bgColor: "bg-lime-200",
+    ringColor: "ring-lime-900",
+    textColor: "text-lime-800"
   },
   "Devastating Wounds": {
     icon: <GiBloodyStash className="h-5 w-5" />,
-    bgColor: "bg-red-700",
-    ringColor: "ring-red-800",
+    bgColor: "bg-red-200",
+    ringColor: "ring-red-900",
+    textColor: "text-red-800"
   },
   Assault: {
     icon: <GiRun className="h-5 w-5" />,
-    bgColor: "bg-amber-700",
-    ringColor: "ring-amber-800",
+    bgColor: "bg-amber-200",
+    ringColor: "ring-amber-900",
+    textColor: "text-amber-800"
   },
   Pistol: {
     icon: <GiPistolGun className="h-5 w-5" />,
-    bgColor: "bg-yellow-700",
-    ringColor: "ring-yellow-800",
+    bgColor: "bg-yellow-200",
+    ringColor: "ring-yellow-900",
+    textColor:"text-yellow-800"
   },
   "One-shot": {
     icon: <GiAmmoBox className="h-5 w-5" />,
-    bgColor: "bg-green-700",
-    ringColor: "ring-green-800",
+    bgColor: "bg-green-200",
+    ringColor: "ring-green-900",
+    textColor: "text-green-800"
   },
   Melta: {
     icon: <GiFlamer className="h-5 w-5" />,
-    bgColor: "bg-orange-700",
-    ringColor: "ring-orange-800",
+    bgColor: "bg-orange-200",
+    ringColor: "ring-orange-900",
+    textColor: "text-orange-800"
   },
   "Melta d": {
     icon: <GiFlamer className="h-5 w-5" />,
-    bgColor: "bg-orange-700",
-    ringColor: "ring-orange-800",
+    bgColor: "bg-orange-200",
+    ringColor: "ring-orange-900",
+    textColor: "text-orange-800"
   },
   "Rapid Fire": {
     icon: <GiMinigun className="h-5 w-5" />,
-    bgColor: "bg-purple-700",
-    ringColor: "ring-purple-800",
+    bgColor: "bg-purple-200",
+    ringColor: "ring-purple-900",
+    textColor: "text-purple-800"
   },
   "Rapid Fire d": {
     icon: <GiMinigun className="h-5 w-5" />,
-    bgColor: "bg-purple-700",
-    ringColor: "ring-purple-800",
+    bgColor: "bg-purple-200",
+    ringColor: "ring-purple-900",
+    textColor: "text-purple-800"
   },
   "Ignores Cover": {
     icon: <GiOverhead className="h-5 w-5" />,
-    bgColor: "bg-emerald-700",
-    ringColor: "ring-emerald-800",
+    bgColor: "bg-emerald-200",
+    ringColor: "ring-emerald-900",
+    textColor: "text-emerald-800"
   },
   "Indirect Fire": {
     icon: <GiOverhead className="h-5 w-5" />,
-    bgColor: "bg-emerald-700",
-    ringColor: "ring-emerald-800",
+    bgColor: "bg-emerald-200",
+    ringColor: "ring-emerald-900",
+    textColor: "text-emerald-800"
   },
   Heavy: {
     icon: <GiWeight className="h-5 w-5" />,
-    bgColor: "bg-red-800",
+    bgColor: "bg-red-200",
     ringColor: "ring-red-900",
+    textColor: "text-red-800"
   },
   Blast: {
     icon: <GiBrightExplosion className="h-5 w-5" />,
-    bgColor: "bg-cyan-700",
-    ringColor: "ring-cyan-800",
+    bgColor: "bg-orange-200",
+    ringColor: "ring-orange-900",
+    textColor: "text-orange-800"
   },
   "Twin-linked": {
     icon: <GiDoubled className="h-5 w-5" />,
-    bgColor: "bg-sky-700",
-    ringColor: "ring-sky-800",
+    bgColor: "bg-sky-200",
+    ringColor: "ring-sky-900",
+    textColor: "text-sky-800"
   },
   Torrent: {
     icon: <GiFlameSpin className="h-5 w-5" />,
-    bgColor: "bg-fuchsia-700",
-    ringColor: "ring-fuchsia-800",
+    bgColor: "bg-orange-200",
+    ringColor: "ring-orange-900",
+    textColor: "text-orange-800"
   },
   Hazardous: {
     icon: <GiRadioactive className="h-5 w-5" />,
-    bgColor: "bg-pink-700",
-    ringColor: "ring-pink-800",
+    bgColor: "bg-pink-200",
+    ringColor: "ring-pink-900",
+    textColor: "text-pink-800"
   },
   "Anti-infantry": {
     icon: <GiMeeple className="h-5 w-5" />,
-    bgColor: "bg-rose-700",
-    ringColor: "ring-rose-800",
+    bgColor: "bg-rose-200",
+    ringColor: "ring-rose-900",
+    textColor: "text-rose-800"
   },
   "Anti-tyranid": {
-    icon: <GiMeeple className="h-5 w-5" />,
-    bgColor: "bg-indigo-700",
-    ringColor: "ring-indigo-800",
+    icon: <GiAlienBug className="h-5 w-5" />,
+    bgColor: "bg-purple-200",
+    ringColor: "ring-purple-900",
+    textColor: "text-purple-800"
   },
   "Anti-walker": {
-    icon: <GiMeeple className="h-5 w-5" />,
-    bgColor: "bg-indigo-700",
-    ringColor: "ring-indigo-800",
+    icon: <GiMissileMech className="h-5 w-5" />,
+    bgColor: "bg-indigo-200",
+    ringColor: "ring-indigo-900",
+    textColor: "text-indigo-800"
   },
   "Anti-fly": {
     icon: <GiAntiAircraftGun className="h-5 w-5" />,
-    bgColor: "bg-indigo-700",
-    ringColor: "ring-indigo-800",
+    bgColor: "bg-indigo-200",
+    ringColor: "ring-indigo-900",
+    textColor: "text-indigo-800"
   },
   "Anti-character": {
     icon: <GiHoodedAssassin className="h-5 w-5" />,
-    bgColor: "bg-rose-700",
-    ringColor: "ring-rose-800",
+    bgColor: "bg-rose-200",
+    ringColor: "ring-rose-900",
+    textColor: "text-rose-800"
   },
   "Anti-monster": {
     icon: <GiFishMonster className="h-5 w-5" />,
-    bgColor: "bg-rose-700",
-    ringColor: "ring-rose-800",
+    bgColor: "bg-rose-200",
+    ringColor: "ring-rose-900",
+    textColor: "text-rose-800"
   },
   "Anti-vehicle": {
     icon: <GiTank className="h-5 w-5" />,
-    bgColor: "bg-indigo-700",
-    ringColor: "ring-indigo-800",
+    bgColor: "bg-indigo-200",
+    ringColor: "ring-indigo-900",
+    textColor: "text-indigo-800"
   },
   "Anti-titanic": {
-    icon: <GiPentacle className="h-5 w-5" />,
-    bgColor: "bg-red-700",
-    ringColor: "ring-red-800",
+    icon: <GiGiant className="h-5 w-5" />,
+    bgColor: "bg-red-200",
+    ringColor: "ring-red-900",
+    textColor: "text-red-800"
   },
   "Anti-daemon": {
     icon: <GiPentacle className="h-5 w-5" />,
-    bgColor: "bg-red-700",
-    ringColor: "ring-red-800",
+    bgColor: "bg-red-200",
+    ringColor: "ring-red-900",
+    textColor: "text-red-800"
   },
   "Anti-chaos": {
     icon: <GiPentacle className="h-5 w-5" />,
-    bgColor: "bg-indigo-700",
-    ringColor: "ring-indigo-800",
+    bgColor: "bg-red-200",
+    ringColor: "ring-red-900",
+    textColor: "text-red-800"
   },
   "Anti-psyker": {
     icon: <GiBrainTentacle className="h-5 w-5" />,
-    bgColor: "bg-indigo-700",
-    ringColor: "ring-indigo-800",
+    bgColor: "bg-indigo-200",
+    ringColor: "ring-indigo-900",
+    textColor: "text-indigo-800"
+  },
+  "Anti-Epic hero": {
+    icon: <GiHelmet className="h-5 w-5" />,
+    bgColor: "bg-indigo-200",
+    ringColor: "ring-indigo-900",
+    textColor: "text-indigo-800"
   },
   Lance: {
     icon: <GiSpearHook className="h-5 w-5" />,
-    bgColor: "bg-pink-800",
+    bgColor: "bg-pink-200",
     ringColor: "ring-pink-900",
+    textColor: "text-pink-800"
   },
   "Extra Attacks": {
     icon: <GiSwordArray className="h-5 w-5" />,
-    bgColor: "bg-indigo-700",
-    ringColor: "ring-indigo-800",
+    bgColor: "bg-indigo-200",
+    ringColor: "ring-indigo-900",
+    textColor: "text-indigo-800"
   },
   "Sustained Hits d": {
-    icon: <GiSwordArray className="h-5 w-5" />,
-    bgColor: "bg-rose-800",
+    icon: <GiGunshot className="h-5 w-5" />,
+    bgColor: "bg-rose-200",
     ringColor: "ring-rose-900",
+    textColor: "text-rose-800"
   },
   "Sustained Hits": {
-    icon: <GiSwordArray className="h-5 w-5" />,
-    bgColor: "bg-rose-800",
+    icon: <GiGunshot className="h-5 w-5" />,
+    bgColor: "bg-rose-200",
     ringColor: "ring-rose-900",
+    textColor: "text-rose-800"
   },
   Psychic: {
     icon: <GiBrainstorm className="h-5 w-5" />,
-    bgColor: "bg-purple-800",
+    bgColor: "bg-purple-200",
     ringColor: "ring-purple-900",
+    textColor: "text-purple-800"
   },
   "snagged": {
     icon: <GiCatch className="h-5 w-5" />,
-    bgColor: "bg-green-800",
+    bgColor: "bg-green-200",
     ringColor: "ring-green-900",
+    textColor: "text-green-800"
   },
   "linked fire": {
     icon: <GiLinkedRings className="h-5 w-5" />,
-    bgColor: "bg-lime-800",
+    bgColor: "bg-lime-200",
     ringColor: "ring-lime-900",
+    textColor: "text-lime-800"
   },
   "dead choppy": {
     icon: <GiBirdClaw className="h-5 w-5" />,
-    bgColor: "bg-cyan-800",
+    bgColor: "bg-cyan-200",
     ringColor: "ring-cyan-900",
+    textColor: "text-cyan-800"
   },
   "conversion": {
-    icon: <GiBrainstorm className="h-5 w-5" />,
-    bgColor: "bg-purple-800",
+    icon: <GiBodySwapping className="h-5 w-5" />,
+    bgColor: "bg-purple-200",
     ringColor: "ring-purple-900",
+    textColor: "text-purple-800"
   },
   "plasma warhead": {
-    icon: <GiBrainstorm className="h-5 w-5" />,
-    bgColor: "bg-purple-800",
+    icon: <GiPlasmaBolt className="h-5 w-5" />,
+    bgColor: "bg-purple-200",
     ringColor: "ring-purple-900",
+    textColor: "text-purple-800"
   },
-  "psychic assassin" : {
-    icon: <GiBrainTentacle className="h-5 w-5" />,
-    bgColor: "bg-indigo-800",
+  "psychic assassin": {
+    icon: <GiHood className="h-5 w-5" />,
+    bgColor: "bg-indigo-200",
     ringColor: "ring-indigo-900",
+    textColor: "text-indigo-800"
   },
-  "harpooned" : {
-    icon: <GiBrainTentacle className="h-5 w-5" />,
-    bgColor: "bg-indigo-800",
+  "harpooned": {
+    icon: <GiWhaleTail className="h-5 w-5" />,
+    bgColor: "bg-indigo-200",
     ringColor: "ring-indigo-900",
-  }
+    textColor: "text-indigo-800"
+  },
 };
 
 function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
@@ -238,8 +293,8 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
     return null;
   } else {
     return (
-      <td className="gap-1 items-center align-middle overflow-clip">
-        <div className="flex flex-wrap gap-1 overflow-hidden">
+      <td className="w-1/4 overflow-clip">
+        <div className="gap-0.5 flex flex-wrap overflow-hidden">
           {keywords
             .filter((keyword) => keyword !== "")
             .map((keyword) => {
@@ -268,11 +323,11 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
               return (
                 <div
                   key={keyword}
-                  className={`inline-flex font-semibold items-center gap-1 px-1 py-0.5 first:mt-0.5 last:mb-0.5 mx-0.5 rounded text-white ${tagDetail.bgColor} ring-2 ${tagDetail.ringColor} ring-inset truncate`}
+                  className={`inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 ${tagDetail.ringColor} ring-inset truncate`}
                 >
                   {tagDetail.icon}
                   <span className="font-bold whitespace-nowrap">
-                    {dice ? `${baseTag}${count}` : `${baseTag} ${count}` } 
+                    {dice ? `${baseTag}${count}` : `${baseTag} ${count}`}
                   </span>
                 </div>
               );

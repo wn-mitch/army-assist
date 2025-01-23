@@ -69,7 +69,7 @@ function Instructions() {
     <>
       <button
         onClick={handleShow}
-        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1"
+        className="bg-gray-500 text-white rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
       </button>
@@ -173,7 +173,7 @@ function Instructions() {
               <button
                 onClick={() => openLink("https://discord.gg/hVVtGuybhw")}
                 onTouchEnd={() => openLink("https://discord.gg/hVVtGuybhw")}
-                className={`${buttonClasses} bg-indigo-600 hover:bg-indigo-500`}
+                className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
               >
                 <FaDiscord aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Join the Discord

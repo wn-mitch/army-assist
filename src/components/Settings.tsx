@@ -19,6 +19,9 @@ function Settings() {
   const showKeywords = useStore((state) => state.showKeywords);
   const setShowKeywords = useStore((state) => state.setShowKeywords);
 
+  const isDarkMode = useStore((state) => state.isDarkMode);
+  const setIsDarkMode = useStore((state) => state.setIsDarkMode);
+
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
@@ -37,7 +40,7 @@ function Settings() {
             checked={checked}
             onChange={onChange}
             type="checkbox"
-            className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+            className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-gray-600 checked:bg-gray-600 indeterminate:border-gray-600 indeterminate:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
           />
           <svg
             fill="none"
@@ -68,7 +71,7 @@ function Settings() {
     <>
       <button
         onClick={handleShow}
-        className="bg-slate-500 text-white rounded p-2 font-bold hover:bg-slate-700 mx-1"
+        className="bg-gray-500 text-white rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <CogIcon className="h-6 w-6" />
       </button>
@@ -125,7 +128,7 @@ function Settings() {
                 />
               </div>
             </div>
-            
+
             <div className="mt-2">
               <h2 className="text-lg font-semibold">Show Datacard Keywords</h2>
               <div className="mt-4 divide-y divide-gray-200 border-b border-t border-gray-200">
@@ -133,6 +136,17 @@ function Settings() {
                   label="Show Datacard Keywords"
                   checked={showKeywords}
                   onChange={() => setShowKeywords(!showKeywords)}
+                />
+              </div>
+            </div>
+
+            <div className="mt-2">
+              <h2 className="text-lg font-semibold">Enable Dark Mode</h2>
+              <div className="mt-4 divide-y divide-gray-200 border-b border-t border-gray-200">
+                <SettingsOption
+                  label="Enable Dark Mode"
+                  checked={isDarkMode}
+                  onChange={() => setIsDarkMode(!isDarkMode)}
                 />
               </div>
             </div>

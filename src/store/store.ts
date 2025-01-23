@@ -27,6 +27,7 @@ interface StoreState {
   listSort: SortOptions;
   cardsCollapse: boolean;
   showKeywords: boolean;
+  isDarkMode: boolean;
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
@@ -37,6 +38,7 @@ interface StoreState {
   setListSort: (listSort: SortOptions) => void;
   setCardsCollapse: (cardsCollapse: boolean) => void;
   setShowKeywords: (showKeywords: boolean) => void;
+  setIsDarkMode: (isDarkMode: boolean) => void;
 }
 
 const useStore = create<StoreState>((set) => ({
@@ -59,6 +61,7 @@ const useStore = create<StoreState>((set) => ({
   listSort: SortOptions.Name,
   cardsCollapse: true,
   showKeywords: true,
+  isDarkMode: false,
   reset: () =>
     set({
       text: "",
@@ -80,8 +83,9 @@ const useStore = create<StoreState>((set) => ({
       return false;
     }
 
-    const factionAbbreviation = factions
-      .filter((f) => f.name === factionMatch[1])[0].id
+    const factionAbbreviation = factions.filter(
+      (f) => f.name === factionMatch[1]
+    )[0].id;
 
     if (!factionAbbreviation) {
       console.error("Faction abbreviation not found in the list");
@@ -98,8 +102,8 @@ const useStore = create<StoreState>((set) => ({
 
       if (detachmentMatch) {
         set({ detachment: detachmentMatch[1] });
-      } 
-      
+      }
+
       const parentMatch = line.match(
         /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]']+)\s\[\d+pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
       );
@@ -177,6 +181,7 @@ const useStore = create<StoreState>((set) => ({
   setListSort: (listSort: SortOptions) => set({ listSort }),
   setCardsCollapse: (cardsCollapse: boolean) => set({ cardsCollapse }),
   setShowKeywords: (showKeywords: boolean) => set({ showKeywords }),
+  setIsDarkMode: (isDarkMode: boolean) => set({ isDarkMode }),
 }));
 
 export default useStore;

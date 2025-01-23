@@ -8,13 +8,13 @@ function Body() {
 
   if (!hasUnits) {
     return (
-      <div className="flex flex-1 p-2 bg-slate-950">
+      <div className="flex flex-1">
         <Pastebox />
       </div>
     );
   } else {
     return (
-      <div className="flex flex-1 p-2 bg-slate-950">
+      <div className="flex flex-1">
         <ListDisplay />
       </div>
     );

@@ -24,12 +24,12 @@ function ListDisplay() {
   const sortedUnits = units.toSorted(sortByListSort);
 
   return (
-    <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-1 w-full">
       <FilterPanel />
       <ArmyRuleDisplay />
       <ul
         role="list"
-        className="columns-1 xl:columns-3 lg:columns-2 md:columns-1 gap-2 auto-rows-min"
+        className="columns-1 lg:columns-2 gap-1 auto-rows-min"
       >
         {sortedUnits.map((unit) => (
           <ListUnitCard key={unit.id} unit={unit} />

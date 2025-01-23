@@ -70,7 +70,7 @@ export default function StratagemPanel() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-4 left-4 bg-blue-600 text-white rounded p-2 font-bold hover:bg-blue-700 shadow-xl ring-4 ring-blue-600 ring-offset-2"
+        className="fixed bottom-4 left-4 bg-blue-600 text-white rounded p-2 font-bold hover:bg-blue-700 shadow-xl z-10"
       >
         Open Stratagem Panel
       </button>
@@ -103,7 +103,7 @@ export default function StratagemPanel() {
                         <button
                           type="button"
                           onClick={() => setOpen(false)}
-                          className="relative rounded-md text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                          className="relative rounded-md text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                         >
                           <span className="absolute -inset-2.5" />
                           <span className="sr-only">Close panel</span>
@@ -116,20 +116,20 @@ export default function StratagemPanel() {
                     {filteredStratagems.map((stratagem) => (
                       <li
                         key={stratagem.id}
-                        className={`border-2 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid first:mt-0 shadow bg-slate-500 text-gray-200 gap-1 my-2`}
+                        className={`border-2 border-gray-900 rounded-lg py-1 px-1 flex flex-col break-inside-avoid first:mt-0 shadow bg-gray-500 text-gray-200 gap-1 my-2`}
                       >
                         <div className="flex flex-row gap-1">
-                          <div className="flex-grow px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
+                          <div className="flex-grow px-2 py-1 text-left text-md font-bold rounded-lg bg-gray-700">
                             {stratagem.name}
                           </div>
-                          <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
+                          <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-gray-700">
                             {stratagem.type}
                           </div>
-                          <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-slate-700">
+                          <div className="px-2 py-1 text-left text-md font-bold rounded-lg bg-gray-700">
                             {stratagem.cp_cost} CP
                           </div>
                         </div>
-                        <div className="px-2 py-1 text-left text-sm font-semibold rounded-lg bg-slate-800">
+                        <div className="px-2 py-1 text-left text-sm font-semibold rounded-lg bg-gray-800">
                           {formatDescription(stratagem.description)}
                         </div>
                       </li>
