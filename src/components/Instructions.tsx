@@ -40,7 +40,7 @@ function Instructions() {
     };
   }, [isOpen]);
 
-    useEffect(() => {
+  useEffect(() => {
     const fetchText = async () => {
       try {
         const response = await fetch(nrWorldEaters);
@@ -82,7 +82,7 @@ function Instructions() {
   return (
     <>
       <button
-        onTouchEnd={handleShow}
+        onClick={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
@@ -96,7 +96,7 @@ function Instructions() {
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
 
-          <div className="my-5 bg-white dark:bg-gray-800 rounded-lg lg:w-3/4 max-w-lg mx-auto p-4 relative z-20">
+          <div className="my-5 bg-white dark:bg-gray-800 rounded-lg lg:w-3/4 max-w-2xl mx-auto p-4 relative z-20">
             <button
               id="close-changelog"
               onTouchEnd={handleClose}
@@ -117,6 +117,7 @@ function Instructions() {
                 your clipboard
                 <button
                   onTouchEnd={copySampleToClipboard}
+                  onClick={copySampleToClipboard}
                   className={`${buttonClasses} bg-gray-600 hover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400 dark:hover:text-gray-800 shadow-md cursor-pointer`}
                 >
                   <ClipboardIcon
@@ -148,36 +149,44 @@ function Instructions() {
               awesome together!
             </p>
 
-            <div className="mt-4 flex lg:flex-row w-full flex-col sm:flex-col">
+            <div className="mt-4 flex w-full flex-col">
+              <div className="flex flex-col lg:flex-row">
+                <button
+                  onTouchEnd={() =>
+                    openLink("https://www.linkedin.com/in/will--mitch/")
+                  }
+                  onClick={() =>
+                    openLink("https://www.linkedin.com/in/will--mitch/")
+                  }
+                  className={`${buttonClasses} bg-sky-700 hover:bg-sky-800`}
+                >
+                  <FaLinkedin aria-hidden="true" className="-ml-0.5 h-5 w-5" />
+                  Contact me on LinkedIn
+                </button>
+                <button
+                  onTouchEnd={() => openLink("https://patreon.com/ArmyAssist")}
+                  onClick={() => openLink("https://patreon.com/ArmyAssist")}
+                  className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
+                >
+                  <FaPatreon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
+                  Support me on Patreon
+                </button>
+                <button
+                  onTouchEnd={() => openLink("https://discord.gg/hVVtGuybhw")}
+                  onClick={() => openLink("https://discord.gg/hVVtGuybhw")}
+                  className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
+                >
+                  <FaDiscord aria-hidden="true" className="-ml-0.5 h-5 w-5" />
+                  Join the Discord
+                </button>
+              </div>
               <button
                 onTouchEnd={handleClose}
+                onClick={handleClose}
                 className={`${buttonClasses} bg-red-700 hover:bg-red-600`}
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Tap Here to Close
-              </button>
-              <button
-                onTouchEnd={() =>
-                  openLink("https://www.linkedin.com/in/will--mitch/")
-                }
-                className={`${buttonClasses} bg-sky-700 hover:bg-sky-800`}
-              >
-                <FaLinkedin aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Contact me on LinkedIn
-              </button>
-              <button
-                onTouchEnd={() => openLink("https://patreon.com/ArmyAssist")}
-                className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
-              >
-                <FaPatreon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Support me on Patreon
-              </button>
-              <button
-                onTouchEnd={() => openLink("https://discord.gg/hVVtGuybhw")}
-                className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
-              >
-                <FaDiscord aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Join the Discord
               </button>
             </div>
 

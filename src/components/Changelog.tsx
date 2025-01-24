@@ -66,10 +66,10 @@ function Changelog() {
 
             <div className="mt-2">
               {changelogData.map((entry, index) => (
-                <div key={index} className="mb-4">
+                <div key={index} className="mb-4 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700">
                   <div className="flex flex-row align-middle items-center">
                     <h3 className="text-lg font-bold dark:text-gray-200">{entry.version}</h3>
-                    <p className="ml-2 text-sm text-gray-500 dark:text-gray-400">
+                    <p className="ml-2 text-sm text-gray-500 dark:text-gray-300">
                       {entry.date}
                     </p>
                   </div>

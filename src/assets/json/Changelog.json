@@ -1,27 +1,16 @@
 [
   {
-    "version": "1.4.2",
-    "date": "01/24/25",
-    "changes": [
-      "Made adjustments to the modal display to unify their design",
-      "Finally fixed the 'Copy Sample' button for iOS. I actually intend to do a blog post about this because it screwed me up for a while."
-    ]
-  },
-  {
-    "version": "1.4.1",
-    "date": "01/23/2025",
-    "changes": [
-      "Improved the layout of the army rule panel on XS screens (phones in portrait mode)"
-    ]
-  },
-  {
     "version": "1.4.0",
     "date": "01/23/2025",
     "changes": [
-      "I decided I wanted this app to actually look good, so I found a UI design handbook and refactored the entire UI",
+      "I decided I wanted this app to actually look good, so I found a UI design handbook and refactored the entire UI. This release includes beta bugfixes (join the Discord!).",
       "Split the UI into a Light Mode and a Dark Mode. Dark mode is the default. Please let me know if you have problems with visibility! I am not color blind and do care about accessibility.",
       "Combined the army/detachment header with the Army Rule Button to save screen space",
-      "Adjusted the changelog button to make it clearer what that is"
+      "Adjusted the changelog button to make it clearer what that is",
+      "Improved the layout of the army rule panel on XS screens (phones in portrait mode)",
+      "Made adjustments to the modal display to unify their design",
+      "Finally fixed the 'Copy Sample' button for iOS. I actually intend to do a blog post about this because it screwed me up for a while.",
+      "Tweaks to the appearance of the changelog"
     ]
   },
   {
