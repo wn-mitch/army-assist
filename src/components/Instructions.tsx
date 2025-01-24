@@ -45,7 +45,9 @@ function Instructions() {
   const copySampleToClipboard = async () => {
     try {
       const response = await fetch(nrWorldEaters);
+      alert("response!");
       const text = await response.text();
+      alert("text!");
       await navigator.clipboard.writeText(text);
       alert("Sample copied to clipboard!");
     } catch (err) {
