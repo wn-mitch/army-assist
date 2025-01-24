@@ -71,7 +71,7 @@ function Settings() {
   return (
     <>
       <button
-        onPointerDown={handleShow}
+        onClick={handleShow}
         className="bg-gray-500 text-white rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <CogIcon className="h-6 w-6" />
@@ -87,7 +87,7 @@ function Settings() {
             className="fixed inset-0 bg-black opacity-50"
             aria-hidden="true"
           />
-          <DialogPanel className="bg-white dark:bg-gray-800 rounded w-full md:w-2/3 max-w-lg p-4 z-20">
+          <DialogPanel className="bg-white dark:bg-gray-800 rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
             <DialogTitle className="text-xl font-bold text-center dark:text-gray-200">
               Settings
             </DialogTitle>

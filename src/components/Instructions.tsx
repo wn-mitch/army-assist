@@ -11,6 +11,7 @@ import nrWorldEaters from "@/assets/lists/nr_tau.txt";
 
 function Instructions() {
   const [isOpen, setIsOpen] = useState(false);
+  const [text, setText] = useState("");
   const isFirstVisit = useStore((state) => state.isFirstVisit);
   const setFirstVisit = useStore((state) => state.setFirstVisit);
 
@@ -39,20 +40,47 @@ function Instructions() {
     };
   }, [isOpen]);
 
+    useEffect(() => {
+    const fetchText = async () => {
+      try {
+        const response = await fetch(nrWorldEaters);
+        const text = await response.text();
+        setText(text);
+      } catch (err) {
+        console.error("Failed to fetch text: ", err);
+      }
+    };
+
+    fetchText();
+  }, []);
+
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
   const copySampleToClipboard = async () => {
     try {
-      const response = await fetch(nrWorldEaters);
-      alert("response!");
-      const text = await response.text();
-      alert("text!");
-      await navigator.clipboard.writeText(text);
-      alert("Sample copied to clipboard!");
+      await navigator.clipboard
+        .write([
+          new ClipboardItem({
+            "text/plain": new Blob([text], { type: "text/plain" }),
+          }),
+        ])
+        .then(() => alert("copied"));
     } catch (err) {
-      alert("Sample failed to copy!");
+      alert(`${err}`);
       console.error("Failed to copy: ", err);
+    }
+  };
+
+  const handlePointerDown = (event: React.PointerEvent) => {
+    if (event.pointerType === "mouse") {
+      copySampleToClipboard();
+    }
+  };
+
+  const handlePointerUp = (event: React.PointerEvent) => {
+    if (event.pointerType !== "mouse") {
+      copySampleToClipboard();
     }
   };
 
@@ -66,7 +94,7 @@ function Instructions() {
   return (
     <>
       <button
-        onPointerDown={handleShow}
+        onTouchEnd={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
@@ -80,10 +108,12 @@ function Instructions() {
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
 
-          <div className="my-5 bg-white dark:bg-gray-800 rounded-lg w-3/4 mx-auto p-6 relative z-20">
+          <div className="my-5 bg-white dark:bg-gray-800 rounded-lg lg:w-3/4 max-w-lg mx-auto p-4 relative z-20">
             <button
               id="close-changelog"
+              onTouchEnd={handleClose}
               onPointerDown={handleClose}
+              onPointerUp={handleClose}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 cursor-pointer"
             >
               <XCircleIcon className="h-6 w-6" />
@@ -98,7 +128,7 @@ function Instructions() {
                 rebuild a list, you can click the button to copy a sample to
                 your clipboard
                 <button
-                  onPointerDown={copySampleToClipboard}
+                  onTouchEnd={copySampleToClipboard}
                   className={`${buttonClasses} bg-gray-600 hover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400 dark:hover:text-gray-800 shadow-md cursor-pointer`}
                 >
                   <ClipboardIcon
@@ -111,7 +141,10 @@ function Instructions() {
               <li>Click Export</li>
               <li>Click the "Text" Option</li>
               <li>Select the Format as "NR"</li>
-              <li>Under the "Export Options" dropdown, ensure "Include constant selections" is checked</li>
+              <li>
+                Under the "Export Options" dropdown, ensure "Include constant
+                selections" is checked
+              </li>
               <li>Click Copy to Clipboard</li>
               <li>Paste into the pastebox</li>
               <li>Please report any issues you find in the discord below</li>
@@ -129,7 +162,6 @@ function Instructions() {
 
             <div className="mt-4 flex lg:flex-row w-full flex-col sm:flex-col">
               <button
-                onPointerDown={handleClose}
                 onTouchEnd={handleClose}
                 className={`${buttonClasses} bg-red-700 hover:bg-red-600`}
               >
@@ -137,9 +169,6 @@ function Instructions() {
                 Tap Here to Close
               </button>
               <button
-                onPointerDown={() =>
-                  openLink("https://www.linkedin.com/in/will--mitch/")
-                }
                 onTouchEnd={() =>
                   openLink("https://www.linkedin.com/in/will--mitch/")
                 }
@@ -149,7 +178,6 @@ function Instructions() {
                 Contact me on LinkedIn
               </button>
               <button
-                onPointerDown={() => openLink("https://patreon.com/ArmyAssist")}
                 onTouchEnd={() => openLink("https://patreon.com/ArmyAssist")}
                 className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
               >
@@ -157,7 +185,6 @@ function Instructions() {
                 Support me on Patreon
               </button>
               <button
-                onPointerDown={() => openLink("https://discord.gg/hVVtGuybhw")}
                 onTouchEnd={() => openLink("https://discord.gg/hVVtGuybhw")}
                 className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
               >

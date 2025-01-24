@@ -37,7 +37,7 @@ function Changelog() {
   return (
     <>
       <button
-        onPointerDown={handleShow}
+        onClick={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-semibold hover:bg-gray-700 mx-2"
       >
         v{currentVersion}
@@ -46,12 +46,12 @@ function Changelog() {
       <Dialog
         open={isOpen}
         onClose={handleClose}
-        className="fixed z-10 inset-0 overflow-y-scroll p-10"
+        className="fixed z-10 inset-0 overflow-y-auto"
       >
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />
 
-          <div className="bg-white dark:bg-gray-800 rounded-lg w-2/3 mx-auto p-6 relative z-20">
+          <div className="bg-white dark:bg-gray-800 rounded-lg w-5/6 lg:w-3/4 mx-auto p-6 relative z-20">
             <button
               id="close-changelog"
               onPointerDown={handleClose}

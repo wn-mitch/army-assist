@@ -1,9 +1,17 @@
 [
   {
+    "version": "1.4.2",
+    "date": "01/24/25",
+    "changes": [
+      "Made adjustments to the modal display to unify their design",
+      "Finally fixed the 'Copy Sample' button for iOS. I actually intend to do a blog post about this because it screwed me up for a while."
+    ]
+  },
+  {
     "version": "1.4.1",
     "date": "01/23/2025",
     "changes": [
-      "Improved the layout of the army rule panel on XS screens like phones in portrait"
+      "Improved the layout of the army rule panel on XS screens (phones in portrait mode)"
     ]
   },
   {
