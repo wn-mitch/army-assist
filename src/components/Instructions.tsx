@@ -49,6 +49,7 @@ function Instructions() {
       await navigator.clipboard.writeText(text);
       alert("Sample copied to clipboard!");
     } catch (err) {
+      alert("Sample failed to copy!");
       console.error("Failed to copy: ", err);
     }
   };
@@ -63,7 +64,7 @@ function Instructions() {
   return (
     <>
       <button
-        onClick={handleShow}
+        onPointerDown={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
@@ -80,8 +81,8 @@ function Instructions() {
           <div className="my-5 bg-white dark:bg-gray-800 rounded-lg w-3/4 mx-auto p-6 relative z-20">
             <button
               id="close-changelog"
-              onClick={handleClose}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200"
+              onPointerDown={handleClose}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 cursor-pointer"
             >
               <XCircleIcon className="h-6 w-6" />
             </button>
@@ -95,9 +96,8 @@ function Instructions() {
                 rebuild a list, you can click the button to copy a sample to
                 your clipboard
                 <button
-                  onClick={copySampleToClipboard}
-                  onTouchEnd={copySampleToClipboard}
-                  className={`${buttonClasses} bg-gray-600 hover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400 dark:hover:text-gray-800 shadow-md`}
+                  onPointerDown={copySampleToClipboard}
+                  className={`${buttonClasses} bg-gray-600 hover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400 dark:hover:text-gray-800 shadow-md cursor-pointer`}
                 >
                   <ClipboardIcon
                     aria-hidden="true"
@@ -127,7 +127,7 @@ function Instructions() {
 
             <div className="mt-4 flex lg:flex-row w-full flex-col sm:flex-col">
               <button
-                onClick={handleClose}
+                onPointerDown={handleClose}
                 onTouchEnd={handleClose}
                 className={`${buttonClasses} bg-red-700 hover:bg-red-600`}
               >
@@ -135,7 +135,7 @@ function Instructions() {
                 Tap Here to Close
               </button>
               <button
-                onClick={() =>
+                onPointerDown={() =>
                   openLink("https://www.linkedin.com/in/will--mitch/")
                 }
                 onTouchEnd={() =>
@@ -147,7 +147,7 @@ function Instructions() {
                 Contact me on LinkedIn
               </button>
               <button
-                onClick={() => openLink("https://patreon.com/ArmyAssist")}
+                onPointerDown={() => openLink("https://patreon.com/ArmyAssist")}
                 onTouchEnd={() => openLink("https://patreon.com/ArmyAssist")}
                 className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
               >
@@ -155,7 +155,7 @@ function Instructions() {
                 Support me on Patreon
               </button>
               <button
-                onClick={() => openLink("https://discord.gg/hVVtGuybhw")}
+                onPointerDown={() => openLink("https://discord.gg/hVVtGuybhw")}
                 onTouchEnd={() => openLink("https://discord.gg/hVVtGuybhw")}
                 className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
               >

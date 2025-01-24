@@ -69,7 +69,7 @@ export default function StratagemPanel() {
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
+        onPointerDown={() => setOpen(true)}
         className="fixed bottom-4 left-4 bg-blue-600 text-white rounded p-2 font-bold hover:bg-blue-700 shadow-xl z-10"
       >
         Open Stratagem Panel
@@ -102,7 +102,7 @@ export default function StratagemPanel() {
                       <div className="ml-3 flex h-7 items-center">
                         <button
                           type="button"
-                          onClick={() => setOpen(false)}
+                          onPointerDown={() => setOpen(false)}
                           className="relative rounded-md text-gray-800 dark:text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                         >
                           <span className="absolute -inset-2.5" />

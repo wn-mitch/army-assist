@@ -71,7 +71,7 @@ function Settings() {
   return (
     <>
       <button
-        onClick={handleShow}
+        onPointerDown={handleShow}
         className="bg-gray-500 text-white rounded p-2 font-bold hover:bg-gray-700 mx-1"
       >
         <CogIcon className="h-6 w-6" />
@@ -162,7 +162,7 @@ function Settings() {
 
             <div className="mt-4">
               <button
-                onClick={handleClose}
+                onPointerDown={handleClose}
                 className="px-4 py-2 bg-red-700 font-bold text-white rounded w-full dark:bg-gray-500"
               >
                 Close

@@ -37,7 +37,7 @@ function Changelog() {
   return (
     <>
       <button
-        onClick={handleShow}
+        onPointerDown={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-semibold hover:bg-gray-700 mx-2"
       >
         v{currentVersion}
@@ -54,7 +54,7 @@ function Changelog() {
           <div className="bg-white dark:bg-gray-800 rounded-lg w-2/3 mx-auto p-6 relative z-20">
             <button
               id="close-changelog"
-              onClick={handleClose}
+              onPointerDown={handleClose}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300"
             >
               <XCircleIcon className="h-6 w-6" />
