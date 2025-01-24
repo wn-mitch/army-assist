@@ -65,22 +65,10 @@ function Instructions() {
             "text/plain": new Blob([text], { type: "text/plain" }),
           }),
         ])
-        .then(() => alert("copied"));
+        .then(() => alert("Sample list copied to clipboard!"));
     } catch (err) {
       alert(`${err}`);
       console.error("Failed to copy: ", err);
-    }
-  };
-
-  const handlePointerDown = (event: React.PointerEvent) => {
-    if (event.pointerType === "mouse") {
-      copySampleToClipboard();
-    }
-  };
-
-  const handlePointerUp = (event: React.PointerEvent) => {
-    if (event.pointerType !== "mouse") {
-      copySampleToClipboard();
     }
   };
 
