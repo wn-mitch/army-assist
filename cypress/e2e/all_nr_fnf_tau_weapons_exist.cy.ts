@@ -6,7 +6,7 @@ describe("Ensure all weapons listed in nr_fnf_tau are listed on either the Shoot
   });
 
   const checkShootingPhase = (weapon) => {
-    cy.get('.isolate > :nth-child(3)').click();
+    cy.get('#headlessui-radio-:rd:').click();
     cy.contains(weapon).should("exist");
   };
 

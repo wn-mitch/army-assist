@@ -19,6 +19,8 @@ import CommandPhase from "./PhaseDisplays/CommandPhase";
 import MovementPhase from "./PhaseDisplays/MovementPhase";
 import ShootingOrFightPhase from "./PhaseDisplays/ShootingOrFightPhase";
 import ChargePhase from "./PhaseDisplays/ChargePhase";
+import { getSelectionsFromUnit } from "@/utils/UnitHelper";
+import PhaseEnhancements from "./PhaseEnhancements";
 
 function ListUnitCard({ unit }: { unit: ListUnit }) {
   const phase = useStore((state) => state.phase);
@@ -68,6 +70,8 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   let characteristic: React.ReactNode;
   let toggled = true;
 
+  const unitSelections = getSelectionsFromUnit(unit, datasheet);
+
   switch (phase) {
     case Phase.Command:
       [characteristic, toggled] = CommandPhase({ datasheetModel });
@@ -78,7 +82,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     case Phase.Shooting:
     case Phase.Fight:
       [characteristic, toggled] = ShootingOrFightPhase({
-        unit,
+        unitSelections,
         datasheet,
         phase,
       });
@@ -102,7 +106,13 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     phase,
   });
 
-  const cardToggled = unit.toggled && (toggled || abilitiesToggle);
+  const [phasedEnhancements, enhancementsToggle] = PhaseEnhancements({
+    unitSelections,
+    phase,
+  });
+
+  const cardToggled =
+    unit.toggled && (toggled || abilitiesToggle || enhancementsToggle);
   const fadedClasses = cardToggled ? "" : "opacity-50";
 
   const unitFilteredKeywords = datasheetKeywords
@@ -114,14 +124,16 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     <ul
       key={unit.datasheet_id}
       tabIndex={0}
-      className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}  
+      className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}
       onTouchEnd={() => toggleUnit(unit)}
     >
       <div className="flex flex-row">
         <div
           className={`flex flex-row font-semibold text-xl align-middle items-center flex-grow ${fadedClasses}`}
         >
-          <div className="flex-row flex-grow text-black dark:text-gray-50">{unit.name}</div>
+          <div className="flex-row flex-grow text-black dark:text-gray-50">
+            {unit.name}
+          </div>
 
           {showKeywords && (
             <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-300 dark:font-normal">
@@ -146,6 +158,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
         <div className="flex flex-col gap-1">
           <div className="">{characteristic}</div>
           <div className="">{phasedAbilities}</div>
+          <div className="">{phasedEnhancements}</div>
         </div>
       )}
     </ul>

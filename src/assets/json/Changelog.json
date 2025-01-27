@@ -1,5 +1,10 @@
 [
   {
+    "version": "1.4.1",
+    "date": "01/27/2025",
+    "changes": ["Added support for equipped Detachment Enhancements"]
+  },
+  {
     "version": "1.4.0",
     "date": "01/23/2025",
     "changes": [

@@ -2892,6 +2892,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -3396,6 +3397,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -3571,7 +3573,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -4104,7 +4107,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -5275,7 +5279,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -7454,7 +7459,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -8006,6 +8012,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -8538,6 +8545,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -10281,7 +10289,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -11688,7 +11697,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Saves"
         ]
     },
     {
@@ -11784,6 +11794,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -12462,7 +12473,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -12958,7 +12970,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -13014,7 +13027,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -13099,7 +13113,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -14653,7 +14668,9 @@
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Command"
+        ]
     },
     {
         "datasheet_id": "000000463",
@@ -14716,7 +14733,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -17456,7 +17474,8 @@
         "": "",
         "phases": [
             "Command",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -18704,7 +18723,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -19643,6 +19663,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -19942,6 +19963,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -20325,7 +20347,8 @@
         "": "",
         "phases": [
             "Command",
-            "Shooting"
+            "Shooting",
+            "Saves"
         ]
     },
     {
@@ -20675,6 +20698,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -21174,7 +21198,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -24562,7 +24587,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -24795,7 +24821,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -24976,7 +25003,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -25719,7 +25747,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -25854,7 +25883,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -28469,7 +28499,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -28606,7 +28637,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -28847,7 +28879,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -30541,7 +30574,10 @@
         "type": "Wargear",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
     },
     {
         "datasheet_id": "000000899",
@@ -32730,7 +32766,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -32905,7 +32942,8 @@
         "": "",
         "phases": [
             "Shooting",
-            "Fight"
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -33090,7 +33128,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -34054,7 +34093,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -34508,7 +34548,9 @@
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Command"
+        ]
     },
     {
         "datasheet_id": "000001024",
@@ -35430,7 +35472,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -35606,7 +35650,9 @@
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Command"
+        ]
     },
     {
         "datasheet_id": "000001049",
@@ -36298,7 +36344,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -37381,7 +37428,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -38382,6 +38430,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -39603,7 +39652,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -41221,6 +41271,7 @@
         "": "",
         "phases": [
             "Movement",
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -42115,7 +42166,9 @@
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Command"
+        ]
     },
     {
         "datasheet_id": "000001339",
@@ -43961,7 +44014,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -43978,6 +44032,7 @@
             "Command",
             "Shooting",
             "Charge",
+            "Fight",
             "Saves"
         ]
     },
@@ -45053,7 +45108,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -45245,7 +45302,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -46307,6 +46365,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -48100,7 +48159,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -48575,6 +48635,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Command",
             "Saves"
         ]
     },
@@ -49455,7 +49516,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -50600,7 +50662,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -50720,7 +50783,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -50788,6 +50852,7 @@
         "": "",
         "phases": [
             "Movement",
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -51036,7 +51101,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -51077,7 +51143,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -51147,7 +51214,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -53262,6 +53330,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -55315,7 +55384,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -55588,7 +55658,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -56466,7 +56538,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -56885,6 +56958,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -57562,6 +57636,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Saves",
             "Shooting",
             "Fight"
         ]
@@ -57961,7 +58036,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -58549,7 +58625,9 @@
         "type": "Wargear",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Saves"
+        ]
     },
     {
         "datasheet_id": "000002532",
@@ -58850,7 +58928,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -59172,6 +59251,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -60978,7 +61058,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -61344,7 +61426,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -61574,7 +61657,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -61852,7 +61936,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -62242,6 +62327,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -62663,7 +62749,9 @@
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Command"
+        ]
     },
     {
         "datasheet_id": "000002634",
@@ -64019,7 +64107,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -64249,6 +64338,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -64346,7 +64436,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -66796,6 +66887,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -67436,6 +67528,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -67602,6 +67695,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -68948,7 +69042,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -69031,7 +69126,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -69448,6 +69544,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -70893,6 +70990,7 @@
         "": "",
         "phases": [
             "Movement",
+            "Shooting",
             "Charge",
             "Fight"
         ]
@@ -71503,7 +71601,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75644,7 +75743,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75699,7 +75799,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75754,7 +75855,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75809,7 +75911,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75864,7 +75967,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75905,7 +76009,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75946,7 +76051,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75987,7 +76093,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -76484,7 +76591,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -77427,6 +77535,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -77629,7 +77738,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -77643,7 +77753,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -77657,7 +77768,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -77671,7 +77783,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -77685,7 +77798,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -79986,7 +80100,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -80000,7 +80116,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -80014,7 +80132,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -80028,7 +80148,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -80042,7 +80164,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Shooting",
+            "Charge",
+            "Fight"
         ]
     },
     {
@@ -81386,7 +81510,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -81970,7 +82095,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -82128,7 +82254,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -82320,7 +82447,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -83353,7 +83481,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -83456,7 +83585,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -83928,6 +84058,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -84569,6 +84700,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -85384,6 +85516,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -87059,7 +87192,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -87870,6 +88004,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -88334,7 +88469,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {

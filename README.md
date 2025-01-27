@@ -4,6 +4,6 @@
 
  Clean up the files after importing from Wahapedia
 
- <[:\.\-\w\d\s;#\\+()\.,\[\]_="/]+>
+<[:\.\-\w\d\s;#\\+()\.,\[\]_="/]+>
 
  Remove Tags
