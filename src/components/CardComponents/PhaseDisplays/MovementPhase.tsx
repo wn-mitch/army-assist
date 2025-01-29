@@ -1,14 +1,14 @@
 import React from "react";
 
-import DatasheetModel from "@/types/DatasheetModel";
+import ListUnit from "@/types/ListUnit";
 
 const MovementPhase = ({
-  datasheetModel,
+  unit,
 }: {
-  datasheetModel: DatasheetModel;
+  unit: ListUnit;
 }): [React.ReactNode, boolean] => [
   <div className="text-center text-xl font-semibold items-center justify-center align-middle flex flex-col h-full dark:text-gray-100">
-    {datasheetModel.M}
+    {unit.datasheetModel.M}
   </div>,
   true,
 ];

@@ -4,16 +4,14 @@ import datasheetWargear from "@/assets/json/Datasheets_wargear.json";
 
 import WeaponPhaseTable from "./WeaponPhaseTable";
 
-import Datasheet from "@/types/Datasheet";
 import Phase from "@/types/Phase";
+import ListUnit from "@/types/ListUnit";
 
 const ShootingOrFightPhase = ({
-  unitSelections,
-  datasheet,
+  unit,
   phase,
 }: {
-  unitSelections: string[];
-  datasheet: Datasheet;
+  unit: ListUnit;
   phase: Phase;
 }): [React.ReactNode, boolean] => {
   // TODO: Make this a toggleable setting where you can elect to not filter out weapons
@@ -23,9 +21,9 @@ const ShootingOrFightPhase = ({
         ? wargear.type === "Ranged"
         : wargear.type === "Melee"
     )
-    .filter((wargear) => datasheet.id === wargear.datasheet_id)
+    .filter((wargear) => unit.datasheet.id === wargear.datasheet_id)
     .filter((weapon) =>
-      (unitSelections ?? []).some((name) => {
+      (unit.weapons ?? []).some((name) => {
         return weapon.name?.toLowerCase().includes(name.toLowerCase());
       })
     );

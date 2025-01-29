@@ -1,15 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 import useStore from "@/store/store";
 
-import datasheetsModels from "@/assets/json/Datasheets_models.json";
-import datasheets from "@/assets/json/Datasheets.json";
-import datasheetKeywords from "@/assets/json/Datasheets_keywords.json";
-
 import ListUnit from "@/types/ListUnit";
-import DatasheetModel from "@/types/DatasheetModel";
 import Phase from "@/types/Phase";
 
 import PhaseAbilities from "@/components/CardComponents/PhaseAbilities";
@@ -19,71 +14,48 @@ import CommandPhase from "./PhaseDisplays/CommandPhase";
 import MovementPhase from "./PhaseDisplays/MovementPhase";
 import ShootingOrFightPhase from "./PhaseDisplays/ShootingOrFightPhase";
 import ChargePhase from "./PhaseDisplays/ChargePhase";
-import { getSelectionsFromUnit } from "@/utils/UnitHelper";
 import PhaseEnhancements from "./PhaseEnhancements";
 
 function ListUnitCard({ unit }: { unit: ListUnit }) {
   const phase = useStore((state) => state.phase);
   const toggleUnit = useStore((state) => state.toggleUnit);
-  const faction = useStore((state) => state.faction);
 
   const cardsCollapse = useStore((state) => state.cardsCollapse);
   const showKeywords = useStore((state) => state.showKeywords);
 
-  if (!phase) {
-    window.alert("Phase not set");
-  }
-
-  if (!faction) {
-    window.alert("Faction not set");
-  }
-
-  const datasheetsMatchingName = datasheets.filter(
-    (item) => item.name.toLowerCase() === unit.name.toLowerCase()
-  );
-
-  // Create an array of all unique factions in the datasheets
-  const uniqueFactions = Array.from(
-    new Set(datasheetsMatchingName.map((item) => item.faction_id))
-  );
-
-  // @ts-expect-error - Line 145 has a check that should prevent this from being null
-  const datasheet = uniqueFactions.includes(faction)
-    ? datasheetsMatchingName.filter((item) => item.faction_id === faction)[0]
-    : datasheetsMatchingName[0];
-
-  if (!datasheet) {
-    window.alert(`Datasheet not found for unit ${unit.name}`);
-    return null;
-  }
-
-  const datasheetModel = datasheetsModels.find(
-    (datasheetModel: DatasheetModel) =>
-      datasheetModel.datasheet_id === datasheet.id
-  );
-
-  if (!datasheetModel) {
-    window.alert(`Datasheet model not found for unit ${unit.name}`);
-    return null;
-  }
-
   let characteristic: React.ReactNode;
   let toggled = true;
 
-  const unitSelections = getSelectionsFromUnit(unit, datasheet);
+  const [touchStartY, setTouchStartY] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartY(e.touches[0].clientY);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartY === null) return;
+
+    const touchEndY = e.changedTouches[0].clientY;
+    const movementThreshold = 30; // Pixels of movement allowed for a tap
+
+    if (Math.abs(touchStartY - touchEndY) < movementThreshold) {
+      toggleUnit(unit); // Treat as a tap if movement is minimal
+    }
+
+    setTouchStartY(null);
+  };
 
   switch (phase) {
     case Phase.Command:
-      [characteristic, toggled] = CommandPhase({ datasheetModel });
+      [characteristic, toggled] = CommandPhase({ unit });
       break;
     case Phase.Movement:
-      [characteristic, toggled] = MovementPhase({ datasheetModel });
+      [characteristic, toggled] = MovementPhase({ unit });
       break;
     case Phase.Shooting:
     case Phase.Fight:
       [characteristic, toggled] = ShootingOrFightPhase({
-        unitSelections,
-        datasheet,
+        unit,
         phase,
       });
       break;
@@ -91,7 +63,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       [characteristic, toggled] = ChargePhase();
       break;
     case Phase.Saves:
-      [characteristic, toggled] = SavesPhase({ datasheetModel });
+      [characteristic, toggled] = SavesPhase({ unit });
       break;
     default:
       characteristic = (
@@ -102,12 +74,12 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
 
   // @ts-expect-error - This works. Not sure why flagged.
   const [phasedAbilities, abilitiesToggle] = PhaseAbilities({
-    datasheetModel,
+    unit,
     phase,
   });
 
   const [phasedEnhancements, enhancementsToggle] = PhaseEnhancements({
-    unitSelections,
+    unit,
     phase,
   });
 
@@ -115,17 +87,15 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     unit.toggled && (toggled || abilitiesToggle || enhancementsToggle);
   const fadedClasses = cardToggled ? "" : "opacity-50";
 
-  const unitFilteredKeywords = datasheetKeywords
-    .filter((keyword) => keyword.datasheet_id === datasheet.id)
-    .map((x) => x.keyword)
-    .join(", ");
 
   return (
     <ul
       key={unit.datasheet_id}
       tabIndex={0}
       className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}
-      onTouchEnd={() => toggleUnit(unit)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onClick={() => toggleUnit(unit)}
     >
       <div className="flex flex-row">
         <div
@@ -137,7 +107,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
 
           {showKeywords && (
             <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-300 dark:font-normal">
-              {unitFilteredKeywords}
+              {unit.keywords}
             </div>
           )}
         </div>

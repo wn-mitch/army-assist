@@ -1,31 +1,20 @@
-import React, { useEffect, useState } from "react";
-
-import Enhancements from "@/assets/json/Enhancements_modified.json";
+import React from "react";
 
 import Phase from "@/types/Phase";
 import Enhancement from "@/types/Enhancement";
+import ListUnit from "@/types/ListUnit";
 
 const PhaseEnhancements: React.FC<{
-  unitSelections: string[];
+  unit: ListUnit;
   phase: Phase;
-}> = ({ unitSelections, phase }) => {
-  const [enhancements, setEnhancements] = useState<Enhancement[]>([]);
-
-  console.log(unitSelections);
-
-  useEffect(() => {
-    const matchingEnhancements = Enhancements.filter(
-      (enhancement: Enhancement) =>
-        unitSelections.includes(enhancement.name) &&
-        enhancement.phases.includes(phase)
-    );
-
-    setEnhancements(matchingEnhancements);
-  }, [unitSelections, phase]);
+}> = ({ unit, phase }) => {
+  const phasedEnhancements = unit.enhancements.filter(
+    (enhancement: Enhancement) => enhancement.phases.includes(phase)
+  );
 
   const enhancementList = (
     <div className="ml-1">
-      {enhancements.map((enhancement, index) => (
+      {phasedEnhancements.map((enhancement, index) => (
         <li
           key={index}
           className={`flex flex-col break-inside-avoid first:mt-0`}
@@ -41,7 +30,7 @@ const PhaseEnhancements: React.FC<{
     </div>
   );
 
-  return [enhancementList, enhancements.length > 0];
+  return [enhancementList, phasedEnhancements.length > 0];
 };
 
 export default PhaseEnhancements;

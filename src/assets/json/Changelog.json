@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.5.0",
+    "date": "01/29/2025",
+    "changes": [
+      "I have been laid off from my job, so if you happen to have a hiring manager who plays warhammer please send them this site :)",
+      "Greatly improved site performance by caching all unit data on paste submission",
+      "Fixed the stratagems panel on desktop",
+      "(I believe) Fixed the issue where tapping to scroll the screen would cause the cards to collapse."
+    ]
+  },
+  {
     "version": "1.4.1",
     "date": "01/27/2025",
     "changes": ["Added support for equipped Detachment Enhancements"]

@@ -1,14 +1,14 @@
 import React from "react";
 
-import DatasheetModel from "@/types/DatasheetModel";
 import LeadershipOCTable from "./LeadershipOCTable";
+import ListUnit from "@/types/ListUnit";
 
 const CommandPhase = ({
-  datasheetModel,
+  unit,
 }: {
-  datasheetModel: DatasheetModel;
+  unit: ListUnit;
 }): [React.ReactNode, boolean] => [
-  <LeadershipOCTable leadership={datasheetModel.Ld} oc={datasheetModel.OC} />,
+  <LeadershipOCTable leadership={unit.datasheetModel.Ld} oc={unit.datasheetModel.OC} />,
   true,
 ];
 

@@ -1,22 +1,22 @@
 import React from "react";
 
-import DatasheetModel from "@/types/DatasheetModel";
 import datasheetAbilities from "@/assets/json/Datasheets_abilities.json";
 import ModelSaveTable from "./ModelSaveTable";
+import ListUnit from "@/types/ListUnit";
 
 const SavesPhase = ({
-  datasheetModel,
+  unit,
 }: {
-  datasheetModel: DatasheetModel;
+  unit: ListUnit;
 }): [React.ReactNode, boolean] => {
-  const save = datasheetModel.Sv;
-  const invSave = datasheetModel.inv_sv;
+  const save = unit.datasheetModel.Sv;
+  const invSave = unit.datasheetModel.inv_sv;
 
   const feelNoPainId = "000008338";
   const fnp = datasheetAbilities.find(
     (ability) =>
       ability.ability_id === feelNoPainId &&
-      ability.datasheet_id === datasheetModel.datasheet_id
+      ability.datasheet_id === unit.datasheetModel.datasheet_id
   );
 
   const saveText = `${save}`;
@@ -28,9 +28,9 @@ const SavesPhase = ({
       save={saveText}
       invSave={invSaveText}
       fnp={fnpText}
-      toughness={datasheetModel.T}
-      wounds={datasheetModel.W}
-      leadership={datasheetModel.Ld}
+      toughness={unit.datasheetModel.T}
+      wounds={unit.datasheetModel.W}
+      leadership={unit.datasheetModel.Ld}
     />,
     true,
   ];
