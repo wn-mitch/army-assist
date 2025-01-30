@@ -85,14 +85,10 @@ const useStore = create<StoreState>((set) => ({
     const lines = text.split("\n");
 
     const factionMatch = lines[0].trim().match(/[\w]+ - ([\w'\s]+) -/);
-
-    if (!factionMatch || !factionMatch[1]) {
-      console.error("Faction not found in the list");
-      return false;
-    }
-
+    const factionMatchName = lines[0].trim().match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
+    
     const factionAbbreviation = Factions.filter(
-      (f) => f.name === factionMatch[1]
+      (f) => f.name === factionMatch[1] || f.name === factionMatchName[1]
     )[0].id;
 
     if (!factionAbbreviation) {
@@ -311,6 +307,12 @@ const useStore = create<StoreState>((set) => ({
           weapons = weapons
             ? [...weapons, "Armoured limbs"]
             : ["Armoured limbs"];
+        }
+        
+        if (datasheet.id === "000002565") {
+          weapons = weapons
+            ? [...weapons, "Psychic Shock Wave"]
+            : ["Psychic Shock Wave"];
         }
 
         weapons = weapons?.flatMap((weapon) => {

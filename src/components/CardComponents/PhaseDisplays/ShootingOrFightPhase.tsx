@@ -21,7 +21,7 @@ const ShootingOrFightPhase = ({
         ? wargear.type === "Ranged"
         : wargear.type === "Melee"
     )
-    .filter((wargear) => unit.datasheet.id === wargear.datasheet_id)
+    .filter((wargear) => unit.datasheet && unit.datasheet.id === wargear.datasheet_id)
     .filter((weapon) =>
       (unit.weapons ?? []).some((name) => {
         return weapon.name?.toLowerCase().includes(name.toLowerCase());

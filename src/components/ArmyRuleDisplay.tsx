@@ -71,11 +71,19 @@ const ArmyRuleDisplay = () => {
                 )
               }
             >
-              {open ? `${faction} - ${detachment} - Hide Army Rules` : `${faction} - ${detachment} - Show Army Rules`}
+              {open
+                ? `${faction} - ${detachment} - Hide Detachment Rules`
+                : `${faction} - ${detachment} - Show Detachment Rules`}
             </DisclosureButton>
             <Disclosure.Panel>
               {abilitiesInPhase ? (
-                <div className="min-[400px]:columns-2 columns-1 my-1 -mx-1">
+                <div
+                  className={`${
+                    abilities.length > 1
+                      ? "min-[400px]:columns-2 columns-1"
+                      : "columns-1"
+                  } my-1 -mx-1`}
+                >
                   {abilities.map((ability, index) => (
                     <li
                       key={index}

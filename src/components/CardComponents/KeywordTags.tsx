@@ -244,7 +244,7 @@ const tagDetails: { [key: string]: TagDetail } = {
     ringColor: "ring-purple-900 dark:ring-purple-500",
     textColor: "text-purple-800 dark:text-purple-200",
   },
-  "snagged": {
+  snagged: {
     icon: <GiCatch className="h-5 w-5" />,
     bgColor: "bg-green-200 dark:bg-green-900",
     ringColor: "ring-green-900 dark:ring-green-500",
@@ -262,7 +262,7 @@ const tagDetails: { [key: string]: TagDetail } = {
     ringColor: "ring-cyan-900 dark:ring-cyan-500",
     textColor: "text-cyan-800 dark:text-cyan-200",
   },
-  "conversion": {
+  conversion: {
     icon: <GiBodySwapping className="h-5 w-5" />,
     bgColor: "bg-purple-200 dark:bg-purple-900",
     ringColor: "ring-purple-900 dark:ring-purple-500",
@@ -280,7 +280,7 @@ const tagDetails: { [key: string]: TagDetail } = {
     ringColor: "ring-indigo-900 dark:ring-indigo-500",
     textColor: "text-indigo-800 dark:text-indigo-200",
   },
-  "harpooned": {
+  harpooned: {
     icon: <GiWhaleTail className="h-5 w-5" />,
     bgColor: "bg-indigo-200 dark:bg-indigo-900",
     ringColor: "ring-indigo-900 dark:ring-indigo-500",
@@ -321,15 +321,26 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
               }
 
               return (
-                <div
-                  key={keyword}
-                  className={`first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 dark:ring-1 ${tagDetail.ringColor} ring-inset truncate`}
-                >
-                  {tagDetail.icon}
-                  <span className="font-semibold whitespace-nowrap">
-                    {dice ? `${baseTag}${count}` : `${baseTag} ${count}`}
-                  </span>
-                </div>
+                <>
+                  <div
+                    key={keyword}
+                    data-tooltip-target={`keyword-tooltip-${baseTag}`}
+                    className={`first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 dark:ring-1 ${tagDetail.ringColor} ring-inset truncate`}
+                  >
+                    {tagDetail.icon}
+                    <span className="font-semibold whitespace-nowrap">
+                      {dice ? `${baseTag}${count}` : `${baseTag} ${count}`}
+                    </span>
+                  </div>
+                  <div
+                    id={`keyword-tooltip-${baseTag}`}
+                    role="tooltip"
+                    className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700"
+                  >
+                    {baseTag}
+                    <div className="tooltip-arrow" data-popper-arrow></div>
+                  </div>
+                </>
               );
             })}
         </div>
