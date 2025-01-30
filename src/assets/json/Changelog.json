@@ -6,7 +6,8 @@
       "I have been laid off from my job, so if you happen to have a hiring manager who plays warhammer please send them this site :)",
       "Fixed an issue where the Space Marines needed to be called Adeptus Astartes",
       "Fixed some typescript errors on the phase tables",
-      "Fixes for the weapon set 'Psychic Gifts'. Please report missing weapons in discord! It's usually a mapping error."
+      "Fixes for the weapon set 'Psychic Gifts'. Please report missing weapons in discord! It's usually a mapping error.",
+      "Fix for the double tap card collapsing on mobile."
     ]
   },
   {

@@ -95,11 +95,11 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      onClick={() => toggleUnit(unit)}
+      onPointerUp={() => toggleUnit(unit)}
     >
       <div className="flex flex-row">
         <div
-          className={`flex flex-row font-semibold text-xl align-middle items-center flex-grow ${fadedClasses}`}
+          className={`flex flex-row font-semibold text-xl align-middle items-center flex-grow ${fadedClasses} cursor-pointer`}
         >
           <div className="flex-row flex-grow text-black dark:text-gray-50">
             {unit.name}

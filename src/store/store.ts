@@ -86,6 +86,11 @@ const useStore = create<StoreState>((set) => ({
 
     const factionMatch = lines[0].trim().match(/[\w]+ - ([\w'\s]+) -/);
     const factionMatchName = lines[0].trim().match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
+
+    if(!factionMatch || !factionMatchName) {
+      window.alert("Name/Faction/Detachment format not recognized")
+      return false;
+    }
     
     const factionAbbreviation = Factions.filter(
       (f) => f.name === factionMatch[1] || f.name === factionMatchName[1]
