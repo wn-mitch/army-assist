@@ -1,9 +1,17 @@
 [
   {
-    "version": "1.5.0",
+    "version": "1.5.1",
     "date": "01/29/2025",
     "changes": [
       "I have been laid off from my job, so if you happen to have a hiring manager who plays warhammer please send them this site :)",
+      "Fixed an issue where the Space Marines needed to be called Adeptus Astartes",
+      "Fixed some typescript errors on the phase tables"
+    ]
+  },
+  {
+    "version": "1.5.0",
+    "date": "01/29/2025",
+    "changes": [
       "Greatly improved site performance by caching all unit data on paste submission",
       "Fixed the stratagems panel on desktop",
       "(I believe) Fixed the issue where tapping to scroll the screen would cause the cards to collapse."

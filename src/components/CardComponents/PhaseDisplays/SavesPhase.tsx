@@ -9,13 +9,18 @@ const SavesPhase = ({
 }: {
   unit: ListUnit;
 }): [React.ReactNode, boolean] => {
+  if(!unit.datasheetModel) {
+    window.alert("Error!")
+    return[<></>, false];
+  }
+
   const save = unit.datasheetModel.Sv;
   const invSave = unit.datasheetModel.inv_sv;
 
   const feelNoPainId = "000008338";
   const fnp = datasheetAbilities.find(
     (ability) =>
-      ability.ability_id === feelNoPainId &&
+      ability.ability_id === feelNoPainId && unit.datasheetModel && 
       ability.datasheet_id === unit.datasheetModel.datasheet_id
   );
 
