@@ -84,6 +84,7 @@ function Instructions() {
       <button
         onClick={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
+        aria-label="Open Instructions Panel"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
       </button>
