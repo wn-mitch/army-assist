@@ -22,6 +22,9 @@ function Settings() {
   const isDarkMode = useStore((state) => state.isDarkMode);
   const setIsDarkMode = useStore((state) => state.setIsDarkMode);
 
+  const cardsGroup = useStore((state) => state.cardsGroup);
+  const setCardsGroup = useStore((state) => state.setCardsGroup);
+
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
@@ -138,6 +141,17 @@ function Settings() {
                 label="Checking this option creates a button on each datacard that, when clicked, collapses the card to show only the title and keywords. If you use the card clicking feature, this is necessary. If not, disabling this will reduce card height."
                 checked={cardsCollapse}
                 onChange={() => setCardsCollapse(!cardsCollapse)}
+              />
+            </div>
+            
+            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold dark:text-gray-200">
+                Cards Group
+              </h2>
+              <SettingsOption
+                label="Checking this option groups identical cards together and displays their count in the unit name"
+                checked={cardsGroup}
+                onChange={() => setCardsGroup(!cardsGroup)}
               />
             </div>
 

@@ -21,6 +21,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   const toggleUnit = useStore((state) => state.toggleUnit);
 
   const cardsCollapse = useStore((state) => state.cardsCollapse);
+  const cardsGroup = useStore((state) => state.cardsGroup);
   const showKeywords = useStore((state) => state.showKeywords);
 
   let characteristic: React.ReactNode;
@@ -87,6 +88,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     unit.toggled && (toggled || abilitiesToggle || enhancementsToggle);
   const fadedClasses = cardToggled ? "" : "opacity-50";
 
+  const groupingNumber = cardsGroup ? `[x${unit.count}]` : "";
 
   return (
     <ul
@@ -102,7 +104,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
           className={`flex flex-row font-semibold text-xl align-middle items-center flex-grow ${fadedClasses} cursor-pointer`}
         >
           <div className="flex-row flex-grow text-black dark:text-gray-50">
-            {unit.name}
+            {unit.name} {groupingNumber}
           </div>
 
           {showKeywords && (

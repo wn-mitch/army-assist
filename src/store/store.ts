@@ -36,6 +36,7 @@ interface StoreState {
   cardsCollapse: boolean;
   showKeywords: boolean;
   isDarkMode: boolean;
+  cardsGroup: boolean;
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
@@ -47,9 +48,10 @@ interface StoreState {
   setCardsCollapse: (cardsCollapse: boolean) => void;
   setShowKeywords: (showKeywords: boolean) => void;
   setIsDarkMode: (isDarkMode: boolean) => void;
+  setCardsGroup: (cardsGroup: boolean) => void;
 }
 
-const useStore = create<StoreState>((set) => ({
+const useStore = create<StoreState>((set, get) => ({
   text: "",
   units: [],
   round: 1,
@@ -70,6 +72,7 @@ const useStore = create<StoreState>((set) => ({
   cardsCollapse: true,
   showKeywords: true,
   isDarkMode: true,
+  cardsGroup: true,
   reset: () =>
     set({
       text: "",
@@ -85,13 +88,15 @@ const useStore = create<StoreState>((set) => ({
     const lines = text.split("\n");
 
     const factionMatch = lines[0].trim().match(/[\w]+ - ([\w'\s]+) -/);
-    const factionMatchName = lines[0].trim().match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
+    const factionMatchName = lines[0]
+      .trim()
+      .match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
 
-    if(!factionMatch || !factionMatchName) {
-      window.alert("Name/Faction/Detachment format not recognized")
+    if (!factionMatch || !factionMatchName) {
+      window.alert("Name/Faction/Detachment format not recognized");
       return false;
     }
-    
+
     const factionAbbreviation = Factions.filter(
       (f) => f.name === factionMatch[1] || f.name === factionMatchName[1]
     )[0].id;
@@ -107,19 +112,31 @@ const useStore = create<StoreState>((set) => ({
     let lastParentUnit: ListUnit | null = null;
 
     lines.forEach((line, index) => {
-      const detachmentMatch = line.match(/Detachment[\sChoice]*: ([\w\s]+)/);
+      const detachmentMatch = line.match(/Detachment[\sChoice]*: ([\w\s-]+)/);
 
       if (detachmentMatch) {
-        set({ detachment: detachmentMatch[1] });
+        // Name overrides
+        let name = detachmentMatch[1];
+
+        switch (name) {
+          case "Pact-bound Zealots":
+            name = "Pactbound Zealots" 
+            break;
+          default:
+            break;
+        }
+
+        set({ detachment: name });
       }
 
+
       const parentMatch = line.match(
-        /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]']+)\s\[\d+pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
+        /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]']+)\s\[\d+[\s]?pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
       );
       const childMatch = line.match(
         /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/
       );
-
+      
       if (parentMatch) {
         // eslint-disable-next-line prefer-const
         let [, name, details] = parentMatch;
@@ -131,7 +148,7 @@ const useStore = create<StoreState>((set) => ({
             details: details,
             children: [],
             toggled: true,
-            count: null,
+            count: 1,
             points: null,
             datasheet_id: null,
             weapons: [],
@@ -171,6 +188,12 @@ const useStore = create<StoreState>((set) => ({
 
     if (listUnits.length > 0) {
       const updatedUnits = listUnits.map((unit) => {
+
+        // Name Overrides
+        if(unit.name === "Vypers") {
+          unit.name = "Vyper"
+        }
+
         const datasheetsMatchingName = Datasheets.filter(
           (item) => item.name.toLowerCase() === unit.name.toLowerCase()
         );
@@ -186,6 +209,7 @@ const useStore = create<StoreState>((set) => ({
               (item) => item.faction_id === factionAbbreviation
             )[0]
           : datasheetsMatchingName[0];
+       
 
         if (!datasheet) {
           window.alert(`Datasheet not found for unit ${unit.name}`);
@@ -282,6 +306,7 @@ const useStore = create<StoreState>((set) => ({
               }
           }
         });
+        
 
         if (unit.children && unit.children.length > 0) {
           const details = unit.children
@@ -302,6 +327,7 @@ const useStore = create<StoreState>((set) => ({
             return cleanedName.split(",").map((part) => part.trim());
           });
 
+        // Weapon Overrides
         if (datasheet.id === "000000613") {
           weapons = weapons
             ? [...weapons, "Wraithbone fists"]
@@ -313,12 +339,13 @@ const useStore = create<StoreState>((set) => ({
             ? [...weapons, "Armoured limbs"]
             : ["Armoured limbs"];
         }
-        
+
         if (datasheet.id === "000002565") {
           weapons = weapons
             ? [...weapons, "Psychic Shock Wave"]
             : ["Psychic Shock Wave"];
         }
+
 
         weapons = weapons?.flatMap((weapon) => {
           const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
@@ -349,7 +376,11 @@ const useStore = create<StoreState>((set) => ({
           keywords: keywords,
           enhancements: matchingEnhancements,
         };
-      });
+      }) as ListUnit[];
+
+      if (!updatedUnits) {
+        return false;
+      }
 
       set({ units: updatedUnits as ListUnit[] });
     }
@@ -387,6 +418,7 @@ const useStore = create<StoreState>((set) => ({
   setCardsCollapse: (cardsCollapse: boolean) => set({ cardsCollapse }),
   setShowKeywords: (showKeywords: boolean) => set({ showKeywords }),
   setIsDarkMode: (isDarkMode: boolean) => set({ isDarkMode }),
+  setCardsGroup: (cardsGroup: boolean) => set({ cardsGroup }),
 }));
 
 export default useStore;

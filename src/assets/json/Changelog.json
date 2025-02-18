@@ -1,9 +1,19 @@
 [
   {
+    "version": "1.7.0",
+    "date": "02/12/2025",
+    "changes": [
+      "I have been laid off from my job, so if you happen to have a hiring manager who plays warhammer please send them this site :)",
+      "Added a new setting option, card grouping. This collapses identical cards into a single card with a number in the name",
+      "Added a 3 column breakpoint for wider screens, should make this look better on desktop",
+      "Fixed an issue with Pactbound Zealots detachment not matching up",
+      "Fixed an issue with Aeldari not counting as Eldar in the faction matcher"
+    ]
+  },
+  {
     "version": "1.5.1",
     "date": "01/29/2025",
     "changes": [
-      "I have been laid off from my job, so if you happen to have a hiring manager who plays warhammer please send them this site :)",
       "Fixed an issue where the Space Marines needed to be called Adeptus Astartes",
       "Fixed some typescript errors on the phase tables",
       "Fixes for the weapon set 'Psychic Gifts'. Please report missing weapons in discord! It's usually a mapping error.",
