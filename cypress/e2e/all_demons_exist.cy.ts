@@ -19,329 +19,329 @@ describe('Verify all Chaos Daemons units and weapons exist', () => {
 
   describe("Shooting phase weapons", () => {
     it("should find Plague flail in the Shooting phase", () => {
-      checkShootingPhase("Plague flail");
+      cy.checkShootingPhase("Plague flail");
     });
 
     it("should find Heartstring lyre in the Shooting phase", () => {
-      checkShootingPhase("Heartstring lyre");
+      cy.checkShootingPhase("Heartstring lyre");
     });
 
     it("should find Bloodlash in the Shooting phase", () => {
-      checkShootingPhase("Bloodlash");
+      cy.checkShootingPhase("Bloodlash");
     });
 
     it("should find Pavane of Slaanesh in the Shooting phase", () => {
-      checkShootingPhase("Pavane of Slaanesh");
+      cy.checkShootingPhase("Pavane of Slaanesh");
     });
     it("should find Putrid vomit in the Shooting phase", () => {
-      checkShootingPhase("Putrid vomit");
+      cy.checkShootingPhase("Putrid vomit");
     });
 
     it("should find Grasping tongue in the Shooting phase", () => {
-      checkShootingPhase("Grasping tongue");
+      cy.checkShootingPhase("Grasping tongue");
     });
 
     it("should find Hellfire breath in the Shooting phase", () => {
-      checkShootingPhase("Hellfire breath");
+      cy.checkShootingPhase("Hellfire breath");
     });
 
     it("should find Infernal cannon in the Shooting phase", () => {
-      checkShootingPhase("Infernal cannon");
+      cy.checkShootingPhase("Infernal cannon");
     });
 
     it("should find Fires of Tzeentch in the Shooting phase", () => {
-      checkShootingPhase("Fires of Tzeentch");
+      cy.checkShootingPhase("Fires of Tzeentch");
     });
 
     it("should find Infernal Gateway in the Shooting phase", () => {
-      checkShootingPhase("Infernal Gateway");
+      cy.checkShootingPhase("Infernal Gateway");
     });
 
     it("should find Streams of brackish filth in the Shooting phase", () => {
-      checkShootingPhase("Streams of brackish filth");
+      cy.checkShootingPhase("Streams of brackish filth");
     });
 
     it("should find Bellow of endless fury in the Shooting phase", () => {
-      checkShootingPhase("Bellow of endless fury");
+      cy.checkShootingPhase("Bellow of endless fury");
     });
 
     it("should find Infernal Flames in the Shooting phase", () => {
-      checkShootingPhase("Infernal Flames");
+      cy.checkShootingPhase("Infernal Flames");
     });
 
     it("should find Coruscating Blue flames in the Shooting phase", () => {
-      checkShootingPhase("Coruscating Blue flames");
+      cy.checkShootingPhase("Coruscating Blue flames");
     });
 
     it("should find Coruscating Pink flames in the Shooting phase", () => {
-      checkShootingPhase("Coruscating Pink flames");
+      cy.checkShootingPhase("Coruscating Pink flames");
     });
 
     it("should find Flamer mouths in the Shooting phase", () => {
-      checkShootingPhase("Flamer mouths");
+      cy.checkShootingPhase("Flamer mouths");
     });
 
     it("should find Burning maw in the Shooting phase", () => {
-      checkShootingPhase("Burning maw");
+      cy.checkShootingPhase("Burning maw");
     });
 
     it("should find Harvester cannon in the Shooting phase", () => {
-      checkShootingPhase("Harvester cannon");
+      cy.checkShootingPhase("Harvester cannon");
     });
 
     it("should find Phlegm bombardment in the Shooting phase", () => {
-      checkShootingPhase("Phlegm bombardment");
+      cy.checkShootingPhase("Phlegm bombardment");
     });
 
     it("should find Torrent of burning blood in the Shooting phase", () => {
-      checkShootingPhase("Torrent of burning blood");
+      cy.checkShootingPhase("Torrent of burning blood");
     });
   });
 
   describe("Fight phase weapons", () => {
     it("should find Staff of cataclysm in the Fight phase", () => {
-      checkFightPhase("Staff of cataclysm");
+      cy.checkFightPhase("Staff of cataclysm");
     });
 
     it("should find Axe of Khorne in the Fight phase", () => {
-      checkFightPhase("Axe of Khorne");
+      cy.checkFightPhase("Axe of Khorne");
     });
 
     it("should find The Blade of Shadows in the Fight phase", () => {
-      checkFightPhase("The Blade of Shadows");
+      cy.checkFightPhase("The Blade of Shadows");
     });
 
     it("should find Balesword and nurgling attendants in the Fight phase", () => {
-      checkFightPhase("Balesword and nurgling attendants");
+      cy.checkFightPhase("Balesword and nurgling attendants");
     });
 
     it("should find Acidic maw in the Fight phase", () => {
-      checkFightPhase("Acidic maw");
+      cy.checkFightPhase("Acidic maw");
     });
 
     it("should find Lopping shears in the Fight phase", () => {
-      checkFightPhase("Lopping shears");
+      cy.checkFightPhase("Lopping shears");
     });
 
     it("should find Staff of Tomorrow in the Fight phase", () => {
-      checkFightPhase("Staff of Tomorrow");
+      cy.checkFightPhase("Staff of Tomorrow");
     });
 
     it("should find Soul-rending fangs in the Fight phase", () => {
-      checkFightPhase("Soul-rending fangs");
+      cy.checkFightPhase("Soul-rending fangs");
     });
 
     it("should find Gnarlrod in the Fight phase", () => {
-      checkFightPhase("Gnarlrod");
+      cy.checkFightPhase("Gnarlrod");
     });
 
     it("should find Blade of decay in the Fight phase", () => {
-      checkFightPhase("Blade of decay");
+      cy.checkFightPhase("Blade of decay");
     });
 
     it("should find Lash of Slaanesh in the Fight phase", () => {
-      checkFightPhase("Lash of Slaanesh");
+      cy.checkFightPhase("Lash of Slaanesh");
     });
 
     it("should find Snapping claws in the Fight phase", () => {
-      checkFightPhase("Snapping claws");
+      cy.checkFightPhase("Snapping claws");
     });
 
     it("should find Soulpiercer in the Fight phase", () => {
-      checkFightPhase("Soulpiercer");
+      cy.checkFightPhase("Soulpiercer");
     });
 
     it("should find Slaughter and Carnage in the Fight phase", () => {
-      checkFightPhase("Slaughter and Carnage");
+      cy.checkFightPhase("Slaughter and Carnage");
     });
 
     it("should find The Slayer Sword in the Fight phase", () => {
-      checkFightPhase("The Slayer Sword");
+      cy.checkFightPhase("The Slayer Sword");
     });
 
     it("should find Axe of Dominion in the Fight phase", () => {
-      checkFightPhase("Axe of Dominion");
+      cy.checkFightPhase("Axe of Dominion");
     });
 
     it("should find Scourging whip in the Fight phase", () => {
-      checkFightPhase("Scourging whip");
+      cy.checkFightPhase("Scourging whip");
     });
 
     it("should find Sharp quills in the Fight phase", () => {
-      checkFightPhase("Sharp quills");
+      cy.checkFightPhase("Sharp quills");
     });
 
     it("should find The Trickster's Staff in the Fight phase", () => {
-      checkFightPhase("The Trickster's Staff");
+      cy.checkFightPhase("The Trickster's Staff");
     });
 
     it("should find Serrated claws in the Fight phase", () => {
-      checkFightPhase("Serrated claws");
+      cy.checkFightPhase("Serrated claws");
     });
 
     it("should find Souleater blade in the Fight phase", () => {
-      checkFightPhase("Souleater blade");
+      cy.checkFightPhase("Souleater blade");
     });
 
     it("should find Blade of blood in the Fight phase", () => {
-      checkFightPhase("Blade of blood");
+      cy.checkFightPhase("Blade of blood");
     });
 
     it("should find Great axe of Khorne in the Fight phase", () => {
-      checkFightPhase("Great axe of Khorne");
+      cy.checkFightPhase("Great axe of Khorne");
     });
 
     it("should find Herald combat weapon in the Fight phase", () => {
-      checkFightPhase("Herald combat weapon");
+      cy.checkFightPhase("Herald combat weapon");
     });
 
     it("should find Coiled tentacles in the Fight phase", () => {
-      checkFightPhase("Coiled tentacles");
+      cy.checkFightPhase("Coiled tentacles");
     });
 
     it("should find Ravaging claws in the Fight phase", () => {
-      checkFightPhase("Ravaging claws");
+      cy.checkFightPhase("Ravaging claws");
     });
 
     it("should find Hellforged weapons in the Fight phase", () => {
-      checkFightPhase("Hellforged weapons");
+      cy.checkFightPhase("Hellforged weapons");
     });
 
     it("should find Bilesword in the Fight phase", () => {
-      checkFightPhase("Bilesword");
+      cy.checkFightPhase("Bilesword");
     });
 
     it("should find Lashing tongue in the Fight phase", () => {
-      checkFightPhase("Lashing tongue");
+      cy.checkFightPhase("Lashing tongue");
     });
 
     it("should find Witstealer sword in the Fight phase", () => {
-      checkFightPhase("Witstealer sword");
+      cy.checkFightPhase("Witstealer sword");
     });
 
     it("should find Staff of Tzeentch in the Fight phase", () => {
-      checkFightPhase("Staff of Tzeentch");
+      cy.checkFightPhase("Staff of Tzeentch");
     });
 
     it("should find Foul balesword in the Fight phase", () => {
-      checkFightPhase("Foul balesword");
+      cy.checkFightPhase("Foul balesword");
     });
 
     it("should find Attendant's hellblades in the Fight phase", () => {
-      checkFightPhase("Attendant's hellblades");
+      cy.checkFightPhase("Attendant's hellblades");
     });
 
     it("should find Juggernaut's bladed horn in the Fight phase", () => {
-      checkFightPhase("Juggernaut's bladed horn");
+      cy.checkFightPhase("Juggernaut's bladed horn");
     });
 
     it("should find Marotter in the Fight phase", () => {
-      checkFightPhase("Marotter");
+      cy.checkFightPhase("Marotter");
     });
 
     it("should find Plaguesword and distended maw in the Fight phase", () => {
-      checkFightPhase("Plaguesword and distended maw");
+      cy.checkFightPhase("Plaguesword and distended maw");
     });
 
     it("should find Exalted Seeker tongues in the Fight phase", () => {
-      checkFightPhase("Exalted Seeker tongues");
+      cy.checkFightPhase("Exalted Seeker tongues");
     });
 
     it("should find Lashes of torment in the Fight phase", () => {
-      checkFightPhase("Lashes of torment");
+      cy.checkFightPhase("Lashes of torment");
     });
 
     it("should find Hellblade in the Fight phase", () => {
-      checkFightPhase("Hellblade");
+      cy.checkFightPhase("Hellblade");
     });
 
     it("should find Blue claws in the Fight phase", () => {
-      checkFightPhase("Blue claws");
+      cy.checkFightPhase("Blue claws");
     });
 
     it("should find Slashing claws in the Fight phase", () => {
-      checkFightPhase("Slashing claws");
+      cy.checkFightPhase("Slashing claws");
     });
 
     it("should find Diseased claws and teeth in the Fight phase", () => {
-      checkFightPhase("Diseased claws and teeth");
+      cy.checkFightPhase("Diseased claws and teeth");
     });
 
     it("should find Pink claws in the Fight phase", () => {
-      checkFightPhase("Pink claws");
+      cy.checkFightPhase("Pink claws");
     });
 
     it("should find Plaguesword in the Fight phase", () => {
-      checkFightPhase("Plaguesword");
+      cy.checkFightPhase("Plaguesword");
     });
 
     it("should find Daemonic claws in the Fight phase", () => {
-      checkFightPhase("Daemonic claws");
+      cy.checkFightPhase("Daemonic claws");
     });
 
     it("should find Bladed axle in the Fight phase", () => {
-      checkFightPhase("Bladed axle");
+      cy.checkFightPhase("Bladed axle");
     });
 
     it("should find Seeker tongues in the Fight phase", () => {
-      checkFightPhase("Seeker tongues");
+      cy.checkFightPhase("Seeker tongues");
     });
 
     it("should find Death's heads in the Fight phase", () => {
-      checkFightPhase("Death's heads");
+      cy.checkFightPhase("Death's heads");
     });
 
     it("should find Foul mouthparts in the Fight phase", () => {
-      checkFightPhase("Foul mouthparts");
+      cy.checkFightPhase("Foul mouthparts");
     });
 
     it("should find Pox rider plaguesword in the Fight phase", () => {
-      checkFightPhase("Pox rider plaguesword");
+      cy.checkFightPhase("Pox rider plaguesword");
     });
 
     it("should find Yawning maw in the Fight phase", () => {
-      checkFightPhase("Yawning maw");
+      cy.checkFightPhase("Yawning maw");
     });
 
     it("should find Lashing tongues in the Fight phase", () => {
-      checkFightPhase("Lashing tongues");
+      cy.checkFightPhase("Lashing tongues");
     });
 
     it("should find Biting maw in the Fight phase", () => {
-      checkFightPhase("Biting maw");
+      cy.checkFightPhase("Biting maw");
     });
 
     it("should find Putrid appendages in the Fight phase", () => {
-      checkFightPhase("Putrid appendages");
+      cy.checkFightPhase("Putrid appendages");
     });
 
     it("should find Barbed tail and dissecting claws in the Fight phase", () => {
-      checkFightPhase("Barbed tail and dissecting claws");
+      cy.checkFightPhase("Barbed tail and dissecting claws");
     });
 
     it("should find Gore-drenched fangs in the Fight phase", () => {
-      checkFightPhase("Gore-drenched fangs");
+      cy.checkFightPhase("Gore-drenched fangs");
     });
 
 
     it("should find Lamprey bite in the Fight phase", () => {
-      checkFightPhase("Lamprey bite");
+      cy.checkFightPhase("Lamprey bite");
     });
 
     it("should find Churning fangs and claws in the Fight phase", () => {
-      checkFightPhase("Churning fangs and claws");
+      cy.checkFightPhase("Churning fangs and claws");
     });
 
     it("should find Jagged claws and tusked maw in the Fight phase", () => {
-      checkFightPhase("Jagged claws and tusked maw");
+      cy.checkFightPhase("Jagged claws and tusked maw");
     });
 
     it("should find Iron claw in the Fight phase", () => {
-      checkFightPhase("Iron claw");
+      cy.checkFightPhase("Iron claw");
     });
 
     it("should find Warpsword in the Fight phase", () => {
-      checkFightPhase("Warpsword");
+      cy.checkFightPhase("Warpsword");
     });
   });
 });
