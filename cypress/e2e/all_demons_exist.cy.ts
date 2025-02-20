@@ -7,16 +7,6 @@ describe('Verify all Chaos Daemons units and weapons exist', () => {
     cy.get("button[type='submit']").click();
   });
 
-  const checkShootingPhase = (weapon) => {
-    cy.get('.isolate > :nth-child(3)').click();
-    cy.contains(new RegExp(weapon, 'i')).should("exist");
-  };
-
-  const checkFightPhase = (weapon) => {
-    cy.get('.isolate > :nth-child(5)').click();
-    cy.contains(new RegExp(weapon, 'i')).should("exist");
-  };
-
   describe("Shooting phase weapons", () => {
     it("should find Plague flail in the Shooting phase", () => {
       cy.checkShootingPhase("Plague flail");

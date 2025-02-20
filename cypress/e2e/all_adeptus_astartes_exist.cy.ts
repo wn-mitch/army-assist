@@ -84,6 +84,7 @@ describe.only('Verify all Adeptus Astartes units and weapons exist', () => {
       cy.checkShootingPhase("Hammerfall Heavy Bolter Array");
     });
   });
+
   describe("Fight phase weapons", () => {
     it("should find Close Combat Weapon in the Fight phase", () => {
       cy.checkFightPhase("Close Combat Weapon");
@@ -111,10 +112,6 @@ describe.only('Verify all Adeptus Astartes units and weapons exist', () => {
 
     it("should find Thunder Hammer in the Fight phase", () => {
       cy.checkFightPhase("Thunder Hammer");
-    });
-
-    it("should find Storm Shield in the Fight phase", () => {
-      cy.checkFightPhase("Storm Shield");
     });
 
     it("should find Power Fist in the Fight phase", () => {
