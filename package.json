@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "cy:open": "cypress open",
+    "cy:run_all": "cypress run",
     "deploy:wrangler": "wrangler pages deploy dist"
   },
   "dependencies": {
