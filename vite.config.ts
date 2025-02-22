@@ -1,14 +1,23 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import istanbul from "vite-plugin-istanbul";
 import { fileURLToPath } from "url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server:{
-    watch:{
-      usePolling: true
-    }
+  plugins: [
+    react(),
+    istanbul({
+      include: "src/*",
+      exclude: ["node_modules", "test/"],
+      extension: [".js", ".ts", ".vue"],
+      requireEnv: true,
+    }),
+  ],
+  server: {
+    watch: {
+      usePolling: true,
+    },
   },
   resolve: {
     alias: [
