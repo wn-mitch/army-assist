@@ -11,7 +11,7 @@ export default defineConfig({
       include: "src/*",
       exclude: ["node_modules", "test/"],
       extension: [".js", ".ts", ".vue"],
-      requireEnv: false,
+      requireEnv: true,
     }),
   ],
   server: {
