@@ -11,5 +11,23 @@
     <div id="root"></div>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script type="module" src="/src/main.tsx"></script>
+    <div id="error-container" style="display: none;">
+      By the Emperor! There's been an error. Click the button below to clear the session storage.
+      <button id="clear-session-storage">Clear Session Storage</button>
+    </div>
+    <script>
+      window.addEventListener('load', function() {
+        const root = document.getElementById('root');
+        if (!root || root.innerHTML.trim() === '') {
+          const errorContainer = document.getElementById('error-container');
+          errorContainer.style.display = 'hidden';
+        }
+      });
+
+      document.getElementById('clear-session-storage').addEventListener('click', function() {
+        sessionStorage.clear();
+        alert('Session storage cleared. Please reload the page.');
+      });
+    </script>
   </body>
 </html>

@@ -1,16 +1,33 @@
 describe('The Phase Filter should adjust the visible stats', () => {
   beforeEach(() => {
-    cy.pasteListWithArgument('nr_tau.txt');
+    cy.pasteListWithArgument('broadsides.txt');
   })
   it('selects Command phase and sees the leadership characteristics', () => {
-    cy.get('.rounded-l-md').click();
-    cy.get(':nth-child(1) > .text-xl').should('have.text', '6+');
-    cy.get(':nth-child(2) > .text-xl').should('have.text', '7+');
+    cy.get("#headlessui-radio-\\:rb\\:").click();
+    cy.contains("7+");
   })
   it('selects Movement phase and sees the movement characteristics', () => {
-    cy.get('.isolate > :nth-child(2)').click();
-    cy.get(':nth-child(1) > .text-xl').should('have.text', '10"');
-    cy.get(':nth-child(2) > .text-xl').should('have.text', '6"');
-    cy.get(':nth-child(3) > .text-xl').should('have.text', '12"');
+    cy.get("#headlessui-radio-\\:rc\\:").click();
+    cy.contains("5\"");
+  })
+  it('selects Shooting phase and sees the ranged weapon characteristics', () => {
+    cy.get("#headlessui-radio-\\:rd\\:").click();
+    cy.contains("60\"");
+    cy.contains("Heavy rail rifle");
+    cy.contains("Devastating Wounds");
+  })
+  it('selects Charge phase and sees the charge tracker', () => {
+    cy.get("#headlessui-radio-\\:re\\:").click();
+    cy.contains("Charged?");
+  })
+  it('selects Fight phase and sees the melee weapon characteristics', () => {
+    cy.get("#headlessui-radio-\\:rf\\:").click();
+    cy.contains("Crushing bulk");
+    cy.contains("Melee");
+  })
+  it('selects Saves phase and sees the save characteristics', () => {
+    cy.get("#headlessui-radio-\\:rg\\:").click();
+    cy.contains("Sv");
+    cy.contains("2+");
   })
 })

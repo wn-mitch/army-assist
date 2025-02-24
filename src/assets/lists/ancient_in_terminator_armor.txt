@@ -1,0 +1,9 @@
+Imperium - Adeptus Astartes - Black Templars - Astartes Test - [11785pts]
+
+# ++ Army Roster ++ [11785pts]
+## Configuration
+Battle Size
+Detachment
+Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible
+
+Ancient in Terminator Armor [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)

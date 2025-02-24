@@ -1,0 +1,12 @@
+Xenos - Aeldari - Aeldari Wraith - [1990 pts]
+
+# ++ Army Roster ++ [1990 pts]
+## Configuration
+Battle Focus - Agile Manoeuvres
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Spirit Conclave
+Show/Hide Options
+
+## Battleline [1020 pts]
+Wraithblades [170 pts]:
+• 5x Wraithblade: Ghostaxe and Forceshield

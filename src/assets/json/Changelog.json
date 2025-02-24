@@ -1,10 +1,19 @@
-[
-  {
-    "version": "1.6.0",
-    "stateVersion":15,
+[{
+    "version": "1.7.0",
+    "stateVersion":16,
     "date": "02/24/2025",
     "changes": [
       "I have been laid off from my job, so if you happen to have a manager who plays warhammer please send them this site :)",
+      "Continued to enhance the test case coverage",
+      "Added an option to omit weapons filtering. Use this option if you have weapons that aren't showing up.",
+      "Added a panic button if the page fails to render"
+    ]
+  },
+  {
+    "version": "1.6.0",
+    "stateVersion":15,
+    "date": "02/06/2025 - 02/24/2025",
+    "changes": [
       "Enabled site persistance, which should prevent list from needing repaste on incidental refresh",
       "Fixed Agents Faction bug",
       "Fixed a Firing Deck bug",

@@ -2,9 +2,7 @@
 
 describe.only('Verify all Aeldari units and weapons exist', () => {
   beforeEach(() => {
-    cy.visit("/");
     cy.pasteListWithArgument("nr_aeldari_tester.txt");
-    cy.get("button[type='submit']").click();
   });
 
   describe("Shooting phase weapons", () => {

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
@@ -23,6 +23,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   const cardsCollapse = useStore((state) => state.cardsCollapse);
   const cardsGroup = useStore((state) => state.cardsGroup);
   const showKeywords = useStore((state) => state.showKeywords);
+  const weaponsFilter = useStore((state) => state.weaponsFilter);
 
   let characteristic: React.ReactNode;
   let toggled = true;
@@ -58,6 +59,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       [characteristic, toggled] = ShootingOrFightPhase({
         unit,
         phase,
+        weaponsFilter,
       });
       break;
     case Phase.Charge:
@@ -88,7 +90,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     unit.toggled && (toggled || abilitiesToggle || enhancementsToggle);
   const fadedClasses = cardToggled ? "" : "opacity-50";
 
-  const groupingNumber = cardsGroup ? `[x${unit.count}]` : "";
+  const groupingNumber = cardsGroup ? `[${unit.count}x]` : "";
 
   return (
     <ul
@@ -103,8 +105,11 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
         <div
           className={`flex flex-row font-semibold text-xl align-middle items-center flex-grow ${fadedClasses} cursor-pointer`}
         >
-          <div className="flex-row flex-grow text-black dark:text-gray-50">
-            {unit.name} {groupingNumber}
+          <div className="flex-row text-gray-800 dark:text-gray-400 break-inside-avoid mr-1">
+            {groupingNumber}
+          </div>
+          <div className="flex-1 flex-row flex-grow text-black dark:text-gray-50 break-inside-avoid">
+            {unit.name}
           </div>
 
           {showKeywords && (

@@ -1,0 +1,11 @@
+Xenos - T'au Empire - Full - [605pts]
+
+# ++ Army Roster ++ [605pts]
+## Configuration
+Battle Size: Onslaught (3000 Point limit)
+Detachment: Mont'ka
+Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+Piranha [60pts]:
+• 1x Piranhas [60pts]: Armoured hull, 2x Twin pulse carbine, Piranha fusion blaster, 2x Seeker missile

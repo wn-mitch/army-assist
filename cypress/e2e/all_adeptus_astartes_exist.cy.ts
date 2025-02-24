@@ -2,9 +2,7 @@
 
 describe.only('Verify all Adeptus Astartes units and weapons exist', () => {
   beforeEach(() => {
-    cy.visit("/");
     cy.pasteListWithArgument("nr_aa.txt");
-    cy.get("button[type='submit']").click();
   });
 
   describe("Shooting phase weapons", () => {

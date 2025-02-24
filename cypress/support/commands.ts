@@ -9,7 +9,7 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 
-Cypress.Commands.add('pasteListWithArgument', (filename: string) => {
+Cypress.Commands.add("pasteListWithArgument", (filename: string) => {
   // Read the text from the file
   cy.readFile(`src/assets/lists/${filename}`).then((text) => {
     // Normalize newlines in the text from the file
@@ -34,16 +34,19 @@ Cypress.Commands.add('pasteListWithArgument', (filename: string) => {
         // Normalize newlines in the value from the textarea
         const normalizedVal = val.replace(/\r\n/g, "\n");
         expect(normalizedVal.trim()).to.equal(normalizedText.trim());
+      })
+      .then(() => {
+        cy.get("button[type='submit']").click();
       });
   });
 });
 
-Cypress.Commands.add('checkShootingPhase', (weapon: string) => {
-    cy.get('#headlessui-radio-\\:rd\\:').click();
-    cy.contains(new RegExp(weapon, 'i')).should("exist");
+Cypress.Commands.add("checkShootingPhase", (weapon: string) => {
+  cy.get("#headlessui-radio-\\:rd\\:").click();
+  cy.contains(new RegExp(weapon, "i")).should("exist");
 });
 
-Cypress.Commands.add('checkFightPhase', (weapon: string) => {
-    cy.get('#headlessui-radio-\\:rf\\:').click();
-    cy.contains(new RegExp(weapon, 'i')).should("exist");
+Cypress.Commands.add("checkFightPhase", (weapon: string) => {
+  cy.get("#headlessui-radio-\\:rf\\:").click();
+  cy.contains(new RegExp(weapon, "i")).should("exist");
 });

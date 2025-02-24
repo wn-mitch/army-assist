@@ -14,9 +14,7 @@ import Side from "@/types/Side";
 import SortOptions from "@/types/SortOptions";
 import Enhancement from "@/types/Enhancement";
 import DatasheetModel from "@/types/DatasheetModel";
-import {
-  getCurrentStateVersion,
-} from "@/utils/VersionHelper";
+import { getCurrentStateVersion } from "@/utils/VersionHelper";
 
 interface StoreState {
   text: string;
@@ -41,6 +39,7 @@ interface StoreState {
   isDarkMode: boolean;
   cardsGroup: boolean;
   currentSaveVersion: number;
+  weaponsFilter: boolean;
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
@@ -53,11 +52,12 @@ interface StoreState {
   setShowKeywords: (showKeywords: boolean) => void;
   setIsDarkMode: (isDarkMode: boolean) => void;
   setCardsGroup: (cardsGroup: boolean) => void;
+  setWeaponsFilter: (weaponsFilter: boolean) => void;
 }
 
 const useStore = create<StoreState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       text: "",
       units: [],
       round: 1,
@@ -80,6 +80,7 @@ const useStore = create<StoreState>()(
       isDarkMode: true,
       cardsGroup: true,
       currentSaveVersion: getCurrentStateVersion(),
+      weaponsFilter: true,
       reset: () =>
         set({
           text: "",
@@ -200,6 +201,15 @@ const useStore = create<StoreState>()(
             // Name Overrides
             if (unit.name === "Vypers") {
               unit.name = "Vyper";
+            }
+            if (unit.name === "Ancient in Terminator Armor") {
+              unit.name = "Ancient in Terminator Armour";
+            }
+            if (unit.name === "Wraithblade") {
+              unit.name = "Wraithblades";
+            }
+            if (unit.name === "Piranha") {
+              unit.name = "Piranhas";
             }
 
             const datasheetsMatchingName = Datasheets.filter(
@@ -354,6 +364,16 @@ const useStore = create<StoreState>()(
                 : ["Psychic Shock Wave"];
             }
 
+            if (datasheet.name === "Wraithblades") {
+              if(weapons) {
+                if (weapons[0] === "Ghostaxe and Forceshield") {
+                  weapons = ["Ghostaxe", "Forceshield"];
+                } else {
+                  weapons = ["Ghostswords", "Forceshield"];
+                }
+              }
+            }
+
             weapons = weapons?.flatMap((weapon) => {
               const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
               if (match) {
@@ -426,6 +446,7 @@ const useStore = create<StoreState>()(
       setShowKeywords: (showKeywords: boolean) => set({ showKeywords }),
       setIsDarkMode: (isDarkMode: boolean) => set({ isDarkMode }),
       setCardsGroup: (cardsGroup: boolean) => set({ cardsGroup }),
+      setWeaponsFilter: (weaponsFilter: boolean) => set({ weaponsFilter }),
     }),
     {
       name: "army-storage",

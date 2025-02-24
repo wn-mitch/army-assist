@@ -25,6 +25,9 @@ function Settings() {
   const cardsGroup = useStore((state) => state.cardsGroup);
   const setCardsGroup = useStore((state) => state.setCardsGroup);
 
+  const weaponsFilter = useStore((state) => state.weaponsFilter);
+  const setWeaponsFilter = useStore((state) => state.setWeaponsFilter);
+
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
@@ -163,6 +166,15 @@ function Settings() {
                 label="Checking this option will show the keywords of each datacard. Disabling this option will reduce card height."
                 checked={showKeywords}
                 onChange={() => setShowKeywords(!showKeywords)}
+              />
+            </div>
+            
+            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold">Filter Weapons</h2>
+              <SettingsOption
+                label="Filter the weapons shown on the datacard by what's on your list. If you see missing weapons, this is a good option to disable."
+                checked={weaponsFilter}
+                onChange={() => setWeaponsFilter(!weaponsFilter)}
               />
             </div>
 
