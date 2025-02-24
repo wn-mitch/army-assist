@@ -11,8 +11,8 @@ interface ListUnit {
   points: number | null;
   details: string | undefined;
   toggled: boolean; 
-  children?: ListUnit[];
-  weapons: string[];
+  children: ListUnit[];
+  weapons: string[] | undefined;
   abilities: Ability[];
   enhancements: Enhancement[];
   datasheetModel: DatasheetModel | null;

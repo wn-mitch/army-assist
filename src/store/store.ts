@@ -37,6 +37,7 @@ interface StoreState {
   cardsCollapse: boolean;
   showKeywords: boolean;
   isDarkMode: boolean;
+  cardsGroup: boolean;
   currentSaveVersion: number;
   reset: () => void;
   setText: (text: string) => void;
@@ -49,11 +50,12 @@ interface StoreState {
   setCardsCollapse: (cardsCollapse: boolean) => void;
   setShowKeywords: (showKeywords: boolean) => void;
   setIsDarkMode: (isDarkMode: boolean) => void;
+  setCardsGroup: (cardsGroup: boolean) => void;
 }
 
 const useStore = create<StoreState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       text: "",
       units: [],
       round: 1,
@@ -74,6 +76,7 @@ const useStore = create<StoreState>()(
       cardsCollapse: true,
       showKeywords: true,
       isDarkMode: true,
+  cardsGroup: true,
       currentSaveVersion: getCurrentVersion(),
       reset: () =>
         set({
@@ -114,43 +117,53 @@ const useStore = create<StoreState>()(
         const listUnits: ListUnit[] = [];
         let lastParentUnit: ListUnit | null = null;
 
-        lines.forEach((line, index) => {
-          const detachmentMatch = line.match(
-            /Detachment[\sChoice]*: ([\w\s]+)/
-          );
+    lines.forEach((line, index) => {
+      const detachmentMatch = line.match(/Detachment[\sChoice]*: ([\w\s-]+)/);
 
-          if (detachmentMatch) {
-            set({ detachment: detachmentMatch[1] });
-          }
+      if (detachmentMatch) {
+        // Name overrides
+        let name = detachmentMatch[1];
 
-          const parentMatch = line.match(
-            /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]']+)\s\[\d+pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
-          );
-          const childMatch = line.match(
-            /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/
-          );
+        switch (name) {
+          case "Pact-bound Zealots":
+            name = "Pactbound Zealots" 
+            break;
+          default:
+            break;
+        }
 
-          if (parentMatch) {
-            // eslint-disable-next-line prefer-const
-            let [, name, details] = parentMatch;
-            name = name.replace(" [Legends]", "");
-            if (name) {
-              lastParentUnit = {
-                id: index,
-                name,
-                details: details,
-                children: [],
-                toggled: true,
-                count: null,
-                points: null,
-                datasheet_id: null,
-                weapons: [],
-                abilities: [],
-                enhancements: [],
-                datasheet: null,
-                datasheetModel: null,
-                keywords: "",
-              };
+        set({ detachment: name });
+      }
+
+
+      const parentMatch = line.match(
+        /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]']+)\s\[\d+[\s]?pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
+      );
+      const childMatch = line.match(
+        /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/
+      );
+      
+      if (parentMatch) {
+        // eslint-disable-next-line prefer-const
+        let [, name, details] = parentMatch;
+        name = name.replace(" [Legends]", "");
+        if (name) {
+          lastParentUnit = {
+            id: index,
+            name,
+            details: details,
+            children: [],
+            toggled: true,
+            count: 1,
+            points: null,
+            datasheet_id: null,
+            weapons: [],
+            abilities: [],
+            enhancements: [],
+            datasheet: null,
+            datasheetModel: null,
+            keywords: "",
+          };
 
               listUnits.push(lastParentUnit);
             }
@@ -179,23 +192,30 @@ const useStore = create<StoreState>()(
           }
         });
 
-        if (listUnits.length > 0) {
-          const updatedUnits = listUnits.map((unit) => {
-            const datasheetsMatchingName = Datasheets.filter(
-              (item) => item.name.toLowerCase() === unit.name.toLowerCase()
-            );
+    if (listUnits.length > 0) {
+      const updatedUnits = listUnits.map((unit) => {
+
+        // Name Overrides
+        if(unit.name === "Vypers") {
+          unit.name = "Vyper"
+        }
+
+        const datasheetsMatchingName = Datasheets.filter(
+          (item) => item.name.toLowerCase() === unit.name.toLowerCase()
+        );
 
             // Create an array of all unique factions in the datasheets
             const uniqueFactions = Array.from(
               new Set(datasheetsMatchingName.map((item) => item.faction_id))
             );
 
-            // @ts-expect-error - Line 145 has a check that should prevent this from being null
-            const datasheet = uniqueFactions.includes()
-              ? datasheetsMatchingName.filter(
-                  (item) => item.faction_id === factionAbbreviation
-                )[0]
-              : datasheetsMatchingName[0];
+        // @ts-expect-error - Line 145 has a check that should prevent this from being null
+        const datasheet = uniqueFactions.includes()
+          ? datasheetsMatchingName.filter(
+              (item) => item.faction_id === factionAbbreviation
+            )[0]
+          : datasheetsMatchingName[0];
+       
 
             if (!datasheet) {
               window.alert(`Datasheet not found for unit ${unit.name}`);
@@ -314,23 +334,25 @@ const useStore = create<StoreState>()(
                 return cleanedName.split(",").map((part) => part.trim());
               });
 
-            if (datasheet.id === "000000613") {
-              weapons = weapons
-                ? [...weapons, "Wraithbone fists"]
-                : ["Wraithbone fists"];
-            }
+        // Weapon Overrides
+        if (datasheet.id === "000000613") {
+          weapons = weapons
+            ? [...weapons, "Wraithbone fists"]
+            : ["Wraithbone fists"];
+        }
 
-            if (datasheet.id === "000002565") {
-              weapons = weapons
-                ? [...weapons, "Armoured limbs"]
-                : ["Armoured limbs"];
-            }
+        if (datasheet.id === "000002565") {
+          weapons = weapons
+            ? [...weapons, "Armoured limbs"]
+            : ["Armoured limbs"];
+        }
 
-            if (datasheet.id === "000002565") {
-              weapons = weapons
-                ? [...weapons, "Psychic Shock Wave"]
-                : ["Psychic Shock Wave"];
-            }
+        if (datasheet.id === "000002565") {
+          weapons = weapons
+            ? [...weapons, "Psychic Shock Wave"]
+            : ["Psychic Shock Wave"];
+        }
+
 
             weapons = weapons?.flatMap((weapon) => {
               const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
@@ -352,16 +374,20 @@ const useStore = create<StoreState>()(
               .map((x) => x.keyword)
               .join(", ");
 
-            return {
-              ...unit,
-              abilities: matchingAbilities,
-              weapons: weapons,
-              datasheet: datasheet,
-              datasheetModel: datasheetModel,
-              keywords: keywords,
-              enhancements: matchingEnhancements,
-            };
-          });
+        return {
+          ...unit,
+          abilities: matchingAbilities,
+          weapons: weapons,
+          datasheet: datasheet,
+          datasheetModel: datasheetModel,
+          keywords: keywords,
+          enhancements: matchingEnhancements,
+        };
+      }) as ListUnit[];
+
+      if (!updatedUnits) {
+        return false;
+      }
 
           set({ units: updatedUnits as ListUnit[] });
         }
@@ -399,6 +425,7 @@ const useStore = create<StoreState>()(
       setCardsCollapse: (cardsCollapse: boolean) => set({ cardsCollapse }),
       setShowKeywords: (showKeywords: boolean) => set({ showKeywords }),
       setIsDarkMode: (isDarkMode: boolean) => set({ isDarkMode }),
+  setCardsGroup: (cardsGroup: boolean) => set({ cardsGroup }),
     }),
     {
       name: "army-storage",
