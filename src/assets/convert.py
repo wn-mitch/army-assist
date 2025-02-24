@@ -1,7 +1,12 @@
 import csv
 import json
 import os
+import re
 
+replacements = {
+    r"<[:\.\-\w\d\s;#\\+()\.,\[\]_=\"/]+>": "",
+    r"\u2019": "\'",
+}
 
 def csv_to_json(csv_filepath, json_filepath):
     data = []
@@ -9,8 +14,13 @@ def csv_to_json(csv_filepath, json_filepath):
     with open(csv_filepath, mode='r', encoding='utf-8-sig') as csv_file:
         csv_reader = csv.DictReader(csv_file, delimiter='|')
         for row in csv_reader:
+            for key, value in row.items():
+                if value is not None:
+                    for old_text, new_text in replacements.items():
+                        value = re.sub(old_text, new_text, value)
+                row[key] = value
             data.append(row)
-
+            
     with open(json_filepath, mode='w', encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4)
 
