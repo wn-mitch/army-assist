@@ -41,7 +41,6 @@ export default function StratagemPanel() {
 
   const filteredStratagems = Stratagems.map((stratagem) => {
     const [splitDetachment, splitType] = stratagem.type.split(" - ");
-
     if (splitDetachment === "Core") {
       return {
         ...stratagem,
@@ -62,8 +61,8 @@ export default function StratagemPanel() {
     .filter((stratagem) => {
       return (
         stratagem.detachment === detachment ||
-        stratagem.detachment === "Core" ||
-        stratagem.detachment === ""
+        stratagem.detachment === "" ||
+        stratagem.detachment === "Core"
       );
     })
     .filter((stratagem) => stratagem.phases.includes(phase));

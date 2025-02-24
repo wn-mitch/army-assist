@@ -37,3 +37,13 @@ Cypress.Commands.add('pasteListWithArgument', (filename: string) => {
       });
   });
 });
+
+Cypress.Commands.add('checkShootingPhase', (weapon: string) => {
+    cy.get('#headlessui-radio-\\:rd\\:').click();
+    cy.contains(new RegExp(weapon, 'i')).should("exist");
+});
+
+Cypress.Commands.add('checkFightPhase', (weapon: string) => {
+    cy.get('#headlessui-radio-\\:rf\\:').click();
+    cy.contains(new RegExp(weapon, 'i')).should("exist");
+});
