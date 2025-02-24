@@ -106,7 +106,6 @@ const tagDetails: { [key: string]: TagDetail } = {
   "Rapid Fire d": {
     name: "Rapid Fire d",
     icon: <GiMinigun className="h-5 w-5" />,
-    icon: <GiMinigun className="h-5 w-5" />,
     bgColor: "bg-purple-200 dark:bg-purple-900",
     ringColor: "ring-purple-900 dark:ring-purple-500",
     textColor: "text-purple-800 dark:text-purple-200",
