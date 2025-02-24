@@ -61,7 +61,9 @@ export default function StratagemPanel() {
     )
     .filter((stratagem) => {
       return (
-        stratagem.detachment === detachment || stratagem.detachment === "Core"
+        stratagem.detachment === detachment ||
+        stratagem.detachment === "Core" ||
+        stratagem.detachment === ""
       );
     })
     .filter((stratagem) => stratagem.phases.includes(phase));

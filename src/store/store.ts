@@ -77,7 +77,7 @@ const useStore = create<StoreState>()(
       showKeywords: true,
       isDarkMode: true,
   cardsGroup: true,
-      currentSaveVersion: getCurrentVersion(),
+      currentSaveVersion: getCurrentStateVersion(),
       reset: () =>
         set({
           text: "",
@@ -87,7 +87,7 @@ const useStore = create<StoreState>()(
           detachment: undefined,
           turn: Side.Me,
           phase: Phase.Command,
-          currentSaveVersion: getCurrentVersion(),
+          currentSaveVersion: getCurrentStateVersion(),
         }),
       setText: (text: string) => set({ text }),
       parseText: (text: string): boolean => {
