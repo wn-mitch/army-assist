@@ -7,6 +7,7 @@ import {
 } from "@headlessui/react";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import changelogData from "@/assets/json/Changelog.json";
+import { getCurrentVersion } from "@/utils/VersionHelper";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ function Changelog() {
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
-  const currentVersion = changelogData[0].version;
+  const currentVersion = getCurrentVersion();
 
   return (
     <>

@@ -3410,7 +3410,7 @@
     {
         "datasheet_id": "000000408",
         "line": "1",
-        "name": "Aun\u2019shi",
+        "name": "Aun'shi",
         "M": "6\"",
         "T": "3",
         "Sv": "6+",
@@ -3426,7 +3426,7 @@
     {
         "datasheet_id": "000000409",
         "line": "1",
-        "name": "AUN\u2019VA",
+        "name": "AUN'VA",
         "M": "6\"",
         "T": "3",
         "Sv": "5+",
@@ -3890,7 +3890,7 @@
     {
         "datasheet_id": "000000444",
         "line": "1",
-        "name": "Y\u2019vahra Battlesuit",
+        "name": "Y'vahra Battlesuit",
         "M": "10\"",
         "T": "9",
         "Sv": "2+",
@@ -3906,7 +3906,7 @@
     {
         "datasheet_id": "000000445",
         "line": "1",
-        "name": "R\u2019varna Battlesuit",
+        "name": "R'varna Battlesuit",
         "M": "8\"",
         "T": "10",
         "Sv": "2+",
@@ -3922,7 +3922,7 @@
     {
         "datasheet_id": "000000446",
         "line": "1",
-        "name": "Ta\u2019unar Supremacy Armour",
+        "name": "Ta'unar Supremacy Armour",
         "M": "8\"",
         "T": "13",
         "Sv": "2+",
@@ -5186,7 +5186,7 @@
     {
         "datasheet_id": "000000541",
         "line": "1",
-        "name": "C\u2019tan Shard Of The Nightbringer",
+        "name": "C'tan Shard Of The Nightbringer",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -5202,7 +5202,7 @@
     {
         "datasheet_id": "000000542",
         "line": "1",
-        "name": "C\u2019tan Shard Of The Deceiver",
+        "name": "C'tan Shard Of The Deceiver",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -5362,7 +5362,7 @@
     {
         "datasheet_id": "000000555",
         "line": "1",
-        "name": "Transcendent C\u2019tan",
+        "name": "Transcendent C'tan",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -5874,7 +5874,7 @@
     {
         "datasheet_id": "000000590",
         "line": "2",
-        "name": "SERPENT\u2019S SCALE PLATFORM",
+        "name": "SERPENT'S SCALE PLATFORM",
         "M": "7\"",
         "T": "3",
         "Sv": "4+",
@@ -6875,7 +6875,7 @@
         "W": "1",
         "Ld": "6+",
         "OC": "1",
-        "base_size": "25mm",
+        "base_size": "28mm",
         "base_size_descr": "",
         "": ""
     },
@@ -7554,7 +7554,7 @@
     {
         "datasheet_id": "000000713",
         "line": "1",
-        "name": "\u2018Iron Hand\u2019 Straken",
+        "name": "\u2018Iron Hand' Straken",
         "M": "6\"",
         "T": "3",
         "Sv": "3+",
@@ -11618,7 +11618,7 @@
     {
         "datasheet_id": "000001148",
         "line": "1",
-        "name": "Be\u2019lakor",
+        "name": "Be'lakor",
         "M": "12\"",
         "T": "10",
         "Sv": "4+",
@@ -14690,7 +14690,7 @@
     {
         "datasheet_id": "000001649",
         "line": "1",
-        "name": "Syll\u2019esske",
+        "name": "Syll'esske",
         "M": "9\"",
         "T": "6",
         "Sv": "6+",
@@ -15906,7 +15906,7 @@
     {
         "datasheet_id": "000002357",
         "line": "1",
-        "name": "C\u2019tan Shard Of The Void Dragon",
+        "name": "C'tan Shard Of The Void Dragon",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -16706,7 +16706,7 @@
     {
         "datasheet_id": "000002499",
         "line": "1",
-        "name": "Big\u2019ed Bossbunka",
+        "name": "Big'ed Bossbunka",
         "M": "-",
         "T": "10",
         "Sv": "3+",
@@ -17515,7 +17515,7 @@
         "W": "1",
         "Ld": "7+",
         "OC": "0",
-        "base_size": "25mm",
+        "base_size": "28mm",
         "base_size_descr": "",
         "": ""
     },
@@ -18530,7 +18530,7 @@
     {
         "datasheet_id": "000002682",
         "line": "1",
-        "name": "Lion El\u2019jonson",
+        "name": "Lion El'jonson",
         "M": "8\"",
         "T": "9",
         "Sv": "2+",
@@ -18706,7 +18706,7 @@
     {
         "datasheet_id": "000002693",
         "line": "1",
-        "name": "Von Ryan\u2019s Leapers",
+        "name": "Von Ryan's Leapers",
         "M": "10\"",
         "T": "5",
         "Sv": "4+",
@@ -18882,7 +18882,7 @@
     {
         "datasheet_id": "000002709",
         "line": "1",
-        "name": "Kor\u2019sarro Khan",
+        "name": "Kor'sarro Khan",
         "M": "6\"",
         "T": "4",
         "Sv": "3+",
@@ -19154,7 +19154,7 @@
     {
         "datasheet_id": "000002726",
         "line": "1",
-        "name": "Vulkan He\u2019stan",
+        "name": "Vulkan He'stan",
         "M": "6\"",
         "T": "4",
         "Sv": "2+",
@@ -19803,7 +19803,7 @@
         "W": "4",
         "Ld": "6+",
         "OC": "1",
-        "base_size": "32mm flying base",
+        "base_size": "32mm",
         "base_size_descr": "",
         "": ""
     },
@@ -20226,7 +20226,7 @@
     {
         "datasheet_id": "000002795",
         "line": "1",
-        "name": "The Emperor\u2019s Champion",
+        "name": "The Emperor's Champion",
         "M": "6\"",
         "T": "4",
         "Sv": "2+",
@@ -25483,7 +25483,7 @@
         "W": "3",
         "Ld": "6+",
         "OC": "1",
-        "base_size": "32mm",
+        "base_size": "40mm",
         "base_size_descr": "",
         "": ""
     },
@@ -25746,7 +25746,7 @@
     {
         "datasheet_id": "000003888",
         "line": "1",
-        "name": "Von Ryan\u2019s Leapers",
+        "name": "Von Ryan's Leapers",
         "M": "10\"",
         "T": "5",
         "Sv": "4+",

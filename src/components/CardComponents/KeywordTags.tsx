@@ -70,7 +70,7 @@ const tagDetails: { [key: string]: TagDetail } = {
     ringColor: "ring-yellow-900 dark:ring-yellow-500",
     textColor: "text-yellow-800 dark:text-yellow-200",
   },
-  "One-shot": {
+  "One shot": {
     icon: <GiAmmoBox className="h-5 w-5" />,
     bgColor: "bg-green-200 dark:bg-green-900",
     ringColor: "ring-green-900 dark:ring-green-500",
@@ -288,6 +288,20 @@ const tagDetails: { [key: string]: TagDetail } = {
   },
 };
 
+function getParameterCaseInsensitive(
+  object: { [key: string]: TagDetail },
+  key: string
+) {
+  const asLowercase = key.toLowerCase();
+  if (!object) {
+    return;
+  } else {
+    return object[
+      Object.keys(object).find((k: string) => k.toLowerCase() === asLowercase) || ''
+    ];
+  }
+}
+
 function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
   if (!keywords) {
     return null;
@@ -297,7 +311,7 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
         <div className="gap-0.5 flex flex-wrap overflow-hidden">
           {keywords
             .filter((keyword) => keyword !== "")
-            .map((keyword) => {
+            .map((keyword, index) => {
               const match = keyword.match(/([A-Za-z\s-]+)([\d+]+)?/);
 
               if (!match) {
@@ -308,7 +322,11 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
               const baseTag = match[1].trim();
               const count = match[2] ? match[2] : "";
 
-              const tagDetail = tagDetails[baseTag];
+              const tagDetail = getParameterCaseInsensitive(
+                tagDetails,
+                baseTag
+              );
+              // const tagDetail = tagDetails[baseTag];
 
               if (!tagDetail) {
                 window.alert(`Unknown tag: ${baseTag}`);
@@ -323,7 +341,7 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
               return (
                 <>
                   <div
-                    key={keyword}
+                    key={index}
                     data-tooltip-target={`keyword-tooltip-${baseTag}`}
                     className={`first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 dark:ring-1 ${tagDetail.ringColor} ring-inset truncate`}
                   >

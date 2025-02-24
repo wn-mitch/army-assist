@@ -211,7 +211,7 @@
         "faction_id": "AdM",
         "name": "Noospheric Transference",
         "legend": "Tech-Priests can override the will of their thralls and project martial data inloads into the minds of their warriors, blessing the soldiery with endless streams of precisely tailored binharic code.",
-        "description": "In your Command phase, select one or more units from your army (including units that are embarked within TRANSPORTS). The maximum number of units you can select depends on the battle size, as follows:INCURSION:1 UNITSTRIKE FORCE2 UNITSONSLAUGHT3 UNITSUntil the start of your next Command phase, those units gain the HALO OVERRIDE keyword. Then, select one of the Override abilities below. Until the start of your next Command phase, units from your army with the HALO OVERRIDE keyword have the selected Override ability:Electromotive EnergisationAdd 2\" to the Move characteristic of models in this unit.Microactuator BracingAdd 1 to the Toughness characteristic of models in this unit.Predation ProtocolsThis unit is eligible to declare a charge in a turn in which it Advanced.Muted ServomotorsModels in this unit have the Stealth ability.",
+        "description": "In your Command phase, select one or more ADEPTUS MECHANICUS units from your army (including units that are embarked within TRANSPORTS). The maximum number of units you can select depends on the battle size, as follows:INCURSION:1 UNITSTRIKE FORCE2 UNITSONSLAUGHT3 UNITSUntil the start of your next Command phase, those units gain the HALO OVERRIDE keyword. Then, select one of the Override abilities below. Until the start of your next Command phase, units from your army with the HALO OVERRIDE keyword have the selected Override ability:Electromotive EnergisationAdd 2\" to the Move characteristic of models in this unit.Microactuator BracingAdd 1 to the Toughness characteristic of models in this unit.Predation ProtocolsThis unit is eligible to declare a charge in a turn in which it Advanced.Muted ServomotorsModels in this unit have the Stealth ability.",
         "detachment": "Haloscreed Battle Clade",
         "": "",
         "phases": [
@@ -336,8 +336,8 @@
         "id": "000009798",
         "faction_id": "AM",
         "name": "Only the Best",
-        "legend": "The soldiers who make up such targeted strike forces are hand-picked for their excellence and, where possible, provided with rigorous additional training to prepare them for conditions and foes on the ground. ",
-        "description": "Each time an ASTRA MILITARUM INFANTRY model from your army makes a ranged attack, re-roll a Hit roll of 1.",
+        "legend": "The soldiers who make up such targeted strike forces are hand-picked for their excellence and \u2013 where possible \u2013 provided with rigorous additional training to prepare them for conditions and foes on the ground. ",
+        "description": "Each time an ASTRA MILITARUM INFANTRY model from your army makes a ranged attack, re\u2010roll a Hit roll of 1.",
         "detachment": "Bridgehead Strike",
         "": "",
         "phases": [
@@ -853,7 +853,7 @@
         "id": "000009772",
         "faction_id": "CSM",
         "name": "Experimental Augmentations",
-        "legend": "Bile's creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality, for now.",
+        "legend": "Bile's creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality \u2013 for now.",
         "description": "At the start of the battle, select which augmentations are active for HERETIC ASTARTES INFANTRY models (excluding DAMNED models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If FABIUS BILE is your WARLORD, when randomly determining your augmentations, you can re-roll one or both of the dice. Duplicated augmentations have no additional effect.Cholinergic Accelerants: Add 1 to the Attacks characteristic of melee weapons equipped by this model.Hyperadrenal Infusion: Add 2\" to the Move characteristic of this model.Paraneural Reactions: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.Supracutaneous Chitination: Improve the Toughness characteristic of this model by 1.Macrotensile Sinews: Add 1 to the Strength characteristic of melee weapons equipped by this model.Ophthalmic Enhancement: Improve the Ballistic Skill characteristic of ranged weapons equipped by this model by 1.",
         "detachment": "Creations of Bile",
         "": "",
@@ -869,7 +869,7 @@
         "id": "000008398",
         "faction_id": "DG",
         "name": "Spread the Sickness",
-        "legend": "To the Death Guard, spreading Nurgle's gifts goes beyond the beings they fight, even the landscapes they tread upon they seek to corrupt, cultivating Nurgle's garden as widely as possible.",
+        "legend": "To the Death Guard, spreading Nurgle's gifts goes beyond the beings they fight \u2013 even the landscapes they tread upon they seek to corrupt, cultivating Nurgle's garden as widely as possible.",
         "description": "During the Declare Battle Formations step, select one of the Sicknesses below. Until the end of the battle, all units from your army with the Nurgle's Gift ability gain the selected Sickness.Skullsquirm Blight (Aura): While an enemy unit is within Contagion Range of this unit, worsen the Ballistic Skill and Weapon Skill characteristics of weapons equipped by models in that enemy unit by 1.Rattlejoint Ague (Aura): While an enemy unit is within Contagion Range of this unit, worsen the Save characteristic of models in that enemy unit by 1.Scabrous Soulrot (Aura): While an enemy unit is within Contagion Range of this unit, worsen the Leadership and Objective Control characteristics of models in that enemy unit by 1 (to a minimum of 1).If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army is within range of that objective marker, that objective marker is said to be Infected and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. In addition, while an objective marker is Infected and under your control, it has the Nurgle's Gift ability as if it were a unit from your army (so enemy units within Contagion Range of it will have their characteristics modified).",
         "detachment": "Plague Company",
         "": "",
@@ -1565,7 +1565,7 @@
         "faction_id": "QT",
         "name": "Dreaded Masters",
         "legend": "Mortal thralls and foes alike are sacrificed to empower the fallen nobility.",
-        "description": "TITANIC CHAOS KNIGHTS units from your army have the following abilities:Dread Tyrants (Aura): While a friendly DAMNED unit is within 9\" of this unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.CHAOS KNIGHTS units from your army have the following abilities:Dark Sacrifice: Each time a CHAOS KNIGHTS unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one DAMNED unit within 6\". That DAMNED unit must take a Leadership test: if passed, destroy D3 models in that DAMNED unit; if failed, destroy D3+3 models in that DAMNED unit. In either case, then select one of the following abilities for your CHAOS KNIGHTS unit's weapons to have until the end of the phase: [LETHAL HITS]; [SUSTAINED HITS 1].WRETCHED THRALLSYou can include DAMNED units in your army (see Codex: Chaos Space Marines). The combined points cost of such units depends on your battle size:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo DAMNED models from your army can be your WARLORD.",
+        "description": "TITANIC CHAOS KNIGHTS units from your army have the following abilities:Dread Tyrants (Aura): While a friendly DAMNED unit is within 9\" of this unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.CHAOS KNIGHTS units from your army have the following abilities:Dark Sacrifice: Each time a CHAOS KNIGHTS unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly DAMNED unit within 6\". That DAMNED unit must take a Leadership test: if passed, destroy D3 models in that DAMNED unit; if failed, destroy D3+3 models in that DAMNED unit. In either case, then select one of the following abilities for your CHAOS KNIGHTS unit's weapons to have until the end of the phase: [LETHAL HITS]; [SUSTAINED HITS 1].WRETCHED THRALLSYou can include DAMNED units in your army (see Codex: Chaos Space Marines). The combined points cost of such units depends on your battle size:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo DAMNED models from your army can be your WARLORD.",
         "detachment": "Iconoclast Fiefdom",
         "": "",
         "phases": [
@@ -1677,6 +1677,20 @@
         "phases": [
             "Command",
             "Shooting"
+        ]
+    },
+    {
+        "id": "000008521",
+        "faction_id": "SM",
+        "name": "Mission Tactics",
+        "legend": "Thousands of years of collated strategic data and hard-won combat experience have provided the Deathwatch with the ultimate battlefield tactics to combat almost any foe.",
+        "description": "At the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.FUROR TACTICSWhen the enemy horde grows close, the Deathwatch will be tasked with the decimation of their core. Aiming not for clinical kills but for maximum destruction over a wide area, they tear the heart from the enemy army.While this Mission Tactic is active, weapons equipped by ADEPTUS ASTARTES units from your army have the [SUSTAINED HITS 1] ability.MALLEUS TACTICSWhen the giants of war lumber forth, the Deathwatch will adopt Malleus tactics. Even the largest behemoth has a weak point, and the archives of the Deathwatch number them all.While this Mission Tactic is active, weapons equipped by ADEPTUS ASTARTES units from your army have the [LETHAL HITS] ability.PURGATUS TACTICSBy adopting Purgatus tactics, the Deathwatch focus their deadly ire upon the commanders of the enemy host, assassinating them one after another with pitiless head shots and killing thrusts of the blade.While this Mission Tactic is active, each time an ADEPTUS ASTARTES unit from your army makes an attack, if a Critical Hit is scored, that attack has the [PRECISION] ability.",
+        "detachment": "Black Spear Task Force",
+        "": "",
+        "phases": [
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -1913,7 +1927,7 @@
         "faction_id": "TAU",
         "name": "Bonded Heroes",
         "legend": "Cadres of T'au Battlesuit pilots fight in a manner inspired by the dynamism and determination of famous and beloved war leaders. Indeed, some of the specialist piloting manoeuvres they employ are named after such icons, in a few rare - and sometimes unofficial - cases even after those who have since fallen far from favour with the Ethereal Council. Either way, these bonded veterans are experts in the deadly art of engaging the enemy in close confines. They plunge into the heart of the enemy army where the fighting is fiercest, and prevail in the name of the Greater Good.",
-        "description": "Each time a T'AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 6\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+        "description": "Each time a T'AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 9\", improve the Armour Penetration characteristic of that attack by 1 as well.",
         "detachment": "Retaliation Cadre",
         "": "",
         "phases": [
@@ -1984,7 +1998,7 @@
         "id": "000009838",
         "faction_id": "TAU",
         "name": "Integrated Command Structure",
-        "legend": "T'au officers given charge of auxiliary cadres receive additional training in optimised doctrinal and strategic alien amalgamation; this, coupled with specialised translation drones and endless integrated combat drills, allows them to get the best out of their alien subordinates.",
+        "legend": "T'au officers given charge of auxiliary cadres receive additional training in optimised doctrinal and strategic alien amalgamation; this \u2013 coupled with specialised translation drones and endless integrated combat drills \u2013 allows them to get the best out of their alien subordinates.",
         "description": "KROOT and VESPID STINGWINGS units from your army have the following ability:Targeting Triangulation (Aura): While an enemy unit is within 9\" of and visible to this unit, each time a ranged attack made by a friendly T'AU EMPIRE model (excluding KROOT, VESPID STINGWINGS and TITANIC models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.T'AU EMPIRE units (excluding KROOT and VESPID STINGWINGS units) from your army have the following ability:Localised Stealth Projectors (Aura): While a friendly KROOT or VESPID STINGWINGS unit is wholly within 6\" of and visible to this unit, that KROOT or VESPID STINGWINGS unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
         "detachment": "Auxiliary Cadre",
         "": "",
@@ -2201,7 +2215,7 @@
         "id": "000008430",
         "faction_id": "WE",
         "name": "Relentless Rage",
-        "legend": "The World Eaters fight in a perpetual fury, driven ever onwards to slaughter all who stand in their way. All of their warriors have been subject to horrific psycho-surgery, implanted with crude devices that amplify their aggression, while some also submit to possession by the raging daemons of the Blood God. Whatever drives their berserk rage, these warriors only stop killing when every foe lies in ruin at their feet, and sometimes not even then.",
+        "legend": "The World Eaters fight in a perpetual fury, driven ever onwards to slaughter all who stand in their way. All of their warriors have been subject to horrific psycho-surgery, implanted with crude devices that amplify their aggression, while some also submit to possession by the raging daemons of the Blood God. Whatever drives their berserk rage, these warriors only stop killing when every foe lies in ruin at their feet \u2013 and sometimes not even then.",
         "description": "Each time a WORLD EATERS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit.",
         "detachment": "Berzerker Warband",
         "": "",
