@@ -2,9 +2,7 @@
 
 describe('Verify all Chaos Daemons units and weapons exist', () => {
   beforeEach(() => {
-    cy.visit("/");
     cy.pasteListWithArgument("nr_demons.txt");
-    cy.get("button[type='submit']").click();
   });
 
   describe("Shooting phase weapons", () => {

@@ -1,8 +1,6 @@
 describe("Ensure all weapons listed in nr_fnf_tau are listed on either the Shooting or Fight phase pages", () => {
   beforeEach(() => {
-    cy.visit("/");
     cy.pasteListWithArgument("nr_fnf_tau.txt");
-    cy.get("button[type='submit']").click();
   });
 
   const checkShootingPhase = (weapon) => {
