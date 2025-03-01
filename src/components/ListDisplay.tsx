@@ -24,7 +24,6 @@ function ListDisplay() {
 
   const groupedUnits = cardsGroup
     ? units.reduce((acc: ListUnit[], curr:ListUnit) => {
-      console.log(curr)
         const index = acc.findIndex((item) => item.name === curr.name);
         if (index !== -1) {
           acc[index].count = (acc[index].count || 1) + 1;

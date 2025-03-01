@@ -172,7 +172,7 @@ function Settings() {
             <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
               <h2 className="text-lg font-semibold">Filter Weapons</h2>
               <SettingsOption
-                label="Filter the weapons shown on the datacard by what's on your list. If you see missing weapons, this is a good option to disable."
+                label="Filter the weapons shown on the datacard by what's on your list. If you see (or don't see, rather) missing weapons, this is a good option to disable."
                 checked={weaponsFilter}
                 onChange={() => setWeaponsFilter(!weaponsFilter)}
               />

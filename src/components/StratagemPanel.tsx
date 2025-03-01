@@ -15,6 +15,8 @@ export default function StratagemPanel() {
   const phase = useStore((state) => state.phase);
   const detachment = useStore((state) => state.detachment);
 
+  const stratagemNames = new Set();
+
   if (!faction || !phase || !detachment) {
     return null;
   }
@@ -65,8 +67,16 @@ export default function StratagemPanel() {
         stratagem.detachment === "Core"
       );
     })
-    .filter((stratagem) => stratagem.phases.includes(phase));
-
+    .filter((stratagem) => stratagem.phases.includes(phase))
+    .filter((stratagem) => {
+      if(stratagemNames.has(stratagem.name)) {
+        return false;
+      } else {
+        stratagemNames.add(stratagem.name);
+        return true;
+      }
+    });
+  
   return (
     <>
       <button
