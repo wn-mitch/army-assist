@@ -6,6 +6,7 @@ import re
 replacements = {
     r"<[:\.\-\w\d\s;#\\+()\.,\[\]_=\"/]+>": "",
     r"\u2019": "\'",
+    r"\u2018": "\'",
 }
 
 def csv_to_json(csv_filepath, json_filepath):

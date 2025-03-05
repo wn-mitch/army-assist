@@ -8,10 +8,12 @@ export default defineConfig({
   plugins: [
     react(),
     istanbul({
-      include: "src/*",
+      include: "src/**/*",
       exclude: ["node_modules", "test/"],
-      extension: [".js", ".ts", ".vue"],
-      requireEnv: true,
+      cypress: true,
+      extension: [".js", ".ts", ".vue", ".tsx", ".jsx"],
+      requireEnv: false,
+      forceBuildInstrument:true,
     }),
   ],
   server: {
@@ -27,4 +29,7 @@ export default defineConfig({
       },
     ],
   },
+  build:{
+    sourcemap: true,
+  }
 });

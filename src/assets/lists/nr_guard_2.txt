@@ -1,0 +1,59 @@
+Imperium - Astra Militarum - Test - [2000 pts]
+
+# ++ Army Roster ++ [2000 pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Siege Regiment
+Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible, Legends are visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Character [745 pts]
+Cadian Command Squad [85 pts]:
+• 1x Cadian Commander [20 pts]: Flash Grenades, Power fist, Plasma pistol
+• 1x Cadian Veteran Guardsman w/ Chainsword: Plasma gun and close combat weapon (Close combat weapon, Plasma gun), Plasma pistol
+• 1x Cadian Veteran Guardsman w/ Master vox: Close combat weapon, Lasgun, Master vox
+• 1x Cadian Veteran Guardsman w/ Medi-pack: Close combat weapon, Lasgun, Medi-pack
+• 1x Cadian Veteran Guardsman w/ Regimental standard: Close combat weapon, Regimental standard and lasgun (Lasgun, Regimental standard)
+Cadian Command Squad [85 pts]:
+• 1x Cadian Commander [20 pts]: Eager Advance, Power fist, Plasma pistol
+• 1x Cadian Veteran Guardsman w/ Chainsword: Plasma gun and close combat weapon (Close combat weapon, Plasma gun), Plasma pistol
+• 1x Cadian Veteran Guardsman w/ Master vox: Close combat weapon, Lasgun, Master vox
+• 1x Cadian Veteran Guardsman w/ Medi-pack: Close combat weapon, Lasgun, Medi-pack
+• 1x Cadian Veteran Guardsman w/ Regimental standard: Close combat weapon, Regimental standard and lasgun (Lasgun, Regimental standard)
+Rogal Dorn Commander [265 pts]: Armoured tracks, Heavy stubber, Oppressor cannon and coaxial autocannon (Coaxial autocannon, Oppressor cannon), Castigator gatling cannon, 2 Multi-meltas (2x Multi-melta), 2 Meltaguns (2x Meltagun)
+Rogal Dorn Commander [265 pts]: Armoured tracks, Heavy stubber, Warlord, Oppressor cannon and coaxial autocannon (Coaxial autocannon, Oppressor cannon), Castigator gatling cannon, 2 Multi-meltas (2x Multi-melta), 2 Meltaguns (2x Meltagun)
+Tech-Priest Enginseer [45 pts]: Enginseer Axe, Mechanicus pistol, Servo-arm
+
+## Battleline [240 pts]
+Cadian Shock Troops [120 pts]: 2 Shock Trooper Sergeants and 18 Shock Troopers
+• 2x Shock Trooper Sergeant: Laspistol and chainsword (Chainsword, Laspistol)
+• 14x Shock Trooper: Close combat weapon, Lasgun
+• 2x Shock Trooper w/ Grenade Launcher: Close combat weapon, Grenade launcher
+• 2x Shock Trooper w/ Plasma Gun: Close combat weapon, Plasma gun
+Cadian Shock Troops [120 pts]: 2 Shock Trooper Sergeants and 18 Shock Troopers
+• 2x Shock Trooper Sergeant: Laspistol and chainsword (Chainsword, Laspistol)
+• 14x Shock Trooper: Close combat weapon, Lasgun
+• 2x Shock Trooper w/ Grenade Launcher: Close combat weapon, Grenade launcher
+• 2x Shock Trooper w/ Plasma Gun: Close combat weapon, Plasma gun
+
+## Infantry [265 pts]
+Artillery Team [95 pts]: Crew close combat weapons, Lasgun, Siege cannon
+Field Ordnance Battery [100 pts]:
+• 2x Ordnance Team w/ Bombast field gun: Battery close combat weapons, Bombast field gun, Lasgun, Laspistol
+Krieg Combat Engineers [70 pts]:
+• 1x Krieg Engineer Watchmaster: Autopistol, Trench club
+• 4x Krieg Combat Engineer: Autopistol, Trench club
+
+## Mounted [120 pts]
+Attilan Rough Riders [60 pts]:
+• 1x Rough Rider Sergeant: Lasgun, Laspistol, Steed's hooves, Hunting lance
+• 4x Rough Rider w/ Hunting lance: Hunting lance, Lasgun, Laspistol, Steed's hooves
+Attilan Rough Riders [60 pts]:
+• 1x Rough Rider Sergeant: Lasgun, Laspistol, Steed's hooves, Hunting lance
+• 4x Rough Rider w/ Hunting lance: Hunting lance, Lasgun, Laspistol, Steed's hooves
+
+## Vehicle [180 pts]
+Leman Russ Exterminator [180 pts]: Armoured tracks, Exterminator autocannon, Hunter-killer missile, Lascannon, 2 Plasma Cannons (2x Plasma cannon), Heavy stubber
+
+## Allied Units [450 pts]
+Canis Rex [450 pts]: Chainbreaker las-impulsor, Chainbreaker multi-laser, Freedom's Hand
+• 1x Sir Hekhtur: Close combat weapon, Hekhtur's pistol

@@ -1,4 +1,5 @@
-describe('template spec', () => {
+/// <reference types="cypress" />
+describe('Toggle items spec', () => {
   beforeEach(() => {
     cy.pasteListWithArgument('nr_tau.txt');
   })

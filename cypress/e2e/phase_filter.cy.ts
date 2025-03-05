@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 describe('The Phase Filter should adjust the visible stats', () => {
   beforeEach(() => {
     cy.pasteListWithArgument('broadsides.txt');

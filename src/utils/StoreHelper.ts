@@ -1,0 +1,202 @@
+import Ability from "@/types/Ability";
+import Datasheet from "@/types/Datasheet";
+import Faction from "@/types/Faction";
+import ListUnit from "@/types/ListUnit";
+
+const applyFactionOverrides = (factions: Faction[]) => {
+  const extraFactions = [
+    {
+      id: "AE",
+      name: "Ynnari",
+      link: "https://wahapedia.ru/wh40k10ed/factions/aeldari",
+    },
+  ];
+
+  return [...factions, ...extraFactions];
+};
+
+const applyNameOverrides = (unit: ListUnit) => {
+  switch (unit.name) {
+    case "Vypers":
+      unit.name = "Vyper";
+      break;
+    case "Ancient in Terminator Armor":
+      unit.name = "Ancient in Terminator Armour";
+      break;
+    case "Wraithblade":
+      unit.name = "Wraithblades";
+      break;
+    case "Piranha":
+      unit.name = "Piranhas";
+      break;
+    case "Nurgle Soul Grinder":
+    case "Khorne Soul Grinder":
+      unit.name = "Soul Grinder";
+      break;
+    case "Ratling Snipers":
+      unit.name = "Ratlings";
+      break;
+    case "Khorne Berserkers":
+      unit.name = "Khorne Berzerkers";
+      break;
+    case "Transcendant C'tan":
+      unit.name = "Transcendent C'tan";
+      break;
+    case "Tarantula Air Defense Battery":
+      unit.name = "Tarantula Air Defence Battery";
+      break;
+    case "Gaunt’s Ghosts":
+      unit.name = "Gaunt's Ghosts";
+      break;
+  }
+
+  return unit;
+};
+
+const applyAbilityOverrides = (ability: Ability) => {
+  switch (ability.ability_id) {
+    case "000008344":
+      return {
+        ...ability,
+        name: `Scout ${ability.parameter}`,
+        description: `At the start of the first battle round, before the first turn begins, you can move this unit up to ${ability.parameter} as if it were the Movement phase.`,
+      };
+    case "000008334":
+      return {
+        ...ability,
+        name: `Firing Deck`,
+        description:
+          "Some transports have firing hatches, ports or platforms from which embarked passengers can shoot.Some TRANSPORT models have 'Firing Deck x' listed in their abilities. Each time such a model is selected to shoot in the Shooting phase, you can select up to 'x' models embarked within it whose units have not already shot this phase. Then, for each of those embarked models, you can select one ranged weapon that embarked model is equipped with (excluding weapons with the [ONE SHOT] ability). Until that TRANSPORT model has resolved all of its attacks, it counts as being equipped with all of the weapons you selected in this way, in addition to its other weapons. Until the end of the phase, those selected models' units are not eligible to shoot.Firing Deck 'x': Each time this TRANSPORT shoots, select one weapon (excluding weapons with the [ONE SHOT] ability) from up to 'x' models embarked within it whose units have not shot this phase; this TRANSPORT counts as being equipped with those weapons as well. Until the end of the phase, those selected models' units are not eligible to shoot.",
+      };
+    case "000008345":
+      return {
+        ...ability,
+        name: `Infiltrators`,
+        description:
+          'During deployment, if every model in a unit has this ability, then when you set it up, it can be set up anywhere on the battlefield that is more than 9" horizontally away from the enemy deployment zone and all enemy models.',
+      };
+    case "000008339":
+      return {
+        ...ability,
+        name: `Deadly Demise ${ability.parameter}`,
+        description:
+          "Some models have 'Deadly Demise x' listed in their abilities. When such a model is destroyed, roll one D6 before removing it from play (if such a model is a TRANSPORT, roll before any embarked models disembark). On a 6, each unit within 6\" of that model suffers a number of mortal wounds denoted by 'x' (if this is a random number, roll separately for each unit within 6\").",
+      };
+    case "000008340":
+      return {
+        ...ability,
+        name: `Fights First`,
+        description:
+          "Units with this ability that are eligible to fight do so in the Fights First step, provided every model in the unit has this ability.",
+      };
+    case "000008336":
+      return {
+        ...ability,
+        name: "Lone Operative",
+        description:
+          'Unless part of an Attached unit (see Leader), this unit can only be selected as the target of a ranged attack if the attacking model is within 12".',
+      };
+    case "000008342":
+      return {
+        ...ability,
+        name: "Hover",
+        description:
+          "Some AIRCRAFT models have 'Hover' listed in their abilities. When you are instructed to Declare Battle Formations, before doing anything else, you must first declare which models from your army with this ability will be in Hover mode. If a model is in Hover mode, then until the end of the battle, its Move characteristic is changed to 20\", it loses the AIRCRAFT keyword and it loses all associated rules for being an AIRCRAFT model. Models in Hover mode do not start the battle in Reserves, but you can choose to place them into Strategic Reserves following the normal rules if you wish",
+      };
+    case "000008343":
+      return {
+        ...ability,
+        name: "Deep Strike",
+        description:
+          'During the Declare Battle Formations step, if every model in a unit has this ability, you can set it up in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases you can set up this unit anywhere on the battlefield that is more than 9" horizontally away from all enemy models. If a unit with the Deep Strike ability arrives from Strategic Reserves, the controlling player can choose for that unit to be set up either using the rules for Strategic Reserves or using the Deep Strike ability. Unit can be set up in Reserves instead of on the battlefield.Unit can be set up in your Reinforcements step, more than 9" horizontally away from all enemy models.',
+      };
+    case "000008337":
+      return {
+        ...ability,
+        name: "Stealth",
+        description:
+          "If every model in a unit has this ability, then each time a ranged attack is made against it, subtract 1 from that attack's Hit roll.",
+      };
+    default:
+      if (ability.name === "") {
+        return {
+          ...ability,
+          name: `Unknown Ability ${ability.ability_id}`,
+          description:
+            "No description provided, please contact the dev for a fix",
+        };
+      } else {
+        return ability;
+      }
+  }
+};
+
+const applyWeaponOverrides = (datasheet:Datasheet, weapons: string[] | undefined) => {
+  if(!weapons) {
+    return;
+  }
+
+  switch (datasheet.id) {
+    case "000000613":
+      weapons = weapons ? [...weapons, "Wraithbone fists"] : ["Wraithbone fists"];
+      break;
+    case "000002565":
+      weapons = weapons ? [...weapons, "Armoured limbs"] : ["Armoured limbs"];
+      weapons = weapons ? [...weapons, "Psychic Shock Wave"] : ["Psychic Shock Wave"];
+      break;
+  }
+
+  switch (datasheet.name) {
+    case "Wraithblades":
+      if (weapons) {
+        if (weapons[0] === "Ghostaxe and Forceshield") {
+          weapons = ["Ghostaxe", "Forceshield"];
+        } else {
+          weapons = ["Ghostswords", "Forceshield"];
+        }
+      }
+      break;
+    case "Flesh Hounds":
+      weapons = [...weapons, "Burning roar"];
+      break;
+    case "Exalted Flamer":
+      weapons = [...weapons, "Fire of Tzeentch – blue fire", "Fire of Tzeentch – pink fire"];
+      break;
+    case "Rendmaster on Blood Throne":
+      weapons = [...weapons, "Blade of blood", "Attendants' hellblades"];
+      break;
+    case "Seekers":
+      weapons = [...weapons, "Lashing tongue", "Slashing claws"];
+      break;
+    case "Sicarian Ruststalkers":
+      weapons = [...weapons, "Transonic razor and chordclaw"];
+      break;
+    case "Warp Spiders":
+      weapons = [...weapons, "Death spinner"];
+      break;
+    case "Knight Tyrant":
+      weapons = [...weapons, "Ectoplasma decimator – standard", "Ectoplasma decimator – supercharged", "Brimstone volcano lance"]
+      break;
+    case "Stormraven Gunship":
+      weapons = [...weapons, "Stormstrike missile launcher"]
+      break;
+    case "Kataphron Destroyers":
+      weapons = [...weapons, "Heavy grav-cannon"]
+      break;
+    case "Serberys Raiders":
+      weapons = [...weapons, "Cavalry sabre and clawed limbs"]
+      break;
+    case "Valkyrie":
+      weapons = [...weapons, "Multiple rocket pod"]
+      break;
+  }
+
+  return weapons;
+};
+
+export {
+  applyNameOverrides,
+  applyAbilityOverrides,
+  applyFactionOverrides,
+  applyWeaponOverrides,
+};

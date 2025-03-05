@@ -68,11 +68,6 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     case Phase.Saves:
       [characteristic, toggled] = SavesPhase({ unit });
       break;
-    default:
-      characteristic = (
-        <div className="text-center text-xl font-extrabold">BROKEN</div>
-      );
-      toggled = false;
   }
 
   // @ts-expect-error - This works. Not sure why flagged.

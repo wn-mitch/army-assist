@@ -109,7 +109,6 @@ Spined Chaos Beast [Legends] [145pts]: Jagged claws and tusked maw, Khorne
 
 ## Vehicle [360pts]
 Khorne Soul Grinder [180pts]: Harvester cannon, Iron claw, Torrent of burning blood, Warpsword
-Nurgle Soul Grinder [180pts]: Harvester cannon, Iron claw, Phlegm bombardment, Warpsword
 
 ## Fortification [3765pts]
 Aegis Defence Line with Weapon Emplacement [Legends] [145pts]: Quad-gun

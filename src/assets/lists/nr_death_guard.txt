@@ -75,7 +75,6 @@ Fire Raptor Gunship [Legends] [290pts]: Armoured hull, Twin avenger bolt cannon,
 Foetid Bloat-drone [90pts]: Plague probe, Fleshmower
 Greater Blight Drone [Legends] [150pts]: Bile maw, Blightreaper cannon, Greater plague probe
 Hell Talon [Legends] [140pts]: Armoured hull, Twin lascannon, Autocannon
-Hellblade [Legends] [115pts]: Armoured hull, Two twin autocannons (2x Twin autocannon)
 Kratos [Legends] [265pts]: Armoured tracks, Autocannon, 2x Two heavy bolters (2x Heavy bolter), Kratos battlecannon
 Land Raider Achilles [Legends] [285pts]: Armoured tracks, Quad launcher, Two twin volkite culverins (2x Twin volkite culverin)
 Land Raider Proteus [Legends] [250pts]: Armoured tracks, 2x Twin lascannon

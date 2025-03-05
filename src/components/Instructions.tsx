@@ -85,6 +85,7 @@ function Instructions() {
         onClick={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
         aria-label="Open Instructions Panel"
+        id="instructions-button"
       >
         <QuestionMarkCircleIcon className="h-6 w-6" />
       </button>
@@ -185,6 +186,7 @@ function Instructions() {
                 onTouchEnd={handleClose}
                 onClick={handleClose}
                 className={`${buttonClasses} bg-red-700 hover:bg-red-600`}
+                id="close-button"
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Tap Here to Close

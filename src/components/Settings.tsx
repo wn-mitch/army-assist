@@ -80,6 +80,7 @@ function Settings() {
         onClick={handleShow}
         className="bg-gray-500 text-white rounded p-2 font-bold hover:bg-gray-700 mx-1"
         aria-label="Open Settings Panel"
+        id="settings-button"
       >
         <CogIcon className="h-6 w-6" />
       </button>

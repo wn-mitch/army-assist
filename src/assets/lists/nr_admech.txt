@@ -14,7 +14,7 @@ Cybernetica Datasmith [35pts]: Mechanicus pistol, Power fist
 Skitarii Marshal [35pts]: Control stave, Mechanicus pistol
 Sydonian Skatros [50pts]: Mechanicus pistol, Sydonian Feet, Radium Jezzail
 Tech-Priest Dominus [70pts]: Omnissian axe, Macrostubber, Volkite blaster
-Tech-Priest Enginseer [55pts]: Mechanicus pistol, Omnissian axe, Servo arm
+Tech-Priest Enginseer [55pts]: Mechanicus pistol, Omnissian axe
 Tech-Priest Manipulus [60pts]: Omnissian staff, Magnarail lance
 Technoarcheologist [45pts]: Mechanicus pistol, Servo-arc claw
 

@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "build_preview": "tsc -b && vite build && vite preview",
     "cy:open": "cypress open",
     "cy:run_all": "cypress run",
     "deploy:wrangler": "wrangler pages deploy dist"

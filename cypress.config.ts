@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { defineConfig } from "cypress";
 
 export default defineConfig({
@@ -9,6 +10,7 @@ export default defineConfig({
   },
   e2e: {
     baseUrl: "http://localhost:4173",
+    experimentalRunAllSpecs: true,
     async setupNodeEvents(on, config) {
       const { default: task } = await import("@cypress/code-coverage/task");
       task(on, config);
@@ -20,10 +22,9 @@ export default defineConfig({
       framework: "react",
       bundler: "vite",
     },
-    async setupNodeEvents(on, config) {
-      const { default: task } = await import("@cypress/code-coverage/task");
-      task(on, config);
-      return config;
+    setupNodeEvents(on, config) {
+      require('@cypress/code-coverage/task')(on, config)
+      return config
     },
   },
 });

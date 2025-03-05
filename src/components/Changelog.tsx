@@ -40,6 +40,7 @@ function Changelog() {
       <button
         onClick={handleShow}
         className="bg-gray-500 text-gray-200 rounded p-2 font-semibold hover:bg-gray-700 mx-2"
+        id="changelog-button"
       >
         v{currentVersion}
       </button>
@@ -48,6 +49,7 @@ function Changelog() {
         open={isOpen}
         onClose={handleClose}
         className="fixed z-10 inset-0 overflow-y-auto"
+        id="changelog-modal"
       >
         <div className="flex items-center justify-center min-h-screen">
           <DialogPanel className="fixed inset-0 bg-black opacity-30" />

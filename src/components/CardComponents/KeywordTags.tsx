@@ -388,7 +388,7 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
                   >
                     {tagDetail.icon}
                     <span className="font-semibold whitespace-nowrap">
-                      {dice ? `${baseTag}${count}` : `${baseTag} ${count}`}
+                      {dice ? `${tagDetail.name}${count}` : `${tagDetail.name} ${count}`}
                     </span>
                   </div>
                   <div
