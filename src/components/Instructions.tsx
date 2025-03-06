@@ -109,7 +109,7 @@ function Instructions() {
               <XCircleIcon className="h-6 w-6" />
             </button>
             <DialogTitle className="text-lg font-bold text-center pb-1">
-              Instructions & Changelog
+              Instructions
             </DialogTitle>
             <ol className="list-decimal list-inside text-base">
               <li>
@@ -120,6 +120,7 @@ function Instructions() {
                 <button
                   onTouchEnd={copySampleToClipboard}
                   onClick={copySampleToClipboard}
+                  id="copy-sample-button"
                   className={`${buttonClasses} bg-gray-600 hover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400 dark:hover:text-gray-800 shadow-md cursor-pointer`}
                 >
                   <ClipboardIcon

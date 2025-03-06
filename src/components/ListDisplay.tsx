@@ -18,7 +18,7 @@ function ListDisplay() {
       case SortOptions.Name:
         return a.name.localeCompare(b.name);
       case SortOptions.PasteOrder:
-        return -1;
+        return 1;
     }
   };
 

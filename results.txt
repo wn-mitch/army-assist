@@ -1,0 +1,39 @@
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.1.0                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v18.19.1 (/usr/bin/node)                                                       │
+  │ Specs:          23 found (all_adeptus_astartes_exist.cy.ts, all_admech_exist.cy.ts, all_aeldar │
+  │                 i_exist.cy.ts, all_chaos_knights_exist.cy.ts, all_demons_exist.cy.ts, all_guar │
+  │                 d_exist.cy.ts, all_necrons_exist.cy.ts, all_nr_fnf_tau_weapons_exist.cy.ts, ch │
+  │                 angelog.cy.ts, detachme...)                                                    │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  │ Experiments:    experimentalRunAllSpecs=true                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  all_adeptus_astartes_exist.cy.ts                                               (1 of 23)
+
+
+  Verify all Adeptus Astartes units and weapons exist
+    Shooting phase weapons
+      ✓ should find Heavy Onslaught Gatling Cannon in the Shooting phase (10884ms)
+      ✓ should find Twin Ironhail Heavy Stubber in the Shooting phase (10076ms)
+      ✓ should find Hammerstrike Missile Launcher in the Shooting phase (10315ms)
+      ✓ should find Krakstorm Grenade Launcher in the Shooting phase (10092ms)
+      ✓ should find Melta Destroyer in the Shooting phase (9921ms)
+      ✓ should find Stormfury Missiles in the Shooting phase (10103ms)
+      ✓ should find Thunderstrike Las-talon in the Shooting phase (10074ms)
+      ✓ should find Twin Icarus Rocket Pod in the Shooting phase (10068ms)
+      ✓ should find Twin Assault Cannon in the Shooting phase (9976ms)
+      ✓ should find Las-talon in the Shooting phase (10118ms)
+      ✓ should find Skyhammer Missile Launcher in the Shooting phase (10042ms)
+      ✓ should find Stormstrike missile launcher in the Shooting phase (10123ms)
+      ✓ should find Typhoon Missile Launcher in the Shooting phase (9876ms)
+      ✓ should find Twin Heavy Bolter in the Shooting phase (10013ms)

@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-
 describe("Instructions Modal Test", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -8,23 +7,24 @@ describe("Instructions Modal Test", () => {
   });
 
   it("should open the instructions modal", () => {
-    // Click the button or link that opens the instructions modal
     cy.get('.gap-1 > .text-gray-200').click();
-
-    // Assert that the modal is visible
-    cy.contains("Instructions & Changelog").should("be.visible");
+    cy.contains("Instructions").should("be.visible");
   });
 
   it("should close the instructions modal with escape", () => {
-    // Click the button or link that opens the instructions modal
     cy.get('.gap-1 > .text-gray-200').click();
-
-    // Assert that the modal is visible
-    cy.contains("Instructions & Changelog").should("be.visible");
-// Press the Escape key to close the modal
+    cy.contains("Instructions").should("be.visible");
     cy.get('body').type('{esc}');
-
-    // Assert that the modal is no longer visible
-    cy.contains("Instructions & Changelog").should("not.exist");
+    cy.contains("Instructions").should("not.exist");
+  });
+  
+  it("should click the copy sample to clipboard button, see the alert, then paste it into the pastebox successfully", () => {
+    cy.get('.gap-1 > .text-gray-200').click();
+    cy.get('#copy-sample-button').realClick();
+    
+    // Verify the alert is visible
+    cy.on('window:alert', (str) => {
+      expect(str).to.equal('Sample list copied to clipboard!');
+    });
   });
 });

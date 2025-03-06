@@ -26,3 +26,4 @@ cypress/screenshots/*
 .env
 tsconfig.tsbuildinfo
 coverage/*
+.nyc_output/out.json

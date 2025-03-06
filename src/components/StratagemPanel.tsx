@@ -82,6 +82,7 @@ export default function StratagemPanel() {
       <button
         onClick={() => setOpen(true)}
         className="fixed bottom-4 left-4 bg-blue-600 text-white rounded p-2 font-bold hover:bg-blue-700 shadow-xl z-10"
+        id="open-stratagems-button"
       >
         Open Stratagem Panel
       </button>

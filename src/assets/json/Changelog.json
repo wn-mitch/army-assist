@@ -11,7 +11,8 @@
       "Fixed an issue with the scroll to top button",
       "Fixed an issue with escape keys not closing modals",
       "Fixed about 20ish name matching errors",
-      "Did another data pull, should have the new Guard models now"
+      "Did another data pull, should have the new Guard models now",
+      "Fixed an issue with paste order sorting backwards"
     ]
   },
   {
