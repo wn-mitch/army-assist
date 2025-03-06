@@ -11,7 +11,8 @@
     "build_preview": "tsc -b && vite build && vite preview",
     "cy:open": "cypress open",
     "cy:run_all": "cypress run >> results.txt",
-    "deploy:wrangler": "wrangler pages deploy dist"
+    "deploy:wrangler": "wrangler pages deploy dist",
+    "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",

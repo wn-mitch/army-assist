@@ -31,5 +31,14 @@ export default defineConfig({
   },
   build:{
     sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Define manual chunks
+          react: ['react', 'react-dom'],
+          vendor: ['zustand', 'clsx', 'flowbite'],
+        },
+      },
+    },
   }
 });
