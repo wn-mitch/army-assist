@@ -1,9 +1,24 @@
-[{
-    "version": "1.7.0",
-    "stateVersion":16,
-    "date": "02/24/2025",
+[
+  {
+    "version": "1.8.0",
+    "stateVersion": 17,
+    "date": "03/06/2025",
     "changes": [
       "I have been laid off from my job, so if you happen to have a manager who plays warhammer please send them this site :)",
+      "Continued to enhance the test case coverage. Now up to 409 cases with ~70% code coverage",
+      "Removed the range column from the weapons table in the Fight phase",
+      "Removed the range +/\" for weapons without ranges (torrent weapons)",
+      "Fixed an issue with the scroll to top button",
+      "Fixed an issue with escape keys not closing modals",
+      "Fixed about 20ish name matching errors",
+      "Did another data pull, should have the new Guard models now"
+    ]
+  },
+  {
+    "version": "1.7.0",
+    "stateVersion": 16,
+    "date": "02/24/2025",
+    "changes": [
       "Continued to enhance the test case coverage",
       "Added an option to omit weapons filtering. Use this option if you have weapons that aren't showing up.",
       "Added a panic button if the page fails to render"
@@ -11,7 +26,7 @@
   },
   {
     "version": "1.6.0",
-    "stateVersion":15,
+    "stateVersion": 15,
     "date": "02/06/2025 - 02/24/2025",
     "changes": [
       "Enabled site persistance, which should prevent list from needing repaste on incidental refresh",
@@ -29,7 +44,7 @@
   },
   {
     "version": "1.5.1",
-    "stateVersion":14,
+    "stateVersion": 14,
     "date": "01/29/2025",
     "changes": [
       "Fixed an issue where the Space Marines needed to be called Adeptus Astartes",
@@ -40,7 +55,7 @@
   },
   {
     "version": "1.5.0",
-    "stateVersion":13,
+    "stateVersion": 13,
     "date": "01/29/2025",
     "changes": [
       "Greatly improved site performance by caching all unit data on paste submission",
@@ -50,13 +65,13 @@
   },
   {
     "version": "1.4.1",
-    "stateVersion":12,
+    "stateVersion": 12,
     "date": "01/27/2025",
     "changes": ["Added support for equipped Detachment Enhancements"]
   },
   {
     "version": "1.4.0",
-    "stateVersion":11,
+    "stateVersion": 11,
     "date": "01/23/2025",
     "changes": [
       "I decided I wanted this app to actually look good, so I found a UI design handbook and refactored the entire UI. This release includes beta bugfixes (join the Discord!).",
@@ -71,7 +86,7 @@
   },
   {
     "version": "1.3.2",
-    "stateVersion":10,
+    "stateVersion": 10,
     "date": "01/21/2025",
     "changes": [
       "Added Sort Options to the settings menu. This allows you to select between alphabetical order and the order your list was pasted in from NewRecruit.",
@@ -84,7 +99,7 @@
   },
   {
     "version": "1.3.1",
-    "stateVersion":9,
+    "stateVersion": 9,
     "date": "01/20/2025",
     "changes": [
       "Fixed a bug where variations in the Detachment selection line could cause detachments to not be detected properly.",
@@ -93,7 +108,7 @@
   },
   {
     "version": "1.3.0",
-    "stateVersion":8,
+    "stateVersion": 8,
     "date": "01/17/2025",
     "changes": [
       "Stratagems: Now supported in a flyout menu! They are filtered by phase and detachment. Please report any errors in the discord.",
@@ -103,7 +118,7 @@
   },
   {
     "version": "1.2.1",
-    "stateVersion":7,
+    "stateVersion": 7,
     "date": "01/16/2025",
     "changes": [
       "Fixed more spelling errors",
@@ -113,7 +128,7 @@
   },
   {
     "version": "1.2.0",
-    "stateVersion":6,
+    "stateVersion": 6,
     "date": "01/15/2025",
     "changes": [
       "Added support for the Army and Detachment Rules",
@@ -123,7 +138,7 @@
   },
   {
     "version": "1.1.1",
-    "stateVersion":5,
+    "stateVersion": 5,
     "date": "01/13/2025",
     "changes": [
       "Fixed spelling errors for the Norn Assimilator",
@@ -132,7 +147,7 @@
   },
   {
     "version": "1.1.0",
-    "stateVersion":4,
+    "stateVersion": 4,
     "date": "01/13/2025",
     "changes": [
       "Ability Support: Abilities on datasheet cards are now displayed in the relevant phase. This includes abilities that are not tied to a specific phase. This was a pretty massive undertaking and there are almost certainly cards in the wrong phase. Please let me know if you see any issues. The game has over 3500 abilities and I have to programatically assign them to phases.",
@@ -144,7 +159,7 @@
   },
   {
     "version": "1.0.2",
-    "stateVersion":3,
+    "stateVersion": 3,
     "date": "01/12/2025",
     "changes": [
       "Fixed a slew of bugs related to missing Keyword Tags",
@@ -154,7 +169,7 @@
   },
   {
     "version": "1.0.1",
-    "stateVersion":2,
+    "stateVersion": 2,
     "date": "01/11/2025",
     "changes": [
       "Cards are now pre-toggled if there is not any information available for them during that phase (ie, no guns during the shooting phase)",
@@ -166,7 +181,7 @@
   },
   {
     "version": "1.0.0",
-    "stateVersion":1,
+    "stateVersion": 1,
     "date": "01/10/2025",
     "changes": [
       "Initial release",

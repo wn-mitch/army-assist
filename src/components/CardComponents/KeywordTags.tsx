@@ -37,6 +37,7 @@ import {
   GiPlasmaBolt,
   GiBodySwapping,
   GiDoubleShot,
+  GiGhost,
 } from "react-icons/gi";
 
 const tagDetails: { [key: string]: TagDetail } = {
@@ -327,6 +328,13 @@ const tagDetails: { [key: string]: TagDetail } = {
     ringColor: "ring-indigo-900 dark:ring-indigo-500",
     textColor: "text-indigo-800 dark:text-indigo-200",
   },
+  "reverberating summons": {
+    name: "Reverberating Summons",
+    icon: <GiGhost className="h-5 w-5" />,
+    bgColor: "bg-zinc-200 dark:bg-zinc-900",
+    ringColor: "ring-zinc-900 dark:ring-zinc-500",
+    textColor: "text-zinc-800 dark:text-zinc-200",
+  },
 };
 
 function getParameterCaseInsensitive(
@@ -388,7 +396,7 @@ function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
                   >
                     {tagDetail.icon}
                     <span className="font-semibold whitespace-nowrap">
-                      {dice ? `${tagDetail.name}${count}` : `${tagDetail.name} ${count}`}
+                      {dice ? ` ${tagDetail.name}${count}` : ` ${tagDetail.name} ${count}`}
                     </span>
                   </div>
                   <div

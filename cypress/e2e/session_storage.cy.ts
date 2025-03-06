@@ -9,7 +9,6 @@ describe('Session Storage Test', () => {
         cy.window().then((window) => {
             const storedValue = window.sessionStorage.getItem('army-storage');
             expect(() => JSON.parse(storedValue)).not.to.throw();
-            console.log(storedValue)
             const parsedValue = JSON.parse(storedValue);
             expect(parsedValue).to.be.an('object');
         });

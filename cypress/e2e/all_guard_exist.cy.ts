@@ -48,14 +48,12 @@ describe("Verify all Astra Militarum units and weapons exist", () => {
     "Stormsword Siege Cannon",
     "Valdor neutron laser",
     "Wyvern Quad Stormshard Mortar",
-    "Chimera Multi-laser",
     "Taurox Battle Cannon",
     "Twin Taurox Hot-Shot Volley Gun",
     "Twin Autocannon",
     "Thunderbolt nose autocannons",
     "Vulture hellstrike rack",
     "Duty and Vengeance",
-    "Militarum Multi-laser",
     "Multiple rocket pod"
   ];
 
@@ -67,7 +65,6 @@ describe("Verify all Astra Militarum units and weapons exist", () => {
     "Straight Silver Knife",
     "Savage claws",
     "Power Weapon",
-    "Astropath's Stave",
     "Tempestus Dagger",
     "Death Rider hunting lance",
     "Steed's Hooves",

@@ -17,8 +17,8 @@ const applyFactionOverrides = (factions: Faction[]) => {
 
 const applyNameOverrides = (unit: ListUnit) => {
   switch (unit.name) {
-    case "Vypers":
-      unit.name = "Vyper";
+    case "Vyper":
+      unit.name = "Vypers";
       break;
     case "Ancient in Terminator Armor":
       unit.name = "Ancient in Terminator Armour";
@@ -157,12 +157,12 @@ const applyWeaponOverrides = (datasheet:Datasheet, weapons: string[] | undefined
       }
       break;
     case "Flesh Hounds":
-      weapons = [...weapons, "Burning roar"];
+      weapons = findAndReplace(weapons, "Burning maw", "Burning roar")
       break;
     case "Exalted Flamer":
       weapons = [...weapons, "Fire of Tzeentch – blue fire", "Fire of Tzeentch – pink fire"];
       break;
-    case "Rendmaster on Blood Throne":
+    case "Rendmaster On Blood Throne":
       weapons = [...weapons, "Blade of blood", "Attendants' hellblades"];
       break;
     case "Seekers":
@@ -181,17 +181,50 @@ const applyWeaponOverrides = (datasheet:Datasheet, weapons: string[] | undefined
       weapons = [...weapons, "Stormstrike missile launcher"]
       break;
     case "Kataphron Destroyers":
-      weapons = [...weapons, "Heavy grav-cannon"]
+      weapons = findAndReplace(weapons, "Heavy grav cannon", "Heavy grav-cannon")
       break;
     case "Serberys Raiders":
-      weapons = [...weapons, "Cavalry sabre and clawed limbs"]
+      weapons = findAndReplace(weapons, "Cavalry sabre & clawed limbs", "Cavalry sabre and clawed limbs")
       break;
     case "Valkyrie":
-      weapons = [...weapons, "Multiple rocket pod"]
+      weapons = findAndReplace(weapons, "Multiple rocket pods", "Multiple rocket pod")
+      break;
+    case "Vulture Gunship":
+      console.log('hi')
+      weapons = findAndReplace(weapons, "2x Multiple rocket pods", "Multiple rocket pod")
+      break;
+    case "Asurmen":
+      weapons = findAndReplace(weapons, "The Sword of Asur", "Sword of Asur")
+      weapons = findAndReplace(weapons, "The Bloody Twins", "Bloody Twins")
+      break;
+    case "Baharroth":
+      weapons = [...weapons, "Shining Blade"]
+      break;
+    case "Jain Zar":
+      weapons = findAndReplace(weapons, "The Blade of Destruction", "Blade of Destruction")
+      break;
+    case "Fuegan":
+      weapons = findAndReplace(weapons, "The Fire Axe", "Fire Axe")
+      break;
+    case "Chronomancer":
+      weapons = findAndReplace(weapons, "Chronomancer's stave", "Aeonstave")
+      break;
+    case "Armoured Sentinels":
+      weapons = findAndReplace(weapons, "Militarum Multi-laser", "Multi-laser")
+      break;
+    case "Chimera":
+      weapons = findAndReplace(weapons, "Chimera Multi-laser", "Multi-laser")
+      break;
+    case "Fire Dragons":
+      weapons = [...weapons, "Firepike", "Exarch's Dragon fusion gun"]
       break;
   }
 
   return weapons;
+};
+
+const findAndReplace = (array: string[], findValue: string, replaceValue: string): string[] => {
+  return array.map(item => item === findValue ? replaceValue : item);
 };
 
 export {

@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -118,20 +118,14 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3452x</span>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,9 +140,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9944x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4972x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3904x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9524x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,19 +194,23 @@ import DatasheetWargear from "@/types/DatasheetWargear";
 import KeywordTags from "@/components/CardComponents/KeywordTags";
 import TableCell from "./TableComponents.tsx/TableCell";
 import TableHeaderCell from "./TableComponents.tsx/TableHeaderCell";
+import useStore from "@/store/store";
+import Phase from "@/types/Phase";
 &nbsp;
 function WeaponPhaseTable({
   weaponDatasheets,
 }: {
   weaponDatasheets: DatasheetWargear[];
 }) {
+  const phase = useStore((state) =&gt; state.phase);
+&nbsp;
   return (
     &lt;div className="overflow-x-auto w-full"&gt;
       &lt;table className="table-auto w-full"&gt;
         &lt;thead className="border dark:border-gray-600"&gt;
           &lt;tr&gt;
             &lt;TableHeaderCell className="w-1/4 pl-1"&gt;Name&lt;/TableHeaderCell&gt;
-            &lt;TableHeaderCell className="w-1/12"&gt;R"&lt;/TableHeaderCell&gt;
+            {phase !== Phase.Fight &amp;&amp; &lt;TableHeaderCell className="w-1/12"&gt;R"&lt;/TableHeaderCell&gt;}
             &lt;TableHeaderCell className="w-1/12"&gt;WS&lt;/TableHeaderCell&gt;
             &lt;TableHeaderCell className="w-1/12"&gt;A&lt;/TableHeaderCell&gt;
             &lt;TableHeaderCell className="w-1/12"&gt;S&lt;/TableHeaderCell&gt;
@@ -210,10 +228,13 @@ function WeaponPhaseTable({
               } `}
             &gt;
               &lt;TableCell className="w-1/4 pl-1 font-semibold dark:font-bold"&gt;{weapon.name}&lt;/TableCell&gt;
+              {phase !== Phase.Fight &amp;&amp; (
+                &lt;TableCell className="w-1/12 dark:font-semibold"&gt;
+                  {weapon.range === "Melee" ? <span class="branch-0 cbranch-no" title="branch not covered" >weapon.range : `</span>${weapon.range}"`}
+                &lt;/TableCell&gt;
+              )}
               &lt;TableCell className="w-1/12 dark:font-semibold"&gt;
-                {weapon.range === "Melee" ? weapon.range : `${weapon.range}"`}
-              &lt;/TableCell&gt;
-              &lt;TableCell className="w-1/12 dark:font-semibold"&gt;{weapon.BS_WS}+&lt;/TableCell&gt;
+              {weapon.BS_WS === "N/A" ? weapon.BS_WS : `${weapon.BS_WS}+`}&lt;/TableCell&gt;
               &lt;TableCell className="w-1/12 dark:font-semibold"&gt;{weapon.A}&lt;/TableCell&gt;
               &lt;TableCell className="w-1/12 dark:font-semibold"&gt;{weapon.S}&lt;/TableCell&gt;
               &lt;TableCell className="w-1/12 dark:font-semibold"&gt;{weapon.AP}&lt;/TableCell&gt;
@@ -235,7 +256,7 @@ export default WeaponPhaseTable;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-03-05T22:08:51.899Z
+                at 2025-03-06T20:10:09.156Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

@@ -25,3 +25,4 @@ dist-ssr
 cypress/screenshots/*
 .env
 tsconfig.tsbuildinfo
+coverage/*

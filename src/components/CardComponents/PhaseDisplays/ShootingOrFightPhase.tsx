@@ -16,7 +16,6 @@ const ShootingOrFightPhase = ({
   phase: Phase;
   weaponsFilter: boolean;
 }): [React.ReactNode, boolean] => {
-  console.log(unit)
   const availableWeaponDatasheets = datasheetWargear
     .filter((wargear) =>
       phase === "Shooting"
@@ -36,6 +35,7 @@ const ShootingOrFightPhase = ({
     : availableWeaponDatasheets;
 
   const toggled = filteredWeaponDatasheets.length > 0;
+  console.log(unit)
 
   return [
     <WeaponPhaseTable weaponDatasheets={filteredWeaponDatasheets} />,

@@ -21,7 +21,6 @@ import {
   applyNameOverrides,
   applyWeaponOverrides,
 } from "@/utils/StoreHelper";
-import ResetButton from "@/components/ResetButton";
 
 interface StoreState {
   text: string;
@@ -47,6 +46,7 @@ interface StoreState {
   cardsGroup: boolean;
   currentSaveVersion: number;
   weaponsFilter: boolean;
+  unmatchedWeapons: string[];
   reset: () => void;
   setText: (text: string) => void;
   parseText: (text: string) => boolean;
@@ -60,6 +60,7 @@ interface StoreState {
   setIsDarkMode: (isDarkMode: boolean) => void;
   setCardsGroup: (cardsGroup: boolean) => void;
   setWeaponsFilter: (weaponsFilter: boolean) => void;
+  setUnmatchedWeapons: (unmatchedWeapons: string[]) => void;
 }
 
 const useStore = create<StoreState>()(
@@ -88,6 +89,7 @@ const useStore = create<StoreState>()(
       cardsGroup: true,
       currentSaveVersion: getCurrentStateVersion(),
       weaponsFilter: true,
+      unmatchedWeapons: [],
       reset: () =>
         set({
           text: "",
@@ -207,7 +209,7 @@ const useStore = create<StoreState>()(
         });
 
         if (listUnits.length > 0) {
-          console.log(listUnits);
+          let unmatchedWeapons = [];
           const updatedUnits = listUnits
             .map((unit) => {
               unit = applyNameOverrides(unit);
@@ -347,6 +349,7 @@ const useStore = create<StoreState>()(
       setIsDarkMode: (isDarkMode: boolean) => set({ isDarkMode }),
       setCardsGroup: (cardsGroup: boolean) => set({ cardsGroup }),
       setWeaponsFilter: (weaponsFilter: boolean) => set({ weaponsFilter }),
+      setUnmatchedWeapons: (unmatchedWeapons: string[]) => set({unmatchedWeapons}),
     }),
     {
       name: "army-storage",

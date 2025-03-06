@@ -1,143 +1,119 @@
-Aeldari - Craftworlds - Tester - [14140pts]
+Xenos - Aeldari - Tester - [9725 pts]
 
-# ++ Army Roster ++ [14140pts]
+# ++ Army Roster ++ [9725 pts]
 ## Configuration
+Battle Focus - Agile Manoeuvres
 Battle Size
 Detachment
-Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+Show/Hide Options
 
-## Epic Hero [2140pts]
-Amallyn Shadowguide [Legends] [75pts]: Power Blade, Ranger long rifle
-Asurmen [115pts]: The Bloody Twins, The Sword of Asur
-Avatar of Khaine [335pts]: The Wailing Doom
-Baharroth [125pts]: Fury of the Tempest, The Shining Blade
-Eldrad Ulthran [110pts]: Mind War, Shuriken Pistol, Staff of Ulthamar and witchblade
-Fuegan [130pts]: Searsong, The Fire Axe
-Illic Nightspear [70pts]: Aeldari power sword, Shuriken Pistol, Voidbringer
-Irillyth [105pts]: Spear of Starlight
-Jain Zar [90pts]: Silent Death, The Blade of Destruction
-Karandras [90pts]: Arhra's Bane, Isirmathil
-Maugan Ra [115pts]: The Maugetar
-Prince Yriel [100pts]: The Eye of Wrath, The Spear of Twilight
-Solitaire [115pts]: Solitaire Weapons
-The Visarch [90pts]: Asu-var, The Sword of Silent Screams
-The Yncarne [350pts]: Swirling soul energy, Vilith-zhar, the Sword of Souls
-Yvraine [125pts]: Kha-vir, the Sword of Sorrows, Storm of Whispers
+## Epic Hero [1220 pts]
+Asurmen [135 pts]: The Bloody Twins, The Sword of Asur
+Avatar of Khaine [300 pts]: The Wailing Doom
+Baharroth [115 pts]: Fury of the Tempest, The Shining Blade
+Eldrad Ulthran [110 pts]: Mind War, Shuriken Pistol, Staff of Ulthamar and witchblade
+Fuegan [120 pts]: Searsong, The Fire Axe
+Jain Zar [105 pts]: Silent Death, The Blade of Destruction
+Lhykhis [120 pts]: Brood Twain, Spider's Fangs, Weaverender
+Maugan Ra [100 pts]: Maugetar
+Solitaire [115 pts]: Solitaire Weapons
 
-## Character [865pts]
-Autarch [75pts]: Star Glaive, Shuriken Pistol
-Autarch Skyrunner [90pts]: Twin Shuriken Catapult, Laser Lance
-Autarch Wayleaper [115pts]: Star Glaive, Shuriken Pistol
-Bonesinger [Legends] [45pts]: Psytronome Shaper
-Death Jester [90pts]: Jester's Blade, Shrieker Cannon
-Farseer [80pts]: Eldritch Storm, Shuriken Pistol, Witchblade
-Farseer Skyrunner [90pts]: Eldritch Storm, Shuriken Pistol, Twin Shuriken Catapult, Witchblade
-Shadowseer [60pts]: Miststave, Shuriken Pistol
-Spiritseer [65pts]: Shuriken Pistol, Witch Staff
-Troupe Master [55pts]: Harlequin's Special Weapon, Shuriken Pistol
-Warlock [45pts]: Destructor, Shuriken Pistol, Witchblade
-Warlock Skyrunner [55pts]: Destructor, Shuriken Pistol, Twin Shuriken Catapult, Witchblade
+## Character [640 pts]
+Autarch [75 pts]: Star Glaive, Shuriken Pistol
+Autarch Wayleaper [80 pts]: Star Glaive, Shuriken Pistol
+Death Jester [90 pts]: Jester's Blade, Shrieker Cannon
+Farseer [70 pts]: Eldritch Storm, Shuriken Pistol, Witchblade
+Farseer Skyrunner [80 pts]: Eldritch Storm, Shuriken Pistol, Twin Shuriken Catapult, Witchblade
+Shadowseer [60 pts]: Miststave, Shuriken Pistol
+Spiritseer [65 pts]: Shuriken Pistol, Witch Staff
+Troupe Master [75 pts]: Harlequin's Special Weapon, Shuriken Pistol
+Warlock [45 pts]: Destructor, Shuriken Pistol, Witchblade
 
-## Battleline [260pts]
-Corsair Voidreavers [60pts]:
-• 4x Voidreaver: Close combat weapon, Shuriken pistol and Aeldari power sword
-• 1x Voidreaver Felarch: Aeldari power sword, Close combat weapon, Shuriken pistol
-Guardian Defenders [100pts]:
+## Battleline [260 pts]
+Corsair Voidreavers [60 pts]:
+• 4x Voidreaver: Close Combat Weapon, Shuriken pistol Power sword
+• 1x Voidreaver Felarch: Close Combat Weapon, Power sword, Shuriken pistol
+Guardian Defenders [100 pts]:
 • 10x Guardian Defender: Close Combat Weapon, Shuriken Catapult
 • 1x Heavy Weapon Platform: Close Combat Weapon, Shuriken Cannon
-Storm Guardians [100pts]:
-• 1x Serpent's Scale Platform: Guardian Combat Weapon
-• 10x Storm Guardian: Guardian Combat Weapon, Shuriken Pistol
+Storm Guardians [100 pts]:
+• 1x Serpent's Scale Platform: Close Combat Weapon
+• 10x Storm Guardian: Close Combat Weapon, Shuriken Pistol
 
-## Infantry [1560pts]
-Corsair Reaver Band [Legends] [125pts]:
-• 5x Reaver w/ corsair firearm: Brace of pistols, Close combat weapon, Corsair firearm
-Corsair Skyreaver Band [Legends] [125pts]:
-• 5x Skyreaver w/ corsair firearm: Brace of pistols, Close combat weapon, Corsair firearm
-Corsair Voidscarred [80pts]:
-• 1x Voidscarred Felarch: Aeldari power sword, Close combat weapon, Shuriken pistol
-• 4x Voidscarred w/ pistol and sword: Close combat weapon, Shuriken pistol and Aeldari power sword
-Dark Reapers [85pts]:
+## Infantry [1485 pts]
+Corsair Voidscarred [80 pts]:
+• 1x Voidscarred Felarch: Close Combat Weapon, Power sword, Shuriken pistol
+• 4x Voidscarred w/ pistol and sword: Close Combat Weapon, Power sword, Shuriken Pistol
+D-Cannon Platform [125 pts]: Close Combat Weapon, D-cannon, Shuriken Catapult
+Dark Reapers [90 pts]:
 • 4x Dark Reaper: Close combat weapon, Reaper Launcher
 • 1x Dark Reaper Exarch: Close combat weapon, Reaper Launcher
-Dire Avengers [70pts]:
-• 4x Dire Avenger: Avenger Shuriken Catapult
-• 1x Dire Avenger Exarch: Avenger Shuriken Catapult
-Fire Dragons [90pts]:
+Dire Avengers [75 pts]:
+• 4x Dire Avenger: Avenger Shuriken Catapult, Close Combat Weapon
+• 1x Dire Avenger Exarch: Close Combat Weapon, Avenger Shuriken Catapult
+Fire Dragons [100 pts]:
 • 4x Fire Dragon: Close combat weapon, Dragon Fusion Gun
-• 1x Fire Dragon Exarch: Close combat weapon, Dragon Fusion Gun
-Howling Banshees [70pts]:
+• 1x Fire Dragon Exarch: Close combat weapon, Exarch's Dragon Fusion Gun
+Howling Banshees [90 pts]:
 • 4x Howling Banshee: Banshee Blade, Shuriken Pistol
 • 1x Howling Banshee Exarch: Banshee Blade and Shuriken Pistol
-Rangers [55pts]:
-• 5x Ranger: Close Combat Weapon, Ranger long rifle, Shuriken Pistol
-Shadow Spectres [115pts]:
-• 5x Shadow Spectre: Close combat weapon, Prism Rifle
-Striking Scorpions [65pts]:
+Rangers [55 pts]:
+• 5x Ranger: Close Combat Weapon, Long rifle, Shuriken Pistol
+Shadow Weaver Platform [75 pts]: Close Combat Weapon, Shadow weaver, Shuriken Catapult
+Striking Scorpions [75 pts]:
 • 4x Striking Scorpion: Scorpion chainsword, Shuriken pistol
-• 1x Striking Scorpion Exarch: Scorpion chainsword and shuriken pistol
-Swooping Hawks [85pts]:
+• 1x Striking Scorpion Exarch: Shuriken Pistol, Scorpion Chainsword & Scorpion's claw
+Swooping Hawks [85 pts]:
 • 4x Swooping Hawk: Close combat weapon, Lasblaster
-• 1x Swooping Hawk Exarch: Close combat weapon, Lasblaster
-Troupe [75pts]:
+• 1x Swooping Hawk Exarch: Close combat weapon, Hawk's Talon
+Troupe [85 pts]:
 • 1x Lead Player: Harlequin's Blade, Shuriken Pistol
-• 4x Player: Harlequin's Blade, Shuriken Pistol
-Warlock Conclave [55pts]:
-• 2x Warlock: Destructor, Shuriken Pistol, Witchblade
-Warp Spiders [125pts]:
-• 4x Warp Spider: Close combat weapon, Deathspinner
-• 1x Warp Spider Exarch: Close combat weapon, Deathspinner
-Wraithblades [160pts]:
+• 4x Player with Harlequin's Blade: Harlequin's Blade, Shuriken Pistol
+Vibro Cannon Platform [60 pts]: Close Combat Weapon, Shuriken Catapult, Vibro Cannon
+Warlock Conclave [55 pts]:
+• 2x Warlock with Witchblade: Destructor, Shuriken Pistol, Witchblade
+Warp Spiders [95 pts]:
+• 4x Warp Spider: Close Combat Weapon, Death spinner
+• 1x Warp Spider Exarch: Close Combat Weapon, Exarch's death spinner
+Wraithblades [170 pts]:
 • 5x Wraithblade: Ghostswords
-Wraithguard [180pts]:
+Wraithguard [170 pts]:
 • 5x Wraithguard: Close Combat Weapon, Wraithcannon
 
-## Mounted [550pts]
-Corsair Cloud Dancer Band [Legends] [105pts]:
-• 3x Corsair Cloud Dancer: Brace of pistols, Close combat weapon, Twin shuriken catapult
-Shining Spears [90pts]:
+## Mounted [420 pts]
+Shining Spears [120 pts]:
 • 2x Shining Spear: Laser Lance, Twin Shuriken Catapult
 • 1x Shining Spear Exarch: Twin Shuriken Catapult, Laser Lance
-Shroud Runners [80pts]:
-• 3x Shroud Runner: Close Combat Weapon, Ranger long rifle, Scatter Laser, Shuriken Pistol
-Skyweavers [105pts]:
+Shroud Runners [80 pts]:
+• 3x Shroud Runner: Close Combat Weapon, Long rifle, Scatter Laser, Shuriken Pistol
+Skyweavers [95 pts]:
 • 2x Skyweaver: Close Combat Weapon, Shuriken Cannon, Star Bolas
-Warlock Skyrunner Conclave [90pts]:
-• 2x Warlock Skyrunner: Destructor, Shuriken Pistol, Twin Shuriken Catapult, Witchblade
-Windriders [80pts]:
+Warlock Skyrunners [45 pts]:
+• 1x Warlock Skyrunner with Witchblade: Destructor, Shuriken Pistol, Twin Shuriken Catapult, Witchblade
+Windriders [80 pts]:
 • 3x Windrider with Twin Shuriken Catapult: Close Combat Weapon, Twin Shuriken Catapult
 
-## Monster [4490pts]
-Phantom Titan [2100pts]: Phantom feet, Voidstorm missile launcher, D-bombard, Phantom pulsar
-Revenant Titan [1100pts]: Cloudburst missile launcher, Revenant feet, Revenant Pulsar, Sonic Lance
-Skathach Wraithknight [490pts]: Titanic feet, Scattershield, Inferno Lance
-Wraithknight [495pts]: Titanic feet, Scattershield, Titanic Ghostglaive
-Wraithlord [145pts]: 2x Shuriken Catapult
-Wraithseer [160pts]: Destructor, Ghostspear, Wraithseer D-Cannon
+## Monster [4355 pts]
+Phantom Titan [2100 pts]: Phantom feet, Voidstorm missile launcher, D-bombard, Phantom pulsar, Phantom starcannon
+Revenant Titan [1100 pts]: Cloudburst missile launcher, Revenant feet, Revenant Pulsar, Sonic Lance
+Wraithknight [435 pts]: Titanic feet, Scattershield, Suncannon
+Wraithknight with Ghostglaive [420 pts]: Titanic Ghostglaive, Scattershield
+Wraithlord [140 pts]: Wraithbone Fists, 2x Shuriken Catapult
+Wraithseer [Legends] [160 pts]: Destructor, Ghostspear, Wraithseer D-Cannon
 
-## Vehicle [4085pts]
-Cobra [415pts]: D-Impaler, Wraithbone hull, Shuriken Cannon
-Crimson Hunter [160pts]: Pulse Laser, 2 Starcannons
-Falcon [130pts]: Pulse Laser, Wraithbone hull, Shuriken Cannon, Twin Shuriken Catapult
-Fire Prism [170pts]: Prism Cannon, Wraithbone hull, Twin Shuriken Catapult
-Firestorm [Legends] [115pts]: Firestorm Scatter Laser, Wraithbone hull, Shuriken Cannon
-Hemlock Wraithfighter [155pts]: 2x Heavy D-Scythe
-Hornet [100pts]: 2x Hornet Pulse Laser
-Lynx [180pts]: Lynx Pulsar, Wraithbone hull, Shuriken Cannon
-Night Spinner [210pts]: Doomweaver, Wraithbone hull, Twin Shuriken Catapult
-Nightwing [150pts]: Twin Bright Lance, Twin Shuriken Cannon, Wraithbone hull
-Nightwing [150pts]: Twin Bright Lance, Twin Shuriken Cannon, Wraithbone hull
-Phoenix [Legends] [175pts]: Phoenix missile array, Phoenix pulse laser, Twin shuriken cannon, Wraithbone hull
-Scorpion [410pts]: Twin Scorpion Pulsar, Wraithbone hull, Shuriken Cannon
-Support Weapons [135pts]: Close Combat Weapon, Shuriken Catapult, Shadow weaver
-Vampire Hunter [Legends] [460pts]: Scatter Laser, 2x Twin Pulse Laser, Wraithbone hull
-Vampire Raider [Legends] [430pts]: Scatter Laser, 2x Twin Pulse Laser, Wraithbone hull
-Voidweaver [115pts]: Close Combat Weapon, 2x Shuriken Cannon, Voidweaver Haywire Cannon
-Vyper [75pts]: Twin Shuriken Catapult, Wraithbone hull, Shuriken Cannon
-War Walker [110pts]: War Walker feet, 2x Shuriken Cannon
-Warp Hunter [145pts]: D-Flail, Wraithbone hull, Twin Shuriken Catapult
-Wasp Assault Walker [Legends] [95pts]: Wasp feet, 2x Shuriken Cannon
+## Vehicle [1080 pts]
+Crimson Hunter [160 pts]: Pulse Laser, Wraithbone Hull, 2 Starcannons
+Falcon [130 pts]: Pulse Laser, Wraithbone hull, Shuriken Cannon, Twin Shuriken Catapult
+Fire Prism [160 pts]: Prism Cannon, Wraithbone hull, Twin Shuriken Catapult
+Hemlock Wraithfighter [155 pts]: 2x Heavy D-Scythe
+Night Spinner [190 pts]: Doomweaver, Wraithbone hull, Twin Shuriken Catapult
+Voidweaver [125 pts]: Close Combat Weapon, 2x Shuriken Cannon, Voidweaver Haywire Cannon
+Vypers [65 pts]:
+• 1x Vyper [65 pts]: Twin Shuriken Catapult, Wraithbone hull, Shuriken Cannon
+War Walkers [95 pts]:
+• 1x War Walker [95 pts]: War Walker feet, 2x Shuriken Cannon
 
-## Dedicated Transport [190pts]
-Starweaver [80pts]: Close Combat Weapon, 2x Shuriken Cannon
-Wave Serpent [110pts]: Wraithbone Hull, Twin Shuriken Catapult, Twin Shuriken Cannon
+## Dedicated Transport [265 pts]
+Starweaver [80 pts]: Close Combat Weapon, 2x Shuriken Cannon
+Wave Serpent [115 pts]: Wraithbone Hull, Twin Shuriken Catapult, Twin Shuriken Cannon
+Ynnari Venom [70 pts]: Bladevanes, Splinter Cannon, Twin Splinter Rifle

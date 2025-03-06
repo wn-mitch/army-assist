@@ -18,7 +18,6 @@ describe("Display the army list split into units", () => {
     'nr_custodes.txt',
     'nr_dark_angels.txt',
     'nr_death_guard.txt',
-    'nr_grey_knights.txt',
     'nr_guard.txt',
     'nr_guard_2.txt',
     'nr_knights.txt',

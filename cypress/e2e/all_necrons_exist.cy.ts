@@ -39,11 +39,12 @@ describe("Ensure all weapons listed in nr_necrons are listed on either the Shoot
     "Gauss annihilator",
     "Gauss exterminator",
     "Gauntlet of Fire",
+    "Aeonstave",
   ];
 
   const fightWeapons = [
     "Warscythe",
-    "Chronomancer's stave",
+    "Aeonstave",
     "Golden fists",
     "Scythe of the Nightbringer",
     "Spear of the Void Dragon",

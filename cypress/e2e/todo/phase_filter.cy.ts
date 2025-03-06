@@ -24,7 +24,7 @@ describe('The Phase Filter should adjust the visible stats', () => {
   it('selects Fight phase and sees the melee weapon characteristics', () => {
     cy.get("#headlessui-radio-\\:rf\\:").click();
     cy.contains("Crushing bulk");
-    cy.contains("Melee");
+    cy.contains("5+");
   })
   it('selects Saves phase and sees the save characteristics', () => {
     cy.get("#headlessui-radio-\\:rg\\:").click();

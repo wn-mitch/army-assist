@@ -33,9 +33,6 @@ Death Rider Squadron Commander [60pts]: Death Rider hunting lance, Savage claws,
 Militarum Tempestus Command Squad [70pts]:
 • 1x Tempestor Prime: Tempestus Dagger, Bolt Pistol
 • 4x Tempestus Scion: Close Combat Weapon, Hot-shot Lasgun
-Platoon Command Squad [60pts]:
-• 1x Platoon Commander: Close Combat Weapon, Laspistol
-• 4x Veteran Guardsman: Close Combat Weapon, Laspistol, Lasgun
 Primaris Psyker [60pts]: Force Weapon, Laspistol, Psychic Maelstrom
 
 ## Battleline [255pts]
@@ -73,10 +70,6 @@ Ratling Snipers [60pts]:
 • 5x Ratling Snipers: Close Combat Weapon, Sniper rifle
 Ratlings [60pts]:
 • 5x Ratlings: Close combat weapon, Sniper rifle
-Regimental Attachés [40pts]:
-• 1x Astropath: Astropath's Stave, Laspistol
-• 1x Master of Ordnance: Close Combat Weapon, Laspistol
-• 1x Officer of the Fleet: Close Combat Weapon, Laspistol
 Tempestus Aquilons [110pts]:
 • 1x Tempestor Aquilon: Close Combat Weapon, Hot-shot lascarbine, Sentry flamer
 • 9x Tempestus Aquilon: Close Combat Weapon, Hot-shot lascarbine
