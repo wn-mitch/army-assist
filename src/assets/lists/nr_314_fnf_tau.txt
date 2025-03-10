@@ -1,0 +1,51 @@
+Xenos - T'au Empire - FNF 3/14 - [1250 pts]
+
+# ++ Army Roster ++ [1250 pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Retaliation Cadre
+Show/Hide Options
+
+## Epic Hero [95 pts]
+Commander Farsight [95 pts]: Dawn Blade, High-intensity plasma rifle, Warlord
+
+## Character [145 pts]
+Cadre Fireblade [50 pts]: Close combat weapon, Fireblade pulse rifle
+Commander in Coldstar Battlesuit [95 pts]: Airbursting fragmentation projector, Cyclic ion blaster, T'au flamer, Battlesuit fists
+
+## Battleline [100 pts]
+Breacher Team [100 pts]:
+• 1x Breacher Fire Warrior Shas'ui: Close combat weapon, Pulse blaster, Pulse pistol, Support turret, Guardian Drone, Gun Drone (Twin pulse carbine)
+• 9x Breacher Fire Warriors: Close combat weapon, Pulse blaster, Pulse pistol
+
+## Infantry [275 pts]
+Kroot Carnivores [65 pts]:
+• 1x Long-quill: Close combat weapon, Kroot pistol, Kroot rifle
+• 9x Kroot Carnivores: Close combat weapon, Kroot rifle
+Pathfinder Team [90 pts]:
+• 1x Pathfinder Shas'ui: Close combat weapon, Pulse carbine, Pulse pistol, Recon drone (Drone burst cannon)
+• 9x Pathfinders w/ pulse carbine: Close combat weapon, Pulse carbine, Pulse pistol
+Stealth Battlesuits [60 pts]:
+• 1x Stealth Shas'vre: Battlesuit fists, Battlesuit support system, Homing beacon, Fusion blaster, Marker Drone, Shield Drone
+• 2x Stealth Shas'ui w/ burst cannon: Battlesuit fists, Burst cannon
+Stealth Battlesuits [60 pts]:
+• 1x Stealth Shas'vre: Battlesuit fists, Battlesuit support system, Homing beacon, Fusion blaster, Marker Drone, Shield Drone
+• 2x Stealth Shas'ui w/ burst cannon: Battlesuit fists, Burst cannon
+
+## Mounted [40 pts]
+Krootox Riders [40 pts]:
+• 1x Krootox Rider w/ repeater cannon: Close combat weapon, Krootox fists, Repeater cannon
+
+## Vehicle [510 pts]
+Broadside Battlesuits [90 pts]:
+• 1x Broadside Shas’vre: Crushing bulk, Missile Drone (Missile pod), Shield Drone, High-yield missile pods, Weapon support system, Twin smart missile system
+Crisis Starscythe Battlesuits [110 pts]:
+• 1x Crisis Starscythe Shas’vre: 2x T'au flamer, Battlesuit fists, Gun Drone (Twin pulse carbine), Marker Drone
+• 2x Crisis Starscythe Shas’ui: 2x T'au flamer, Battlesuit fists, Gun Drone (Twin pulse carbine), Shield Drone
+Crisis Sunforge Battlesuits [150 pts]:
+• 1x Crisis Sunforge Shas’vre: 2x Fusion blaster, Battlesuit fists, Gun Drone (Twin pulse carbine), Marker Drone
+• 2x Crisis Sunforge Shas’ui: Battlesuit fists, 2x Fusion blaster, Gun Drone (Twin pulse carbine), Shield Drone
+Ghostkeel Battlesuit [160 pts]: Ghostkeel fists, Battlesuit support system, Fusion collider, Twin T'au flamer
+
+## Dedicated Transport [85 pts]
+Devilfish [85 pts]: Accelerator burst cannon, Armoured hull, 2 Smart missile systems (2x Smart missile system)

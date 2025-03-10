@@ -4,6 +4,7 @@ import { CogIcon } from "@heroicons/react/24/outline";
 import Phase from "@/types/Phase";
 import useStore from "@/store/store";
 import SortOptions from "@/types/SortOptions";
+import SettingsOption from "./CardComponents/SettingsOption";
 
 function Settings() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,49 +32,6 @@ function Settings() {
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
-  const SettingsOption: React.FC<{
-    label: string;
-    checked: boolean;
-    onChange: () => void;
-    className?: string;
-  }> = ({ label, checked, onChange, className }) => (
-    <label className={`relative flex gap-3 cursor-pointer ${className}`}>
-      <div className="min-w-0 flex-1 text-sm/6">
-        <span className="select-none">{label}</span>
-      </div>
-      <div className="flex h-6 shrink-0 items-center">
-        <div className="group grid size-4 grid-cols-1">
-          <input
-            checked={checked}
-            onChange={onChange}
-            type="checkbox"
-            className="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-gray-600 checked:bg-gray-600 indeterminate:border-gray-600 indeterminate:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto dark:checked:bg-gray-700 dark:border-2 dark:border-gray-200"
-          />
-          <svg
-            fill="none"
-            viewBox="0 0 14 14"
-            className="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-[:disabled]:stroke-gray-950/25"
-          >
-            <path
-              d="M3 8L6 11L11 3.5"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="opacity-0 group-has-[:checked]:opacity-100"
-            />
-            <path
-              d="M3 7H11"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="opacity-0 group-has-[:indeterminate]:opacity-100"
-            />
-          </svg>
-        </div>
-      </div>
-    </label>
-  );
-
   return (
     <>
       <button
@@ -96,12 +54,12 @@ function Settings() {
             aria-hidden="true"
           />
           <DialogPanel className="bg-white dark:bg-gray-800 rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
-            <DialogTitle className="text-xl font-bold text-center dark:text-gray-200">
+            <DialogTitle className="text-xl font-bold text-center text-gray-800 dark:text-gray-200">
               Settings
             </DialogTitle>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700">
-              <h2 className="text-lg font-semibold dark:text-gray-200">
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg dark:bg-gray-700">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 Active Phases
               </h2>
               <div className="mt-2 columns-3">
@@ -113,78 +71,89 @@ function Settings() {
                     onChange={() => togglePhase(phase as Phase)}
                     className={`outline outline-2 -outline-offset-1 focus:outline-gray-700 dark:outline-gray-gray-600 m-1 rounded-lg first:mt-0 p-1 font-semibold text-gray-200 ${
                       activePhases[phase as Phase]
-                        ? "bg-gray-600  hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-700 dark:text-gray-200 text-white dark:hover:text-gray-100"
-                        : "bg-white hover:bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+                        ? "bg-gray-500  hover:bg-gray-600 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 dark:hover:text-gray-100 text-white"
+                        : "bg-gray-100 hover:bg-gray-600 text-gray-800 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-white"
                     }`}
+                    id={""}
                   />
                 ))}
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold dark:text-gray-200">
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 List Sort
               </h2>
-              <div className="mt-2 divide-y divide-gray-200 border-b border-t border-gray-200">
+              <div className="mt-2 divide-y divide-gray-800 dark:divide-gray-200 border-b border-t dark:border-gray-200 border-gray-800">
                 {Object.values(SortOptions).map((sortOption) => (
                   <SettingsOption
                     key={sortOption}
                     label={sortOption}
                     checked={sortOption === activeSort}
                     onChange={() => setListSort(sortOption as SortOptions)}
+                    id={""}
                   />
                 ))}
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold dark:text-gray-200">
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 Cards Collapse
               </h2>
               <SettingsOption
                 label="Checking this option creates a button on each datacard that, when clicked, collapses the card to show only the title and keywords. If you use the card clicking feature, this is necessary. If not, disabling this will reduce card height."
                 checked={cardsCollapse}
                 onChange={() => setCardsCollapse(!cardsCollapse)}
+                id={""}
               />
             </div>
-            
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold dark:text-gray-200">
+
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 Cards Group
               </h2>
               <SettingsOption
                 label="Checking this option groups identical cards together and displays their count in the unit name"
                 checked={cardsGroup}
                 onChange={() => setCardsGroup(!cardsGroup)}
+                id={""}
               />
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold dark:text-gray-200">
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 Show Datacard Keywords
               </h2>
               <SettingsOption
                 label="Checking this option will show the keywords of each datacard. Disabling this option will reduce card height."
                 checked={showKeywords}
                 onChange={() => setShowKeywords(!showKeywords)}
+                id={""}
               />
             </div>
-            
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold">Filter Weapons</h2>
+
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                Filter Weapons
+              </h2>
               <SettingsOption
                 label="Filter the weapons shown on the datacard by what's on your list. If you see (or don't see, rather) missing weapons, this is a good option to disable."
                 checked={weaponsFilter}
                 onChange={() => setWeaponsFilter(!weaponsFilter)}
+                id={""}
               />
             </div>
 
-            <div className="mt-3 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold">Enable Dark Mode</h2>
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                Enable Dark Mode
+              </h2>
               <SettingsOption
                 label="This website has a fully functional dark mode. Enable it here."
                 checked={isDarkMode}
                 onChange={() => setIsDarkMode(!isDarkMode)}
+                id={""}
               />
             </div>
 

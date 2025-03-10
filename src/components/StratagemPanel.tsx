@@ -6,20 +6,14 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import Stratagems from "@/assets/json/Stratagems_modified.json";
 import useStore from "@/store/store";
 
 export default function StratagemPanel() {
   const [open, setOpen] = useState(false);
-  const faction = useStore((state) => state.faction);
+
   const phase = useStore((state) => state.phase);
-  const detachment = useStore((state) => state.detachment);
-
-  const stratagemNames = new Set();
-
-  if (!faction || !phase || !detachment) {
-    return null;
-  }
+  const getStratagemsByPhase = useStore((state) => state.getStratagemsByPhase);
+  const stratagems = getStratagemsByPhase(phase);
 
   const formatDescription = (description: string) => {
     const keywords = ["WHEN:", "TARGET:", "EFFECT:", "RESTRICTIONS:", "PHASE:"];
@@ -41,42 +35,6 @@ export default function StratagemPanel() {
     });
   };
 
-  const filteredStratagems = Stratagems.map((stratagem) => {
-    const [splitDetachment, splitType] = stratagem.type.split(" - ");
-    if (splitDetachment === "Core") {
-      return {
-        ...stratagem,
-        detachment: "Core",
-        type: splitType,
-      };
-    } else {
-      return {
-        ...stratagem,
-        type: splitType,
-      };
-    }
-  })
-    .filter(
-      (stratagem) =>
-        stratagem.faction_id === faction || stratagem.faction_id === ""
-    )
-    .filter((stratagem) => {
-      return (
-        stratagem.detachment === detachment ||
-        stratagem.detachment === "" ||
-        stratagem.detachment === "Core"
-      );
-    })
-    .filter((stratagem) => stratagem.phases.includes(phase))
-    .filter((stratagem) => {
-      if(stratagemNames.has(stratagem.name)) {
-        return false;
-      } else {
-        stratagemNames.add(stratagem.name);
-        return true;
-      }
-    });
-  
   return (
     <>
       <button
@@ -125,7 +83,7 @@ export default function StratagemPanel() {
                     </div>
                   </div>
                   <div className="relative mt-6 flex-1 px-4 sm:px-6 xl:columns-2 lg:columns-1 md:columns-1 sm:columns-1">
-                    {filteredStratagems.map((stratagem) => (
+                    {stratagems.map((stratagem) => (
                       <li
                         key={stratagem.id}
                         className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-600`}

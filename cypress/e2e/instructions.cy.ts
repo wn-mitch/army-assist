@@ -7,19 +7,19 @@ describe("Instructions Modal Test", () => {
   });
 
   it("should open the instructions modal", () => {
-    cy.get('.gap-1 > .text-gray-200').click();
+    cy.get('#instructions-button').click();
     cy.contains("Instructions").should("be.visible");
   });
 
   it("should close the instructions modal with escape", () => {
-    cy.get('.gap-1 > .text-gray-200').click();
+    cy.get('#instructions-button').click();
     cy.contains("Instructions").should("be.visible");
     cy.get('body').type('{esc}');
     cy.contains("Instructions").should("not.exist");
   });
   
   it("should click the copy sample to clipboard button, see the alert, then paste it into the pastebox successfully", () => {
-    cy.get('.gap-1 > .text-gray-200').click();
+    cy.get('#instructions-button').click();
     cy.get('#copy-sample-button').realClick();
     
     // Verify the alert is visible

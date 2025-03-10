@@ -1,0 +1,45 @@
+Xenos - Tyranids - 3/12 Nids - [1995 pts]
+
+# ++ Army Roster ++ [1995 pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Invasion Fleet
+Show/Hide Options
+
+## Epic Hero [80 pts]
+Deathleaper [80 pts]: Lictor claws and talons
+
+## Character [435 pts]
+Broodlord [95 pts]: Perfectly Adapted, Broodlord Claws and Talons
+Hive Tyrant [235 pts]: Monstrous bonesword and lash whip, Heavy venom cannon
+Neurotyrant [105 pts]: Warlord, Neurotyrant claws and lashes, Psychic scream
+
+## Battleline [335 pts]
+Gargoyles [85 pts]:
+• 10x Gargoyles: Blinding venom, Fleshborer
+Hormagaunts [65 pts]:
+• 10x Hormagaunts: Hormagaunt talons
+Hormagaunts [65 pts]:
+• 10x Hormagaunts: Hormagaunt talons
+Termagants [60 pts]:
+• 10x Termagants: Chitinous claws and teeth, Fleshborer
+Termagants [60 pts]:
+• 10x Termagants: Chitinous claws and teeth, Fleshborer
+
+## Infantry [460 pts]
+Biovores [50 pts]:
+• 1x Biovore [50 pts]: Chitin-barbed limbs, Spore mine launcher
+Genestealers [150 pts]:
+• 10x Genestealer: Genestealers claws and talons
+Neurolictor [90 pts]: Piercing claws and talons
+Von Ryan's Leapers [70 pts]:
+• 3x Von Ryan's Leaper: Leaper's talons
+Zoanthropes [100 pts]:
+• 1x Neurothrope: Chitinous claws and teeth, Warp blast
+• 2x Zoanthrope: Chitinous claws and teeth, Warp blast
+
+## Monster [685 pts]
+Haruspex [125 pts]: Grasping tongue, Ravenous maw, Shovelling claws
+Norn Assimilator [275 pts]: Monstrous scything talons, Toxinjecter harpoon
+Psychophage [95 pts]: Psycholastic torrent, Talons and betentacled maw
+Tyrannofex [190 pts]: Powerful limbs, Stinger salvoes, Rupture cannon

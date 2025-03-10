@@ -136,74 +136,10 @@
         "": ""
     },
     {
-        "id": "000008350",
-        "name": "Oath of Moment",
-        "legend": "In battle, Space Marines swear mighty oaths to destroy the enemies of the Emperor and uphold the honour of their Chapter, and such vows are sacrosanct. When the Angels of Death strike, they do so with the precision of a surgeon and the force of a thunderbolt. Experience and strategic expertise help them to read the shifting shape of the battle with post-human speed and clarity, directing their wrath towards one priority target after another. Command assets are annihilated, leaving the enemy reeling leaderless. Heavy armour, potent artillery and the vaunted elites of the foe's forces are laid waste with horrifying speed, until the Emperor's Angels of Death stand victorious over a field of smouldering wreckage and bolt-riddled corpses, and honour is finally satisfied.",
-        "faction_id": "CSM",
-        "description": "If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:You can re-roll the Hit roll.If your army does not include one or more units with the BLACK TEMPLARS, BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.",
-        "": ""
-    },
-    {
-        "id": "000008350",
-        "name": "Oath of Moment",
-        "legend": "In battle, Space Marines swear mighty oaths to destroy the enemies of the Emperor and uphold the honour of their Chapter, and such vows are sacrosanct. When the Angels of Death strike, they do so with the precision of a surgeon and the force of a thunderbolt. Experience and strategic expertise help them to read the shifting shape of the battle with post-human speed and clarity, directing their wrath towards one priority target after another. Command assets are annihilated, leaving the enemy reeling leaderless. Heavy armour, potent artillery and the vaunted elites of the foe's forces are laid waste with horrifying speed, until the Emperor's Angels of Death stand victorious over a field of smouldering wreckage and bolt-riddled corpses, and honour is finally satisfied.",
-        "faction_id": "WE",
-        "description": "If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:You can re-roll the Hit roll.If your army does not include one or more units with the BLACK TEMPLARS, BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.",
-        "": ""
-    },
-    {
-        "id": "000008350",
-        "name": "Oath of Moment",
-        "legend": "In battle, Space Marines swear mighty oaths to destroy the enemies of the Emperor and uphold the honour of their Chapter, and such vows are sacrosanct. When the Angels of Death strike, they do so with the precision of a surgeon and the force of a thunderbolt. Experience and strategic expertise help them to read the shifting shape of the battle with post-human speed and clarity, directing their wrath towards one priority target after another. Command assets are annihilated, leaving the enemy reeling leaderless. Heavy armour, potent artillery and the vaunted elites of the foe's forces are laid waste with horrifying speed, until the Emperor's Angels of Death stand victorious over a field of smouldering wreckage and bolt-riddled corpses, and honour is finally satisfied.",
-        "faction_id": "DG",
-        "description": "If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:You can re-roll the Hit roll.If your army does not include one or more units with the BLACK TEMPLARS, BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.",
-        "": ""
-    },
-    {
-        "id": "000008350",
-        "name": "Oath of Moment",
-        "legend": "In battle, Space Marines swear mighty oaths to destroy the enemies of the Emperor and uphold the honour of their Chapter, and such vows are sacrosanct. When the Angels of Death strike, they do so with the precision of a surgeon and the force of a thunderbolt. Experience and strategic expertise help them to read the shifting shape of the battle with post-human speed and clarity, directing their wrath towards one priority target after another. Command assets are annihilated, leaving the enemy reeling leaderless. Heavy armour, potent artillery and the vaunted elites of the foe's forces are laid waste with horrifying speed, until the Emperor's Angels of Death stand victorious over a field of smouldering wreckage and bolt-riddled corpses, and honour is finally satisfied.",
-        "faction_id": "TS",
-        "description": "If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:You can re-roll the Hit roll.If your army does not include one or more units with the BLACK TEMPLARS, BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.",
-        "": ""
-    },
-    {
         "id": "000008359",
         "name": "Dark Pacts",
         "legend": "Beseeching the Chaos Gods with fanatical fervour, the profane champions of the Heretic Astartes pray for diabolic boons, promising the vilest of offerings in return for their power.",
         "faction_id": "CSM",
-        "description": "If your Army Faction is HERETIC ASTARTES, each time a unit with  this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:[LETHAL HITS][SUSTAINED HITS 1]",
-        "": ""
-    },
-    {
-        "id": "000008359",
-        "name": "Dark Pacts",
-        "legend": "Beseeching the Chaos Gods with fanatical fervour, the profane champions of the Heretic Astartes pray for diabolic boons, promising the vilest of offerings in return for their power.",
-        "faction_id": "QT",
-        "description": "If your Army Faction is HERETIC ASTARTES, each time a unit with  this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:[LETHAL HITS][SUSTAINED HITS 1]",
-        "": ""
-    },
-    {
-        "id": "000008359",
-        "name": "Dark Pacts",
-        "legend": "Beseeching the Chaos Gods with fanatical fervour, the profane champions of the Heretic Astartes pray for diabolic boons, promising the vilest of offerings in return for their power.",
-        "faction_id": "TS",
-        "description": "If your Army Faction is HERETIC ASTARTES, each time a unit with  this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:[LETHAL HITS][SUSTAINED HITS 1]",
-        "": ""
-    },
-    {
-        "id": "000008359",
-        "name": "Dark Pacts",
-        "legend": "Beseeching the Chaos Gods with fanatical fervour, the profane champions of the Heretic Astartes pray for diabolic boons, promising the vilest of offerings in return for their power.",
-        "faction_id": "WE",
-        "description": "If your Army Faction is HERETIC ASTARTES, each time a unit with  this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:[LETHAL HITS][SUSTAINED HITS 1]",
-        "": ""
-    },
-    {
-        "id": "000008359",
-        "name": "Dark Pacts",
-        "legend": "Beseeching the Chaos Gods with fanatical fervour, the profane champions of the Heretic Astartes pray for diabolic boons, promising the vilest of offerings in return for their power.",
-        "faction_id": "DG",
         "description": "If your Army Faction is HERETIC ASTARTES, each time a unit with  this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit's weapons to gain until the end of the phase:[LETHAL HITS][SUSTAINED HITS 1]",
         "": ""
     },
@@ -256,14 +192,6 @@
         "": ""
     },
     {
-        "id": "000008396",
-        "name": "Nurgle's Gift (Aura)",
-        "legend": "The Death Guard are carriers of countless infections and contagions, each a gift from Nurgle. Whenever they march to war, they contaminate all around them, overwhelming their victims' immune systems and undoing metallic bonds, alien psychic materials and all manner of other components, rendering even armoured vehicles vulnerable.",
-        "faction_id": "CSM",
-        "description": "If your Army Faction is DEATH GUARD, while an enemy unit is within Contagion Range of this unit, subtract 1 from the Toughness characteristic of models in that enemy unit. Contagion Range changes over the course of the battle, as shown below.CONTAGION RANGE",
-        "": ""
-    },
-    {
         "id": "000008424",
         "name": "Cabal of Sorcerers",
         "legend": "The Thousand Sons channel their arcane power through battlefield ritual, beseeching the Changer of the Ways to gift them forbidden knowledge or ravage their foes with warpfire and mutation.",
@@ -272,26 +200,10 @@
         "": ""
     },
     {
-        "id": "000008424",
-        "name": "Cabal of Sorcerers",
-        "legend": "The Thousand Sons channel their arcane power through battlefield ritual, beseeching the Changer of the Ways to gift them forbidden knowledge or ravage their foes with warpfire and mutation.",
-        "faction_id": "CSM",
-        "description": "If your Army Faction is THOUSAND SONS, at the end of your Command phase, each model from your army with this ability that is on the battlefield (excluding Battle-shocked models) generates you a number of Cabal points equal to the number shown in its ability (e.g. a model with the Cabal of Sorcerers 2 ability would generate you 2 Cabal points). The combined total of these is your Cabal points pool. During the battle round, you can use Rituals from the list below, deducting the Cabal points cost of each one from your Cabal points pool. If you do not have enough Cabal points for a Ritual, you cannot use it. Each Ritual can only be used once per phase. At the start of your next Command phase, your Cabal points pool resets to zero. Each time you use a Ritual, select one THOUSAND SONS PSYKER model from your army (excluding models that have already been selected for this rule this turn), then apply that Ritual's effect using that PSYKER.WEAVER OF FATES (PSYCHIC)2 CABAL POINTSUse this Ritual at the start of any phase. Once during that phase, when a saving throw is failed for a friendly THOUSAND SONS model whose unit is within 18\" of this PSYKER, you can re-roll that saving throw.TEMPORAL SURGE (PSYCHIC)5 CABAL POINTSUse this Ritual at the start of your Shooting phase. Select one friendly THOUSAND SONS unit within 18\" of this PSYKER; unless that unit is within Engagement Range of one or more enemy units, it can make a Normal move. If it does, that unit is not eligible to declare a charge this turn. The same unit cannot be selected for this Ritual more than once per phase.ECHOES FROM THE WARP (PSYCHIC)6 CABAL POINTSUse this Ritual at the start of any phase. Once this phase, you can select this PSYKER's unit as the target of a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.DOOMBOLT (PSYCHIC)7 CABAL POINTSUse this Ritual at the start of your Shooting phase. Select one enemy unit within 18\" of and visible to this PSYKER(excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this PSYKER) and roll one D6: on a 1, that enemy unit suffers D3 mortal wounds; on a 2-5, that enemy unit suffers D3+3 mortal wounds; on a 6, that enemy unit suffers D3+6 mortal wounds.TWIST OF FATE (PSYCHIC)9 CABAL POINTSUse this Ritual at the start of your Shooting phase. Select one enemy unit within 18\" of and visible to this PSYKER; until the end of the phase, each time a THOUSAND SONS model from your army makes a ranged attack that targets that unit, improve the Armour Penetration characteristic of that attack by 2.",
-        "": ""
-    },
-    {
         "id": "000008428",
         "name": "Blessings of Khorne",
         "legend": "Khorne is the god of warfare and slaughter, and provides mighty boons to those who consecrate the battlefield in his name.",
         "faction_id": "WE",
-        "description": "If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne from the Blessings of Khorne list (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded.Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the following dice: 1, 2, 3, 4.However, now that they have activated two Blessings of Khorne, they cannot activate any more and the remaining dice are discarded.RAGE-FUELLED INVIGORATIONANY DOUBLEAdd 2\" to the Move characteristic of models in this unit.WRATHFUL DEVOTIONANY DOUBLEModels in this unit have the Feel No Pain 6+ ability. If models in this unit already have the Feel No Pain ability, add 1 to their Feel No Pain rolls.MARTIAL EXCELLENCEDOUBLE 3+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.TOTAL CARNAGEDOUBLE 4+ OR ANY TRIPLEEach time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.WARP BLADESDOUBLE 5+ OR ANY TRIPLEMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.UNBRIDLED BLOODLUSTDOUBLE 6 OR TRIPLE 4+This unit is eligible to declare a charge in a turn in which it Advanced.",
-        "": ""
-    },
-    {
-        "id": "000008428",
-        "name": "Blessings of Khorne",
-        "legend": "Khorne is the god of warfare and slaughter, and provides mighty boons to those who consecrate the battlefield in his name.",
-        "faction_id": "CSM",
         "description": "If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne from the Blessings of Khorne list (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded.Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the following dice: 1, 2, 3, 4.However, now that they have activated two Blessings of Khorne, they cannot activate any more and the remaining dice are discarded.RAGE-FUELLED INVIGORATIONANY DOUBLEAdd 2\" to the Move characteristic of models in this unit.WRATHFUL DEVOTIONANY DOUBLEModels in this unit have the Feel No Pain 6+ ability. If models in this unit already have the Feel No Pain ability, add 1 to their Feel No Pain rolls.MARTIAL EXCELLENCEDOUBLE 3+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.TOTAL CARNAGEDOUBLE 4+ OR ANY TRIPLEEach time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.WARP BLADESDOUBLE 5+ OR ANY TRIPLEMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.UNBRIDLED BLOODLUSTDOUBLE 6 OR TRIPLE 4+This unit is eligible to declare a charge in a turn in which it Advanced.",
         "": ""
     },

@@ -47,6 +47,18 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     setTouchStartY(null);
   };
 
+  const filteredWeapons = weaponsFilter
+    ? unit.weaponsDatasheets.filter((weapon) =>
+        (Object.keys(unit.count ?? {})).some((name: string) => {
+          return weapon.name?.toLowerCase().includes(name.toLowerCase());
+        })
+      )
+    : unit.weaponsDatasheets;
+
+  const phasedWeapons = filteredWeapons.filter((wargear) =>
+    phase === "Shooting" ? wargear.type === "Ranged" : wargear.type === "Melee"
+  );
+
   switch (phase) {
     case Phase.Command:
       [characteristic, toggled] = CommandPhase({ unit });
@@ -57,9 +69,9 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     case Phase.Shooting:
     case Phase.Fight:
       [characteristic, toggled] = ShootingOrFightPhase({
-        unit,
+        counts: unit.count || {},
+        phasedWeapons,
         phase,
-        weaponsFilter,
       });
       break;
     case Phase.Charge:
@@ -83,18 +95,19 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
 
   const cardToggled =
     unit.toggled && (toggled || abilitiesToggle || enhancementsToggle);
+
   const fadedClasses = cardToggled ? "" : "opacity-50";
 
-  const groupingNumber = cardsGroup ? `[${unit.count}x]` : "";
+  const groupingNumber = cardsGroup ? `[${unit.groupCount}x]` : "";
 
   return (
     <ul
       key={unit.datasheet_id}
       tabIndex={0}
       className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}
+      onClick={() => toggleUnit(unit)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      onPointerUp={() => toggleUnit(unit)}
     >
       <div className="flex flex-row">
         <div
@@ -103,19 +116,19 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
           <div className="flex-row text-gray-800 dark:text-gray-400 break-inside-avoid mr-1">
             {groupingNumber}
           </div>
-          <div className="flex-1 flex-row flex-grow text-black dark:text-gray-50 break-inside-avoid">
+          <div className="flex-1 flex-row flex-grow text-black dark:text-gray-50">
             {unit.name}
           </div>
 
           {showKeywords && (
-            <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-300 dark:font-normal">
+            <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-300 dark:font-normal break-words">
               {unit.keywords}
             </div>
           )}
         </div>
         {cardsCollapse && (
           <div className="flex justify-center items-center">
-            <div className="m-auto flex flex-shrink shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200 dark:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-100">
+            <div className="m-auto flex shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200 dark:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-100">
               {cardToggled ? (
                 <ChevronDownIcon className="h-8 w-8" />
               ) : (

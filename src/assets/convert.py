@@ -9,12 +9,46 @@ replacements = {
     r"\u2018": "\'",
 }
 
+# Define the conditions for rows to be ignored
+ignore_conditions = [
+    # Cabal of Sorcerers
+    {"id": "000008424", "faction_id": "CSM"},
+    
+    # Nurgles Gift
+    {"id": "000008396", "faction_id": "CSM"},
+    
+    # Blessings of Khorne
+    {"id": "000008428", "faction_id": "CSM"},
+    
+    # Oath of Moment
+    {"id": "000008350", "faction_id": "CSM"},
+    {"id": "000008350", "faction_id": "WE"},
+    {"id": "000008350", "faction_id": "DG"},
+    {"id": "000008350", "faction_id": "TS"},
+    
+    # Dark Pacts
+    {"id": "000008359", "faction_id": "WE"},
+    {"id": "000008359", "faction_id": "DG"},
+    {"id": "000008359", "faction_id": "TS"},
+    {"id": "000008359", "faction_id": "QT"},
+    
+    # Thrillseekers when added
+]
+
+def should_ignore_row(row):
+    for condition in ignore_conditions:
+        if all(row.get(key) == value for key, value in condition.items()):
+            return True
+    return False
+
 def csv_to_json(csv_filepath, json_filepath):
     data = []
 
     with open(csv_filepath, mode='r', encoding='utf-8-sig') as csv_file:
         csv_reader = csv.DictReader(csv_file, delimiter='|')
         for row in csv_reader:
+            if should_ignore_row(row):
+                continue
             for key, value in row.items():
                 if value is not None:
                     for old_text, new_text in replacements.items():
@@ -40,6 +74,6 @@ def convert_all_csv_in_directory(csv_directory, json_directory):
 
 
 if __name__ == "__main__":
-    csv_directory = 'csv'
-    json_directory = 'json'
+    csv_directory = 'src/assets/csv'
+    json_directory = 'src/assets/json'
     convert_all_csv_in_directory(csv_directory, json_directory)

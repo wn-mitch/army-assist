@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from "react";
-import armyAbilities from "@/assets/json/Abilities_modified.json";
-import detachmentAbilities from "@/assets/json/Detachment_abilities_modified.json";
+import React  from "react";
 import useStore from "@/store/store";
-import Ability from "@/types/Ability";
 import { Disclosure, DisclosureButton } from "@headlessui/react";
 
 const ArmyRuleDisplay = () => {
@@ -10,44 +7,10 @@ const ArmyRuleDisplay = () => {
   const detachment =
     useStore((state) => state.detachment) || "No Detachment Provided";
   const phase = useStore((state) => state.phase);
-
-  const [abilities, setAbilities] = useState<Ability[]>([]);
-
-  useEffect(() => {
-    const filteredArmyAbilities = armyAbilities
-      .filter(
-        (ability) =>
-          ability.faction_id === faction && ability.phases.includes(phase)
-      )
-      .map((x) => ({
-        ...x,
-        type: "Army",
-        datasheet_id: "",
-        line: "",
-        ability_id: "",
-        model: "",
-        parameter: "",
-      }));
-
-    const filteredDetachmentAbilities = detachmentAbilities
-      .filter(
-        (ability) =>
-          ability.faction_id === faction &&
-          ability.detachment === detachment &&
-          ability.phases.includes(phase)
-      )
-      .map((x) => ({
-        ...x,
-        type: "Detachment",
-        datasheet_id: "",
-        line: "",
-        ability_id: "",
-        model: "",
-        parameter: "",
-      }));
-
-    setAbilities([...filteredArmyAbilities, ...filteredDetachmentAbilities]);
-  }, [faction, detachment, phase]);
+  const getArmyAbilities = useStore((state) => state.getArmyAbilities);
+  const abilities = getArmyAbilities().filter((ability) =>
+    ability.phases.includes(phase)
+  );
 
   const abilitiesInPhase = abilities.length !== 0;
 
@@ -65,9 +28,8 @@ const ArmyRuleDisplay = () => {
                 classNames(
                   "font-semibold py-2 rounded-lg w-full shadow-sm dark:font-bold",
                   open
-                    ? "bg-gray-600  hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 text-white dark:hover:text-gray-100"
-                    : "bg-white hover:bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200",
-                  "cursor-pointer focus:outline-none focus:-outline-offset-2 focus:outline-gray-800 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-600"
+                    ? "bg-gray-500  hover:bg-gray-600 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 dark:hover:text-gray-100 text-white"
+                    : "bg-gray-100 hover:bg-gray-600 text-gray-800 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-white"
                 )
               }
             >

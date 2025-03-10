@@ -62,29 +62,46 @@ function Changelog() {
             >
               <XCircleIcon className="h-6 w-6" />
             </button>
-            <DialogTitle className="text-xl font-bold text-center dark:text-gray-200">
+            <DialogTitle className="text-xl font-bold text-center dark:text-gray-200 text-gray-800">
               Changelog
             </DialogTitle>
             <Description className="mt-2"></Description>
 
             <div className="mt-2">
               {changelogData.map((entry, index) => (
-                <div key={index} className="mb-4 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700">
+                <div
+                  key={index}
+                  className="mb-4 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700"
+                >
                   <div className="flex flex-row align-middle items-center">
-                    <h3 className="text-lg font-bold dark:text-gray-200">{entry.version}</h3>
+                    <h3 className="text-lg font-bold dark:text-gray-200 text-gray-800">
+                      {entry.version}
+                    </h3>
                     <p className="ml-2 text-sm text-gray-500 dark:text-gray-300">
                       {entry.date}
                     </p>
                   </div>
                   <ul className="list-disc list-inside">
                     {entry.changes.map((change, idx) => (
-                      <li key={idx} className="text-sm text-gray-700 dark:text-gray-300">
+                      <li
+                        key={idx}
+                        className="text-sm text-gray-700 dark:text-gray-300"
+                      >
                         {change}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-4">
+              <button
+                onPointerDown={handleClose}
+                className="px-4 py-2 bg-red-700 font-bold text-white rounded w-full dark:bg-gray-500"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

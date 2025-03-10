@@ -56,7 +56,7 @@ const tagDetails: { [key: string]: TagDetail } = {
     textColor: "text-lime-800 dark:text-lime-200",
   },
   "Devastating Wounds": {
-    name:"Devastating Wounds",
+    name: "Devastating Wounds",
     icon: <GiBloodyStash className="h-5 w-5" />,
     bgColor: "bg-red-200 dark:bg-red-900",
     ringColor: "ring-red-900 dark:ring-red-500",
@@ -346,74 +346,80 @@ function getParameterCaseInsensitive(
     return;
   } else {
     return object[
-      Object.keys(object).find((k: string) => k.toLowerCase() === asLowercase) || ''
+      Object.keys(object).find(
+        (k: string) => k.toLowerCase() === asLowercase
+      ) || ""
     ];
   }
 }
 
-function KeywordTags({ keywords }: { keywords: string[] | undefined }) {
-  if (!keywords) {
-    return null;
+const KeywordTags = ({ keywords }: { keywords: string[] | undefined }) => {
+  const compArray = [""];
+  if (JSON.stringify(keywords) == JSON.stringify(compArray)) {
+    return <td className="w-1/4 overflow-clip text-gray-800 dark:text-white">-</td>;
   } else {
     return (
-      <td className="w-1/4 overflow-clip">
-        <div className="gap-0.5 flex flex-wrap overflow-hidden">
-          {keywords
-            .filter((keyword) => keyword !== "")
-            .map((keyword, index) => {
-              const match = keyword.match(/([A-Za-z\s-]+)([\d+]+)?/);
+      <td className="w-1/4 pr-0.5">
+        <div className="gap-0.5 flex flex-wrap overflow-hidden last:pb-0.5">
+          {keywords &&
+            keywords
+              .filter((keyword) => keyword !== "")
+              .map((keyword) => {
+                const match = keyword.match(/([A-Za-z\s-]+)([\d+]+)?/);
 
-              if (!match) {
-                window.alert(`Unknown keyword format: ${keyword}`);
-                return null;
-              }
+                if (!match) {
+                  window.alert(`Unknown keyword format: ${keyword}`);
+                  return null;
+                }
 
-              const baseTag = match[1].trim();
-              const count = match[2] ? match[2] : "";
+                const baseTag = match[1].trim();
+                const count = match[2] ? match[2] : "";
 
-              const tagDetail = getParameterCaseInsensitive(
-                tagDetails,
-                baseTag
-              );
-              // const tagDetail = tagDetails[baseTag];
+                const tagDetail = getParameterCaseInsensitive(
+                  tagDetails,
+                  baseTag
+                );
+                // const tagDetail = tagDetails[baseTag];
 
-              if (!tagDetail) {
-                window.alert(`Unknown tag: ${baseTag}`);
-                return null;
-              }
+                if (!tagDetail) {
+                  window.alert(`Unknown tag: ${baseTag}`);
+                  return null;
+                }
 
-              let dice = false;
-              if (baseTag.charAt(baseTag.length - 1) === "d") {
-                dice = true;
-              }
+                let dice = false;
+                if (baseTag.charAt(baseTag.length - 1) === "d") {
+                  dice = true;
+                }
 
-              return (
-                <>
-                  <div
-                    key={index}
-                    data-tooltip-target={`keyword-tooltip-${baseTag}`}
-                    className={`first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 dark:ring-1 ${tagDetail.ringColor} ring-inset truncate`}
-                  >
-                    {tagDetail.icon}
-                    <span className="font-semibold whitespace-nowrap">
-                      {dice ? ` ${tagDetail.name}${count}` : ` ${tagDetail.name} ${count}`}
-                    </span>
-                  </div>
-                  <div
-                    id={`keyword-tooltip-${baseTag}`}
-                    role="tooltip"
-                    className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700"
-                  >
-                    {tagDetail.name}
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </>
-              );
-            })}
+                return (
+                  <>
+                    <div
+                      key={crypto.randomUUID()}
+                      data-tooltip-target={`keyword-tooltip-${baseTag}`}
+                      className={`first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 dark:ring-1 ${tagDetail.ringColor} ring-inset truncate`}
+                    >
+                      {tagDetail.icon}
+                      <span className="font-semibold whitespace-nowrap">
+                        {dice
+                          ? ` ${tagDetail.name}${count}`
+                          : ` ${tagDetail.name} ${count}`}
+                      </span>
+                    </div>
+                    <div
+                      id={`keyword-tooltip-${baseTag}`}
+                      role="tooltip"
+                      className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700"
+                    >
+                      {tagDetail.name}
+                      <div className="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                  </>
+                );
+              })}
         </div>
       </td>
     );
   }
-}
+};
 
 export default KeywordTags;

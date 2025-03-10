@@ -1,0 +1,20 @@
+Xenos - T'au Empire - FNF 3/14 - [1250 pts]
+
+# ++ Army Roster ++ [1250 pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Retaliation Cadre
+Show/Hide Options
+
+Cadre Fireblade [50 pts]: Close combat weapon, Fireblade pulse rifle
+## Battleline [100 pts]
+Breacher Team [100 pts]:
+• 1x Breacher Fire Warrior Shas'ui: Close combat weapon, Pulse blaster, Pulse pistol, Support turret, Guardian Drone, Gun Drone (Twin pulse carbine)
+• 9x Breacher Fire Warriors: Close combat weapon, Pulse blaster, Pulse pistol
+
+Stealth Battlesuits [60 pts]:
+• 1x Stealth Shas'vre: Battlesuit fists, Battlesuit support system, Homing beacon, Fusion blaster, Marker Drone, Shield Drone
+• 2x Stealth Shas'ui w/ burst cannon: Battlesuit fists, Burst cannon
+Stealth Battlesuits [60 pts]:
+• 1x Stealth Shas'vre: Battlesuit fists, Battlesuit support system, Homing beacon, Fusion blaster, Marker Drone, Shield Drone
+• 2x Stealth Shas'ui w/ burst cannon: Battlesuit fists, Burst cannon

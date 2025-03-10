@@ -86,10 +86,10 @@ function PhaseFilter() {
                   value={currentPhase}
                   className={({ checked }) =>
                     classNames(
-                      "flex flex-grow items-center justify-center rounded-md px-3 py-3 text-sm font-semibold uppercase dark:ring-gray-200 shadow-sm dark:font-bold cursor-pointer focus:outline-none outline outline-2 -outline-offset-1 focus:outline-gray-800 dark:outline-gray-600",
+                      "flex flex-grow items-center justify-center rounded-md px-3 py-3 text-sm font-semibold uppercase ring-gray-800 dark:ring-gray-200 shadow-sm dark:font-bold cursor-pointer focus:outline-none outline outline-2 -outline-offset-1 focus:outline-gray-800 dark:outline-gray-600",
                       checked
-                        ? "bg-gray-600  hover:bg-gray-500 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 text-white dark:hover:text-gray-100"
-                        : "bg-white hover:bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200"
+                        ? "bg-gray-500  hover:bg-gray-600 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 dark:hover:text-gray-100 text-white"
+                        : "bg-gray-100 hover:bg-gray-600 text-gray-800 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-white"
                     )
                   }
                 >

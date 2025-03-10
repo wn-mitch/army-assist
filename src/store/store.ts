@@ -7,26 +7,33 @@ import DatasheetAbilities from "@/assets/json/Datasheets_abilities_modified.json
 import Factions from "@/assets/json/Factions.json";
 import DatasheetKeywords from "@/assets/json/Datasheets_keywords.json";
 import Enhancements from "@/assets/json/Enhancements_modified.json";
+import Stratagems from "@/assets/json/Stratagems_modified.json";
+import DatasheetWargear from "@/assets/json/Datasheets_wargear.json";
+import ArmyAbilities from "@/assets/json/Abilities_modified.json";
+import DetachmentAbilities from "@/assets/json/Detachment_abilities_modified.json";
 
 import ListUnit from "@/types/ListUnit";
 import Phase from "@/types/Phase";
-import Side from "@/types/Side";
 import SortOptions from "@/types/SortOptions";
 import Enhancement from "@/types/Enhancement";
+import { Stratagem } from "@/types/Stratagem";
+import DatasheetWargearType from "@/types/DatasheetWargear";
 import DatasheetModel from "@/types/DatasheetModel";
+
 import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import {
   applyAbilityOverrides,
   applyFactionOverrides,
+  applyMissingAbilities,
+  applyMissingWeapons,
   applyNameOverrides,
   applyWeaponOverrides,
 } from "@/utils/StoreHelper";
+import Ability from "@/types/Ability";
 
 interface StoreState {
   text: string;
   units: ListUnit[];
-  round: number;
-  turn: Side;
   phase: Phase;
   faction: string | undefined;
   detachment: string | undefined;
@@ -39,13 +46,15 @@ interface StoreState {
     [Phase.Saves]: boolean;
   };
   isFirstVisit: boolean;
+
   listSort: SortOptions;
   cardsCollapse: boolean;
   showKeywords: boolean;
   isDarkMode: boolean;
   cardsGroup: boolean;
-  currentSaveVersion: number;
   weaponsFilter: boolean;
+
+  currentSaveVersion: number;
   unmatchedWeapons: string[];
   reset: () => void;
   setText: (text: string) => void;
@@ -61,16 +70,21 @@ interface StoreState {
   setCardsGroup: (cardsGroup: boolean) => void;
   setWeaponsFilter: (weaponsFilter: boolean) => void;
   setUnmatchedWeapons: (unmatchedWeapons: string[]) => void;
+  getProcessedUnitList: () => ListUnit[];
+  getStratagemsByPhase: (phase: Phase) => Stratagem[];
+  getStratagems: () => Stratagem[];
+  getWeaponDatasheets: (unit: ListUnit, phase: Phase) => DatasheetWargearType[];
+  getArmyAbilities: () => Ability[];
 }
 
 const useStore = create<StoreState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       text: "",
       units: [],
-      round: 1,
-      turn: Side.Me,
       phase: Phase.Command,
+      faction: undefined,
+      detachment: undefined,
       activePhases: {
         [Phase.Command]: true,
         [Phase.Movement]: true,
@@ -79,25 +93,21 @@ const useStore = create<StoreState>()(
         [Phase.Fight]: true,
         [Phase.Saves]: true,
       },
-      faction: undefined,
-      detachment: undefined,
       isFirstVisit: true,
+      unmatchedWeapons: [],
+      currentSaveVersion: getCurrentStateVersion(),
       listSort: SortOptions.Name,
       cardsCollapse: true,
       showKeywords: true,
       isDarkMode: true,
       cardsGroup: true,
-      currentSaveVersion: getCurrentStateVersion(),
       weaponsFilter: true,
-      unmatchedWeapons: [],
       reset: () =>
         set({
           text: "",
           units: [],
-          round: 1,
           faction: undefined,
           detachment: undefined,
-          turn: Side.Me,
           phase: Phase.Command,
           currentSaveVersion: getCurrentStateVersion(),
         }),
@@ -162,6 +172,23 @@ const useStore = create<StoreState>()(
           if (parentMatch) {
             // eslint-disable-next-line prefer-const
             let [, name, details] = parentMatch;
+
+            const weapons = details
+              ?.split(/,(?![^(]*\))/)
+              .filter((name) => name !== "Warlord" && name !== "")
+              .map((name) => name.replace(/^\d+x?\s*/, "").trim())
+              .flatMap((name) => {
+                const cleanedName = name
+                  .replace(/\s*\((.*?)\)\s*/g, ", $1")
+                  .trim();
+                return cleanedName.split(",").map((part) => part.trim());
+              });
+
+            const weaponCount = weapons?.reduce((acc, weapon) => {
+              acc[weapon] = 1;
+              return acc;
+            }, {} as Record<string, number>);
+
             name = name.replace(" [Legends]", "");
             if (name) {
               lastParentUnit = {
@@ -170,10 +197,12 @@ const useStore = create<StoreState>()(
                 details: details,
                 children: [],
                 toggled: true,
-                count: 1,
+                count: weaponCount,
+                groupCount: 1,
                 points: null,
                 datasheet_id: null,
-                weapons: [],
+                weapons: weapons,
+                weaponsDatasheets: [],
                 abilities: [],
                 enhancements: [],
                 datasheet: null,
@@ -185,16 +214,35 @@ const useStore = create<StoreState>()(
             }
           } else if (childMatch) {
             const [, count, name, , details] = childMatch;
+
+            const weapons = details
+              ?.split(/,(?![^(]*\))/)
+              .filter((name) => name !== "Warlord" && name !== "")
+              .map((name) => name.replace(/^\d+x?\s*/, "").trim())
+              .flatMap((name) => {
+                const cleanedName = name
+                  .replace(/\s*\((.*?)\)\s*/g, ", $1")
+                  .trim();
+                return cleanedName.split(",").map((part) => part.trim());
+              });
+
+            const weaponCount = weapons?.reduce((acc, weapon) => {
+              acc[weapon] = parseInt(count);
+              return acc;
+            }, {} as Record<string, number>);
+
             const unit: ListUnit = {
               id: index,
               name,
-              details: details || "",
+              details: details,
               toggled: true,
-              count: parseInt(count),
+              count: weaponCount,
+              groupCount: 1,
               points: null,
               datasheet_id: null,
               children: [],
-              weapons: [],
+              weapons: weapons,
+              weaponsDatasheets: [],
               abilities: [],
               enhancements: [],
               datasheet: null,
@@ -209,7 +257,6 @@ const useStore = create<StoreState>()(
         });
 
         if (listUnits.length > 0) {
-          let unmatchedWeapons = [];
           const updatedUnits = listUnits
             .map((unit) => {
               unit = applyNameOverrides(unit);
@@ -223,8 +270,7 @@ const useStore = create<StoreState>()(
                 new Set(datasheetsMatchingName.map((item) => item.faction_id))
               );
 
-              // @ts-expect-error - Line 145 has a check that should prevent this from being null
-              const datasheet = uniqueFactions.includes()
+              const datasheet = uniqueFactions.includes(factionAbbreviationId)
                 ? datasheetsMatchingName.filter(
                     (item) => item.faction_id === factionAbbreviationId
                   )[0]
@@ -245,25 +291,35 @@ const useStore = create<StoreState>()(
               }
 
               const matchingAbilities = DatasheetAbilities.filter(
-                // @ts-expect-error - Phases are strings, and the engine can't read that
                 (ability: Ability) =>
                   ability.datasheet_id === datasheetModel.datasheet_id
               ).map((ability) => applyAbilityOverrides(ability));
 
               if (unit.children && unit.children.length > 0) {
                 const details = unit.children
+                  .map((unit) => ({
+                    ...unit,
+                    name: unit.name.replace(/^\d+x?\s*/, "").trim(),
+                  }))
                   .map((child) => child.details)
                   .join(", ");
                 unit.details = unit.details
                   ? [...unit.details.split(", "), details].join(", ")
                   : details;
+
+                const count = unit.children.reduce((acc, curr) => {
+                  Object.keys(curr.count ?? {}).forEach((key) => {
+                    acc[key] = (acc[key] || 0) + (curr.count?.[key] || 0);
+                  });
+                  return acc;
+                }, {} as Record<string, number>);
+                unit.count = count;
                 unit.children = [];
               }
 
-              let weapons = unit.details
+              const weapons = unit.details
                 ?.split(/,(?![^(]*\))/)
                 .filter((name) => name !== "Warlord" && name !== "")
-                .map((name) => name.replace(/^\d+x?\s*/, "").trim())
                 .flatMap((name) => {
                   const cleanedName = name
                     .replace(/\s*\((.*?)\)\s*/g, ", $1")
@@ -271,22 +327,62 @@ const useStore = create<StoreState>()(
                   return cleanedName.split(",").map((part) => part.trim());
                 });
 
-              // Weapon Overrides
-              weapons = applyWeaponOverrides(datasheet, weapons);
-
-              weapons = weapons?.flatMap((weapon) => {
+              unit.weapons = weapons?.flatMap((weapon) => {
                 const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
                 if (match) {
-                  const count = parseInt(match[1], 10);
+                  const matchCount = parseInt(match[1], 10);
                   const weaponName = match[2];
-                  return Array(count).fill(weaponName);
+                  return Array(matchCount).fill(weaponName);
                 }
                 return weapon;
               });
 
+              // Weapon Overrides
+              unit.weapons = applyWeaponOverrides(datasheet, unit.weapons);
+
+              const updatedCount: Record<string, number> = {};
+
+              Object.keys(unit.count ?? {}).forEach((key) => {
+                const match = key.match(/(\d+)x\s+([A-Za-z\s-]+)/);
+                if (match) {
+                  const multiplier = parseInt(match[1]);
+                  const weaponName = match[2];
+                  updatedCount[weaponName] =
+                    (updatedCount[weaponName] || 0) +
+                    (unit.count?.[key] ?? 0) * multiplier;
+                } else {
+                  updatedCount[key] =
+                    (updatedCount[key] || 0) + (unit.count?.[key] ?? 0);
+                }
+              });
+
+              unit.count = updatedCount;
+
+              unit.weapons?.forEach((weapon) => {
+                if (unit.count && !unit.count[weapon]) {
+                  unit.count[weapon] = 1;
+                }
+              });
+
+              const weaponsDatasheets = DatasheetWargear.filter(
+                (wargear) => datasheet && datasheet.id === wargear.datasheet_id
+              );
+
+              const allWeaponsDatasheets = applyMissingWeapons(
+                unit,
+                unit.weapons ?? [],
+                weaponsDatasheets
+              );
+
+              const allAbilities = applyMissingAbilities(
+                unit,
+                unit.weapons ?? [],
+                matchingAbilities ?? []
+              );
+
               const matchingEnhancements = Enhancements.filter(
                 (enhancement: Enhancement) =>
-                  weapons?.includes(enhancement.name)
+                  unit.weapons?.includes(enhancement.name)
               );
 
               const keywords = DatasheetKeywords.filter(
@@ -297,8 +393,8 @@ const useStore = create<StoreState>()(
 
               return {
                 ...unit,
-                abilities: matchingAbilities,
-                weapons: weapons,
+                abilities: allAbilities,
+                weaponsDatasheets: allWeaponsDatasheets,
                 datasheet: datasheet,
                 datasheetModel: datasheetModel,
                 keywords: keywords,
@@ -349,7 +445,174 @@ const useStore = create<StoreState>()(
       setIsDarkMode: (isDarkMode: boolean) => set({ isDarkMode }),
       setCardsGroup: (cardsGroup: boolean) => set({ cardsGroup }),
       setWeaponsFilter: (weaponsFilter: boolean) => set({ weaponsFilter }),
-      setUnmatchedWeapons: (unmatchedWeapons: string[]) => set({unmatchedWeapons}),
+      setUnmatchedWeapons: (unmatchedWeapons: string[]) =>
+        set({ unmatchedWeapons }),
+      getProcessedUnitList: () => {
+        const units = get().units;
+        const listSort = get().listSort;
+        const cardsGroup = get().cardsGroup;
+
+        const sortByListSort = (a: ListUnit, b: ListUnit) => {
+          switch (listSort) {
+            case SortOptions.Name:
+              return a.name.localeCompare(b.name);
+            case SortOptions.PasteOrder:
+              return 1;
+          }
+        };
+
+        const groupedUnits = cardsGroup
+          ? units.reduce((acc: ListUnit[], curr: ListUnit) => {
+              const index = acc.findIndex((item) => item.name === curr.name);
+              if (index !== -1) {
+                acc[index].groupCount = (acc[index].groupCount || 1) + 1;
+              } else {
+                acc.push({ ...curr, groupCount: 1 });
+              }
+              return acc;
+            }, [])
+          : units;
+
+        const sortedUnits = groupedUnits.toSorted(sortByListSort);
+
+        return sortedUnits;
+      },
+      getStratagemsByPhase: (phase) => {
+        const stratagemNames = new Set();
+        const faction = get().faction;
+        const detachment = get().detachment;
+
+        const stratagems = Stratagems.map((stratagem) => {
+          const [splitDetachment, splitType] = stratagem.type.split(" - ");
+          if (splitDetachment === "Core") {
+            return {
+              ...stratagem,
+              detachment: "Core",
+              type: splitType,
+            };
+          } else {
+            return {
+              ...stratagem,
+              type: splitType,
+            };
+          }
+        })
+          .filter(
+            (stratagem) =>
+              stratagem.faction_id === faction || stratagem.faction_id === ""
+          )
+          .filter((stratagem) => {
+            return (
+              stratagem.detachment === detachment ||
+              stratagem.detachment === "" ||
+              stratagem.detachment === "Core"
+            );
+          })
+          .filter((stratagem) => stratagem.phases.includes(phase))
+          .filter((stratagem) => {
+            if (stratagemNames.has(stratagem.name)) {
+              return false;
+            } else {
+              stratagemNames.add(stratagem.name);
+              return true;
+            }
+          });
+
+        return stratagems;
+      },
+      getWeaponDatasheets: (unit, phase) => {
+        const weaponsFilter = get().weaponsFilter;
+
+        const availableWeaponDatasheets = DatasheetWargear.filter((wargear) =>
+          phase === "Shooting"
+            ? wargear.type === "Ranged"
+            : wargear.type === "Melee"
+        ).filter(
+          (wargear) =>
+            unit.datasheet && unit.datasheet.id === wargear.datasheet_id
+        );
+
+        return weaponsFilter
+          ? availableWeaponDatasheets.filter((weapon) =>
+              (unit.weapons ?? []).some((name) => {
+                return weapon.name?.toLowerCase().includes(name.toLowerCase());
+              })
+            )
+          : availableWeaponDatasheets;
+      },
+      getStratagems: () => {
+        const stratagemNames = new Set();
+        const faction = get().faction;
+        const detachment = get().detachment;
+
+        const stratagems = Stratagems.map((stratagem) => {
+          const [splitDetachment, splitType] = stratagem.type.split(" - ");
+          if (splitDetachment === "Core") {
+            return {
+              ...stratagem,
+              detachment: "Core",
+              type: splitType,
+            };
+          } else {
+            return {
+              ...stratagem,
+              type: splitType,
+            };
+          }
+        })
+          .filter(
+            (stratagem) =>
+              stratagem.faction_id === faction || stratagem.faction_id === ""
+          )
+          .filter((stratagem) => {
+            return (
+              stratagem.detachment === detachment ||
+              stratagem.detachment === "" ||
+              stratagem.detachment === "Core"
+            );
+          })
+          .filter((stratagem) => {
+            if (stratagemNames.has(stratagem.name)) {
+              return false;
+            } else {
+              stratagemNames.add(stratagem.name);
+              return true;
+            }
+          });
+
+        return stratagems;
+      },
+      getArmyAbilities: () => {
+        const faction = get().faction;
+        const detachment = get().detachment;
+
+        const filteredArmyAbilities = ArmyAbilities.filter(
+          (ability) => ability.faction_id === faction
+        ).map((x) => ({
+          ...x,
+          type: "Army",
+          datasheet_id: "",
+          line: "",
+          ability_id: "",
+          model: "",
+          parameter: "",
+        }));
+
+        const filteredDetachmentAbilities = DetachmentAbilities.filter(
+          (ability) =>
+            ability.faction_id === faction && ability.detachment === detachment
+        ).map((x) => ({
+          ...x,
+          type: "Detachment",
+          datasheet_id: "",
+          line: "",
+          ability_id: "",
+          model: "",
+          parameter: "",
+        }));
+
+        return [...filteredArmyAbilities, ...filteredDetachmentAbilities];
+      },
     }),
     {
       name: "army-storage",

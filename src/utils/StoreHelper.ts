@@ -1,7 +1,9 @@
 import Ability from "@/types/Ability";
 import Datasheet from "@/types/Datasheet";
+import DatasheetWargear from "@/types/DatasheetWargear";
 import Faction from "@/types/Faction";
 import ListUnit from "@/types/ListUnit";
+import Phase from "@/types/Phase";
 
 const applyFactionOverrides = (factions: Faction[]) => {
   const extraFactions = [
@@ -131,18 +133,25 @@ const applyAbilityOverrides = (ability: Ability) => {
   }
 };
 
-const applyWeaponOverrides = (datasheet:Datasheet, weapons: string[] | undefined) => {
-  if(!weapons) {
+const applyWeaponOverrides = (
+  datasheet: Datasheet,
+  weapons: string[] | undefined
+) => {
+  if (!weapons) {
     return;
   }
 
   switch (datasheet.id) {
     case "000000613":
-      weapons = weapons ? [...weapons, "Wraithbone fists"] : ["Wraithbone fists"];
+      weapons = weapons
+        ? [...weapons, "Wraithbone fists"]
+        : ["Wraithbone fists"];
       break;
     case "000002565":
       weapons = weapons ? [...weapons, "Armoured limbs"] : ["Armoured limbs"];
-      weapons = weapons ? [...weapons, "Psychic Shock Wave"] : ["Psychic Shock Wave"];
+      weapons = weapons
+        ? [...weapons, "Psychic Shock Wave"]
+        : ["Psychic Shock Wave"];
       break;
   }
 
@@ -157,10 +166,14 @@ const applyWeaponOverrides = (datasheet:Datasheet, weapons: string[] | undefined
       }
       break;
     case "Flesh Hounds":
-      weapons = findAndReplace(weapons, "Burning maw", "Burning roar")
+      weapons = findAndReplace(weapons, "Burning maw", "Burning roar");
       break;
     case "Exalted Flamer":
-      weapons = [...weapons, "Fire of Tzeentch – blue fire", "Fire of Tzeentch – pink fire"];
+      weapons = [
+        ...weapons,
+        "Fire of Tzeentch – blue fire",
+        "Fire of Tzeentch – pink fire",
+      ];
       break;
     case "Rendmaster On Blood Throne":
       weapons = [...weapons, "Blade of blood", "Attendants' hellblades"];
@@ -175,56 +188,225 @@ const applyWeaponOverrides = (datasheet:Datasheet, weapons: string[] | undefined
       weapons = [...weapons, "Death spinner"];
       break;
     case "Knight Tyrant":
-      weapons = [...weapons, "Ectoplasma decimator – standard", "Ectoplasma decimator – supercharged", "Brimstone volcano lance"]
+      weapons = [
+        ...weapons,
+        "Ectoplasma decimator – standard",
+        "Ectoplasma decimator – supercharged",
+        "Brimstone volcano lance",
+      ];
       break;
     case "Stormraven Gunship":
-      weapons = [...weapons, "Stormstrike missile launcher"]
+      weapons = [...weapons, "Stormstrike missile launcher"];
       break;
     case "Kataphron Destroyers":
-      weapons = findAndReplace(weapons, "Heavy grav cannon", "Heavy grav-cannon")
+      weapons = findAndReplace(
+        weapons,
+        "Heavy grav cannon",
+        "Heavy grav-cannon"
+      );
       break;
     case "Serberys Raiders":
-      weapons = findAndReplace(weapons, "Cavalry sabre & clawed limbs", "Cavalry sabre and clawed limbs")
+      weapons = findAndReplace(
+        weapons,
+        "Cavalry sabre & clawed limbs",
+        "Cavalry sabre and clawed limbs"
+      );
       break;
     case "Valkyrie":
-      weapons = findAndReplace(weapons, "Multiple rocket pods", "Multiple rocket pod")
+      weapons = findAndReplace(
+        weapons,
+        "Multiple rocket pods",
+        "Multiple rocket pod"
+      );
       break;
     case "Vulture Gunship":
-      console.log('hi')
-      weapons = findAndReplace(weapons, "2x Multiple rocket pods", "Multiple rocket pod")
+      weapons = findAndReplace(
+        weapons,
+        "2x Multiple rocket pods",
+        "Multiple rocket pod"
+      );
       break;
     case "Asurmen":
-      weapons = findAndReplace(weapons, "The Sword of Asur", "Sword of Asur")
-      weapons = findAndReplace(weapons, "The Bloody Twins", "Bloody Twins")
+      weapons = findAndReplace(weapons, "The Sword of Asur", "Sword of Asur");
+      weapons = findAndReplace(weapons, "The Bloody Twins", "Bloody Twins");
       break;
     case "Baharroth":
-      weapons = [...weapons, "Shining Blade"]
+      weapons = [...weapons, "Shining Blade"];
       break;
     case "Jain Zar":
-      weapons = findAndReplace(weapons, "The Blade of Destruction", "Blade of Destruction")
+      weapons = findAndReplace(
+        weapons,
+        "The Blade of Destruction",
+        "Blade of Destruction"
+      );
       break;
     case "Fuegan":
-      weapons = findAndReplace(weapons, "The Fire Axe", "Fire Axe")
+      weapons = findAndReplace(weapons, "The Fire Axe", "Fire Axe");
       break;
     case "Chronomancer":
-      weapons = findAndReplace(weapons, "Chronomancer's stave", "Aeonstave")
+      weapons = findAndReplace(weapons, "Chronomancer's stave", "Aeonstave");
       break;
     case "Armoured Sentinels":
-      weapons = findAndReplace(weapons, "Militarum Multi-laser", "Multi-laser")
+      weapons = findAndReplace(weapons, "Militarum Multi-laser", "Multi-laser");
       break;
     case "Chimera":
-      weapons = findAndReplace(weapons, "Chimera Multi-laser", "Multi-laser")
+      weapons = findAndReplace(weapons, "Chimera Multi-laser", "Multi-laser");
       break;
     case "Fire Dragons":
-      weapons = [...weapons, "Firepike", "Exarch's Dragon fusion gun"]
+      weapons = [...weapons, "Firepike", "Exarch's Dragon fusion gun"];
+      break;
+    case "Psychophage":
+      weapons = findAndReplace(weapons, "Psycholastic torrent", "Psychoclastic torrent");
+      break;
+    case "Norn Assimilator":
+      weapons = findAndReplace(weapons, "Toxinjecter harpoon", "Toxinjector Harpoon");
+      break;
+    case "Genestealers":
+      weapons = findAndReplace(weapons, "Genestealers claws and talons", "Genestealer claws and talons");
+      break;
+    case "Kroot Farstalkers":
+      weapons = findAndReplace(weapons, "T'au tech rifle", "T'au-tech rifle");
+      break;
+    case "Krootox":
+      weapons = findAndReplace(weapons, "Rampager Fists", "Krootox Fists");
+      weapons = findAndReplace(weapons, "Hunting Blades", "Close combat weapon");
       break;
   }
 
   return weapons;
 };
 
-const findAndReplace = (array: string[], findValue: string, replaceValue: string): string[] => {
-  return array.map(item => item === findValue ? replaceValue : item);
+const applyMissingWeapons = (
+  unit: ListUnit,
+  weapons: string[],
+  weaponDatasheets: DatasheetWargear[]
+) => {
+  switch (unit.name) {
+    case "Broadside Battlesuits":
+    case "Crisis Sunforge Battlesuits":
+    case "Crisis Starscythe Battlesuits":
+    case "Breacher Team": {
+      const missilePod: DatasheetWargear = {
+        datasheet_id: "999999999",
+        line: null,
+        line_in_wargear: null,
+        name: "Missile pod",
+        description: "",
+        dice: "",
+        range: "30",
+        type: "Ranged",
+        A: "2",
+        BS_WS: "3",
+        S: "7",
+        AP: "-1",
+        D: "2",
+      };
+
+      const gunDrone: DatasheetWargear = {
+        datasheet_id: "000000403",
+        line: "1",
+        line_in_wargear: "1",
+        dice: "",
+        name: "Twin pulse carbine",
+        description: "assault, twin-linked",
+        range: "20",
+        type: "Ranged",
+        A: "2",
+        BS_WS: "5",
+        S: "5",
+        AP: "0",
+        D: "1",
+      };
+
+      weaponDatasheets = addWeaponIfFound(
+        weapons,
+        weaponDatasheets,
+        missilePod
+      );
+      weaponDatasheets = addWeaponIfFound(weapons, weaponDatasheets, gunDrone);
+
+      break;
+    }
+  }
+
+  return weaponDatasheets;
+};
+
+const addWeaponIfFound = (
+  weapons: string[],
+  weaponDatasheets: DatasheetWargear[],
+  weaponToAdd: DatasheetWargear
+) => {
+  if (weaponToAdd.name && weapons.includes(weaponToAdd.name)) {
+    return [...weaponDatasheets, weaponToAdd];
+  } else {
+    return weaponDatasheets;
+  }
+};
+
+const applyMissingAbilities = (
+  unit: ListUnit,
+  weapons: string[],
+  abilities: Ability[]
+) => {
+  switch (unit.name) {
+    case "Broadside Battlesuits":
+    case "Crisis Sunforge Battlesuits":
+    case "Crisis Starscythe Battlesuits":
+    case "Breacher Team":
+    case "Stealth Battlesuits": {
+      const shieldDrone: Ability = {
+        datasheet_id: "999999999",
+        line: "",
+        ability_id: "",
+        model: undefined,
+        name: "Shield Drone",
+        description: "Add 1 to the bearer's Wounds characteristic",
+        type: "Wargear",
+        parameter: "",
+        phases: [Phase.Saves],
+      };
+
+      const markerDrone: Ability = {
+        datasheet_id: "999999999",
+        line: "",
+        ability_id: "",
+        model: undefined,
+        name: "Marker Drone",
+        description:
+          "The bearer’s unit has the MARKERLIGHT keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+        type: "Wargear",
+        parameter: "",
+        phases: [Phase.Saves],
+      };
+
+      abilities = addAbilityIfFound(weapons, abilities, shieldDrone);
+      abilities = addAbilityIfFound(weapons, abilities, markerDrone);
+      break;
+    }
+  }
+
+  return abilities;
+};
+
+const addAbilityIfFound = (
+  weapons: string[],
+  abilities: Ability[],
+  ability: Ability
+) => {
+  if (ability.name && weapons.includes(ability.name)) {
+    return [...abilities, ability];
+  } else {
+    return abilities;
+  }
+};
+
+const findAndReplace = (
+  array: string[],
+  findValue: string,
+  replaceValue: string
+): string[] => {
+  return array.map((item) => (item === findValue ? replaceValue : item));
 };
 
 export {
@@ -232,4 +414,6 @@ export {
   applyAbilityOverrides,
   applyFactionOverrides,
   applyWeaponOverrides,
+  applyMissingWeapons,
+  applyMissingAbilities,
 };

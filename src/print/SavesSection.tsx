@@ -1,0 +1,50 @@
+import ListUnit from "@/types/ListUnit";
+import datasheetAbilities from "@/assets/json/Datasheets_abilities.json";
+import React from "react";
+import AbilitySection from "./AbilitySection";
+import Phase from "@/types/Phase";
+import { getPhasedAbilities } from "@/utils/UnitHelper";
+import CardValue from "./CardValue";
+import PrintSettings from "@/types/PrintSettings";
+
+const SavesSection = (units: ListUnit[], settings: PrintSettings) => {
+  return units.map((unit) => {
+    const abilities = getPhasedAbilities(unit, Phase.Saves);
+
+    const invSave = unit.datasheetModel?.inv_sv;
+
+    const feelNoPainId = "000008338";
+    const fnp = datasheetAbilities.find(
+      (ability) =>
+        ability.ability_id === feelNoPainId &&
+        unit.datasheetModel &&
+        ability.datasheet_id === unit.datasheetModel.datasheet_id
+    );
+
+    const invSaveText = invSave !== "-" ? `${invSave}++` : "-";
+    const fnpText = fnp ? `FNP ${fnp.parameter}` : "-";
+
+    return (
+      <>
+        <div className="border border-black break-inside-avoid first:mt-0 my-1">
+          <div className="flex flex-row">
+            <span className="flex-1 font-semibold text-center">
+              {unit.groupCount}x {unit.name}
+            </span>
+          </div>
+          <div className="flex flex-row text-sm">
+            {CardValue("Sv", unit.datasheetModel?.Sv)}
+            {CardValue("Inv", invSaveText)}
+            {CardValue("FNP", fnpText)}
+            {CardValue("T", unit.datasheetModel?.T)}
+            {CardValue("W", unit.datasheetModel?.W)}
+            {CardValue("Ld", unit.datasheetModel?.Ld)}
+          </div>
+          {AbilitySection(abilities, settings)}
+        </div>
+      </>
+    );
+  });
+};
+
+export default SavesSection;

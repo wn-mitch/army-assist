@@ -3,6 +3,7 @@ import ResetButton from "./ResetButton";
 import Settings from "./Settings";
 import Instructions from "./Instructions";
 import Changelog from "./Changelog";
+import Print from "./Print";
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
           <Changelog />
         </div>
         <div className="flex items-center gap-1">
+          <Print />
           <Instructions />
           <Settings />
           <ResetButton />

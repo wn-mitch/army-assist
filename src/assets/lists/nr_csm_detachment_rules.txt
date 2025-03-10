@@ -1,0 +1,46 @@
+Chaos - Chaos Space Marines - The Obscenity vs Jack - [1475 pts]
+
+# ++ Army Roster ++ [1475 pts]
+## Configuration
+Battle Size: Incursion (1000 Point limit)
+Detachment Choice: Pact-bound Zealots
+Show/Hide Options
+
+## Character [390 pts]
+Chaos Lord [90 pts]: Mark of Slaanesh, Daemon hammer, Plasma pistol
+Dark Apostle [90 pts]: Accursed crozius, Bolt pistol, Warlord, Intoxicating Elixir, Mark of Slaanesh
+• 2x Dark Disciple: Close combat weapon
+Master of Executions [80 pts]: Axe of dismemberment, Bolt pistol, Mark of Slaanesh
+Sorcerer [60 pts]: Bolt pistol, Force weapon, Infernal Gaze, Mark of Tzeentch
+Warpsmith [70 pts]: Flamer tendril, Forge weapon, Melta tendril, Plasma pistol, Mark of Slaanesh
+
+## Battleline [340 pts]
+Legionaries [170 pts]: Mark of Slaanesh
+• 1x Aspiring Champion: Close combat weapon, Heavy melee weapon, Plasma pistol, Chaos icon
+• 6x Legionary w/ chainsword: Astartes chainsword, Bolt pistol, Close combat weapon
+• 1x Legionary w/ heavy melee weapon: Bolt pistol, Close combat weapon, Heavy melee weapon
+• 1x Legionary w/ other weapon: Bolt pistol, Close combat weapon, Meltagun
+• 1x Legionary w/ other weapon: Bolt pistol, Close combat weapon, Plasma pistol and Astartes chainsword (Astartes chainsword, Plasma pistol)
+Legionaries [170 pts]: Mark of Tzeentch
+• 1x Aspiring Champion: Close combat weapon, Heavy melee weapon, Boltgun, Chaos icon
+• 1x Legionary w/ balefire tome: Balefire tome, Bolt pistol, Close combat weapon
+• 5x Legionary w/ boltgun: Bolt pistol, Boltgun, Close combat weapon
+• 1x Legionary w/ heavy melee weapon: Bolt pistol, Close combat weapon, Heavy melee weapon
+• 1x Legionary w/ other weapon: Bolt pistol, Close combat weapon, Lascannon
+• 1x Legionary w/ other weapon: Bolt pistol, Close combat weapon, Heavy bolter
+
+## Infantry [410 pts]
+Chosen [250 pts]: Mark of Slaanesh
+• 2x Chosen w/ boltgun and plasma pistol: Accursed weapon, Boltgun, Plasma pistol
+• 4x Chosen w/ combi-weapon and bolt pistol: Accursed weapon, Bolt pistol, Combi-weapon
+• 2x Chosen w/ paired accursed weapons and bolt pistol: Bolt pistol, Paired accursed weapons
+• 1x Chosen w/ power fist and plasma pistol: Boltgun, Plasma pistol, Power fist
+• 1x Chosen w/ power fist and plasma pistol: Boltgun, Plasma pistol, Power fist, Chaos icon
+Obliterators [160 pts]: Mark of Tzeentch
+• 2x Obliterator: Crushing fists, Fleshmetal guns
+
+## Vehicle [260 pts]
+Chaos Predator Annihilator [130 pts]: Armoured tracks, Havoc launcher, Predator twin lascannon, Mark of Nurgle, Combi-weapon, 2 lascannons (2x Lascannon)
+Maulerfiend [130 pts]: Maulerfiend fists, Lasher tendrils, Mark of Slaanesh
+
+## Dedicated Transport [75 pts]

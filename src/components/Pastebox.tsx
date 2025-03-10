@@ -26,7 +26,7 @@ export default function Pastebox() {
           id="comment"
           name="comment"
           rows={5}
-          placeholder="Paste in your Army List in the NR format (NewRecruit.eu). There are some bugs with some lists, so if you encounter an error, please let me know! I'll fix it as soon as I can."
+          placeholder="Paste in your Army List in the NR format (NewRecruit.eu). Please double check the site abilities/weapons vs. what you know is on the list! There ARE missing mappings, but without your help I will not easily locate them."
           className="block w-full resize-none h-full rounded-md bg-white dark:bg-gray-900 px-3 py-1.5 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 dark:focus:outline-gray-400 sm:text-sm/6"
           value={text}
           onChange={handleChange}

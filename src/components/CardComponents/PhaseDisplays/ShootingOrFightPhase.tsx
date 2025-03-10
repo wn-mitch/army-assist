@@ -1,44 +1,27 @@
 import React from "react";
 
-import datasheetWargear from "@/assets/json/Datasheets_wargear.json";
-
 import WeaponPhaseTable from "./WeaponPhaseTable";
 
 import Phase from "@/types/Phase";
-import ListUnit from "@/types/ListUnit";
+import DatasheetWargear from "@/types/DatasheetWargear";
 
 const ShootingOrFightPhase = ({
-  unit,
+  counts,
+  phasedWeapons,
   phase,
-  weaponsFilter
 }: {
-  unit: ListUnit;
+  counts: Record<string, number>;
+  phasedWeapons: DatasheetWargear[];
   phase: Phase;
-  weaponsFilter: boolean;
 }): [React.ReactNode, boolean] => {
-  const availableWeaponDatasheets = datasheetWargear
-    .filter((wargear) =>
-      phase === "Shooting"
-        ? wargear.type === "Ranged"
-        : wargear.type === "Melee"
-    )
-    .filter(
-      (wargear) => unit.datasheet && unit.datasheet.id === wargear.datasheet_id
-    );
-
-  const filteredWeaponDatasheets = weaponsFilter
-    ? availableWeaponDatasheets.filter((weapon) =>
-        (unit.weapons ?? []).some((name) => {
-          return weapon.name?.toLowerCase().includes(name.toLowerCase());
-        })
-      )
-    : availableWeaponDatasheets;
-
-  const toggled = filteredWeaponDatasheets.length > 0;
-  console.log(unit)
+  const toggled = phasedWeapons.length > 0;
 
   return [
-    <WeaponPhaseTable weaponDatasheets={filteredWeaponDatasheets} />,
+    <WeaponPhaseTable
+      counts={counts}
+      weaponDatasheets={phasedWeapons}
+      phase={phase}
+    />,
     toggled,
   ];
 };

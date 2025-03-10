@@ -1,0 +1,22 @@
+Xenos - T'au Empire - Base Tau - [2000pts]
+
+# ++ Army Roster ++ [2000pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Auxiliary Cadre
+Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+Crisis Fireknife Battlesuits [130pts]:
+• 1x Crisis Fireknife Shas’vre: Battlesuit fists, Missile pod, Plasma rifle, Gun Drone (Twin pulse carbine), Shield Drone
+• 2x Crisis Fireknife Shas’ui: Battlesuit fists, Missile pod, Plasma rifle, Gun Drone (Twin pulse carbine), Shield Drone
+Crisis Sunforge Battlesuits [150pts]:
+• 1x Crisis Sunforge Shas’vre: Battlesuit fists, 2x Fusion blaster, Gun Drone (Twin pulse carbine), Shield Drone
+• 2x Crisis Sunforge Shas’ui: Battlesuit fists, 2x Fusion blaster, Gun Drone (Twin pulse carbine), Shield Drone
+Ghostkeel Battlesuit [160pts]: Ghostkeel fists, Fusion collider, Twin fusion blaster
+Hammerhead Gunship [145pts]: Armoured hull, Railgun, 2x Seeker missile, 2 Smart missile systems (2x Smart missile system)
+Kroot Farstalkers [85pts]:
+• 1x Kroot Kill-broker: Kroot pistol, Ritual blade, T'au tech rifle
+• 7x Kroot Farstalker: Close combat weapon, Farstalker firearm, Kroot pistol
+• 1x Kroot Farstalker w/ Farstalker firearm and Pech'ra: Close combat weapon, Farstalker firearm, Kroot pistol
+• 1x Kroot Farstalker w/ Londaxi tribalest: Close combat weapon, Kroot pistol, Londaxi tribalest
+• 2x Kroot Hounds: Ripping fangs

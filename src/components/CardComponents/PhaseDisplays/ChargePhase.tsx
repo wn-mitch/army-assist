@@ -1,7 +1,7 @@
 import React from "react";
 
 const ChargePhase = (): [React.ReactNode, boolean] => [
-  <div className="text-center text-xl font-semibold items-center justify-center align-middle flex flex-col h-full dark:text-gray-200">
+  <div className="text-center text-xl font-semibold items-center justify-center align-middle flex flex-col h-full dark:text-gray-200 text-gray-800">
     Charged?
   </div>,
   true,
