@@ -222,7 +222,7 @@ const applyWeaponOverrides = (
     case "Vulture Gunship":
       weapons = findAndReplace(
         weapons,
-        "2x Multiple rocket pods",
+        "Multiple rocket pods",
         "Multiple rocket pod"
       );
       break;
@@ -256,22 +256,39 @@ const applyWeaponOverrides = (
       weapons = [...weapons, "Firepike", "Exarch's Dragon fusion gun"];
       break;
     case "Psychophage":
-      weapons = findAndReplace(weapons, "Psycholastic torrent", "Psychoclastic torrent");
+      weapons = findAndReplace(
+        weapons,
+        "Psycholastic torrent",
+        "Psychoclastic torrent"
+      );
       break;
     case "Norn Assimilator":
-      weapons = findAndReplace(weapons, "Toxinjecter harpoon", "Toxinjector Harpoon");
+      weapons = findAndReplace(
+        weapons,
+        "Toxinjecter harpoon",
+        "Toxinjector Harpoon"
+      );
       break;
     case "Genestealers":
-      weapons = findAndReplace(weapons, "Genestealers claws and talons", "Genestealer claws and talons");
+      weapons = findAndReplace(
+        weapons,
+        "Genestealers claws and talons",
+        "Genestealer claws and talons"
+      );
       break;
     case "Kroot Farstalkers":
       weapons = findAndReplace(weapons, "T'au tech rifle", "T'au-tech rifle");
       break;
-    case "Krootox":
-      weapons = findAndReplace(weapons, "Rampager Fists", "Krootox Fists");
-      weapons = findAndReplace(weapons, "Hunting Blades", "Close combat weapon");
+    case "Krootox Rampagers":
+      weapons = findAndReplace(weapons, "Rampager fists", "Krootox Fists");
+      weapons = findAndReplace(
+        weapons,
+        "Hunting Blades",
+        "Close combat weapon"
+      );
       break;
   }
+  console.log(datasheet.name, weapons)
 
   return weapons;
 };
@@ -406,7 +423,7 @@ const findAndReplace = (
   findValue: string,
   replaceValue: string
 ): string[] => {
-  return array.map((item) => (item === findValue ? replaceValue : item));
+  return array.map((item) => (item.toLowerCase()) === findValue.toLowerCase() ? replaceValue : item);
 };
 
 export {
