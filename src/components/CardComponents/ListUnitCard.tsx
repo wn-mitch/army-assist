@@ -38,7 +38,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     if (touchStartY === null) return;
 
     const touchEndY = e.changedTouches[0].clientY;
-    const movementThreshold = 30; // Pixels of movement allowed for a tap
+    const movementThreshold = 10; // Pixels of movement allowed for a tap
 
     if (Math.abs(touchStartY - touchEndY) < movementThreshold) {
       toggleUnit(unit); // Treat as a tap if movement is minimal
@@ -49,7 +49,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
 
   const filteredWeapons = weaponsFilter
     ? unit.weaponsDatasheets.filter((weapon) =>
-        (Object.keys(unit.count ?? {})).some((name: string) => {
+        Object.keys(unit.count ?? {}).some((name: string) => {
           return weapon.name?.toLowerCase().includes(name.toLowerCase());
         })
       )
@@ -105,9 +105,9 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       key={unit.datasheet_id}
       tabIndex={0}
       className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}
-      onClick={() => toggleUnit(unit)}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      // onClick={() => toggleUnit(unit)}
+      // onTouchStart={handleTouchStart}
+      // onTouchEnd={handleTouchEnd}
     >
       <div className="flex flex-row">
         <div
@@ -128,13 +128,17 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
         </div>
         {cardsCollapse && (
           <div className="flex justify-center items-center">
-            <div className="m-auto flex shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200 dark:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-100">
+            <button
+              className="m-auto flex shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200 dark:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:focus:ring-gray-400"
+              id={`toggle-${unit.name}-button`}
+              onClick={() => toggleUnit(unit)}
+            >
               {cardToggled ? (
                 <ChevronDownIcon className="h-8 w-8" />
               ) : (
                 <ChevronUpIcon className="h-8 w-8" />
               )}
-            </div>
+            </button>
           </div>
         )}
       </div>
