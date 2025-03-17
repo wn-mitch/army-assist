@@ -32,10 +32,10 @@ const ShootingSection = (units: ListUnit[], settings: PrintSettings) => {
             <thead>
               <tr className="font-light">
                 <th className="w-1/5 pl-1 text-center">Name</th>
-                <th className="w-1/12 text-center">#</th>
                 <th className="w-1/12 text-center">R</th>
-                <th className="w-1/12 text-center">WS</th>
+                <th className="w-1/12 text-center">#</th>
                 <th className="w-1/12 text-center">A</th>
+                <th className="w-1/12 text-center">WS</th>
                 <th className="w-1/12 text-center">S</th>
                 <th className="w-1/12 text-center">AP</th>
                 <th className="w-1/12 text-center">D</th>
@@ -47,14 +47,14 @@ const ShootingSection = (units: ListUnit[], settings: PrintSettings) => {
                 return (
                   <tr>
                     <td className="pl-1">{weapon.name}</td>
+                    <td className="text-center">{weapon.range}"</td>
                     <td className="text-center">
                       {unit.count && weapon.name && weapon.name in unit.count
                         ? unit.count[weapon.name]
                         : 0}
                     </td>
-                    <td className="text-center">{weapon.range}"</td>
-                    <td className="text-center">{weapon.BS_WS}+</td>
                     <td className="text-center">{weapon.A}</td>
+                    <td className="text-center">{weapon.BS_WS}+</td>
                     <td className="text-center">{weapon.S}</td>
                     <td className="text-center">{weapon.AP}</td>
                     <td className="text-center">{weapon.D}</td>

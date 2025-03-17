@@ -34,8 +34,8 @@ const FightSection = (units: ListUnit[], settings: PrintSettings) => {
               <tr className="font-light">
                 <th className="w-1/5 pl-1 text-center">Name</th>
                 <th className="w-1/12 text-center">#</th>
-                <th className="w-1/12 text-center">WS</th>
                 <th className="w-1/12 text-center">A</th>
+                <th className="w-1/12 text-center">WS</th>
                 <th className="w-1/12 text-center">S</th>
                 <th className="w-1/12 text-center">AP</th>
                 <th className="w-1/12 text-center">D</th>
@@ -52,8 +52,8 @@ const FightSection = (units: ListUnit[], settings: PrintSettings) => {
                         ? unit.count[weapon.name]
                         : 0}
                     </td>
-                    <td className="text-center">{weapon.BS_WS}+</td>
                     <td className="text-center">{weapon.A}</td>
+                    <td className="text-center">{weapon.BS_WS}+</td>
                     <td className="text-center">{weapon.S}</td>
                     <td className="text-center">{weapon.AP}</td>
                     <td className="text-center">{weapon.D}</td>
