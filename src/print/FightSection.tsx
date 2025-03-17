@@ -8,7 +8,16 @@ import PrintSettings from "@/types/PrintSettings";
 const FightSection = (units: ListUnit[], settings: PrintSettings) => {
   return units.map((unit) => {
     const abilities = getPhasedAbilities(unit, Phase.Fight);
-    const weapons = unit.weaponsDatasheets.filter(
+    
+    const weapons = settings.weaponsFilter
+      ? unit.weaponsDatasheets.filter((weapon) =>
+          Object.keys(unit.count ?? {}).some((name: string) => {
+            return weapon.name?.toLowerCase().includes(name.toLowerCase());
+          })
+        )
+      : unit.weaponsDatasheets;
+
+    const filteredWeapons = weapons.filter(
       (wargear) => wargear.type !== "Ranged"
     );
 
@@ -34,7 +43,7 @@ const FightSection = (units: ListUnit[], settings: PrintSettings) => {
               </tr>
             </thead>
             <tbody>
-              {weapons.map((weapon) => {
+              {filteredWeapons.map((weapon) => {
                 return (
                   <tr>
                     <td className="pl-1">{weapon.name}</td>

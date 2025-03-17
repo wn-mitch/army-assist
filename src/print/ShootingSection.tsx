@@ -16,6 +16,10 @@ const ShootingSection = (units: ListUnit[], settings: PrintSettings) => {
         )
       : unit.weaponsDatasheets;
 
+    const filteredWeapons = weapons.filter(
+      (wargear) => wargear.type === "Ranged"
+    );
+
     return (
       <React.Fragment>
         <div className="border border-black break-inside-avoid first:mt-0 my-1">
@@ -39,7 +43,7 @@ const ShootingSection = (units: ListUnit[], settings: PrintSettings) => {
               </tr>
             </thead>
             <tbody>
-              {weapons.map((weapon) => {
+              {filteredWeapons.map((weapon) => {
                 return (
                   <tr>
                     <td className="pl-1">{weapon.name}</td>
