@@ -6,11 +6,11 @@ import { getPhasedAbilities } from "@/utils/UnitHelper";
 import PrintSettings from "@/types/PrintSettings";
 
 const CommandSection = (units: ListUnit[], settings: PrintSettings) => {
-  return units.map((unit) => {
+  return units.map((unit, index) => {
     const abilities = getPhasedAbilities(unit, Phase.Command);
 
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         <div className="border border-black break-inside-avoid first:mt-0 my-1">
           <div className="flex flex-row">
             <span className="flex-1 font-semibold text-center">

@@ -1,5 +1,35 @@
 [
   {
+    "version": "1.10.0",
+    "stateVersion": 21,
+    "date": "4/2/25",
+    "changes": [
+      "Added a new feature: Multiple Lists! This change is pretty immediately obvious upon log in. Special thanks to my patron Fenris for this request!",
+      "* Settings are now set on the Lists Display screen and synced across whichever list you select. No more per list setting fiddlyness.",
+      "* You can save several different lists and swap between them as needed.",
+      "* You can review your lists in either a tile or table view",
+      "* Allows you to rename lists",
+      "* Allows you to share a copy of the list as a QR code. Opening the QR code immediately takes you to a copy of the shared list.",
+      "* Added a new page to the print menu that prints out a QR Code.",
+      "* Allows you to share a copy of the list as a text link. Opening the text link immediately takes you to a copy of the shared list.",
+      "* Allows you to refresh the list through the data parser if your list is out of date",
+      "* Allows you to delete lists",
+      "Other Changes:",
+      "* Improved test case efficiency, which will have a knock on effect of fewer breaking pushes to prod",
+      "* Standardized icon size across the site",
+      "* Added a 'Truncate Core Rules' option for the main panes.",
+      "Bugfixes:",
+      "* Added a 'Reverse Paste Order' option for the sort method because the order being backwards for no apparent reason is really annoying.",
+      "* Fixed which buttons show in the header during non-army displays",
+      "* Fixed the phased printing sections doing weird things when stratagems and units are disabled.",
+      "* Continued improving Tau drone coverage",
+      "* Fixed a bug involving weapon profiles for unit counts",
+      "* Fixed a bug involving certain unicode apostrophes",
+      "Coming Soon:",
+      "* Allows you to edit a specific unit after it's gone through the processor for crusade support, applying abilities, etc"
+    ]
+  },
+  {
     "version": "1.9.3",
     "stateVersion": 20,
     "date": "03/26/2025",

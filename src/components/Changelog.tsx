@@ -60,7 +60,7 @@ function Changelog() {
               onPointerDown={handleClose}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300"
             >
-              <XCircleIcon className="h-6 w-6" />
+              <XCircleIcon className="h-8 w-8" />
             </button>
             <DialogTitle className="text-xl font-bold text-center dark:text-gray-200 text-gray-800">
               Changelog

@@ -7,23 +7,25 @@ import useStore from "@/store/store";
 import ListUnit from "@/types/ListUnit";
 import Phase from "@/types/Phase";
 
-import PhaseAbilities from "@/components/CardComponents/PhaseAbilities";
-
 import SavesPhase from "./PhaseDisplays/SavesPhase";
 import CommandPhase from "./PhaseDisplays/CommandPhase";
 import MovementPhase from "./PhaseDisplays/MovementPhase";
 import ShootingOrFightPhase from "./PhaseDisplays/ShootingOrFightPhase";
 import ChargePhase from "./PhaseDisplays/ChargePhase";
 import PhaseEnhancements from "./PhaseEnhancements";
+import PhaseAbilities from "./PhaseAbilities";
 
 function ListUnitCard({ unit }: { unit: ListUnit }) {
-  const phase = useStore((state) => state.phase);
+  const activeList = useStore((state) => state.activeList);
+  const storedLists = useStore((state) => state.storedLists);
+
+  const phase = storedLists[activeList].phase;
   const toggleUnit = useStore((state) => state.toggleUnit);
 
-  const cardsCollapse = useStore((state) => state.cardsCollapse);
-  const cardsGroup = useStore((state) => state.cardsGroup);
-  const showKeywords = useStore((state) => state.showKeywords);
-  const weaponsFilter = useStore((state) => state.weaponsFilter);
+  const cardsCollapse = useStore((state) => state.settings.cardsCollapse);
+  const cardsGroup = useStore((state) => state.settings.cardsGroup);
+  const showKeywords = useStore((state) => state.settings.showKeywords);
+  const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
 
   let characteristic: React.ReactNode;
   let toggled = true;
@@ -50,7 +52,12 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   const filteredWeapons = weaponsFilter
     ? unit.weaponsDatasheets.filter((weapon) =>
         Object.keys(unit.count ?? {}).some((name: string) => {
-          return weapon.name?.toLowerCase().includes(name.toLowerCase());
+          return (
+            name &&
+            weapon.name &&
+              (name.toLowerCase().includes(weapon.name.toLowerCase()) ||
+                weapon.name.toLowerCase().includes(name.toLowerCase()))
+          );
         })
       )
     : unit.weaponsDatasheets;
@@ -105,9 +112,6 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       key={unit.datasheet_id}
       tabIndex={0}
       className={`group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer ${fadedClasses} shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800`}
-      // onClick={() => toggleUnit(unit)}
-      // onTouchStart={handleTouchStart}
-      // onTouchEnd={handleTouchEnd}
     >
       <div className="flex flex-row">
         <div

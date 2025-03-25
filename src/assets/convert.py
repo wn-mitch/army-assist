@@ -9,6 +9,7 @@ replacements = {
     r"\u2018": "\'",
     r"\u2013": "-",
     r" \(Aura\)": "",
+    r"\’": "'",
 }
 
 # Define the conditions for rows to be ignored

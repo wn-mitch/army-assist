@@ -11,7 +11,9 @@
     "build_preview": "tsc -b && vite build && vite preview",
     "cy:open": "cypress open",
     "cy:run_all": "rm -f results.txt && cypress run >> results.txt",
+    "cy:run_fast": "rm -f results.txt && cypress run --spec 'cypress/e2e/*.cy.ts' >> results.txt",
     "deploy:wrangler": "wrangler pages deploy dist",
+    "convert:phases": "python3 src/assets/convert.py && python3 src/assets/phases.py",
     "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist"
   },
   "dependencies": {
@@ -24,7 +26,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
+    "react-qr-code": "^2.0.15",
+    "react-svg-to-image": "^3.0.0",
     "react-to-print": "^3.0.5",
+    "uuid": "^11.1.0",
     "zustand": "^5.0.2"
   },
   "devDependencies": {

@@ -1,19 +1,23 @@
 /// <reference types="cypress" />
 
 describe.only("Verify that the name specific overrides are working", () => {
+  beforeEach(() => {
+    cy.visit("/");
+    cy.get('#close-button').click()
+  })
+
   describe("Name Specific Unit Overrides", () => {
     it("should find Ancient in Terminator Armour", () => {
-      cy.pasteListWithArgument("ancient_in_terminator_armor.txt");
+      cy.contains("Ancient in Terminator Armor").click()
       cy.contains('Ancient in Terminator Armour')
     });
     
     it("should find Wraithblade Weapons", () => {
-      cy.pasteListWithArgument("wraithblade.txt");
-      cy.checkFightPhase("Ghostaxe")
+      cy.checkFightPhase("Wraithblade", "Ghostaxe")
     });
     
     it("should find Piranhas", () => {
-      cy.pasteListWithArgument("piranhas.txt");
+      cy.contains("Piranhas").click()
       cy.contains('Piranhas')
     });
   });

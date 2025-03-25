@@ -2,7 +2,8 @@
 
 describe("Verify all Astra Militarum units and weapons exist", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_guard.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const shootingWeapons = [
@@ -23,14 +24,10 @@ describe("Verify all Astra Militarum units and weapons exist", () => {
     "Sentry flamer",
     "Deathstrike missile",
     "Hellstrike missile",
-    "Twin lascannon",
     "Twin heavy bolter",
     "Twin autocannon",
-    "Twin heavy flamer",
     "Ripper gun",
     "Earthshaker cannon",
-    "Medusa siege cannon",
-    "Laser destroyer",
     "Sniper rifle",
     "Hot-shot lasgun",
     "Hot-shot laspistol",
@@ -41,20 +38,22 @@ describe("Verify all Astra Militarum units and weapons exist", () => {
     "Magma cannon",
     "Volcano cannon",
     "Storm Eagle Rockets",
-    "Assault cannon",
-    "Praetor launcher",
     "Castigator Gatling Cannon",
     "Vulcan Mega-bolter",
     "Stormsword Siege Cannon",
-    "Valdor neutron laser",
     "Wyvern Quad Stormshard Mortar",
     "Taurox Battle Cannon",
     "Twin Taurox Hot-Shot Volley Gun",
-    "Twin Autocannon",
-    "Thunderbolt nose autocannons",
-    "Vulture hellstrike rack",
     "Duty and Vengeance",
-    "Multiple rocket pod"
+    "Tremor cannon",
+    "Quake cannon",
+    "Hellhammer cannon",
+    "Bragg's autocannon",
+    "Corbec's hot-shot lascarbine",
+    "Larkin's long-las",
+    "Death Rider lascarbine",
+    "Zealot's vindictor",
+    "Rawne's lascarbine"
   ];
 
   const fightWeapons = [
@@ -64,21 +63,23 @@ describe("Verify all Astra Militarum units and weapons exist", () => {
     "Mkoll's Straight Silver Knife",
     "Straight Silver Knife",
     "Savage claws",
-    "Power Weapon",
     "Tempestus Dagger",
-    "Death Rider hunting lance",
     "Steed's Hooves",
     "Bullgryn Maul",
-    "Savage claws",
     "Battery close combat weapons",
     "Armoured hull",
-    "Armoured Tracks"
+    "Armoured Tracks",
+    "Force weapon",
+    "Trench club",
+    "Frag lance",
+    "Power sabre",
+    "Servo-arm",
   ];
 
   describe("Shooting phase weapons", () => {
     shootingWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Guard", weapon);
       });
     });
   });
@@ -86,7 +87,7 @@ describe("Verify all Astra Militarum units and weapons exist", () => {
   describe("Fight phase weapons", () => {
     fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Guard", weapon);
       });
     });
   });

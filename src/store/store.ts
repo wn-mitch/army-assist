@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
+import { v4 } from "uuid";
 
 import Datasheets from "@/assets/json/Datasheets.json";
 import DatasheetModels from "@/assets/json/Datasheets_models.json";
@@ -17,8 +18,9 @@ import Phase from "@/types/Phase";
 import SortOptions from "@/types/SortOptions";
 import Enhancement from "@/types/Enhancement";
 import { Stratagem } from "@/types/Stratagem";
-import DatasheetWargearType from "@/types/DatasheetWargear";
 import DatasheetModel from "@/types/DatasheetModel";
+import Ability from "@/types/Ability";
+import StoredList from "@/types/StoredList";
 
 import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import {
@@ -30,36 +32,24 @@ import {
   applyWeaponAndEnhancementOverrides,
   arraysEqual,
 } from "@/utils/StoreHelper";
-import Ability from "@/types/Ability";
+import Settings from "@/types/Settings";
+import { samplePreload, testingPreload } from "@/utils/PreloadedLists";
 
 interface StoreState {
-  text: string;
-  units: ListUnit[];
-  phase: Phase;
-  faction: string | undefined;
-  detachment: string | undefined;
-  activePhases: {
-    [Phase.Command]: boolean;
-    [Phase.Movement]: boolean;
-    [Phase.Shooting]: boolean;
-    [Phase.Charge]: boolean;
-    [Phase.Fight]: boolean;
-    [Phase.Saves]: boolean;
-  };
   isFirstVisit: boolean;
-
-  listSort: SortOptions;
-  cardsCollapse: boolean;
-  showKeywords: boolean;
-  isDarkMode: boolean;
-  cardsGroup: boolean;
-  weaponsFilter: boolean;
-
+  storedLists: StoredList[];
+  activeList: number;
+  settings: Settings;
   currentSaveVersion: number;
-  unmatchedWeapons: string[];
   reset: () => void;
-  setText: (text: string) => void;
-  parseText: (text: string) => boolean;
+  addList: (text?: string) => void;
+  hasActiveList: () => boolean;
+  setActiveList: (uuid: string) => void;
+  getActiveList: () => StoredList;
+  editListName: (uuid: string, listName: string) => void;
+  deleteList: (uuid: string) => void;
+  refreshArmy: (uuid: string) => void;
+  parseText: (text: string, name: string, listIndex?: string) => boolean;
   setPhase: (phase: Phase) => void;
   toggleUnit: (unit: ListUnit) => void;
   togglePhase: (phase: Phase) => void;
@@ -70,256 +60,232 @@ interface StoreState {
   setIsDarkMode: (isDarkMode: boolean) => void;
   setCardsGroup: (cardsGroup: boolean) => void;
   setWeaponsFilter: (weaponsFilter: boolean) => void;
-  setUnmatchedWeapons: (unmatchedWeapons: string[]) => void;
+  setTruncateCoreRules: (truncateCoreRules: boolean) => void;
+  setListDisplaySetting: (listDisplaySetting: boolean) => void;
   getProcessedUnitList: () => ListUnit[];
   getStratagemsByPhase: (phase: Phase) => Stratagem[];
   getStratagems: () => Stratagem[];
-  getWeaponDatasheets: (unit: ListUnit, phase: Phase) => DatasheetWargearType[];
   getArmyAbilities: () => Ability[];
+  getListIndexByUUID: (uuid: string | undefined) => number;
 }
 
 const useStore = create<StoreState>()(
   persist(
-    (set, get) => ({
-      text: "",
-      units: [],
-      phase: Phase.Command,
-      faction: undefined,
-      detachment: undefined,
-      activePhases: {
-        [Phase.Command]: true,
-        [Phase.Movement]: true,
-        [Phase.Shooting]: true,
-        [Phase.Charge]: true,
-        [Phase.Fight]: true,
-        [Phase.Saves]: true,
-      },
-      isFirstVisit: true,
-      unmatchedWeapons: [],
-      currentSaveVersion: getCurrentStateVersion(),
-      listSort: SortOptions.Name,
-      cardsCollapse: true,
-      showKeywords: true,
-      isDarkMode: true,
-      cardsGroup: true,
-      weaponsFilter: true,
-      reset: () =>
-        set({
-          text: "",
-          units: [],
-          faction: undefined,
-          detachment: undefined,
-          phase: Phase.Command,
-          currentSaveVersion: getCurrentStateVersion(),
-        }),
-      setText: (text: string) => set({ text }),
-      parseText: (text: string): boolean => {
-        const lines = text.split("\n");
-
-        const factionMatch = lines[0].trim().match(/[\w]+ - ([\w'\s]+) -/);
-        const factionMatchName = lines[0]
-          .trim()
-          .match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
-
-        if (!factionMatch || !factionMatchName) {
-          window.alert("Name/Faction/Detachment format not recognized");
-          return false;
-        }
-
-        console.log(factionMatch[1],",", factionMatchName[1])
-        const factions = applyFactionOverrides(Factions);
-        const factionAbbreviation = factions.filter(
-          (f) => f.name === factionMatch[1] || f.name === factionMatchName[1]
-        )[0];
-
-        if (!factionAbbreviation) {
-          console.error("Faction abbreviation not found in the list");
-          return false;
-        }
-
-        const factionAbbreviationId = factionAbbreviation.id;
-
-        set({ faction: factionAbbreviationId });
-
-        const listUnits: ListUnit[] = [];
-        let lastParentUnit: ListUnit | null = null;
-
-        lines.forEach((line, index) => {
-          const detachmentMatch = line.match(
-            /Detachment[\sChoices]*: ([\w\s-]+)/
-          );
-
-          if (detachmentMatch) {
-            // Name overrides
-            let name = detachmentMatch[1];
-
-            switch (name) {
-              case "Pact-bound Zealots":
-                name = "Pactbound Zealots";
-                break;
-              default:
-                break;
-            }
-
-            set({ detachment: name });
+    (set, get) => {
+      return {
+        isFirstVisit: true,
+        currentSaveVersion: getCurrentStateVersion(),
+        storedLists: testingPreload,
+        // storedLists: samplePreload,
+        activeList: -1,
+        settings: {
+          listSort: SortOptions.Name,
+          cardsCollapse: true,
+          showKeywords: true,
+          isDarkMode: true,
+          cardsGroup: true,
+          weaponsFilter: true,
+          truncateCoreRules: true,
+          listDisplaySetting: true,
+          activePhases: {
+            [Phase.Command]: true,
+            [Phase.Movement]: true,
+            [Phase.Shooting]: true,
+            [Phase.Charge]: true,
+            [Phase.Fight]: true,
+            [Phase.Saves]: true,
+          },
+        },
+        reset: () => {
+          const hasUnits = get().storedLists[get().activeList].units.length > 0;
+          if (!hasUnits) {
+            get().storedLists.pop();
           }
+          set({
+            currentSaveVersion: getCurrentStateVersion(),
+            activeList: -1,
+          });
+        },
+        hasActiveList: () => get().activeList >= 0,
+        setActiveList: (uuid: string) => {
+          const listIndex = get().getListIndexByUUID(uuid);
+          set({ activeList: listIndex });
+        },
+        addList: (text?: string) => {
+          const newList: StoredList = {
+            uuid: v4(),
+            text: text || "",
+            name: text ? "Imported List" : undefined,
+            units: [],
+            phase: Phase.Command,
+            faction: undefined,
+            detachment: undefined,
+            created: Date.now().toString(),
+            updated: Date.now().toString(),
+          };
 
-          const parentMatch = line.match(
-            /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’]+)\s\[\d+[\s]?pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
-          );
-          const childMatch = line.match(
-            /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/
-          );
+          const storedLists = get().storedLists;
 
-          if (parentMatch) {
-            // eslint-disable-next-line prefer-const
-            let [, name, details] = parentMatch;
-
-            const weapons = details
-              ?.split(/,(?![^(]*\))/)
-              .filter((name) => name !== "Warlord" && name !== "")
-              .map((name) => name.replace(/^\d+x?\s*/, "").trim())
-              .flatMap((name) => {
-                const cleanedName = name
-                  .replace(/\s*\((.*?)\)\s*/g, ", $1")
-                  .trim();
-                return cleanedName.split(",").map((part) => part.trim());
-              });
-
-            const weaponCount = weapons?.reduce((acc, weapon) => {
-              acc[weapon] = 1;
-              return acc;
-            }, {} as Record<string, number>);
-
-            name = name.replace(" [Legends]", "");
-            if (name) {
-              lastParentUnit = {
-                id: index,
-                name,
-                details: details,
-                children: [],
-                toggled: true,
-                count: weaponCount,
-                groupCount: 1,
-                points: null,
-                datasheet_id: null,
-                weapons: weapons,
-                weaponsDatasheets: [],
-                abilities: [],
-                enhancements: [],
-                datasheet: null,
-                datasheetModel: null,
-                keywords: "",
-              };
-
-              listUnits.push(lastParentUnit);
-            }
-          } else if (childMatch) {
-            const [, count, name, , details] = childMatch;
-
-            const weapons = details
-              ?.split(/,(?![^(]*\))/)
-              .filter((name) => name !== "Warlord" && name !== "")
-              .map((name) => name.replace(/^\d+x?\s*/, "").trim())
-              .flatMap((name) => {
-                const cleanedName = name
-                  .replace(/\s*\((.*?)\)\s*/g, ", $1")
-                  .trim();
-                return cleanedName.split(",").map((part) => part.trim());
-              });
-
-            const weaponCount = weapons?.reduce((acc, weapon) => {
-              acc[weapon] = parseInt(count);
-              return acc;
-            }, {} as Record<string, number>);
-
-            const unit: ListUnit = {
-              id: index,
-              name,
-              details: details,
-              toggled: true,
-              count: weaponCount,
-              groupCount: 1,
-              points: null,
-              datasheet_id: null,
-              children: [],
-              weapons: weapons,
-              weaponsDatasheets: [],
-              abilities: [],
-              enhancements: [],
-              datasheet: null,
-              datasheetModel: null,
-              keywords: "",
+          const newStoredLists = [...storedLists, newList];
+          set({ storedLists: newStoredLists });
+          get().setActiveList(newList.uuid);
+        },
+        getActiveList: () => {
+          const activeList = get().activeList;
+          const lists = get().storedLists;
+          return lists[activeList];
+        },
+        editListName: (uuid: string, listName: string) => {
+          const listIndex = get().getListIndexByUUID(uuid);
+          set((state) => {
+            const lists = state.storedLists;
+            const updatedList = {
+              ...lists[listIndex],
+              name: listName,
+              updated: Date.now().toString(),
             };
+            const updatedStoredLists = [...lists];
+            updatedStoredLists[listIndex] = updatedList;
+            return { storedLists: updatedStoredLists };
+          });
+        },
+        deleteList: (uuid: string) => {
+          const listIndex = get().getListIndexByUUID(uuid);
 
-            if (lastParentUnit && lastParentUnit.children) {
-              lastParentUnit.children.push(unit);
-            }
+          set((state) => {
+            const updatedStoredLists = state.storedLists.filter(
+              (_, index) => index !== listIndex
+            );
+            return { storedLists: updatedStoredLists };
+          });
+        },
+        refreshArmy: (uuid: string) => {
+          const listIndex = get().getListIndexByUUID(uuid);
+          const list = get().storedLists[listIndex];
+          const name = list.name ?? "";
+          get().parseText(list.text, name, list.uuid);
+        },
+        parseText: (text: string, name: string, uuid?: string): boolean => {
+          const activeList = get().activeList;
+          const listIndex = get().getListIndexByUUID(uuid);
+
+          const storedList: StoredList = {
+            uuid: uuid || v4(),
+            text: text,
+            name: undefined,
+            units: [],
+            phase: Phase.Command,
+            faction: undefined,
+            detachment: undefined,
+            created: get().hasActiveList()
+              ? get().getActiveList().created
+              : Date.now().toString(),
+            updated: Date.now().toString(),
+          };
+
+          const lines = text.split("\n");
+
+          const factionMatch = lines[0].trim().match(/[\w]+ - ([\w'\s]+) -/);
+          const factionMatchName = lines[0]
+            .trim()
+            .match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
+
+          if (!factionMatch || !factionMatchName) {
+            window.alert("Name/Faction/Detachment format not recognized");
+            return false;
           }
-        });
 
-        if (listUnits.length > 0) {
-          const updatedUnits = listUnits
-            .map((unit) => {
-              unit = applyNameOverrides(unit);
+          const factions = applyFactionOverrides(Factions);
+          const factionAbbreviation = factions.filter(
+            (f) => f.name === factionMatch[1] || f.name === factionMatchName[1]
+          )[0];
 
-              const datasheetsMatchingName = Datasheets.filter(
-                (item) => item.name.toLowerCase() === unit.name.toLowerCase()
-              );
+          if (!factionAbbreviation) {
+            console.error("Faction abbreviation not found in the list");
+            return false;
+          }
 
-              // Create an array of all unique factions in the datasheets
-              const uniqueFactions = Array.from(
-                new Set(datasheetsMatchingName.map((item) => item.faction_id))
-              );
+          const factionAbbreviationId = factionAbbreviation.id;
 
-              const datasheet = uniqueFactions.includes(factionAbbreviationId)
-                ? datasheetsMatchingName.filter(
-                    (item) => item.faction_id === factionAbbreviationId
-                  )[0]
-                : datasheetsMatchingName[0];
+          storedList.faction = factionAbbreviationId;
 
-              if (!datasheet) {
-                window.alert(`Datasheet not found for unit ${unit.name}`);
-                return null;
-              }
-              const datasheetModel = DatasheetModels.find(
-                (datasheetModel: DatasheetModel) =>
-                  datasheetModel.datasheet_id === datasheet.id
-              );
+          const listUnits: ListUnit[] = [];
+          let lastParentUnit: ListUnit | null = null;
 
-              if (!datasheetModel) {
-                window.alert(`Datasheet model not found for unit ${unit.name}`);
-                return null;
-              }
+          lines.forEach((line, index) => {
+            const detachmentMatch = line.match(
+              /Detachment[\sChoices]*: ([\w\s-]+)/
+            );
 
-              const matchingAbilities = DatasheetAbilities.filter(
-                (ability: Ability) =>
-                  ability.datasheet_id === datasheetModel.datasheet_id
-              ).map((ability) => applyAbilityOverrides(ability));
+            if (detachmentMatch) {
+              // Name overrides
+              let name = detachmentMatch[1];
 
-              if (unit.children && unit.children.length > 0) {
-                const details = unit.children
-                  .map((unit) => ({
-                    ...unit,
-                    name: unit.name.replace(/^\d+x?\s*/, "").trim(),
-                  }))
-                  .map((child) => child.details)
-                  .join(", ");
-                unit.details = unit.details
-                  ? [...unit.details.split(", "), details].join(", ")
-                  : details;
-
-                const count = unit.children.reduce((acc, curr) => {
-                  Object.keys(curr.count ?? {}).forEach((key) => {
-                    acc[key] = (acc[key] || 0) + (curr.count?.[key] || 0);
-                  });
-                  return acc;
-                }, {} as Record<string, number>);
-                unit.count = count;
-                unit.children = [];
+              switch (name) {
+                case "Pact-bound Zealots":
+                  name = "Pactbound Zealots";
+                  break;
+                default:
+                  break;
               }
 
-              const weapons = unit.details
+              storedList.detachment = name;
+            }
+
+            const parentMatch = line.match(
+              /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’]+)\s\[\d+[\s]?pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
+            );
+            const childMatch = line.match(
+              /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/
+            );
+
+            if (parentMatch) {
+              // eslint-disable-next-line prefer-const
+              let [, name, details] = parentMatch;
+
+              const weapons = details
+                ?.split(/,(?![^(]*\))/)
+                .filter((name) => name !== "Warlord" && name !== "")
+                .map((name) => name.replace(/^\d+x?\s*/, "").trim())
+                .flatMap((name) => {
+                  const cleanedName = name
+                    .replace(/\s*\((.*?)\)\s*/g, ", $1")
+                    .trim();
+                  return cleanedName.split(",").map((part) => part.trim());
+                });
+
+              const weaponCount = weapons?.reduce((acc, weapon) => {
+                acc[weapon] = 1;
+                return acc;
+              }, {} as Record<string, number>);
+
+              name = name.replace(" [Legends]", "");
+              if (name) {
+                lastParentUnit = {
+                  id: index,
+                  name,
+                  details: details,
+                  children: [],
+                  toggled: true,
+                  count: weaponCount,
+                  groupCount: 1,
+                  points: null,
+                  datasheet_id: null,
+                  weapons: weapons,
+                  weaponsDatasheets: [],
+                  abilities: [],
+                  enhancements: [],
+                  datasheet: null,
+                  datasheetModel: null,
+                  keywords: "",
+                };
+
+                listUnits.push(lastParentUnit);
+              }
+            } else if (childMatch) {
+              const [, count, name, , details] = childMatch;
+
+              const weapons = details
                 ?.split(/,(?![^(]*\))/)
                 .filter((name) => name !== "Warlord" && name !== "")
                 .flatMap((name) => {
@@ -329,8 +295,8 @@ const useStore = create<StoreState>()(
                   return cleanedName.split(",").map((part) => part.trim());
                 });
 
-              unit.weapons = weapons?.flatMap((weapon) => {
-                const match = weapon.match(/(\d+)x\s+([A-Za-z\s-]+)/);
+              const updatedWeapons = weapons?.flatMap((weapon) => {
+                const match = weapon.match(/(\d+)x\s+([A-Za-z\s\'-]+)/);
                 if (match) {
                   const matchCount = parseInt(match[1], 10);
                   const weaponName = match[2];
@@ -339,295 +305,505 @@ const useStore = create<StoreState>()(
                 return weapon;
               });
 
-              // Weapon Overrides
-              unit.weapons = applyWeaponAndEnhancementOverrides(
-                datasheet,
-                unit.weapons
-              );
+              const weaponCount = updatedWeapons?.reduce((acc, weapon) => {
+                acc[weapon] =
+                  parseInt(count) *
+                  updatedWeapons.filter((item) => item === weapon).length;
+                return acc;
+              }, {} as Record<string, number>);
 
-              const updatedCount: Record<string, number> = {};
-
-              Object.keys(unit.count ?? {}).forEach((key) => {
-                const match = key.match(/(\d+)x\s+([A-Za-z\s-]+)/);
-                if (match) {
-                  const multiplier = parseInt(match[1]);
-                  const weaponName = match[2];
-                  updatedCount[weaponName] =
-                    (updatedCount[weaponName] || 0) +
-                    (unit.count?.[key] ?? 0) * multiplier;
-                } else {
-                  updatedCount[key] =
-                    (updatedCount[key] || 0) + (unit.count?.[key] ?? 0);
-                }
-              });
-
-              unit.count = updatedCount;
-
-              unit.weapons?.forEach((weapon) => {
-                if (unit.count && !unit.count[weapon]) {
-                  unit.count[weapon] = 1;
-                }
-              });
-
-              const weaponsDatasheets = DatasheetWargear.filter(
-                (wargear) => datasheet && datasheet.id === wargear.datasheet_id
-              );
-
-              const allWeaponsDatasheets = applyMissingWeapons(
-                unit,
-                unit.weapons ?? [],
-                weaponsDatasheets
-              );
-
-              const allAbilities = applyMissingAbilities(
-                unit,
-                unit.weapons ?? [],
-                matchingAbilities ?? []
-              );
-
-              const matchingEnhancements = Enhancements.filter(
-                (enhancement: Enhancement) =>
-                  unit.weapons
-                    ?.map((weapon) => weapon.toLowerCase())
-                    .includes(enhancement.name.toLowerCase())
-              );
-
-              const keywords = DatasheetKeywords.filter(
-                (keyword) => keyword.datasheet_id === datasheet.id
-              )
-                .map((x) => x.keyword)
-                .join(", ");
-
-              return {
-                ...unit,
-                abilities: allAbilities,
-                weaponsDatasheets: allWeaponsDatasheets,
-                datasheet: datasheet,
-                datasheetModel: datasheetModel,
-                keywords: keywords,
-                enhancements: matchingEnhancements,
+              const unit: ListUnit = {
+                id: index,
+                name,
+                details: details,
+                toggled: true,
+                count: weaponCount,
+                groupCount: 1,
+                points: null,
+                datasheet_id: null,
+                children: [],
+                weapons: updatedWeapons,
+                weaponsDatasheets: [],
+                abilities: [],
+                enhancements: [],
+                datasheet: null,
+                datasheetModel: null,
+                keywords: "",
               };
-            })
-            .filter((x) => x != null) as ListUnit[];
 
-          if (!updatedUnits) {
-            return false;
-          }
-
-          set({ units: updatedUnits as ListUnit[] });
-        }
-
-        return true;
-      },
-      setPhase: (phase: Phase) => {
-        // Toggle all units to true when changing phase
-        const units = useStore.getState().units.map((u) => ({
-          ...u,
-          toggled: true,
-        }));
-
-        set({ phase, units });
-      },
-      toggleUnit: (unit: ListUnit) => {
-        const units = [...useStore.getState().units];
-        const index = units.findIndex((u) => u.id === unit.id);
-
-        if (index !== -1) {
-          units[index] = { ...units[index], toggled: !units[index].toggled };
-          set({ units });
-        }
-      },
-      togglePhase: (phase: Phase) => {
-        set((state) => ({
-          activePhases: {
-            ...state.activePhases,
-            [phase]: !state.activePhases[phase],
-          },
-        }));
-      },
-      setFirstVisit: (isFirstVisit: boolean) => set({ isFirstVisit }),
-      setListSort: (listSort: SortOptions) => set({ listSort }),
-      setCardsCollapse: (cardsCollapse: boolean) => set({ cardsCollapse }),
-      setShowKeywords: (showKeywords: boolean) => set({ showKeywords }),
-      setIsDarkMode: (isDarkMode: boolean) => set({ isDarkMode }),
-      setCardsGroup: (cardsGroup: boolean) => set({ cardsGroup }),
-      setWeaponsFilter: (weaponsFilter: boolean) => set({ weaponsFilter }),
-      setUnmatchedWeapons: (unmatchedWeapons: string[]) =>
-        set({ unmatchedWeapons }),
-      getProcessedUnitList: () => {
-        const units = get().units;
-        const listSort = get().listSort;
-        const cardsGroup = get().cardsGroup;
-
-        const sortByListSort = (a: ListUnit, b: ListUnit) => {
-          switch (listSort) {
-            case SortOptions.Name:
-              return a.name.localeCompare(b.name);
-            // TODO: This must be -1, I don't know why but this doesn't get caught in testing
-            case SortOptions.PasteOrder:
-              return -1;
-          }
-        };
-
-        const groupedUnits = cardsGroup
-          ? units.reduce((acc: ListUnit[], curr: ListUnit) => {
-              const index = acc.findIndex((item) => {
-                return (
-                  item.name === curr.name &&
-                  arraysEqual(item.enhancements, curr.enhancements) &&
-                  arraysEqual(item.weapons ?? [], curr.weapons ?? [])
-                );
-              });
-              if (index !== -1) {
-                acc[index].groupCount = (acc[index].groupCount || 1) + 1;
-              } else {
-                acc.push({ ...curr, groupCount: 1 });
+              if (lastParentUnit && lastParentUnit.children) {
+                lastParentUnit.children.push(unit);
               }
-              return acc;
-            }, [])
-          : units;
-
-        const sortedUnits = groupedUnits.toSorted(sortByListSort);
-
-        return sortedUnits;
-      },
-      getStratagemsByPhase: (phase) => {
-        const stratagemNames = new Set();
-        const faction = get().faction;
-        const detachment = get().detachment;
-
-        const stratagems = Stratagems.map((stratagem) => {
-          const [splitDetachment, splitType] = stratagem.type.split(" - ");
-          if (splitDetachment === "Core") {
-            return {
-              ...stratagem,
-              detachment: "Core",
-              type: splitType,
-            };
-          } else {
-            return {
-              ...stratagem,
-              type: splitType,
-            };
-          }
-        })
-          .filter(
-            (stratagem) =>
-              stratagem.faction_id === faction || stratagem.faction_id === ""
-          )
-          .filter((stratagem) => {
-            return (
-              stratagem.detachment === detachment ||
-              stratagem.detachment === "" ||
-              stratagem.detachment === "Core"
-            );
-          })
-          .filter((stratagem) => stratagem.phases.includes(phase))
-          .filter((stratagem) => {
-            if (stratagemNames.has(stratagem.name)) {
-              return false;
-            } else {
-              stratagemNames.add(stratagem.name);
-              return true;
             }
           });
 
-        return stratagems;
-      },
-      getWeaponDatasheets: (unit, phase) => {
-        const weaponsFilter = get().weaponsFilter;
+          if (listUnits.length > 0) {
+            const updatedUnits = listUnits
+              .map((unit) => {
+                unit = applyNameOverrides(unit);
 
-        const availableWeaponDatasheets = DatasheetWargear.filter((wargear) =>
-          phase === "Shooting"
-            ? wargear.type === "Ranged"
-            : wargear.type === "Melee"
-        ).filter(
-          (wargear) =>
-            unit.datasheet && unit.datasheet.id === wargear.datasheet_id
-        );
+                const datasheetsMatchingName = Datasheets.filter(
+                  (item) => item.name.toLowerCase() === unit.name.toLowerCase()
+                );
 
-        return weaponsFilter
-          ? availableWeaponDatasheets.filter((weapon) =>
-              (unit.weapons ?? []).some((name) => {
-                return weapon.name?.toLowerCase().includes(name.toLowerCase());
+                // Create an array of all unique factions in the datasheets
+                const uniqueFactions = Array.from(
+                  new Set(datasheetsMatchingName.map((item) => item.faction_id))
+                );
+
+                const datasheet = uniqueFactions.includes(factionAbbreviationId)
+                  ? datasheetsMatchingName.filter(
+                      (item) => item.faction_id === factionAbbreviationId
+                    )[0]
+                  : datasheetsMatchingName[0];
+
+                if (!datasheet) {
+                  window.alert(`Datasheet not found for unit ${unit.name}`);
+                  return null;
+                }
+                const datasheetModel = DatasheetModels.find(
+                  (datasheetModel: DatasheetModel) =>
+                    datasheetModel.datasheet_id === datasheet.id
+                );
+
+                if (!datasheetModel) {
+                  return null;
+                }
+
+                const matchingAbilities = DatasheetAbilities.filter(
+                  (ability: Ability) =>
+                    ability.datasheet_id === datasheetModel.datasheet_id
+                ).map((ability) => applyAbilityOverrides(ability));
+
+                if (unit.children && unit.children.length > 0) {
+                  const details = unit.children
+                    .map((unit) => ({
+                      ...unit,
+                      name: unit.name.replace(/^\d+x?\s*/, "").trim(),
+                    }))
+                    .map((child) => child.details)
+                    .join(", ");
+                  unit.details = unit.details
+                    ? [...unit.details.split(", "), details].join(", ")
+                    : details;
+
+                  const count = unit.children.reduce((acc, curr) => {
+                    Object.keys(curr.count ?? {}).forEach((key) => {
+                      acc[key] = (acc[key] || 0) + (curr.count?.[key] || 0);
+                    });
+                    return acc;
+                  }, {} as Record<string, number>);
+                  unit.count = count;
+                  unit.children = [];
+                }
+
+                const weapons = unit.details
+                  ?.split(/,(?![^(]*\))/)
+                  .filter((name) => name !== "Warlord" && name !== "")
+                  .flatMap((name) => {
+                    const cleanedName = name
+                      .replace(/\s*\((.*?)\)\s*/g, ", $1")
+                      .trim();
+                    return cleanedName.split(",").map((part) => part.trim());
+                  });
+
+                // Weapon Overrides
+                unit.weapons = applyWeaponAndEnhancementOverrides(
+                  datasheet,
+                  weapons,
+                  unit.count ?? {}
+                );
+
+                const updatedCount: Record<string, number> = {};
+
+                Object.keys(unit.count ?? {}).forEach((key) => {
+                  const match = key.match(/(\d+)x\s+([A-Za-z\'\s-]+)/);
+                  if (match) {
+                    const multiplier = parseInt(match[1]);
+                    const weaponName = match[2];
+                    updatedCount[weaponName] =
+                      (updatedCount[weaponName] || 0) +
+                      (unit.count?.[key] ?? 0) * multiplier;
+                  } else {
+                    updatedCount[key] =
+                      (updatedCount[key] || 0) + (unit.count?.[key] ?? 0);
+                  }
+                });
+
+                unit.count = updatedCount;
+
+                unit.weapons?.forEach((weapon) => {
+                  if (unit.count && !unit.count[weapon]) {
+                    unit.count[weapon] = 1;
+                  }
+                });
+
+                const weaponsDatasheets = DatasheetWargear.filter(
+                  (wargear) =>
+                    datasheet && datasheet.id === wargear.datasheet_id
+                );
+
+                const allWeaponsDatasheets = applyMissingWeapons(
+                  unit,
+                  unit.weapons ?? [],
+                  weaponsDatasheets
+                );
+
+                console.log(unit.name, weapons)
+                const allAbilities = applyMissingAbilities(
+                  unit,
+                  unit.weapons ?? [],
+                  matchingAbilities ?? []
+                );
+
+                const matchingEnhancements = Enhancements.filter(
+                  (enhancement: Enhancement) =>
+                    unit.weapons
+                      ?.map((weapon) => weapon.toLowerCase())
+                      .includes(enhancement.name.toLowerCase())
+                );
+                const keywords = DatasheetKeywords.filter(
+                  (keyword) => keyword.datasheet_id === datasheet.id
+                )
+                  .map((x) => x.keyword)
+                  .join(", ");
+
+                return {
+                  ...unit,
+                  abilities: allAbilities,
+                  weaponsDatasheets: allWeaponsDatasheets,
+                  datasheet: datasheet,
+                  datasheetModel: datasheetModel,
+                  keywords: keywords,
+                  enhancements: matchingEnhancements,
+                };
               })
-            )
-          : availableWeaponDatasheets;
-      },
-      getStratagems: () => {
-        const stratagemNames = new Set();
-        const faction = get().faction;
-        const detachment = get().detachment;
+              .filter((x) => x != null) as ListUnit[];
 
-        const stratagems = Stratagems.map((stratagem) => {
-          const [splitDetachment, splitType] = stratagem.type.split(" - ");
-          if (splitDetachment === "Core") {
-            return {
-              ...stratagem,
-              detachment: "Core",
-              type: splitType,
-            };
-          } else {
-            return {
-              ...stratagem,
-              type: splitType,
-            };
-          }
-        })
-          .filter(
-            (stratagem) =>
-              stratagem.faction_id === faction || stratagem.faction_id === ""
-          )
-          .filter((stratagem) => {
-            return (
-              stratagem.detachment === detachment ||
-              stratagem.detachment === "" ||
-              stratagem.detachment === "Core"
-            );
-          })
-          .filter((stratagem) => {
-            if (stratagemNames.has(stratagem.name)) {
+            if (!updatedUnits) {
               return false;
-            } else {
-              stratagemNames.add(stratagem.name);
-              return true;
             }
-          });
 
-        return stratagems;
-      },
-      getArmyAbilities: () => {
-        const faction = get().faction;
-        const detachment = get().detachment;
+            storedList.units = updatedUnits;
+          }
+          storedList.name =
+            name !== ""
+              ? name
+              : `${storedList.faction} - ${storedList.detachment}`;
 
-        const filteredArmyAbilities = ArmyAbilities.filter(
-          (ability) => ability.faction_id === faction
-        ).map((x) => ({
-          ...x,
-          type: "Army",
-          datasheet_id: "",
-          line: "",
-          ability_id: "",
-          model: "",
-          parameter: "",
-        }));
+          const index = activeList >= 0 ? activeList : listIndex;
 
-        const filteredDetachmentAbilities = DetachmentAbilities.filter(
-          (ability) =>
-            ability.faction_id === faction && ability.detachment === detachment
-        ).map((x) => ({
-          ...x,
-          type: "Detachment",
-          datasheet_id: "",
-          line: "",
-          ability_id: "",
-          model: "",
-          parameter: "",
-        }));
+          const updatedStoredLists = [...get().storedLists];
 
-        return [...filteredArmyAbilities, ...filteredDetachmentAbilities];
-      },
-    }),
+          if (index !== undefined) {
+            updatedStoredLists[index] = { ...storedList };
+          } else {
+            console.error("Index is undefined. Cannot update stored lists.");
+          }
+
+          set({ storedLists: updatedStoredLists });
+
+          return true;
+        },
+        setPhase: (phase: Phase) => {
+          const activeList = get().activeList;
+
+          if (get().hasActiveList()) {
+            set((state) => {
+              const updatedStoredLists = [...state.storedLists];
+              updatedStoredLists[activeList] = {
+                ...updatedStoredLists[activeList],
+                phase,
+                units: updatedStoredLists[activeList].units.map((u) => ({
+                  ...u,
+                  toggled: true,
+                })),
+              };
+              return { storedLists: updatedStoredLists };
+            });
+          }
+        },
+        toggleUnit: (unit: ListUnit) => {
+          const activeList = get().activeList;
+          if (get().hasActiveList()) {
+            set((state) => {
+              const updatedStoredLists = [...state.storedLists];
+              const units = [...updatedStoredLists[activeList].units];
+              const index = units.findIndex((u) => u.id === unit.id);
+              if (index !== -1) {
+                units[index] = {
+                  ...units[index],
+                  toggled: !units[index].toggled,
+                };
+                updatedStoredLists[activeList] = {
+                  ...updatedStoredLists[activeList],
+                  units,
+                };
+                return { ...state, storedLists: updatedStoredLists };
+              } else {
+                return state;
+              }
+            });
+          }
+        },
+        togglePhase: (phase: Phase) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              activePhases: {
+                ...state.settings.activePhases,
+                [phase]: !state.settings.activePhases[phase],
+              },
+            },
+          }));
+        },
+        setFirstVisit: (isFirstVisit: boolean) => set({ isFirstVisit }),
+        setListSort: (listSort: SortOptions) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              listSort,
+            },
+          }));
+        },
+        setCardsCollapse: (cardsCollapse: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              cardsCollapse,
+            },
+          }));
+        },
+        setShowKeywords: (showKeywords: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              showKeywords,
+            },
+          }));
+        },
+        setIsDarkMode: (isDarkMode: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              isDarkMode,
+            },
+          }));
+        },
+        setCardsGroup: (cardsGroup: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              cardsGroup,
+            },
+          }));
+        },
+        setWeaponsFilter: (weaponsFilter: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              weaponsFilter,
+            },
+          }));
+        },
+        setTruncateCoreRules: (truncateCoreRules: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              truncateCoreRules,
+            },
+          }));
+        },
+        setListDisplaySetting: (listDisplaySetting: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              listDisplaySetting,
+            },
+          }));
+        },
+        getProcessedUnitList: () => {
+          const activeList = get().activeList;
+          if (activeList < 0) {
+            return [];
+          }
+
+          const units = get().getActiveList().units;
+
+          const listSort = get().settings.listSort;
+          const cardsGroup = get().settings.cardsGroup;
+
+          const sortByListSort = (a: ListUnit, b: ListUnit) => {
+            switch (listSort) {
+              case SortOptions.Name:
+                return a.name.localeCompare(b.name);
+              // TODO: This must be -1, I don't know why but this doesn't get caught in testing
+              case SortOptions.PasteOrder:
+                return 1;
+              case SortOptions.ReversePasteOrder:
+                return -1;
+            }
+          };
+
+          const groupedUnits = cardsGroup
+            ? units.reduce((acc: ListUnit[], curr: ListUnit) => {
+                const index = acc.findIndex((item) => {
+                  return (
+                    item.name === curr.name &&
+                    arraysEqual(item.enhancements, curr.enhancements) &&
+                    arraysEqual(item.weapons ?? [], curr.weapons ?? [])
+                  );
+                });
+                if (index !== -1) {
+                  acc[index].groupCount = (acc[index].groupCount || 1) + 1;
+                } else {
+                  acc.push({ ...curr, groupCount: 1 });
+                }
+                return acc;
+              }, [])
+            : units;
+
+          const sortedUnits = groupedUnits.toSorted(sortByListSort);
+
+          return sortedUnits;
+        },
+        getStratagemsByPhase: (phase) => {
+          const stratagemNames = new Set();
+
+          const storedList = get().getActiveList();
+
+          const faction = storedList.faction;
+          const detachment = storedList.detachment;
+
+          const stratagems = Stratagems.map((stratagem) => {
+            const [splitDetachment, splitType] = stratagem.type.split(" - ");
+            if (splitDetachment === "Core") {
+              return {
+                ...stratagem,
+                detachment: "Core",
+                type: splitType,
+              };
+            } else {
+              return {
+                ...stratagem,
+                type: splitType,
+              };
+            }
+          })
+            .filter(
+              (stratagem) =>
+                stratagem.faction_id === faction || stratagem.faction_id === ""
+            )
+            .filter((stratagem) => {
+              return (
+                stratagem.detachment === detachment ||
+                stratagem.detachment === "" ||
+                stratagem.detachment === "Core"
+              );
+            })
+            .filter((stratagem) => stratagem.phases.includes(phase))
+            .filter((stratagem) => {
+              if (stratagemNames.has(stratagem.name)) {
+                return false;
+              } else {
+                stratagemNames.add(stratagem.name);
+                return true;
+              }
+            });
+
+          return stratagems;
+        },
+        getStratagems: () => {
+          const stratagemNames = new Set();
+
+          const activeList = get().activeList;
+
+          if (activeList < 0) {
+            return [];
+          }
+
+          const storedList = get().getActiveList();
+
+          const faction = storedList.faction;
+          const detachment = storedList.detachment;
+
+          const stratagems = Stratagems.map((stratagem) => {
+            const [splitDetachment, splitType] = stratagem.type.split(" - ");
+            if (splitDetachment === "Core") {
+              return {
+                ...stratagem,
+                detachment: "Core",
+                type: splitType,
+              };
+            } else {
+              return {
+                ...stratagem,
+                type: splitType,
+              };
+            }
+          })
+            .filter(
+              (stratagem) =>
+                stratagem.faction_id === faction || stratagem.faction_id === ""
+            )
+            .filter((stratagem) => {
+              return (
+                stratagem.detachment === detachment ||
+                stratagem.detachment === "" ||
+                stratagem.detachment === "Core"
+              );
+            })
+            .filter((stratagem) => {
+              if (stratagemNames.has(stratagem.name)) {
+                return false;
+              } else {
+                stratagemNames.add(stratagem.name);
+                return true;
+              }
+            });
+
+          return stratagems;
+        },
+        getArmyAbilities: () => {
+          const faction = get().storedLists[get().activeList].faction;
+          const detachment = get().storedLists[get().activeList].detachment;
+
+          const filteredArmyAbilities = ArmyAbilities.filter(
+            (ability) => ability.faction_id === faction
+          ).map((x) => ({
+            ...x,
+            type: "Army",
+            datasheet_id: "",
+            line: "",
+            ability_id: "",
+            model: "",
+            parameter: "",
+          }));
+
+          const filteredDetachmentAbilities = DetachmentAbilities.filter(
+            (ability) =>
+              ability.faction_id === faction &&
+              ability.detachment === detachment
+          ).map((x) => ({
+            ...x,
+            type: "Detachment",
+            datasheet_id: "",
+            line: "",
+            ability_id: "",
+            model: "",
+            parameter: "",
+          }));
+
+          return [...filteredArmyAbilities, ...filteredDetachmentAbilities];
+        },
+        getListIndexByUUID(uuid) {
+          const index = get().storedLists.findIndex(
+            (list) => list.uuid === uuid
+          );
+          return index;
+        },
+      };
+    },
     {
       name: "army-storage",
       storage: createJSONStorage(() => sessionStorage),

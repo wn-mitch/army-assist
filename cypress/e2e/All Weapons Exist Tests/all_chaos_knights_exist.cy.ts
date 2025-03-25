@@ -2,7 +2,8 @@
 
 describe("Ensure all weapons listed in nr_chaos_knights are listed on either the Shooting or Fight phase pages", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_chaos_knights.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const shootingWeapons = [
@@ -50,7 +51,7 @@ describe("Ensure all weapons listed in nr_chaos_knights are listed on either the
   describe("Shooting phase weapons", () => {
     shootingWeapons.forEach(weapon => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Chaos Knights", weapon);
       });
     });
   });
@@ -58,7 +59,7 @@ describe("Ensure all weapons listed in nr_chaos_knights are listed on either the
   describe("Fight phase weapons", () => {
     fightWeapons.forEach(weapon => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Chaos Knights", weapon);
       });
     });
   });

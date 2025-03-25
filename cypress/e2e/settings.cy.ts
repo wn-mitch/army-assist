@@ -1,14 +1,17 @@
 /// <reference types="cypress" />
 
 describe("Settings Tests", () => {
+  beforeEach(() => {
+    cy.visit("/");
+    cy.get("#close-button").click();
+  })
+
   describe("Basic Functions", () => {
     it("should open the settings modal", () => {
-      cy.pasteListWithArgument("nr_fnf_tau.txt");
       cy.get("#settings-button").click();
       cy.contains("Settings").should("exist");
     });
     it("should close the settings modal with escape", () => {
-      cy.pasteListWithArgument("nr_fnf_tau.txt");
       cy.get("#settings-button").click();
       cy.get("body").type("{esc}");
       cy.contains("Settings").should("not.exist");
@@ -16,38 +19,44 @@ describe("Settings Tests", () => {
   });
   describe("Active Phases Tests", () => {
     it("should paste in the fnf tau list and toggle off charge phase", () => {
-      cy.pasteListWithArgument("nr_fnf_tau.txt");
+      cy.contains("2K Tau List").click();
       cy.contains("Fight");
+      cy.get("#reset-button").click();
       cy.get("#settings-button").click();
       cy.get(":nth-child(5) > .flex > .group > .appearance-none").click();
       cy.get(".mt-4 > .px-4").click();
+      cy.contains("2K Tau List").click();
       cy.contains("Fight").should("not.exist");
     });
   });
   describe("List Sort Order Tests", () => {
     it("should paste in the fnf tau list, see Breachers at the top, then toggle the option and see Farsight at the top", () => {
-      cy.pasteListWithArgument("nr_fnf_tau.txt");
+      cy.contains("FNF Tau").click();
       cy.get(".columns-1 > :nth-child(1)").contains("Breacher Team");
+      cy.get("#reset-button").click();
       cy.get("#settings-button").click();
       cy.get(
         ":nth-child(3) > .mt-2 > :nth-child(2) > .flex > .group > .appearance-none"
       ).click();
       cy.get(".mt-4 > .px-4").click();
+      cy.contains("2K Tau List").click();
       cy.get(".columns-1 > :nth-child(1)").contains("Commander Farsight");
     });
   });
   describe("Cards Collapse Tests", () => {
     it("Sees the card collapse button, then toggles the option and sees it disappear", () => {
-      cy.pasteListWithArgument("broadsides.txt");
+      cy.contains("Broadsides").click();
       cy.get(".group > :nth-child(1) > .justify-center").should(
         "have.length",
         1
       );
+      cy.get("#reset-button").click();
       cy.get("#settings-button").click();
       cy.get(
         ":nth-child(4) > .relative > .flex > .group > .appearance-none"
       ).click();
       cy.get(".mt-4 > .px-4").click();
+      cy.contains("Broadsides").click();
       cy.get(".group > :nth-child(1) > .justify-center").should(
         "have.length",
         0
@@ -56,22 +65,21 @@ describe("Settings Tests", () => {
   });
   describe("Grouping Tests", () => {
     it("should find 3x Broadsides", () => {
-      cy.pasteListWithArgument("broadsides.txt");
+      cy.contains("Broadsides").click();
       cy.contains("[3x]");
     });
 
     it("should find Broadside Battlesuits repeated 3x", () => {
-      cy.pasteListWithArgument("broadsides.txt");
       cy.get("#settings-button").click();
       cy.get(
         ":nth-child(5) > .relative > .flex > .group > .appearance-none"
       ).click();
       cy.get(".mt-4 > .px-4").click();
+      cy.contains("Broadsides").click();
       cy.get(".columns-1").children().should("have.length", 3);
     });
 
     it("should toggle then untoggle the option, then find Broadside Battlesuits repeated 3x", () => {
-      cy.pasteListWithArgument("broadsides.txt");
       cy.get("#settings-button").click();
       cy.get(
         ":nth-child(5) > .relative > .flex > .group > .appearance-none"
@@ -80,20 +88,23 @@ describe("Settings Tests", () => {
         ":nth-child(5) > .relative > .flex > .group > .appearance-none"
       ).click();
       cy.get(".mt-4 > .px-4").click();
+      cy.contains("Broadsides").click();
       cy.contains("[3x]");
     });
   });
   describe("Keyword Tests", () => {
     it("should show keywords by default, then remove them", () => {
-      cy.pasteListWithArgument("ancient_in_terminator_armor.txt");
+      cy.contains("Ancient in Terminator Armor").click();
       cy.contains(
         "Adeptus Astartes, Deathwing, Infantry, Imperium, Character, Terminator, Ancient"
       );
+      cy.get("#reset-button").click();
       cy.get("#settings-button").click();
       cy.get(
         ":nth-child(6) > .relative > .flex > .group > .appearance-none"
       ).click();
       cy.get(".mt-4 > .px-4").click();
+      cy.contains("Ancient in Terminator Armor").click();
       cy.contains(
         "Adeptus Astartes, Deathwing, Infantry, Imperium, Character, Terminator, Ancient"
       ).should("not.exist");
@@ -101,22 +112,39 @@ describe("Settings Tests", () => {
   });
   describe("Filter Weapons", () => {
     it("Should show only the pasted weapons, then toggle the option off and see all weapons", () => {
-      cy.pasteListWithArgument("ancient_in_terminator_armor.txt");
+      cy.contains("Ancient in Terminator Armor").click()
+      cy.get("#Fight-button").click();
+      cy.contains(new RegExp("Chainfist", "i")).should("not.exist");
+      cy.get("#reset-button").click();
       cy.get("#settings-button").click();
+      cy.get(':nth-child(7) > .relative > .flex > .group > .appearance-none').click();
+      cy.get(".mt-4 > .px-4").click();
+      cy.checkFightPhase("Ancient in Terminator Armor", "Chainfist");
+    });
+  });
+  describe("Truncate core rules test", () => {
+    it("should see the core rules, toggle the setting, then see them disappear", () => {
+      cy.contains("2K Tau List").click();
+      cy.get(':nth-child(7) > .gap-1 > :nth-child(2) > .ml-1 > .flex > .font-thin').contains("See Core Rules")
+      cy.get("#settings-button").click();
+      cy.get(
+        ":nth-child(8) > .relative > .flex > .group > .appearance-none"
+      ).click();
+      cy.get(".mt-4 > .px-4").click();
+      cy.get(':nth-child(7) > .gap-1 > :nth-child(2) > .ml-1 > .flex > .font-thin').contains("During deployment, if every model in a unit has this ability, then when you set it up, it can be set up anywhere on the battlefield that is more than 9\" horizontally away from the enemy deployment zone and all enemy models.")
     });
   });
   describe("Dark Mode Tests", () => {
     it("should be in dark mode by default, toggle to light mode, and then toggle back to dark mode", () => {
       cy.visit("/");
       cy.get("html").should("have.class", "dark");
-      cy.get("#close-button").click();
       cy.get("#settings-button").click();
       cy.get(
-        ":nth-child(8) > .relative > .flex > .group > .appearance-none"
+        ":nth-child(9) > .relative > .flex > .group > .appearance-none"
       ).click();
       cy.get("html").should("not.have.class", "dark");
       cy.get(
-        ":nth-child(8) > .relative > .flex > .group > .appearance-none"
+        ":nth-child(9) > .relative > .flex > .group > .appearance-none"
       ).click();
       cy.get("html").should("have.class", "dark");
     });

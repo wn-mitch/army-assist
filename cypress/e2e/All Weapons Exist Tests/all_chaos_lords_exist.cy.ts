@@ -1,13 +1,12 @@
 /// <reference types="cypress" />
 
-describe("Ensure all weapons listed in nr_chaos_knights are listed on either the Shooting or Fight phase pages", () => {
+describe("Ensure all weapons listed in enhancements are listed on either the Shooting or Fight phase pages", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("enhancements.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
-  const shootingWeapons = [
-    "Plasma Pistol"
-  ];
+  const shootingWeapons = ["Plasma Pistol"];
 
   const fightWeapons = [
     "Daemon hammer",
@@ -17,28 +16,26 @@ describe("Ensure all weapons listed in nr_chaos_knights are listed on either the
   ];
 
   describe("Shooting phase weapons", () => {
-    shootingWeapons.forEach(weapon => {
+    shootingWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Enhancements", weapon);
       });
     });
   });
 
   describe("Find Enhancement Abilities", () => {
     it("Should find Helm of All Seeing in the Movement phase", () => {
-      cy.get("#headlessui-radio-\\:rc\\:").click();
-      cy.contains(new RegExp("Helm of All-seeing", "i")).should("exist");
+      cy.checkMovementPhase("Enhancements", "Helm of All-seeing");
     });
     it("Should find Living Carapace in the Saves phase", () => {
-      cy.get("#headlessui-radio-\\:rg\\:").click();
-      cy.contains(new RegExp("Living Carapace", "i")).should("exist");
+      cy.checkSavesPhase("Enhancements", "Living Carapace");
     });
-  })
+  });
 
   describe("Fight phase weapons", () => {
-    fightWeapons.forEach(weapon => {
+    fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Enhancements", weapon);
       });
     });
   });

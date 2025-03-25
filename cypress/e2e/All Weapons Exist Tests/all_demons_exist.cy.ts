@@ -2,7 +2,8 @@
 
 describe("Verify all Chaos Daemons units and weapons exist", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_demons.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const shootingWeapons = [
@@ -90,10 +91,10 @@ describe("Verify all Chaos Daemons units and weapons exist", () => {
     "Warpsword",
   ];
 
-  describe("Shooting phase weapons", () => {
+    describe("Shooting phase weapons", () => {
     shootingWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Demons", weapon);
       });
     });
   });
@@ -101,7 +102,7 @@ describe("Verify all Chaos Daemons units and weapons exist", () => {
   describe("Fight phase weapons", () => {
     fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Demons", weapon);
       });
     });
   });

@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import {
-  ClipboardIcon,
   QuestionMarkCircleIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 import { FaDiscord, FaLinkedin, FaPatreon } from "react-icons/fa";
 import useStore from "@/store/store";
-import nrWorldEaters from "@/assets/lists/nr_tau.txt";
 
 function Instructions() {
   const [isOpen, setIsOpen] = useState(false);
-  const [text, setText] = useState("");
   const isFirstVisit = useStore((state) => state.isFirstVisit);
   const setFirstVisit = useStore((state) => state.setFirstVisit);
 
@@ -40,37 +37,8 @@ function Instructions() {
     };
   }, [isOpen]);
 
-  useEffect(() => {
-    const fetchText = async () => {
-      try {
-        const response = await fetch(nrWorldEaters);
-        const text = await response.text();
-        setText(text);
-      } catch (err) {
-        console.error("Failed to fetch text: ", err);
-      }
-    };
-
-    fetchText();
-  }, []);
-
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
-
-  const copySampleToClipboard = async () => {
-    try {
-      await navigator.clipboard
-        .write([
-          new ClipboardItem({
-            "text/plain": new Blob([text], { type: "text/plain" }),
-          }),
-        ])
-        .then(() => alert("Sample list copied to clipboard!"));
-    } catch (err) {
-      alert(`${err}`);
-      console.error("Failed to copy: ", err);
-    }
-  };
 
   const openLink = (url: string) => {
     window.open(url, "_blank", "noopener noreferrer");
@@ -87,7 +55,7 @@ function Instructions() {
         aria-label="Open Instructions Panel"
         id="instructions-button"
       >
-        <QuestionMarkCircleIcon className="h-6 w-6" />
+        <QuestionMarkCircleIcon className="h-8 w-8" />
       </button>
 
       <Dialog
@@ -106,7 +74,7 @@ function Instructions() {
               onPointerUp={handleClose}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 cursor-pointer"
             >
-              <XCircleIcon className="h-6 w-6" />
+              <XCircleIcon className="h-8 w-8" />
             </button>
             <DialogTitle className="text-lg font-bold text-center pb-1">
               Instructions
@@ -115,20 +83,7 @@ function Instructions() {
               <li>
                 Create a list on NewRecruit.eu. If you don't know what that is,
                 or just want to explore the site's features before deciding to
-                rebuild a list, you can click the button to copy a sample to
-                your clipboard
-                <button
-                  onTouchEnd={copySampleToClipboard}
-                  onClick={copySampleToClipboard}
-                  id="copy-sample-button"
-                  className={`${buttonClasses} bg-gray-600 hover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400 dark:hover:text-gray-800 shadow-md cursor-pointer`}
-                >
-                  <ClipboardIcon
-                    aria-hidden="true"
-                    className="-ml-0.5 h-5 w-5"
-                  />
-                  Copy Sample
-                </button>
+                rebuild a list, you can click the sample on the List Dashboard
               </li>
               <li>Click Export</li>
               <li>Click the "Text" Option</li>
@@ -155,6 +110,7 @@ function Instructions() {
             <div className="mt-4 flex w-full flex-col">
               <div className="flex flex-col lg:flex-row">
                 <button
+                  id="linkedin-link"
                   onTouchEnd={() =>
                     openLink("https://www.linkedin.com/in/will--mitch/")
                   }
@@ -167,6 +123,7 @@ function Instructions() {
                   Contact me on LinkedIn
                 </button>
                 <button
+                  id="patreon-link"
                   onTouchEnd={() => openLink("https://patreon.com/ArmyAssist")}
                   onClick={() => openLink("https://patreon.com/ArmyAssist")}
                   className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
@@ -175,6 +132,7 @@ function Instructions() {
                   Support me on Patreon
                 </button>
                 <button
+                  id="discord-link"
                   onTouchEnd={() => openLink("https://discord.gg/hVVtGuybhw")}
                   onClick={() => openLink("https://discord.gg/hVVtGuybhw")}
                   className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}

@@ -1,21 +1,19 @@
 import React from "react";
 import useStore from "@/store/store";
-import ListUnitCard from "./CardComponents/ListUnitCard";
-import ArmyRuleDisplay from "./ArmyRuleDisplay";
-import StratagemPanel from "./StratagemPanel";
-import ScrollToTopButton from "./ScrollToTopButton";
-import PhaseFilter from "./PhaseFilter";
+import ArmyRuleDisplay from "../ArmyDisplay/ArmyRuleDisplay";
+import StratagemPanel from "../ArmyDisplay/StratagemPanel";
+import ScrollToTopButton from "../ScrollToTopButton";
+import PhaseFilter from "../ArmyDisplay/PhaseFilter";
+import ListUnitCard from "../ArmyDisplay/UnitCardComponents/ListUnitCard";
 
 function ListDisplay() {
   const getProcessedUnits = useStore((state) => state.getProcessedUnitList);
   const processedUnits = getProcessedUnits();
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const sortSetting = useStore((state) => state.listSort);
+  const sortSetting = useStore((state) => state.settings.listSort);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const groupedSetting = useStore((state) => state.cardsGroup);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const units = useStore((state) => state.units);
+  const groupedSetting = useStore((state) => state.settings.cardsGroup);
 
   return (
     <div className="flex flex-col gap-2 w-full">

@@ -1,150 +1,144 @@
-Imperium - Astra Militarum - Tester - [15655pts]
+Imperium - Astra Militarum - Guard - [10260 pts]
 
-# ++ Army Roster ++ [15655pts]
+# ++ Army Roster ++ [10260 pts]
 ## Configuration
 Battle Size
-Detachment
+Detachment: Bridgehead Strike
 Show/Hide Options
 
-## Epic Hero [535pts]
-Gaunt’s Ghosts [110pts]:
-• 1x Ibram Gaunt: Bolt Pistol, Gaunt's Chainsword
-• 1x Tanith Ghost w/ Bragg's autocannon: Bragg's autocannon, Straight Silver Knife
-• 1x Tanith Ghost w/ Corbec's Hot-shot Lascarbine: Corbec's Hot-shot Lascarbine, Straight Silver Knife
-• 1x Tanith Ghost w/ Larkin's Long-las: Larkin's Long-las, Straight Silver Knife
-• 1x Tanith Ghost w/ Mkoll's Straight Silver Knife: Lascarbine, Mkoll's Straight Silver Knife
-• 1x Tanith Ghost w/ Rawne's Lascarbine: Rawne's Lascarbine, Straight Silver Knife
-Lord Solar Leontus [150pts]: Conquest, Konstantin's Hooves, Sol's Righteous Gaze, Warlord
-Nork Deddog [60pts]: Huge Knife, Ripper Gun
-Sly Marbo [65pts]: Envenomed Blade, Ripper Pistol
-Ursula Creed [55pts]: Duty and Vengeance, Power Weapon
+## Epic Hero [595 pts]
+Gaunt’s Ghosts [110 pts]:
+• 1x Ibram Gaunt: Bolt pistol, Gaunt's chainsword
+• 1x Tanith Ghost w/ Bragg's autocannon: Bragg's autocannon, Straight silver knife
+• 1x Tanith Ghost w/ Corbec's hot-shot lascarbine: Corbec's hot-shot lascarbine, Straight silver knife
+• 1x Tanith Ghost w/ Larkin's long-las: Larkin's long-las, Straight silver knife
+• 1x Tanith Ghost w/ Mkoll's Straight Silver Knife: Lascarbine, Mkoll's straight silver knife
+• 1x Tanith Ghost w/ Rawne's lascarbine: Rawne's lascarbine, Straight silver knife
+Lord Marshal Dreir [100 pts]: Laspistol, Sabre of Sacrifice, Savage claws
+Lord Solar Leontus [150 pts]: Conquest, Konstantin's hooves, Sol's Righteous Gaze, Warlord
+Nork Deddog [60 pts]: Huge knife, Ripper gun
+Sly Marbo [55 pts]: Envenomed blade, Ripper pistol
+Sly Marbo [55 pts]: Envenomed blade, Ripper pistol
+Ursula Creed [65 pts]: Duty and Vengeance, Power weapon
 
-## Character [815pts]
-Cadian Castellan [45pts]: Close Combat Weapon, Chainsword, Laspistol
-Cadian Command Squad [65pts]:
-• 1x Cadian Commander: Laspistol, Chainsword
-• 1x Veteran Guardsman w/ Chainsword: Close Combat Weapon, Laspistol, Chainsword
-• 1x Veteran Guardsman w/ Master Vox: Close Combat Weapon, Lasgun, Master Vox
-• 1x Veteran Guardsman w/ Medi-pack: Close Combat Weapon, Lasgun, Medi-pack
-• 1x Veteran Guardsman w/ Regimental Standard: Close Combat Weapon, Regimental Standard and Lasgun (Lasgun, Regimental Standard)
-Commissar [30pts]: Bolt Pistol, Chainsword
-Death Korps Marshal [60pts]: Power Weapon, Laspistol
-Death Rider Squadron Commander [60pts]: Death Rider hunting lance, Savage claws, Laspistol
-Militarum Tempestus Command Squad [70pts]:
-• 1x Tempestor Prime: Tempestus Dagger, Bolt Pistol
-• 4x Tempestus Scion: Close Combat Weapon, Hot-shot Lasgun
-Primaris Psyker [60pts]: Force Weapon, Laspistol, Psychic Maelstrom
+## Character [1045 pts]
+Cadian Castellan [55 pts]: Chainsword, Laspistol
+Cadian Command Squad [65 pts]:
+• 1x Cadian Commander: Chainsword, Laspistol
+• 1x Cadian Veteran Guardsman w/ Chainsword: Chainsword, Bolt pistol
+• 1x Cadian Veteran Guardsman w/ Master vox: Close combat weapon, Lasgun, Master vox
+• 1x Cadian Veteran Guardsman w/ Medi-pack: Close combat weapon, Lasgun, Medi-pack
+• 1x Cadian Veteran Guardsman w/ Regimental standard: Close combat weapon, Regimental standard and lasgun (Lasgun, Regimental standard)
+Catachan Command Squad [65 pts]:
+• 1x Catachan Commander: Close combat weapon, Laspistol
+• 4x Veteran Guardsman: Close combat weapon, Laspistol, Lasgun
+Commissar [30 pts]: Bolt pistol, Chainsword
+Krieg Command Squad [65 pts]:
+• 1x Lord Commissar: Laspistol, Power weapon
+• 1x Veteran Guardsman w/ Alchemyk counteragents: Alchemyk Counteragents, Close combat weapon, Laspistol, Servo-scribes
+• 1x Veteran Guardsman w/ Boltgun: Close combat weapon, Boltgun
+• 1x Veteran Guardsman w/ Chainsword: Chainsword, Laspistol
+• 1x Veteran Guardsman w/ Master vox: Close combat weapon, Lasgun, Master vox
+• 1x Veteran Guardsman w/ Regimental standard: Close combat weapon, Lasgun, Regimental standard
+Leman Russ Commander [235 pts]: Armoured tracks, Leman Russ battle cannon, Lascannon
+Militarum Tempestus Command Squad [85 pts]:
+• 1x Tempestor Prime: Tempestus dagger, Bolt pistol
+• 4x Tempestus Scion: Close combat weapon, Hot-shot lasgun
+Ministorum Priest [35 pts]: Zealot's vindicator
+Ogryn Bodyguard [40 pts]: Close combat weapon, Huge knife, Bullgryn maul
+Primaris Psyker [60 pts]: Force weapon, Laspistol, Psychic maelstrom
+Rogal Dorn Commander [265 pts]: Armoured tracks, Heavy stubber, Twin battle cannon, Castigator gatling cannon
+Tech-Priest Enginseer [45 pts]: Enginseer Axe, Mechanicus pistol, Servo-arm
 
-## Battleline [255pts]
-Cadian Shock Troops [65pts]: 1 Shock Trooper Sergeant and 9 Shock Troopers
-• 9x Shock Trooper: Close Combat Weapon, Lasgun
-• 1x Shock Trooper Sergeant: Laspistol and Chainsword (Chainsword, Laspistol)
-Catachan Jungle Fighters [65pts]: 1 Jungle Fighter Sergeant and 9 Jungle Fighters
-• 1x Jungle Fighter Sergeant: Close Combat Weapon, Laspistol
-• 9x Jungle Fighter: Close Combat Weapon, Lasgun
-Death Korps of Krieg [65pts]: 1 Death Korps Watchmaster and 9 Death Korps Troopers
-• 1x Death Korps Watchmaster: Chainsword, Laspistol
-• 9x Death Korps Trooper: Close Combat Weapon, Lasgun
+## Battleline [195 pts]
+Cadian Shock Troops [65 pts]: 1 Shock Trooper Sergeant and 9 Shock Troopers
+• 1x Shock Trooper Sergeant: Laspistol and chainsword (Chainsword, Laspistol)
+• 9x Shock Trooper: Close combat weapon, Lasgun
+Catachan Jungle Fighters [65 pts]: 1 Jungle Fighter Sergeant and 9 Jungle Fighters
+• 1x Jungle Fighter Sergeant: Close combat weapon, Laspistol
+• 9x Jungle Fighter: Close combat weapon, Lasgun
+Death Korps of Krieg [65 pts]: 1 Death Korps Watchmaster and 9 Death Korps Troopers
+• 1x Death Korps Watchmaster: Laspistol and chainsword (Chainsword, Bolt pistol)
+• 9x Death Korps Trooper: Close combat weapon, Lasgun
 
-## Infantry [1235pts]
-Bullgryn Squad [110pts]: Close Combat Weapon
-• 1x Bullgryn Bone 'ead: Grenadier Gauntlet, Slabshield
-• 2x Bullgryn: Close Combat Weapon, Grenadier Gauntlet, Slabshield
-Earthshaker Carriage Battery [120pts]: Battery close combat weapons, Earthshaker cannon
-Field Ordnance Battery [100pts]:
-• 2x Ordnance Teams: Battery Close Combat Weapons, Lasgun, Laspistol, Mallus Rocket Launcher
-Kasrkin [110pts]:
-• 1x Kasrkin Sergeant: Chainsword, Hot-shot Laspistol
-• 9x Kasrkin Trooper: Close Combat Weapon, Hot-shot Lasgun
-Medusa Carriage Battery [125pts]: Battery close combat weapons, Medusa siege cannon
-Ogryn Bodyguard [40pts]: Close combat weapon, Huge Knife, Bullgryn Maul
-Ogryn Squad [60pts]:
-• 2x Ogryn: Ripper Gun
-• 1x Ogryn Bone 'ead: Ripper Gun
-Ogryn Squad [60pts]:
-• 2x Ogryn: Ripper Gun
-• 1x Ogryn Bone 'ead: Ripper Gun
-Rapier Laser Destroyer Battery [35pts]:
-• 1x Rapier Laser Destroyer [35pts]: Close Combat Weapon, Laser destroyer
-Ratling Snipers [60pts]:
-• 5x Ratling Snipers: Close Combat Weapon, Sniper rifle
-Ratlings [60pts]:
+## Infantry [1000 pts]
+Artillery Team [95 pts]: Crew close combat weapons, Lasgun, Heavy mortar
+Bullgryn Squad [110 pts]:
+• 1x Bullgryn Bone 'ead: Close combat weapon, Bullgryn maul, Brute shield
+• 2x Bullgryn: Close combat weapon, Grenadier gauntlet, Slabshield
+Cadian Heavy Weapons Squad [65 pts]:
+• 3x Heavy Weapons Team w/ Heavy bolter: Heavy bolter, Laspistol, Weapons team close combat weapons
+Catachan Heavy Weapons Squad [65 pts]:
+• 3x Heavy Weapons Team w/ Heavy bolter: Heavy bolter, Lasgun, Weapons team close combat weapons
+Field Ordnance Battery [110 pts]:
+• 2x Ordnance Team w/ Malleus rocket launcher: Battery close combat weapons, Lasgun, Laspistol, Malleus rocket launcher
+Kasrkin [110 pts]:
+• 1x Kasrkin Sergeant: Chainsword, Hot-shot laspistol
+• 9x Kasrkin Trooper: Close combat weapon, Hot-shot lasgun
+Krieg Combat Engineers [70 pts]:
+• 1x Krieg Engineer Watchmaster: Autopistol, Trench club
+• 4x Krieg Combat Engineer: Autopistol, Trench club
+Krieg Heavy Weapons Squad [75 pts]:
+• 1x Fire Coordinator: Close combat weapon, Laspistol
+• 3x Heavy Weapons Gunners w/ Lascannon: Close combat weapon, Lascannon, Laspistol
+Ogryn Squad [60 pts]:
+• 1x Ogryn Bone 'ead: Ripper gun
+• 2x Ogryn: Ripper gun
+Ratlings [60 pts]:
 • 5x Ratlings: Close combat weapon, Sniper rifle
-Tempestus Aquilons [110pts]:
-• 1x Tempestor Aquilon: Close Combat Weapon, Hot-shot lascarbine, Sentry flamer
-• 9x Tempestus Aquilon: Close Combat Weapon, Hot-shot lascarbine
-Tempestus Scions [60pts]:
-• 1x Tempestor: Chainsword, Hot-shot Laspistol
-• 4x Tempestus Scion: Close Combat Weapon, Hot-shot Lasgun
+Tempestus Aquilons [110 pts]:
+• 1x Tempestor Aquilon: Close combat weapon, Hot-shot lascarbine, Sentry flamer
+• 9x Tempestus Aquilon: Close combat weapon, Hot-shot lascarbine
+Tempestus Scions [70 pts]:
+• 1x Tempestor: Chainsword, Hot-shot laspistol
+• 4x Tempestus Scion: Close combat weapon, Hot-shot lasgun
 
+## Mounted [130 pts]
+Attilan Rough Riders [60 pts]:
+• 1x Rough Rider Sergeant: Lasgun, Laspistol, Steed's hooves, Hunting lance
+• 4x Rough Rider w/ Hunting lance: Hunting lance, Lasgun, Laspistol, Steed's hooves
+Death Riders [70 pts]:
+• 1x Ridemaster: Death Rider lascarbine, Frag lance, Power sabre, Steed's savage claws
+• 4x Death Rider: Death Rider lascarbine, Frag lance, Power sabre, Steed's savage claws
 
-## Mounted [130pts]
-Attilan Rough Riders [60pts]:
-• 4x Attilan Rough Rider w/ Hunting Lance: Hunting Lance, Lasgun, Laspistol, Steed's Hooves
-• 1x Rough Rider Sergeant: Lasgun, Laspistol, Steed's Hooves, Hunting Lance
-Death Rider Squadron [70pts]:
-• 1x Ridemaster: Death Rider hunting lance, Savage claws, Laspistol
-• 4x Death Rider: Death Rider hunting lance, Laspistol, Savage claws
+## Vehicle [6910 pts]
+Armoured Sentinels [65 pts]:
+• 1x Armoured Sentinel [65 pts]: Close combat weapon, Multi-laser
+Armoured Sentinels [65 pts]:
+• 1x Armoured Sentinel [65 pts]: Close combat weapon, Multi-laser
+Avenger Strike Fighter [130 pts]: Armoured hull, Avenger bolt cannon, Heavy stubber, 2x Lascannon
+Baneblade [480 pts]: Armoured tracks, Baneblade cannon, Coaxial autocannon, Demolisher cannon, Heavy stubber, 2x Lascannon, Twin heavy bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Banehammer [450 pts]: Armoured tracks, 2x Lascannon, Tremor cannon, Twin heavy bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Banesword [480 pts]: Armoured tracks, 2x Lascannon, Quake cannon, Twin heavy bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Banesword [480 pts]: Armoured tracks, 2x Lascannon, Quake cannon, Twin heavy bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Basilisk [140 pts]: Armoured tracks, Earthshaker cannon, Heavy bolter
+Cyclops Demolition Vehicle [25 pts]
+Deathstrike [145 pts]: Armoured tracks, Deathstrike Missile, Heavy bolter
+Doomhammer [445 pts]: Armoured tracks, 2x Lascannon, Magma cannon, Twin heavy bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Hellhammer [450 pts]: Armoured tracks, Coaxial autocannon, Demolisher cannon, Heavy stubber, Hellhammer cannon, 2x Lascannon, Twin heavy bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Hellhound [125 pts]: Inferno cannon, Heavy flamer, Armoured tracks
+Hydra [95 pts]: Armoured tracks, Hydra autocannon, Heavy bolter
+Leman Russ Battle Tank [175 pts]: Armoured tracks, Leman Russ battle cannon, Lascannon
+Leman Russ Demolisher [190 pts]: Armoured tracks, Demolisher battle cannon, Lascannon
+Leman Russ Eradicator [170 pts]: Armoured tracks, Eradicator nova cannon, Lascannon
+Leman Russ Executioner [170 pts]: Armoured tracks, Executioner plasma cannon, Lascannon
+Leman Russ Exterminator [180 pts]: Armoured tracks, Exterminator autocannon, Lascannon
+Leman Russ Punisher [150 pts]: Armoured tracks, Punisher gatling cannon, Lascannon
+Leman Russ Vanquisher [145 pts]: Armoured tracks, Vanquisher battle cannon, Lascannon
+Manticore [165 pts]: Armoured tracks, Storm eagle rockets, Heavy bolter
+Rogal Dorn Battle Tank [240 pts]: Armoured tracks, Heavy stubber, Twin battle cannon, Castigator gatling cannon
+Scout Sentinels [55 pts]:
+• 1x Scout Sentinel [55 pts]: Close combat weapon, Multi-laser
+Shadowsword [440 pts]: Armoured tracks, 2x Lascannon, Twin heavy bolter, Volcano cannon, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Stormlord [460 pts]: Armoured tracks, 2x Heavy stubber, 2x Lascannon, Twin heavy bolter, Vulcan mega-bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Stormsword [495 pts]: Armoured tracks, 2x Lascannon, Stormsword siege cannon, Twin heavy bolter, 2 Twin Heavy Bolters (2x Twin heavy bolter)
+Valkyrie [190 pts]: Armoured hull, Hellstrike missiles, Multi-laser
+Wyvern [110 pts]: Armoured tracks, Wyvern quad stormshard mortar, Heavy bolter
 
-## Vehicle [12300pts]
-Armoured Sentinels [65pts]:
-• 1x Armoured Sentinel [65pts]: Close Combat Weapon, Militarum Multi-laser
-Armoured Sentinels [65pts]:
-• 1x Armoured Sentinel [65pts]: Close Combat Weapon, Militarum Multi-laser
-Avenger Strike Fighter [130pts]: Armoured hull, Avenger bolt cannon, Heavy stubber, 2x Lascannon
-Baneblade [480pts]: Baneblade Cannon, Co-axial Autocannon, Demolisher Cannon, Heavy stubber, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Banehammer [450pts]: Tremor Cannon, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Banesword [480pts]: Quake Cannon, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Basilisk [140pts]: Armoured Tracks, Earthshaker Cannon, Heavy bolter
-Carnodon [160pts]: Armoured Tracks, Carnodon twin autocannon, Two autocannons (2x Autocannon)
-Colossus [160pts]: Armoured Tracks, Colossus siege mortar
-Crassus [180pts]: Armoured Tracks, 4x Heavy bolter
-Cyclops Demolition Vehicle [25pts]
-Deathstrike [145pts]: Armoured Tracks, Deathstrike Missile, Heavy bolter
-Doomhammer [455pts]: Magma Cannon, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Hades Breaching Drill [110pts]: Melta-cutter drill
-Hellhammer [450pts]: Co-axial Autocannon, Demolisher Cannon, Heavy stubber, Hellhammer Cannon, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Hellhound [125pts]: Armoured Tracks, Heavy Flamer, Inferno Cannon
-Hydra [85pts]: Armoured Tracks, Hydra Autocannon, Heavy bolter
-Leman Russ Battle Tank [170pts]: Leman Russ Battle Cannon, Armoured Tracks, Lascannon
-Leman Russ Demolisher [200pts]: Demolisher Battle Cannon, Armoured Tracks, Lascannon
-Leman Russ Eradicator [150pts]: Eradicator Nova Cannon, Armoured Tracks, Lascannon
-Leman Russ Executioner [170pts]: Executioner Plasma Cannon, Armoured Tracks, Lascannon
-Leman Russ Exterminator [170pts]: Exterminator Autocannon, Armoured Tracks, Lascannon
-Leman Russ Punisher [150pts]: Punisher Gatling Cannon, Armoured Tracks, Lascannon
-Leman Russ Vanquisher [145pts]: Vanquisher Battle Cannon, Armoured Tracks, Lascannon
-Macharius [310pts]: Armoured Tracks, Macharius twin battlecannon, Twin Heavy Stubber, Two heavy stubbers (2x Heavy stubber)
-Macharius Vanquisher [285pts]: Armoured Tracks, Macharius twin vanquisher cannon, Twin Heavy Stubber, Two heavy stubbers (2x Heavy stubber)
-Macharius Vulcan [310pts]: Armoured Tracks, Macharius vulcan mega-bolter, Twin Heavy Stubber, Two heavy stubbers (2x Heavy stubber)
-Malcador [250pts]: Armoured Tracks, Malcador battle cannon, Heavy bolter, Two autocannons (2x Autocannon)
-Malcador Annihilator [270pts]: Armoured Tracks, Demolisher cannon, Malcador twin lascannon, Two autocannons (2x Autocannon)
-Malcador Defender [310pts]: Armoured Tracks, Demolisher cannon, 5x Heavy bolter, Two heavy bolters (2x Heavy bolter)
-Malcador Infernus [235pts]: Armoured Tracks, Inferno gun, Two heavy bolters (2x Heavy bolter)
-Manticore [175pts]: Armoured Tracks, Storm Eagle Rockets, Heavy bolter
-Marauder Bomber [345pts]: Armoured hull, 2x Heavy bolter, 2x Lascannon, Heavy bombs
-Marauder Destroyer [375pts]: Armoured hull, 2x Assault cannon, 2x Heavy bolter, Marauder nose autocannons
-Praetor [275pts]: Armoured tracks, 2x Heavy bolter, Praetor launcher
-Rogal Dorn Battle Tank [240pts]: Armoured tracks, Heavy stubber, Castigator Gatling Cannon, Twin Battle Cannons
-Scout Sentinels [55pts]:
-• 1x Scout Sentinel [55pts]: Close Combat Weapon, Militarum Multi-laser
-Shadowsword [440pts]: Volcano Cannon, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Stormblade [415pts]: Stormblade plasma blastgun, Armoured Tracks, 2x Lascannon, 2 Twin Heavy Bolters (2x Twin Heavy Bolter)
-Stormlord [460pts]: 2x Heavy stubber, Vulcan Mega-bolter, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Stormsword [495pts]: Stormsword Siege Cannon, Armoured Tracks, 2x Lascannon, Twin Heavy Bolter, 2 Twin Heavy Flamers (2x Twin Heavy Flamer)
-Tarantula Battery [40pts]:
-• 1x Tarantula w/ twin heavy bolter [40pts]: Close Combat Weapon, Twin heavy bolter
-Thunderbolt Heavy Fighter [200pts]: Armoured hull, 2x Lascannon, Thunderbolt nose autocannons
-Trojan Support Vehicle [80pts]: Armoured Tracks, Heavy bolter
-Valdor [285pts]: Armoured Tracks, Valdor neutron laser, Autocannon
-Valkyrie [190pts]: Hellstrike Missiles, Militarum Multi-laser
-Voss-pattern Lightning [130pts]: Armoured hull, 2x Lascannon
-Vulture Gunship [225pts]: Armoured hull, Heavy bolter, Two rocket pods and hellstrike rack (2x Multiple rocket pods, Vulture hellstrike rack)
-Wyvern [110pts]: Armoured Tracks, Wyvern Quad Stormshard Mortar, Heavy bolter
+## Dedicated Transport [240 pts]
+Chimera [85 pts]: Armoured tracks, Lasgun array, Multi-laser, Heavy bolter
+Taurox [65 pts]: Armoured tracks, Twin autocannon
+Taurox Prime [90 pts]: Armoured tracks, Taurox battle cannon, Twin Taurox hot-shot volley gun
 
-## Dedicated Transport [240pts]
-Chimera [85pts]: Armoured Tracks, Lasgun Array, Chimera Multi-laser, Heavy bolter
-Taurox [65pts]: Armoured Tracks, Twin Autocannon
-Taurox Prime [90pts]: Armoured Tracks, Taurox Battle Cannon, Twin Taurox Hot-Shot Volley Gun
-
-## Fortification [145pts]
-Aegis Defence Line [145pts]
+## Fortification [145 pts]
+Aegis Defence Line [145 pts]

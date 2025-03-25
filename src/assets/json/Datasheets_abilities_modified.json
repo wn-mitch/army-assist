@@ -33658,6 +33658,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Charge",
             "Fight"
         ]

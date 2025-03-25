@@ -13,7 +13,7 @@ const ScrollToTopButton = () => {
       aria-label="Scroll to the top of the page"
       id="scroll-to-top-button"
     >
-      <ArrowUpIcon className="h-6 w-6" />
+      <ArrowUpIcon className="p-1 h-8 w-8" />
     </button>
   );
 };

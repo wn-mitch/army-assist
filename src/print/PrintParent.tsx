@@ -1,6 +1,10 @@
+import React from "react";
+
 import ListUnit from "@/types/ListUnit";
 import Phase from "@/types/Phase";
-import React from "react";
+import PrintSettings from "@/types/PrintSettings";
+import PhaseOption from "@/types/PhaseOption";
+
 import PhaseStratagemSection from "./PhaseStratagemSection";
 import CommandSection from "./CommandSection";
 import ShootingSection from "./ShootingSection";
@@ -8,13 +12,17 @@ import MovementSection from "./MovementSection";
 import SavesSection from "./SavesSection";
 import ChargeSection from "./ChargeSection";
 import FightSection from "./FightSection";
-import PrintSettings from "@/types/PrintSettings";
-import PhaseOption from "@/types/PhaseOption";
 import CollectiveStratagemSection from "./CollectiveStratagemSection";
-import useStore from "@/store/store";
 import ArmyDetachmentRuleSection from "./ArmyDetachmentRuleSection";
 
-const PrintParent = (processedUnits: ListUnit[], settings: PrintSettings) => {
+import useStore from "@/store/store";
+import { qrCode } from "@/utils/ListHelper";
+
+const PrintParent = (
+  text: string,
+  processedUnits: ListUnit[],
+  settings: PrintSettings
+) => {
   const marginTop = "5mm";
   const marginRight = "5mm";
   const marginBottom = "5mm";
@@ -33,6 +41,8 @@ const PrintParent = (processedUnits: ListUnit[], settings: PrintSettings) => {
 
   const getArmyAbilities = useStore((state) => state.getArmyAbilities);
   const armyAbilities = getArmyAbilities();
+
+  const qr = qrCode(text);
 
   const phaseSection = (
     phase: Phase,
@@ -79,6 +89,8 @@ const PrintParent = (processedUnits: ListUnit[], settings: PrintSettings) => {
 
       {(settings.contentOptionSetting.Units ||
         (!settings.contentOptionSetting.Units &&
+          (settings.contentOptionSetting.Stratagems ||
+            settings.contentOptionSetting.ArmyAbilities) &&
           settings.phaseOptionSetting === PhaseOption.Split)) && (
         <>
           {phaseSection(Phase.Command, CommandSection, settings)}
@@ -103,6 +115,12 @@ const PrintParent = (processedUnits: ListUnit[], settings: PrintSettings) => {
       {settings.contentOptionSetting.ArmyAbilities && (
         <div className="break-inside-avoid">
           {ArmyDetachmentRuleSection(armyAbilities)}
+        </div>
+      )}
+
+      {settings.contentOptionSetting.QR && (
+        <div className="break-inside-avoid flex justify-center items-center">
+          <div className="max-w-[200mm] max-h-[200mm] w-full h-full">{qr}</div>
         </div>
       )}
     </div>

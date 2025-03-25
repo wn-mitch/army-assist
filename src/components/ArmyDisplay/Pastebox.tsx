@@ -1,5 +1,5 @@
+import useStore from "@/store/store";
 import React from "react";
-import useStore from "../store/store";
 
 export default function Pastebox() {
   const [text, setText] = React.useState("");
@@ -11,7 +11,7 @@ export default function Pastebox() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const result = store.parseText(text);
+    const result = store.parseText(text, "");
 
     if(!result) {
       window.alert("Error: Invalid List Format. Use the NR format (NewRecruit.eu). If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!");

@@ -8,9 +8,9 @@
   │ Browser:        Electron 130 (headless)                                                        │
   │ Node Version:   v18.19.1 (/usr/bin/node)                                                       │
   │ Specs:          30 found (cards_collapse.cy.ts, changelog.cy.ts, detachment_rules.cy.ts, instr │
-  │                 uctions.cy.ts, invalid_list.cy.ts, list_display.cy.ts, name_specific.cy.ts, pa │
-  │                 ge_open.cy.ts, phase_filter.cy.ts, printing.cy.ts, reset_button.cy.ts, resize_ │
-  │                 window.cy.ts, scroll_to...)                                                    │
+  │                 uctions.cy.ts, invalid_list.cy.ts, list_card_tests.cy.ts, list_table_tests.cy. │
+  │                 ts, name_specific.cy.ts, page_open.cy.ts, phase_filter.cy.ts, printing.cy.ts,  │
+  │                 reset_button.cy.ts, res...)                                                    │
   │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
   │ Experiments:    experimentalRunAllSpecs=true                                                   │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -22,14 +22,14 @@
 
 
   Cards collapse spec
-    ✓ Toggles one item (2759ms)
-    ✓ Untoggles one item (2324ms)
-    ✓ Toggles one item and changes phase, then sees the item toggle back (2441ms)
-    ✓ Toggles one item and clicks the same phase, then sees the item remain toggled (2314ms)
-    ✓ Toggles two items and changes phase, then sees the items toggle back (2455ms)
+    ✓ Toggles one item (932ms)
+    ✓ Untoggles one item (573ms)
+    ✓ Toggles one item and changes phase, then sees the item toggle back (562ms)
+    ✓ Toggles one item and clicks the same phase, then sees the item toggled (527ms)
+    ✓ Toggles two items and changes phase, then sees the items toggle back (704ms)
 
 
-  5 passing (13s)
+  5 passing (4s)
 
 
   (Results)
@@ -42,7 +42,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     12 seconds                                                                       │
+  │ Duration:     3 seconds                                                                        │
   │ Spec Ran:     cards_collapse.cy.ts                                                             │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -53,8 +53,8 @@
 
 
   Changelog Test
-    ✓ should open the changelog, check an entry, and close the changelog (898ms)
-    ✓ should close the changelog modal with escape (473ms)
+    ✓ should open the changelog, check an entry, and close the changelog (779ms)
+    ✓ should close the changelog modal with escape (461ms)
 
 
   2 passing (2s)
@@ -81,43 +81,28 @@
 
 
   Detachment rules test
-    ✓ should paste in the fnf tau list then ensure the detachment and army rule are visible (2277ms)
-    ✓ should paste in the csm list then ensure the wrong army rules are not visible (2394ms)
-    1) should paste in the deathwatch list and not see SM army rules
-    ✓ should paste in the shield host list and see the detachment rules (724ms)
+    ✓ should paste in the fnf tau list then ensure the detachment and army rule are visible (936ms)
+    ✓ should paste in the csm list then ensure the wrong army rules are not visible (710ms)
+    ✓ should paste in the deathwatch list and see SM army rules (381ms)
+    ✓ should paste in the shield host list and see the detachment rules (409ms)
 
 
-  3 passing (11s)
-  1 failing
-
-  1) Detachment rules test
-       should paste in the deathwatch list and not see SM army rules:
-     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'No Army or Detachment Rule in Phase' but never did.
-      at Context.eval (webpack://army-assist/./cypress/e2e/detachment_rules.cy.ts:35:0)
-
-
+  4 passing (3s)
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
   │ Tests:        4                                                                                │
-  │ Passing:      3                                                                                │
-  │ Failing:      1                                                                                │
+  │ Passing:      4                                                                                │
+  │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
-  │ Screenshots:  1                                                                                │
+  │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     11 seconds                                                                       │
+  │ Duration:     2 seconds                                                                        │
   │ Spec Ran:     detachment_rules.cy.ts                                                           │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-  (Screenshots)
-
-  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/detachment_rules.c     (1280x720)
-     y.ts/Detachment rules test -- should paste in the deathwatch list and not see SM               
-      army rules (failed).png                                                                       
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -126,25 +111,27 @@
 
 
   Instructions Modal Test
-    ✓ should open the instructions modal (830ms)
-    ✓ should close the instructions modal with escape (432ms)
-    ✓ should click the copy sample to clipboard button, see the alert, then paste it into the pastebox successfully (268ms)
+    ✓ should open the instructions modal (681ms)
+    ✓ should close the instructions modal with escape (441ms)
+    ✓ should open the patreon link (387ms)
+    ✓ should open the discord link (392ms)
+    ✓ should open the linkedin link (664ms)
 
 
-  3 passing (2s)
+  5 passing (3s)
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        3                                                                                │
-  │ Passing:      3                                                                                │
+  │ Tests:        5                                                                                │
+  │ Passing:      5                                                                                │
   │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     2 seconds                                                                        │
+  │ Duration:     3 seconds                                                                        │
   │ Spec Ran:     instructions.cy.ts                                                               │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -155,87 +142,9 @@
 
 
   Invalid list submission to verify the presence of the error
-    ✓ Enter the text asdf, hits enter and sees the alert (929ms)
-    ✓ Enter the text asdf, hits enter, clears the alert, and the text is cleared (471ms)
-
-
-  2 passing (2s)
-
-
-  (Results)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        2                                                                                │
-  │ Passing:      2                                                                                │
-  │ Failing:      0                                                                                │
-  │ Pending:      0                                                                                │
-  │ Skipped:      0                                                                                │
-  │ Screenshots:  0                                                                                │
-  │ Video:        false                                                                            │
-  │ Duration:     1 second                                                                         │
-  │ Spec Ran:     invalid_list.cy.ts                                                               │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
-  Running:  list_display.cy.ts                                                             (6 of 30)
-
-
-  Display the army list split into units
-    ✓ should see a list of units for the nr_aa.txt list (13769ms)
-    ✓ should see a list of units for the nr_admech.txt list (3267ms)
-    ✓ should see a list of units for the nr_aeldari.txt list (4922ms)
-    ✓ should see a list of units for the nr_chaos_knights.txt list (2007ms)
-    ✓ should see a list of units for the nr_csm.txt list (12146ms)
-    ✓ should see a list of units for the nr_cults.txt list (1862ms)
-    ✓ should see a list of units for the nr_custodes.txt list (12522ms)
-    ✓ should see a list of units for the nr_dark_angels.txt list (1495ms)
-    ✓ should see a list of units for the nr_death_guard.txt list (9956ms)
-    ✓ should see a list of units for the nr_guard.txt list (9345ms)
-    ✓ should see a list of units for the nr_guard_2.txt list (2845ms)
-    ✓ should see a list of units for the nr_knights.txt list (2223ms)
-    ✓ should see a list of units for the nr_necrons.txt list (3600ms)
-    ✓ should see a list of units for the nr_orks.txt list (5877ms)
-    ✓ should see a list of units for the nr_sisters.txt list (8696ms)
-    ✓ should see a list of units for the nr_tau.txt list (2876ms)
-    ✓ should see a list of units for the nr_fnf_tau.txt list (1160ms)
-    ✓ should see a list of units for the nr_tsons.txt list (2052ms)
-    ✓ should see a list of units for the nr_tyranids.txt list (1234ms)
-    ✓ should see a list of units for the nr_ultramarines.txt list (24146ms)
-    ✓ should see a list of units for the nr_votann.txt list (1249ms)
-    ✓ should see a list of units for the nr_world_eaters.txt list (1308ms)
-    ✓ should see a list of units for the nr_ynnari.txt list (1184ms)
-
-
-  23 passing (2m)
-
-
-  (Results)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        23                                                                               │
-  │ Passing:      23                                                                               │
-  │ Failing:      0                                                                                │
-  │ Pending:      0                                                                                │
-  │ Skipped:      0                                                                                │
-  │ Screenshots:  0                                                                                │
-  │ Video:        false                                                                            │
-  │ Duration:     2 minutes, 11 seconds                                                            │
-  │ Spec Ran:     list_display.cy.ts                                                               │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
-  Running:  name_specific.cy.ts                                                            (7 of 30)
-
-
-  Verify that the name specific overrides are working
-    Name Specific Unit Overrides
-      ✓ should find Ancient in Terminator Armour (890ms)
-      ✓ should find Wraithblade Weapons (623ms)
-      ✓ should find Piranhas (559ms)
+    ✓ Enter the text asdf, hits enter and sees the alerts (984ms)
+    ✓ Enter the text asdf, hits enter, clears the alert, and the text is cleared (629ms)
+    ✓ Attempts to open an invalid list (332ms)
 
 
   3 passing (2s)
@@ -252,20 +161,127 @@
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
   │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     invalid_list.cy.ts                                                               │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  list_card_tests.cy.ts                                                          (6 of 30)
+
+
+  List Card Tests
+    ✓ should open a list (851ms)
+    ✓ should delete a list and show an alert (511ms)
+    Renaming Tests
+      ✓ should rename a list (965ms)
+    QR Code Tests
+      ✓ should navigate to a shared list link (535ms)
+      ✓ should open the list qr code share screen successfully (468ms)
+      ✓ should open the list qr code share screen and see the error message (421ms)
+      ✓ should close the list qr code share screen using the button (604ms)
+    Refresh Tests
+      ✓ should refresh a list (473ms)
+      ✓ should refresh a list without a name (789ms)
+
+
+  9 passing (6s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        9                                                                                │
+  │ Passing:      9                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     6 seconds                                                                        │
+  │ Spec Ran:     list_card_tests.cy.ts                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  list_table_tests.cy.ts                                                         (7 of 30)
+
+
+  List Table Tests
+    ✓ should open a list (748ms)
+    ✓ should delete a list and show an alert (421ms)
+    ✓ should sort the table (246ms)
+    Renaming Tests
+      ✓ should rename a list (873ms)
+    QR Code Tests
+      ✓ should navigate to a shared list link (522ms)
+      ✓ should open the list qr code share screen successfully (387ms)
+      ✓ should open the list qr code share screen and see the error message (325ms)
+      ✓ should close the list qr code share screen using the button (500ms)
+    Refresh Tests
+      ✓ should refresh a list (350ms)
+      ✓ should refresh a list without a name (718ms)
+
+
+  10 passing (6s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        10                                                                               │
+  │ Passing:      10                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     5 seconds                                                                        │
+  │ Spec Ran:     list_table_tests.cy.ts                                                           │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  name_specific.cy.ts                                                            (8 of 30)
+
+
+  Verify that the name specific overrides are working
+    Name Specific Unit Overrides
+      ✓ should find Ancient in Terminator Armour (696ms)
+      ✓ should find Wraithblade Weapons (493ms)
+      ✓ should find Piranhas (339ms)
+
+
+  3 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        3                                                                                │
+  │ Passing:      3                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 second                                                                         │
   │ Spec Ran:     name_specific.cy.ts                                                              │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  page_open.cy.ts                                                                (8 of 30)
+  Running:  page_open.cy.ts                                                                (9 of 30)
 
 
   Does the site even open?
-    ✓ visits the home page (398ms)
+    ✓ visits the home page (454ms)
 
 
-  1 passing (691ms)
+  1 passing (869ms)
 
 
   (Results)
@@ -285,19 +301,19 @@
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  phase_filter.cy.ts                                                             (9 of 30)
+  Running:  phase_filter.cy.ts                                                            (10 of 30)
 
 
   The Phase Filter should adjust the visible stats
-    ✓ selects Command phase and sees the leadership characteristics (1101ms)
-    ✓ selects Movement phase and sees the movement characteristics (785ms)
-    ✓ selects Shooting phase and sees the ranged weapon characteristics (782ms)
-    ✓ selects Charge phase and sees the charge tracker (713ms)
-    ✓ selects Fight phase and sees the melee weapon characteristics (757ms)
-    ✓ selects Saves phase and sees the save characteristics (857ms)
+    ✓ selects Command phase and sees the leadership characteristics (857ms)
+    ✓ selects Movement phase and sees the movement characteristics (499ms)
+    ✓ selects Shooting phase and sees the ranged weapon characteristics (527ms)
+    ✓ selects Charge phase and sees the charge tracker (484ms)
+    ✓ selects Fight phase and sees the melee weapon characteristics (578ms)
+    ✓ selects Saves phase and sees the save characteristics (542ms)
 
 
-  6 passing (6s)
+  6 passing (4s)
 
 
   (Results)
@@ -310,23 +326,23 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     5 seconds                                                                        │
+  │ Duration:     4 seconds                                                                        │
   │ Spec Ran:     phase_filter.cy.ts                                                               │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  printing.cy.ts                                                                (10 of 30)
+  Running:  printing.cy.ts                                                                (11 of 30)
 
 
   Printing Modal Test
-    ✓ should open the printing modal (1848ms)
-    ✓ should close the print pages modal with escape (1400ms)
-    ✓ should paste in the tau list then toggle all options without crashing (1647ms)
+    ✓ should open the printing modal (949ms)
+    ✓ should close the print pages modal with escape (724ms)
+    ✓ should open the tau list then toggle all options without crashing (1190ms)
 
 
-  3 passing (5s)
+  3 passing (3s)
 
 
   (Results)
@@ -339,75 +355,116 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     5 seconds                                                                        │
+  │ Duration:     3 seconds                                                                        │
   │ Spec Ran:     printing.cy.ts                                                                   │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  reset_button.cy.ts                                                            (11 of 30)
+  Running:  reset_button.cy.ts                                                            (12 of 30)
 
 
   Reset Button Test
-    ✓ should paste in a list, submit it, then reset back to the pastebox (1657ms)
+    ✓ should select a list, submit it, then reset back to the pastebox (1905ms)
+    ✓ should click add a list, then reset back to the pastebox and see the list disappear (505ms)
 
 
-  1 passing (2s)
+  2 passing (3s)
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        1                                                                                │
-  │ Passing:      1                                                                                │
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
   │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     1 second                                                                         │
+  │ Duration:     2 seconds                                                                        │
   │ Spec Ran:     reset_button.cy.ts                                                               │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  resize_window.cy.ts                                                           (12 of 30)
+  Running:  resize_window.cy.ts                                                           (13 of 30)
 
 
   Resize window test
-    ✓ should paste in the fnf tau list then do some window resizing at various breakpoints (2950ms)
+    1) should navigate to the fnf tau list then do some window resizing at various breakpoints
+    ✓ should navigate to the table list and do some window resizing at various breakpoints (5655ms)
 
 
-  1 passing (4s)
+  1 passing (15s)
+  1 failing
+
+  1) Resize window test
+       should navigate to the fnf tau list then do some window resizing at various breakpoints:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `#collapsed-phases`, but never found it.
+      at Context.eval (webpack://army-assist/./cypress/e2e/resize_window.cy.ts:19:0)
+
+
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        1                                                                                │
+  │ Tests:        2                                                                                │
   │ Passing:      1                                                                                │
-  │ Failing:      0                                                                                │
+  │ Failing:      1                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
-  │ Screenshots:  0                                                                                │
+  │ Screenshots:  13                                                                               │
   │ Video:        false                                                                            │
-  │ Duration:     4 seconds                                                                        │
+  │ Duration:     14 seconds                                                                       │
   │ Spec Ran:     resize_window.cy.ts                                                              │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
+  (Screenshots)
+
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (375x5285)
+     s/tau-list-iphone-portrait.png                                                                 
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (667x3709)
+     s/tau-list-iphone-portrait (1).png                                                             
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (768x3541)
+     s/tau-list-ipad-portrait.png                                                                   
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t    (1024x2160)
+     s/tau-list-ipad-landscape.png                                                                  
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (1280x720)
+     s/Resize window test -- should navigate to the fnf tau list then do some window                
+     resizing at various breakpoints (failed).png                                                   
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (375x1685)
+     s/table-list-iphone-portrait.png                                                               
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (667x1377)
+     s/table-list-iphone-landscape.png                                                              
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (768x1377)
+     s/table-list-ipad-portrait.png                                                                 
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t    (1024x1393)
+     s/table-list-iphone-landscape (1).png                                                          
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t    (1280x1701)
+     s/table-list-macbook-portrait.png                                                              
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (800x1685)
+     s/table-list-macbook-landscape.png                                                             
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t    (1280x1393)
+     s/table-list-macbook-16-portrait.png                                                           
+  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/resize_window.cy.t     (960x1685)
+     s/table-list-macbook-16-landscape.png                                                          
+
+
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  scroll_to_top_button.cy.ts                                                    (13 of 30)
+  Running:  scroll_to_top_button.cy.ts                                                    (14 of 30)
 
 
   Scroll to Top Button
-    ✓ should scroll to the bottom of the screen, hit the button, then be at the top of the screen (1635ms)
+    ✓ should scroll to the bottom of the screen, hit the button, then be at the top of the screen (854ms)
 
 
-  1 passing (2s)
+  1 passing (1s)
 
 
   (Results)
@@ -427,14 +484,90 @@
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  session_storage.cy.ts                                                         (14 of 30)
+  Running:  settings.cy.ts                                                                (15 of 30)
 
 
-  Session Storage Test
-    ✓ should check the session storage for a JSON value (1494ms)
+  Settings Tests
+    Basic Functions
+      ✓ should open the settings modal (733ms)
+      ✓ should close the settings modal with escape (480ms)
+    Active Phases Tests
+      ✓ should paste in the fnf tau list and toggle off charge phase (880ms)
+    List Sort Order Tests
+      ✓ should paste in the fnf tau list, see Breachers at the top, then toggle the option and see Farsight at the top (948ms)
+    Cards Collapse Tests
+      ✓ Sees the card collapse button, then toggles the option and sees it disappear (816ms)
+    Grouping Tests
+      ✓ should find 3x Broadsides (340ms)
+      ✓ should find Broadside Battlesuits repeated 3x (591ms)
+      ✓ should toggle then untoggle the option, then find Broadside Battlesuits repeated 3x (675ms)
+    Keyword Tests
+      ✓ should show keywords by default, then remove them (878ms)
+    Filter Weapons
+      ✓ Should show only the pasted weapons, then toggle the option off and see all weapons (1037ms)
+    Truncate core rules test
+      ✓ should see the core rules, toggle the setting, then see them disappear (706ms)
+    Dark Mode Tests
+      ✓ should be in dark mode by default, toggle to light mode, and then toggle back to dark mode (643ms)
 
 
-  1 passing (2s)
+  12 passing (10s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        12                                                                               │
+  │ Passing:      12                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     9 seconds                                                                        │
+  │ Spec Ran:     settings.cy.ts                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  stratagem_panel.cy.ts                                                         (16 of 30)
+
+
+  Stratagems modal tests
+    ✓ should open the stratagem flyout, close it with escape, change phase, then see new stratagems (4125ms)
+    ✓ should click closed the stratagem flyout using the opaque section (616ms)
+    ✓ should click closed the stratagem flyout using the X (10292ms)
+
+
+  3 passing (15s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        3                                                                                │
+  │ Passing:      3                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     15 seconds                                                                       │
+  │ Spec Ran:     stratagem_panel.cy.ts                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  weapon_counts.cy.ts                                                           (17 of 30)
+
+
+  Weapon Counts Test
+    ✓ should see the correct weapon counts in the shooting phase (936ms)
+
+
+  1 passing (1s)
 
 
   (Results)
@@ -448,122 +581,8 @@
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
   │ Duration:     1 second                                                                         │
-  │ Spec Ran:     session_storage.cy.ts                                                            │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
-  Running:  settings.cy.ts                                                                (15 of 30)
-
-
-  Settings Tests
-    Basic Functions
-      ✓ should open the settings modal (1611ms)
-      ✓ should close the settings modal with escape (1264ms)
-    Active Phases Tests
-      ✓ should paste in the fnf tau list and toggle off charge phase (1278ms)
-    List Sort Order Tests
-      ✓ should paste in the fnf tau list, see Breachers at the top, then toggle the option and see Farsight at the top (1366ms)
-    Cards Collapse Tests
-      ✓ Sees the card collapse button, then toggles the option and sees it disappear (890ms)
-    Grouping Tests
-      ✓ should find 3x Broadsides (631ms)
-      ✓ should find Broadside Battlesuits repeated 3x (847ms)
-      ✓ should toggle then untoggle the option, then find Broadside Battlesuits repeated 3x (933ms)
-    Keyword Tests
-      ✓ should show keywords by default, then remove them (773ms)
-    Filter Weapons
-      ✓ Should show only the pasted weapons, then toggle the option off and see all weapons (655ms)
-    Dark Mode Tests
-      ✓ should be in dark mode by default, toggle to light mode, and then toggle back to dark mode (426ms)
-
-
-  11 passing (11s)
-
-
-  (Results)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        11                                                                               │
-  │ Passing:      11                                                                               │
-  │ Failing:      0                                                                                │
-  │ Pending:      0                                                                                │
-  │ Skipped:      0                                                                                │
-  │ Screenshots:  0                                                                                │
-  │ Video:        false                                                                            │
-  │ Duration:     11 seconds                                                                       │
-  │ Spec Ran:     settings.cy.ts                                                                   │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
-  Running:  stratagem_panel.cy.ts                                                         (16 of 30)
-
-
-  Stratagems modal tests
-    ✓ should open the stratagem flyout, close it with escape, change phase, then see new stratagems (4167ms)
-
-
-  1 passing (4s)
-
-
-  (Results)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        1                                                                                │
-  │ Passing:      1                                                                                │
-  │ Failing:      0                                                                                │
-  │ Pending:      0                                                                                │
-  │ Skipped:      0                                                                                │
-  │ Screenshots:  0                                                                                │
-  │ Video:        false                                                                            │
-  │ Duration:     4 seconds                                                                        │
-  │ Spec Ran:     stratagem_panel.cy.ts                                                            │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
-  Running:  weapon_counts.cy.ts                                                           (17 of 30)
-
-
-  Printing Modal Test
-    1) should see the correct weapon counts in the shooting phase
-
-
-  0 passing (6s)
-  1 failing
-
-  1) Printing Modal Test
-       should see the correct weapon counts in the shooting phase:
-     AssertionError: Timed out retrying after 4000ms: Expected to find content: '1' within the element: <td.text-sm.text-gray-900.dark:text-gray-100.w-1/12.dark:font-semibold> but never did.
-      at Context.eval (webpack://army-assist/./cypress/e2e/weapon_counts.cy.ts:10:0)
-
-
-
-
-  (Results)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        1                                                                                │
-  │ Passing:      0                                                                                │
-  │ Failing:      1                                                                                │
-  │ Pending:      0                                                                                │
-  │ Skipped:      0                                                                                │
-  │ Screenshots:  1                                                                                │
-  │ Video:        false                                                                            │
-  │ Duration:     5 seconds                                                                        │
   │ Spec Ran:     weapon_counts.cy.ts                                                              │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-  (Screenshots)
-
-  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/weapon_counts.cy.t     (1280x720)
-     s/Printing Modal Test -- should see the correct weapon counts in the shooting ph               
-     ase (failed).png                                                                               
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -573,47 +592,47 @@
 
   Verify all Adeptus Astartes units and weapons exist
     Shooting phase weapons
-      ✓ should find Heavy Onslaught Gatling Cannon in the Shooting phase (14502ms)
-      ✓ should find Twin Ironhail Heavy Stubber in the Shooting phase (12346ms)
-      ✓ should find Hammerstrike Missile Launcher in the Shooting phase (12852ms)
-      ✓ should find Krakstorm Grenade Launcher in the Shooting phase (11793ms)
-      ✓ should find Melta Destroyer in the Shooting phase (11347ms)
-      ✓ should find Stormfury Missiles in the Shooting phase (11904ms)
-      ✓ should find Thunderstrike Las-talon in the Shooting phase (11330ms)
-      ✓ should find Twin Icarus Rocket Pod in the Shooting phase (11149ms)
-      ✓ should find Twin Assault Cannon in the Shooting phase (11290ms)
-      ✓ should find Las-talon in the Shooting phase (11393ms)
-      ✓ should find Skyhammer Missile Launcher in the Shooting phase (11232ms)
-      ✓ should find Stormstrike missile launcher in the Shooting phase (11206ms)
-      ✓ should find Typhoon Missile Launcher in the Shooting phase (11151ms)
-      ✓ should find Twin Heavy Bolter in the Shooting phase (11366ms)
-      ✓ should find Thunderhawk heavy cannon in the Shooting phase (11511ms)
-      ✓ should find Demolisher Cannon in the Shooting phase (11090ms)
-      ✓ should find Whirlwind Vengeance Launcher in the Shooting phase (11233ms)
-      ✓ should find Hammerfall Missile Launcher in the Shooting phase (11405ms)
-      ✓ should find Hammerfall Heavy Bolter Array in the Shooting phase (11227ms)
+      ✓ should find Heavy Onslaught Gatling Cannon in the Shooting phase (1273ms)
+      ✓ should find Twin Ironhail Heavy Stubber in the Shooting phase (879ms)
+      ✓ should find Hammerstrike Missile Launcher in the Shooting phase (928ms)
+      ✓ should find Krakstorm Grenade Launcher in the Shooting phase (883ms)
+      ✓ should find Melta Destroyer in the Shooting phase (893ms)
+      ✓ should find Stormfury Missiles in the Shooting phase (854ms)
+      ✓ should find Thunderstrike Las-talon in the Shooting phase (807ms)
+      ✓ should find Twin Icarus Rocket Pod in the Shooting phase (734ms)
+      ✓ should find Twin Assault Cannon in the Shooting phase (834ms)
+      ✓ should find Las-talon in the Shooting phase (809ms)
+      ✓ should find Skyhammer Missile Launcher in the Shooting phase (2275ms)
+      ✓ should find Stormstrike missile launcher in the Shooting phase (900ms)
+      ✓ should find Typhoon Missile Launcher in the Shooting phase (743ms)
+      ✓ should find Twin Heavy Bolter in the Shooting phase (791ms)
+      ✓ should find Thunderhawk heavy cannon in the Shooting phase (843ms)
+      ✓ should find Demolisher Cannon in the Shooting phase (795ms)
+      ✓ should find Whirlwind Vengeance Launcher in the Shooting phase (753ms)
+      ✓ should find Hammerfall Missile Launcher in the Shooting phase (727ms)
+      ✓ should find Hammerfall Heavy Bolter Array in the Shooting phase (728ms)
     Fight phase weapons
-      ✓ should find Close Combat Weapon in the Fight phase (11243ms)
-      ✓ should find Brutalis Fists in the Fight phase (11269ms)
-      ✓ should find Armoured Hull in the Fight phase (11126ms)
-      ✓ should find Armoured Tracks in the Fight phase (11000ms)
-      ✓ should find Redemptor Fist in the Fight phase (11459ms)
-      ✓ should find Invictor Fist in the Fight phase (11102ms)
-      ✓ should find Thunder Hammer in the Fight phase (10956ms)
-      ✓ should find Power Fist in the Fight phase (11080ms)
-      ✓ should find Siege Drills in the Fight phase (11078ms)
-      ✓ should find Centurion Fists in the Fight phase (11065ms)
-      ✓ should find Combat Knife in the Fight phase (10986ms)
-      ✓ should find Astartes Chainsword in the Fight phase (11050ms)
-      ✓ should find Master-crafted Power Weapon in the Fight phase (11171ms)
-      ✓ should find Power Weapon in the Fight phase (11091ms)
-      ✓ should find Relic Weapon in the Fight phase (11184ms)
-      ✓ should find Executioner Relic Blade in the Fight phase (11166ms)
-      ✓ should find Omnissian Power Axe in the Fight phase (11471ms)
-      ✓ should find Servo-arm in the Fight phase (11132ms)
+      ✓ should find Close Combat Weapon in the Fight phase (683ms)
+      ✓ should find Brutalis Fists in the Fight phase (651ms)
+      ✓ should find Armoured Hull in the Fight phase (770ms)
+      ✓ should find Armoured Tracks in the Fight phase (707ms)
+      ✓ should find Redemptor Fist in the Fight phase (699ms)
+      ✓ should find Invictor Fist in the Fight phase (631ms)
+      ✓ should find Thunder Hammer in the Fight phase (633ms)
+      ✓ should find Power Fist in the Fight phase (663ms)
+      ✓ should find Siege Drills in the Fight phase (636ms)
+      ✓ should find Centurion Fists in the Fight phase (628ms)
+      ✓ should find Combat Knife in the Fight phase (614ms)
+      ✓ should find Astartes Chainsword in the Fight phase (666ms)
+      ✓ should find Master-crafted Power Weapon in the Fight phase (701ms)
+      ✓ should find Power Weapon in the Fight phase (822ms)
+      ✓ should find Relic Weapon in the Fight phase (641ms)
+      ✓ should find Executioner Relic Blade in the Fight phase (647ms)
+      ✓ should find Omnissian Power Axe in the Fight phase (760ms)
+      ✓ should find Servo-arm in the Fight phase (629ms)
 
 
-  37 passing (7m)
+  37 passing (32s)
 
 
   (Results)
@@ -626,7 +645,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     7 minutes, 5 seconds                                                             │
+  │ Duration:     31 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_adeptus_astartes_exist.cy.ts                         │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -638,54 +657,54 @@
 
   Ensure all weapons listed in nr_admech are listed on either the Shooting or Fight phase pages
     Shooting phase weapons
-      ✓ should find Radium carbine in the Shooting phase (3474ms)
-      ✓ should find Galvanic rifle in the Shooting phase (2995ms)
-      ✓ should find Transuranic arquebus in the Shooting phase (3002ms)
-      ✓ should find Arc rifle in the Shooting phase (2939ms)
-      ✓ should find Heavy phosphor blaster in the Shooting phase (2848ms)
-      ✓ should find Cognis heavy stubber in the Shooting phase (2901ms)
-      ✓ should find Cognis lascannon in the Shooting phase (2898ms)
-      ✓ should find Eradication beamer in the Shooting phase (2900ms)
-      ✓ should find Twin cognis autocannon in the Shooting phase (2792ms)
-      ✓ should find Phosphor blaster in the Shooting phase (2956ms)
-      ✓ should find Phosphor torch in the Shooting phase (2873ms)
-      ✓ should find Flechette blaster in the Shooting phase (2945ms)
-      ✓ should find Mechanicus pistol in the Shooting phase (2925ms)
-      ✓ should find Volkite blaster in the Shooting phase (2896ms)
-      ✓ should find Heavy arc rifle in the Shooting phase (2836ms)
-      ✓ should find Heavy grav-cannon in the Shooting phase (2908ms)
-      ✓ should find Macrostubber in the Shooting phase (2862ms)
-      ✓ should find Sulphur breath in the Shooting phase (2879ms)
-      ✓ should find Phosphor serpenta in the Shooting phase (2921ms)
-      ✓ should find Disruptor missile launcher in the Shooting phase (2872ms)
-      ✓ should find Belleros energy cannon in the Shooting phase (2848ms)
-      ✓ should find Incendine combustor in the Shooting phase (2895ms)
-      ✓ should find Magnarail lance in the Shooting phase (2891ms)
+      ✓ should find Radium carbine in the Shooting phase (945ms)
+      ✓ should find Galvanic rifle in the Shooting phase (632ms)
+      ✓ should find Transuranic arquebus in the Shooting phase (519ms)
+      ✓ should find Arc rifle in the Shooting phase (608ms)
+      ✓ should find Heavy phosphor blaster in the Shooting phase (600ms)
+      ✓ should find Cognis heavy stubber in the Shooting phase (540ms)
+      ✓ should find Cognis lascannon in the Shooting phase (537ms)
+      ✓ should find Eradication beamer in the Shooting phase (559ms)
+      ✓ should find Twin cognis autocannon in the Shooting phase (572ms)
+      ✓ should find Phosphor blaster in the Shooting phase (563ms)
+      ✓ should find Phosphor torch in the Shooting phase (603ms)
+      ✓ should find Flechette blaster in the Shooting phase (569ms)
+      ✓ should find Mechanicus pistol in the Shooting phase (523ms)
+      ✓ should find Volkite blaster in the Shooting phase (517ms)
+      ✓ should find Heavy arc rifle in the Shooting phase (505ms)
+      ✓ should find Heavy grav-cannon in the Shooting phase (515ms)
+      ✓ should find Macrostubber in the Shooting phase (537ms)
+      ✓ should find Sulphur breath in the Shooting phase (523ms)
+      ✓ should find Phosphor serpenta in the Shooting phase (538ms)
+      ✓ should find Disruptor missile launcher in the Shooting phase (595ms)
+      ✓ should find Belleros energy cannon in the Shooting phase (594ms)
+      ✓ should find Incendine combustor in the Shooting phase (561ms)
+      ✓ should find Magnarail lance in the Shooting phase (483ms)
     Fight phase weapons
-      ✓ should find Power fist in the Fight phase (2852ms)
-      ✓ should find Arc maul in the Fight phase (2841ms)
-      ✓ should find Radium Jezzail in the Fight phase (2905ms)
-      ✓ should find Sydonian Feet in the Fight phase (2768ms)
-      ✓ should find Control stave in the Fight phase (2822ms)
-      ✓ should find Taser goad in the Fight phase (2813ms)
-      ✓ should find Omnissian axe in the Fight phase (2848ms)
-      ✓ should find Servo-arc claw in the Fight phase (2871ms)
-      ✓ should find Electrostatic gauntlets in the Fight phase (2802ms)
-      ✓ should find Mechadendrite hive in the Fight phase (2834ms)
-      ✓ should find Arc scourge in the Fight phase (2895ms)
-      ✓ should find Cawl's Omnissian axe in the Fight phase (2816ms)
-      ✓ should find Close combat weapon in the Fight phase (2897ms)
-      ✓ should find Electroleech stave in the Fight phase (2788ms)
-      ✓ should find Pteraxii talons in the Fight phase (2852ms)
-      ✓ should find Cavalry sabre and clawed limbs in the Fight phase (2833ms)
-      ✓ should find Twin Kastelan fist in the Fight phase (2869ms)
-      ✓ should find Ironstrider feet in the Fight phase (2838ms)
-      ✓ should find Transonic razor and chordclaw in the Fight phase (2838ms)
-      ✓ should find Clawed limbs in the Fight phase (2822ms)
-      ✓ should find Taser lance in the Fight phase (2793ms)
+      ✓ should find Power fist in the Fight phase (495ms)
+      ✓ should find Arc maul in the Fight phase (505ms)
+      ✓ should find Radium Jezzail in the Fight phase (492ms)
+      ✓ should find Sydonian Feet in the Fight phase (486ms)
+      ✓ should find Control stave in the Fight phase (499ms)
+      ✓ should find Taser goad in the Fight phase (495ms)
+      ✓ should find Omnissian axe in the Fight phase (488ms)
+      ✓ should find Servo-arc claw in the Fight phase (525ms)
+      ✓ should find Electrostatic gauntlets in the Fight phase (516ms)
+      ✓ should find Mechadendrite hive in the Fight phase (513ms)
+      ✓ should find Arc scourge in the Fight phase (515ms)
+      ✓ should find Cawl's Omnissian axe in the Fight phase (516ms)
+      ✓ should find Close combat weapon in the Fight phase (535ms)
+      ✓ should find Electroleech stave in the Fight phase (530ms)
+      ✓ should find Pteraxii talons in the Fight phase (590ms)
+      ✓ should find Cavalry sabre and clawed limbs in the Fight phase (517ms)
+      ✓ should find Twin Kastelan fist in the Fight phase (501ms)
+      ✓ should find Ironstrider feet in the Fight phase (507ms)
+      ✓ should find Transonic razor and chordclaw in the Fight phase (591ms)
+      ✓ should find Clawed limbs in the Fight phase (573ms)
+      ✓ should find Taser lance in the Fight phase (481ms)
 
 
-  44 passing (2m)
+  44 passing (27s)
 
 
   (Results)
@@ -698,7 +717,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     2 minutes, 10 seconds                                                            │
+  │ Duration:     26 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_admech_exist.cy.ts                                   │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -710,68 +729,68 @@
 
   Verify all Aeldari units and weapons exist
     Shooting phase weapons
-      ✓ should find Shuriken Pistol in the Shooting phase (4679ms)
-      ✓ should find Shuriken Catapult in the Shooting phase (4218ms)
-      ✓ should find Scatter Laser in the Shooting phase (4144ms)
-      ✓ should find Dragon Fusion Gun in the Shooting phase (4117ms)
-      ✓ should find Firepike in the Shooting phase (4191ms)
-      ✓ should find Death spinner in the Shooting phase (4129ms)
-      ✓ should find Voidstorm missile launcher in the Shooting phase (4165ms)
-      ✓ should find Cloudburst missile launcher in the Shooting phase (4204ms)
-      ✓ should find Shuriken Cannon in the Shooting phase (4143ms)
-      ✓ should find Starcannon in the Shooting phase (4106ms)
-      ✓ should find Reaper Launcher in the Shooting phase (4198ms)
-      ✓ should find Long rifle in the Shooting phase (4484ms)
-      ✓ should find D-cannon in the Shooting phase (4419ms)
-      ✓ should find Shadow weaver in the Shooting phase (4230ms)
-      ✓ should find Vibro Cannon in the Shooting phase (4192ms)
-      ✓ should find Wraithcannon in the Shooting phase (4186ms)
-      ✓ should find Pulse Laser in the Shooting phase (4155ms)
-      ✓ should find Prism Cannon in the Shooting phase (4072ms)
-      ✓ should find Heavy D-Scythe in the Shooting phase (4081ms)
-      ✓ should find Doomweaver in the Shooting phase (4126ms)
-      ✓ should find Voidweaver Haywire Cannon in the Shooting phase (4195ms)
-      ✓ should find Splinter Cannon in the Shooting phase (4148ms)
-      ✓ should find Twin Splinter Rifle in the Shooting phase (4191ms)
-      ✓ should find Brood Twain in the Shooting phase (4142ms)
-      ✓ should find Fury of the Tempest in the Shooting phase (4276ms)
-      ✓ should find Destructor in the Shooting phase (4227ms)
-      ✓ should find Star Bolas in the Shooting phase (4218ms)
-      ✓ should find Searsong in the Shooting phase (4225ms)
-      ✓ should find Silent Death in the Shooting phase (4105ms)
+      ✓ should find Shuriken Pistol in the Shooting phase (1079ms)
+      ✓ should find Shuriken Catapult in the Shooting phase (749ms)
+      ✓ should find Scatter Laser in the Shooting phase (749ms)
+      ✓ should find Dragon Fusion Gun in the Shooting phase (719ms)
+      ✓ should find Firepike in the Shooting phase (674ms)
+      ✓ should find Death spinner in the Shooting phase (665ms)
+      ✓ should find Voidstorm missile launcher in the Shooting phase (691ms)
+      ✓ should find Cloudburst missile launcher in the Shooting phase (713ms)
+      ✓ should find Shuriken Cannon in the Shooting phase (681ms)
+      ✓ should find Starcannon in the Shooting phase (635ms)
+      ✓ should find Reaper Launcher in the Shooting phase (608ms)
+      ✓ should find Long rifle in the Shooting phase (654ms)
+      ✓ should find D-cannon in the Shooting phase (732ms)
+      ✓ should find Shadow weaver in the Shooting phase (761ms)
+      ✓ should find Vibro Cannon in the Shooting phase (1728ms)
+      ✓ should find Wraithcannon in the Shooting phase (569ms)
+      ✓ should find Pulse Laser in the Shooting phase (637ms)
+      ✓ should find Prism Cannon in the Shooting phase (602ms)
+      ✓ should find Heavy D-Scythe in the Shooting phase (614ms)
+      ✓ should find Doomweaver in the Shooting phase (746ms)
+      ✓ should find Voidweaver Haywire Cannon in the Shooting phase (659ms)
+      ✓ should find Splinter Cannon in the Shooting phase (624ms)
+      ✓ should find Twin Splinter Rifle in the Shooting phase (596ms)
+      ✓ should find Brood Twain in the Shooting phase (598ms)
+      ✓ should find Fury of the Tempest in the Shooting phase (720ms)
+      ✓ should find Destructor in the Shooting phase (802ms)
+      ✓ should find Star Bolas in the Shooting phase (666ms)
+      ✓ should find Searsong in the Shooting phase (638ms)
+      ✓ should find Silent Death in the Shooting phase (606ms)
     Fight phase weapons
-      ✓ should find Witchblade in the Fight phase (4214ms)
-      ✓ should find Witch Staff in the Fight phase (4171ms)
-      ✓ should find Close Combat Weapon in the Fight phase (4121ms)
-      ✓ should find Wraithbone Fists in the Fight phase (4078ms)
-      ✓ should find Wraithbone Hull in the Fight phase (4115ms)
-      ✓ should find Bloody Twins in the Fight phase (4126ms)
-      ✓ should find Sword of Asur in the Fight phase (4129ms)
-      ✓ should find Wailing Doom in the Fight phase (4087ms)
-      ✓ should find Shining Blade in the Fight phase (4115ms)
-      ✓ should find Staff of Ulthamar in the Fight phase (4100ms)
-      ✓ should find Fire Axe in the Fight phase (4228ms)
-      ✓ should find Blade of Destruction in the Fight phase (4135ms)
-      ✓ should find Spider's Fangs in the Fight phase (4158ms)
-      ✓ should find Weaverender in the Fight phase (4062ms)
-      ✓ should find Maugetar in the Fight phase (4167ms)
-      ✓ should find Solitaire Weapons in the Fight phase (4117ms)
-      ✓ should find Star Glaive in the Fight phase (4086ms)
-      ✓ should find Jester's Blade in the Fight phase (4081ms)
-      ✓ should find Miststave in the Fight phase (4112ms)
-      ✓ should find Harlequin's Special Weapon in the Fight phase (4153ms)
-      ✓ should find Power sword in the Fight phase (4026ms)
-      ✓ should find Banshee Blade in the Fight phase (3986ms)
-      ✓ should find Scorpion chainsword in the Fight phase (4061ms)
-      ✓ should find Harlequin's Blade in the Fight phase (4122ms)
-      ✓ should find Ghostswords in the Fight phase (4090ms)
-      ✓ should find Titanic Ghostglaive in the Fight phase (4120ms)
-      ✓ should find Ghostspear in the Fight phase (4116ms)
-      ✓ should find Laser Lance in the Fight phase (4256ms)
-      ✓ should find Bladevanes in the Fight phase (4165ms)
+      ✓ should find Witchblade in the Fight phase (572ms)
+      ✓ should find Witch Staff in the Fight phase (574ms)
+      ✓ should find Close Combat Weapon in the Fight phase (716ms)
+      ✓ should find Wraithbone Fists in the Fight phase (600ms)
+      ✓ should find Wraithbone Hull in the Fight phase (581ms)
+      ✓ should find Bloody Twins in the Fight phase (514ms)
+      ✓ should find Sword of Asur in the Fight phase (582ms)
+      ✓ should find Wailing Doom in the Fight phase (635ms)
+      ✓ should find Shining Blade in the Fight phase (559ms)
+      ✓ should find Staff of Ulthamar in the Fight phase (563ms)
+      ✓ should find Fire Axe in the Fight phase (593ms)
+      ✓ should find Blade of Destruction in the Fight phase (587ms)
+      ✓ should find Spider's Fangs in the Fight phase (613ms)
+      ✓ should find Weaverender in the Fight phase (630ms)
+      ✓ should find Maugetar in the Fight phase (691ms)
+      ✓ should find Solitaire Weapons in the Fight phase (674ms)
+      ✓ should find Star Glaive in the Fight phase (635ms)
+      ✓ should find Jester's Blade in the Fight phase (523ms)
+      ✓ should find Miststave in the Fight phase (554ms)
+      ✓ should find Harlequin's Special Weapon in the Fight phase (641ms)
+      ✓ should find Power sword in the Fight phase (575ms)
+      ✓ should find Banshee Blade in the Fight phase (569ms)
+      ✓ should find Scorpion chainsword in the Fight phase (580ms)
+      ✓ should find Harlequin's Blade in the Fight phase (559ms)
+      ✓ should find Ghostswords in the Fight phase (579ms)
+      ✓ should find Titanic Ghostglaive in the Fight phase (622ms)
+      ✓ should find Ghostspear in the Fight phase (583ms)
+      ✓ should find Laser Lance in the Fight phase (601ms)
+      ✓ should find Bladevanes in the Fight phase (628ms)
 
 
-  58 passing (4m)
+  58 passing (42s)
 
 
   (Results)
@@ -784,7 +803,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     4 minutes, 6 seconds                                                             │
+  │ Duration:     41 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_aeldari_exist.cy.ts                                  │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -796,79 +815,61 @@
 
   Ensure all weapons listed in nr_chaos_knights are listed on either the Shooting or Fight phase pages
     Shooting phase weapons
-      ✓ should find Acheron flame cannon in the Shooting phase (2396ms)
-      ✓ should find Atrapos lascutter in the Shooting phase (1920ms)
-      ✓ should find Graviton singularity cannon in the Shooting phase (1962ms)
-      ✓ should find Castigator bolt cannon in the Shooting phase (1851ms)
-      ✓ should find Lightning cannon in the Shooting phase (1790ms)
-      ✓ should find Phased plasma-fusil in the Shooting phase (1785ms)
-      ✓ should find Graviton crusher in the Shooting phase (1829ms)
-      ✓ should find Volkite chierovile in the Shooting phase (1865ms)
-      ✓ should find Desecrator laser destructor in the Shooting phase (1744ms)
-      ✓ should find Diabolus heavy stubber in the Shooting phase (1780ms)
-      ✓ should find Volkite combustor in the Shooting phase (1891ms)
-      ✓ should find Brimstone volcano lance in the Shooting phase (1812ms)
-      1) should find Ectoplasma decimator in the Shooting phase
-      ✓ should find Gheiststrike missile launcher in the Shooting phase (1973ms)
-      ✓ should find Twin desecrator cannon in the Shooting phase (1808ms)
-      ✓ should find War Dog autocannon in the Shooting phase (1925ms)
-      ✓ should find Avenger chaincannon in the Shooting phase (1777ms)
-      ✓ should find Daemonbreath spear in the Shooting phase (1753ms)
-      ✓ should find Graviton pulsar in the Shooting phase (1832ms)
-      ✓ should find Volkite veuglaire in the Shooting phase (1870ms)
-      ✓ should find Asterius volkite culverin in the Shooting phase (1847ms)
-      ✓ should find Karacnos mortar battery in the Shooting phase (1817ms)
-      ✓ should find Twin conversion beam cannon in the Shooting phase (1878ms)
-      ✓ should find Twin magna lascannon in the Shooting phase (1919ms)
-      ✓ should find Acastus ironstorm missile pod in the Shooting phase (1863ms)
-      ✓ should find Acastus autocannon in the Shooting phase (1899ms)
+      ✓ should find Acheron flame cannon in the Shooting phase (932ms)
+      ✓ should find Atrapos lascutter in the Shooting phase (562ms)
+      ✓ should find Graviton singularity cannon in the Shooting phase (472ms)
+      ✓ should find Castigator bolt cannon in the Shooting phase (586ms)
+      ✓ should find Lightning cannon in the Shooting phase (522ms)
+      ✓ should find Phased plasma-fusil in the Shooting phase (495ms)
+      ✓ should find Graviton crusher in the Shooting phase (497ms)
+      ✓ should find Volkite chierovile in the Shooting phase (519ms)
+      ✓ should find Desecrator laser destructor in the Shooting phase (497ms)
+      ✓ should find Diabolus heavy stubber in the Shooting phase (477ms)
+      ✓ should find Volkite combustor in the Shooting phase (633ms)
+      ✓ should find Brimstone volcano lance in the Shooting phase (531ms)
+      ✓ should find Ectoplasma decimator in the Shooting phase (492ms)
+      ✓ should find Gheiststrike missile launcher in the Shooting phase (485ms)
+      ✓ should find Twin desecrator cannon in the Shooting phase (584ms)
+      ✓ should find War Dog autocannon in the Shooting phase (526ms)
+      ✓ should find Avenger chaincannon in the Shooting phase (429ms)
+      ✓ should find Daemonbreath spear in the Shooting phase (495ms)
+      ✓ should find Graviton pulsar in the Shooting phase (609ms)
+      ✓ should find Volkite veuglaire in the Shooting phase (525ms)
+      ✓ should find Asterius volkite culverin in the Shooting phase (485ms)
+      ✓ should find Karacnos mortar battery in the Shooting phase (493ms)
+      ✓ should find Twin conversion beam cannon in the Shooting phase (578ms)
+      ✓ should find Twin magna lascannon in the Shooting phase (524ms)
+      ✓ should find Acastus ironstorm missile pod in the Shooting phase (2671ms)
+      ✓ should find Acastus autocannon in the Shooting phase (528ms)
     Fight phase weapons
-      ✓ should find Reaper chainfist in the Fight phase (1828ms)
-      ✓ should find Tempest warblade in the Fight phase (1903ms)
-      ✓ should find Cerastus shock lance in the Fight phase (1797ms)
-      ✓ should find Reaper chainsword in the Fight phase (1875ms)
-      ✓ should find Electroscourge in the Fight phase (1792ms)
-      ✓ should find Warpstrike claw in the Fight phase (1856ms)
-      ✓ should find Titanic feet in the Fight phase (1770ms)
-      ✓ should find Slaughterclaw in the Fight phase (1869ms)
-      ✓ should find Reaper chaintalon in the Fight phase (1753ms)
-      ✓ should find Armoured feet in the Fight phase (1885ms)
+      ✓ should find Reaper chainfist in the Fight phase (598ms)
+      ✓ should find Tempest warblade in the Fight phase (527ms)
+      ✓ should find Cerastus shock lance in the Fight phase (451ms)
+      ✓ should find Reaper chainsword in the Fight phase (461ms)
+      ✓ should find Electroscourge in the Fight phase (445ms)
+      ✓ should find Warpstrike claw in the Fight phase (474ms)
+      ✓ should find Titanic feet in the Fight phase (456ms)
+      ✓ should find Slaughterclaw in the Fight phase (562ms)
+      ✓ should find Reaper chaintalon in the Fight phase (508ms)
+      ✓ should find Armoured feet in the Fight phase (475ms)
 
 
-  35 passing (1m)
-  1 failing
-
-  1) Ensure all weapons listed in nr_chaos_knights are listed on either the Shooting or Fight phase pages
-       Shooting phase weapons
-         should find Ectoplasma decimator in the Shooting phase:
-     AssertionError: Timed out retrying after 4000ms: Expected to find content: '/Ectoplasma decimator/i' but never did.
-      at Context.eval (webpack://army-assist/./cypress/support/commands.ts:41:0)
-      at wrapped (http://localhost:4173/__cypress/runner/cypress_runner.js:138854:43)
-
-
+  36 passing (23s)
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
   │ Tests:        36                                                                               │
-  │ Passing:      35                                                                               │
-  │ Failing:      1                                                                                │
+  │ Passing:      36                                                                               │
+  │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
-  │ Screenshots:  1                                                                                │
+  │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     1 minute, 13 seconds                                                             │
+  │ Duration:     23 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_chaos_knights_exist.cy.ts                            │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-  (Screenshots)
-
-  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/All Weapons Exist      (1280x720)
-     Tests/all_chaos_knights_exist.cy.ts/Ensure all weapons listed in nr_chaos_knight               
-     s are listed on either the Shooting or Fight phase pages -- Shooting phase weapo               
-     ns -- should find Ectoplasma decimator in the Shooting phase (failed).png                      
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -876,20 +877,20 @@
   Running:  All Weapons Exist Tests/all_chaos_lords_exist.cy.ts                           (22 of 30)
 
 
-  Ensure all weapons listed in nr_chaos_knights are listed on either the Shooting or Fight phase pages
+  Ensure all weapons listed in enhancements are listed on either the Shooting or Fight phase pages
     Shooting phase weapons
-      ✓ should find Plasma Pistol in the Shooting phase (1280ms)
+      ✓ should find Plasma Pistol in the Shooting phase (882ms)
     Find Enhancement Abilities
-      ✓ Should find Helm of All Seeing in the Movement phase (868ms)
-      ✓ Should find Living Carapace in the Saves phase (783ms)
+      ✓ Should find Helm of All Seeing in the Movement phase (469ms)
+      ✓ Should find Living Carapace in the Saves phase (423ms)
     Fight phase weapons
-      ✓ should find Daemon hammer in the Fight phase (803ms)
-      ✓ should find Prime Test Subject in the Fight phase (793ms)
-      ✓ should find Surgical Precision in the Fight phase (775ms)
-      ✓ should find Chance for Glory in the Fight phase (767ms)
+      ✓ should find Daemon hammer in the Fight phase (466ms)
+      ✓ should find Prime Test Subject in the Fight phase (505ms)
+      ✓ should find Surgical Precision in the Fight phase (450ms)
+      ✓ should find Chance for Glory in the Fight phase (434ms)
 
 
-  7 passing (7s)
+  7 passing (4s)
 
 
   (Results)
@@ -902,7 +903,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     6 seconds                                                                        │
+  │ Duration:     4 seconds                                                                        │
   │ Spec Ran:     All Weapons Exist Tests/all_chaos_lords_exist.cy.ts                              │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -914,133 +915,104 @@
 
   Verify all Chaos Daemons units and weapons exist
     Shooting phase weapons
-      ✓ should find Death's heads in the Shooting phase (4947ms)
-      ✓ should find Plague flail in the Shooting phase (4486ms)
-      ✓ should find Heartstring lyre in the Shooting phase (4409ms)
-      ✓ should find Bloodlash in the Shooting phase (4279ms)
-      ✓ should find Pavane of Slaanesh in the Shooting phase (4429ms)
-      ✓ should find Putrid vomit in the Shooting phase (4368ms)
-      ✓ should find Grasping tongue in the Shooting phase (4399ms)
-      ✓ should find Hellfire breath in the Shooting phase (4397ms)
-      ✓ should find Infernal cannon in the Shooting phase (4438ms)
-      1) should find Fire of Tzeentch – pink fire in the Shooting phase
-      2) should find Fire of Tzeentch – blue fire in the Shooting phase
-      ✓ should find Infernal Gateway in the Shooting phase (4417ms)
-      ✓ should find Streams of brackish filth in the Shooting phase (4337ms)
-      ✓ should find Bellow of endless fury in the Shooting phase (4467ms)
-      ✓ should find Infernal Flames in the Shooting phase (4395ms)
-      ✓ should find Coruscating Blue flames in the Shooting phase (4326ms)
-      ✓ should find Coruscating Pink flames in the Shooting phase (4363ms)
-      ✓ should find Burning roar in the Shooting phase (4427ms)
-      ✓ should find Harvester cannon in the Shooting phase (4366ms)
-      ✓ should find Torrent of burning blood in the Shooting phase (4387ms)
-      ✓ should find Lash of Slaanesh in the Shooting phase (4285ms)
-      ✓ should find Lashes of torment in the Shooting phase (4340ms)
+      ✓ should find Death's heads in the Shooting phase (1090ms)
+      ✓ should find Plague flail in the Shooting phase (780ms)
+      ✓ should find Heartstring lyre in the Shooting phase (728ms)
+      ✓ should find Bloodlash in the Shooting phase (743ms)
+      ✓ should find Pavane of Slaanesh in the Shooting phase (622ms)
+      ✓ should find Putrid vomit in the Shooting phase (701ms)
+      ✓ should find Grasping tongue in the Shooting phase (701ms)
+      ✓ should find Hellfire breath in the Shooting phase (669ms)
+      ✓ should find Infernal cannon in the Shooting phase (699ms)
+      ✓ should find Fire of Tzeentch - pink fire in the Shooting phase (679ms)
+      ✓ should find Fire of Tzeentch - blue fire in the Shooting phase (601ms)
+      ✓ should find Infernal Gateway in the Shooting phase (592ms)
+      ✓ should find Streams of brackish filth in the Shooting phase (761ms)
+      ✓ should find Bellow of endless fury in the Shooting phase (693ms)
+      ✓ should find Infernal Flames in the Shooting phase (627ms)
+      ✓ should find Coruscating Blue flames in the Shooting phase (594ms)
+      ✓ should find Coruscating Pink flames in the Shooting phase (737ms)
+      ✓ should find Burning roar in the Shooting phase (702ms)
+      ✓ should find Harvester cannon in the Shooting phase (738ms)
+      ✓ should find Torrent of burning blood in the Shooting phase (673ms)
+      ✓ should find Lash of Slaanesh in the Shooting phase (658ms)
+      ✓ should find Lashes of torment in the Shooting phase (659ms)
     Fight phase weapons
-      ✓ should find Flamer mouths in the Fight phase (4537ms)
-      ✓ should find Axe of Khorne in the Fight phase (4402ms)
-      ✓ should find The Blade of Shadows in the Fight phase (4349ms)
-      ✓ should find Balesword and nurgling attendants in the Fight phase (4447ms)
-      ✓ should find Acidic maw in the Fight phase (4314ms)
-      ✓ should find Lopping shears in the Fight phase (4444ms)
-      ✓ should find Staff of Tomorrow in the Fight phase (4287ms)
-      ✓ should find Soul-rending fangs in the Fight phase (4349ms)
-      ✓ should find Gnarlrod in the Fight phase (4405ms)
-      ✓ should find Blade of decay in the Fight phase (4303ms)
-      ✓ should find Snapping claws in the Fight phase (4354ms)
-      ✓ should find Soulpiercer in the Fight phase (4337ms)
-      ✓ should find Slaughter and Carnage in the Fight phase (4347ms)
-      ✓ should find The Slayer Sword in the Fight phase (4368ms)
-      ✓ should find Axe of Dominion in the Fight phase (4302ms)
-      ✓ should find Scourging whip in the Fight phase (4376ms)
-      ✓ should find Sharp quills in the Fight phase (4322ms)
-      ✓ should find The Trickster's Staff in the Fight phase (4432ms)
-      ✓ should find Serrated claws in the Fight phase (4336ms)
-      ✓ should find Souleater blade in the Fight phase (4391ms)
-      ✓ should find Blade of blood in the Fight phase (4373ms)
-      ✓ should find Great axe of Khorne in the Fight phase (4349ms)
-      ✓ should find Herald combat weapon in the Fight phase (4345ms)
-      ✓ should find Coiled tentacles in the Fight phase (4457ms)
-      ✓ should find Ravaging claws in the Fight phase (4401ms)
-      ✓ should find Hellforged weapons in the Fight phase (4377ms)
-      ✓ should find Bilesword in the Fight phase (4432ms)
-      ✓ should find Lashing tongue in the Fight phase (4334ms)
-      ✓ should find Witstealer sword in the Fight phase (4469ms)
-      ✓ should find Staff of Tzeentch in the Fight phase (4276ms)
-      ✓ should find Foul balesword in the Fight phase (4422ms)
-      ✓ should find Attendants' hellblades in the Fight phase (4515ms)
-      ✓ should find Juggernaut's bladed horn in the Fight phase (4553ms)
-      ✓ should find Marotter in the Fight phase (4558ms)
-      ✓ should find Plaguesword and distended maw in the Fight phase (4410ms)
-      ✓ should find Exalted Seeker tongues in the Fight phase (4633ms)
-      ✓ should find Hellblade in the Fight phase (4544ms)
-      ✓ should find Blue claws in the Fight phase (4340ms)
-      ✓ should find Slashing claws in the Fight phase (4461ms)
-      ✓ should find Diseased claws and teeth in the Fight phase (4375ms)
-      ✓ should find Pink claws in the Fight phase (4393ms)
-      ✓ should find Plaguesword in the Fight phase (4324ms)
-      ✓ should find Daemonic claws in the Fight phase (4304ms)
-      ✓ should find Bladed axle in the Fight phase (4323ms)
-      ✓ should find Seeker tongues in the Fight phase (4433ms)
-      ✓ should find Foul mouthparts in the Fight phase (4495ms)
-      ✓ should find Pox rider plaguesword in the Fight phase (4368ms)
-      ✓ should find Yawning maw in the Fight phase (4510ms)
-      ✓ should find Biting maw in the Fight phase (4327ms)
-      ✓ should find Putrid appendages in the Fight phase (4480ms)
-      ✓ should find Barbed tail and dissecting claws in the Fight phase (4470ms)
-      ✓ should find Gore-drenched fangs in the Fight phase (4298ms)
-      ✓ should find Lamprey bite in the Fight phase (4315ms)
-      ✓ should find Churning fangs and claws in the Fight phase (4414ms)
-      ✓ should find Jagged claws and tusked maw in the Fight phase (4352ms)
-      ✓ should find Iron claw in the Fight phase (4275ms)
-      ✓ should find Warpsword in the Fight phase (4346ms)
+      ✓ should find Flamer mouths in the Fight phase (663ms)
+      ✓ should find Axe of Khorne in the Fight phase (730ms)
+      ✓ should find The Blade of Shadows in the Fight phase (692ms)
+      ✓ should find Balesword and nurgling attendants in the Fight phase (741ms)
+      ✓ should find Acidic maw in the Fight phase (679ms)
+      ✓ should find Lopping shears in the Fight phase (612ms)
+      ✓ should find Staff of Tomorrow in the Fight phase (624ms)
+      ✓ should find Soul-rending fangs in the Fight phase (618ms)
+      ✓ should find Gnarlrod in the Fight phase (752ms)
+      ✓ should find Blade of decay in the Fight phase (683ms)
+      ✓ should find Snapping claws in the Fight phase (651ms)
+      ✓ should find Soulpiercer in the Fight phase (1879ms)
+      ✓ should find Slaughter and Carnage in the Fight phase (787ms)
+      ✓ should find The Slayer Sword in the Fight phase (717ms)
+      ✓ should find Axe of Dominion in the Fight phase (678ms)
+      ✓ should find Scourging whip in the Fight phase (645ms)
+      ✓ should find Sharp quills in the Fight phase (705ms)
+      ✓ should find The Trickster's Staff in the Fight phase (685ms)
+      ✓ should find Serrated claws in the Fight phase (713ms)
+      ✓ should find Souleater blade in the Fight phase (655ms)
+      ✓ should find Blade of blood in the Fight phase (635ms)
+      ✓ should find Great axe of Khorne in the Fight phase (619ms)
+      ✓ should find Herald combat weapon in the Fight phase (719ms)
+      ✓ should find Coiled tentacles in the Fight phase (678ms)
+      ✓ should find Ravaging claws in the Fight phase (648ms)
+      ✓ should find Hellforged weapons in the Fight phase (609ms)
+      ✓ should find Bilesword in the Fight phase (763ms)
+      ✓ should find Lashing tongue in the Fight phase (654ms)
+      ✓ should find Witstealer sword in the Fight phase (625ms)
+      ✓ should find Staff of Tzeentch in the Fight phase (624ms)
+      ✓ should find Foul balesword in the Fight phase (660ms)
+      ✓ should find Attendants' hellblades in the Fight phase (695ms)
+      ✓ should find Juggernaut's bladed horn in the Fight phase (615ms)
+      ✓ should find Marotter in the Fight phase (590ms)
+      ✓ should find Plaguesword and distended maw in the Fight phase (732ms)
+      ✓ should find Exalted Seeker tongues in the Fight phase (658ms)
+      ✓ should find Hellblade in the Fight phase (591ms)
+      ✓ should find Blue claws in the Fight phase (690ms)
+      ✓ should find Slashing claws in the Fight phase (762ms)
+      ✓ should find Diseased claws and teeth in the Fight phase (746ms)
+      ✓ should find Pink claws in the Fight phase (613ms)
+      ✓ should find Plaguesword in the Fight phase (641ms)
+      ✓ should find Daemonic claws in the Fight phase (711ms)
+      ✓ should find Bladed axle in the Fight phase (742ms)
+      ✓ should find Seeker tongues in the Fight phase (720ms)
+      ✓ should find Foul mouthparts in the Fight phase (699ms)
+      ✓ should find Pox rider plaguesword in the Fight phase (681ms)
+      ✓ should find Yawning maw in the Fight phase (682ms)
+      ✓ should find Biting maw in the Fight phase (642ms)
+      ✓ should find Putrid appendages in the Fight phase (806ms)
+      ✓ should find Barbed tail and dissecting claws in the Fight phase (756ms)
+      ✓ should find Gore-drenched fangs in the Fight phase (690ms)
+      ✓ should find Lamprey bite in the Fight phase (650ms)
+      ✓ should find Churning fangs and claws in the Fight phase (666ms)
+      ✓ should find Jagged claws and tusked maw in the Fight phase (640ms)
+      ✓ should find Iron claw in the Fight phase (639ms)
+      ✓ should find Warpsword in the Fight phase (710ms)
 
 
-  77 passing (6m)
-  2 failing
-
-  1) Verify all Chaos Daemons units and weapons exist
-       Shooting phase weapons
-         should find Fire of Tzeentch – pink fire in the Shooting phase:
-     AssertionError: Timed out retrying after 4000ms: Expected to find content: '/Fire of Tzeentch – pink fire/i' but never did.
-      at Context.eval (webpack://army-assist/./cypress/support/commands.ts:41:0)
-      at wrapped (http://localhost:4173/__cypress/runner/cypress_runner.js:138854:43)
-
-  2) Verify all Chaos Daemons units and weapons exist
-       Shooting phase weapons
-         should find Fire of Tzeentch – blue fire in the Shooting phase:
-     AssertionError: Timed out retrying after 4000ms: Expected to find content: '/Fire of Tzeentch – blue fire/i' but never did.
-      at Context.eval (webpack://army-assist/./cypress/support/commands.ts:41:0)
-      at wrapped (http://localhost:4173/__cypress/runner/cypress_runner.js:138854:43)
-
-
+  79 passing (1m)
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
   │ Tests:        79                                                                               │
-  │ Passing:      77                                                                               │
-  │ Failing:      2                                                                                │
+  │ Passing:      79                                                                               │
+  │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
-  │ Screenshots:  2                                                                                │
+  │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     6 minutes, 3 seconds                                                             │
+  │ Duration:     1 minute, 0 seconds                                                              │
   │ Spec Ran:     All Weapons Exist Tests/all_demons_exist.cy.ts                                   │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-  (Screenshots)
-
-  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/All Weapons Exist      (1280x720)
-     Tests/all_demons_exist.cy.ts/Verify all Chaos Daemons units and weapons exist --               
-      Shooting phase weapons -- should find Fire of Tzeentch – pink fire in the Shoot               
-     ing phase (failed).png                                                                         
-  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/All Weapons Exist      (1280x720)
-     Tests/all_demons_exist.cy.ts/Verify all Chaos Daemons units and weapons exist --               
-      Shooting phase weapons -- should find Fire of Tzeentch – blue fire in the Shoot               
-     ing phase (failed).png                                                                         
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -1050,74 +1022,74 @@
 
   Verify all Astra Militarum units and weapons exist
     Shooting phase weapons
-      ✓ should find Lasgun in the Shooting phase (8671ms)
-      ✓ should find Autocannon in the Shooting phase (8251ms)
-      ✓ should find Heavy bolter in the Shooting phase (8256ms)
-      ✓ should find Lascannon in the Shooting phase (8324ms)
-      ✓ should find Battle cannon in the Shooting phase (8466ms)
-      ✓ should find Demolisher cannon in the Shooting phase (8337ms)
-      ✓ should find Punisher gatling cannon in the Shooting phase (8343ms)
-      ✓ should find Executioner plasma cannon in the Shooting phase (8316ms)
-      ✓ should find Vanquisher battle cannon in the Shooting phase (8222ms)
-      ✓ should find Eradicator nova cannon in the Shooting phase (8315ms)
-      ✓ should find Exterminator autocannon in the Shooting phase (8442ms)
-      ✓ should find Heavy stubber in the Shooting phase (8478ms)
-      ✓ should find Multi-laser in the Shooting phase (8105ms)
-      ✓ should find Heavy flamer in the Shooting phase (8292ms)
-      ✓ should find Sentry flamer in the Shooting phase (8468ms)
-      ✓ should find Deathstrike missile in the Shooting phase (8568ms)
-      ✓ should find Hellstrike missile in the Shooting phase (8156ms)
-      ✓ should find Twin lascannon in the Shooting phase (8543ms)
-      ✓ should find Twin heavy bolter in the Shooting phase (8335ms)
-      ✓ should find Twin autocannon in the Shooting phase (8177ms)
-      ✓ should find Twin heavy flamer in the Shooting phase (8349ms)
-      ✓ should find Ripper gun in the Shooting phase (8351ms)
-      ✓ should find Earthshaker cannon in the Shooting phase (7986ms)
-      ✓ should find Medusa siege cannon in the Shooting phase (8263ms)
-      ✓ should find Laser destroyer in the Shooting phase (8300ms)
-      ✓ should find Sniper rifle in the Shooting phase (8317ms)
-      ✓ should find Hot-shot lasgun in the Shooting phase (8283ms)
-      ✓ should find Hot-shot laspistol in the Shooting phase (8301ms)
-      ✓ should find Hot-shot lascarbine in the Shooting phase (8236ms)
-      ✓ should find Inferno cannon in the Shooting phase (8349ms)
-      ✓ should find Hydra autocannon in the Shooting phase (8285ms)
-      ✓ should find Avenger bolt cannon in the Shooting phase (8025ms)
-      ✓ should find Magma cannon in the Shooting phase (8064ms)
-      ✓ should find Volcano cannon in the Shooting phase (8020ms)
-      ✓ should find Storm Eagle Rockets in the Shooting phase (8034ms)
-      ✓ should find Assault cannon in the Shooting phase (8169ms)
-      ✓ should find Praetor launcher in the Shooting phase (8172ms)
-      ✓ should find Castigator Gatling Cannon in the Shooting phase (8384ms)
-      ✓ should find Vulcan Mega-bolter in the Shooting phase (8216ms)
-      ✓ should find Stormsword Siege Cannon in the Shooting phase (8234ms)
-      ✓ should find Valdor neutron laser in the Shooting phase (8213ms)
-      ✓ should find Wyvern Quad Stormshard Mortar in the Shooting phase (8287ms)
-      ✓ should find Taurox Battle Cannon in the Shooting phase (8207ms)
-      ✓ should find Twin Taurox Hot-Shot Volley Gun in the Shooting phase (8023ms)
-      ✓ should find Twin Autocannon in the Shooting phase (8218ms)
-      ✓ should find Thunderbolt nose autocannons in the Shooting phase (8231ms)
-      ✓ should find Vulture hellstrike rack in the Shooting phase (8156ms)
-      ✓ should find Duty and Vengeance in the Shooting phase (8297ms)
-      ✓ should find Multiple rocket pod in the Shooting phase (8318ms)
+      ✓ should find Lasgun in the Shooting phase (1223ms)
+      ✓ should find Autocannon in the Shooting phase (801ms)
+      ✓ should find Heavy bolter in the Shooting phase (848ms)
+      ✓ should find Lascannon in the Shooting phase (867ms)
+      ✓ should find Battle cannon in the Shooting phase (775ms)
+      ✓ should find Demolisher cannon in the Shooting phase (824ms)
+      ✓ should find Punisher gatling cannon in the Shooting phase (749ms)
+      ✓ should find Executioner plasma cannon in the Shooting phase (668ms)
+      ✓ should find Vanquisher battle cannon in the Shooting phase (803ms)
+      ✓ should find Eradicator nova cannon in the Shooting phase (729ms)
+      ✓ should find Exterminator autocannon in the Shooting phase (678ms)
+      ✓ should find Heavy stubber in the Shooting phase (1727ms)
+      ✓ should find Multi-laser in the Shooting phase (769ms)
+      ✓ should find Heavy flamer in the Shooting phase (729ms)
+      ✓ should find Sentry flamer in the Shooting phase (681ms)
+      ✓ should find Deathstrike missile in the Shooting phase (747ms)
+      ✓ should find Hellstrike missile in the Shooting phase (781ms)
+      ✓ should find Twin heavy bolter in the Shooting phase (811ms)
+      ✓ should find Twin autocannon in the Shooting phase (677ms)
+      ✓ should find Ripper gun in the Shooting phase (737ms)
+      ✓ should find Earthshaker cannon in the Shooting phase (756ms)
+      ✓ should find Sniper rifle in the Shooting phase (801ms)
+      ✓ should find Hot-shot lasgun in the Shooting phase (748ms)
+      ✓ should find Hot-shot laspistol in the Shooting phase (686ms)
+      ✓ should find Hot-shot lascarbine in the Shooting phase (684ms)
+      ✓ should find Inferno cannon in the Shooting phase (682ms)
+      ✓ should find Hydra autocannon in the Shooting phase (693ms)
+      ✓ should find Avenger bolt cannon in the Shooting phase (761ms)
+      ✓ should find Magma cannon in the Shooting phase (786ms)
+      ✓ should find Volcano cannon in the Shooting phase (752ms)
+      ✓ should find Storm Eagle Rockets in the Shooting phase (814ms)
+      ✓ should find Castigator Gatling Cannon in the Shooting phase (748ms)
+      ✓ should find Vulcan Mega-bolter in the Shooting phase (710ms)
+      ✓ should find Stormsword Siege Cannon in the Shooting phase (804ms)
+      ✓ should find Wyvern Quad Stormshard Mortar in the Shooting phase (753ms)
+      ✓ should find Taurox Battle Cannon in the Shooting phase (697ms)
+      ✓ should find Twin Taurox Hot-Shot Volley Gun in the Shooting phase (735ms)
+      ✓ should find Duty and Vengeance in the Shooting phase (835ms)
+      ✓ should find Tremor cannon in the Shooting phase (782ms)
+      ✓ should find Quake cannon in the Shooting phase (698ms)
+      ✓ should find Hellhammer cannon in the Shooting phase (707ms)
+      ✓ should find Bragg's autocannon in the Shooting phase (672ms)
+      ✓ should find Corbec's hot-shot lascarbine in the Shooting phase (851ms)
+      ✓ should find Larkin's long-las in the Shooting phase (767ms)
+      ✓ should find Death Rider lascarbine in the Shooting phase (725ms)
+      ✓ should find Zealot's vindictor in the Shooting phase (677ms)
+      ✓ should find Rawne's lascarbine in the Shooting phase (837ms)
     Fight phase weapons
-      ✓ should find Chainsword in the Fight phase (8007ms)
-      ✓ should find Power weapon in the Fight phase (8246ms)
-      ✓ should find Huge Knife in the Fight phase (7870ms)
-      ✓ should find Mkoll's Straight Silver Knife in the Fight phase (7912ms)
-      ✓ should find Straight Silver Knife in the Fight phase (7978ms)
-      ✓ should find Savage claws in the Fight phase (7998ms)
-      ✓ should find Power Weapon in the Fight phase (7933ms)
-      ✓ should find Tempestus Dagger in the Fight phase (7936ms)
-      ✓ should find Death Rider hunting lance in the Fight phase (8155ms)
-      ✓ should find Steed's Hooves in the Fight phase (8425ms)
-      ✓ should find Bullgryn Maul in the Fight phase (8105ms)
-      ✓ should find Savage claws in the Fight phase (8330ms)
-      ✓ should find Battery close combat weapons in the Fight phase (8135ms)
-      ✓ should find Armoured hull in the Fight phase (8437ms)
-      ✓ should find Armoured Tracks in the Fight phase (8277ms)
+      ✓ should find Chainsword in the Fight phase (708ms)
+      ✓ should find Power weapon in the Fight phase (625ms)
+      ✓ should find Huge Knife in the Fight phase (560ms)
+      ✓ should find Mkoll's Straight Silver Knife in the Fight phase (3589ms)
+      ✓ should find Straight Silver Knife in the Fight phase (668ms)
+      ✓ should find Savage claws in the Fight phase (601ms)
+      ✓ should find Tempestus Dagger in the Fight phase (606ms)
+      ✓ should find Steed's Hooves in the Fight phase (757ms)
+      ✓ should find Bullgryn Maul in the Fight phase (684ms)
+      ✓ should find Battery close combat weapons in the Fight phase (652ms)
+      ✓ should find Armoured hull in the Fight phase (630ms)
+      ✓ should find Armoured Tracks in the Fight phase (754ms)
+      ✓ should find Force weapon in the Fight phase (635ms)
+      ✓ should find Trench club in the Fight phase (632ms)
+      ✓ should find Frag lance in the Fight phase (713ms)
+      ✓ should find Power sabre in the Fight phase (662ms)
+      ✓ should find Servo-arm in the Fight phase (637ms)
 
 
-  64 passing (9m)
+  64 passing (55s)
 
 
   (Results)
@@ -1130,7 +1102,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     8 minutes, 53 seconds                                                            │
+  │ Duration:     54 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_guard_exist.cy.ts                                    │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -1142,43 +1114,26 @@
 
   Verify all Lychguard weapons exist
     Fight phase weapons
-      ✓ should find Warscythe in the Fight phase (1119ms)
-      1) should find Hyperphase sword in the Fight phase
+      ✓ should find Warscythe in the Fight phase (832ms)
+      ✓ should find Hyperphase sword in the Fight phase (480ms)
 
 
-  1 passing (6s)
-  1 failing
-
-  1) Verify all Lychguard weapons exist
-       Fight phase weapons
-         should find Hyperphase sword in the Fight phase:
-     AssertionError: Timed out retrying after 4000ms: Expected to find content: '/Hyperphase sword/i' but never did.
-      at Context.eval (webpack://army-assist/./cypress/support/commands.ts:45:0)
-      at wrapped (http://localhost:4173/__cypress/runner/cypress_runner.js:138854:43)
-
-
+  2 passing (2s)
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
   │ Tests:        2                                                                                │
-  │ Passing:      1                                                                                │
-  │ Failing:      1                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
-  │ Screenshots:  1                                                                                │
+  │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     6 seconds                                                                        │
+  │ Duration:     1 second                                                                         │
   │ Spec Ran:     All Weapons Exist Tests/all_lychguard_exist.cy.ts                                │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-  (Screenshots)
-
-  -  /home/will-mitchell/Documents/army-assist/cypress/screenshots/All Weapons Exist      (1280x720)
-     Tests/all_lychguard_exist.cy.ts/Verify all Lychguard weapons exist -- Fight phas               
-     e weapons -- should find Hyperphase sword in the Fight phase (failed).png                      
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -1188,75 +1143,75 @@
 
   Ensure all weapons listed in nr_necrons are listed on either the Shooting or Fight phase pages
     Shooting phase weapons
-      ✓ should find Tachyon arrow in the Shooting phase (3989ms)
-      ✓ should find Gauss cannon in the Shooting phase (3498ms)
-      ✓ should find Enmitic disintegrator pistols in the Shooting phase (3415ms)
-      ✓ should find Plasmic lance in the Shooting phase (3371ms)
-      ✓ should find Abyssal lance in the Shooting phase (3352ms)
-      ✓ should find Relic gauss blaster in the Shooting phase (3286ms)
-      ✓ should find Enmitic annihilator in the Shooting phase (3394ms)
-      ✓ should find Seismic assault in the Shooting phase (3385ms)
-      ✓ should find Gauss blaster in the Shooting phase (3315ms)
-      ✓ should find Gauss flayer in the Shooting phase (3269ms)
-      ✓ should find Scouring eye in the Shooting phase (3389ms)
-      ✓ should find Synaptic disintegrator in the Shooting phase (3444ms)
-      ✓ should find Cutting beam in the Shooting phase (3338ms)
-      ✓ should find Exile cannon in the Shooting phase (3264ms)
-      ✓ should find Gauss slicers in the Shooting phase (3110ms)
-      ✓ should find Twin tesla destructor in the Shooting phase (3259ms)
-      ✓ should find Doomsday blaster in the Shooting phase (3312ms)
-      ✓ should find Atomiser beam in the Shooting phase (3345ms)
-      ✓ should find Heavy death ray in the Shooting phase (3306ms)
-      ✓ should find Doomsday cannon in the Shooting phase (3357ms)
-      ✓ should find Particle whip in the Shooting phase (3335ms)
-      ✓ should find Gauss flux arc in the Shooting phase (3347ms)
-      ✓ should find Tesla sphere in the Shooting phase (3325ms)
-      ✓ should find Voltaic storm in the Shooting phase (3307ms)
-      ✓ should find Annihilator beam in the Shooting phase (3355ms)
-      ✓ should find Tesseract singularity chamber in the Shooting phase (3370ms)
-      ✓ should find Tesla cannon in the Shooting phase (3448ms)
-      ✓ should find C'tan Powers in the Shooting phase (3398ms)
-      ✓ should find Heat ray in the Shooting phase (3279ms)
-      ✓ should find Transdimensional abductor in the Shooting phase (3328ms)
-      ✓ should find Gauss annihilator in the Shooting phase (3353ms)
-      ✓ should find Gauss exterminator in the Shooting phase (3313ms)
-      ✓ should find Gauntlet of Fire in the Shooting phase (3429ms)
-      ✓ should find Aeonstave in the Shooting phase (3262ms)
+      ✓ should find Tachyon arrow in the Shooting phase (1073ms)
+      ✓ should find Gauss cannon in the Shooting phase (753ms)
+      ✓ should find Enmitic disintegrator pistols in the Shooting phase (795ms)
+      ✓ should find Plasmic lance in the Shooting phase (701ms)
+      ✓ should find Abyssal lance in the Shooting phase (590ms)
+      ✓ should find Relic gauss blaster in the Shooting phase (650ms)
+      ✓ should find Enmitic annihilator in the Shooting phase (669ms)
+      ✓ should find Seismic assault in the Shooting phase (590ms)
+      ✓ should find Gauss blaster in the Shooting phase (703ms)
+      ✓ should find Gauss flayer in the Shooting phase (698ms)
+      ✓ should find Scouring eye in the Shooting phase (610ms)
+      ✓ should find Synaptic disintegrator in the Shooting phase (588ms)
+      ✓ should find Cutting beam in the Shooting phase (592ms)
+      ✓ should find Exile cannon in the Shooting phase (616ms)
+      ✓ should find Gauss slicers in the Shooting phase (649ms)
+      ✓ should find Twin tesla destructor in the Shooting phase (701ms)
+      ✓ should find Doomsday blaster in the Shooting phase (652ms)
+      ✓ should find Atomiser beam in the Shooting phase (608ms)
+      ✓ should find Heavy death ray in the Shooting phase (596ms)
+      ✓ should find Doomsday cannon in the Shooting phase (588ms)
+      ✓ should find Particle whip in the Shooting phase (699ms)
+      ✓ should find Gauss flux arc in the Shooting phase (652ms)
+      ✓ should find Tesla sphere in the Shooting phase (601ms)
+      ✓ should find Voltaic storm in the Shooting phase (1019ms)
+      ✓ should find Annihilator beam in the Shooting phase (692ms)
+      ✓ should find Tesseract singularity chamber in the Shooting phase (1200ms)
+      ✓ should find Tesla cannon in the Shooting phase (579ms)
+      ✓ should find C'tan Powers in the Shooting phase (606ms)
+      ✓ should find Heat ray in the Shooting phase (588ms)
+      ✓ should find Transdimensional abductor in the Shooting phase (663ms)
+      ✓ should find Gauss annihilator in the Shooting phase (690ms)
+      ✓ should find Gauss exterminator in the Shooting phase (592ms)
+      ✓ should find Gauntlet of Fire in the Shooting phase (576ms)
+      ✓ should find Aeonstave in the Shooting phase (612ms)
     Fight phase weapons
-      ✓ should find Warscythe in the Fight phase (3288ms)
-      ✓ should find Aeonstave in the Fight phase (3332ms)
-      ✓ should find Golden fists in the Fight phase (3302ms)
-      ✓ should find Scythe of the Nightbringer in the Fight phase (3361ms)
-      ✓ should find Spear of the Void Dragon in the Fight phase (3239ms)
-      ✓ should find Impaling legs in the Fight phase (3266ms)
-      ✓ should find Staff of the Destroyer in the Fight phase (3128ms)
-      ✓ should find Staff of light in the Fight phase (3232ms)
-      ✓ should find Staff of Tomorrow in the Fight phase (3250ms)
-      ✓ should find Weapons of the Final Triarch in the Fight phase (3330ms)
-      ✓ should find Armoured bulk in the Fight phase (3465ms)
-      ✓ should find Empathic Obliterator in the Fight phase (3451ms)
-      ✓ should find Close combat weapon in the Fight phase (3343ms)
-      ✓ should find Flensing claw in the Fight phase (3388ms)
-      ✓ should find Hyperphase harvester in the Fight phase (3383ms)
-      ✓ should find Resurrection orb in the Fight phase (3433ms)
-      ✓ should find Flayer claws in the Fight phase (3339ms)
-      ✓ should find Ophydian hyperphase weapons in the Fight phase (6583ms)
-      ✓ should find Skorpekh hyperphase weapons in the Fight phase (3880ms)
-      ✓ should find Rod of covenant in the Fight phase (3292ms)
-      ✓ should find Feeder mandibles in the Fight phase (3339ms)
-      ✓ should find Vicious claws in the Fight phase (3347ms)
-      ✓ should find Tomb Sentinel claws in the Fight phase (3305ms)
-      ✓ should find Tomb Stalker claws in the Fight phase (3318ms)
-      ✓ should find Doomstalker limbs in the Fight phase (3408ms)
-      ✓ should find Reanimator's claws in the Fight phase (3405ms)
-      ✓ should find Automaton claws in the Fight phase (3293ms)
-      ✓ should find Portal of exile in the Fight phase (3316ms)
-      ✓ should find Titanic forelimbs in the Fight phase (3229ms)
-      ✓ should find Stalker's forelimbs in the Fight phase (3204ms)
-      ✓ should find Crackling tendrils in the Fight phase (3186ms)
+      ✓ should find Warscythe in the Fight phase (586ms)
+      ✓ should find Aeonstave in the Fight phase (566ms)
+      ✓ should find Golden fists in the Fight phase (670ms)
+      ✓ should find Scythe of the Nightbringer in the Fight phase (676ms)
+      ✓ should find Spear of the Void Dragon in the Fight phase (612ms)
+      ✓ should find Impaling legs in the Fight phase (585ms)
+      ✓ should find Staff of the Destroyer in the Fight phase (577ms)
+      ✓ should find Staff of light in the Fight phase (590ms)
+      ✓ should find Staff of Tomorrow in the Fight phase (583ms)
+      ✓ should find Weapons of the Final Triarch in the Fight phase (566ms)
+      ✓ should find Armoured bulk in the Fight phase (655ms)
+      ✓ should find Empathic Obliterator in the Fight phase (604ms)
+      ✓ should find Close combat weapon in the Fight phase (654ms)
+      ✓ should find Flensing claw in the Fight phase (608ms)
+      ✓ should find Hyperphase harvester in the Fight phase (631ms)
+      ✓ should find Resurrection orb in the Fight phase (765ms)
+      ✓ should find Flayer claws in the Fight phase (622ms)
+      ✓ should find Ophydian hyperphase weapons in the Fight phase (612ms)
+      ✓ should find Skorpekh hyperphase weapons in the Fight phase (673ms)
+      ✓ should find Rod of covenant in the Fight phase (618ms)
+      ✓ should find Feeder mandibles in the Fight phase (571ms)
+      ✓ should find Vicious claws in the Fight phase (562ms)
+      ✓ should find Tomb Sentinel claws in the Fight phase (555ms)
+      ✓ should find Tomb Stalker claws in the Fight phase (701ms)
+      ✓ should find Doomstalker limbs in the Fight phase (631ms)
+      ✓ should find Reanimator's claws in the Fight phase (566ms)
+      ✓ should find Automaton claws in the Fight phase (607ms)
+      ✓ should find Portal of exile in the Fight phase (695ms)
+      ✓ should find Titanic forelimbs in the Fight phase (590ms)
+      ✓ should find Stalker's forelimbs in the Fight phase (586ms)
+      ✓ should find Crackling tendrils in the Fight phase (532ms)
 
 
-  65 passing (4m)
+  65 passing (46s)
 
 
   (Results)
@@ -1269,7 +1224,7 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     3 minutes, 46 seconds                                                            │
+  │ Duration:     46 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_necrons_exist.cy.ts                                  │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -1281,36 +1236,36 @@
 
   Ensure all weapons listed in nr_314_fnf_tau are listed on either the Shooting or Fight phase pages
     Shooting phase weapons
-      ✓ should find Fireblade pulse rifle in the Shooting phase (2364ms)
-      ✓ should find High-intensity plasma rifle in the Shooting phase (1959ms)
-      ✓ should find Pulse blaster in the Shooting phase (1930ms)
-      ✓ should find Pulse pistol in the Shooting phase (1901ms)
-      ✓ should find Support turret in the Shooting phase (1841ms)
-      ✓ should find Kroot pistol in the Shooting phase (1836ms)
-      ✓ should find Kroot rifle in the Shooting phase (1870ms)
-      ✓ should find Pulse carbine in the Shooting phase (1971ms)
-      ✓ should find Burst cannon in the Shooting phase (1866ms)
-      ✓ should find Repeater cannon in the Shooting phase (1810ms)
-      ✓ should find Missile pod in the Shooting phase (1819ms)
-      ✓ should find High-yield missile pods in the Shooting phase (1815ms)
-      ✓ should find Weapon support system in the Shooting phase (1896ms)
-      ✓ should find Twin smart missile system in the Shooting phase (1819ms)
-      ✓ should find T'au flamer in the Shooting phase (1759ms)
-      ✓ should find Fusion blaster in the Shooting phase (1872ms)
-      ✓ should find Fusion collider in the Shooting phase (1830ms)
-      ✓ should find Twin T'au flamer in the Shooting phase (1810ms)
-      ✓ should find Accelerator burst cannon in the Shooting phase (1914ms)
-      ✓ should find Smart missile system in the Shooting phase (1824ms)
+      ✓ should find Fireblade pulse rifle in the Shooting phase (928ms)
+      ✓ should find High-intensity plasma rifle in the Shooting phase (567ms)
+      ✓ should find Pulse blaster in the Shooting phase (512ms)
+      ✓ should find Pulse pistol in the Shooting phase (480ms)
+      ✓ should find Support turret in the Shooting phase (457ms)
+      ✓ should find Kroot pistol in the Shooting phase (451ms)
+      ✓ should find Kroot rifle in the Shooting phase (498ms)
+      ✓ should find Pulse carbine in the Shooting phase (504ms)
+      ✓ should find Burst cannon in the Shooting phase (495ms)
+      ✓ should find Repeater cannon in the Shooting phase (2499ms)
+      ✓ should find Missile pod in the Shooting phase (547ms)
+      ✓ should find High-yield missile pods in the Shooting phase (461ms)
+      ✓ should find Weapon support system in the Shooting phase (463ms)
+      ✓ should find Twin smart missile system in the Shooting phase (615ms)
+      ✓ should find T'au flamer in the Shooting phase (521ms)
+      ✓ should find Fusion blaster in the Shooting phase (506ms)
+      ✓ should find Fusion collider in the Shooting phase (479ms)
+      ✓ should find Twin T'au flamer in the Shooting phase (455ms)
+      ✓ should find Accelerator burst cannon in the Shooting phase (565ms)
+      ✓ should find Smart missile system in the Shooting phase (516ms)
     Fight phase weapons
-      ✓ should find Close combat weapon in the Fight phase (1907ms)
-      ✓ should find Dawn Blade in the Fight phase (1766ms)
-      ✓ should find Battlesuit fists in the Fight phase (1815ms)
-      ✓ should find Krootox fists in the Fight phase (1724ms)
-      ✓ should find Crushing bulk in the Fight phase (1798ms)
-      ✓ should find Ghostkeel fists in the Fight phase (1842ms)
+      ✓ should find Close combat weapon in the Fight phase (467ms)
+      ✓ should find Dawn Blade in the Fight phase (436ms)
+      ✓ should find Battlesuit fists in the Fight phase (448ms)
+      ✓ should find Krootox fists in the Fight phase (543ms)
+      ✓ should find Crushing bulk in the Fight phase (502ms)
+      ✓ should find Ghostkeel fists in the Fight phase (433ms)
 
 
-  26 passing (50s)
+  26 passing (17s)
 
 
   (Results)
@@ -1323,106 +1278,62 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     50 seconds                                                                       │
+  │ Duration:     16 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_nr_314_fnf_tau_exist.cy.ts                           │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  All Weapons Exist Tests/all_nr_fnf_tau_weapons_exist.cy.ts                    (28 of 30)
-
-
-  Ensure all weapons listed in nr_fnf_tau are listed on either the Shooting or Fight phase pages
-    Shooting phase weapons
-      ✓ should find High-intensity plasma rifle in the Shooting phase (1726ms)
-      ✓ should find Fireblade pulse rifle in the Shooting phase (1339ms)
-      ✓ should find Pulse blaster in the Shooting phase (1266ms)
-      ✓ should find Pulse pistol in the Shooting phase (1323ms)
-      ✓ should find Kroot pistol in the Shooting phase (1292ms)
-      ✓ should find Kroot rifle in the Shooting phase (1250ms)
-      ✓ should find Neutron blaster in the Shooting phase (1233ms)
-      ✓ should find Neutron grenade launcher in the Shooting phase (1286ms)
-      ✓ should find Neutron rail rifle in the Shooting phase (1245ms)
-      ✓ should find T'au flamer in the Shooting phase (1205ms)
-      ✓ should find Heavy rail rifle in the Shooting phase (1236ms)
-      ✓ should find Burst cannon in the Shooting phase (1190ms)
-    Fight phase weapons
-      ✓ should find Dawn Blade in the Fight phase (1185ms)
-      ✓ should find Close combat weapon in the Fight phase (1273ms)
-      ✓ should find Stingwing claws in the Fight phase (1240ms)
-      ✓ should find Crushing bulk in the Fight phase (1310ms)
-
-
-  16 passing (22s)
-
-
-  (Results)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        16                                                                               │
-  │ Passing:      16                                                                               │
-  │ Failing:      0                                                                                │
-  │ Pending:      0                                                                                │
-  │ Skipped:      0                                                                                │
-  │ Screenshots:  0                                                                                │
-  │ Video:        false                                                                            │
-  │ Duration:     21 seconds                                                                       │
-  │ Spec Ran:     All Weapons Exist Tests/all_nr_fnf_tau_weapons_exist.cy.ts                       │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
-  Running:  All Weapons Exist Tests/all_tau_exists.cy.ts                                  (29 of 30)
+  Running:  All Weapons Exist Tests/all_tau_exists.cy.ts                                  (28 of 30)
 
 
   Ensure all weapons listed in nr_tau are listed on either the Shooting or Fight phase pages
     Shooting phase weapons
-      ✓ should find Fireblade pulse rifle in the Shooting phase (3085ms)
-      ✓ should find High-intensity plasma rifle in the Shooting phase (2584ms)
-      ✓ should find Cyclic ion blaster in the Shooting phase (2571ms)
-      ✓ should find Plasma rifle in the Shooting phase (2539ms)
-      ✓ should find Weapon support system in the Shooting phase (2392ms)
-      ✓ should find Kroot long gun in the Shooting phase (2447ms)
-      ✓ should find Kroot pistol in the Shooting phase (2490ms)
-      ✓ should find Dart-bow and tri-blade in the Shooting phase (2378ms)
-      ✓ should find Pulse pistol in the Shooting phase (2487ms)
-      ✓ should find Pulse rifle in the Shooting phase (2364ms)
-      ✓ should find Support turret in the Shooting phase (2430ms)
-      ✓ should find Kroot rifle in the Shooting phase (2446ms)
-      ✓ should find T'au-tech rifle in the Shooting phase (2382ms)
-      ✓ should find Farstalker firearm in the Shooting phase (2455ms)
-      ✓ should find Londaxi tribalest in the Shooting phase (2389ms)
-      ✓ should find Battlesuit support system in the Shooting phase (2452ms)
-      ✓ should find Burst cannon in the Shooting phase (2390ms)
-      ✓ should find Neutron blaster in the Shooting phase (2494ms)
-      ✓ should find Kroot pistol and hunting javelins in the Shooting phase (2395ms)
-      ✓ should find Heavy rail rifle in the Shooting phase (2454ms)
-      ✓ should find Seeker missile in the Shooting phase (2424ms)
-      ✓ should find Twin plasma rifle in the Shooting phase (2418ms)
-      ✓ should find Missile pod in the Shooting phase (2482ms)
-      ✓ should find Twin pulse carbine in the Shooting phase (2508ms)
-      ✓ should find Fusion blaster in the Shooting phase (2422ms)
-      ✓ should find Fusion collider in the Shooting phase (2419ms)
-      ✓ should find Twin fusion blaster in the Shooting phase (2375ms)
-      ✓ should find Railgun in the Shooting phase (2428ms)
-      ✓ should find Smart missile system in the Shooting phase (2375ms)
+      ✓ should find Fireblade pulse rifle in the Shooting phase (945ms)
+      ✓ should find High-intensity plasma rifle in the Shooting phase (575ms)
+      ✓ should find Cyclic ion blaster in the Shooting phase (543ms)
+      ✓ should find Plasma rifle in the Shooting phase (630ms)
+      ✓ should find Weapon support system in the Shooting phase (547ms)
+      ✓ should find Kroot long gun in the Shooting phase (493ms)
+      ✓ should find Kroot pistol in the Shooting phase (546ms)
+      ✓ should find Dart-bow and tri-blade in the Shooting phase (557ms)
+      ✓ should find Pulse pistol in the Shooting phase (500ms)
+      ✓ should find Pulse rifle in the Shooting phase (530ms)
+      ✓ should find Support turret in the Shooting phase (587ms)
+      ✓ should find Kroot rifle in the Shooting phase (549ms)
+      ✓ should find T'au-tech rifle in the Shooting phase (502ms)
+      ✓ should find Farstalker firearm in the Shooting phase (546ms)
+      ✓ should find Londaxi tribalest in the Shooting phase (630ms)
+      ✓ should find Battlesuit support system in the Shooting phase (486ms)
+      ✓ should find Burst cannon in the Shooting phase (557ms)
+      ✓ should find Neutron blaster in the Shooting phase (615ms)
+      ✓ should find Kroot pistol and hunting javelins in the Shooting phase (736ms)
+      ✓ should find Heavy rail rifle in the Shooting phase (605ms)
+      ✓ should find Seeker missile in the Shooting phase (644ms)
+      ✓ should find Twin plasma rifle in the Shooting phase (597ms)
+      ✓ should find Missile pod in the Shooting phase (568ms)
+      ✓ should find Twin pulse carbine in the Shooting phase (499ms)
+      ✓ should find Fusion blaster in the Shooting phase (530ms)
+      ✓ should find Fusion collider in the Shooting phase (506ms)
+      ✓ should find Twin fusion blaster in the Shooting phase (507ms)
+      ✓ should find Railgun in the Shooting phase (513ms)
+      ✓ should find Smart missile system in the Shooting phase (518ms)
     Fight phase weapons
-      ✓ should find Close combat weapon in the Fight phase (2348ms)
-      ✓ should find Krootox fists in the Fight phase (2428ms)
-      ✓ should find Kalamandra's bite in the Fight phase (2457ms)
-      ✓ should find Stingwing claws in the Fight phase (2456ms)
-      ✓ should find Crushing bulk in the Fight phase (2368ms)
-      ✓ should find Armoured hull in the Fight phase (2439ms)
-      ✓ should find Dawn Blade in the Fight phase (2374ms)
-      ✓ should find Ripping fangs in the Fight phase (2322ms)
-      ✓ should find Ritual blade in the Fight phase (2403ms)
-      ✓ should find Battlesuit fists in the Fight phase (2403ms)
-      ✓ should find Shaper's blade in the Fight phase (2404ms)
+      ✓ should find Close combat weapon in the Fight phase (528ms)
+      ✓ should find Krootox fists in the Fight phase (531ms)
+      ✓ should find Kalamandra's bite in the Fight phase (538ms)
+      ✓ should find Stingwing claws in the Fight phase (517ms)
+      ✓ should find Crushing bulk in the Fight phase (500ms)
+      ✓ should find Armoured hull in the Fight phase (543ms)
+      ✓ should find Dawn Blade in the Fight phase (527ms)
+      ✓ should find Ripping fangs in the Fight phase (586ms)
+      ✓ should find Ritual blade in the Fight phase (495ms)
+      ✓ should find Battlesuit fists in the Fight phase (552ms)
+      ✓ should find Shaper's blade in the Fight phase (658ms)
 
 
-  40 passing (2m)
+  40 passing (25s)
 
 
   (Results)
@@ -1435,63 +1346,124 @@
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     1 minute, 40 seconds                                                             │
+  │ Duration:     25 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_tau_exists.cy.ts                                     │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                     
-  Running:  All Weapons Exist Tests/all_tyranids_exist.cy.ts                              (30 of 30)
+  Running:  All Weapons Exist Tests/all_tyranids_exist.cy.ts                              (29 of 30)
 
 
   Ensure all weapons listed in nr_tyranids_weapons are listed on either the Shooting or Fight phase pages
+    ✓ should see the FNP 5+ in the Saves Phase (958ms)
     Shooting phase weapons
-      ✓ should find Heavy venom cannon in the Shooting phase (1731ms)
-      ✓ should find Psychic scream in the Shooting phase (1315ms)
-      ✓ should find Fleshborer in the Shooting phase (1237ms)
-      ✓ should find Spore mine launcher in the Shooting phase (1271ms)
-      ✓ should find Warp blast in the Shooting phase (1295ms)
-      ✓ should find Psychoclastic torrent in the Shooting phase (1227ms)
-      ✓ should find Toxinjector Harpoon in the Shooting phase (1323ms)
-      ✓ should find Stinger salvoes in the Shooting phase (1234ms)
-      ✓ should find Rupture cannon in the Shooting phase (1170ms)
-      ✓ should find Grasping tongue in the Shooting phase (1200ms)
+      ✓ should find Heavy venom cannon in the Shooting phase (589ms)
+      ✓ should find Psychic scream in the Shooting phase (500ms)
+      ✓ should find Fleshborer in the Shooting phase (514ms)
+      ✓ should find Spore mine launcher in the Shooting phase (474ms)
+      ✓ should find Warp blast in the Shooting phase (489ms)
+      ✓ should find Psychoclastic torrent in the Shooting phase (481ms)
+      ✓ should find Toxinjector Harpoon in the Shooting phase (488ms)
+      ✓ should find Stinger salvoes in the Shooting phase (507ms)
+      ✓ should find Rupture cannon in the Shooting phase (507ms)
+      ✓ should find Grasping tongue in the Shooting phase (612ms)
     Fight phase weapons
-      ✓ should find Broodlord Claws and Talons in the Fight phase (1276ms)
-      ✓ should find Blinding venom in the Fight phase (1222ms)
-      ✓ should find Lictor claws and talons in the Fight phase (1181ms)
-      ✓ should find Monstrous bonesword and lash whip in the Fight phase (1295ms)
-      ✓ should find Neurotyrant claws and lashes in the Fight phase (1200ms)
-      ✓ should find Hormagaunt talons in the Fight phase (1172ms)
-      ✓ should find Chitinous claws and teeth in the Fight phase (1152ms)
-      ✓ should find Piercing claws and talons in the Fight phase (1261ms)
-      ✓ should find Genestealer claws and talons in the Fight phase (1297ms)
-      ✓ should find Leaper's talons in the Fight phase (1201ms)
-      ✓ should find Chitin-barbed limbs in the Fight phase (1181ms)
-      ✓ should find Ravenous maw in the Fight phase (1313ms)
-      ✓ should find Shovelling claws in the Fight phase (1252ms)
-      ✓ should find Monstrous scything talons in the Fight phase (1155ms)
-      ✓ should find Talons and betentacled maw in the Fight phase (1309ms)
-      ✓ should find Powerful limbs in the Fight phase (1243ms)
-      ✓ should find Toxinjector Harpoon in the Fight phase (1283ms)
+      ✓ should find Broodlord Claws and Talons in the Fight phase (537ms)
+      ✓ should find Blinding venom in the Fight phase (486ms)
+      ✓ should find Lictor claws and talons in the Fight phase (472ms)
+      ✓ should find Monstrous bonesword and lash whip in the Fight phase (472ms)
+      ✓ should find Neurotyrant claws and lashes in the Fight phase (494ms)
+      ✓ should find Hormagaunt talons in the Fight phase (556ms)
+      ✓ should find Chitinous claws and teeth in the Fight phase (498ms)
+      ✓ should find Piercing claws and talons in the Fight phase (537ms)
+      ✓ should find Genestealer claws and talons in the Fight phase (547ms)
+      ✓ should find Leaper's talons in the Fight phase (573ms)
+      ✓ should find Chitin-barbed limbs in the Fight phase (530ms)
+      ✓ should find Ravenous maw in the Fight phase (485ms)
+      ✓ should find Shovelling claws in the Fight phase (515ms)
+      ✓ should find Monstrous scything talons in the Fight phase (511ms)
+      ✓ should find Talons and betentacled maw in the Fight phase (468ms)
+      ✓ should find Powerful limbs in the Fight phase (490ms)
+      ✓ should find Toxinjector Harpoon in the Fight phase (479ms)
 
 
-  27 passing (36s)
+  28 passing (17s)
 
 
   (Results)
 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        27                                                                               │
-  │ Passing:      27                                                                               │
+  │ Tests:        28                                                                               │
+  │ Passing:      28                                                                               │
   │ Failing:      0                                                                                │
   │ Pending:      0                                                                                │
   │ Skipped:      0                                                                                │
   │ Screenshots:  0                                                                                │
   │ Video:        false                                                                            │
-  │ Duration:     35 seconds                                                                       │
+  │ Duration:     16 seconds                                                                       │
   │ Spec Ran:     All Weapons Exist Tests/all_tyranids_exist.cy.ts                                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  All Weapons Exist Tests/all_votann_exist.cy.ts                                (30 of 30)
+
+
+  Verify all Legends of Votann units and weapons exist
+    Shooting phase weapons
+      ✓ should find Volkanite disintegrator in the Shooting phase (923ms)
+      ✓ should find Graviton rifle in the Shooting phase (568ms)
+      ✓ should find Autoch-pattern bolt pistol in the Shooting phase (518ms)
+      ✓ should find Las-beam cutter in the Shooting phase (605ms)
+      ✓ should find Autoch-pattern combi-bolter in the Shooting phase (555ms)
+      ✓ should find Autoch-pattern bolter in the Shooting phase (501ms)
+      ✓ should find Bolt cannon in the Shooting phase (519ms)
+      ✓ should find Exo-armour grenade launcher in the Shooting phase (489ms)
+      ✓ should find EtaCarn plasma gun in the Shooting phase (501ms)
+      ✓ should find Bolt shotgun in the Shooting phase (522ms)
+      ✓ should find Bolt revolver in the Shooting phase (589ms)
+      ✓ should find Magna-coil autocannon in the Shooting phase (528ms)
+      ✓ should find Cyclic ion cannon in the Shooting phase (509ms)
+      ✓ should find Twin bolt cannon in the Shooting phase (528ms)
+      ✓ should find HYLas beam cannon in the Shooting phase (468ms)
+      ✓ should find L7 missile launcher in the Shooting phase (485ms)
+      ✓ should find Sagitaur missile launcher in the Shooting phase (489ms)
+      ✓ should find MATR autocannon in the Shooting phase (503ms)
+      ✓ should find Ancestral Wrath in the Shooting phase (498ms)
+      ✓ should find Pan spectral scanner in the Shooting phase (532ms)
+    Fight phase weapons
+      ✓ should find Blade of the Ancestors in the Fight phase (548ms)
+      ✓ should find Plasma torch in the Fight phase (562ms)
+      ✓ should find Graviton hammer in the Fight phase (526ms)
+      ✓ should find Close combat weapon in the Fight phase (478ms)
+      ✓ should find Manipulator arms in the Fight phase (458ms)
+      ✓ should find Mass hammer in the Fight phase (446ms)
+      ✓ should find Ancestral ward stave in the Fight phase (461ms)
+      ✓ should find Rampart crest in the Fight phase (479ms)
+      ✓ should find Forgewrought plasma axe in the Fight phase (470ms)
+      ✓ should find Heavy plasma axe in the Fight phase (577ms)
+      ✓ should find Concussion gauntlet in the Fight phase (528ms)
+      ✓ should find Plasma knife in the Fight phase (460ms)
+
+
+  32 passing (19s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        32                                                                               │
+  │ Passing:      32                                                                               │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     18 seconds                                                                       │
+  │ Spec Ran:     All Weapons Exist Tests/all_votann_exist.cy.ts                                   │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
@@ -1502,78 +1474,78 @@
 
        Spec                                              Tests  Passing  Failing  Pending  Skipped  
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ ✔  cards_collapse.cy.ts                     00:12        5        5        -        -        - │
+  │ ✔  cards_collapse.cy.ts                     00:03        5        5        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
   │ ✔  changelog.cy.ts                          00:01        2        2        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✖  detachment_rules.cy.ts                   00:11        4        3        1        -        - │
+  │ ✔  detachment_rules.cy.ts                   00:02        4        4        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  instructions.cy.ts                       00:02        3        3        -        -        - │
+  │ ✔  instructions.cy.ts                       00:03        5        5        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  invalid_list.cy.ts                       00:01        2        2        -        -        - │
+  │ ✔  invalid_list.cy.ts                       00:02        3        3        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  list_display.cy.ts                       02:11       23       23        -        -        - │
+  │ ✔  list_card_tests.cy.ts                    00:06        9        9        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  name_specific.cy.ts                      00:02        3        3        -        -        - │
+  │ ✔  list_table_tests.cy.ts                   00:05       10       10        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  page_open.cy.ts                          692ms        1        1        -        -        - │
+  │ ✔  name_specific.cy.ts                      00:01        3        3        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  phase_filter.cy.ts                       00:05        6        6        -        -        - │
+  │ ✔  page_open.cy.ts                          870ms        1        1        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  printing.cy.ts                           00:05        3        3        -        -        - │
+  │ ✔  phase_filter.cy.ts                       00:04        6        6        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  reset_button.cy.ts                       00:01        1        1        -        -        - │
+  │ ✔  printing.cy.ts                           00:03        3        3        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  resize_window.cy.ts                      00:04        1        1        -        -        - │
+  │ ✔  reset_button.cy.ts                       00:02        2        2        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✖  resize_window.cy.ts                      00:14        2        1        1        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
   │ ✔  scroll_to_top_button.cy.ts               00:01        1        1        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  session_storage.cy.ts                    00:01        1        1        -        -        - │
+  │ ✔  settings.cy.ts                           00:09       12       12        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  settings.cy.ts                           00:11       11       11        -        -        - │
+  │ ✔  stratagem_panel.cy.ts                    00:15        3        3        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  stratagem_panel.cy.ts                    00:04        1        1        -        -        - │
+  │ ✔  weapon_counts.cy.ts                      00:01        1        1        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✖  weapon_counts.cy.ts                      00:05        1        -        1        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_adeptus      07:05       37       37        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_adeptus      00:31       37       37        -        -        - │
   │    _astartes_exist.cy.ts                                                                       │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_admech_      02:10       44       44        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_admech_      00:26       44       44        -        -        - │
   │    exist.cy.ts                                                                                 │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_aeldari      04:06       58       58        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_aeldari      00:41       58       58        -        -        - │
   │    _exist.cy.ts                                                                                │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✖  All Weapons Exist Tests/all_chaos_k      01:13       36       35        1        -        - │
+  │ ✔  All Weapons Exist Tests/all_chaos_k      00:23       36       36        -        -        - │
   │    nights_exist.cy.ts                                                                          │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_chaos_l      00:06        7        7        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_chaos_l      00:04        7        7        -        -        - │
   │    ords_exist.cy.ts                                                                            │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✖  All Weapons Exist Tests/all_demons_      06:03       79       77        2        -        - │
+  │ ✔  All Weapons Exist Tests/all_demons_      01:00       79       79        -        -        - │
   │    exist.cy.ts                                                                                 │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_guard_e      08:53       64       64        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_guard_e      00:54       64       64        -        -        - │
   │    xist.cy.ts                                                                                  │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✖  All Weapons Exist Tests/all_lychgua      00:06        2        1        1        -        - │
+  │ ✔  All Weapons Exist Tests/all_lychgua      00:01        2        2        -        -        - │
   │    rd_exist.cy.ts                                                                              │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_necrons      03:46       65       65        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_necrons      00:46       65       65        -        -        - │
   │    _exist.cy.ts                                                                                │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_nr_314_      00:50       26       26        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_nr_314_      00:16       26       26        -        -        - │
   │    fnf_tau_exist.cy.ts                                                                         │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_nr_fnf_      00:21       16       16        -        -        - │
-  │    tau_weapons_exist.cy.ts                                                                     │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_tau_exi      01:40       40       40        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_tau_exi      00:25       40       40        -        -        - │
   │    sts.cy.ts                                                                                   │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ ✔  All Weapons Exist Tests/all_tyranid      00:35       27       27        -        -        - │
+  │ ✔  All Weapons Exist Tests/all_tyranid      00:16       28       28        -        -        - │
   │    s_exist.cy.ts                                                                               │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  All Weapons Exist Tests/all_votann_      00:18       32       32        -        -        - │
+  │    exist.cy.ts                                                                                 │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    ✖  5 of 30 failed (17%)                     40:29      570      564        6        -        -  
+    ✖  1 of 30 failed (3%)                      07:29      590      589        1        -        -  
 

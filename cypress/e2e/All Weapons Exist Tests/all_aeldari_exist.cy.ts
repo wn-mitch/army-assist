@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
 
-describe('Verify all Aeldari units and weapons exist', () => {
+describe("Verify all Aeldari units and weapons exist", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_aeldari.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const shootingWeapons = [
@@ -66,21 +67,21 @@ describe('Verify all Aeldari units and weapons exist', () => {
     "Titanic Ghostglaive",
     "Ghostspear",
     "Laser Lance",
-    "Bladevanes"
+    "Bladevanes",
   ];
 
   describe("Shooting phase weapons", () => {
-    shootingWeapons.forEach(weapon => {
+    shootingWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Eldar", weapon);
       });
     });
   });
 
   describe("Fight phase weapons", () => {
-    fightWeapons.forEach(weapon => {
+    fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Eldar", weapon);
       });
     });
   });

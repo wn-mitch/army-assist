@@ -3,6 +3,7 @@ import React from "react";
 import Phase from "@/types/Phase";
 import Ability from "@/types/Ability";
 import ListUnit from "@/types/ListUnit";
+import useStore from "@/store/store";
 
 const PhaseAbilities: React.FC<{
   unit: ListUnit;
@@ -11,6 +12,20 @@ const PhaseAbilities: React.FC<{
   const phaseAbilities = unit.abilities.filter((ability: Ability) =>
     ability.phases.includes(phase)
   );
+
+  const truncateCoreAbilities = useStore((state) => state.settings.truncateCoreRules);
+
+  const description = (ability: Ability) => {
+    if (ability.type === "Core") {
+      if (truncateCoreAbilities) {
+        return "See Core Rules";
+      } else {
+        return ability.description;
+      }
+    } else {
+      return ability.description;
+    }
+  };
 
   const damagedSection = () => {
     return unit.datasheet &&
@@ -42,7 +57,7 @@ const PhaseAbilities: React.FC<{
             {ability.name}
           </div>
           <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200">
-            {ability.description}
+            {description(ability)}
           </div>
         </li>
       ))}

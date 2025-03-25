@@ -11,7 +11,7 @@ import useStore from "@/store/store";
 export default function StratagemPanel() {
   const [open, setOpen] = useState(false);
 
-  const phase = useStore((state) => state.phase);
+  const phase = useStore((state) => state.storedLists[state.activeList].phase);
   const getStratagemsByPhase = useStore((state) => state.getStratagemsByPhase);
   const stratagems = getStratagemsByPhase(phase);
 
@@ -60,6 +60,7 @@ export default function StratagemPanel() {
           <div className="absolute inset-0 overflow-hidden">
             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16">
               <DialogPanel
+                id="stratagem-panel"
                 transition
                 className="pointer-events-auto w-screen max-w-2xl transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700"
               >
@@ -72,12 +73,13 @@ export default function StratagemPanel() {
                       <div className="ml-3 flex h-7 items-center">
                         <button
                           type="button"
-                          onTouchEnd={() => setOpen(false)}
+                          onClick={() => setOpen(false)}
+                          id="close-stratagem-panel-button"
                           className="relative rounded-md text-gray-800 dark:text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                         >
                           <span className="absolute -inset-2.5" />
                           <span className="sr-only">Close panel</span>
-                          <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                          <XMarkIcon aria-hidden="true" className="h-8 w-8" />
                         </button>
                       </div>
                     </div>

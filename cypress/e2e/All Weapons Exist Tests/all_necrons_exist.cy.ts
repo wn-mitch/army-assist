@@ -2,7 +2,8 @@
 
 describe("Ensure all weapons listed in nr_necrons are listed on either the Shooting or Fight phase pages", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_necrons.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const shootingWeapons = [
@@ -79,7 +80,7 @@ describe("Ensure all weapons listed in nr_necrons are listed on either the Shoot
   describe("Shooting phase weapons", () => {
     shootingWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Necrons", weapon);
       });
     });
   });
@@ -87,7 +88,7 @@ describe("Ensure all weapons listed in nr_necrons are listed on either the Shoot
   describe("Fight phase weapons", () => {
     fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Necrons", weapon);
       });
     });
   });

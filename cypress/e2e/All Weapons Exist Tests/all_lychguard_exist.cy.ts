@@ -2,7 +2,8 @@
 
 describe("Verify all Lychguard weapons exist", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("lychguard.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const fightWeapons = [
@@ -13,7 +14,7 @@ describe("Verify all Lychguard weapons exist", () => {
   describe("Fight phase weapons", () => {
     fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Lychguard", weapon);
       });
     });
   });

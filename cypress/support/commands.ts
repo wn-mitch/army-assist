@@ -12,28 +12,14 @@
 Cypress.Commands.add("pasteListWithArgument", (filename: string) => {
   // Read the text from the file
   cy.readFile(`src/assets/lists/${filename}`).then((text) => {
-    // Normalize newlines in the text from the file
     const normalizedText = text.replace(/\r\n/g, "\n");
-
-    // Visit the application page
-    cy.visit("/");
-
-    // Click the button with the "close-changelog" id
-    cy.get("button#close-changelog").click();
+    cy.get("#add-list-button").click();
 
     // Find the Pastebox textarea and paste the text into it
-    cy.get("textarea#comment").type(normalizedText, {
-      delay: 0,
-      parseSpecialCharSequences: false,
-    });
-
-    // Optionally, you can add assertions to verify the text was pasted correctly
     cy.get("textarea#comment")
-      .invoke("val")
-      .then((val) => {
-        // Normalize newlines in the value from the textarea
-        const normalizedVal = val.replace(/\r\n/g, "\n");
-        expect(normalizedVal.trim()).to.equal(normalizedText.trim());
+      .type(normalizedText, {
+        delay: 0,
+        parseSpecialCharSequences: false,
       })
       .then(() => {
         cy.get("button[type='submit']").click();
@@ -41,12 +27,38 @@ Cypress.Commands.add("pasteListWithArgument", (filename: string) => {
   });
 });
 
-Cypress.Commands.add("checkShootingPhase", (weapon: string) => {
-  cy.get("#headlessui-radio-\\:rd\\:").click();
+Cypress.Commands.add("checkCommandPhase", (listName:string, weapon: string) => {
+  cy.contains(listName).click()
+  cy.get("#Command-button").click();
   cy.contains(new RegExp(weapon, "i")).should("exist");
 });
 
-Cypress.Commands.add("checkFightPhase", (weapon: string) => {
-  cy.get("#headlessui-radio-\\:rf\\:").click();
+Cypress.Commands.add("checkMovementPhase", (listName:string, weapon: string) => {
+  cy.contains(listName).click()
+  cy.get("#Movement-button").click();
+  cy.contains(new RegExp(weapon, "i")).should("exist");
+});
+
+Cypress.Commands.add("checkShootingPhase", (listName:string, weapon: string) => {
+  cy.contains(listName).click()
+  cy.get("#Shooting-button").click();
+  cy.contains(new RegExp(weapon, "i")).should("exist");
+});
+
+Cypress.Commands.add("checkChargePhase", (listName:string, weapon: string) => {
+  cy.contains(listName).click()
+  cy.get("#Charge-button").click();
+  cy.contains(new RegExp(weapon, "i")).should("exist");
+});
+
+Cypress.Commands.add("checkFightPhase", (listName: string,weapon: string) => {
+  cy.contains(listName).click()
+  cy.get("#Fight-button").click();
+  cy.contains(new RegExp(weapon, "i")).should("exist");
+});
+
+Cypress.Commands.add("checkSavesPhase", (listName: string,weapon: string) => {
+  cy.contains(listName).click()
+  cy.get("#Saves-button").click();
   cy.contains(new RegExp(weapon, "i")).should("exist");
 });

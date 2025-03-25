@@ -12,8 +12,8 @@ import {
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/outline";
 
 function PhaseFilter() {
-  const phase = useStore((state) => state.phase);
-  const activePhases = useStore((state) => state.activePhases);
+  const phase = useStore((state) => state.storedLists[state.activeList].phase);
+  const activePhases = useStore((state) => state.settings.activePhases);
   const setPhase = useStore((state) => state.setPhase);
   const [isDropdown, setIsDropdown] = useState(window.innerWidth <= 768);
 
@@ -57,6 +57,7 @@ function PhaseFilter() {
                     <ListboxOption
                       key={currentPhase}
                       value={currentPhase}
+                      id={`${currentPhase}-button`}
                       className="group relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 data-[focus]:bg-gray-600 data-[focus]:text-white data-[focus]:outline-none dark:text-gray-100"
                     >
                       <span className="block truncate font-normal group-data-[selected]:font-semibold">
@@ -83,6 +84,7 @@ function PhaseFilter() {
               activePhases[currentPhase] && (
                 <Radio
                   key={currentPhase}
+                  id={`${currentPhase}-button`}
                   value={currentPhase}
                   className={({ checked }) =>
                     classNames(

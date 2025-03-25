@@ -2,7 +2,8 @@
 
 describe("Verify all Legends of Votann units and weapons exist", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_votann.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const shootingWeapons = [
@@ -25,7 +26,7 @@ describe("Verify all Legends of Votann units and weapons exist", () => {
     "Sagitaur missile launcher",
     "MATR autocannon",
     "Ancestral Wrath",
-    "Pan spectral scanner"
+    "Pan spectral scanner",
   ];
 
   const fightWeapons = [
@@ -40,13 +41,13 @@ describe("Verify all Legends of Votann units and weapons exist", () => {
     "Forgewrought plasma axe",
     "Heavy plasma axe",
     "Concussion gauntlet",
-    "Plasma knife"
+    "Plasma knife",
   ];
 
   describe("Shooting phase weapons", () => {
     shootingWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Votann", weapon);
       });
     });
   });
@@ -54,7 +55,7 @@ describe("Verify all Legends of Votann units and weapons exist", () => {
   describe("Fight phase weapons", () => {
     fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Votann", weapon);
       });
     });
   });

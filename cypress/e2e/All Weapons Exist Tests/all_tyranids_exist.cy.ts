@@ -2,7 +2,8 @@
 
 describe("Ensure all weapons listed in nr_tyranids_weapons are listed on either the Shooting or Fight phase pages", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_tyranids_weapons.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
   });
 
   const shootingWeapons = [
@@ -39,18 +40,22 @@ describe("Ensure all weapons listed in nr_tyranids_weapons are listed on either 
   ];
 
   describe("Shooting phase weapons", () => {
-    shootingWeapons.forEach(weapon => {
+    shootingWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Shooting phase`, () => {
-        cy.checkShootingPhase(weapon);
+        cy.checkShootingPhase("Tyranids Weapons", weapon);
       });
     });
   });
 
   describe("Fight phase weapons", () => {
-    fightWeapons.forEach(weapon => {
+    fightWeapons.forEach((weapon) => {
       it(`should find ${weapon} in the Fight phase`, () => {
-        cy.checkFightPhase(weapon);
+        cy.checkFightPhase("Tyranids Weapons", weapon);
       });
     });
   });
+
+  it("should see the FNP 5+ in the Saves Phase", () => {
+    cy.checkSavesPhase("Tyranids Default", "FNP 5+");
+  })
 });

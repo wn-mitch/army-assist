@@ -2,10 +2,10 @@ import React from "react";
 
 import DatasheetWargear from "@/types/DatasheetWargear";
 
-import KeywordTags from "@/components/CardComponents/KeywordTags";
 import TableCell from "./TableComponents.tsx/TableCell";
 import TableHeaderCell from "./TableComponents.tsx/TableHeaderCell";
 import Phase from "@/types/Phase";
+import KeywordTags from "../KeywordTags";
 
 const WeaponPhaseTable = ({
   counts,
@@ -45,6 +45,8 @@ const WeaponPhaseTable = ({
               weapon.line_in_wargear && parseInt(weapon.line_in_wargear) > 1;
 
             const isWeaponProfile = nextLineIsProfile || currLineIsProfile;
+            const truncatedWeaponName = weapon?.name ? weapon.name.split(" - ") : [];
+
             return (
               <tr
                 key={index}
@@ -65,7 +67,7 @@ const WeaponPhaseTable = ({
                   </TableCell>
                 )}
                 <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.name ? counts[weapon.name] : 0}
+                  {weapon.name ? counts[truncatedWeaponName[0] || weapon.name] : 0}
                 </TableCell>
                 <TableCell className="w-1/12 dark:font-semibold">
                   {weapon.A}

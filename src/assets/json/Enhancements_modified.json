@@ -360,6 +360,7 @@
         "description": "SHIELD-CAPTAIN model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 3, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -1375,7 +1376,9 @@
         "legend": "An ancient relic of Aeldari technology, this device enhances the lethality of those weapons said to channel the killing heal ofVaul's blazing forges.",
         "description": "ASURYANI model only. While the bearer is leading a STORM GUARDIANS unit, each time you roll to determine the number of attacks made with a flamer equipped by a model in that unit, you can re-roll the result, and each time you make a Damage roll for a model equipped with a Guardian fusion gun in that unit, you can re-roll the result.",
         "": "",
-        "phases": []
+        "phases": [
+            "Shooting"
+        ]
     },
     {
         "id": "000009769005",
@@ -2775,6 +2778,7 @@
         "description": "LEGIONES DAEMONICA TZEENTCH MONSTER model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -6556,6 +6560,7 @@
         "description": "ADEPTUS ASTARTES model only.Improve the Attacks characteristic of the bearer's melee weapons by 1.While the bearer is leading a unit, if the Accept Any Challenge, No Matter the Odds vow is active for your army, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -7123,7 +7128,9 @@
         "legend": "Adapted from standard-issue fragmentation projectors, this weapon enables the bearer to fire explosive plasma charges on parabolic trajectories. These projectiles drop amongst the enemy and explode in a coruscating fireball that evaporates metal and flesh alike.",
         "description": "T'AU EMPIRE model only. Select one airbursting fragmentation projector equipped by the bearer. Improve the Strength characteristic of that weapon by 3, and improve the Armour Penetration and Damage characteristics of that weapon by 1.",
         "": "",
-        "phases": []
+        "phases": [
+            "Shooting"
+        ]
     },
     {
         "id": "000009645002",
@@ -7255,7 +7262,9 @@
         "legend": "The thermoneutronic projector uses volatile gases siphoned from the coronae of neutron stars to expel a flame capable of searing through the armour plating of a battle tank.",
         "description": "T'AU EMPIRE model only. Select one T'au flamer equipped by the bearer. Improve the Strength characteristic of that weapon by 2, and improve the Armour Penetration and Damage characteristics of that weapon by 1.",
         "": "",
-        "phases": []
+        "phases": [
+            "Shooting"
+        ]
     },
     {
         "id": "000008811003",
@@ -7346,7 +7355,9 @@
         "legend": "The plasma accelerator rifle blends pulse-induction technology with a high-yield plasma generator, rendering it highly effective against both infantry and light vehicles.",
         "description": "T'AU EMPIRE model only. Select one plasma rifle equipped by the bearer. Improve the Strength characteristic of that weapon by 2, and improve the Attacks, Armour Penetration and Damage characteristics of that weapon by 1.",
         "": "",
-        "phases": []
+        "phases": [
+            "Shooting"
+        ]
     },
     {
         "id": "000009983005",
@@ -7357,7 +7368,9 @@
         "legend": "Fusion blades resemble modified versions of the T'au fusion blaster. However, when fired, each weapon unleashes a continuous beam of volatile energy that extends from the muzzle of the weapon.",
         "description": "T'AU EMPIRE model only. Select one fusion blaster equipped by the bearer. Improve the Attacks characteristic of that weapon by 1, improve the Strength characteristic of that weapon by 3, and that weapon has the [MELTA 4] ability.",
         "": "",
-        "phases": []
+        "phases": [
+            "Shooting"
+        ]
     },
     {
         "id": "000008821005",
@@ -8252,7 +8265,9 @@
         "legend": "This helm is forged from unbreakable brass from the Blood God's own throne. Any who seek to take the bearer's skull find that their blades break upon it.",
         "description": "WORLD EATERS model only. Each time an attack  is allocated to the bearer, halve the Damage characteristic of that attack.",
         "": "",
-        "phases": []
+        "phases": [
+            "Saves"
+        ]
     },
     {
         "id": "000009847005",

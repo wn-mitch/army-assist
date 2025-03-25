@@ -2,7 +2,9 @@
 
 describe("Printing Modal Test", () => {
   beforeEach(() => {
-    cy.pasteListWithArgument("nr_fnf_tau.txt");
+    cy.visit("/");
+    cy.get("#close-button").click();
+    cy.contains("2K Tau List").click();
   });
 
   it("should open the printing modal", () => {
@@ -17,7 +19,7 @@ describe("Printing Modal Test", () => {
     cy.contains("Print Pages").should("not.exist");
   });
   
-  it("should paste in the tau list then toggle all options without crashing", () => {
+  it("should open the tau list then toggle all options without crashing", () => {
     cy.get('#print-button').click();
     cy.get('#Units-setting').click()
     cy.get('#Stratagems-setting').click()

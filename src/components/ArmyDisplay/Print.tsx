@@ -7,7 +7,7 @@ import PrintParent from "@/print/PrintParent";
 import PhaseOption from "@/types/PhaseOption";
 import PrintSettings from "@/types/PrintSettings";
 import ContentOption from "@/types/ContentOption";
-import SettingsOption from "./CardComponents/SettingsOption";
+import SettingsOption from "./UnitCardComponents/SettingsOption";
 
 function Print() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +21,7 @@ function Print() {
     Units: true,
     Stratagems: true,
     ArmyAbilities: true,
+    QR: true,
   });
 
   const handleContentOptionChange = (option: keyof ContentOption) => {
@@ -30,8 +31,10 @@ function Print() {
     }));
   };
 
-  const faction = useStore((state) => state.faction);
-  const weaponsFilter = useStore((state) => state.weaponsFilter);
+  const getActiveList = useStore((state) => state.getActiveList);
+  const text = getActiveList().text;
+  const faction = getActiveList().faction;
+  const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
 
   const getProcessedUnits = useStore((state) => state.getProcessedUnitList);
   const processedUnits = getProcessedUnits();
@@ -72,7 +75,7 @@ function Print() {
         aria-label="Open Print Panel"
         id="print-button"
       >
-        <PrinterIcon className="h-6 w-6" />
+        <PrinterIcon className="h-8 w-8" />
       </button>
 
       <Dialog
@@ -93,7 +96,8 @@ function Print() {
               <span className="text-center text-sm">
                 This screen manages the options for printing sheets for your use
                 offline. I recommend printing in landscape view for the best
-                experience. This uses the weapons filter selected in the site settings menu (gear icon).
+                experience. This uses the weapons filter selected in the site
+                settings menu (gear icon).
               </span>
             </div>
 
@@ -174,7 +178,7 @@ function Print() {
             </div>
 
             <div ref={componentRef} className="hidden print:block">
-              {PrintParent(processedUnits, settings)}
+              {PrintParent(text, processedUnits, settings)}
             </div>
 
             <div className="mt-4 flex w-full flex-col display-hidden">

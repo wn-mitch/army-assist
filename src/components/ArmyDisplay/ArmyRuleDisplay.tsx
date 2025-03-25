@@ -1,12 +1,15 @@
-import React  from "react";
+import React from "react";
 import useStore from "@/store/store";
 import { Disclosure, DisclosureButton } from "@headlessui/react";
 
 const ArmyRuleDisplay = () => {
-  const faction = useStore((state) => state.faction);
+  const activeList = useStore((state) => state.activeList);
+  const storedLists = useStore((state) => state.storedLists);
+
+  const phase = storedLists[activeList].phase;
+  const faction = storedLists[activeList].faction;
   const detachment =
-    useStore((state) => state.detachment) || "No Detachment Provided";
-  const phase = useStore((state) => state.phase);
+    storedLists[activeList].detachment || "No Detachment Provided";
   const getArmyAbilities = useStore((state) => state.getArmyAbilities);
   const abilities = getArmyAbilities().filter((ability) =>
     ability.phases.includes(phase)
@@ -24,6 +27,7 @@ const ArmyRuleDisplay = () => {
         {({ open }) => (
           <>
             <DisclosureButton
+              id="army-rule-button"
               className={({ open }) =>
                 classNames(
                   "font-semibold py-2 rounded-lg w-full shadow-sm dark:font-bold",

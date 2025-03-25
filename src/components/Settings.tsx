@@ -4,30 +4,33 @@ import { CogIcon } from "@heroicons/react/24/outline";
 import Phase from "@/types/Phase";
 import useStore from "@/store/store";
 import SortOptions from "@/types/SortOptions";
-import SettingsOption from "./CardComponents/SettingsOption";
+import SettingsOption from "./ArmyDisplay/UnitCardComponents/SettingsOption";
 
 function Settings() {
   const [isOpen, setIsOpen] = useState(false);
-  const activePhases = useStore((state) => state.activePhases);
+  const activePhases = useStore((state) => state.settings.activePhases);
   const togglePhase = useStore((state) => state.togglePhase);
 
-  const activeSort = useStore((state) => state.listSort);
+  const activeSort = useStore((state) => state.settings.listSort);
   const setListSort = useStore((state) => state.setListSort);
 
-  const cardsCollapse = useStore((state) => state.cardsCollapse);
+  const cardsCollapse = useStore((state) => state.settings.cardsCollapse);
   const setCardsCollapse = useStore((state) => state.setCardsCollapse);
 
-  const showKeywords = useStore((state) => state.showKeywords);
+  const showKeywords = useStore((state) => state.settings.showKeywords);
   const setShowKeywords = useStore((state) => state.setShowKeywords);
 
-  const isDarkMode = useStore((state) => state.isDarkMode);
+  const isDarkMode = useStore((state) => state.settings.isDarkMode);
   const setIsDarkMode = useStore((state) => state.setIsDarkMode);
 
-  const cardsGroup = useStore((state) => state.cardsGroup);
+  const cardsGroup = useStore((state) => state.settings.cardsGroup);
   const setCardsGroup = useStore((state) => state.setCardsGroup);
 
-  const weaponsFilter = useStore((state) => state.weaponsFilter);
+  const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
   const setWeaponsFilter = useStore((state) => state.setWeaponsFilter);
+  
+  const truncateCoreRules = useStore((state) => state.settings.truncateCoreRules);
+  const setTruncateCoreRules = useStore((state) => state.setTruncateCoreRules);
 
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
@@ -40,7 +43,7 @@ function Settings() {
         aria-label="Open Settings Panel"
         id="settings-button"
       >
-        <CogIcon className="h-6 w-6" />
+        <CogIcon className="h-8 w-8" />
       </button>
 
       <Dialog
@@ -132,7 +135,7 @@ function Settings() {
                 id={""}
               />
             </div>
-
+            
             <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
               <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 Filter Weapons
@@ -141,6 +144,18 @@ function Settings() {
                 label="Filter the weapons shown on the datacard by what's on your list. If you see (or don't see, rather) missing weapons, this is a good option to disable."
                 checked={weaponsFilter}
                 onChange={() => setWeaponsFilter(!weaponsFilter)}
+                id={""}
+              />
+            </div>
+
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                Truncate Core Rules
+              </h2>
+              <SettingsOption
+                label="Shorten the rules descriptions for core rules items that you probably already know. This covers Infiltrators, Stealth, etc."
+                checked={truncateCoreRules}
+                onChange={() => setTruncateCoreRules(!truncateCoreRules)}
                 id={""}
               />
             </div>

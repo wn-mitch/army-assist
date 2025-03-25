@@ -1,18 +1,25 @@
 import React from "react";
-import Pastebox from "./Pastebox";
 import useStore from "@/store/store";
-import ListDisplay from "./ListDisplay";
+import SingleListDisplay from "./ArmyDisplay/SingleListDisplay";
+import StoredListDisplay from "./ListsDisplay/StoredListsDisplay";
 
 function Body() {
-  const hasUnits = useStore((state) => state.units.length > 0);
+  const activeListIndex = useStore((state) => state.activeList);
+  const hasActiveList = activeListIndex >= 0;
 
-  const bodyContent = hasUnits ? <ListDisplay /> : <Pastebox />;
+  const bodyContent = () => {
+    if (!hasActiveList) {
+      return <StoredListDisplay />;
+    } else {
+      return <SingleListDisplay activeListIndex={activeListIndex}/>
+    }
+  };
 
-    return (
-      <div className="flex flex-1 bg-gray-200 dark:bg-gray-900">
-        {bodyContent}
-      </div>
-    );
+  return (
+    <div className="flex flex-1 bg-gray-200 dark:bg-gray-900">
+      {bodyContent()}
+    </div>
+  );
 }
 
 export default Body;
