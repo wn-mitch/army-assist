@@ -1,10 +1,35 @@
-[
+
+[{
+    "version": "1.9.2",
+    "stateVersion": 20,
+    "date": "03/24/2025",
+    "changes": [
+      "I have been laid off from my job, so if you happen to have a manager who plays warhammer please send them this site :)",
+      "Fixed a bug where the Boarding Actions stratagems still managed to sneak through.",
+      "Added a new check that looks for weapon profiles and renders them with a ➤ prepending them. Thank you to the community (Peter S) for this suggestion!",
+      "Fixed a bug where the previous fix for grouping made all objects ungroup. Whoops! Now uses per item checking.",
+      "Fixed a bug where list weapon lines such as \"Weapon Name 1 and Weapon Name 2\" would cause neither weapon to be included in the list",
+      "Updated data from Wahapedia. Will add a new feature to show last sync date soonish"
+    ]
+  },
+  {
+    "version": "1.9.1",
+    "stateVersion": 19,
+    "date": "03/17/2025",
+    "changes": [
+      "Fixed a bug where the unit grouping function wouldn't check unit enhancements, which could cause some units to be hidden unintentionally.",
+      "Fixed a bug where the Boarding Actions stratagems were getting pulled through.",
+      "Fixed a bug with aura abilities. This should have applied to all aura abilities, please let me know if they are missing from your lists.",
+      "Fixed a bug where Deathwatch detachment rules appeared on Space Marine lists",
+      "Fixed a bug where Agents of the Imperium detachment rules appeared on Space Marine lists",
+      "Fixed a bug where the abilities displayed on the shooting print section were from the Movement phase"
+    ]
+  },
   {
     "version": "1.9.0",
     "stateVersion": 18,
     "date": "03/14/2025",
     "changes": [
-      "I have been laid off from my job, so if you happen to have a manager who plays warhammer please send them this site :)",
       "Significantly improved the Light Mode design. If you experience accessibility issues with the site, I'd love to hear from you on discord!",
       "Refactored the middleware on the parser. While this results in slightly slower list processing, it significantly speeds up the render time when tabbing around!",
       "Fixed some additional issues with Tyranid weapon mappings",

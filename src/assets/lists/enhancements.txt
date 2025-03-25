@@ -1,0 +1,13 @@
+Chaos - Chaos Space Marines - Test - [445 pts]
+
+# ++ Army Roster ++ [445 pts]
+## Configuration
+Battle Size
+Detachment Choice: Creations of Bile
+Show/Hide Options: Chaos Knights are visible, Khorne Daemons are visible, Legends are visible, Nurgle Daemons are visible, Slaanesh Daemons are visible, Titans are visible, Tzeentch Daemons are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Character [445 pts]
+Chaos Lord [125 pts]: Prime Test Subject, Daemon hammer, Plasma pistol
+Chaos Lord [100 pts]: Surgical Precision, Daemon hammer, Plasma pistol
+Chaos Lord [105 pts]: Living Carapace, Daemon hammer, Plasma pistol
+Chaos Lord [115 pts]: Helm of All-Seeing, Daemon hammer, Plasma pistol

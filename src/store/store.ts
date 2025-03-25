@@ -27,9 +27,11 @@ import {
   applyMissingAbilities,
   applyMissingWeapons,
   applyNameOverrides,
-  applyWeaponOverrides,
+  applyWeaponAndEnhancementOverrides,
+  arraysEqual,
 } from "@/utils/StoreHelper";
 import Ability from "@/types/Ability";
+import { GiConsoleController } from "react-icons/gi";
 
 interface StoreState {
   text: string;
@@ -144,7 +146,7 @@ const useStore = create<StoreState>()(
 
         lines.forEach((line, index) => {
           const detachmentMatch = line.match(
-            /Detachment[\sChoice]*: ([\w\s-]+)/
+            /Detachment[\sChoices]*: ([\w\s-]+)/
           );
 
           if (detachmentMatch) {
@@ -338,7 +340,10 @@ const useStore = create<StoreState>()(
               });
 
               // Weapon Overrides
-              unit.weapons = applyWeaponOverrides(datasheet, unit.weapons);
+              unit.weapons = applyWeaponAndEnhancementOverrides(
+                datasheet,
+                unit.weapons
+              );
 
               const updatedCount: Record<string, number> = {};
 
@@ -382,7 +387,9 @@ const useStore = create<StoreState>()(
 
               const matchingEnhancements = Enhancements.filter(
                 (enhancement: Enhancement) =>
-                  unit.weapons?.includes(enhancement.name)
+                  unit.weapons
+                    ?.map((weapon) => weapon.toLowerCase())
+                    .includes(enhancement.name.toLowerCase())
               );
 
               const keywords = DatasheetKeywords.filter(
@@ -463,7 +470,13 @@ const useStore = create<StoreState>()(
 
         const groupedUnits = cardsGroup
           ? units.reduce((acc: ListUnit[], curr: ListUnit) => {
-              const index = acc.findIndex((item) => item.name === curr.name);
+              const index = acc.findIndex((item) => {
+                return (
+                  item.name === curr.name &&
+                  arraysEqual(item.enhancements, curr.enhancements) &&
+                  arraysEqual(item.weapons ?? [], curr.weapons ?? [])
+                );
+              });
               if (index !== -1) {
                 acc[index].groupCount = (acc[index].groupCount || 1) + 1;
               } else {

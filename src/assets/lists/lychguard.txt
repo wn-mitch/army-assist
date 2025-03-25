@@ -1,0 +1,13 @@
+Xenos - Necrons - Lychguard - [170 pts]
+
+# ++ Army Roster ++ [170 pts]
+## Configuration
+Battle Size
+Detachment Choice
+Show/Hide Options: Legends are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Infantry [170 pts]
+Lychguard [85 pts]:
+• 5x Lychguard: Warscythe
+Lychguard [85 pts]:
+• 5x Lychguard: Hyperphase sword and dispersion shield

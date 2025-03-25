@@ -1,0 +1,10 @@
+Imperium - Grey Knights - Warpbane - [100 pts]
+
+# ++ Army Roster ++ [100 pts]
+## Configuration
+Battle Size
+Detachment: Warpbane Task Force
+Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible, Legends are visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+
+## Character [100 pts]
+Brother-Captain [100 pts]: Paragon of Sanctity, Nemesis force weapon, Storm bolter

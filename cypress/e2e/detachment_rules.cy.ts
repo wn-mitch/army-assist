@@ -32,4 +32,16 @@ describe("Detachment rules test", () => {
     cy.contains("Blessings of Khorne").should("not.exist")
     cy.contains("Nurgle's Gift (Aura)").should("not.exist")
   });
+
+  it("should paste in the deathwatch list and see SM army rules", () => {
+    cy.pasteListWithArgument("deathwatch.txt");
+    cy.get('#headlessui-disclosure-button-\\:rh\\:').click();
+    cy.contains("Oath of Moment").should("exist")
+  });
+  
+  it("should paste in the shield host list and see the detachment rules", () => {
+    cy.pasteListWithArgument("nr_shield_host_custodes.txt");
+    cy.get('#headlessui-disclosure-button-\\:rh\\:').click();
+    cy.contains("Martial Mastery")
+  });
 });

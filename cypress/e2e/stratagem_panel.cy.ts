@@ -7,6 +7,7 @@ describe("Stratagems modal tests", () => {
     cy.contains("COMMAND RE-ROLL")
     cy.contains("INSANE BRAVERY")
     cy.contains("FAIL-SAFE DETONATOR")
+    cy.contains("EXPLOSIVE CLEARANCE").should("not.exist");
     cy.get('body').type('{esc}');
 
     cy.get('#headlessui-radio-\\:rc\\:').click()

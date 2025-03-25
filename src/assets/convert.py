@@ -7,6 +7,8 @@ replacements = {
     r"<[:\.\-\w\d\s;#\\+()\.,\[\]_=\"/]+>": "",
     r"\u2019": "\'",
     r"\u2018": "\'",
+    r"\u2013": "-",
+    r" \(Aura\)": "",
 }
 
 # Define the conditions for rows to be ignored
@@ -31,14 +33,30 @@ ignore_conditions = [
     {"id": "000008359", "faction_id": "DG"},
     {"id": "000008359", "faction_id": "TS"},
     {"id": "000008359", "faction_id": "QT"},
+    {"id": "000008359", "faction_id": "CD"},
     
     # Thrillseekers when added
+    
+    # Agents of the Imperium
+    {"id": "000008452", "faction_id": "SM"},
+    
+    # Deathwatch
+    {"id":"000008521", "faction_id" : "SM"},
+    
+    # We don't care about Boarding Actions
+    {"id": "000009218006","name":"EXPLOSIVE CLEARANCE"},
+    {"id": "000009218005","name":"INSANE BRAVERY"},
+    {"id": "000009218004","name":"COUNTER-OFFENSIVE"},
+    {"id": "000009218003","name":"BATTLEFIELD COMMAND"},
+    {"id": "000009218002","name":"COMMAND RE-ROLL"}
 ]
 
 def should_ignore_row(row):
     for condition in ignore_conditions:
         if all(row.get(key) == value for key, value in condition.items()):
             return True
+    if "detachment" in row:
+        return False
     return False
 
 def csv_to_json(csv_filepath, json_filepath):

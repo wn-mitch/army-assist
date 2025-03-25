@@ -1,0 +1,10 @@
+Imperium - Adeptus Custodes - Shield Host Test - [120 pts]
+
+# ++ Army Roster ++ [120 pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachments: Shield Host
+Show/Hide Options
+
+## Character [120 pts]
+Blade Champion [120 pts]: Vaultswords

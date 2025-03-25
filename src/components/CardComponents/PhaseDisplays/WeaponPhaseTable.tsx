@@ -35,47 +35,60 @@ const WeaponPhaseTable = ({
           </tr>
         </thead>
         <tbody>
-          {weaponDatasheets.map((weapon, index) => (
-            <tr
-              key={index}
-              className={`border dark:border-gray-600 ${
-                index % 2 === 0
-                  ? ""
-                  : "bg-gray-100 group-hover:bg-gray-200 dark:bg-gray-900 dark:group-hover:bg-gray-800"
-              } `}
-            >
-              <TableCell className="w-1/4 px-1 font-semibold dark:font-bold">
-                {weapon.name}
-              </TableCell>
-              {phase !== Phase.Fight && (
-                <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.range === "Melee" ? weapon.range : `${weapon.range}"`}
-                </TableCell>
-              )}
-              <TableCell className="w-1/12 dark:font-semibold">
-                {weapon.name ? counts[weapon.name] : 0}
-              </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
-                {weapon.A}
-              </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
-                {weapon.BS_WS === "N/A" ? weapon.BS_WS : `${weapon.BS_WS}+`}
-              </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
-                {weapon.S}
-              </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
-                {weapon.AP}
-              </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
-                {weapon.D}
-              </TableCell>
-              <KeywordTags
+          {weaponDatasheets.map((weapon, index, arr) => {
+            const nextLineIsProfile =
+              arr[index + 1] &&
+              arr[index + 1].line_in_wargear &&
+              parseInt(arr[index + 1].line_in_wargear as string) > 1;
+
+            const currLineIsProfile =
+              weapon.line_in_wargear && parseInt(weapon.line_in_wargear) > 1;
+
+            const isWeaponProfile = nextLineIsProfile || currLineIsProfile;
+            return (
+              <tr
                 key={index}
-                keywords={weapon.description?.split(", ")}
-              />
-            </tr>
-          ))}
+                className={`border dark:border-gray-600 ${
+                  index % 2 === 0
+                    ? ""
+                    : "bg-gray-100 group-hover:bg-gray-200 dark:bg-gray-900 dark:group-hover:bg-gray-800"
+                } `}
+              >
+                <TableCell className="w-1/4 px-1 font-semibold dark:font-bold">
+                  {isWeaponProfile ? `➤ ${weapon.name}` : weapon.name}
+                </TableCell>
+                {phase !== Phase.Fight && (
+                  <TableCell className="w-1/12 dark:font-semibold">
+                    {weapon.range === "Melee"
+                      ? weapon.range
+                      : `${weapon.range}"`}
+                  </TableCell>
+                )}
+                <TableCell className="w-1/12 dark:font-semibold">
+                  {weapon.name ? counts[weapon.name] : 0}
+                </TableCell>
+                <TableCell className="w-1/12 dark:font-semibold">
+                  {weapon.A}
+                </TableCell>
+                <TableCell className="w-1/12 dark:font-semibold">
+                  {weapon.BS_WS === "N/A" ? weapon.BS_WS : `${weapon.BS_WS}+`}
+                </TableCell>
+                <TableCell className="w-1/12 dark:font-semibold">
+                  {weapon.S}
+                </TableCell>
+                <TableCell className="w-1/12 dark:font-semibold">
+                  {weapon.AP}
+                </TableCell>
+                <TableCell className="w-1/12 dark:font-semibold">
+                  {weapon.D}
+                </TableCell>
+                <KeywordTags
+                  key={index}
+                  keywords={weapon.description?.split(", ")}
+                />
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

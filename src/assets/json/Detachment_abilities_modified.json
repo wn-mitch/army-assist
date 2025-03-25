@@ -17,7 +17,7 @@
         "faction_id": "AC",
         "name": "Revered Companions",
         "legend": "The Custodians and the Silent Sisters often fought as one during the earliest days of the Imperium. Ten thousand years on, they have lost none of the unity of doctrine and purpose that makes them such a deadly combination.",
-        "description": "ANATHEMA PSYKANA units from your army gain the following the ability:Null Aegis (Aura): While an ADEPTUS CUSTODES unit is within 6\" of this unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.All other ADEPTUS CUSTODES units from your army gain the following ability:Deadly Unity (Aura): While an ANATHEMA PSYKANA unit is within 6\" of this unit, each time a model in that ANATHEMA PSYKANA unit makes an attack, add 1 to the Hit roll.",
+        "description": "ANATHEMA PSYKANA units from your army gain the following the ability:Null Aegis: While an ADEPTUS CUSTODES unit is within 6\" of this unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.All other ADEPTUS CUSTODES units from your army gain the following ability:Deadly Unity: While an ANATHEMA PSYKANA unit is within 6\" of this unit, each time a model in that ANATHEMA PSYKANA unit makes an attack, add 1 to the Hit roll.",
         "detachment": "Talons Of The Emperor",
         "": "",
         "phases": [
@@ -29,7 +29,7 @@
     {
         "id": "000008924",
         "faction_id": "AC",
-        "name": "Creeping Dread (Aura)",
+        "name": "Creeping Dread",
         "legend": "The instinctive fear caused by the Pariah gene spreads like a terrible pall before the cadres of the Silent Sisterhood.",
         "description": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is either a PSYKER unit or below its Starting Strength is within 12\" of one or more ANATHEMA PSYKANA models from your army, that enemy unit must take a Battle-shock test. If that unit is Below Half-strength, it must subtract 1 from its Battle-shock test this phase instead.Designer's Note: This means that all enemy PSYKER units within range of this Aura ability and all enemy units within range of this Aura ability that have lost one or more models must take a Battle-shock test in your opponents Command phase, not just those that are Below Half-strength.",
         "detachment": "Null Maiden Vigil",
@@ -103,6 +103,16 @@
             "Charge",
             "Fight"
         ]
+    },
+    {
+        "id": "000009986",
+        "faction_id": "AC",
+        "name": "Against All Odds",
+        "legend": "The Adeptus Custodes are outnumbered on every battlefield upon which they fight, yet no matter the foe, and no matter their number, the Lions of the Emperor will prevail.",
+        "description": "Each time an ADEPTUS CUSTODES unit from your army (excluding VEHICLES) makes an attack, if there are no other friendly units within 6\" of that unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+        "detachment": "Lions of the Emperor",
+        "": "",
+        "phases": []
     },
     {
         "id": "000008384",
@@ -315,7 +325,7 @@
         "faction_id": "AE",
         "name": "Shepherds of the Dead",
         "legend": "When guided by a Spirit Conclave, the ghost warriors gain a clarity and prowess they would otherwise lack. Moreover, should the foe slay any of their precious spirit guides, the dead will surely have their vengeance.",
-        "description": "Each time an ASURYANI PSYKER model from your army is destroyed by an enemy unit, that enemy unit gains a Vengeful Dead token. Each time a WRAITH CONSTRUCT model from your army makes an attack that targets a unit with one or more Vengeful Dead tokens, add 1 to the Hit roll and add 1 to the Wound roll.ASURYANI PSYKER models from your army have the following ability:Spirit Guides (Aura): While a WRAITHBLADES, WRAITHGUARD or WRAITHLORD unit from your army is within 12\" of this model, that unit has the Battle Focus ability.KEYWORDSWRAITHBLADES and WRAITHGUARD units from your army gain the BATTLELINE keyword.",
+        "description": "Each time an ASURYANI PSYKER model from your army is destroyed by an enemy unit, that enemy unit gains a Vengeful Dead token. Each time a WRAITH CONSTRUCT model from your army makes an attack that targets a unit with one or more Vengeful Dead tokens, add 1 to the Hit roll and add 1 to the Wound roll.ASURYANI PSYKER models from your army have the following ability:Spirit Guides: While a WRAITHBLADES, WRAITHGUARD or WRAITHLORD unit from your army is within 12\" of this model, that unit has the Battle Focus ability.KEYWORDSWRAITHBLADES and WRAITHGUARD units from your army gain the BATTLELINE keyword.",
         "detachment": "Spirit Conclave",
         "": "",
         "phases": [
@@ -426,7 +436,7 @@
         "id": "000009798",
         "faction_id": "AM",
         "name": "Only the Best",
-        "legend": "The soldiers who make up such targeted strike forces are hand-picked for their excellence and \u2013 where possible \u2013 provided with rigorous additional training to prepare them for conditions and foes on the ground. ",
+        "legend": "The soldiers who make up such targeted strike forces are hand-picked for their excellence and - where possible - provided with rigorous additional training to prepare them for conditions and foes on the ground. ",
         "description": "Each time an ASTRA MILITARUM INFANTRY model from your army makes a ranged attack, re\u2010roll a Hit roll of 1.",
         "detachment": "Bridgehead Strike",
         "": "",
@@ -439,7 +449,7 @@
         "faction_id": "AM",
         "name": "Fire Zone Purge",
         "legend": "Key to this force's mission is the swift purgation of local enemy forces through sudden deployment and focused firefights. As such, whether they hit the ground from a low-altitude drop or deploy from armoured transports, the soldiers of this formation are trained to find targets and start shooting the instant the foe is in sight.",
-        "description": "Each time a MILITARUM TEMPESTUS model from your army makes a ranged attack in a turn in which it was set up on the battlefield from Reserves or it disembarked from a TRANSPORT, add 1 to the Wound roll.",
+        "description": "Each time a MILITARUM TEMPESTUS model from your army makes a ranged attack in a turn in which it was set up on the battlefield from Reserves or it disembarked from a TRANSPORT, add 1 to the Hit roll.",
         "detachment": "Bridgehead Strike",
         "": "",
         "phases": [
@@ -776,10 +786,11 @@
         "faction_id": "CD",
         "name": "Seductive Gambit",
         "legend": "Temptation is a deadly weapon in the arsenal of the daemons of Slaanesh. To tease warriors' pride with visions of martial glory or to lure the deluded and desperate into a bladed embrace, they delight in dangling themselves like bait or feigning helpless weakness, then striking with savage release at their overextended foes. ",
-        "description": "LEGIONES DAEMONICA SLAANESH units from your army have the following ability:Seductive Gambit: Each time this unit ends a Charge move, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the Fights First ability, but instead, each time a model in this unit makes an attack, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+        "description": "LEGIONES DAEMONICA SLAANESH units from your army have the following ability:Seductive Gambit: Each time this unit ends a Charge move, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the Fights First ability, but instead, each time a model in this unit makes an attack, you can re-roll a Hit roll of 1 and you can re-roll a Wound roll of 1. If this unit is within your army's Shadow of Chaos, you can instead re-roll the Hit roll and you can re-roll a Wound roll of 1.",
         "detachment": "Legion of Excess",
         "": "",
         "phases": [
+            "Command",
             "Shooting",
             "Charge",
             "Fight"
@@ -831,6 +842,35 @@
         "": "",
         "phases": [
             "Command"
+        ]
+    },
+    {
+        "id": "000009976",
+        "faction_id": "CD",
+        "name": "Thralls of the First Prince",
+        "legend": "",
+        "description": "When mustering your army, you cannot include any DAEMON PRINCE, DAEMON PRINCE WITH WINGS or EPIC HERO units (excluding BE'LAKOR), but you can include the following HERETIC ASTARTES units:CHAOS LORDCHAOS LORD IN TERMINATOR ARMOURCHAOS LORD WITH JUMP PACKCHAOS TERMINATOR SQUADCHOSENDAMNED unitsDARK APOSTLEHAVOCSLEGIONARIESMASTER OF POSSESSIONPOSSESSEDRAPTORSSORCERERSORCERER IN TERMINATOR ARMOURWARP TALONSThe combined points value of such units depends on your battle size, as shown below.Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsKEYWORDSBE'LAKOR and HERETIC ASTARTES units from your army gain the SHADOW LEGION and UNDIVIDED keywords.LEGIONES DAEMONICA units from your army gain the SHADOW LEGION keyword.",
+        "detachment": "Shadow Legion",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "id": "000009978",
+        "faction_id": "CD",
+        "name": "First Prince of Chaos",
+        "legend": "Elevated to the status of Daemon Prince by the combined might of the four Dark Gods of Chaos, Be'lakor exudes unimaginable power.",
+        "description": "Units from your army have the relevant abilities presented below.MURDERER'S COWLThe most murderous seek not to hide in the Dark Master's pall. The shadows extend before them, offering a rapid route to slaughter.SHADOW LEGION KHORNE units only.This unit is eligible to shoot and declare a charge in a turn in which it Advanced.PENUMBRAL PUPPETRYMutative agents of change, touched by the Dark Master's umbral aura, summon illusory magicks to confound and confuse their desperate foes.SHADOW LEGION TZEENTCH units only. Each time an attack targets this unit, subtract 1 from the Hit roll.GLOAM ROTBorne upon the gloaming wisp of Be'lakor's shadow, this debilitating curse atrophies muscle and withers flesh, greatly weakening its victims.SHADOW LEGION NURGLE units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from the Wound roll.SHADOW'S CARESSThe Dark Master's shadow falls across his thralls, masking their approach.SHADOW LEGION SLAANESH units only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit.DISCIPLES OF BE'LAKORBe'lakor's immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate-filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy's midst.SHADOW LEGION UNDIVIDED units only.This unit has the Dark Pacts army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not HERETIC ASTARTES. If this unit is BE'LAKOR, it automatically passes the Leadership test required for Dark Pacts.SHADOW LEGION HERETIC ASTARTES models in this unit have the Deep Strike ability.",
+        "detachment": "Shadow Legion",
+        "": "",
+        "phases": [
+            "Command",
+            "Movement",
+            "Shooting",
+            "Charge",
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -888,7 +928,7 @@
     {
         "id": "000008971",
         "faction_id": "CSM",
-        "name": "Terror Descends (Aura)",
+        "name": "Terror Descends",
         "legend": "Bedecked in the flayed skins and leering skulls of former victims, their armour flecked with blood and gore, these reavers descend in a howling gale of enraged screams and soul-piercing shrieks. To look upon their ghastly visages is to feel a terrible and paralysing fear.",
         "description": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
         "detachment": "Dread Talons",
@@ -994,7 +1034,7 @@
         "id": "000009772",
         "faction_id": "CSM",
         "name": "Experimental Augmentations",
-        "legend": "Bile's creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality \u2013 for now.",
+        "legend": "Bile's creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality - for now.",
         "description": "At the start of the battle, select which augmentations are active for HERETIC ASTARTES INFANTRY models (excluding DAMNED models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If FABIUS BILE is your WARLORD, when randomly determining your augmentations, you can re-roll one or both of the dice. Duplicated augmentations have no additional effect.Cholinergic Accelerants: Add 1 to the Attacks characteristic of melee weapons equipped by this model.Hyperadrenal Infusion: Add 2\" to the Move characteristic of this model.Paraneural Reactions: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.Supracutaneous Chitination: Improve the Toughness characteristic of this model by 1.Macrotensile Sinews: Add 1 to the Strength characteristic of melee weapons equipped by this model.Ophthalmic Enhancement: Improve the Ballistic Skill characteristic of ranged weapons equipped by this model by 1.",
         "detachment": "Creations of Bile",
         "": "",
@@ -1010,8 +1050,8 @@
         "id": "000008398",
         "faction_id": "DG",
         "name": "Spread the Sickness",
-        "legend": "To the Death Guard, spreading Nurgle's gifts goes beyond the beings they fight \u2013 even the landscapes they tread upon they seek to corrupt, cultivating Nurgle's garden as widely as possible.",
-        "description": "During the Declare Battle Formations step, select one of the Sicknesses below. Until the end of the battle, all units from your army with the Nurgle's Gift ability gain the selected Sickness.Skullsquirm Blight (Aura): While an enemy unit is within Contagion Range of this unit, worsen the Ballistic Skill and Weapon Skill characteristics of weapons equipped by models in that enemy unit by 1.Rattlejoint Ague (Aura): While an enemy unit is within Contagion Range of this unit, worsen the Save characteristic of models in that enemy unit by 1.Scabrous Soulrot (Aura): While an enemy unit is within Contagion Range of this unit, worsen the Leadership and Objective Control characteristics of models in that enemy unit by 1 (to a minimum of 1).If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army is within range of that objective marker, that objective marker is said to be Infected and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. In addition, while an objective marker is Infected and under your control, it has the Nurgle's Gift ability as if it were a unit from your army (so enemy units within Contagion Range of it will have their characteristics modified).",
+        "legend": "To the Death Guard, spreading Nurgle's gifts goes beyond the beings they fight - even the landscapes they tread upon they seek to corrupt, cultivating Nurgle's garden as widely as possible.",
+        "description": "During the Declare Battle Formations step, select one of the Sicknesses below. Until the end of the battle, all units from your army with the Nurgle's Gift ability gain the selected Sickness.Skullsquirm Blight: While an enemy unit is within Contagion Range of this unit, worsen the Ballistic Skill and Weapon Skill characteristics of weapons equipped by models in that enemy unit by 1.Rattlejoint Ague: While an enemy unit is within Contagion Range of this unit, worsen the Save characteristic of models in that enemy unit by 1.Scabrous Soulrot: While an enemy unit is within Contagion Range of this unit, worsen the Leadership and Objective Control characteristics of models in that enemy unit by 1 (to a minimum of 1).If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army is within range of that objective marker, that objective marker is said to be Infected and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. In addition, while an objective marker is Infected and under your control, it has the Nurgle's Gift ability as if it were a unit from your army (so enemy units within Contagion Range of it will have their characteristics modified).",
         "detachment": "Plague Company",
         "": "",
         "phases": [
@@ -1080,7 +1120,7 @@
         "name": "Realspace Raiders",
         "legend": "The three factions of the Drukhari are constantly vying for supremacy, each convinced beyond doubt of their own innate superiority. This struggle manifests during their realspace raids as a frenzy of murderously sadistic competition.",
         "description": "At the start of the battle, you gain an additional 1 Pain token for each of the following your army contains:One or more ARCHON modelsOne or more SUCCUBUS modelsOne or more HAEMONCULUS modelsDesigner's Note: These are all cumulative, so if your army contains at least one Archon, at least one Succubus and at least one Haemonculus, you would start the battle with an additional 3 Pain tokens.",
-        "detachment": "Realspace Raiders",
+        "detachment": "Realspace Raiders ",
         "": "",
         "phases": [
             "Command",
@@ -1185,6 +1225,30 @@
             "Command",
             "Shooting",
             "Fight"
+        ]
+    },
+    {
+        "id": "000009973",
+        "faction_id": "DRU",
+        "name": "Corsairs and Travelling Players",
+        "legend": "",
+        "description": "If your Army Faction is DRUKHARI, you can include HARLEQUINS and ANHRATHE units in your army, even though they do not have the DRUKHARI Faction keyword. The combined points value of HARLEQUINS and/or ANHRATHE units you can include in your army depends on the battle size, as follows:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo HARLEQUINS or ANHRATHE models included in your army in this way can be your WARLORD, and they cannot be given Enhancements.",
+        "detachment": "Realspace Raiders ",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "id": "000009974",
+        "faction_id": "DRU",
+        "name": "Corsairs and Travelling Players",
+        "legend": "",
+        "description": "If your Army Faction is DRUKHARI, you can include HARLEQUINS and ANHRATHE units in your army, even though they do not have the DRUKHARI Faction keyword. The combined points value of HARLEQUINS and/or ANHRATHE units you can include in your army depends on the battle size, as follows:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo HARLEQUINS or ANHRATHE models included in your army in this way can be your WARLORD, and they cannot be given Enhancements.",
+        "detachment": "Skysplinter Assault",
+        "": "",
+        "phases": [
+            "Command"
         ]
     },
     {
@@ -1306,7 +1370,7 @@
         "faction_id": "GC",
         "name": "Psionic Parasitism",
         "legend": "With each tug on the synaptic leash, the Hive Mind drains more of its hapless worshippers.",
-        "description": "At the end of your Movement phase, for each TYRANIDS SYNAPSE unit from your army, you can select one friendly GENESTEALER CULTS unit (excluding PURESTRAIN GENESTEALER and PATRIARCH units) and one friendly TYRANIDS unit each within 9\" of and visible to that SYNAPSE unit. If you do, that GENESTEALER CULTS unit from your army suffers D3+1 mortal wounds and one model in the selected TYRANIDS unit regains up to that many lost wounds and until the start of your next Movement phase, each time a model in the selected TYRANIDS unit makes an attack, add 1 to the Hit roll.TYRANIDS units from your army have the following ability:Catalyst (Aura): While an enemy unit is within 6\" of this unit, each time a friendly GENESTEALER CULTS unit makes an attack that targets that enemy unit, add 1 to the Hit roll.The Star Children's BlessingsYou can include TYRANIDS VANGUARD INVADER units (excluding AIRCRAFT, BROODLORD and GENESTEALERS units) in your army. The combined points cost of such units depends on your battle size:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo TYRANIDS models from your army can be your WARLORD.",
+        "description": "At the end of your Movement phase, for each TYRANIDS SYNAPSE unit from your army, you can select one friendly GENESTEALER CULTS unit (excluding PURESTRAIN GENESTEALER and PATRIARCH units) and one friendly TYRANIDS unit each within 9\" of and visible to that SYNAPSE unit. If you do, that GENESTEALER CULTS unit from your army suffers D3+1 mortal wounds and one model in the selected TYRANIDS unit regains up to that many lost wounds and until the start of your next Movement phase, each time a model in the selected TYRANIDS unit makes an attack, add 1 to the Hit roll.TYRANIDS units from your army have the following ability:Catalyst: While an enemy unit is within 6\" of this unit, each time a friendly GENESTEALER CULTS unit makes an attack that targets that enemy unit, add 1 to the Hit roll.The Star Children's BlessingsYou can include TYRANIDS VANGUARD INVADER units (excluding AIRCRAFT, BROODLORD and GENESTEALERS units) in your army. The combined points cost of such units depends on your battle size:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo TYRANIDS models from your army can be your WARLORD.",
         "detachment": "Final Day",
         "": "",
         "phases": [
@@ -1359,7 +1423,7 @@
         "faction_id": "GK",
         "name": "Hallowed Ground",
         "legend": "Purging corrupted nodes of Warp energy, the Grey Knights establish an ever-expanding area of hallowed ground within which their psychic powers and indomitable resolve are greatly enhanced.",
-        "description": "Certain areas of the battlefield are within your army's Hallowed Ground, as follows:Your deployment zone is always within your army's Hallowed Ground.The area of the battlefield within 6\" of one or more PURIFIER SQUAD units from your army is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within No Man's Land, until the end of that phase, No Man's Land is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within your opponent's deployment zone, until the end of that phase, your opponent's deployment zone is within your army's Hallowed Ground.Each time a model in a GREY KNIGHTS unit from your army makes an attack, re-roll a Hit roll of 1. If that unit is a PURIFIER SQUAD and/or is wholly within your army's Hallowed Ground, you can re-roll the Hit roll instead.",
+        "description": "Certain areas of the battlefield are within your army's Hallowed Ground, as follows:Your deployment zone is always within your army's Hallowed Ground.The area of the battlefield within 6\" of one or more PURIFIER SQUAD units from your army is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within No Man's Land, until the end of that phase, No Man's Land is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within your opponent's deployment zone, until the end of that phase, your opponent's deployment zone is within your army's Hallowed Ground.Each time a model in a GREY KNIGHTS unit from your army makes an attack that targets visible target, re-roll a Hit roll of 1. If that unit is a PURIFIER SQUAD and/or is wholly within your army's Hallowed Ground, you can re-roll the Hit roll instead.",
         "detachment": "Warpbane Task Force",
         "": "",
         "phases": [
@@ -1376,7 +1440,7 @@
         "faction_id": "LoV",
         "name": "Ruthless Efficiency",
         "legend": "The Kin of an Oathband are skilled warriors and ruthless expansionists, instinctively working together to defeat their foes and efficiently achieve their aims. As with everything, they approach war with a grim, methodical pragmatism that is an inspiration to other Kin.",
-        "description": "At the start of the battle, select a number of units from your opponent's army depending on the battle size, as shown below:Incursion: 2 unitsStrike Force: 4 unitsOnslaught: 6 unitsEach of those units start the battle with 2 Judgement tokens (see Eye of the Ancestors).If, at the start of any of your Command phases, any of those units have been destroyed, you gain a number of CP depending on how early in the battle you destroyed it, as shown below (you can only gain CP in this way once per battle, and CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).Unit destroyed by the start of your first or second Command phase:You gain3CPUnit destroyed by the start of your third or fourth Command phase:You gain2CPUnit destroyed by the start of your fifth Command phase:You gain1CP",
+        "description": "At the start of the battle, select an additional number of units from your opponent's army depending on the battle size, as shown below:Incursion: 1 unitStrike Force: 2 unitsOnslaught: 4 unitsEach of those units start the battle with 2 Judgement tokens (see Eye of the Ancestors).If, at the start of any of your Command phases, any of those units have been destroyed, you gain a number of CP depending on how early in the battle you destroyed it, as shown below (you can only gain CP in this way once per battle, and CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).Unit destroyed by the start of your first or second Command phase:You gain3CPUnit destroyed by the start of your third or fourth Command phase:You gain2CPUnit destroyed by the start of your fifth Command phase:You gain1CP",
         "detachment": "Oathband",
         "": "",
         "phases": [
@@ -1651,7 +1715,7 @@
         "faction_id": "ORK",
         "name": "Lissen 'Ere",
         "legend": "Blood Axe leaders bellow actual orders to the ladz under their command.",
-        "description": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each BOSS SNIKROT, MEK and WARBOSS model in your army can issue Taktiks abilities.To do so, select one or two of the Taktiks abilities below and select one friendly ORKS unit within 6\" of that model to issue them to. If you selected two Taktiks, that model must take a Leadership test: if failed, the selected unit suffers D3 mortal wounds. Until the start of your next Command phase, the selected unit is affected by the selected Taktiks. A unit cannot have Taktiks issued to it in this way more than once per battle round.Taktiks abilities cannot be issued to Battle-shocked units, and if a unit affected by Taktiks becomes Battle-shocked, all Taktiks cease to affect that unit while it is Battle-shocked.Get Stuck In: You can re-roll Charge rolls made for this unit.Get On Wiv It: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.Sneaky Stalkin': INFANTRY and MOUNTED models (excluding MEGANOBZ) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.Shoota Drills: Each time an INFANTRY or MOUNTED model in this unit makes a ranged attack, add 1 to the Hit roll.KEYWORDSSTORMBOYZ units from your army gain the BATTLELINE keyword.",
+        "description": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each BOSS SNIKROT, MEK and WARBOSS model in your army can issue Taktiks abilities.To do so, select one of the Taktiks abilities below and select one friendly ORKS unit within 6\" of that model to issue them to. That model must take a Leadership test: if failed, the selected unit suffers 1 mortal wound. Until the start of your next Command phase, the selected unit is affected by the selected Taktik. A unit cannot have Taktiks issued to it in this way more than once per battle round.Taktiks abilities cannot be issued to Battle-shocked units, and if a unit affected by Taktiks becomes Battle-shocked, all Taktiks cease to affect that unit while it is Battle-shocked.Get Stuck In: You can re-roll Charge rolls made for this unit.Get On Wiv It: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.Sneaky Stalkin': INFANTRY and MOUNTED models (excluding MEGANOBZ) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.Shoota Drills: Each time an INFANTRY or MOUNTED model in this unit makes a ranged attack, add 1 to the Hit roll.KEYWORDSSTORMBOYZ units from your army gain the BATTLELINE keyword.",
         "detachment": "Taktikal Brigade",
         "": "",
         "phases": [
@@ -1661,6 +1725,19 @@
             "Charge",
             "Fight",
             "Saves"
+        ]
+    },
+    {
+        "id": "000009990",
+        "faction_id": "ORK",
+        "name": "Dakka! Dakka! Dakka!",
+        "legend": "Orks have no real concept of ammunition preservation, instead tending to hold the trigger down until their ammunition runs dry or their weapon falls apart in their hands.",
+        "description": "During your Shooting phase, ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [SUSTAINED HITS 2] ability.While the Waaagh! is active for your army, ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [ASSAULT] ability.",
+        "detachment": "More Dakka!",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -1691,7 +1768,7 @@
     {
         "id": "000008518",
         "faction_id": "QT",
-        "name": "Forged in Terror (Aura)",
+        "name": "Forged in Terror",
         "legend": "Chaos Knights are servants of shadow and terror; wherever they stride, fear and madness spread.",
         "description": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of a CHAOS KNIGHTS model from your army, that enemy unit must take a Battleshock test. For the purposes of this ability, if a unit has a Starting Strength of 1, it is considered to be below its Starting Strength while it has lost one or more wounds.Designer's Note: This means that all enemy units within range of this Aura ability that have lost one or more models must take a Battle-shock test in your opponent's Command phase, not just those that are Below Half-strength.",
         "detachment": "Traitoris Lance",
@@ -1706,7 +1783,7 @@
         "faction_id": "QT",
         "name": "Dreaded Masters",
         "legend": "Mortal thralls and foes alike are sacrificed to empower the fallen nobility.",
-        "description": "TITANIC CHAOS KNIGHTS units from your army have the following abilities:Dread Tyrants (Aura): While a friendly DAMNED unit is within 9\" of this unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.CHAOS KNIGHTS units from your army have the following abilities:Dark Sacrifice: Each time a CHAOS KNIGHTS unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly DAMNED unit within 6\". That DAMNED unit must take a Leadership test: if passed, destroy D3 models in that DAMNED unit; if failed, destroy D3+3 models in that DAMNED unit. In either case, then select one of the following abilities for your CHAOS KNIGHTS unit's weapons to have until the end of the phase: [LETHAL HITS]; [SUSTAINED HITS 1].WRETCHED THRALLSYou can include DAMNED units in your army (see Codex: Chaos Space Marines). The combined points cost of such units depends on your battle size:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo DAMNED models from your army can be your WARLORD.",
+        "description": "TITANIC CHAOS KNIGHTS units from your army have the following abilities:Dread Tyrants: While a friendly DAMNED unit is within 9\" of this unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.CHAOS KNIGHTS units from your army have the following abilities:Dark Sacrifice: Each time a CHAOS KNIGHTS unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly DAMNED unit within 6\". That DAMNED unit must take a Leadership test: if passed, destroy D3 models in that DAMNED unit; if failed, destroy D3+3 models in that DAMNED unit. In either case, then select one of the following abilities for your CHAOS KNIGHTS unit's weapons to have until the end of the phase: [LETHAL HITS]; [SUSTAINED HITS 1].WRETCHED THRALLSYou can include DAMNED units in your army (see Codex: Chaos Space Marines). The combined points cost of such units depends on your battle size:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo DAMNED models from your army can be your WARLORD.",
         "detachment": "Iconoclast Fiefdom",
         "": "",
         "phases": [
@@ -1818,20 +1895,6 @@
         "phases": [
             "Command",
             "Shooting"
-        ]
-    },
-    {
-        "id": "000008521",
-        "faction_id": "SM",
-        "name": "Mission Tactics",
-        "legend": "Thousands of years of collated strategic data and hard-won combat experience have provided the Deathwatch with the ultimate battlefield tactics to combat almost any foe.",
-        "description": "At the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.FUROR TACTICSWhen the enemy horde grows close, the Deathwatch will be tasked with the decimation of their core. Aiming not for clinical kills but for maximum destruction over a wide area, they tear the heart from the enemy army.While this Mission Tactic is active, weapons equipped by ADEPTUS ASTARTES units from your army have the [SUSTAINED HITS 1] ability.MALLEUS TACTICSWhen the giants of war lumber forth, the Deathwatch will adopt Malleus tactics. Even the largest behemoth has a weak point, and the archives of the Deathwatch number them all.While this Mission Tactic is active, weapons equipped by ADEPTUS ASTARTES units from your army have the [LETHAL HITS] ability.PURGATUS TACTICSBy adopting Purgatus tactics, the Deathwatch focus their deadly ire upon the commanders of the enemy host, assassinating them one after another with pitiless head shots and killing thrusts of the blade.While this Mission Tactic is active, each time an ADEPTUS ASTARTES unit from your army makes an attack, if a Critical Hit is scored, that attack has the [PRECISION] ability.",
-        "detachment": "Black Spear Task Force",
-        "": "",
-        "phases": [
-            "Command",
-            "Shooting",
-            "Fight"
         ]
     },
     {
@@ -2139,9 +2202,21 @@
         "id": "000009838",
         "faction_id": "TAU",
         "name": "Integrated Command Structure",
-        "legend": "T'au officers given charge of auxiliary cadres receive additional training in optimised doctrinal and strategic alien amalgamation; this \u2013 coupled with specialised translation drones and endless integrated combat drills \u2013 allows them to get the best out of their alien subordinates.",
-        "description": "KROOT and VESPID STINGWINGS units from your army have the following ability:Targeting Triangulation (Aura): While an enemy unit is within 9\" of and visible to this unit, each time a ranged attack made by a friendly T'AU EMPIRE model (excluding KROOT, VESPID STINGWINGS and TITANIC models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.T'AU EMPIRE units (excluding KROOT and VESPID STINGWINGS units) from your army have the following ability:Localised Stealth Projectors (Aura): While a friendly KROOT or VESPID STINGWINGS unit is wholly within 6\" of and visible to this unit, that KROOT or VESPID STINGWINGS unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+        "legend": "T'au officers given charge of auxiliary cadres receive additional training in optimised doctrinal and strategic alien amalgamation; this - coupled with specialised translation drones and endless integrated combat drills - allows them to get the best out of their alien subordinates.",
+        "description": "KROOT and VESPID STINGWINGS units from your army have the following ability:Targeting Triangulation: While an enemy unit is within 9\" of and visible to this unit, each time a ranged attack made by a friendly T'AU EMPIRE model (excluding KROOT, VESPID STINGWINGS and TITANIC models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.T'AU EMPIRE units (excluding KROOT and VESPID STINGWINGS units) from your army have the following ability:Localised Stealth Projectors: While a friendly KROOT or VESPID STINGWINGS unit is wholly within 6\" of and visible to this unit, that KROOT or VESPID STINGWINGS unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
         "detachment": "Auxiliary Cadre",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "id": "000009982",
+        "faction_id": "TAU",
+        "name": "Superior Craftsmanship",
+        "legend": "The applied science divisions of the Earth caste labour endlessly to provide front-line units with expertly crafted instruments of destruction.",
+        "description": "Add 6\" to the Range characteristic of ranged weapons equipped by T'AU EMPIRE models from your army",
+        "detachment": "Experimental Prototype Cadre",
         "": "",
         "phases": [
             "Shooting"
@@ -2356,7 +2431,7 @@
         "id": "000008430",
         "faction_id": "WE",
         "name": "Relentless Rage",
-        "legend": "The World Eaters fight in a perpetual fury, driven ever onwards to slaughter all who stand in their way. All of their warriors have been subject to horrific psycho-surgery, implanted with crude devices that amplify their aggression, while some also submit to possession by the raging daemons of the Blood God. Whatever drives their berserk rage, these warriors only stop killing when every foe lies in ruin at their feet \u2013 and sometimes not even then.",
+        "legend": "The World Eaters fight in a perpetual fury, driven ever onwards to slaughter all who stand in their way. All of their warriors have been subject to horrific psycho-surgery, implanted with crude devices that amplify their aggression, while some also submit to possession by the raging daemons of the Blood God. Whatever drives their berserk rage, these warriors only stop killing when every foe lies in ruin at their feet - and sometimes not even then.",
         "description": "Each time a WORLD EATERS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit.",
         "detachment": "Berzerker Warband",
         "": "",

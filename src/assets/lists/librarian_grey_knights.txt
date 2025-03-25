@@ -1,0 +1,48 @@
+Imperium - Grey Knights - 2K TL: Teleport Strike Force - [1990 pts]
+
+# ++ Army Roster ++ [1990 pts]
+## Configuration
+Battle Size: Strike Force (2000 Point limit)
+Detachment: Teleport Strike Force
+
+## Epic Hero [215 pts]
+Brother-Captain Stern [90 pts]: Nemesis force sword, Storm bolter
+Kaldor Draigo [125 pts]: Warlord, Scourging, Storm bolter, The Titansword
+
+## Character [370 pts]
+Brother-Captain [90 pts]: Nemesis force weapon, Psycannon
+Brotherhood Champion [80 pts]: Nemesis force weapon, Storm bolter
+Brotherhood Champion [80 pts]: Nemesis force weapon, Storm bolter
+Brotherhood Librarian [120 pts]: Nemesis force weapon, Purge Soul, Combi-weapon
+
+## Battleline [640 pts]
+Brotherhood Terminator Squad [200 pts]:
+• 1x Justicar: Nemesis force weapon, Storm bolter
+• 1x Terminator: Nemesis force weapon, Storm bolter
+• 1x Terminator with Ancient's Banner: Ancient's Banner, Nemesis force weapon, Storm bolter
+• 1x Terminator with Heavy Weapon: Nemesis force weapon, Psycannon
+• 1x Terminator with Narthecium: Narthecium, Nemesis force weapon
+Brotherhood Terminator Squad [200 pts]:
+• 1x Justicar: Nemesis force weapon, Storm bolter
+• 1x Terminator: Nemesis force weapon, Storm bolter
+• 1x Terminator with Ancient's Banner: Ancient's Banner, Nemesis force weapon, Storm bolter
+• 1x Terminator with Heavy Weapon: Nemesis force weapon, Psycannon
+• 1x Terminator with Narthecium: Narthecium, Nemesis force weapon
+Strike Squad [120 pts]:
+• 1x Justicar: Nemesis force weapon, Storm bolter
+• 4x Grey Knight: Nemesis force weapon, Storm bolter
+Strike Squad [120 pts]:
+• 1x Justicar: Nemesis force weapon, Storm bolter
+• 4x Grey Knight: Nemesis force weapon, Storm bolter
+
+## Infantry [240 pts]
+Purgation Squad [120 pts]:
+• 1x Justicar: Nemesis force weapon, Storm bolter
+• 4x Purgator w/ psycannon: Close combat weapon, Psycannon
+Purgation Squad [120 pts]:
+• 1x Justicar: Nemesis force weapon, Storm bolter
+• 4x Purgator w/ psycannon: Close combat weapon, Psycannon
+
+## Vehicle [525 pts]
+Grey Knights Land Raider [240 pts]: Armoured tracks, 2x Godhammer lascannon, Hunter-killer missile, Multi-melta, Storm bolter, Twin heavy bolter
+Grey Knights Land Raider Redeemer [286 pts]: Armoured tracks, 2x Flamestorm cannon, Hunter-killer missile, Multi-melta, Storm bolter, Twin assault cannon

@@ -12,6 +12,11 @@ const applyFactionOverrides = (factions: Faction[]) => {
       name: "Ynnari",
       link: "https://wahapedia.ru/wh40k10ed/factions/aeldari",
     },
+    {
+      id: "SM",
+      name: "Deathwatch",
+      link: "",
+    },
   ];
 
   return [...factions, ...extraFactions];
@@ -133,13 +138,15 @@ const applyAbilityOverrides = (ability: Ability) => {
   }
 };
 
-const applyWeaponOverrides = (
+const applyWeaponAndEnhancementOverrides = (
   datasheet: Datasheet,
   weapons: string[] | undefined
 ) => {
   if (!weapons) {
     return;
   }
+
+  weapons = splitWeaponsAnd(weapons);
 
   switch (datasheet.id) {
     case "000000613":
@@ -171,8 +178,8 @@ const applyWeaponOverrides = (
     case "Exalted Flamer":
       weapons = [
         ...weapons,
-        "Fire of Tzeentch – blue fire",
-        "Fire of Tzeentch – pink fire",
+        "Fire of Tzeentch - blue fire",
+        "Fire of Tzeentch - pink fire",
       ];
       break;
     case "Rendmaster On Blood Throne":
@@ -190,8 +197,8 @@ const applyWeaponOverrides = (
     case "Knight Tyrant":
       weapons = [
         ...weapons,
-        "Ectoplasma decimator – standard",
-        "Ectoplasma decimator – supercharged",
+        "Ectoplasma decimator - standard",
+        "Ectoplasma decimator - supercharge",
         "Brimstone volcano lance",
       ];
       break;
@@ -288,7 +295,6 @@ const applyWeaponOverrides = (
       );
       break;
   }
-  console.log(datasheet.name, weapons)
 
   return weapons;
 };
@@ -418,19 +424,44 @@ const addAbilityIfFound = (
   }
 };
 
+const splitWeaponsAnd = (weapons: string[]): string[] => {
+  if (weapons[weapons.length - 1].includes(" and ")) {
+    const lastItem = weapons[weapons.length - 1];
+    const otherWeapons = weapons.slice(0, -1);
+    const splitLastItem = lastItem.split(" and ");
+    return [...otherWeapons, ...splitLastItem];
+  } else {
+    return weapons;
+  }
+};
+
 const findAndReplace = (
   array: string[],
   findValue: string,
   replaceValue: string
 ): string[] => {
-  return array.map((item) => (item.toLowerCase()) === findValue.toLowerCase() ? replaceValue : item);
+  return array.map((item) =>
+    item.toLowerCase() === findValue.toLowerCase() ? replaceValue : item
+  );
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const arraysEqual = (a: any[], b: any[]) => {
+  if (a.length !== b.length) return false;
+  a.sort();
+  b.sort();
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
 };
 
 export {
   applyNameOverrides,
   applyAbilityOverrides,
   applyFactionOverrides,
-  applyWeaponOverrides,
+  applyWeaponAndEnhancementOverrides,
   applyMissingWeapons,
   applyMissingAbilities,
+  arraysEqual,
 };

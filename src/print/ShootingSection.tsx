@@ -7,7 +7,7 @@ import PrintSettings from "@/types/PrintSettings";
 
 const ShootingSection = (units: ListUnit[], settings: PrintSettings) => {
   return units.map((unit) => {
-    const abilities = getPhasedAbilities(unit, Phase.Movement);
+    const abilities = getPhasedAbilities(unit, Phase.Shooting);
     const weapons = settings.weaponsFilter
       ? unit.weaponsDatasheets.filter((weapon) =>
           Object.keys(unit.count ?? {}).some((name: string) => {
@@ -43,10 +43,22 @@ const ShootingSection = (units: ListUnit[], settings: PrintSettings) => {
               </tr>
             </thead>
             <tbody>
-              {filteredWeapons.map((weapon) => {
+              {filteredWeapons.map((weapon, index, arr) => {
+                const nextLineIsProfile =
+                  arr[index + 1] &&
+                  arr[index + 1].line_in_wargear &&
+                  parseInt(arr[index + 1].line_in_wargear as string) > 1;
+                
+                
+                const currLineIsProfile = weapon.line_in_wargear && parseInt(weapon.line_in_wargear) > 1
+
+                const isWeaponProfile = nextLineIsProfile || currLineIsProfile;
+
                 return (
                   <tr>
-                    <td className="pl-1">{weapon.name}</td>
+                    <td className="pl-1">
+                      {isWeaponProfile ? `➤ ${weapon.name}`: weapon.name}
+                    </td>
                     <td className="text-center">{weapon.range}"</td>
                     <td className="text-center">
                       {unit.count && weapon.name && weapon.name in unit.count
