@@ -31,7 +31,6 @@ import {
   arraysEqual,
 } from "@/utils/StoreHelper";
 import Ability from "@/types/Ability";
-import { GiConsoleController } from "react-icons/gi";
 
 interface StoreState {
   text: string;
@@ -127,6 +126,7 @@ const useStore = create<StoreState>()(
           return false;
         }
 
+        console.log(factionMatch[1],",", factionMatchName[1])
         const factions = applyFactionOverrides(Factions);
         const factionAbbreviation = factions.filter(
           (f) => f.name === factionMatch[1] || f.name === factionMatchName[1]
@@ -463,8 +463,9 @@ const useStore = create<StoreState>()(
           switch (listSort) {
             case SortOptions.Name:
               return a.name.localeCompare(b.name);
+            // TODO: This must be -1, I don't know why but this doesn't get caught in testing
             case SortOptions.PasteOrder:
-              return 1;
+              return -1;
           }
         };
 

@@ -1,10 +1,19 @@
-
-[{
+[
+  {
+    "version": "1.9.3",
+    "stateVersion": 20,
+    "date": "03/26/2025",
+    "changes": [
+      "I have been laid off from my job, so if you happen to have a manager who plays warhammer please send them this site :)",
+      "Fixed a bug where the Paste Order sort was backwards",
+      "Fixed a bug where Adeptus Astartes wasn't translated into Space Marines"
+    ]
+  },
+  {
     "version": "1.9.2",
     "stateVersion": 20,
     "date": "03/24/2025",
     "changes": [
-      "I have been laid off from my job, so if you happen to have a manager who plays warhammer please send them this site :)",
       "Fixed a bug where the Boarding Actions stratagems still managed to sneak through.",
       "Added a new check that looks for weapon profiles and renders them with a ➤ prepending them. Thank you to the community (Peter S) for this suggestion!",
       "Fixed a bug where the previous fix for grouping made all objects ungroup. Whoops! Now uses per item checking.",

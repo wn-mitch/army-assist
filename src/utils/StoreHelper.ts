@@ -14,6 +14,11 @@ const applyFactionOverrides = (factions: Faction[]) => {
     },
     {
       id: "SM",
+      name: "Adeptus Astartes",
+      link: "",
+    },
+    {
+      id: "SM",
       name: "Deathwatch",
       link: "",
     },
