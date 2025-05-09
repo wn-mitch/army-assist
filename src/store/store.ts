@@ -408,7 +408,6 @@ const useStore = create<StoreState>()(
                     return cleanedName.split(",").map((part) => part.trim());
                   });
 
-                console.log(unit.name, unit, weapons)
                 // Weapon Overrides
                 unit.weapons = applyWeaponAndEnhancementOverrides(
                   datasheet,

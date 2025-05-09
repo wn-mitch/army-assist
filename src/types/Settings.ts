@@ -9,6 +9,7 @@ interface Settings {
   cardsGroup: boolean;
   weaponsFilter: boolean;
   activePhases: {
+    [Phase.Pregame]: boolean;
     [Phase.Command]: boolean;
     [Phase.Movement]: boolean;
     [Phase.Shooting]: boolean;

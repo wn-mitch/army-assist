@@ -459,7 +459,6 @@ const applyMissingAbilities = (
       abilities = addAbilityIfFound(weapons, abilities, guardianDrone);
      
       // Check missing drones
-      console.log(unit, abilities, weapons)
       break;
     }
   }

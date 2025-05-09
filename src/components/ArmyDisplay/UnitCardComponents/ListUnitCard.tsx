@@ -63,8 +63,6 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       )
     : unit.weaponsDatasheets;
 
-  console.log(unit.name, unit);
-
   const phasedWeapons = filteredWeapons.filter((wargear) =>
     phase === "Shooting" ? wargear.type === "Ranged" : wargear.type === "Melee"
   );
