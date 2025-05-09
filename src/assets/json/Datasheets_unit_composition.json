@@ -2484,15 +2484,9 @@
         "": ""
     },
     {
-        "datasheet_id": "000000586",
-        "line": "1",
-        "description": "2-3 Warlock Skyrunners",
-        "": ""
-    },
-    {
         "datasheet_id": "000000587",
         "line": "1",
-        "description": "1 Warlock Skyrunner",
+        "description": "1-2 Warlock Skyrunners",
         "": ""
     },
     {
@@ -2504,31 +2498,31 @@
     {
         "datasheet_id": "000000589",
         "line": "1",
-        "description": "1 Heavy Weapon Platform",
+        "description": "10 Guardian Defenders",
         "": ""
     },
     {
         "datasheet_id": "000000589",
         "line": "2",
-        "description": "10 Guardian Defenders",
+        "description": "1 Heavy Weapon Platform",
         "": ""
     },
     {
         "datasheet_id": "000000590",
         "line": "1",
-        "description": "1 Serpent's Scale Platform",
+        "description": "10 Storm Guardians",
         "": ""
     },
     {
         "datasheet_id": "000000590",
         "line": "2",
-        "description": "10 Storm Guardians",
+        "description": "1 Serpent's Scale Platform",
         "": ""
     },
     {
         "datasheet_id": "000000591",
         "line": "1",
-        "description": "3-9 Windriders",
+        "description": "3-6 Windriders",
         "": ""
     },
     {
@@ -2588,13 +2582,13 @@
     {
         "datasheet_id": "000000597",
         "line": "1",
-        "description": "5-10 Wraithguard",
+        "description": "5 Wraithguard",
         "": ""
     },
     {
         "datasheet_id": "000000598",
         "line": "1",
-        "description": "5-10 Wraithblades",
+        "description": "5 Wraithblades",
         "": ""
     },
     {
@@ -2648,7 +2642,7 @@
     {
         "datasheet_id": "000000605",
         "line": "1",
-        "description": "1 Vyper",
+        "description": "1-2 Vypers",
         "": ""
     },
     {
@@ -2667,12 +2661,6 @@
         "datasheet_id": "000000607",
         "line": "2",
         "description": "4-9 Dark Reapers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000608",
-        "line": "1",
-        "description": "1 Support Weapon",
         "": ""
     },
     {
@@ -2696,7 +2684,7 @@
     {
         "datasheet_id": "000000612",
         "line": "1",
-        "description": "1 War Walker",
+        "description": "1-2 War Walkers",
         "": ""
     },
     {
@@ -3068,43 +3056,7 @@
     {
         "datasheet_id": "000000680",
         "line": "1",
-        "description": "1 Tank Commander",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000684",
-        "line": "1",
-        "description": "One of the following:",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000684",
-        "line": "2",
-        "description": "1 Sergeant and 9 Guardsmen",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000684",
-        "line": "3",
-        "description": "1 Sergeant, 7 Guardsmen and 1 Heavy Weapons Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000684",
-        "line": "4",
-        "description": "2 Sergeants and 18 Guardsmen",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000684",
-        "line": "5",
-        "description": "2 Sergeants, 16 Guardsmen and 1 Heavy Weapons Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000684",
-        "line": "6",
-        "description": "2 Sergeants, 14 Guardsmen and 2 Heavy Weapons Teams",
+        "description": "1 Leman Russ Commander",
         "": ""
     },
     {
@@ -3116,13 +3068,13 @@
     {
         "datasheet_id": "000000690",
         "line": "1",
-        "description": "1-3 Scout Sentinels",
+        "description": "1-2 Scout Sentinels",
         "": ""
     },
     {
         "datasheet_id": "000000691",
         "line": "1",
-        "description": "1-3 Armoured Sentinels",
+        "description": "1-2 Armoured Sentinels",
         "": ""
     },
     {
@@ -4233,18 +4185,6 @@
         "datasheet_id": "000000947",
         "line": "2",
         "description": "4-9 Chaos Terminators",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "1",
-        "description": "1 Noise Champion",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "2",
-        "description": "4-9 Noise Marines",
         "": ""
     },
     {
@@ -5403,12 +5343,6 @@
         "datasheet_id": "000001348",
         "line": "1",
         "description": "1 Librarian on Bike",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "1",
-        "description": "1 Lucius the Eternal - EPIC HERO",
         "": ""
     },
     {
@@ -6888,30 +6822,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000002385",
-        "line": "1",
-        "description": "1 Death Korps Marshal",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002386",
-        "line": "1",
-        "description": "1 Death Rider Squadron Commander",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002389",
-        "line": "1",
-        "description": "1 Ridemaster",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002389",
-        "line": "2",
-        "description": "4-9 Death Riders",
-        "": ""
-    },
-    {
         "datasheet_id": "000002453",
         "line": "1",
         "description": "1 Mega Dread",
@@ -7286,31 +7196,31 @@
     {
         "datasheet_id": "000002532",
         "line": "2",
-        "description": "0-1 Shade Runner",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002532",
-        "line": "3",
-        "description": "0-1 Soul Weaver",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002532",
-        "line": "4",
-        "description": "0-1 Way Seeker",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002532",
-        "line": "5",
         "description": "1 Voidscarred Felarch",
         "": ""
     },
     {
         "datasheet_id": "000002532",
-        "line": "6",
+        "line": "3",
         "description": "4-9 Corsair Voidscarred",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002532",
+        "line": "4",
+        "description": "0-1 Shade Runner",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002532",
+        "line": "5",
+        "description": "0-1 Soul Weaver",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002532",
+        "line": "6",
+        "description": "0-1 Way Seeker",
         "": ""
     },
     {
@@ -7698,30 +7608,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000002608",
-        "line": "1",
-        "description": "One of the following:",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002608",
-        "line": "2",
-        "description": "1 Platoon Commander and 4 Veteran Guardsmen",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002608",
-        "line": "3",
-        "description": "OR",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002608",
-        "line": "4",
-        "description": "1 Platoon Commander, 2 Veteran Guardsmen and 1 Veteran Heavy Weapons Team",
-        "": ""
-    },
-    {
         "datasheet_id": "000002609",
         "line": "1",
         "description": "1 Cadian Commander",
@@ -7821,12 +7707,6 @@
         "datasheet_id": "000002617",
         "line": "1",
         "description": "1 Rogal Dorn Battle Tank",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002618",
-        "line": "1",
-        "description": "2 Ordnance Teams",
         "": ""
     },
     {
@@ -8469,12 +8349,6 @@
         "datasheet_id": "000002746",
         "line": "2",
         "description": "4-9 Tempestus Scions",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002747",
-        "line": "1",
-        "description": "1 Thunderbolt Heavy Fighter",
         "": ""
     },
     {
@@ -9876,702 +9750,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000003717",
-        "line": "1",
-        "description": "1 Cadian Castellan",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003718",
-        "line": "1",
-        "description": "1 Cadian Commander",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003718",
-        "line": "2",
-        "description": "4 Cadian Veteran Guardsmen",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003719",
-        "line": "1",
-        "description": "One of the following:",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003719",
-        "line": "2",
-        "description": "1 Platoon Commander and 4 Veteran Guardsmen",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003719",
-        "line": "3",
-        "description": "OR",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003719",
-        "line": "4",
-        "description": "1 Platoon Commander, 2 Veteran Guardsmen and 1 Veteran Heavy Weapons Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003720",
-        "line": "1",
-        "description": "1 Primaris Psyker",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003721",
-        "line": "1",
-        "description": "1 Tank Commander",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003722",
-        "line": "1",
-        "description": "1 Death Korps Marshal",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003723",
-        "line": "1",
-        "description": "1 Death Rider Squadron Commander",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003724",
-        "line": "1",
-        "description": "1 Death Rider Commissar",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003725",
-        "line": "1",
-        "description": "1 Quartermaster Revenant",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003725",
-        "line": "2",
-        "description": "4 Medicae Servitors",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003726",
-        "line": "1",
-        "description": "1 Shock Trooper Sergeant and 9 Shock Troopers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003726",
-        "line": "2",
-        "description": "OR",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003726",
-        "line": "3",
-        "description": "2 Shock Trooper Sergeants and 18 Shock Troopers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003727",
-        "line": "1",
-        "description": "1 Jungle Fighter Sergeant and 9 Jungle Fighters",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003727",
-        "line": "2",
-        "description": "OR",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003727",
-        "line": "3",
-        "description": "2 Jungle Fighter Sergeants and 18 Jungle Fighters",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003728",
-        "line": "1",
-        "description": "1 Death Korps Watchmaster and 9 Death Korps Troopers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003728",
-        "line": "2",
-        "description": "OR",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003728",
-        "line": "3",
-        "description": "2 Death Korps Watchmasters and 18 Death Korps Troopers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003729",
-        "line": "1",
-        "description": "One of the following:",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003729",
-        "line": "2",
-        "description": "1 Sergeant and 9 Guardsmen",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003729",
-        "line": "3",
-        "description": "1 Sergeant, 7 Guardsmen and 1 Heavy Weapons Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003729",
-        "line": "4",
-        "description": "2 Sergeants and 18 Guardsmen",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003729",
-        "line": "5",
-        "description": "2 Sergeants, 16 Guardsmen and 1 Heavy Weapons Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003729",
-        "line": "6",
-        "description": "2 Sergeants, 14 Guardsmen and 2 Heavy Weapons Teams",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003730",
-        "line": "1",
-        "description": "1 Chimera",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003731",
-        "line": "1",
-        "description": "1 Taurox",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003732",
-        "line": "1",
-        "description": "1 Taurox Prime",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003733",
-        "line": "1",
-        "description": "1 Storm Chimera",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003734",
-        "line": "1",
-        "description": "1 Aegis Defence Line",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003735",
-        "line": "1",
-        "description": "1 Earthshaker Platform",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003736",
-        "line": "1",
-        "description": "1 Hydra Platform",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003737",
-        "line": "1",
-        "description": "1 Manticore Platform",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003738",
-        "line": "1",
-        "description": "1-2 Sabre Gun Platforms",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003739",
-        "line": "1",
-        "description": "1-3 Armoured Sentinels",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003740",
-        "line": "1",
-        "description": "1 Rough Rider Sergeant",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003740",
-        "line": "2",
-        "description": "4-9 Rough Riders",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003741",
-        "line": "1",
-        "description": "1 Baneblade",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003742",
-        "line": "1",
-        "description": "1 Banehammer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003743",
-        "line": "1",
-        "description": "1 Banesword",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003744",
-        "line": "1",
-        "description": "1 Basilisk",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003745",
-        "line": "1",
-        "description": "1 Deathstrike",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003746",
-        "line": "1",
-        "description": "1 Doomhammer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003747",
-        "line": "1",
-        "description": "2 Ordnance Teams",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003748",
-        "line": "1",
-        "description": "3 Heavy Weapons Teams",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003749",
-        "line": "1",
-        "description": "1 Hellhammer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003750",
-        "line": "1",
-        "description": "1 Hellhound",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003751",
-        "line": "1",
-        "description": "1 Hydra",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003752",
-        "line": "1",
-        "description": "1 Kasrkin Sergeant",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003752",
-        "line": "2",
-        "description": "9 Kasrkin Troopers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003753",
-        "line": "1",
-        "description": "1 Leman Russ Battle Tank",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003754",
-        "line": "1",
-        "description": "1 Leman Russ Demolisher",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003755",
-        "line": "1",
-        "description": "1 Leman Russ Eradicator",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003756",
-        "line": "1",
-        "description": "1 Leman Russ Executioner",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003757",
-        "line": "1",
-        "description": "1 Leman Russ Exterminator",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003758",
-        "line": "1",
-        "description": "1 Leman Russ Punisher",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003759",
-        "line": "1",
-        "description": "1 Leman Russ Vanquisher",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003760",
-        "line": "1",
-        "description": "1 Manticore",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003761",
-        "line": "1",
-        "description": "4 Munitorum Servitors",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003762",
-        "line": "1",
-        "description": "1 Master of Ordnance, 1 Officer of the Fleet and 1 Astropath.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003763",
-        "line": "1",
-        "description": "1 Rogal Dorn Battle Tank",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003764",
-        "line": "1",
-        "description": "1-3 Scout Sentinels",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003765",
-        "line": "1",
-        "description": "1 Shadowsword",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003766",
-        "line": "1",
-        "description": "1 Stormlord",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003767",
-        "line": "1",
-        "description": "1 Stormsword",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003768",
-        "line": "1",
-        "description": "1 Wyvern",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003769",
-        "line": "1",
-        "description": "1 Carnodon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003770",
-        "line": "1",
-        "description": "1 Colossus",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003771",
-        "line": "1",
-        "description": "1 Crassus",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003772",
-        "line": "1",
-        "description": "1 Cyclops Demolition Vehicle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003773",
-        "line": "1",
-        "description": "1 Ridemaster",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003773",
-        "line": "2",
-        "description": "4-9 Death Riders",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003774",
-        "line": "1",
-        "description": "1 Earthshaker Carriage",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003775",
-        "line": "1",
-        "description": "1 Hades Breaching Drill",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003776",
-        "line": "1",
-        "description": "1 Macharius",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003777",
-        "line": "1",
-        "description": "1 Macharius Vanquisher",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003778",
-        "line": "1",
-        "description": "1 Macharius Vulcan",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003779",
-        "line": "1",
-        "description": "1 Malcador",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003780",
-        "line": "1",
-        "description": "1 Malcador Annihilator",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003781",
-        "line": "1",
-        "description": "1 Malcador Defender",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003782",
-        "line": "1",
-        "description": "1 Malcador Infernus",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003783",
-        "line": "1",
-        "description": "1 Medusa Carriage",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003784",
-        "line": "1",
-        "description": "1 Praetor",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003785",
-        "line": "1",
-        "description": "1-3 Rapier Laser Destroyers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003786",
-        "line": "1",
-        "description": "1 Stormblade",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003787",
-        "line": "1",
-        "description": "1-3 Tarantula Sentry Guns",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003788",
-        "line": "1",
-        "description": "1 Trojan Support Vehicle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003789",
-        "line": "1",
-        "description": "1 Valdor",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003790",
-        "line": "1",
-        "description": "1 Arkurian Stormhammer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003791",
-        "line": "1",
-        "description": "1 Armageddon-pattern Medusa",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003792",
-        "line": "1",
-        "description": "1 Atlas Recovery Vehicle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003793",
-        "line": "1",
-        "description": "1 Centaur Light Carrier",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003794",
-        "line": "1",
-        "description": "One of the following:",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003794",
-        "line": "2",
-        "description": "1 Grenadier Sergeant and 9 Grenadiers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003794",
-        "line": "3",
-        "description": "1 Grenadier Sergeant, 7 Grenadiers and 1 Heavy Weapons Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003795",
-        "line": "1",
-        "description": "1 Dominus Armoured Siege Bombard",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003796",
-        "line": "1",
-        "description": "1 Elysian Drop Sentinel",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003797",
-        "line": "1",
-        "description": "3 Elysian Sniper Teams",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003798",
-        "line": "1",
-        "description": "1 Gorgon Heavy Transport",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003799",
-        "line": "1",
-        "description": "1 Griffon Mortar Carrier",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003800",
-        "line": "1",
-        "description": "1 Heavy Mortar Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003801",
-        "line": "1",
-        "description": "1 Heavy Quad Launcher Team",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003802",
-        "line": "1",
-        "description": "1 Macharius Omega",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003803",
-        "line": "1",
-        "description": "1 Minotaur",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003804",
-        "line": "1",
-        "description": "1 Mukaali Rider Sergeant",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003804",
-        "line": "2",
-        "description": "2 Mukaali Riders",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003805",
-        "line": "1",
-        "description": "1 Salamander Command Vehicle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003806",
-        "line": "1",
-        "description": "1 Salamander Scout Vehicle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003807",
-        "line": "1",
-        "description": "1 Sentinel Powerlifter",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003808",
-        "line": "1",
-        "description": "1 Stygies Destroyer Tank Hunter",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003809",
-        "line": "1",
-        "description": "1 Tauros Assault Vehicle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003810",
-        "line": "1",
-        "description": "1 Tauros Venator",
-        "": ""
-    },
-    {
         "datasheet_id": "000003811",
         "line": "1",
         "description": "1 Celestian Sacresant Aveline - EPIC HERO",
@@ -11118,66 +10296,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000003862",
-        "line": "1",
-        "description": "1 Death Jester",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003863",
-        "line": "1",
-        "description": "1 Shadowseer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003864",
-        "line": "1",
-        "description": "1 Solitaire - EPIC HERO",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003865",
-        "line": "1",
-        "description": "1 Troupe Master",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003866",
-        "line": "1",
-        "description": "1 Starweaver",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003867",
-        "line": "1",
-        "description": "2 Wraithbone Arches",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003868",
-        "line": "1",
-        "description": "2-4 Skyweavers",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003869",
-        "line": "1",
-        "description": "1 Lead Player",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003869",
-        "line": "2",
-        "description": "4-11 Players",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003870",
-        "line": "1",
-        "description": "1 Voidweaver",
-        "": ""
-    },
-    {
         "datasheet_id": "000003871",
         "line": "1",
         "description": "1 Watch Master",
@@ -11331,6 +10449,1674 @@
         "datasheet_id": "000003888",
         "line": "1",
         "description": "3-6 Von Ryan's Leapers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003889",
+        "line": "1",
+        "description": "1 Lord Commissar",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003889",
+        "line": "2",
+        "description": "5 Veteran Guardsmen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003890",
+        "line": "1",
+        "description": "1 Lord Marshal Dreir - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003891",
+        "line": "1",
+        "description": "1 Catachan Commander",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003891",
+        "line": "2",
+        "description": "4 Veteran Guardsmen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003892",
+        "line": "1",
+        "description": "1 Rogal Dorn Tank Commander",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003893",
+        "line": "1",
+        "description": "1 Krieg Engineer Watchmaster",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003893",
+        "line": "2",
+        "description": "4-9 Krieg Combat Engineers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003894",
+        "line": "1",
+        "description": "3 Heavy Weapons Teams",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003895",
+        "line": "1",
+        "description": "3 Heavy Weapons Gunners",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003895",
+        "line": "2",
+        "description": "1 Fire Coordinator",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003896",
+        "line": "1",
+        "description": "1 Artillery Team",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003897",
+        "line": "1",
+        "description": "2 Ordnance Teams",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003898",
+        "line": "1",
+        "description": "1 Ridemaster",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003898",
+        "line": "2",
+        "description": "4-9 Death Riders",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003909",
+        "line": "1",
+        "description": "1 Lhykhis - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003910",
+        "line": "1",
+        "description": "1 D-cannon Platform",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003911",
+        "line": "1",
+        "description": "1 Shadow Weaver Platform",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003912",
+        "line": "1",
+        "description": "1 Vibro Cannon Platform",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003913",
+        "line": "1",
+        "description": "1 Wraithknight with Ghostglaive",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003914",
+        "line": "1",
+        "description": "1 Archon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003915",
+        "line": "1",
+        "description": "1 Succubus",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003916",
+        "line": "1",
+        "description": "1 Sybarite",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003916",
+        "line": "2",
+        "description": "9 Kabalite Warriors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003917",
+        "line": "1",
+        "description": "1 Hekatrix",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003917",
+        "line": "2",
+        "description": "9 Wyches",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003918",
+        "line": "1",
+        "description": "1 Klaivex",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003918",
+        "line": "2",
+        "description": "4-9 Incubi",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003919",
+        "line": "1",
+        "description": "1 Arena Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003919",
+        "line": "2",
+        "description": "2-5 Reavers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003920",
+        "line": "1",
+        "description": "1 Raider",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003921",
+        "line": "1",
+        "description": "1 Venom",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003922",
+        "line": "1",
+        "description": "1 Minka Lesk - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003922",
+        "line": "2",
+        "description": "4 Lesk's Heroes",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003923",
+        "line": "1",
+        "description": "1 Death Jester",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003924",
+        "line": "1",
+        "description": "1 Shadowseer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003925",
+        "line": "1",
+        "description": "1 Solitaire - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003926",
+        "line": "1",
+        "description": "1 Troupe Master",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003927",
+        "line": "1",
+        "description": "1 Starweaver",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003928",
+        "line": "1",
+        "description": "2-4 Skyweavers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003929",
+        "line": "1",
+        "description": "1 Lead Player",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003929",
+        "line": "2",
+        "description": "4-11 Players",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003930",
+        "line": "1",
+        "description": "1 Voidweaver",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003931",
+        "line": "1",
+        "description": "1 Voidreaver Felarch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003931",
+        "line": "2",
+        "description": "4-9 Corsair Voidreavers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003932",
+        "line": "1",
+        "description": "This unit can contain a maximum of 10 models.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003932",
+        "line": "2",
+        "description": "1 Voidscarred Felarch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003932",
+        "line": "3",
+        "description": "4-9 Corsair Voidscarred",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003932",
+        "line": "4",
+        "description": "0-1 Shade Runner",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003932",
+        "line": "5",
+        "description": "0-1 Soul Weaver",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003932",
+        "line": "6",
+        "description": "0-1 Way Seeker",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003933",
+        "line": "1",
+        "description": "0-1 Cloud Dancer Felarch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003933",
+        "line": "2",
+        "description": "3-6 Corsair Cloud Dancers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003934",
+        "line": "1",
+        "description": "0-1 Corsair Reaver Felarch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003934",
+        "line": "2",
+        "description": "5-10 Corsair Reavers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003935",
+        "line": "1",
+        "description": "0-1 Corsair Skyreaver Felarch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003935",
+        "line": "2",
+        "description": "5-10 Corsair Skyreavers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003937",
+        "line": "1",
+        "description": "1 Provisionally Prepared - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003938",
+        "line": "1",
+        "description": "1 Cadian Castellan",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003939",
+        "line": "1",
+        "description": "1 Cadian Commander",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003939",
+        "line": "2",
+        "description": "4 Cadian Veteran Guardsmen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003940",
+        "line": "1",
+        "description": "1 Catachan Commander",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003940",
+        "line": "2",
+        "description": "4 Veteran Guardsmen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003941",
+        "line": "1",
+        "description": "1 Lord Commissar",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003941",
+        "line": "2",
+        "description": "5 Veteran Guardsmen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003942",
+        "line": "1",
+        "description": "1 Leman Russ Commander",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003943",
+        "line": "1",
+        "description": "1 Primaris Psyker",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003944",
+        "line": "1",
+        "description": "1 Rogal Dorn Tank Commander",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003945",
+        "line": "1",
+        "description": "1 Death Rider Commissar",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003946",
+        "line": "1",
+        "description": "1 Quartermaster Revenant",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003946",
+        "line": "2",
+        "description": "4 Medicae Servitors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003947",
+        "line": "1",
+        "description": "1 Minka Lesk - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003947",
+        "line": "2",
+        "description": "4 Lesk's Heroes",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003948",
+        "line": "1",
+        "description": "1 Shock Trooper Sergeant and 9 Shock Troopers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003948",
+        "line": "2",
+        "description": "OR",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003948",
+        "line": "3",
+        "description": "2 Shock Trooper Sergeants and 18 Shock Troopers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003949",
+        "line": "1",
+        "description": "1 Jungle Fighter Sergeant and 9 Jungle Fighters",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003949",
+        "line": "2",
+        "description": "OR",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003949",
+        "line": "3",
+        "description": "2 Jungle Fighter Sergeants and 18 Jungle Fighters",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003950",
+        "line": "1",
+        "description": "1 Death Korps Watchmaster and 9 Death Korps Troopers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003950",
+        "line": "2",
+        "description": "OR",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003950",
+        "line": "3",
+        "description": "2 Death Korps Watchmasters and 18 Death Korps Troopers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003951",
+        "line": "1",
+        "description": "1 Chimera",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003952",
+        "line": "1",
+        "description": "1 Taurox",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003953",
+        "line": "1",
+        "description": "1 Taurox Prime",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003954",
+        "line": "1",
+        "description": "1 Storm Chimera",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003955",
+        "line": "1",
+        "description": "1 Aegis Defence Line",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003956",
+        "line": "1",
+        "description": "1 Earthshaker Platform",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003957",
+        "line": "1",
+        "description": "1 Hydra Platform",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003958",
+        "line": "1",
+        "description": "1 Manticore Platform",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003959",
+        "line": "1",
+        "description": "1-2 Sabre Gun Platforms",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003960",
+        "line": "1",
+        "description": "1-2 Armoured Sentinels",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003961",
+        "line": "1",
+        "description": "1 Artillery Team",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003962",
+        "line": "1",
+        "description": "1 Rough Rider Sergeant",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003962",
+        "line": "2",
+        "description": "4-9 Rough Riders",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003963",
+        "line": "1",
+        "description": "1 Baneblade",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003964",
+        "line": "1",
+        "description": "1 Banehammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003965",
+        "line": "1",
+        "description": "1 Banesword",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003966",
+        "line": "1",
+        "description": "1 Basilisk",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003967",
+        "line": "1",
+        "description": "3 Heavy Weapons Teams",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003968",
+        "line": "1",
+        "description": "3 Heavy Weapons Teams",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003969",
+        "line": "1",
+        "description": "1 Ridemaster",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003969",
+        "line": "2",
+        "description": "4-9 Death Riders",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003970",
+        "line": "1",
+        "description": "1 Deathstrike",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003971",
+        "line": "1",
+        "description": "1 Doomhammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003972",
+        "line": "1",
+        "description": "2 Ordnance Teams",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003973",
+        "line": "1",
+        "description": "1 Hellhammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003974",
+        "line": "1",
+        "description": "1 Hellhound",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003975",
+        "line": "1",
+        "description": "1 Hydra",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003976",
+        "line": "1",
+        "description": "1 Kasrkin Sergeant",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003976",
+        "line": "2",
+        "description": "9 Kasrkin Troopers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003977",
+        "line": "1",
+        "description": "1 Krieg Engineer Watchmaster",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003977",
+        "line": "2",
+        "description": "4-9 Krieg Combat Engineers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003978",
+        "line": "1",
+        "description": "3 Heavy Weapons Gunners",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003978",
+        "line": "2",
+        "description": "1 Fire Coordinator",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003979",
+        "line": "1",
+        "description": "1 Leman Russ Battle Tank",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003980",
+        "line": "1",
+        "description": "1 Leman Russ Demolisher",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003981",
+        "line": "1",
+        "description": "1 Leman Russ Eradicator",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003982",
+        "line": "1",
+        "description": "1 Leman Russ Executioner",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003983",
+        "line": "1",
+        "description": "1 Leman Russ Exterminator",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003984",
+        "line": "1",
+        "description": "1 Leman Russ Punisher",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003985",
+        "line": "1",
+        "description": "1 Leman Russ Vanquisher",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003986",
+        "line": "1",
+        "description": "1 Manticore",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003987",
+        "line": "1",
+        "description": "1 Rogal Dorn Battle Tank",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003988",
+        "line": "1",
+        "description": "1-2 Scout Sentinels",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003989",
+        "line": "1",
+        "description": "1 Shadowsword",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003990",
+        "line": "1",
+        "description": "1 Stormlord",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003991",
+        "line": "1",
+        "description": "1 Stormsword",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003992",
+        "line": "1",
+        "description": "1 Wyvern",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003993",
+        "line": "1",
+        "description": "1 Cyclops Demolition Vehicle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003994",
+        "line": "1",
+        "description": "1 Arkurian Stormhammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003995",
+        "line": "1",
+        "description": "1 Armageddon-pattern Medusa",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003996",
+        "line": "1",
+        "description": "1 Atlas Recovery Vehicle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003997",
+        "line": "1",
+        "description": "1 Carnodon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003998",
+        "line": "1",
+        "description": "1 Centaur Light Carrier",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003999",
+        "line": "1",
+        "description": "1 Colossus",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004000",
+        "line": "1",
+        "description": "1 Crassus",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004001",
+        "line": "1",
+        "description": "One of the following:",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004001",
+        "line": "2",
+        "description": "1 Grenadier Sergeant and 9 Grenadiers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004001",
+        "line": "3",
+        "description": "1 Grenadier Sergeant, 7 Grenadiers and 1 Heavy Weapons Team",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004002",
+        "line": "1",
+        "description": "1 Dominus Armoured Siege Bombard",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004003",
+        "line": "1",
+        "description": "1 Earthshaker Carriage",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004004",
+        "line": "1",
+        "description": "1 Elysian Drop Sentinel",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004005",
+        "line": "1",
+        "description": "3 Elysian Sniper Teams",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004006",
+        "line": "1",
+        "description": "1 Gorgon Heavy Transport",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004007",
+        "line": "1",
+        "description": "1 Griffon Mortar Carrier",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004008",
+        "line": "1",
+        "description": "1 Hades Breaching Drill",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004009",
+        "line": "1",
+        "description": "1 Heavy Mortar Team",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004010",
+        "line": "1",
+        "description": "1 Heavy Quad Launcher Team",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004011",
+        "line": "1",
+        "description": "1 Macharius",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004012",
+        "line": "1",
+        "description": "1 Macharius Omega",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004013",
+        "line": "1",
+        "description": "1 Macharius Vanquisher",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004014",
+        "line": "1",
+        "description": "1 Macharius Vulcan",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004015",
+        "line": "1",
+        "description": "1 Malcador",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004016",
+        "line": "1",
+        "description": "1 Malcador Annihilator",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004017",
+        "line": "1",
+        "description": "1 Malcador Defender",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004018",
+        "line": "1",
+        "description": "1 Malcador Infernus",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004019",
+        "line": "1",
+        "description": "1 Medusa Carriage",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004020",
+        "line": "1",
+        "description": "1 Minotaur",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004021",
+        "line": "1",
+        "description": "1 Mukaali Rider Sergeant",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004021",
+        "line": "2",
+        "description": "2 Mukaali Riders",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004022",
+        "line": "1",
+        "description": "4 Munitorum Servitors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004023",
+        "line": "1",
+        "description": "1 Praetor",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004024",
+        "line": "1",
+        "description": "1-3 Rapier Laser Destroyers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004025",
+        "line": "1",
+        "description": "1 Master of Ordnance, 1 Officer of the Fleet and 1 Astropath.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004026",
+        "line": "1",
+        "description": "1 Salamander Command Vehicle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004027",
+        "line": "1",
+        "description": "1 Salamander Scout Vehicle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004028",
+        "line": "1",
+        "description": "1 Sentinel Powerlifter",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004029",
+        "line": "1",
+        "description": "1 Stormblade",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004030",
+        "line": "1",
+        "description": "1 Stygies Destroyer Tank Hunter",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004031",
+        "line": "1",
+        "description": "1-3 Tarantula Sentry Guns",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004032",
+        "line": "1",
+        "description": "1 Tauros Assault Vehicle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004033",
+        "line": "1",
+        "description": "1 Tauros Venator",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004034",
+        "line": "1",
+        "description": "1 Trojan Support Vehicle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004035",
+        "line": "1",
+        "description": "1 Valdor",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004036",
+        "line": "1",
+        "description": "1 Chaos Lord",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004037",
+        "line": "1",
+        "description": "1 Chaos Lord in Terminator Armour",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004038",
+        "line": "1",
+        "description": "1 Chaos Lord",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004039",
+        "line": "1",
+        "description": "1 Chaos Lord on Disc of Tzeentch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004040",
+        "line": "1",
+        "description": "1 Chaos Lord on Juggernaut",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004041",
+        "line": "1",
+        "description": "1 Chaos Lord on Palanquin of Nurgle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004042",
+        "line": "1",
+        "description": "1 Chaos Lord on Steed of Slaanesh",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004043",
+        "line": "1",
+        "description": "1 Terminator Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004043",
+        "line": "2",
+        "description": "4-9 Chaos Terminators",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004044",
+        "line": "1",
+        "description": "1 Chosen Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004044",
+        "line": "2",
+        "description": "4-9 Chosen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004045",
+        "line": "1",
+        "description": "1 Cultist Firebrand ",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004046",
+        "line": "1",
+        "description": "1 Cult Demagogue",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004046",
+        "line": "2",
+        "description": "1 Mindwitch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004046",
+        "line": "3",
+        "description": "1 Iconarch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004046",
+        "line": "4",
+        "description": "2 Blessed Blades",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004047",
+        "line": "1",
+        "description": "1 Traitor Enforcer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004047",
+        "line": "2",
+        "description": "1 Traitor Ogryn",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004048",
+        "line": "1",
+        "description": "1 Renegade Enforcer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004049",
+        "line": "1",
+        "description": "1 Rogue Psyker",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004050",
+        "line": "1",
+        "description": "1 Cultist Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004050",
+        "line": "2",
+        "description": "9-19 Chaos Cultists",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004051",
+        "line": "1",
+        "description": "1 Cultist Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004051",
+        "line": "2",
+        "description": "9-19 Chaos Cultists",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004052",
+        "line": "1",
+        "description": "3-6 Torments",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004052",
+        "line": "2",
+        "description": "5-10 Mutants",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004053",
+        "line": "1",
+        "description": "1 Fellgor Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004053",
+        "line": "2",
+        "description": "9 Fellgor Beastmen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004054",
+        "line": "1",
+        "description": "1 Traitor Sergeant",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004054",
+        "line": "2",
+        "description": "9 Traitor Guardsmen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004055",
+        "line": "1",
+        "description": "4 Nightmare Hulks",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004055",
+        "line": "2",
+        "description": "3 Gellerpox Mutants",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004056",
+        "line": "1",
+        "description": "16 Mutoid Vermin",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004057",
+        "line": "1",
+        "description": "4 Negavolt Cultists",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004058",
+        "line": "1",
+        "description": "3 Renegade Heavy Weapons Teams",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004059",
+        "line": "1",
+        "description": "1 Ogryn Pack Master",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004059",
+        "line": "2",
+        "description": "3 Chaos Mauler Hounds",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004060",
+        "line": "1",
+        "description": "3 Renegade Ogryn Brutes",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004061",
+        "line": "1",
+        "description": "3 Renegade Plague Ogryns",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004062",
+        "line": "1",
+        "description": "1 Dark Apostle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004062",
+        "line": "2",
+        "description": "2 Dark Disciples",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004063",
+        "line": "1",
+        "description": "1 Havoc Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004063",
+        "line": "2",
+        "description": "4 Havocs",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004064",
+        "line": "1",
+        "description": "1 Aspiring Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004064",
+        "line": "2",
+        "description": "4-9 Legionaries",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004065",
+        "line": "1",
+        "description": "1 Master of Possession",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004066",
+        "line": "1",
+        "description": "1 Possessed Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004066",
+        "line": "2",
+        "description": "4-9 Possessed",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004067",
+        "line": "1",
+        "description": "1 Raptor Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004067",
+        "line": "2",
+        "description": "4-9 Raptors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004068",
+        "line": "1",
+        "description": "1 Sorcerer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004069",
+        "line": "1",
+        "description": "1 Sorcerer on Disc of Tzeentch",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004070",
+        "line": "1",
+        "description": "1 Sorcerer on Palanquin of Nurgle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004071",
+        "line": "1",
+        "description": "1 Sorcerer on Steed of Slaanesh",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004072",
+        "line": "1",
+        "description": "1 Sorcerer in Terminator Armour",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004073",
+        "line": "1",
+        "description": "1 Warp Talon Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004073",
+        "line": "2",
+        "description": "4-9 Warp Talons",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "1",
+        "description": "1 Miraculist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "2",
+        "description": "1 Salvationist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "3",
+        "description": "1 Death Cult Assassin",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "4",
+        "description": "2 Missionaries",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "5",
+        "description": "4 Sanctifiers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "1",
+        "description": "1 Miraculist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "2",
+        "description": "1 Salvationist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "3",
+        "description": "1 Death Cult Assassin",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "4",
+        "description": "2 Missionaries",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "5",
+        "description": "4 Sanctifiers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004076",
+        "line": "1",
+        "description": "1 Blood Herald",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004076",
+        "line": "2",
+        "description": "7 Goremongers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "1",
+        "description": "1 Fulgrim - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "1",
+        "description": "1 Lord Exultant",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "1",
+        "description": "1 Obsessionist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "2",
+        "description": "4-9 Tormentors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "1",
+        "description": "1 Obsessionist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "2",
+        "description": "4-9 Infractors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "1",
+        "description": "1 Terminator Champion",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "2",
+        "description": "4 Chaos Terminators",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004082",
+        "line": "1",
+        "description": "1 Chaos Land Raider",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004083",
+        "line": "1",
+        "description": "1 Lucius the Eternal - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004084",
+        "line": "1",
+        "description": "1 Lord Kakophonist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004085",
+        "line": "1",
+        "description": "1 Sorcerer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004086",
+        "line": "1",
+        "description": "1 Daemon Prince of Slaanesh",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004087",
+        "line": "1",
+        "description": "1 Daemon Prince of Slaanesh with Wings",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004088",
+        "line": "1",
+        "description": "1 Disharmonist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004088",
+        "line": "2",
+        "description": "5 Noise Marines",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004089",
+        "line": "1",
+        "description": "3-6 Flawless Blades",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004090",
+        "line": "1",
+        "description": "2 Chaos Spawn",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004091",
+        "line": "1",
+        "description": "1 Maulerfiend",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004092",
+        "line": "1",
+        "description": "1 Heldrake",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004093",
+        "line": "1",
+        "description": "1 Chaos Rhino",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004094",
+        "line": "1",
+        "description": "1 Shalaxi Helbane - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "1",
+        "description": "1 Alluress",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "2",
+        "description": "9 Daemonettes",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004096",
+        "line": "1",
+        "description": "1 Blissbringer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004096",
+        "line": "2",
+        "description": "2-5 Fiends",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "1",
+        "description": "1 Keeper of Secrets",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "1",
+        "description": "1 Heartseeker",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "2",
+        "description": "4-9 Seekers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004099",
+        "line": "1",
+        "description": "1 Disharmonist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004099",
+        "line": "2",
+        "description": "5 Noise Marines",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004100",
+        "line": "1",
+        "description": "1 Tormentbringer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004101",
+        "line": "1",
+        "description": "1-2 Hellflayers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "1",
+        "description": "1 Karanak - EPIC HERO",
         "": ""
     }
 ]

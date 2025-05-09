@@ -7,11 +7,12 @@ import useStore from "@/store/store";
 import ListUnit from "@/types/ListUnit";
 import Phase from "@/types/Phase";
 
-import SavesPhase from "./PhaseDisplays/SavesPhase";
+import PregamePhase from "./PhaseDisplays/PregamePhase";
 import CommandPhase from "./PhaseDisplays/CommandPhase";
 import MovementPhase from "./PhaseDisplays/MovementPhase";
 import ShootingOrFightPhase from "./PhaseDisplays/ShootingOrFightPhase";
 import ChargePhase from "./PhaseDisplays/ChargePhase";
+import SavesPhase from "./PhaseDisplays/SavesPhase";
 import PhaseEnhancements from "./PhaseEnhancements";
 import PhaseAbilities from "./PhaseAbilities";
 
@@ -62,11 +63,16 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
       )
     : unit.weaponsDatasheets;
 
+  console.log(unit.name, unit);
+
   const phasedWeapons = filteredWeapons.filter((wargear) =>
     phase === "Shooting" ? wargear.type === "Ranged" : wargear.type === "Melee"
   );
 
   switch (phase) {
+    case Phase.Pregame:
+      [characteristic, toggled] = PregamePhase({ unit });
+      break;
     case Phase.Command:
       [characteristic, toggled] = CommandPhase({ unit });
       break;
@@ -94,6 +100,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     unit,
     phase,
   });
+
 
   const [phasedEnhancements, enhancementsToggle] = PhaseEnhancements({
     unit,

@@ -607,7 +607,7 @@
         "faction_id": "CD",
         "name": "First Prince of Chaos",
         "legend": "Elevated to the status of Daemon Prince by the combined might of the four Dark Gods of Chaos, Be'lakor exudes unimaginable power.",
-        "description": "Units from your army have the relevant abilities presented below.MURDERER'S COWLThe most murderous seek not to hide in the Dark Master's pall. The shadows extend before them, offering a rapid route to slaughter.SHADOW LEGION KHORNE units only.This unit is eligible to shoot and declare a charge in a turn in which it Advanced.PENUMBRAL PUPPETRYMutative agents of change, touched by the Dark Master's umbral aura, summon illusory magicks to confound and confuse their desperate foes.SHADOW LEGION TZEENTCH units only. Each time an attack targets this unit, subtract 1 from the Hit roll.GLOAM ROTBorne upon the gloaming wisp of Be'lakor's shadow, this debilitating curse atrophies muscle and withers flesh, greatly weakening its victims.SHADOW LEGION NURGLE units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from the Wound roll.SHADOW'S CARESSThe Dark Master's shadow falls across his thralls, masking their approach.SHADOW LEGION SLAANESH units only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit.DISCIPLES OF BE'LAKORBe'lakor's immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate-filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy's midst.SHADOW LEGION UNDIVIDED units only.This unit has the Dark Pacts army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not HERETIC ASTARTES. If this unit is BE'LAKOR, it automatically passes the Leadership test required for Dark Pacts.SHADOW LEGION HERETIC ASTARTES models in this unit have the Deep Strike ability.",
+        "description": "Units from your army have the relevant abilities presented below.MURDERER'S COWLThe most murderous seek not to hide in the Dark Master's pall. The shadows extend before them, offering a rapid route to slaughter.SHADOW LEGION KHORNE units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.PENUMBRAL PUPPETRYMutative agents of change, touched by the Dark Master's umbral aura, summon illusory magicks to confound and confuse their desperate foes.SHADOW LEGION TZEENTCH units only. Each time an attack targets this unit, subtract 1 from the Hit roll.GLOAM ROTBorne upon the gloaming wisp of Be'lakor's shadow, this debilitating curse atrophies muscle and withers flesh, greatly weakening its victims.SHADOW LEGION NURGLE units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from the Wound roll.SHADOW'S CARESSThe Dark Master's shadow falls across his thralls, masking their approach.SHADOW LEGION SLAANESH units only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit.DISCIPLES OF BE'LAKORBe'lakor's immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate-filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy's midst.SHADOW LEGION UNDIVIDED units only.This unit has the Dark Pacts army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not HERETIC ASTARTES. If this unit is BE'LAKOR, it automatically passes the Leadership test required for Dark Pacts.SHADOW LEGION HERETIC ASTARTES models in this unit have the Deep Strike ability.",
         "detachment": "Shadow Legion",
         "": ""
     },
@@ -852,6 +852,60 @@
         "legend": "",
         "description": "If your Army Faction is DRUKHARI, you can include HARLEQUINS and ANHRATHE units in your army, even though they do not have the DRUKHARI Faction keyword. The combined points value of HARLEQUINS and/or ANHRATHE units you can include in your army depends on the battle size, as follows:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo HARLEQUINS or ANHRATHE models included in your army in this way can be your WARLORD, and they cannot be given Enhancements.",
         "detachment": "Skysplinter Assault",
+        "": ""
+    },
+    {
+        "id": "000009997",
+        "faction_id": "EC",
+        "name": "Quicksilver Grace",
+        "legend": "The Emperor's Children are consummate raiders, eager to satiate their lust for sensation amid battle and falling upon their foes with impossible swiftness and inhuman grace.",
+        "description": "You can re-roll Advance rolls made for EMPEROR'S CHILDREN units from your army.",
+        "detachment": "Mercurial Host",
+        "": ""
+    },
+    {
+        "id": "000010001",
+        "faction_id": "EC",
+        "name": "Exquisite Swordsmanship",
+        "legend": "These warriors are peerless swordsmen, each demonstrating exquisite fighting form. Those who lock swords with these obsessive warriors do so at their peril.",
+        "description": "Each time an EMPEROR'S CHILDREN unit from your army is selected to fight, if it made a Charge move this turn, select one of the abilities below. While resolving those attacks, melee weapons equipped by models in that unit have that ability:[LETHAL HITS][SUSTAINED HITS 1]",
+        "detachment": "Peerless Bladesmen",
+        "": ""
+    },
+    {
+        "id": "000010005",
+        "faction_id": "EC",
+        "name": "Mechanised Murder",
+        "legend": "The Emperor's Children are masters of the mechanised assault, leaping from their growling, daemonically tainted vehicles to fall upon the foe with blade and bolter.",
+        "description": "Each time an EMPEROR'S CHILDREN model from your army makes an attack, if it disembarked from a TRANSPORT this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+        "detachment": "Rapid Evisceration",
+        "": ""
+    },
+    {
+        "id": "000010009",
+        "faction_id": "EC",
+        "name": "Daemonic Empowerment",
+        "legend": "Where the Emperor's Children indulge their obsession, the power ofSlaanesh empowers those in his thrall.",
+        "description": "While an EMPEROR'S CHILDREN unit from your army is within 6\" of one or more friendly LEGIONS OF EXCESS units, it is Empowered.While a LEGIONS OF EXCESS unit from your army is within 6\" of one or more friendly EMPEROR'S CHILDREN units, it is Empowered.While a unit from your army is Empowered, weapons equipped by models in that unit have the [sustained hits 1] ability. If such a weapon already has that ability, each time an attack is made with that weapon, an unmodified Hit roll of 5+ scores a Critical Hit.LEGIONS OF EXCESSYou can include LEGIONS OF EXCESS units in your army, even though they do not have the EMPEROR'S CHILDREN Faction keyword. The combined points cost of such units you can include in your army is:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo LEGIONS OF EXCESS models from your army can be your WARLORD.",
+        "detachment": "Carnival of Excess",
+        "": ""
+    },
+    {
+        "id": "000010013",
+        "faction_id": "EC",
+        "name": "Pledges to the Dark Prince",
+        "legend": "Few appear as favoured by the Dark Prince as these warriors, their boons of power a reward for committing ever viler deeds in honour of their patron.",
+        "description": "At the start of the battle round, if your WARLORD is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your WARLORD model suffers D3 mortal wounds.EMPEROR'S CHILDREN units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).PACT POINTSBONUS1+Each time a model in this unit makes an attack, re-roll a Hit roll of 1.3+Each time a model in this unit makes an attack, re-roll a Wound roll of 1.5+Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAINED HITS 1] abilities.7+Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.",
+        "detachment": "Coterie of the Conceited",
+        "": ""
+    },
+    {
+        "id": "000010017",
+        "faction_id": "EC",
+        "name": "Internal Rivalries",
+        "legend": "The boldest and most debased champions of Slaanesh may gain the benefit of the Dark Princes boons. Yet none hold Slaanesh's favour for long, for always another seeks to wrest his favour from their rivals.",
+        "description": "EMPEROR'S CHILDREN CHARACTER units from your army can ignore any or all modifiers to their Move characteristic and any or all modifiers to Advance and Charge rolls made for them.At the start of the battle, your WARLORD's unit is your army's Favoured Champions. The first time in each player's turn that an EMPEROR'S CHILDREN CHARACTER unit from your army destroys an enemy unit, after resolving all of its attacks, that CHARACTER unit becomes your army's new Favoured Champions, replacing the old one.Each time a model in your army's Favoured Champions unit makes an attack, you can re-roll the Wound roll.",
+        "detachment": "Slaanesh's Chosen",
         "": ""
     },
     {
@@ -1192,7 +1246,7 @@
         "faction_id": "ORK",
         "name": "Dakka! Dakka! Dakka!",
         "legend": "Orks have no real concept of ammunition preservation, instead tending to hold the trigger down until their ammunition runs dry or their weapon falls apart in their hands.",
-        "description": "During your Shooting phase, ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [SUSTAINED HITS 2] ability.While the Waaagh! is active for your army, ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [ASSAULT] ability.",
+        "description": "Ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [ASSAULT] ability.While the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [SUSTAINED HITS 1] ability",
         "detachment": "More Dakka!",
         "": ""
     },

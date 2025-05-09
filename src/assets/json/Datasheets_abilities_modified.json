@@ -434,7 +434,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -581,7 +581,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -935,7 +935,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -1147,6 +1147,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -1202,6 +1203,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -1243,7 +1245,7 @@
         "": "",
         "phases": [
             "Movement",
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -1700,6 +1702,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -1740,6 +1743,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -1781,6 +1785,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -3303,8 +3308,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -3424,7 +3429,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -3478,6 +3483,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Shooting"
         ]
@@ -3507,7 +3513,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -3612,7 +3618,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting"
         ]
     },
@@ -3738,8 +3744,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -4708,8 +4714,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -4992,6 +4998,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Saves"
         ]
@@ -5035,7 +5042,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -5510,7 +5517,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -5881,7 +5888,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -5977,7 +5984,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -6048,8 +6055,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -6455,7 +6462,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -6552,7 +6559,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -7702,6 +7709,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Saves"
         ]
@@ -7787,6 +7795,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Saves"
         ]
@@ -7901,8 +7910,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -7958,8 +7967,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -8251,7 +8260,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -8334,7 +8343,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -9068,7 +9077,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -9268,7 +9277,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -9282,7 +9291,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -9429,7 +9438,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -9650,8 +9659,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -9830,8 +9839,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -9944,8 +9953,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -10105,7 +10114,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -10544,7 +10553,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -11208,8 +11217,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -11641,7 +11650,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -11655,7 +11664,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -11766,7 +11775,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -11877,7 +11886,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -11903,7 +11912,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12038,7 +12047,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12080,7 +12089,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12094,7 +12103,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12123,7 +12132,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12181,7 +12190,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12360,7 +12369,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12514,7 +12523,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12580,7 +12589,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting"
         ]
     },
@@ -12610,7 +12619,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -12873,7 +12882,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -13854,7 +13863,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -13909,7 +13918,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -13979,7 +13988,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -14242,8 +14251,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -14299,8 +14308,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -14707,7 +14716,7 @@
         "parameter": "8\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -14842,7 +14851,7 @@
         "parameter": "8\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -15042,7 +15051,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -15366,7 +15375,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -15450,7 +15459,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -15616,8 +15625,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -15672,8 +15681,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -16415,8 +16424,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -16568,7 +16577,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -16637,7 +16646,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -16827,7 +16836,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -17003,7 +17012,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -17029,7 +17038,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Saves"
         ]
@@ -17125,7 +17134,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -17951,7 +17960,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -18060,7 +18069,7 @@
         "parameter": "8\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -18167,7 +18176,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -18262,7 +18271,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -18457,7 +18466,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -18831,7 +18840,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -19012,7 +19021,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -19436,7 +19445,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -19637,7 +19646,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -19945,7 +19954,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Fight"
         ]
     },
@@ -20514,7 +20523,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -20672,7 +20681,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -20686,7 +20695,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -21315,7 +21324,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -21370,7 +21379,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Fight"
         ]
@@ -21815,8 +21824,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -21912,8 +21921,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -21969,8 +21978,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -22163,7 +22172,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -22357,6 +22366,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -22878,7 +22888,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -23014,7 +23024,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -23878,7 +23888,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -24707,7 +24717,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -24801,7 +24811,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -25162,7 +25172,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -25304,8 +25314,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -25550,7 +25560,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -25608,7 +25618,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -26983,8 +26993,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -27027,8 +27037,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -27131,8 +27141,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -27175,8 +27185,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -27274,7 +27284,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -27302,7 +27312,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -27412,6 +27422,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -27454,7 +27465,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -27820,6 +27831,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Shooting",
             "Fight"
@@ -27877,7 +27889,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -27999,7 +28011,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -29286,7 +29298,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -29410,7 +29422,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -29522,7 +29534,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -29828,6 +29840,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -30282,7 +30295,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -30975,7 +30988,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -31034,6 +31047,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement"
         ]
@@ -32022,7 +32036,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -32236,7 +32250,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Fight",
             "Saves"
         ]
@@ -33339,48 +33353,6 @@
         ]
     },
     {
-        "datasheet_id": "000000951",
-        "line": "1",
-        "ability_id": "000008359",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "2",
-        "ability_id": "",
-        "model": "",
-        "name": "Riotous Cacophony",
-        "description": "In your Shooting phase, after this unit has shot, select one enemy unit that was hit by one or more of those attacks. That unit must take a Battle-shock test.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting"
-        ]
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Chaos Icon",
-        "description": "Each time the bearer's unit takes a Leadership test for the Dark Pacts ability, you can re-roll that test.",
-        "type": "Wargear",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight",
-            "Saves"
-        ]
-    },
-    {
         "datasheet_id": "000000952",
         "line": "1",
         "ability_id": "000008359",
@@ -33838,8 +33810,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -34372,7 +34344,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -34585,8 +34557,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -34832,6 +34804,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -34862,7 +34835,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -34977,7 +34950,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -35401,7 +35374,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -36656,20 +36629,6 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Collar of Khorne",
-        "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
-        "type": "Wargear",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Saves"
-        ]
-    },
-    {
-        "datasheet_id": "000001104",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
         "name": "Pack Leader",
         "description": "While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit.",
         "type": "Datasheet",
@@ -36682,16 +36641,32 @@
     },
     {
         "datasheet_id": "000001104",
-        "line": "6",
+        "line": "5",
         "ability_id": "",
         "model": "",
         "name": "Prey of the Blood God",
-        "description": "At the start of the first battle round, select one enemy unit to be this model's prey. Weapons equipped by models in this model's unit have the [LETHAL HITS] ability when targeting this model's prey. Each time this model's prey is destroyed, select one new enemy unit to be this model's prey.",
+        "description": "At the start of the first battle round, select one enemy unit to be this model's prey. Each time a model in this model's unit makes a melee attack that targets its prey, you can re-roll the Wound roll. Each time this model's prey is destroyed, select one new enemy unit to be this model's prey.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame",
+            "Command",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000001104",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Brass Collar of Bloody Vengeance",
+        "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
         ]
     },
     {
@@ -37572,6 +37547,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -37927,7 +37903,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -37996,7 +37972,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -38393,7 +38369,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -38537,7 +38513,7 @@
         "ability_id": "",
         "model": "",
         "name": "Horrifying Beauty",
-        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one of more units from your army with this ability must take a Battle-shock test, subtracting 1 from the result if that enemy unit is Below Half-strength.",
+        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from the result if that enemy unit is Below Half-strength.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -38643,11 +38619,12 @@
         "ability_id": "",
         "model": "",
         "name": "Cutting Down the Foe",
-        "description": "Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if that unit is an INFANTRY unit: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds.",
+        "description": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
+            "Charge",
             "Fight"
         ]
     },
@@ -38688,7 +38665,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -38907,6 +38884,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -38921,7 +38899,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39289,7 +39267,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39359,7 +39337,7 @@
         "parameter": "8\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39467,7 +39445,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39526,7 +39504,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39540,7 +39518,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39637,7 +39615,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39663,7 +39641,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -39926,6 +39904,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -40367,8 +40346,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -40487,6 +40466,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Saves"
         ]
@@ -40740,8 +40720,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -40796,8 +40776,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -40968,8 +40948,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -41098,8 +41078,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -41686,8 +41666,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -41990,6 +41970,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -42072,6 +42053,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -42481,7 +42463,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -42695,85 +42677,6 @@
         "": "",
         "phases": [
             "Saves"
-        ]
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "1",
-        "ability_id": "000008340",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "3",
-        "ability_id": "000008359",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Duellist's Pride",
-        "description": "While this model is leading a unit, models in that unit have the Fights First ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Armour of Shrieking Souls",
-        "description": "Each time this model is destroyed by an attack made by an enemy unit, that unit must take a Leadership test: if that test is passed, that enemy unit suffers D3 mortal wounds; if that test is failed, that enemy unit suffers D6 mortal wounds. If mortal wounds inflicted in this way destroy that enemy unit, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with D3 wounds remaining.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "6",
-        "ability_id": "",
-        "model": "",
-        "name": "EMPEROR'S CHILDREN",
-        "description": "If this model is your Warlord, NOISE MARINE units in your army have the BATTLELINE keyword.",
-        "type": "Special (\u043f\u0440\u0430\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Command"
         ]
     },
     {
@@ -43060,8 +42963,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -43104,8 +43007,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -43559,6 +43462,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -43592,7 +43496,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -43651,7 +43555,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -44011,7 +43915,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -44053,7 +43957,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -44419,7 +44323,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -44492,7 +44396,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -44655,7 +44559,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -45905,7 +45809,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -46500,7 +46404,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Fight",
             "Saves"
@@ -46807,7 +46711,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -46971,6 +46875,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -47040,6 +46945,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -47593,7 +47499,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Movement"
         ]
     },
@@ -47742,6 +47648,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -47920,6 +47827,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -48045,6 +47953,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -48269,8 +48178,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -48323,7 +48232,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -48515,7 +48424,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -48587,6 +48496,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Shooting",
             "Fight"
@@ -48801,7 +48711,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -48870,7 +48780,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -49461,7 +49371,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -49609,7 +49519,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -49695,7 +49605,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -50114,8 +50024,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -50480,6 +50390,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Fight"
         ]
@@ -51237,7 +51148,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -51323,8 +51234,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -51707,6 +51618,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -51721,6 +51633,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -52058,6 +51971,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -52284,7 +52198,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -52450,8 +52364,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -52534,8 +52448,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -52618,8 +52532,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -52711,7 +52625,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -54969,7 +54883,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -55091,6 +55005,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -55119,7 +55034,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -55400,6 +55315,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -55741,7 +55657,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -55877,7 +55793,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -56412,7 +56328,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -56656,7 +56572,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -56786,7 +56702,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Fight",
             "Saves"
@@ -57590,7 +57506,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -57691,6 +57607,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -57752,7 +57669,7 @@
         "ability_id": "",
         "model": "",
         "name": "Martial Inspiration",
-        "description": "Once per battle, in your Charge phase, this model's unit it eligible to declare a charge in a turn which it Advanced.",
+        "description": "Once per battle, in your Charge phase, this model's unit is eligible to declare a charge in a turn which it Advanced.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -57874,7 +57791,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -57989,7 +57906,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -58116,7 +58033,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -58380,7 +58297,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -58406,7 +58323,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -58462,7 +58379,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -58517,7 +58434,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -58543,7 +58460,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Saves"
         ]
     },
@@ -58600,7 +58517,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -59088,7 +59005,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -60030,7 +59947,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -60208,7 +60125,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -60447,7 +60364,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -60489,7 +60406,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Fight",
             "Saves"
@@ -61210,7 +61127,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -61310,7 +61227,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -61529,7 +61446,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -61915,7 +61832,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -61958,7 +61875,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -62211,7 +62128,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -62348,7 +62265,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -62389,7 +62306,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -62696,7 +62613,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -63198,8 +63115,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -63577,7 +63494,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -63726,7 +63643,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Fight",
             "Saves"
@@ -64119,7 +64036,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -64297,7 +64214,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -65250,7 +65167,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -65628,8 +65545,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -65749,6 +65666,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Saves"
         ]
@@ -67085,6 +67003,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Shooting",
             "Fight",
@@ -67155,6 +67074,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Shooting",
             "Fight",
@@ -67200,7 +67120,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -67368,7 +67288,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -67545,7 +67465,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Fight",
             "Saves"
@@ -67924,6 +67844,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -67966,7 +67887,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -68004,6 +67925,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -68032,7 +67954,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -68070,6 +67992,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -68230,6 +68153,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -68249,6 +68173,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -68688,7 +68613,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -68702,7 +68627,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -68799,6 +68724,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -69615,7 +69541,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -69873,6 +69799,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -69953,6 +69880,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -70019,6 +69947,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -70072,7 +70001,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -70086,6 +70015,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -70100,7 +70030,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -70255,7 +70185,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -70394,7 +70324,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Saves"
         ]
     },
@@ -70533,7 +70463,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Saves"
         ]
     },
@@ -70711,8 +70641,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -70893,8 +70823,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -71077,8 +71007,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -72351,8 +72281,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -72407,8 +72337,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -72463,8 +72393,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -72519,8 +72449,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -73295,8 +73225,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -73352,8 +73282,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -73409,8 +73339,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -73466,8 +73396,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -75019,8 +74949,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -75075,8 +75005,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -75131,8 +75061,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -75187,8 +75117,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -76108,7 +76038,7 @@
         "parameter": "D6+4\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -76272,7 +76202,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Fight",
             "Saves"
@@ -76372,7 +76302,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -76742,7 +76672,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -76768,7 +76698,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -76824,7 +76754,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -76850,7 +76780,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -76911,7 +76841,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -76937,7 +76867,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -77009,7 +76939,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -77067,7 +76997,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -77200,7 +77130,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -77415,7 +77345,7 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Rites of Battle",
+        "name": "Sacred Command",
         "description": "Once per battle\u00a0round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
         "type": "Datasheet",
         "parameter": "",
@@ -77958,8 +77888,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement",
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -78315,7 +78245,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -78369,6 +78299,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Saves"
         ]
@@ -78695,7 +78626,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -78709,7 +78640,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -78882,7 +78813,7 @@
         "ability_id": "",
         "model": "",
         "name": "INQUISITORIAL RETINUE",
-        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00170\" data-tooltip-content=\"#tooltip_content00170\" data-tooltip-anchor=\"#tooltip_",
+        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00207\" data-tooltip-content=\"#tooltip_content00207\" data-tooltip-anchor=\"#tooltip_",
         "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
@@ -79125,7 +79056,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Movement"
         ]
     },
@@ -79802,7 +79733,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -80272,7 +80203,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -80905,6 +80836,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Saves"
         ]
@@ -81109,7 +81041,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -81204,7 +81136,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -81288,7 +81220,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -81657,7 +81589,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -81780,7 +81712,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -81999,7 +81931,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -82253,7 +82185,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -82420,7 +82352,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -82462,7 +82394,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -82514,7 +82446,7 @@
         "ability_id": "",
         "model": "",
         "name": "EMBARKING",
-        "description": "While embarked within a TRANSPORT, each model takes up the space of 2 models, and each weapon equipped by these models is considered to be 2 models' weapons for the purposes of the Firing Deck ability.",
+        "description": "While embarked within a TRANSPORT, each Heavy Weapons Gunner model takes up the space of 2 models, and each weapon equipped by these models is considered to be 2 models' weapons for the purposes of the Firing Deck ability.",
         "type": "Special (\u043f\u0440\u0430\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
@@ -83733,7 +83665,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -84078,7 +84010,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -84133,7 +84065,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -84159,7 +84091,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Saves"
         ]
     },
@@ -84216,7 +84148,7 @@
         "parameter": "7\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -84259,6 +84191,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -84302,7 +84235,7 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -84521,7 +84454,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -85081,7 +85014,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -85888,7 +85821,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -86177,7 +86110,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -86243,7 +86176,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -86295,7 +86228,7 @@
         "ability_id": "",
         "model": "",
         "name": "EMBARKING",
-        "description": "While embarked within a TRANSPORT, each model takes up the space of 2 models, and each weapon equipped by these models is considered to be 2 models' weapons for the purposes of the Firing Deck ability.",
+        "description": "While embarked within a TRANSPORT, each Heavy Weapons Gunner model takes up the space of 2 models, and each weapon equipped by these models is considered to be 2 models' weapons for the purposes of the Firing Deck ability.",
         "type": "Special (\u043f\u0440\u0430\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
@@ -86707,7 +86640,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -87278,6 +87211,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
         ]
     },
@@ -88007,7 +87941,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -88226,7 +88160,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -88430,7 +88364,7 @@
         "parameter": "9\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -89427,7 +89361,7 @@
         "parameter": "6\"",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -90420,6 +90354,1796 @@
         "phases": [
             "Movement",
             "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "1",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6\"",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "2",
+        "ability_id": "000008452",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "One Shot",
+        "description": "The bearer can only shoot with this weapon once per battle.",
+        "type": "Wargear profile",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Ministorum Sermon",
+        "description": "While this unit contains a MINISTORUM PRIEST, each time a model in this unit makes a melee attack, add 1 to the Wound roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Cherub",
+        "description": "Once per battle, you can target this unit with the Command Re-roll Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.Designer's Note: Place a Cherub token next to the unit, removing it once this ability has been used.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "ATTACHED UNIT",
+        "description": "If a MINISTORUM PRIEST or INQUISITOR model from your army with the Leader ability can be attached to a SISTERS OF BATTLE SQUAD, it can be attached to this unit instead. If a MINISTORUM PRIEST or INQUISITOR model from your army is attached to this unit during the Declare Battle Formations step, that model gains the",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "7",
+        "ability_id": "",
+        "model": "",
+        "name": "Salvationist Medikit",
+        "description": "In your Command phase, if the bearer is on the battlefield, you can return up to D3 destroyed models (excluding CHARACTER models) to this unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "8",
+        "ability_id": "",
+        "model": "",
+        "name": "Simulacrum Imperialis",
+        "description": "Improve the Leadership characteristic of models in the bearer's unit by 1.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "1",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6\"",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "2",
+        "ability_id": "000008466",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "One Shot",
+        "description": "The bearer can only shoot with this weapon once per battle.",
+        "type": "Wargear profile",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Ministorum Sermon",
+        "description": "While this unit contains a MINISTORUM PRIEST, melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Cherub",
+        "description": "Once per battle, after this unit has performed an Act of Faith, you gain 1 Miracle dice.Designer's Note: Place a Cherub token next to the unit, removing it once this ability has been used.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Movement",
+            "Shooting",
+            "Charge",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "ATTACHED UNIT",
+        "description": "If a MINISTORUM PRIEST from your army with the Leader ability can be attached to a BATTLE SISTERS SQUAD, it can be attached to this unit instead. If a MINISTORUM PRIEST from your army is attached to this unit during the Declare Battle Formations step, that model gains the Scouts 6\" ability.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "7",
+        "ability_id": "",
+        "model": "",
+        "name": "Salvationist Medikit",
+        "description": "In your Command phase, if the bearer is on the battlefield, you can return up to D3 destroyed models (excluding CHARACTER models) to this unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "8",
+        "ability_id": "",
+        "model": "",
+        "name": "Simulacrum Imperialis",
+        "description": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6: on a 4+, you gain 1 Miracle dice showing a value equal to that result.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Movement",
+            "Shooting",
+            "Charge",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004076",
+        "line": "1",
+        "ability_id": "000008345",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004076",
+        "line": "2",
+        "ability_id": "000008428",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004076",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Loping Speed",
+        "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\".",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "3",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Poisons",
+        "description": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player's Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+,that enemy unit suffers D3 mortal wounds.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemon Primarch of Slaanesh",
+        "description": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Beguiling Form",
+        "description": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.",
+        "type": "Primarch",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "7",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Speed",
+        "description": "This model has the Fights First ability.",
+        "type": "Primarch",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "8",
+        "ability_id": "",
+        "model": "",
+        "name": "Enthralling Hypnosis",
+        "description": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
+        "type": "Primarch",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004077",
+        "line": "9",
+        "ability_id": "",
+        "model": "",
+        "name": "SUPREME COMMANDER",
+        "description": "If this model is in your army, it must be your WARLORD.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "1",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Perfectionists",
+        "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Euphoric Strikes",
+        "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "LORD OF THE HOST",
+        "description": "If this model is attached to an EMPEROR'S CHILDREN BATTLELINE unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6\" abilities.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "1",
+        "ability_id": "000008345",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Objective Defiled",
+        "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Icon of Excess",
+        "description": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units that phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "1",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6\"",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Excessive Assault",
+        "description": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Icon of Excess",
+        "description": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units that phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Lethal Obsession",
+        "description": "In your Shooting phase, each time this unit is selected to shoot, if it makes one or more ranged attacks and all of those attacks target the same enemy unit, until the end of the turn, each time this unit declares a charge, if that enemy unit is a target of that charge, you can re-roll the Charge roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004082",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004082",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004082",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Assault Ramp",
+        "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004083",
+        "line": "1",
+        "ability_id": "000008338",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "5+",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004083",
+        "line": "2",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004083",
+        "line": "3",
+        "ability_id": "000008336",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004083",
+        "line": "4",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004083",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "A Challenge Worthy of Skill",
+        "description": "Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004083",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Duellist's Hubris",
+        "description": "At the start of the Fight phase; if this model is not leading a unit, until the end of the phase, it has the Fights First ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004084",
+        "line": "1",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004084",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004084",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Obsessive Annunciation",
+        "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004084",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Doom Siren",
+        "description": "In your Shooting phase, after this model's unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks and roll three D6: for each 4+, that enemy unit suffers 1 mortal wound. If an enemy unit suffers one or more mortal wounds as a result of this ability, it must take a Battle-shock test.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004085",
+        "line": "1",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004085",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004085",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Warped Interference (Psychic)",
+        "description": "While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004085",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Wracking Agonies (Psychic)",
+        "description": "In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004086",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004086",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004086",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Lord of Excess",
+        "description": "While this model is within 3\" of one or more friendly SLAANESH INFANTRY units, this model has the Lone Operative ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004086",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Excessive Vigour",
+        "description": "While a friendly SLAANESH unit is within 6\" of this model, if that unit made a Charge move this turn, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Charge",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004086",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Ecstatic Death",
+        "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004087",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004087",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004087",
+        "line": "3",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004087",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Destruction",
+        "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004087",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Stimulated by Pain",
+        "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004088",
+        "line": "1",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004088",
+        "line": "2",
+        "ability_id": "",
+        "model": "",
+        "name": "Terrifying Crescendo",
+        "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004089",
+        "line": "1",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004089",
+        "line": "2",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Patrons",
+        "description": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack, an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004090",
+        "line": "1",
+        "ability_id": "000008338",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "5+",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004090",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004090",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Scuttling Horrors",
+        "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, this unit can make a Normal move of up to 6\".",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004091",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004091",
+        "line": "2",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004091",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Glutton for Punishment",
+        "description": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-strength, add 1 to the Wound roll as well.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004092",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004092",
+        "line": "2",
+        "ability_id": "000008342",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004092",
+        "line": "3",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004092",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Airborne Predator",
+        "description": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll two D6, adding 1 to each result if that enemy unit can FLY: for each 4+, that enemy unit suffers D3 mortal wounds.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004093",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004093",
+        "line": "2",
+        "ability_id": "000008334",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "2",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004093",
+        "line": "3",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004093",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Assault Vehicle",
+        "description": "Units can disembark from this TRANSPORT after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004094",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004094",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004094",
+        "line": "3",
+        "ability_id": "000009995",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004094",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "No Prey Can Evade",
+        "description": "You can re-roll Advance and Charge rolls made for this model.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004094",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Monarch of the Hunt",
+        "description": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's quarry is destroyed, select one new enemy unit to be this model's quarry.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "2",
+        "ability_id": "000008340",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "3",
+        "ability_id": "000009995",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Horrifying Beauty",
+        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from the result if that enemy unit is Below Half-strength.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Icon",
+        "description": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Instrument of Chaos",
+        "description": "Add 1 to Charge rolls made for the bearer's unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004096",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004096",
+        "line": "2",
+        "ability_id": "000009995",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004096",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Soporific Musk",
+        "description": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "3",
+        "ability_id": "000009995",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemon Lord of Slaanesh",
+        "description": "While a friendly LEGIONS OF EXCESS unit is within 6\" of this model, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Mesmerising Form",
+        "description": "Each time an attack targets this model, subtract 1 from the Hit roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Shining Aegis",
+        "description": "The bearer has a Save characteristic of 3+.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "2",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "9\"",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "3",
+        "ability_id": "000009995",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Unholy Speed",
+        "description": "You can re-roll Advance and Charge rolls made for this unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Icon",
+        "description": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Instrument of Chaos",
+        "description": "Add 1 to Charge rolls made for the bearer's unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004099",
+        "line": "1",
+        "ability_id": "000009994",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004099",
+        "line": "2",
+        "ability_id": "",
+        "model": "",
+        "name": "Terrifying Crescendo",
+        "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004100",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004100",
+        "line": "2",
+        "ability_id": "000008433",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004100",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Tormentbringer",
+        "description": "While a friendly SLAANESH LEGIONES DAEMONICA unit is within 6\" of this model, melee weapons in that unit have the [SUSTAINED HITS 1] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004100",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Hysterical Frenzy (Psychic)",
+        "description": "Each time a model in this model's unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004101",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004101",
+        "line": "2",
+        "ability_id": "000008433",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004101",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Cutting Down the Foe",
+        "description": "Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if that unit is an INFANTRY unit: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "2",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "3",
+        "ability_id": "000008433",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Pack Leader",
+        "description": "While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Prey of the Blood God",
+        "description": "At the start of the first battle round, select one enemy unit to be this model's prey. Weapons equipped by models in this model's unit have the [LETHAL HITS] ability when targeting this model's prey. Each time this model's prey is destroyed, select one new enemy unit to be this model's prey.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Collar of Khorne",
+        "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
         ]
     }
 ]

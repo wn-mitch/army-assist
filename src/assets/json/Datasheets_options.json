@@ -2999,7 +2999,7 @@
         "datasheet_id": "000000512",
         "line": "5",
         "button": "*",
-        "description": "To a maximum of 1 per 10 models in this unit.",
+        "description": "* To a maximum of 1 per 10 models in this unit.",
         "": ""
     },
     {
@@ -6216,55 +6216,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000000951",
-        "line": "1",
-        "button": "\u2022",
-        "description": "Any number of Noise Marines can each have their boltgun replaced with one of the following:1 Astartes chainsword1 sonic blaster",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "2",
-        "button": "\u2022",
-        "description": "1 Noise Marine's boltgun can be replaced with 1 blastmaster.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "3",
-        "button": "\u2022",
-        "description": "The Noise Champion's bolt pistol can be replaced with one of the following:1 plasma pistol*1 accursed weapon1 Astartes chainsword1 power fist",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "4",
-        "button": "\u2022",
-        "description": "The Noise Champion's boltgun can be replaced with one of the following:1 plasma pistol*1 accursed weapon1 Astartes chainsword1 power fist1 sonic blaster",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "5",
-        "button": "\u2022",
-        "description": "The Noise Champion can be equipped with 1 doom siren.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "6",
-        "button": "\u2022",
-        "description": "1 model can be equipped with 1 Chaos icon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000951",
-        "line": "7",
-        "button": "*",
-        "description": "* Maximum 1 per model.",
-        "": ""
-    },
-    {
         "datasheet_id": "000000952",
         "line": "1",
         "button": "\u2022",
@@ -8187,13 +8138,6 @@
         "line": "1",
         "button": "\u2022",
         "description": "This model's bolt pistol can be replaced with one of the following:1 boltgun1 combi-weapon1 grav-pistol1 plasma pistol1 storm bolter",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001354",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
         "": ""
     },
     {
@@ -10895,7 +10839,7 @@
         "datasheet_id": "000002607",
         "line": "1",
         "button": "\u2022",
-        "description": "This model's chainsword can be replaced with one of the following:1 boltgun1 power fist1 power weapon",
+        "description": "This model's chainsword can be replaced with one of the following:1 boltgun and 1 close combat weapon1 power fist1 power weapon",
         "": ""
     },
     {
@@ -10986,21 +10930,21 @@
         "datasheet_id": "000002613",
         "line": "1",
         "button": "\u2022",
-        "description": "For every 10 models in this unit, up to 2 Death Korps Troopers can each have their lasgun replaced with one of the following*:1 flamer**1 grenade launcher**1 long-las**",
+        "description": "For every 10 models in this unit, up to 2 Death Korps Troopers can each have their lasgun replaced with one of the following*:1 flamer1 grenade launcher1 long-las1 meltagun1 plasma gun",
         "": ""
     },
     {
         "datasheet_id": "000002613",
         "line": "2",
         "button": "\u2022",
-        "description": "For every 10 models in this unit, up to 2 Death Korps Troopers can each have their lasgun replaced with one of the following*:1 lasgun and 1 vox-caster*** (that model's lasgun cannot be replaced)1 meltagun**1 plasma gun**",
+        "description": "For every 10 models in this unit, 1 Death Korps Trooper equipped with a lasgun can be equipped with 1 Death Korps medi-pack (that model's lasgun cannot be replaced)**.",
         "": ""
     },
     {
         "datasheet_id": "000002613",
         "line": "3",
         "button": "\u2022",
-        "description": "For every 10 models in this unit, 1 Death Korps Trooper equipped with a lasgun can be equipped with 1 Death Korps medi-pack (that model's lasgun cannot be replaced)***.",
+        "description": "For every 10 models in this unit, 1 Death Korps Trooper equipped with a lasgun can be equipped with 1 vox-caster (that model's lasgun cannot be replaced).**",
         "": ""
     },
     {
@@ -11021,28 +10965,21 @@
         "datasheet_id": "000002613",
         "line": "6",
         "button": "\u2022",
-        "description": "Any number of Death Korps Watchmasters can each have their laspistol replaced with one of the following:1 bolt pistol1 plasma pistol",
+        "description": "Any number of Death Korps Watchmasters can each replace their laspistol with one of the following:1 bolt pistol1 plasma pistol",
         "": ""
     },
     {
         "datasheet_id": "000002613",
         "line": "7",
         "button": "*",
-        "description": "* You cannot select the same option more than once per unit unless it contains 20 models, in which case you cannot select the same option more than twice per unit.",
+        "description": "*  You cannot select the same option more than once per unit unless it contains 20 models, in which case you cannot select the same option more than twice per unit.",
         "": ""
     },
     {
         "datasheet_id": "000002613",
         "line": "8",
         "button": "*",
-        "description": "** You cannot select more than two of these options per unit unless it contains 20 models, in which case you cannot select more than four of these options per unit.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002613",
-        "line": "9",
-        "button": "*",
-        "description": "*** A model can only take one of these options.",
+        "description": "** A model can only take one of these options.",
         "": ""
     },
     {
@@ -16817,7 +16754,7 @@
         "datasheet_id": "000003938",
         "line": "1",
         "button": "\u2022",
-        "description": "This model's chainsword can be replaced with one of the following:1 boltgun1 power fist1 power weapon",
+        "description": "This model's chainsword can be replaced with one of the following:1 boltgun and 1 close combat weapon1 power fist1 power weapon",
         "": ""
     },
     {
@@ -17090,21 +17027,21 @@
         "datasheet_id": "000003950",
         "line": "1",
         "button": "\u2022",
-        "description": "For every 10 models in this unit, up to 2 Death Korps Troopers can each have their lasgun replaced with one of the following*:1 flamer**1 grenade launcher**1 long-las**",
+        "description": "For every 10 models in this unit, up to 2 Death Korps Troopers can each have their lasgun replaced with one of the following*:1 flamer1 grenade launcher1 long-las1 meltagun1 plasma gun",
         "": ""
     },
     {
         "datasheet_id": "000003950",
         "line": "2",
         "button": "\u2022",
-        "description": "For every 10 models in this unit, up to 2 Death Korps Troopers can each have their lasgun replaced with one of the following*:1 lasgun and 1 vox-caster*** (that model's lasgun cannot be replaced)1 meltagun**1 plasma gun**",
+        "description": "For every 10 models in this unit, 1 Death Korps Trooper equipped with a lasgun can be equipped with 1 Death Korps medi-pack (that model's lasgun cannot be replaced)**.",
         "": ""
     },
     {
         "datasheet_id": "000003950",
         "line": "3",
         "button": "\u2022",
-        "description": "For every 10 models in this unit, 1 Death Korps Trooper equipped with a lasgun can be equipped with 1 Death Korps medi-pack (that model's lasgun cannot be replaced)***.",
+        "description": "For every 10 models in this unit, 1 Death Korps Trooper equipped with a lasgun can be equipped with 1 vox-caster (that model's lasgun cannot be replaced).**",
         "": ""
     },
     {
@@ -17125,28 +17062,21 @@
         "datasheet_id": "000003950",
         "line": "6",
         "button": "\u2022",
-        "description": "Any number of Death Korps Watchmasters can each have their laspistol replaced with one of the following:1 bolt pistol1 plasma pistol",
+        "description": "Any number of Death Korps Watchmasters can each replace their laspistol with one of the following:1 bolt pistol1 plasma pistol",
         "": ""
     },
     {
         "datasheet_id": "000003950",
         "line": "7",
         "button": "*",
-        "description": "* You cannot select the same option more than once per unit unless it contains 20 models, in which case you cannot select the same option more than twice per unit.",
+        "description": "*  You cannot select the same option more than once per unit unless it contains 20 models, in which case you cannot select the same option more than twice per unit.",
         "": ""
     },
     {
         "datasheet_id": "000003950",
         "line": "8",
         "button": "*",
-        "description": "** You cannot select more than two of these options per unit unless it contains 20 models, in which case you cannot select more than four of these options per unit.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003950",
-        "line": "9",
-        "button": "*",
-        "description": "*** A model can only take one of these options.",
+        "description": "** A model can only take one of these options.",
         "": ""
     },
     {
@@ -18981,6 +18911,314 @@
         "line": "2",
         "button": "\u2022",
         "description": "This model can be equipped with 1 Chaos familiar.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Missionary model can have its 1 plasma gun replaced with 1 meltagun.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Missionary model equipped with 1 plasma gun can be equipped with 1 holy fire (this model's plasma gun cannot be replaced).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "3",
+        "button": "\u2022",
+        "description": "1 Sanctifier model can have its 1 Sanctifier melee weapon replaced with 1 Ministorum hand flamer and 1 close combat weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004074",
+        "line": "4",
+        "button": "\u2022",
+        "description": "1 Sanctifier model can have its 1 Sanctifier melee weapon replaced with 1 close combat weapon and 1 simulacrum imperialis.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Missionary model can have its 1 plasma gun replaced with 1 meltagun.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Missionary model equipped with 1 plasma gun can be equipped with 1 holy fire (this model's plasma gun cannot be replaced).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "3",
+        "button": "\u2022",
+        "description": "1 Sanctifier model can have its 1 Sanctifier melee weapon replaced with 1 Ministorum hand flamer and 1 close combat weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004075",
+        "line": "4",
+        "button": "\u2022",
+        "description": "1 Sanctifier model can have its 1 Sanctifier melee weapon replaced with 1 close combat weapon and 1 simulacrum imperialis.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004076",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Goremonger's chainblade can be replaced with 1 autopistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004076",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Goremonger's chainblade can be replaced with 1 blood harpoon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model's plasma pistol can be replaced with one of the following:1 power fist1 rapture lash",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004078",
+        "line": "2",
+        "button": "\u2022",
+        "description": "This model's Phoenix power spear can be replaced with one of the following:1 master-crafted power sword1 screamer pistol",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "1",
+        "button": "\u2022",
+        "description": "The Obsessionist's bolt pistol can be replaced with 1 plasma pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "2",
+        "button": "\u2022",
+        "description": "The Obsessionist's power sword can be replaced with 1 rapture lash.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "3",
+        "button": "\u2022",
+        "description": "For every 5 models in this unit, 1 Tormentor's boltgun can be replaced with 1 meltagun.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "4",
+        "button": "\u2022",
+        "description": "For every 5 models in this unit, 1 Tormentor's boltgun can be replaced with 1 plasma gun.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004079",
+        "line": "5",
+        "button": "\u2022",
+        "description": "1 Tormentor can be equipped with 1 icon of excess.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "1",
+        "button": "\u2022",
+        "description": "The Obsessionist's bolt pistol can be replaced with 1 plasma pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "2",
+        "button": "\u2022",
+        "description": "The Obsessionist's power sword can be replaced with 1 rapture lash.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004080",
+        "line": "3",
+        "button": "\u2022",
+        "description": "1 Infractor can be equipped with 1 icon of excess.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Chaos Terminator's combi-bolter can be replaced with one of the following:1 heavy flamer1 reaper autocannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "2",
+        "button": "\u2022",
+        "description": "Any number of models can each have their combi-bolter replaced with 1 combi-weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "3",
+        "button": "\u2022",
+        "description": "1 model's combi-bolter and accursed weapon can be replaced with 1 paired accursed weapons.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "4",
+        "button": "\u2022",
+        "description": "Up to 3 models can each have their accursed weapon replaced with 1 power fist.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004081",
+        "line": "5",
+        "button": "\u2022",
+        "description": "1 model's accursed weapon can be replaced with 1 chainfist.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004082",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004082",
+        "line": "2",
+        "button": "\u2022",
+        "description": "This model can be equipped with 1 havoc launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004084",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model's power sword can be replaced with 1 screamer pistol and 1 close combat weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004088",
+        "line": "1",
+        "button": "\u2022",
+        "description": "The Disharmonist's sonic blaster can be replaced with 1 screamer pistol and 1 power sword.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004088",
+        "line": "2",
+        "button": "\u2022",
+        "description": "Up to 2 Noise Marines can each replace their sonic blaster with 1 blastmaster.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004091",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model's lasher tendrils can be replaced with 2 magma cutters.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004092",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model's Hades autocannon can be replaced with 1 baleflamer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004093",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004093",
+        "line": "2",
+        "button": "\u2022",
+        "description": "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Daemonette that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004095",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Daemonette that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004097",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model can be equipped with one of the following:living whipritual knifeshining aegis",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Seeker that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004098",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Seeker that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004099",
+        "line": "1",
+        "button": "\u2022",
+        "description": "The Disharmonist's sonic blaster can be replaced with 1 screamer pistol and 1 power sword.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004099",
+        "line": "2",
+        "button": "\u2022",
+        "description": "Up to 2 Noise Marines can each replace their sonic blaster with 1 blastmaster.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004100",
+        "line": "1",
+        "button": "\u2022",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004101",
+        "line": "1",
+        "button": "\u2022",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004102",
+        "line": "1",
+        "button": "\u2022",
+        "description": "None",
         "": ""
     }
 ]

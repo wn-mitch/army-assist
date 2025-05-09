@@ -622,7 +622,6 @@
 000000944|1|Warpsmith|6"|4|2+|-||4|6+|1|60 x 35mm||
 000000946|1|Cultist Mob|6"|3|6+|-||1|7+|1|25mm||
 000000947|1|Chaos Terminator Squad|5"|5|2+|4||3|6+|1|40mm||
-000000951|1|Noise Marines|6"|4|3+|-||2|6+|1|32mm||
 000000952|1|Chosen|6"|4|3+|-||3|6+|1|32mm||
 000000953|1|Possessed|9"|6|3+|5||3|6+|1|40mm||
 000000954|1|Helbrute|6"|9|2+|-||8|6+|3|60mm||
@@ -688,13 +687,13 @@
 000001098|1|Chaos Questoris Knight Magaera|10"|12|3+|5||22|6+|10|120 x 92mm||
 000001099|1|Chaos Acastus Knight Porphyrion|8"|13|2+|5|* Against ranged attacks only|30|6+|10|Use model||
 000001100|1|Chaos Questoris Knight Styrix|10"|12|3+|5||22|6+|10|120 x 92mm||
-000001104|1|Karanak|12"|4|7+|4||5|7+|1|75 x 42mm||
+000001104|1|Karanak|12"|4|7+|4||5|7+|3|75 x 42mm||
 000001105|1|Skarbrand|10"|11|3+|4||20|6+|5|100mm||
 000001106|1|Skulltaker|8"|4|4+|4||5|7+|1|40mm||
 000001111|1|Rendmaster On Blood Throne|8"|9|4+|4||9|7+|3|120 x 92mm||
 000001112|1|Flesh Hounds|12"|4|7+|5||2|7+|1|60 x 35mm||
 000001114|1|Bloodletters|8"|4|7+|5||1|7+|2|32mm||
-000001115|1|Bloodcrushers|10"|7|3+|4||4|7+|2|90 x 52mm||
+000001115|1|Bloodcrushers|10"|7|3+|5||4|7+|2|90 x 52mm||
 000001116|1|Skull Cannon|8"|9|4+|4||9|7+|3|120 x 92mm||
 000001117|1|Kairos Fateweaver|12"|10|6+|4||20|6+|5|100mm||
 000001118|1|The Changeling|6"|3|7+|4||5|7+|1|40mm||
@@ -708,7 +707,7 @@
 000001130|1|Great Unclean One|7"|12|5+|4||20|6+|5|130mm||
 000001132|1|Plaguebearers|5"|5|7+|5||2|7+|2|32mm||
 000001133|1|Nurglings|5"|3|7+|6||4|8+|0|40mm||
-000001134|1|Beasts Of Nurgle|6"|9|6+|5||7|7+|2|60mm||
+000001134|1|Beasts Of Nurgle|6"|9|6+|5||7|7+|3|60mm||
 000001135|1|Plague Drones|10"|8|6+|5||5|7+|2|60mm||
 000001136|1|The Masque Of Slaanesh|9"|3|7+|4||4|7+|1|32mm||
 000001137|1|Keeper Of Secrets|14"|10|5+|4||18|6+|5|100mm||
@@ -785,7 +784,6 @@
 000001346|1|Lieutenant|6"|4|3+|-||4|6+|1|40mm||
 000001347|1|Land Raider Prometheus|10"|12|2+|-||16|6+|5|Use model||
 000001348|1|Librarian On Bike|12"|5|3+|-||5|6+|2|75 x 25mm||
-000001354|1|Lucius The Eternal|6"|4|3+|4||5|6+|1|25mm||
 000001355|1|Exalted Champion|6"|4|3+|-||4|6+|1|40mm||
 000001360|1|Grand Master In Nemesis Dreadknight|8"|8|2+|4||13|6+|4|120 x 92mm||
 000001361|1|Brotherhood Librarian|5"|5|2+|4||5|6+|1|40mm||
@@ -1497,7 +1495,7 @@
 000003893|1|Krieg Combat Engineers|6"|3|4+|-||1|7+|1|25mm||
 000003894|1|Catachan Heavy Weapons Squad|6"|3|5+|-||2|7+|2|50mm||
 000003895|1|HEAVY WEAPONS GUNNER|4"|3|4+|-||2|7+|1|50mm||
-000003895|2|FIRE COORDINATOR|6"|3|5+|-||2|7+|1|25mm||
+000003895|2|FIRE COORDINATOR|6"|3|5+|-||1|7+|1|25mm||
 000003896|1|Artillery Team|3"|7|3+|-||10|7+|3|130mm||
 000003897|1|Artillery Team|3"|5|4+|-||6|7+|2|100mm||
 000003898|1|Death Riders|10"|4|4+|-||2|7+|1|60 x 35mm||
@@ -1577,7 +1575,7 @@
 000003976|1|Kasrkin|6"|3|4+|-||1|7+|1|28mm||
 000003977|1|Krieg Combat Engineers|6"|3|4+|-||1|7+|1|25mm||
 000003978|1|HEAVY WEAPONS GUNNER|4"|3|4+|-||2|7+|1|50mm||
-000003978|2|FIRE COORDINATOR|6"|3|5+|-||2|7+|1|25mm||
+000003978|2|FIRE COORDINATOR|6"|3|5+|-||1|7+|1|25mm||
 000003979|1|Leman Russ Battle Tank|10"|11|2+|-||13|7+|3|Use model||
 000003980|1|Leman Russ Demolisher|10"|11|2+|-||13|7+|3|Use model||
 000003981|1|Leman Russ Eradicator|10"|11|2+|-||13|7+|3|Use model||
@@ -1680,3 +1678,32 @@
 000004071|1|Sorcerer On Steed Of Slaanesh|14"|5|3+|-||5|6+|2|No official base size|Use the Chaos Daemon's Seeker base size (60 x 35mm)?|
 000004072|1|Sorcerer In Terminator Armour|5"|5|2+|4||5|6+|1|40mm||
 000004073|1|Warp Talons|12"|4|3+|5||2|6+|1|32mm||
+000004074|1||6"|3|6+|5||1|7+|1|25mm||
+000004075|1||6"|3|6+|5||1|7+|1|25mm||
+000004076|1||9"|4|6+|-||1|7+|1|32mm||
+000004077|1|Fulgrim|16"|11|2+|4||16|5+|6|130mm||
+000004078|1|Lord Exultant|7"|4|3+|4||5|6+|1|40mm||
+000004079|1|Tormentors|7"|4|3+|-||2|6+|2|32mm||
+000004080|1|Infractors|7"|4|3+|-||2|6+|2|32mm||
+000004081|1|Terminator Squad|6"|5|2+|4||3|6+|1|40mm||
+000004082|1|Chaos Land Raider|10"|12|2+|-||16|6+|5|Use model||
+000004083|1|Lucius the Eternal|8"|5|2+|4||6|6+|1|50mm||
+000004084|1|Lord Kakophonist|6"|5|2+|4||6|6+|1|40mm||
+000004085|1|Sorcerer|7"|4|3+|-||4|6+|1|40mm||
+000004086|1|Daemon Prince of Slaanesh|10"|10|2+|4||10|6+|3|60mm||
+000004087|1|Daemon Prince of Slaanesh with Wings|14"|9|2+|4||10|6+|3|60mm||
+000004088|1|Noise Marines|6"|5|3+|-||2|6+|1|40mm||
+000004089|1|Flawless Blades|8"|5|3+|5||3|6+|1|40mm||
+000004090|1|Chaos Spawn|10"|5|4+|-||4|7+|1|50mm||
+000004091|1|Maulerfiend|10"|10|3+|5||12|6+|3|120 x 92mm||
+000004092|1|Heldrake|20+"|10|2+|5||14|7+|0|120 x 92mm flying base||
+000004093|1|Chaos Rhino|12"|9|3+|-||10|6+|2|Use model||
+000004094|1|Shalaxi Helbane|14"|10|3+|4||20|6+|5|100mm||
+000004095|1|Daemonettes|9"|3|7+|5||1|7+|1|25mm||
+000004096|1|Fiends|12"|5|7+|5||4|7+|2|75 x 42mm||
+000004097|1|Keeper of Secrets|14"|10|5+|4||18|6+|5|100mm||
+000004098|1|Seekers|14"|4|7+|5||2|7+|1|60 x 35mm||
+000004099|1|Noise Marines|6"|5|3+|-||2|6+|1|40mm||
+000004100|1|Tormentbringer|14"|6|5+|4||12|7+|3|120 x 92mm||
+000004101|1|Hellflayer|14"|6|5+|4||7|7+|3|120 x 92mm||
+000004102|1|Karanak|12"|4|7+|4||5|7+|1|75 x 42mm||

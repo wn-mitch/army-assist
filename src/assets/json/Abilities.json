@@ -19,7 +19,7 @@
         "id": "000000707",
         "name": "Shadow in the Warp",
         "legend": "Tyranids flood the battlefield with the psychic signature of the hive fleet - an icy, alien dread that gnaws at the minds of their prey and smothers even the most stalwart courage. When faced with such unfathomable horror, many are driven insane or suffer catastrophic neural damage.",
-        "faction_id": "GC",
+        "faction_id": "TYR",
         "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
         "": ""
     },
@@ -27,7 +27,7 @@
         "id": "000000707",
         "name": "Shadow in the Warp",
         "legend": "Tyranids flood the battlefield with the psychic signature of the hive fleet - an icy, alien dread that gnaws at the minds of their prey and smothers even the most stalwart courage. When faced with such unfathomable horror, many are driven insane or suffer catastrophic neural damage.",
-        "faction_id": "TYR",
+        "faction_id": "GC",
         "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
         "": ""
     },
@@ -365,6 +365,30 @@
         "legend": "",
         "faction_id": "DRU",
         "description": "When mustering your army, you can include HARLEQUINS units in your army, even though they do not have the ASURYANI Faction keyword. Unless otherwise stated, you cannot select HARLEQUINS or YNNARI as your Army Faction.",
+        "": ""
+    },
+    {
+        "id": "000009994",
+        "name": "Thrill Seekers",
+        "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
+        "faction_id": "CSM",
+        "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
+        "": ""
+    },
+    {
+        "id": "000009994",
+        "name": "Thrill Seekers",
+        "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
+        "faction_id": "EC",
+        "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
+        "": ""
+    },
+    {
+        "id": "000009995",
+        "name": "Pact of Excess",
+        "legend": "By enacting the most lurid and excessive acts of ritual violence, the Emperor's Children may shatter reality itself and summon forth the daemons of Slaanesh.",
+        "faction_id": "EC",
+        "description": "When mustering your army, unless specifically stated otherwise, you cannot select LEGIONS OF EXCESS as your Army Faction.",
         "": ""
     }
 ]

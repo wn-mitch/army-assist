@@ -27,7 +27,7 @@
         "id": "000000707",
         "name": "Shadow in the Warp",
         "legend": "Tyranids flood the battlefield with the psychic signature of the hive fleet - an icy, alien dread that gnaws at the minds of their prey and smothers even the most stalwart courage. When faced with such unfathomable horror, many are driven insane or suffer catastrophic neural damage.",
-        "faction_id": "GC",
+        "faction_id": "TYR",
         "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
         "": "",
         "phases": [
@@ -39,7 +39,7 @@
         "id": "000000707",
         "name": "Shadow in the Warp",
         "legend": "Tyranids flood the battlefield with the psychic signature of the hive fleet - an icy, alien dread that gnaws at the minds of their prey and smothers even the most stalwart courage. When faced with such unfathomable horror, many are driven insane or suffer catastrophic neural damage.",
-        "faction_id": "TYR",
+        "faction_id": "GC",
         "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
         "": "",
         "phases": [
@@ -162,6 +162,7 @@
         "description": "SCOUTSScouts form the vanguard of many armies. Unnoticed by the enemy, they range ahead of the main force.Some units have 'Scouts x\"' listed in their abilities. If every model in a unit has this ability, then at the start of the first battle round, before the first turn begins, it can make a Normal move of up to x\", with the exception that, while making that move, the distance moved by each model in that unit can be greater than that model's Move characteristic, as long as it is not greater than x\".DEDICATED TRANSPORT models can make use of any Scouts x\" ability listed in their abilities, or a Scouts x\" ability that a unit that starts the battle embarked within that DEDICATED TRANSPORT model has (provided only models with this ability are embarked within that DEDICATED TRANSPORT model), regardless of how that embarked unit gained this ability (e.g. listed in their abilities, conferred by an Enhancement or by an attached CHARACTER, etc.).A unit that moves using this ability must end that move more than 9\" horizontally away from all enemy models. If both players have units that can do this, the player who is taking the first turn moves their units first.Example: A unit has the Scouts 6\" ability. At the start of the first battle round, the controlling player can make a Normal move with that unit of up to 6\".Scouts x\": Unit can make a Normal move of up to x\" before the first turn begins.If embarked in a DEDICATED TRANSPORT, that DEDICATED TRANSPORT can make this move instead.Must end this move more than 9\" horizontally away from all enemy models.",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement"
         ]
@@ -174,7 +175,7 @@
         "description": "INFILTRATORSMany armies employ reconnaissance units who can sit concealed, waiting for the right moment to strike.During deployment, if every model in a unit has this ability, then when you set it up, it can be set up anywhere on the battlefield that is more than 9\" horizontally away from the enemy deployment zone and all enemy models.",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -249,6 +250,7 @@
         "description": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.Protector ImperativeRanged weapons equipped by models in this unit have the [HEAVY] ability.Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll.Conqueror ImperativeRanged weapons equipped by models in this unit have the [ASSAULT] ability.Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Shooting",
             "Fight",
@@ -263,6 +265,7 @@
         "description": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.Protector ImperativeRanged weapons equipped by models in this unit have the [HEAVY] ability.Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll.Conqueror ImperativeRanged weapons equipped by models in this unit have the [ASSAULT] ability.Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Shooting",
             "Fight",
@@ -318,6 +321,7 @@
         "description": "If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne from the Blessings of Khorne list (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded.Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the following dice: 1, 2, 3, 4.However, now that they have activated two Blessings of Khorne, they cannot activate any more and the remaining dice are discarded.RAGE-FUELLED INVIGORATIONANY DOUBLEAdd 2\" to the Move characteristic of models in this unit.WRATHFUL DEVOTIONANY DOUBLEModels in this unit have the Feel No Pain 6+ ability. If models in this unit already have the Feel No Pain ability, add 1 to their Feel No Pain rolls.MARTIAL EXCELLENCEDOUBLE 3+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.TOTAL CARNAGEDOUBLE 4+ OR ANY TRIPLEEach time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.WARP BLADESDOUBLE 5+ OR ANY TRIPLEMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.UNBRIDLED BLOODLUSTDOUBLE 6 OR TRIPLE 4+This unit is eligible to declare a charge in a turn in which it Advanced.",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -361,6 +365,7 @@
         "description": "If your Army Faction is AGENTS OF THE IMPERIUM, then in the Select Detachment Rules step, you can select one of the available Detachments from this book as normal.If your Army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below.BATTLE SIZERETINUE UNITSCHARACTER UNITSREQUISITIONED UNITSIncursion111Strike Force221Onslaught332Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round.",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement"
         ]
@@ -426,7 +431,7 @@
         "description": "If your Army Faction is LEAGUES OF VOTANN, each time an enemy unit destroys a LEAGUES OF VOTANN unit from your army, that enemy unit gains 1 Judgement token. An enemy unit can never have more than 2 Judgement tokens (any further Judgement tokens a unit would gain beyond this are ignored).In addition, at the start of the battle, select two units from your opponent's army; each of those units start the battle with 2 Judgement tokens.Each time a model from your army with this ability makes an attack that targets a unit that has one or more Judgement tokens, until that model's attacks have been resolved, apply the relevant bonus from the table below to that attack.JUDGEMENT TOKENSBONUS1Eminent Threat: Add 1 to the Hit roll.2Now We've Got a Grudge to Settle: Add 1 to the Hit roll and add 1 to the Wound roll.Designer's Note: If a unit with Judgement tokens is removed from the battlefield, make a note of how many Judgement tokens it had when it was removed. If that unit is set up on the battlefield again, place the corresponding number of Judgement tokens next to it. If a unit with Judgement tokens splits up into two or more smaller units, each of those units gains a number of Judgement tokens equal to that of the original unit. If two units combine to form a single larger unit and either of those units had Judgement tokens, make a note of how many the unit with the most has, just before they combine - the new unit has a number of Judgement tokens equal to this.",
         "": "",
         "phases": [
-            "Command",
+            "Pregame",
             "Shooting",
             "Saves"
         ]
@@ -452,6 +457,7 @@
         "description": "If your Army Faction is DRUKHARI, units from your army with this ability can become Empowered Through Pain. This is done using Pain tokens.GAINING PAIN TOKENSIf your Army Faction is DRUKHARI, you gain Pain tokens as follows:At the start of the battle, depending on the battle size:COMBAT PATROL1 PAIN TOKENINCURSION2 PAIN TOKENSSTRIKE FORCE3 PAIN TOKENSONSLAUGHT4 PAIN TOKENSEach time an enemy unit is destroyed, you gain 1 Pain token.Each time an enemy unit fails a Battle-shock test, you gain 1 Pain token.Each time you gain a Pain token, keep it to one side - this is your Pain token pool.EMPOWERED THROUGH PAINAt the start of any phase, you can expend one or more Pain tokens from your Pain token pool. Each time you do, select one unit from your army with the Power from Pain ability. Until the end of the phase, that unit is Empowered, and gains the abilities listed below, depending on the phase.MOVEMENT PHASE or CHARGE PHASEEmpowered in the Movement or Charge phase:You can re-roll Advance or Charge rolls made for that unit.SHOOTING PHASE or FIGHT PHASEEmpowered in the Shooting or Fight phase:Each time a model in that unit makes an attack, you can re-roll the Hit roll and, if it is a melee attack, improve the Armour Penetration characteristic of that attack by 1.",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -517,7 +523,7 @@
         "description": "You can include UNALIGNED FORCES units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. The combined points value of UNALIGNED FORCES units you can include in your army depends on the battle size, as follows:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 1000 ptsNo UNALIGNED FORCES models can be your WARLORD.",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -539,6 +545,7 @@
         "description": "If your Army Faction is ASURYANI, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown in the table below.BATTLE SIZEBATTLE FOCUS TOKENSIncursion2Strike Force4Onslaught6Each time one of the triggers shown in the Agile Manoeuvres section below occurs, you can spend one Battle Focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.<div style=\"text-align:center; font-family: 'ConduitITC', arial; font-size: 2em;\">AGILE MANOEUVRESSWIFT AS THE WINDTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).EFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.FLITTING SHADOWSTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at that unit.STAR ENGINESTRIGGER: When an eligible VEHICLE unit from your army is selected to make a Normal move.EFFECT: Until the end of the phase, add D6+l\" to the Move characteristic of models in that unit.SUDDEN STRIKETRIGGER: When an eligible unit from your army is selected to fight.EFFECT: Until the end of the phase, each time a model in that unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".OPPORTUNITY SEIZEDTRIGGER: When an enemy unit ends a Fall Back move.EFFECT: One eligible unit from your army (excluding TITANIC units) that started the phase within Engagement Range of that enemy unit can make a Normal move of up to D6+1\".FADE BACKTRIGGER: In your opponent's Shooting phase, just after an enemy unit has shot.EFFECT: One eligible unit from your army (excluding TITANIC units) that was hit by one or more of those attacks can make a Normal move of up to D6+1\".",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -554,6 +561,7 @@
         "description": "If your Army Faction is ASURYANI, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown in the table below.BATTLE SIZEBATTLE FOCUS TOKENSIncursion2Strike Force4Onslaught6Each time one of the triggers shown in the Agile Manoeuvres section below occurs, you can spend one Battle Focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.<div style=\"text-align:center; font-family: 'ConduitITC', arial; font-size: 2em;\">AGILE MANOEUVRESSWIFT AS THE WINDTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).EFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.FLITTING SHADOWSTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at that unit.STAR ENGINESTRIGGER: When an eligible VEHICLE unit from your army is selected to make a Normal move.EFFECT: Until the end of the phase, add D6+l\" to the Move characteristic of models in that unit.SUDDEN STRIKETRIGGER: When an eligible unit from your army is selected to fight.EFFECT: Until the end of the phase, each time a model in that unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".OPPORTUNITY SEIZEDTRIGGER: When an enemy unit ends a Fall Back move.EFFECT: One eligible unit from your army (excluding TITANIC units) that started the phase within Engagement Range of that enemy unit can make a Normal move of up to D6+1\".FADE BACKTRIGGER: In your opponent's Shooting phase, just after an enemy unit has shot.EFFECT: One eligible unit from your army (excluding TITANIC units) that was hit by one or more of those attacks can make a Normal move of up to D6+1\".",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -569,7 +577,7 @@
         "description": "When mustering your army, you can include HARLEQUINS units in your army, even though they do not have the ASURYANI Faction keyword. Unless otherwise stated, you cannot select HARLEQUINS or YNNARI as your Army Faction.",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
     },
     {
@@ -580,7 +588,42 @@
         "description": "When mustering your army, you can include HARLEQUINS units in your army, even though they do not have the ASURYANI Faction keyword. Unless otherwise stated, you cannot select HARLEQUINS or YNNARI as your Army Faction.",
         "": "",
         "phases": [
-            "Command"
+            "Pregame"
         ]
+    },
+    {
+        "id": "000009994",
+        "name": "Thrill Seekers",
+        "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
+        "faction_id": "CSM",
+        "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
+        "": "",
+        "phases": [
+            "Movement",
+            "Shooting",
+            "Charge"
+        ]
+    },
+    {
+        "id": "000009994",
+        "name": "Thrill Seekers",
+        "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
+        "faction_id": "EC",
+        "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
+        "": "",
+        "phases": [
+            "Movement",
+            "Shooting",
+            "Charge"
+        ]
+    },
+    {
+        "id": "000009995",
+        "name": "Pact of Excess",
+        "legend": "By enacting the most lurid and excessive acts of ritual violence, the Emperor's Children may shatter reality itself and summon forth the daemons of Slaanesh.",
+        "faction_id": "EC",
+        "description": "When mustering your army, unless specifically stated otherwise, you cannot select LEGIONS OF EXCESS as your Army Faction.",
+        "": "",
+        "phases": []
     }
 ]

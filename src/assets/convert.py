@@ -3,6 +3,8 @@ import json
 import os
 import re
 
+# http://wahapedia.ru/wh40k10ed/Datasheets_stratagems.csv 
+
 replacements = {
     r"<[:\.\-\w\d\s;#\\+()\.,\[\]_=\"/]+>": "",
     r"\u2019": "\'",

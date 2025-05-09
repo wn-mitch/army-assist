@@ -1,4 +1,5 @@
 enum Phase {
+  Pregame = "Pregame",
   Command = "Command",
   Movement = "Movement",
   Shooting = "Shooting",

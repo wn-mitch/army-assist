@@ -14,6 +14,7 @@ const ShootingOrFightPhase = ({
   phasedWeapons: DatasheetWargear[];
   phase: Phase;
 }): [React.ReactNode, boolean] => {
+  console.log(phasedWeapons)
   const toggled = phasedWeapons.length > 0;
 
   return [

@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.11.0",
+    "stateVersion": 22,
+    "date": "5/9/25",
+    "changes": [
+      "Added a new feature: Pregame Phase! This is a new phase on the phase tracker that narrows down specifically to pregame and start of the first battle round abilities. This will be useful for armies with lots of scout/infiltrate abilities.",
+      "Updated the datasets for the new data pull from Wahapedia.",
+      "Fixed a bug with how NR was exporting the lists for child units."
+    ]
+  },
+  {
     "version": "1.10.0",
     "stateVersion": 21,
     "date": "4/2/25",

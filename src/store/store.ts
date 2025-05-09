@@ -75,8 +75,8 @@ const useStore = create<StoreState>()(
       return {
         isFirstVisit: true,
         currentSaveVersion: getCurrentStateVersion(),
-        storedLists: testingPreload,
-        // storedLists: samplePreload,
+        // storedLists: testingPreload,
+        storedLists: samplePreload,
         activeList: -1,
         settings: {
           listSort: SortOptions.Name,
@@ -88,6 +88,7 @@ const useStore = create<StoreState>()(
           truncateCoreRules: true,
           listDisplaySetting: true,
           activePhases: {
+            [Phase.Pregame]: true,
             [Phase.Command]: true,
             [Phase.Movement]: true,
             [Phase.Shooting]: true,
@@ -117,7 +118,7 @@ const useStore = create<StoreState>()(
             text: text || "",
             name: text ? "Imported List" : undefined,
             units: [],
-            phase: Phase.Command,
+            phase: Phase.Pregame,
             faction: undefined,
             detachment: undefined,
             created: Date.now().toString(),
@@ -174,7 +175,7 @@ const useStore = create<StoreState>()(
             text: text,
             name: undefined,
             units: [],
-            phase: Phase.Command,
+            phase: Phase.Pregame,
             faction: undefined,
             detachment: undefined,
             created: get().hasActiveList()
@@ -236,7 +237,7 @@ const useStore = create<StoreState>()(
               /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’]+)\s\[\d+[\s]?pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/
             );
             const childMatch = line.match(
-              /•\s(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/
+              /(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/
             );
 
             if (parentMatch) {
@@ -294,7 +295,7 @@ const useStore = create<StoreState>()(
                     .trim();
                   return cleanedName.split(",").map((part) => part.trim());
                 });
-
+              
               const updatedWeapons = weapons?.flatMap((weapon) => {
                 const match = weapon.match(/(\d+)x\s+([A-Za-z\s\'-]+)/);
                 if (match) {
@@ -407,6 +408,7 @@ const useStore = create<StoreState>()(
                     return cleanedName.split(",").map((part) => part.trim());
                   });
 
+                console.log(unit.name, unit, weapons)
                 // Weapon Overrides
                 unit.weapons = applyWeaponAndEnhancementOverrides(
                   datasheet,
@@ -449,7 +451,6 @@ const useStore = create<StoreState>()(
                   weaponsDatasheets
                 );
 
-                console.log(unit.name, weapons)
                 const allAbilities = applyMissingAbilities(
                   unit,
                   unit.weapons ?? [],
