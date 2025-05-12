@@ -142,5 +142,11 @@
         "name": "Drukhari",
         "link": "https://wahapedia.ru/wh40k10ed/factions/drukhari",
         "": ""
+    },
+    {
+        "id": "EC",
+        "name": "Emperor's Children",
+        "link": "https://wahapedia.ru/wh40k10ed/factions/emperors-children",
+        "": ""
     }
 ]

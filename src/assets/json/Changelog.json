@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.11.1",
+    "stateVersion": 22,
+    "date": "5/12/25",
+    "changes": [
+      "Fixed a bug with Emperor's Children lists not showing up properly"
+    ]
+  },
+  {
     "version": "1.11.0",
     "stateVersion": 22,
     "date": "5/9/25",
