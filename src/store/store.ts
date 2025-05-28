@@ -806,7 +806,7 @@ const useStore = create<StoreState>()(
     },
     {
       name: "army-storage",
-      storage: createJSONStorage(() => sessionStorage),
+      storage: createJSONStorage(() => localStorage),
       version: getCurrentStateVersion(),
     }
   )

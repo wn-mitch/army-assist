@@ -1,10 +1,19 @@
 [
   {
+    "version": "1.11.2",
+    "stateVersion": 22,
+    "date": "5/28/25",
+    "changes": [
+      "Fixed a bug with Canis Rex showing the Imperial Knights army rule in the phased ability breakdown. Thank you to my discord community for reporting this!",
+      "Adjusted the client-side storage solution to use localStorage instead of sessionStorage. This should prevent the need to repaste lists on browser session closure. Thank you to my discord community for the suggestion!"
+    ]
+  },
+  {
     "version": "1.11.1",
     "stateVersion": 22,
     "date": "5/12/25",
     "changes": [
-      "Fixed a bug with Emperor's Children lists not showing up properly"
+      "Fixed a bug with Emperor's Children lists not showing up properly. Thank you to my discord community for reporting this!"
     ]
   },
   {

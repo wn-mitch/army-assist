@@ -129,6 +129,21 @@ const applyAbilityOverrides = (ability: Ability) => {
         description:
           "If every model in a unit has this ability, then each time a ranged attack is made against it, subtract 1 from that attack's Hit roll.",
       };
+    case "000008460":
+      console.log(ability);
+      return {
+        ...ability,
+        name: "Super-heavy Walker",
+        description:
+          "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height. When doing so: It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them. It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+        phases: [Phase.Movement],
+      };
+    // This is Code Chivalric, which is the army rule for the Imperial Knights and should not go in the phase ability list
+    case "000008458":
+      return {
+        ...ability, 
+        phases: [],
+      };
     default:
       if (ability.name === "") {
         return {
