@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.11.3",
+    "stateVersion": 22,
+    "date": "5/29/25",
+    "changes": [
+      "Adjusted the layout of the stratagems button and the scroll to top button to not overlap with the last unit card in the list. This should make it easier to read the last data card on mobile devices.",
+      "Updated the datasets for the new data pull from Wahapedia. This includes the new Death Guard and World Eaters codices.",
+      "Added a Pregame print section to the print menu. This will allow you to print out the pregame abilities in a more readable format."
+    ]
+  },
+  {
     "version": "1.11.2",
     "stateVersion": 22,
     "date": "5/28/25",

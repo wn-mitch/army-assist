@@ -1288,30 +1288,30 @@
 000002621|1|1 Angron – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002622|1|1 Khârn the Betrayer – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002623|1|1 Lord Invocatus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002624|1|1 World Eaters Daemon Prince|
-000002625|1|1 World Eaters Lord on Juggernaut|
-000002626|1|1 World Eaters Master of Executions|
+000002624|1|1 Daemon Prince of Khorne|
+000002625|1|1 Lord on Juggernaut|
+000002626|1|1 Master of Executions|
 000002627|1|1 Khorne Berzerker Champion|
-000002627|2|4-9 Khorne Berzerkers|
+000002627|2|9-19 Khorne Berzerkers|
 000002628|1|1 Jakhal Pack Leader, 1 Dishonoured and 8 Jakhals|
 000002628|2|or:|
 000002628|3|1 Jakhal Pack Leader, 2 Dishonoured and 17 Jakhals|
-000002629|1|1 World Eaters Terminator Champion|
-000002629|2|4-9 World Eaters Terminators|
+000002629|1|1 Terminator Champion|
+000002629|2|4-9 Chaos Terminators|
 000002630|1|1 Eightbound Champion|
 000002630|2|2-5 Eightbound|
 000002631|1|1 Exalted Eightbound Champion|
 000002631|2|2-5 Exalted Eightbound|
-000002632|1|1 World Eaters Helbrute|
+000002632|1|1 Helbrute|
 000002633|1|2 Chaos Spawn|
-000002634|1|1 World Eaters Land Raider|
-000002635|1|1 World Eaters Defiler|
-000002636|1|1 World Eaters Predator Destructor|
-000002637|1|1 World Eaters Predator Annihilator|
-000002638|1|1 World Eaters Forgefiend|
-000002639|1|1 World Eaters Maulerfiend|
-000002640|1|1 World Eaters Rhino|
-000002641|1|1 World Eaters Heldrake|
+000002634|1|1 Chaos Land Raider|
+000002635|1|1 Defiler|
+000002636|1|1 Chaos Predator Destructor|
+000002637|1|1 Chaos Predator Annihilator|
+000002638|1|1 Forgefiend|
+000002639|1|1 Maulerfiend|
+000002640|1|1 Chaos Rhino|
+000002641|1|1 Heldrake|
 000002642|1|1 Khorne Lord of Skulls|
 000002677|1|1 Ancient in Terminator Armour|
 000002678|1|1 Chaplain Cassius – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
@@ -1402,7 +1402,7 @@
 000002754|1|1 Ahriman – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002755|1|1 Exalted Sorcerer|
 000002756|1|1 Thousand Sons Daemon Prince with Wings|
-000002757|1|1 World Eaters Daemon Prince with Wings|
+000002757|1|1 Daemon Prince of Khorne with Wings|
 000002758|1|1 Daemon Prince of Chaos with Wings|
 000002759|1|1 Autarch Wayleaper|
 000002760|1|1 Inquisitor in Terminator Armour|
@@ -1481,7 +1481,7 @@
 000002810|1|1 Wall of Martyrs Defence Emplacement|
 000002811|1|1 Aegis Defence Line with Weapon Emplacement (4 large shield sections, 4 small shield sections and 1 gun emplacement)|
 000003582|1|1 Khorne Berzerker Champion|
-000003582|2|4-9 Khorne Berzerkers|
+000003582|2|9-19 Khorne Berzerkers|
 000003583|1|1 Aspiring Sorcerer|
 000003583|2|4-9 Rubric Marines|
 000003584|1|1 Plague Champion|
@@ -2019,3 +2019,12 @@
 000004100|1|1 Tormentbringer|
 000004101|1|1-2 Hellflayers|
 000004102|1|1 Karanak – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004103|1|1 Slaughterbound|
+000004104|1|1 Skarbrand – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004105|1|1 Bloodthirster|
+000004106|1|1 Bloodreaper|
+000004106|2|9 Bloodletters|
+000004107|1|1 Bloodhunter|
+000004107|2|2-5 Bloodcrushers|
+000004108|1|1 Gore Hound|
+000004108|2|4-9 Flesh Hounds|

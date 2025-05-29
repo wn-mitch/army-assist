@@ -2390,7 +2390,7 @@
         "datasheet_id": "000000422",
         "line": "2",
         "button": "\u2022",
-        "description": "1 model in this unit can be equipped with up to two of the following, and can take duplicates:1 gun drone1 marker drone1 shield drone",
+        "description": "The Pathfinder Shas'ui can be equipped with up to two of the following, and can take duplicates:1 gun drone1 marker drone1 shield drone",
         "": ""
     },
     {
@@ -10188,7 +10188,7 @@
         "datasheet_id": "000002531",
         "line": "3",
         "button": "\u2022",
-        "description": "All of the Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
+        "description": "Any number of Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
         "": ""
     },
     {
@@ -11095,48 +11095,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000002621",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002622",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002623",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002624",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002625",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002626",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000002627",
         "line": "1",
         "button": "\u2022",
@@ -11154,7 +11112,7 @@
         "datasheet_id": "000002627",
         "line": "3",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Khorne Berzerker's Berzerker chainblade can be replaced with 1 Khornate eviscerator.",
+        "description": "For every 5 models in this unit, 1 Khorne Berzerker's chainblade can be replaced with 1 Khornate eviscerator.",
         "": ""
     },
     {
@@ -11168,14 +11126,14 @@
         "datasheet_id": "000002628",
         "line": "1",
         "button": "\u2022",
-        "description": "For every 10 models in this unit, 1 Jakhal's Jakhal chainblades can be replaced with 1 mauler chainblade.",
+        "description": "For every 10 models in this unit, 1 Jakhal's chainblades can be replaced with 1 mauler chainblade.",
         "": ""
     },
     {
         "datasheet_id": "000002628",
         "line": "2",
         "button": "\u2022",
-        "description": "Any number of Dishonoured models can each have their Dishonoured chainblades replaced with 1 skullsmasher.",
+        "description": "Any number of Dishonoured models can each have their paired manglers replaced with 1 skullsmasher and mangler.",
         "": ""
     },
     {
@@ -11189,7 +11147,7 @@
         "datasheet_id": "000002629",
         "line": "1",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 World Eaters Terminator's combi-bolter can be replaced with one of the following:1 heavy flamer1 reaper autocannon",
+        "description": "For every 5 models in this unit, 1 Chaos Terminator's combi-bolter can be replaced with one of the following:1 heavy flamer1 reaper autocannon",
         "": ""
     },
     {
@@ -11221,24 +11179,10 @@
         "": ""
     },
     {
-        "datasheet_id": "000002630",
-        "line": "1",
-        "button": "\u2022",
-        "description": "The Eightbound Champion's lacerators can be replaced with 1 heavy chainglaive.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002631",
-        "line": "1",
-        "button": "\u2022",
-        "description": "The Exalted Eightbound Champion's Eightbound eviscerator and Eightbound chainfist can be replaced with one of the following:1 paired Eightbound chainfists1 heavy chainglaive",
-        "": ""
-    },
-    {
         "datasheet_id": "000002632",
         "line": "1",
         "button": "\u2022",
-        "description": "This model's multi-melta can be replaced with one of the following:1 Helbrute plasma cannon1 twin autocannon1 twin heavy bolter1 twin lascannon1 Helbrute fist",
+        "description": "This model's multi-melta can be replaced with one of the following:1 plasma cannon1 twin autocannon1 twin heavy bolter1 twin lascannon1 Helbrute fist",
         "": ""
     },
     {
@@ -11253,13 +11197,6 @@
         "line": "3",
         "button": "\u2022",
         "description": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:1 combi-bolter1 heavy flamer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002633",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
         "": ""
     },
     {
@@ -11308,14 +11245,14 @@
         "datasheet_id": "000002636",
         "line": "2",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
+        "description": "This model can be equipped with 1 havoc launcher.",
         "": ""
     },
     {
         "datasheet_id": "000002636",
         "line": "3",
         "button": "\u2022",
-        "description": "This model can be equipped with 1 havoc launcher.",
+        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
         "": ""
     },
     {
@@ -11329,14 +11266,14 @@
         "datasheet_id": "000002637",
         "line": "2",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
+        "description": "This model can be equipped with 1 havoc launcher.",
         "": ""
     },
     {
         "datasheet_id": "000002637",
         "line": "3",
         "button": "\u2022",
-        "description": "This model can be equipped with 1 havoc launcher.",
+        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
         "": ""
     },
     {
@@ -11371,7 +11308,7 @@
         "datasheet_id": "000002640",
         "line": "2",
         "button": "\u2022",
-        "description": "This model can be equipped with 1 havoc launcher.",
+        "description": "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.",
         "": ""
     },
     {
@@ -12264,13 +12201,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000002757",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000002758",
         "line": "1",
         "button": "\u2022",
@@ -13058,7 +12988,7 @@
         "datasheet_id": "000003582",
         "line": "3",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Khorne Berzerker's Berzerker chainblade can be replaced with 1 Khornate eviscerator.",
+        "description": "For every 5 models in this unit, 1 Khorne Berzerker's chainblade can be replaced with 1 Khornate eviscerator.",
         "": ""
     },
     {
@@ -16614,7 +16544,7 @@
         "datasheet_id": "000003931",
         "line": "3",
         "button": "\u2022",
-        "description": "All of the Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
+        "description": "Any number of Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
         "": ""
     },
     {
@@ -19216,6 +19146,48 @@
     },
     {
         "datasheet_id": "000004102",
+        "line": "1",
+        "button": "\u2022",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004105",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model's great axe of Khorne can be replaced with 1 axe of Khorne and one of the following:1 bloodflail1 lash of Khorne",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Bloodletter that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Bloodletter that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Bloodcrusher that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Bloodcrusher that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004108",
         "line": "1",
         "button": "\u2022",
         "description": "None",

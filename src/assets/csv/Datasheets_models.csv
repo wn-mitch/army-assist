@@ -1120,27 +1120,27 @@
 000002617|1|Rogal Dorn Battle Tank|10"|12|2+|-||18|7+|5|Use model||
 000002619|1|Aegis Defence Line|-|12|2+|-||10|7+|0|Use model||
 000002621|1|Angron|14"|11|2+|4||16|5+|6|100mm||
-000002622|1|Khârn The Betrayer|6"|4|3+|4||5|6+|1|40mm||
-000002623|1|Lord Invocatus|12"|6|2+|4||8|6+|2|90 x 52mm||
-000002624|1|World Eaters Daemon Prince|8"|10|2+|4||10|6+|3|60mm||
-000002625|1|World Eaters Lord On Juggernaut|10"|6|2+|4||7|6+|2|90 x 52mm||
-000002626|1|World Eaters Master Of Executions|6"|4|3+|-||4|6+|1|40mm||
-000002627|1|Khorne Berzerkers|6"|4|3+|-||2|6+|2|32mm||
-000002628|1|Jakhals|6"|3|6+|-||1|7+|1|28mm|Dishonoured model 40mm|
-000002629|1|World Eaters Terminator Squad|5"|5|2+|4||3|6+|1|40mm||
-000002630|1|Eightbound|9"|6|3+|5||3|6+|1|40mm||
-000002631|1|Exalted Eightbound|9"|6|3+|5||3|6+|1|40mm||
-000002632|1|World Eaters Helbrute|6"|9|2+|-||8|6+|3|60mm||
-000002633|1|World Eaters Chaos Spawn|8"|5|4+|-||4|7+|1|50mm||
-000002634|1|World Eaters Land Raider|10"|12|2+|-||16|6+|5|Use model||
-000002635|1|World Eaters Defiler|8"|10|3+|5||14|6+|5|Use model||
-000002636|1|World Eaters Predator Destructor|10"|10|3+|-||11|6+|3|Use model||
-000002637|1|World Eaters Predator Annihilator|10"|10|3+|-||11|6+|3|Use model||
-000002638|1|World Eaters Forgefiend|8"|10|3+|5||12|6+|3|120 x 92mm||
-000002639|1|World Eaters Maulerfiend|10"|10|3+|5||12|6+|3|120 x 92mm||
-000002640|1|World Eaters Rhino|12"|9|3+|-||10|6+|2|Use model||
-000002641|1|World Eaters Heldrake|20+"|9|3+|5||12|6+|0|120 x 92mm flying base||
-000002642|1|Khorne Lord Of Skulls|8"|13|3+|5||24|6+|8|Use model||
+000002622|1|Khârn The Betrayer|8"|4|3+|4||5|6+|1|40mm||
+000002623|1|Lord Invocatus|10"|6|3+|4||8|6+|2|90 x 52mm||
+000002624|1|Daemon Prince of Khorne|10"|10|2+|4||10|6+|3|60mm||
+000002625|1|Lord On Juggernaut|10"|6|3+|4||7|6+|2|90 x 52mm||
+000002626|1|Master of Executions|8"|4|3+|-||4|6+|1|40mm||
+000002627|1|Khorne Berzerkers|8"|4|3+|-||2|6+|2|32mm||
+000002628|1|Jakhals|7"|4|6+|-||1|7+|1|28mm|Dishonoured model 40mm|
+000002629|1|Chaos Terminators|7"|5|2+|4||3|6+|1|40mm||
+000002630|1|Eightbound|10"|6|3+|5||3|6+|1|40mm||
+000002631|1|Exalted Eightbound|10"|6|3+|5||3|6+|1|40mm||
+000002632|1|Helbrute|9"|9|2+|-||8|6+|3|60mm||
+000002633|1|Chaos Spawn|10"|5|4+|-||4|7+|1|50mm||
+000002634|1|Chaos Land Raider|10"|12|2+|-||16|6+|5|Use model||
+000002635|1|Defiler|10"|10|3+|5||14|6+|5|Use model||
+000002636|1|Chaos Predator Destructor|10"|10|3+|-||11|6+|3|Use model||
+000002637|1|Chaos Predator Annihilator|10"|10|3+|-||11|6+|3|Use model||
+000002638|1|Forgefiend|10"|10|3+|5||12|6+|3|120 x 92mm||
+000002639|1|Maulerfiend|12"|10|3+|5||12|6+|3|120 x 92mm||
+000002640|1|Chaos Rhino|12"|9|3+|-||10|6+|2|Use model||
+000002641|1|Heldrake|20+"|9|3+|5||12|6+|0|120 x 92mm flying base||
+000002642|1|Khorne Lord of Skulls|12"|13|3+|5||24|6+|8|Use model||
 000002677|1|Ancient In Terminator Armour|5"|5|2+|4||5|6+|1|40mm||
 000002678|1|Chaplain Cassius|6"|4|3+|4||4|5+|1|32mm||
 000002679|1|Vashtorr The Arkifane|12"|10|2+|4||14|6+|3|80mm||
@@ -1214,7 +1214,7 @@
 000002754|1|Ahriman On Disc Of Tzeentch|10"|4|3+|4||6|6+|1|40mm||
 000002755|1|Exalted Sorcerer On Disc Of Tzeentch|12"|4|3+|4||6|6+|1|40mm||
 000002756|1|Thousand Sons Daemon Prince With Wings|11"|9|2+|4||10|6+|3|60mm||
-000002757|1|World Eaters Daemon Prince With Wings|12"|9|2+|4||10|6+|3|60mm||
+000002757|1|Daemon Prince of Khorne with Wings|14"|9|2+|4||10|6+|3|60mm||
 000002758|1|Daemon Prince Of Chaos With Wings|12"|9|2+|4||10|6+|3|60mm||
 000002759|1|Autarch Wayleaper|14"|3|3+|4||4|6+|1|32mm||
 000002760|1|Inquisitor In Terminator Armour|5"|4|2+|4||5|6+|1|25mm||
@@ -1267,7 +1267,7 @@
 000002809|1|Wall Of Martyrs Defence Line|-|12|2+|-||10|7+|0|Use model||
 000002810|1|Wall Of Martyrs Defence Emplacement|-|12|2+|-||10|7+|0|Use model||
 000002811|1|Aegis Defence Line With Weapon Emplacement|-|12|2+|-||10|7+|0|Use model||
-000003582|1|Khorne Berzerkers|6"|4|3+|-||2|6+|2|32mm||
+000003582|1|Khorne Berzerkers|8"|4|3+|-||2|6+|2|32mm||
 000003583|1|Rubric Marines|5"|4|3+|5||2|6+|2|32mm||
 000003584|1|Plague Marines|5"|5|3+|-||2|6+|2|32mm||
 000003585|1|Chaos Thunderhawk|20+"|12|2+|-||30|6+|0|120 x 92mm flying base||
@@ -1488,7 +1488,7 @@
 000003888|1|Von Ryan’s Leapers|10"|5|4+|6||3|8+|1|40mm||
 000003889|1|LORD COMMISSAR|6"|3|5+|-||3|6+|1|32mm||
 000003889|2|VETERAN GUARDSMAN|6"|3|5+|-||1|7+|1|25mm||
-000003890|1|Lord Solar Leontus|10"|4|4+|4||6|7+|2|||
+000003890|1|Lord Marshal Dreir|10"|4|4+|4||6|7+|2|75 x 42mm||
 000003891|1|CATACHAN COMMANDER|6"|3|5+|-||3|7+|1|28mm||
 000003891|2|VETERAN GUARDSMAN|6"|3|5+|-||1|7+|1|28mm||
 000003892|1|Rogal Dorn Tank Commander|10"|12|2+|-||18|7+|5|Use model||
@@ -1696,7 +1696,7 @@
 000004089|1|Flawless Blades|8"|5|3+|5||3|6+|1|40mm||
 000004090|1|Chaos Spawn|10"|5|4+|-||4|7+|1|50mm||
 000004091|1|Maulerfiend|10"|10|3+|5||12|6+|3|120 x 92mm||
-000004092|1|Heldrake|20+"|10|2+|5||14|7+|0|120 x 92mm flying base||
+000004092|1|Heldrake|20+"|10|3+|5||14|7+|0|120 x 92mm flying base||
 000004093|1|Chaos Rhino|12"|9|3+|-||10|6+|2|Use model||
 000004094|1|Shalaxi Helbane|14"|10|3+|4||20|6+|5|100mm||
 000004095|1|Daemonettes|9"|3|7+|5||1|7+|1|25mm||
@@ -1707,3 +1707,9 @@
 000004100|1|Tormentbringer|14"|6|5+|4||12|7+|3|120 x 92mm||
 000004101|1|Hellflayer|14"|6|5+|4||7|7+|3|120 x 92mm||
 000004102|1|Karanak|12"|4|7+|4||5|7+|1|75 x 42mm||
+000004103|1||10"|6|3+|5||6|6+|1|||
+000004104|1|Skarbrand|10"|11|3+|4||20|6+|5|100mm||
+000004105|1|Bloodthirster|12"|11|3+|4||18|6+|5|120 x 92mm||
+000004106|1|Bloodletters|8"|4|7+|5||1|7+|1|32mm||
+000004107|1|Bloodcrushers|10"|7|3+|5||4|7+|2|90 x 52mm||
+000004108|1|Flesh Hounds|12"|4|7+|5||2|7+|1|60 x 35mm||

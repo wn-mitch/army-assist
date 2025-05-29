@@ -84,6 +84,12 @@
         "": ""
     },
     {
+        "id": "EC",
+        "name": "Emperor's Children",
+        "link": "https://wahapedia.ru/wh40k10ed/factions/emperor-s-children",
+        "": ""
+    },
+    {
         "id": "WE",
         "name": "World Eaters",
         "link": "https://wahapedia.ru/wh40k10ed/factions/world-eaters",
@@ -141,12 +147,6 @@
         "id": "DRU",
         "name": "Drukhari",
         "link": "https://wahapedia.ru/wh40k10ed/factions/drukhari",
-        "": ""
-    },
-    {
-        "id": "EC",
-        "name": "Emperor's Children",
-        "link": "https://wahapedia.ru/wh40k10ed/factions/emperors-children",
         "": ""
     }
 ]

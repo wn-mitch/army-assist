@@ -7736,19 +7736,19 @@
     {
         "datasheet_id": "000002624",
         "line": "1",
-        "description": "1 World Eaters Daemon Prince",
+        "description": "1 Daemon Prince of Khorne",
         "": ""
     },
     {
         "datasheet_id": "000002625",
         "line": "1",
-        "description": "1 World Eaters Lord on Juggernaut",
+        "description": "1 Lord on Juggernaut",
         "": ""
     },
     {
         "datasheet_id": "000002626",
         "line": "1",
-        "description": "1 World Eaters Master of Executions",
+        "description": "1 Master of Executions",
         "": ""
     },
     {
@@ -7760,7 +7760,7 @@
     {
         "datasheet_id": "000002627",
         "line": "2",
-        "description": "4-9 Khorne Berzerkers",
+        "description": "9-19 Khorne Berzerkers",
         "": ""
     },
     {
@@ -7784,13 +7784,13 @@
     {
         "datasheet_id": "000002629",
         "line": "1",
-        "description": "1 World Eaters Terminator Champion",
+        "description": "1 Terminator Champion",
         "": ""
     },
     {
         "datasheet_id": "000002629",
         "line": "2",
-        "description": "4-9 World Eaters Terminators",
+        "description": "4-9 Chaos Terminators",
         "": ""
     },
     {
@@ -7820,7 +7820,7 @@
     {
         "datasheet_id": "000002632",
         "line": "1",
-        "description": "1 World Eaters Helbrute",
+        "description": "1 Helbrute",
         "": ""
     },
     {
@@ -7832,49 +7832,49 @@
     {
         "datasheet_id": "000002634",
         "line": "1",
-        "description": "1 World Eaters Land Raider",
+        "description": "1 Chaos Land Raider",
         "": ""
     },
     {
         "datasheet_id": "000002635",
         "line": "1",
-        "description": "1 World Eaters Defiler",
+        "description": "1 Defiler",
         "": ""
     },
     {
         "datasheet_id": "000002636",
         "line": "1",
-        "description": "1 World Eaters Predator Destructor",
+        "description": "1 Chaos Predator Destructor",
         "": ""
     },
     {
         "datasheet_id": "000002637",
         "line": "1",
-        "description": "1 World Eaters Predator Annihilator",
+        "description": "1 Chaos Predator Annihilator",
         "": ""
     },
     {
         "datasheet_id": "000002638",
         "line": "1",
-        "description": "1 World Eaters Forgefiend",
+        "description": "1 Forgefiend",
         "": ""
     },
     {
         "datasheet_id": "000002639",
         "line": "1",
-        "description": "1 World Eaters Maulerfiend",
+        "description": "1 Maulerfiend",
         "": ""
     },
     {
         "datasheet_id": "000002640",
         "line": "1",
-        "description": "1 World Eaters Rhino",
+        "description": "1 Chaos Rhino",
         "": ""
     },
     {
         "datasheet_id": "000002641",
         "line": "1",
-        "description": "1 World Eaters Heldrake",
+        "description": "1 Heldrake",
         "": ""
     },
     {
@@ -8420,7 +8420,7 @@
     {
         "datasheet_id": "000002757",
         "line": "1",
-        "description": "1 World Eaters Daemon Prince with Wings",
+        "description": "1 Daemon Prince of Khorne with Wings",
         "": ""
     },
     {
@@ -8894,7 +8894,7 @@
     {
         "datasheet_id": "000003582",
         "line": "2",
-        "description": "4-9 Khorne Berzerkers",
+        "description": "9-19 Khorne Berzerkers",
         "": ""
     },
     {
@@ -12117,6 +12117,60 @@
         "datasheet_id": "000004102",
         "line": "1",
         "description": "1 Karanak - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004103",
+        "line": "1",
+        "description": "1 Slaughterbound",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004104",
+        "line": "1",
+        "description": "1 Skarbrand - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004105",
+        "line": "1",
+        "description": "1 Bloodthirster",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "1",
+        "description": "1 Bloodreaper",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "2",
+        "description": "9 Bloodletters",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "1",
+        "description": "1 Bloodhunter",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "2",
+        "description": "2-5 Bloodcrushers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004108",
+        "line": "1",
+        "description": "1 Gore Hound",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004108",
+        "line": "2",
+        "description": "4-9 Flesh Hounds",
         "": ""
     }
 ]

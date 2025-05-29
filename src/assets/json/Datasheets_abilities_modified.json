@@ -38645,18 +38645,6 @@
     {
         "datasheet_id": "000001145",
         "line": "2",
-        "ability_id": "000008340",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001145",
-        "line": "3",
         "ability_id": "000008344",
         "model": "",
         "name": "",
@@ -38670,7 +38658,7 @@
     },
     {
         "datasheet_id": "000001145",
-        "line": "4",
+        "line": "3",
         "ability_id": "000008433",
         "model": "",
         "name": "",
@@ -38682,7 +38670,7 @@
     },
     {
         "datasheet_id": "000001145",
-        "line": "5",
+        "line": "4",
         "ability_id": "",
         "model": "",
         "name": "Daemonic Icon",
@@ -38696,7 +38684,7 @@
     },
     {
         "datasheet_id": "000001145",
-        "line": "6",
+        "line": "5",
         "ability_id": "",
         "model": "",
         "name": "Instrument of Chaos",
@@ -38710,7 +38698,7 @@
     },
     {
         "datasheet_id": "000001145",
-        "line": "7",
+        "line": "6",
         "ability_id": "",
         "model": "",
         "name": "Unholy Speed",
@@ -61507,7 +61495,7 @@
         "ability_id": "",
         "model": "",
         "name": "Tactical Genius",
-        "description": "Once per battle round, one friendly REGIMENT unit within 12\" of this model can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.",
+        "description": "Once per battle round, one friendly REGIMENT unit within 12\" of this model can be targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62092,11 +62080,12 @@
         "ability_id": "",
         "model": "",
         "name": "Reborn in Blood",
-        "description": "Each time you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability. If you do, this model is no longer destroyed and is placed into Reserves with its full wounds remaining.",
+        "description": "At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command",
             "Movement",
             "Shooting",
@@ -62109,12 +62098,13 @@
         "ability_id": "",
         "model": "",
         "name": "Wrathful Presence",
-        "description": "At the start of your Charge phase, select one Wrathful Presence ability (see left). Until the start of your next Charge phase, this model has that ability.",
+        "description": "At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Pregame",
+            "Command"
         ]
     },
     {
@@ -62123,8 +62113,8 @@
         "ability_id": "",
         "model": "",
         "name": "SUPREME COMMANDER",
-        "description": "If this model is in your army, it must be your Warlord.",
-        "type": "Special (\u043f\u0440\u0430\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "description": "If this model is in your army, it must be your WARLORD.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
         "phases": [
@@ -62136,13 +62126,13 @@
         "line": "7",
         "ability_id": "",
         "model": "",
-        "name": "Glorious Bloodletting",
-        "description": "While a friendly WORLD EATERS unit is within 6\" of this model, each time a Charge roll is made for that unit, add 1 to the roll.",
+        "name": "The Blood God's Favour",
+        "description": "Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to six of the D6 rolled.",
         "type": "Primarch",
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Command"
         ]
     },
     {
@@ -62150,14 +62140,13 @@
         "line": "8",
         "ability_id": "",
         "model": "",
-        "name": "Infectious Rage",
-        "description": "While a friendly WORLD EATERS unit that is below its Starting Strength is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. For the purposes of this ability, if a unit has a Starting Strength of 1, it is considered to be below its Starting Strength while it has lost one or more wounds.",
+        "name": "Overwhelming Wrath",
+        "description": "Each time an enemy unit within 6\" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
         "type": "Primarch",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
-            "Fight"
+            "Movement"
         ]
     },
     {
@@ -62165,13 +62154,14 @@
         "line": "9",
         "ability_id": "",
         "model": "",
-        "name": "Righteous Slaughter",
-        "description": "While a friendly WORLD EATERS unit is within 6\" of this model, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+        "name": "Driven by Ultimate Rage",
+        "description": "While a friendly WORLD EATERS unit is within 6\" of this model, you can ignore any or all modifiers to that unit's Move characteristic and to Advance and Charge rolls made for it, and each time a model in that unit makes a melee attack, you can ignore any or all modifiers to that attack's Weapon Skill characteristic and/or any or all modifiers to the Hit roll.",
         "type": "Primarch",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
+            "Movement",
+            "Charge",
             "Fight"
         ]
     },
@@ -62205,12 +62195,11 @@
         "ability_id": "",
         "model": "",
         "name": "Legendary Killer",
-        "description": "While this model is leading a unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+        "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
             "Fight"
         ]
     },
@@ -62220,7 +62209,7 @@
         "ability_id": "",
         "model": "",
         "name": "The Betrayer",
-        "description": "At the end of your Charge phase, if this model is leading a unit and that unit is not within Engagement Range of one or more enemy units, you must take a Leadership test for this model. If that test is failed, one Bodyguard model of your choice in that unit is destroyed.",
+        "description": "At the end of your Charge phase, if this model is leading a unit and that unit is not within Engagement Range of one or more enemy units, you must take a Leadership test for this model. If that test is failed, one Bodyguard model in that unit is destroyed.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62232,14 +62221,13 @@
         "ability_id": "",
         "model": "",
         "name": "Berzerker Frenzy",
-        "description": "If this model is destroyed by a melee attack, if it has not fought this phase, do not remove it from play. It can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+        "description": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Shooting",
-            "Fight",
-            "Saves"
+            "Fight"
         ]
     },
     {
@@ -62257,6 +62245,20 @@
     {
         "datasheet_id": "000002623",
         "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000002623",
+        "line": "3",
         "ability_id": "000008344",
         "model": "",
         "name": "",
@@ -62270,7 +62272,7 @@
     },
     {
         "datasheet_id": "000002623",
-        "line": "3",
+        "line": "4",
         "ability_id": "000008428",
         "model": "",
         "name": "",
@@ -62282,31 +62284,31 @@
     },
     {
         "datasheet_id": "000002623",
-        "line": "4",
+        "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Counter-attacks",
-        "description": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+        "name": "Fire Riders",
+        "description": "While this model is leading a unit, models in that unit have the Deep Strike ability and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models and terrain features. When making a Normal, Advance or Fall Back move, models in that unit can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them and any Desperate Escape test is automatically passed.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
+            "Movement",
             "Charge"
         ]
     },
     {
         "datasheet_id": "000002623",
-        "line": "5",
+        "line": "6",
         "ability_id": "",
         "model": "",
-        "name": "Road of Eight Bloody Steps",
-        "description": "At the start of the battle, before any moves are made using the Scouts ability, you can select up to two friendly WORLD EATERS INFANTRY units within 6\" of this model. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
+        "name": "Bloody Stampede",
+        "description": "Each time this model's unit ends a Charge move, select one enemy unit within Engagement Range of this model, then roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Pregame"
+            "Charge"
         ]
     },
     {
@@ -62341,8 +62343,8 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Infernal Fortitude",
-        "description": "While a friendly WORLD EATERS INFANTRY unit is within 6\" of this model, models in that unit have a 5+ invulnerable save, unless they already have a 5+ invulnerable save, in which case they have a 4+ invulnerable save.",
+        "name": "Lord of Murder",
+        "description": "While this model is within 3\" of one or more friendly WORLD EATERS INFANTRY units, this model has the Lone Operative ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62356,7 +62358,7 @@
         "ability_id": "",
         "model": "",
         "name": "Devastating Assault",
-        "description": "Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.",
+        "description": "Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62364,6 +62366,20 @@
             "Shooting",
             "Charge",
             "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000002624",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Direct the Slaughter",
+        "description": "Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
         ]
     },
     {
@@ -62396,24 +62412,27 @@
         "ability_id": "",
         "model": "",
         "name": "Aggressive Advance",
-        "description": "While this model is leading a unit, you can re-roll any or all of the following rolls made for that unit: Advance rolls; Charge rolls; Blood Surge rolls (see KHORNE BERZERKERS).",
+        "description": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Movement",
+            "Charge"
+        ]
     },
     {
         "datasheet_id": "000002625",
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Bloody Stampede",
-        "description": "Each time this model's unit ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+        "name": "Crush All Who Stand Before Us",
+        "description": "Each time this model's unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Charge"
+            "Fight"
         ]
     },
     {
@@ -62445,13 +62464,13 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Trophy Taker",
-        "description": "While this model is leading a unit, models in that unit have the Fights First ability.",
+        "name": "Forwards, for Blood!",
+        "description": "While this model is leading a unit, you can re-roll Advance rolls made for that unit and each time that unit makes a Blood Surge move, you can re-roll the D6 used to determine how far models in that unit move.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Fight"
+            "Movement"
         ]
     },
     {
@@ -62459,8 +62478,8 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Murderous Swing",
-        "description": "Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+        "name": "A Worthy Skull",
+        "description": "Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's unit destroys a CHARACTER model, you gain 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62485,22 +62504,8 @@
         "line": "2",
         "ability_id": "",
         "model": "",
-        "name": "Icon of Khorne",
-        "description": "Each time you make a Blessings of Khorne roll, if the bearer's unit is within range of an objective marker you control, you can re-roll one of the dice.",
-        "type": "Wargear",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Command"
-        ]
-    },
-    {
-        "datasheet_id": "000002627",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
         "name": "Blood Surge",
-        "description": "Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if any models from this unit were destroyed as a result of those attacks, this unit can make a Blood Surge move. To do so, roll one D6: this unit can be moved a number of inches up to the result, but this unit must finish that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Blood Surge move while it is Battle-shocked.",
+        "description": "In your opponent's Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Blood Surge move. To do so, roll one D6 and add 2 to the roll: models in this unit move a number of inches up to this result, but this unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT), When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Blood Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Blood Surge move per phase.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62510,20 +62515,24 @@
         ]
     },
     {
-        "datasheet_id": "000002628",
-        "line": "1",
-        "ability_id": "000008338",
+        "datasheet_id": "000002627",
+        "line": "3",
+        "ability_id": "",
         "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "6+",
+        "name": "Icon of Khorne",
+        "description": "Each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+        "type": "Wargear",
+        "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Command",
+            "Shooting",
+            "Fight"
+        ]
     },
     {
         "datasheet_id": "000002628",
-        "line": "2",
+        "line": "1",
         "ability_id": "000008428",
         "model": "",
         "name": "",
@@ -62535,30 +62544,33 @@
     },
     {
         "datasheet_id": "000002628",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Icon of Khorne",
-        "description": "Each time you make a Blessings of Khorne roll, if the bearer's unit is within range of an objective marker you control, you can re-roll one of the dice.",
-        "type": "Wargear",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Command"
-        ]
-    },
-    {
-        "datasheet_id": "000002628",
-        "line": "4",
+        "line": "2",
         "ability_id": "",
         "model": "",
         "name": "Objective Ravaged",
-        "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+        "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000002628",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Icon of Khorne",
+        "description": "Each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -62593,13 +62605,13 @@
         "ability_id": "",
         "model": "",
         "name": "Bloody Fury",
-        "description": "Each time a model in this unit makes an attack, add 1 to the Hit roll if this unit is below its Starting Strength, and add 1 to the Wound roll as well if this unit is Below Half-strength.",
+        "description": "Each time a model in this unit makes a ranged attack that targets the closest enemy unit, you can re-roll the Hit roll. Each time this unit declares a charge that targets the closest eligible enemy unit, you can re-roll the Charge roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Shooting",
-            "Fight"
+            "Charge"
         ]
     },
     {
@@ -62634,7 +62646,7 @@
         "ability_id": "",
         "model": "",
         "name": "Beacons of Rage",
-        "description": "While a friendly WORLD EATERS unit is within 6\" of this unit, each time a model in that unit makes a melee attack, re-roll a Wound roll of 1. If that attack targets a unit that is Below Half-strength, you can re-roll the Wound roll instead.",
+        "description": "While a friendly WORLD EATERS unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit (excluding MONSTERS and VEHICLES) that is Below Half-strength, add 1 to the Wound roll as well.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62659,18 +62671,6 @@
     {
         "datasheet_id": "000002631",
         "line": "2",
-        "ability_id": "000008338",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "6+",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000002631",
-        "line": "3",
         "ability_id": "000008428",
         "model": "",
         "name": "",
@@ -62682,17 +62682,15 @@
     },
     {
         "datasheet_id": "000002631",
-        "line": "4",
+        "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Overwhelming Wrath",
-        "description": "Each time an enemy unit within 6\" of this unit is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
+        "name": "Rend and Tear",
+        "description": "Each time an enemy MONSTER or VEHICLE unit within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": [
-            "Movement"
-        ]
+        "phases": []
     },
     {
         "datasheet_id": "000002632",
@@ -62726,13 +62724,13 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Frenzy",
-        "description": "Each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot as if it were your Shooting phase or fight as if it were the Fight phase.",
+        "name": "Devoted to Destruction",
+        "description": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Fight"
         ]
     },
     {
@@ -62740,13 +62738,15 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Helbrute Fists",
-        "description": "If this model is equipped with two Helbrute fists, those weapons have the [TWIN-LINKED] ability.",
+        "name": "Frenzy",
+        "description": "In your opponent's Shooting phase, and in the Fight phase, each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot or fight, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Fight"
+            "Shooting",
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -62764,6 +62764,20 @@
     {
         "datasheet_id": "000002633",
         "line": "2",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "8\"",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000002633",
+        "line": "3",
         "ability_id": "000008428",
         "model": "",
         "name": "",
@@ -62775,16 +62789,17 @@
     },
     {
         "datasheet_id": "000002633",
-        "line": "3",
+        "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Regenerating Monstrosities",
-        "description": "At the start of each player's Command phase, one model in this unit regains up to D3 lost wounds.",
+        "name": "To Slake its Rage",
+        "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Movement",
+            "Charge"
         ]
     },
     {
@@ -62862,7 +62877,7 @@
         "ability_id": "",
         "model": "",
         "name": "Scuttling Walker",
-        "description": "Each time this model makes a Normal, Advance or Fall Back move, it can be moved over friendly MONSTER and VEHICLE models as if they were not there. This model can move over terrain features that are 4\" or less in height as if they were not there.",
+        "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly MONSTER and VEHICLE models and sections of terrain features that are 4\" or less in height.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62871,44 +62886,61 @@
         ]
     },
     {
-        "datasheet_id": "000002636",
-        "line": "1",
-        "ability_id": "000008339",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "D3",
-        "": "",
-        "phases": [
-            "Fight",
-            "Saves"
-        ]
-    },
-    {
-        "datasheet_id": "000002636",
-        "line": "2",
-        "ability_id": "000008428",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000002636",
-        "line": "3",
+        "datasheet_id": "000002635",
+        "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Destructor",
-        "description": "Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.",
+        "name": "Unleash Wrath",
+        "description": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up on the battlefield within 12\" of this model; this model can then either:Shoot at that unit, but only if it is an eligible target.Declare a charge against that unit (note that even if this charge is successful, this model does not receive any Charge bonus this turn).",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Charge",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000002636",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000002636",
+        "line": "2",
+        "ability_id": "000008428",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000002636",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Punishing Suppression",
+        "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks (excluding MONSTERS and VEHICLES). Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -62943,8 +62975,8 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Annihilator",
-        "description": "Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.",
+        "name": "Blood-hungry Annihilator",
+        "description": "Each time this model makes a ranged attack that targets the closest eligible MONSTER or VEHICLE target within 18\", you can re-roll the Wound roll and you can re-roll the Damage roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -62985,7 +63017,7 @@
         "ability_id": "",
         "model": "",
         "name": "Furious Onslaught",
-        "description": "In your Shooting phase, after this model has finished making its attacks, if one or more of those attacks scored a hit against an enemy INFANTRY unit, that INFANTRY unit must take a Battle-shock test.",
+        "description": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -63026,7 +63058,19 @@
         "ability_id": "",
         "model": "",
         "name": "The Scent of Blood",
-        "description": "Each time you make a Charge roll for this model, if one or more of the targets of that charge are below their Starting Strength, add 2 to that roll. Each time this model makes a melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll.",
+        "description": "Each time this model declares a charge that targets one or more units below Starting Strength, add 1 to the Charge roll. If one or more of the targets of that charge are Below Half-strength, add 2 to the Charge roll instead.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000002639",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Savage Exaltation",
+        "description": "Each time this model makes a melee attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll and, if that attack targets an enemy unit that is Below Half-strength, add 1 to the Wound roll as well.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -63080,13 +63124,14 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Self Repair",
-        "description": "At the start of your Command phase, this model regains 1 lost wound.",
+        "name": "Meet Any Challenge",
+        "description": "In your opponent's Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 9\" of this model, any units embarked within it can disembark.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Movement",
+            "Saves"
         ]
     },
     {
@@ -63136,13 +63181,14 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Swooping Predator",
-        "description": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll two D6: for each 4+, that enemy unit suffers D3 mortal wounds.",
+        "name": "Airborne Predator",
+        "description": "Each time this model makes an attack that targets a unit that can FLY, add 1 to the Hit roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Movement"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -63177,13 +63223,28 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Blessed Slaughter",
-        "description": "Each time you make a Blessings of Khorne roll, for each enemy unit destroyed by this model in the previous battle round, you can add 1 to or subtract 1 from one of the dice rolled (each dice can only be modified in this way once, and a dice cannot be modified below 1 or above 6).",
+        "name": "Idol of Blessed Blood",
+        "description": "At the start of the battle round, if this model is on the battlefield, when you make a Blessings of Khorne roll, roll one additional D6.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
+            "Pregame",
             "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000002642",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Super-heavy War Engine",
+        "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANLC models) and sections of terrain features that are 4\" or less in height. When doing so it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them. It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a roll of 1, this model is Battle-shocked.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
         ]
     },
     {
@@ -67446,7 +67507,7 @@
         "ability_id": "",
         "model": "",
         "name": "Bloodied Terror",
-        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of this model must take a Battle-shock test.",
+        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of this model must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -67459,16 +67520,13 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Oath to Khorne",
-        "description": "At the start of the battle, select one unit from your opponent's army to be this model's sworn foe. Each time this model makes an attack that targets that sworn foe, you can re-roll the Hit roll and you can re-roll the Wound roll. If, at the end of the battle, that sworn foe has not been destroyed, this model is destroyed.",
+        "name": "Swooping Predator",
+        "description": "Each time this model ends a Normal or Advance move, you can select one enemy unit that it moved over during that move and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Pregame",
-            "Shooting",
-            "Fight",
-            "Saves"
+            "Movement"
         ]
     },
     {
@@ -70513,13 +70571,14 @@
         "line": "2",
         "ability_id": "",
         "model": "",
-        "name": "Icon of Khorne",
-        "description": "Each time you make a Blessings of Khorne roll, if the bearer's unit is within range of an objective marker you control, you can re-roll one of the dice.",
-        "type": "Wargear",
+        "name": "Blood Surge",
+        "description": "In your opponent's Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Blood Surge move. To do so, roll one D6 and add 2 to the roll: models in this unit move a number of inches up to this result, but this unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT), When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Blood Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Blood Surge move per phase.",
+        "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Shooting",
+            "Saves"
         ]
     },
     {
@@ -70527,14 +70586,15 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Blood Surge",
-        "description": "Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if any models from this unit were destroyed as a result of those attacks, this unit can make a Blood Surge move. To do so, roll one D6: this unit can be moved a number of inches up to the result, but this unit must finish that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Blood Surge move while it is Battle-shocked.",
-        "type": "Datasheet",
+        "name": "Icon of Khorne",
+        "description": "Each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+        "type": "Wargear",
         "parameter": "",
         "": "",
         "phases": [
+            "Command",
             "Shooting",
-            "Saves"
+            "Fight"
         ]
     },
     {
@@ -78813,7 +78873,7 @@
         "ability_id": "",
         "model": "",
         "name": "INQUISITORIAL RETINUE",
-        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00207\" data-tooltip-content=\"#tooltip_content00207\" data-tooltip-anchor=\"#tooltip_",
+        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00257\" data-tooltip-content=\"#tooltip_content00257\" data-tooltip-anchor=\"#tooltip_",
         "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
@@ -92135,6 +92195,419 @@
     {
         "datasheet_id": "000004102",
         "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Collar of Khorne",
+        "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004103",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004103",
+        "line": "2",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004103",
+        "line": "3",
+        "ability_id": "000008428",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004103",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Rage Eternal",
+        "description": "While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004103",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Possessed Lord",
+        "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004103",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "LORD OF THE EIGHTBOUND",
+        "description": "If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, until the end of the battle, this model has the Deep Strike and Scouts 6\" abilities.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command",
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004104",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004104",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004104",
+        "line": "3",
+        "ability_id": "000010071",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004104",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Rage Embodied",
+        "description": "While a friendly BLOOD LEGIONS unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004104",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Murderlust",
+        "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004105",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004105",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004105",
+        "line": "3",
+        "ability_id": "000010071",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004105",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemon Lord of Khorne",
+        "description": "While a friendly BLOOD LEGIONS unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004105",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Relentless Carnage",
+        "description": "At the end of the Fight phase, you can select one enemy unit within Engagement Range of this model and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "2",
+        "ability_id": "000010071",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Bane of Cowards",
+        "description": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Icon",
+        "description": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004106",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Instrument of Chaos",
+        "description": "Add 1 to Charge rolls made for the bearer's unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "2",
+        "ability_id": "000010071",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Brass Stampede",
+        "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of this unit and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers D3 mortal wounds.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Icon",
+        "description": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004107",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Instrument of Chaos",
+        "description": "Add 1 to Charge rolls made for the bearer's unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004108",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004108",
+        "line": "2",
+        "ability_id": "000010071",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004108",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Hunters from the Warp",
+        "description": "At the end of your opponent's turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004108",
+        "line": "4",
         "ability_id": "",
         "model": "",
         "name": "Collar of Khorne",

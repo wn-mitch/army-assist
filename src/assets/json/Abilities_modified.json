@@ -3,7 +3,7 @@
         "id": "000000705",
         "name": "Synapse",
         "legend": "Some Tyranids serve as synaptic conduits or nodal relays through which a portion of the Hive Mind's iron will flows, overriding the natural instincts of the swarm to direct the teeming warrior-beasts to function as a single, gestalt organism on the battlefield.",
-        "faction_id": "TYR",
+        "faction_id": "GC",
         "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
         "": "",
         "phases": [
@@ -15,7 +15,7 @@
         "id": "000000705",
         "name": "Synapse",
         "legend": "Some Tyranids serve as synaptic conduits or nodal relays through which a portion of the Hive Mind's iron will flows, overriding the natural instincts of the swarm to direct the teeming warrior-beasts to function as a single, gestalt organism on the battlefield.",
-        "faction_id": "GC",
+        "faction_id": "TYR",
         "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
         "": "",
         "phases": [
@@ -246,7 +246,7 @@
         "id": "000008382",
         "name": "Doctrina Imperatives",
         "legend": "An Adeptus Mechanicus army marching to war is a sight both terrifying and glorious, each holy warrior a disturbing fusion of Human and machine. While the ruling Tech-Priests and their fanatical followers raise modified voices in praise of the Machine God, their Skitarii soldiery and Servitor creations are controlled by doctrina imperatives loaded by their masters to augment and adapt the warriors' abilities.",
-        "faction_id": "AdM",
+        "faction_id": "QI",
         "description": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.Protector ImperativeRanged weapons equipped by models in this unit have the [HEAVY] ability.Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll.Conqueror ImperativeRanged weapons equipped by models in this unit have the [ASSAULT] ability.Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.",
         "": "",
         "phases": [
@@ -261,7 +261,7 @@
         "id": "000008382",
         "name": "Doctrina Imperatives",
         "legend": "An Adeptus Mechanicus army marching to war is a sight both terrifying and glorious, each holy warrior a disturbing fusion of Human and machine. While the ruling Tech-Priests and their fanatical followers raise modified voices in praise of the Machine God, their Skitarii soldiery and Servitor creations are controlled by doctrina imperatives loaded by their masters to augment and adapt the warriors' abilities.",
-        "faction_id": "QI",
+        "faction_id": "AdM",
         "description": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.Protector ImperativeRanged weapons equipped by models in this unit have the [HEAVY] ability.Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll.Conqueror ImperativeRanged weapons equipped by models in this unit have the [ASSAULT] ability.Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.",
         "": "",
         "phases": [
@@ -316,14 +316,13 @@
     {
         "id": "000008428",
         "name": "Blessings of Khorne",
-        "legend": "Khorne is the god of warfare and slaughter, and provides mighty boons to those who consecrate the battlefield in his name.",
+        "legend": "Khorne is the Chaos god of warfare and slaughter to whom all World Eaters are devoted. He blesses those who spill blood and take skulls in his infernal name.",
         "faction_id": "WE",
-        "description": "If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne from the Blessings of Khorne list (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded.Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the following dice: 1, 2, 3, 4.However, now that they have activated two Blessings of Khorne, they cannot activate any more and the remaining dice are discarded.RAGE-FUELLED INVIGORATIONANY DOUBLEAdd 2\" to the Move characteristic of models in this unit.WRATHFUL DEVOTIONANY DOUBLEModels in this unit have the Feel No Pain 6+ ability. If models in this unit already have the Feel No Pain ability, add 1 to their Feel No Pain rolls.MARTIAL EXCELLENCEDOUBLE 3+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.TOTAL CARNAGEDOUBLE 4+ OR ANY TRIPLEEach time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.WARP BLADESDOUBLE 5+ OR ANY TRIPLEMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.UNBRIDLED BLOODLUSTDOUBLE 6 OR TRIPLE 4+This unit is eligible to declare a charge in a turn in which it Advanced.",
+        "description": "If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1,2, 2, 2, 3, 4. They then use the two 2s to activate Unbridled Bloodlust. Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.UNBRIDLED BLOODLUSTYou can re-roll Charge rolls made for this unit.RAGE-FUELLED INVIGORATIONEach time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".TOTAL CARNAGEEach time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.MARTIAL EXCELLENCEMelee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.WARP BLADESMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.DECAPITATING STRIKESEach time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.",
         "": "",
         "phases": [
             "Pregame",
             "Command",
-            "Movement",
             "Shooting",
             "Charge",
             "Fight",
@@ -623,6 +622,15 @@
         "legend": "By enacting the most lurid and excessive acts of ritual violence, the Emperor's Children may shatter reality itself and summon forth the daemons of Slaanesh.",
         "faction_id": "EC",
         "description": "When mustering your army, unless specifically stated otherwise, you cannot select LEGIONS OF EXCESS as your Army Faction.",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000010071",
+        "name": "Pact of Blood",
+        "legend": "Through acts of frenzied violence and unbound savagery, the World Eaters may open a rent in reality, allowing the daemons of Khorne to spill forth from that infernal domain.",
+        "faction_id": "WE",
+        "description": "When mustering your army, unless specifically stated otherwise, you cannot select BLOOD LEGIONS as your Army Faction.",
         "": "",
         "phases": []
     }

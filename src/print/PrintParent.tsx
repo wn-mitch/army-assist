@@ -6,6 +6,7 @@ import PrintSettings from "@/types/PrintSettings";
 import PhaseOption from "@/types/PhaseOption";
 
 import PhaseStratagemSection from "./PhaseStratagemSection";
+import PregameSection from "./PregameSection";
 import CommandSection from "./CommandSection";
 import ShootingSection from "./ShootingSection";
 import MovementSection from "./MovementSection";
@@ -93,6 +94,7 @@ const PrintParent = (
             settings.contentOptionSetting.ArmyAbilities) &&
           settings.phaseOptionSetting === PhaseOption.Split)) && (
         <>
+          {phaseSection(Phase.Pregame, PregameSection, settings)}
           {phaseSection(Phase.Command, CommandSection, settings)}
           {phaseSection(Phase.Movement, MovementSection, settings)}
           {phaseSection(Phase.Shooting, ShootingSection, settings)}
