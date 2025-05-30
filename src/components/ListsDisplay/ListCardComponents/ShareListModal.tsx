@@ -4,7 +4,7 @@ import { ShareIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { linkBuilder, qrCode } from "@/utils/ListHelper";
 import useStore from "@/store/store";
 import StoredList from "@/types/StoredList";
-import { FaCopy, FaDownload } from "react-icons/fa";
+import { FaCopy } from "react-icons/fa";
 
 interface ShareListModalProps {
   list: StoredList;

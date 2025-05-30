@@ -33,25 +33,6 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
   let characteristic: React.ReactNode;
   let toggled = true;
 
-  const [touchStartY, setTouchStartY] = useState<number | null>(null);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartY(e.touches[0].clientY);
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartY === null) return;
-
-    const touchEndY = e.changedTouches[0].clientY;
-    const movementThreshold = 10; // Pixels of movement allowed for a tap
-
-    if (Math.abs(touchStartY - touchEndY) < movementThreshold) {
-      toggleUnit(unit); // Treat as a tap if movement is minimal
-    }
-
-    setTouchStartY(null);
-  };
-
   const filteredWeapons = weaponsFilter
     ? unit.weaponsDatasheets.filter((weapon) =>
         Object.keys(unit.count ?? {}).some((name: string) => {
