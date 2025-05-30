@@ -335,6 +335,7 @@ const useStore = create<StoreState>()(
                 datasheet: null,
                 datasheetModel: null,
                 keywords: "",
+                notes: [],
               };
 
               if (lastParentUnit && lastParentUnit.children) {
