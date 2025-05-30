@@ -2,12 +2,14 @@ import ListUnit from "@/types/ListUnit";
 import React from "react";
 import AbilitySection from "./AbilitySection";
 import Phase from "@/types/Phase";
-import { getPhasedAbilities } from "@/utils/UnitHelper";
+import { getPhasedAbilities, getPhasedNotes } from "@/utils/UnitHelper";
 import PrintSettings from "@/types/PrintSettings";
+import NoteSection from "./NoteSection";
 
 const CommandSection = (units: ListUnit[], settings: PrintSettings) => {
   return units.map((unit, index) => {
     const abilities = getPhasedAbilities(unit, Phase.Command);
+    const notes = getPhasedNotes(unit, Phase.Command);
 
     return (
       <React.Fragment key={index}>
@@ -28,6 +30,7 @@ const CommandSection = (units: ListUnit[], settings: PrintSettings) => {
             </span>
           </div>
           {AbilitySection(abilities, settings)}
+          {NoteSection(notes, settings)}
         </div>
       </React.Fragment>
     );

@@ -34,6 +34,7 @@ import {
 } from "@/utils/StoreHelper";
 import Settings from "@/types/Settings";
 import { samplePreload, testingPreload } from "@/utils/PreloadedLists";
+import Note from "@/types/Note";
 
 interface StoreState {
   isFirstVisit: boolean;
@@ -52,6 +53,9 @@ interface StoreState {
   parseText: (text: string, name: string, listIndex?: string) => boolean;
   setPhase: (phase: Phase) => void;
   toggleUnit: (unit: ListUnit) => void;
+  addNewNote: (unit: ListUnit, note: Note) => void;
+  editNote: (unit: ListUnit, noteIndex: number, updatedNote: Note) => void;
+  deleteNote: (unit: ListUnit, noteIndex: number) => void;
   togglePhase: (phase: Phase) => void;
   setFirstVisit: (isFirstVisit: boolean) => void;
   setListSort: (listSort: SortOptions) => void;
@@ -279,6 +283,7 @@ const useStore = create<StoreState>()(
                   datasheet: null,
                   datasheetModel: null,
                   keywords: "",
+                  notes: [],
                 };
 
                 listUnits.push(lastParentUnit);
@@ -546,16 +551,81 @@ const useStore = create<StoreState>()(
             });
           }
         },
-        togglePhase: (phase: Phase) => {
-          set((state) => ({
-            settings: {
-              ...state.settings,
-              activePhases: {
-                ...state.settings.activePhases,
-                [phase]: !state.settings.activePhases[phase],
-              },
-            },
-          }));
+        addNewNote: (unit: ListUnit, note: Note) => {
+          const activeList = get().activeList;
+          if (get().hasActiveList()) {
+            set((state) => {
+              const updatedStoredLists = [...state.storedLists];
+              const units = [...updatedStoredLists[activeList].units];
+              const index = units.findIndex((u) => u.id === unit.id);
+              if (index !== -1) {
+                const updatedUnit = {
+                  ...units[index],
+                  notes: [...(units[index].notes || []), note],
+                };
+                units[index] = updatedUnit;
+                updatedStoredLists[activeList] = {
+                  ...updatedStoredLists[activeList],
+                  units,
+                };
+                return { ...state, storedLists: updatedStoredLists };
+              } else {
+                return state;
+              }
+            });
+          }
+        },
+        editNote: (unit: ListUnit, noteIndex: number, updatedNote: Note) => {
+          const activeList = get().activeList;
+          if (get().hasActiveList()) {
+            set((state) => {
+              const updatedStoredLists = [...state.storedLists];
+              const units = [...updatedStoredLists[activeList].units];
+              const index = units.findIndex((u) => u.id === unit.id);
+              if (index !== -1) {
+                const unitNotes = [...(units[index].notes || [])];
+                unitNotes[noteIndex] = updatedNote;
+                const updatedUnit = {
+                  ...units[index],
+                  notes: unitNotes,
+                };
+                units[index] = updatedUnit;
+                updatedStoredLists[activeList] = {
+                  ...updatedStoredLists[activeList],
+                  units,
+                };
+                return { ...state, storedLists: updatedStoredLists };
+              } else {
+                return state;
+              }
+            });
+          }
+        },
+        deleteNote: (unit: ListUnit, noteIndex: number) => {
+          const activeList = get().activeList;
+          if (get().hasActiveList()) {
+            set((state) => {
+              const updatedStoredLists = [...state.storedLists];
+              const units = [...updatedStoredLists[activeList].units];
+              const index = units.findIndex((u) => u.id === unit.id);
+              if (index !== -1) {
+                const unitNotes = [...(units[index].notes || [])];
+                unitNotes.splice(noteIndex, 1);
+                const updatedUnit = {
+                  ...units[index],
+                  notes: unitNotes,
+                };
+                units[index] = updatedUnit;
+                updatedStoredLists[activeList] = {
+                  ...updatedStoredLists[activeList],
+                  units,
+                };
+                return { ...state, storedLists: updatedStoredLists };
+              } else {
+                return state;
+              }
+            });
+          }
         },
         setFirstVisit: (isFirstVisit: boolean) => set({ isFirstVisit }),
         setListSort: (listSort: SortOptions) => {
@@ -624,7 +694,7 @@ const useStore = create<StoreState>()(
         },
         getProcessedUnitList: () => {
           const activeList = get().activeList;
-          if (activeList < 0) {
+          if(activeList < 0) {
             return [];
           }
 

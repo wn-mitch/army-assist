@@ -2,12 +2,14 @@ import ListUnit from "@/types/ListUnit";
 import React from "react";
 import AbilitySection from "./AbilitySection";
 import Phase from "@/types/Phase";
-import { getPhasedAbilities } from "@/utils/UnitHelper";
+import { getPhasedAbilities, getPhasedNotes } from "@/utils/UnitHelper";
 import PrintSettings from "@/types/PrintSettings";
+import NoteSection from "./NoteSection";
 
 const ChargeSection = (units: ListUnit[], settings: PrintSettings) => {
   return units.map((unit) => {
     const abilities = getPhasedAbilities(unit, Phase.Charge);
+    const notes = getPhasedNotes(unit, Phase.Charge);
 
     return (
       <>
@@ -18,6 +20,7 @@ const ChargeSection = (units: ListUnit[], settings: PrintSettings) => {
             </span>
           </div>
           {AbilitySection(abilities, settings)}
+          {NoteSection(notes, settings)}
         </div>
       </>
     );

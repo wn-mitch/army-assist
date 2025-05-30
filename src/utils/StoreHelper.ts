@@ -130,7 +130,6 @@ const applyAbilityOverrides = (ability: Ability) => {
           "If every model in a unit has this ability, then each time a ranged attack is made against it, subtract 1 from that attack's Hit roll.",
       };
     case "000008460":
-      console.log(ability);
       return {
         ...ability,
         name: "Super-heavy Walker",
@@ -177,7 +176,6 @@ const applyWeaponAndEnhancementOverrides = (
     counts[newWeapon] = (counts[oldWeapon] || 0) + increment;
   };
 
-  console.log(datasheet)
   switch (datasheet.name) {
     case "Flesh Hounds":
       weapons = findAndReplace(weapons, "Burning maw", "Burning roar");

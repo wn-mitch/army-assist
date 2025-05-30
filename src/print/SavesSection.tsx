@@ -3,13 +3,15 @@ import datasheetAbilities from "@/assets/json/Datasheets_abilities.json";
 import React from "react";
 import AbilitySection from "./AbilitySection";
 import Phase from "@/types/Phase";
-import { getPhasedAbilities } from "@/utils/UnitHelper";
+import { getPhasedAbilities, getPhasedNotes } from "@/utils/UnitHelper";
 import CardValue from "./CardValue";
 import PrintSettings from "@/types/PrintSettings";
+import NoteSection from "./NoteSection";
 
 const SavesSection = (units: ListUnit[], settings: PrintSettings) => {
   return units.map((unit) => {
     const abilities = getPhasedAbilities(unit, Phase.Saves);
+    const notes = getPhasedNotes(unit, Phase.Saves);
 
     const invSave = unit.datasheetModel?.inv_sv;
 
@@ -41,6 +43,7 @@ const SavesSection = (units: ListUnit[], settings: PrintSettings) => {
             {CardValue("Ld", unit.datasheetModel?.Ld)}
           </div>
           {AbilitySection(abilities, settings)}
+          {NoteSection(notes, settings)}
         </div>
       </>
     );

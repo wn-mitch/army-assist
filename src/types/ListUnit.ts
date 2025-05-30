@@ -3,6 +3,7 @@ import DatasheetModel from "./DatasheetModel";
 import Enhancement from "./Enhancement";
 import Datasheet from "./Datasheet";
 import DatasheetWargear from "./DatasheetWargear";
+import Note from "./Note";
 
 interface ListUnit {
   id: number;
@@ -21,6 +22,7 @@ interface ListUnit {
   datasheetModel: DatasheetModel | null;
   keywords: string;
   datasheet: Datasheet | null;
+  notes: Note[] | null;
 }
 
 export default ListUnit;

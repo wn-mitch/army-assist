@@ -15,6 +15,8 @@ import ChargePhase from "./PhaseDisplays/ChargePhase";
 import SavesPhase from "./PhaseDisplays/SavesPhase";
 import PhaseEnhancements from "./PhaseEnhancements";
 import PhaseAbilities from "./PhaseAbilities";
+import NoteModal from "@/components/NoteModal";
+import PhaseNotes from "./PhaseNotes";
 
 function ListUnitCard({ unit }: { unit: ListUnit }) {
   const activeList = useStore((state) => state.activeList);
@@ -104,9 +106,14 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
     unit,
     phase,
   });
+  
+  const [phasedNotes, notesToggle] = PhaseNotes({
+    unit,
+    phase,
+  });
 
   const cardToggled =
-    unit.toggled && (toggled || abilitiesToggle || enhancementsToggle);
+    unit.toggled && (toggled || abilitiesToggle || enhancementsToggle || notesToggle);
 
   const fadedClasses = cardToggled ? "" : "opacity-50";
 
@@ -135,6 +142,9 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
             </div>
           )}
         </div>
+          <div className="flex justify-center items-center mx-1">
+            <NoteModal unit={unit} />
+          </div>
         {cardsCollapse && (
           <div className="flex justify-center items-center">
             <button
@@ -157,6 +167,7 @@ function ListUnitCard({ unit }: { unit: ListUnit }) {
           <div className="">{characteristic}</div>
           <div className="">{phasedAbilities}</div>
           <div className="">{phasedEnhancements}</div>
+          <div className="">{phasedNotes}</div>
         </div>
       )}
     </ul>
