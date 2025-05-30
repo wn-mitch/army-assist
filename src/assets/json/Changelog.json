@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.11.4",
+    "stateVersion": 22,
+    "date": "5/30/25",
+    "changes": [
+      "Fixed a weapon mapping issue with the Warboss in Mega Armour and the Beastboss on Squigosaur. Thank you to my discord community for reporting this!"
+    ]
+  },
+  {
     "version": "1.11.3",
     "stateVersion": 22,
     "date": "5/29/25",

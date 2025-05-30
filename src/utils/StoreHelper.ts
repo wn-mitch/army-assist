@@ -177,6 +177,7 @@ const applyWeaponAndEnhancementOverrides = (
     counts[newWeapon] = (counts[oldWeapon] || 0) + increment;
   };
 
+  console.log(datasheet)
   switch (datasheet.name) {
     case "Flesh Hounds":
       weapons = findAndReplace(weapons, "Burning maw", "Burning roar");
@@ -340,6 +341,14 @@ const applyWeaponAndEnhancementOverrides = (
         "Close combat weapon"
       );
       updateCounts("Hunting Blades", "Close combat weapon");
+      break;
+    case "Warboss In Mega Armour":
+      weapons = findAndReplace(weapons, "’Uge choppa", "'Uge choppa");
+      updateCounts("’Uge choppa", "'Uge choppa");
+      break;
+    case "Beastboss On Squigosaur":
+      weapons = findAndReplace(weapons, "Squigosaur’s jaws", "Squigosaur's jaws");
+      updateCounts("Squigosaur’s jaws", "Squigosaur's jaws");
       break;
   }
 
