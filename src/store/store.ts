@@ -300,7 +300,7 @@ const useStore = create<StoreState>()(
                     .trim();
                   return cleanedName.split(",").map((part) => part.trim());
                 });
-              
+
               const updatedWeapons = weapons?.flatMap((weapon) => {
                 const match = weapon.match(/(\d+)x\s+([A-Za-z\s\'-]+)/);
                 if (match) {
@@ -551,6 +551,17 @@ const useStore = create<StoreState>()(
             });
           }
         },
+        togglePhase: (phase: Phase) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              activePhases: {
+                ...state.settings.activePhases,
+                [phase]: !state.settings.activePhases[phase],
+              },
+            },
+          }));
+        },
         addNewNote: (unit: ListUnit, note: Note) => {
           const activeList = get().activeList;
           if (get().hasActiveList()) {
@@ -694,7 +705,7 @@ const useStore = create<StoreState>()(
         },
         getProcessedUnitList: () => {
           const activeList = get().activeList;
-          if(activeList < 0) {
+          if (activeList < 0) {
             return [];
           }
 
