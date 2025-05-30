@@ -733,7 +733,8 @@ const useStore = create<StoreState>()(
                   return (
                     item.name === curr.name &&
                     arraysEqual(item.enhancements, curr.enhancements) &&
-                    arraysEqual(item.weapons ?? [], curr.weapons ?? [])
+                    arraysEqual(item.weapons ?? [], curr.weapons ?? []) && 
+                    arraysEqual(item.notes ?? [], curr.notes ?? [])
                   );
                 });
                 if (index !== -1) {

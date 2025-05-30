@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.12.0",
+    "stateVersion": 23,
+    "date": "5/30/25",
+    "changes": [
+      "New Feature: Unit Notes! You can now add notes to individual units in your list. This is useful for keeping track of unit-specific strategies or reminders.", 
+      "To add a note, click on the pencil icon on the unit card to open the note management modal.",
+      "You can add, edit or delete notes for each unit.",
+      "Notes are saved locally in your browser, so they will persist across sessions BUT NOT ACROSS LIST REFRESHES.",
+      "This feature is still in beta, so please report any issues you encounter.",
+      "I intend to add the ability to export and import notes in the future."
+    ]
+  },
+  {
     "version": "1.11.4",
     "stateVersion": 22,
     "date": "5/30/25",
