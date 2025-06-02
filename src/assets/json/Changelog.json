@@ -1,5 +1,14 @@
 [
   {
+    "version": "1.11.5",
+    "stateVersion": 22,
+    "date": "5/30/25",
+    "changes": [
+      "Fixed a weapon mapping issue with the Squighog Boyz, Kill Rig, and Rogal Dorn Commander. Thank you to my discord community for reporting this!",
+      "Added a text area to the Edit List Modal that allows you to edit the list text directly. This is useful for those who want to edit the list text without having to repaste it."
+    ]
+  },
+  {
     "version": "1.11.4",
     "stateVersion": 22,
     "date": "5/30/25",
