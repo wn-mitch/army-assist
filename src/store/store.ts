@@ -48,6 +48,7 @@ interface StoreState {
   setActiveList: (uuid: string) => void;
   getActiveList: () => StoredList;
   editListName: (uuid: string, listName: string) => void;
+  editList: (uuid: string, listName: string, listText: string) => void;
   deleteList: (uuid: string) => void;
   refreshArmy: (uuid: string) => void;
   parseText: (text: string, name: string, listIndex?: string) => boolean;
@@ -153,6 +154,24 @@ const useStore = create<StoreState>()(
             updatedStoredLists[listIndex] = updatedList;
             return { storedLists: updatedStoredLists };
           });
+        },
+        editList: (uuid: string, listName: string, listText: string) => {
+          const listIndex = get().getListIndexByUUID(uuid);
+          set((state) => {
+            const lists = state.storedLists;
+            const updatedList = {
+              ...lists[listIndex],
+              name: listName,
+              text: listText,
+              updated: Date.now().toString(),
+            };
+            const updatedStoredLists = [...lists];
+            updatedStoredLists[listIndex] = updatedList;
+            return { storedLists: updatedStoredLists };
+          });
+
+          // Reparse the list with the new text
+          get().parseText(listText, listName, uuid);
         },
         deleteList: (uuid: string) => {
           const listIndex = get().getListIndexByUUID(uuid);

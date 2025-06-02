@@ -10,13 +10,14 @@ interface EditListModalProps {
 }
 
 const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
-  const editListName = useStore((state) => state.editListName);
+  const editList = useStore((state) => state.editList);
   const listDisplaySetting = useStore(
     (state) => state.settings.listDisplaySetting
   );
 
   const [open, setOpen] = useState(false);
   const [newListName, setNewListName] = useState(list.name || "");
+  const [newListText, setNewListText] = useState(list.text || "");
 
   const handleClose = () => {
     setOpen(false);
@@ -25,7 +26,7 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
   const handleShow = () => setOpen(true);
 
   const handleSave = () => {
-    editListName(list.uuid, newListName);
+    editList(list.uuid, newListName, newListText);
     handleClose();
   };
 
@@ -106,6 +107,22 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
               </div>
             </div>
 
+            <div className="mt-4">
+              <label
+                htmlFor="list-text"
+                className="block text-md/6 font-medium text-gray-900 dark:text-gray-100"
+              >
+                List Text
+              </label>
+              <textarea
+                id="list-text"
+                name="list-text"
+                rows={10}
+                value={newListText}
+                className="mt-2 block w-full resize-vertical rounded-md bg-white dark:bg-gray-900 px-3 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 dark:focus:outline-gray-400 sm:text-sm/6"
+                onChange={(event) => setNewListText(event.target.value)}
+              />
+            </div>
             <div className="mt-4 flex w-full flex-col">
               <button
                 onPointerDown={handleClose}

@@ -348,6 +348,14 @@ const applyWeaponAndEnhancementOverrides = (
       weapons = findAndReplace(weapons, "Squigosaur’s jaws", "Squigosaur's jaws");
       updateCounts("Squigosaur’s jaws", "Squigosaur's jaws");
       break;
+    case "Squighog Boyz":
+      weapons = findAndReplace(weapons, "Squig jaws", "Squighog jaws and saddlegits");
+      updateCounts("Squig jaws", "Squighog jaws and saddlegits");
+      break;
+    case "Kill Rig":
+      weapons = findAndReplace(weapons, "’Eavy lobba", "'Eavy Lobba");
+      updateCounts("’Eavy lobba", "'Eavy Lobba");
+      break;
   }
 
   return weapons;
@@ -359,6 +367,26 @@ const applyMissingWeapons = (
   weaponDatasheets: DatasheetWargear[]
 ) => {
   switch (unit.name) {
+    case "Rogal Dorn Commander": {
+      const meltagun: DatasheetWargear = {
+        datasheet_id: "999999999",
+        line: null,
+        line_in_wargear: null,
+        name: "2x Meltagun",
+        description: "MELTA 2",
+        dice: "",
+        range: "12",
+        type: "Ranged",
+        A: "2",
+        BS_WS: "4",
+        S: "9",
+        AP: "-4",
+        D: "D6",
+      };
+      weaponDatasheets = addWeaponIfFound(weapons, weaponDatasheets, meltagun);
+      break;
+    }
+
     case "Broadside Battlesuits":
     case "Riptide Battlesuit":
     case "Crisis Sunforge Battlesuits":
