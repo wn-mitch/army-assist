@@ -23,6 +23,8 @@ interface ListUnit {
   keywords: string;
   datasheet: Datasheet | null;
   notes: Note[] | null;
+  attached_to_leader_id?: string; // ID of the leader this unit is attached to
+  attached_units?: string[]; // IDs of units attached to this leader
 }
 
 export default ListUnit;

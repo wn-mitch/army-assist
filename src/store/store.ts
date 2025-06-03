@@ -12,6 +12,7 @@ import Stratagems from "@/assets/json/Stratagems_modified.json";
 import DatasheetWargear from "@/assets/json/Datasheets_wargear.json";
 import ArmyAbilities from "@/assets/json/Abilities_modified.json";
 import DetachmentAbilities from "@/assets/json/Detachment_abilities_modified.json";
+import LeaderAttachments from "@/assets/json/Datasheets_leader.json";
 
 import ListUnit from "@/types/ListUnit";
 import Phase from "@/types/Phase";
@@ -21,6 +22,7 @@ import { Stratagem } from "@/types/Stratagem";
 import DatasheetModel from "@/types/DatasheetModel";
 import Ability from "@/types/Ability";
 import StoredList from "@/types/StoredList";
+import LeaderAttachment from "@/types/LeaderAttachment";
 
 import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import {
@@ -72,6 +74,14 @@ interface StoreState {
   getStratagems: () => Stratagem[];
   getArmyAbilities: () => Ability[];
   getListIndexByUUID: (uuid: string | undefined) => number;
+  attachUnitToLeader: (
+    listIndex: number,
+    leaderId: string,
+    unitId: string
+  ) => void;
+  detachUnitFromLeader: (listIndex: number, unitId: string) => void;
+  getAttachableUnits: (leaderDatasheetId: string) => string[];
+  getLeadersForUnit: (unitDatasheetId: string) => string[];
 }
 
 const useStore = create<StoreState>()(
@@ -752,7 +762,7 @@ const useStore = create<StoreState>()(
                   return (
                     item.name === curr.name &&
                     arraysEqual(item.enhancements, curr.enhancements) &&
-                    arraysEqual(item.weapons ?? [], curr.weapons ?? []) && 
+                    arraysEqual(item.weapons ?? [], curr.weapons ?? []) &&
                     arraysEqual(item.notes ?? [], curr.notes ?? [])
                   );
                 });
@@ -903,6 +913,121 @@ const useStore = create<StoreState>()(
             (list) => list.uuid === uuid
           );
           return index;
+        },
+        // Method to attach a unit to a leader
+        attachUnitToLeader: (listIndex, leaderId, unitId) => {
+          set((state) => {
+            if (listIndex === -1) return state;
+
+            const list = state.storedLists[listIndex];
+            const updatedUnits = list.units.map((unit) => {
+              // Update the leader unit
+              if (unit.id.toString() === leaderId) {
+                return {
+                  ...unit,
+                  attached_units: [...(unit.attached_units || []), unitId],
+                };
+              }
+              // Update the unit being attached
+              if (unit.id.toString() === unitId) {
+                // If already attached to another leader, detach first
+                if (
+                  unit.attached_to_leader_id &&
+                  unit.attached_to_leader_id !== leaderId
+                ) {
+                  const previousLeader = list.units.find(
+                    (u) => u.id.toString() === unit.attached_to_leader_id
+                  );
+                  if (previousLeader && previousLeader.attached_units) {
+                    const filteredUnits = previousLeader.attached_units.filter(
+                      (id) => id !== unitId
+                    );
+                    previousLeader.attached_units = filteredUnits;
+                  }
+                }
+
+                return {
+                  ...unit,
+                  attached_to_leader_id: leaderId,
+                };
+              }
+              return unit;
+            });
+
+            const updatedList = {
+              ...list,
+              units: updatedUnits,
+              updated: new Date().toISOString(),
+            };
+
+            const updatedLists = [...state.storedLists];
+            updatedLists[listIndex] = updatedList;
+
+            return {
+              ...state,
+              storedLists: updatedLists,
+            };
+          });
+        },
+
+        // Method to detach a unit from its leader
+        detachUnitFromLeader: (listIndex, unitId) => {
+          set((state) => {
+            if (listIndex === -1) return state;
+
+            const list = state.storedLists[listIndex];
+            const unitToDetach = list.units.find(
+              (unit) => unit.id.toString() === unitId
+            );
+            if (!unitToDetach || !unitToDetach.attached_to_leader_id)
+              return state;
+
+            const leaderId = unitToDetach.attached_to_leader_id;
+
+            const updatedUnits = list.units.map((unit) => {
+              // Update the leader unit
+              if (unit.id.toString() === leaderId) {
+                return {
+                  ...unit,
+                  attached_units: (unit.attached_units || []).filter(
+                    (id) => id !== unitId
+                  ),
+                };
+              }
+              // Update the unit being detached
+              if (unit.id.toString() === unitId) {
+                const { attached_to_leader_id, ...rest } = unit;
+                return rest;
+              }
+              return unit;
+            });
+
+            const updatedList = {
+              ...list,
+              units: updatedUnits,
+              updated: new Date().toISOString(),
+            };
+
+            const updatedLists = [...state.storedLists];
+            updatedLists[listIndex] = updatedList;
+
+            return {
+              ...state,
+              storedLists: updatedLists,
+            };
+          });
+        },
+        getAttachableUnits: (unitDatasheetId) => {
+          return LeaderAttachments.filter(
+            (attachment: LeaderAttachment) =>
+              attachment.leader_id === unitDatasheetId
+          ).map((attachment: LeaderAttachment) => attachment.attached_id);
+        },
+        getLeadersForUnit: (leaderDatasheetId) => {
+          return LeaderAttachments.filter(
+            (attachment: LeaderAttachment) =>
+              attachment.attached_id === leaderDatasheetId
+          ).map((attachment: LeaderAttachment) => attachment.leader_id);
         },
       };
     },

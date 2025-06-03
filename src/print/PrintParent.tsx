@@ -45,6 +45,53 @@ const PrintParent = (
 
   const qr = qrCode(text);
 
+  // Filter out units that are attached to leaders (they'll be shown with their leaders)
+  const standaloneUnits = processedUnits.filter((unit) => !unit.attached_to_leader_id);
+
+  // Function to render a unit and its attached units for a specific phase
+  const renderUnitForPhase = (
+    unit: ListUnit,
+    phase: Phase,
+    settings: PrintSettings,
+    contentFunction: (units: ListUnit[], settings: PrintSettings) => React.JSX.Element[]
+  ) => {
+    // Get units attached to this leader if any
+    const attachedUnits = unit.attached_units
+      ? processedUnits.filter((u) => unit.attached_units?.includes(String(u.id)))
+      : [];
+
+    // Create a clone of the content for the leader unit
+    const leaderContent = contentFunction([unit], settings);
+
+    // If there are no attached units, just return the leader content
+    if (attachedUnits.length === 0) {
+      return leaderContent;
+    }
+
+    // Create content for each attached unit
+    const attachedContent = attachedUnits.flatMap((attachedUnit) =>
+      contentFunction([attachedUnit], settings)
+    );
+
+    // Combine the leader and attached unit content
+    return leaderContent.map((element, index) => {
+      if (index === 0 && attachedContent.length > 0) {
+        // Add a wrapper around the first element with the leader and attached units
+        return (
+          <div key={`leader-${unit.id}-${phase}`} className="break-inside-avoid leader-unit-group">
+            {element}
+            <div className="ml-4 border-l-2 border-gray-400 pl-2 mt-1">
+              <div className="text-xs font-bold mb-1">Attached Units:</div>
+              {attachedContent}
+            </div>
+          </div>
+        );
+      }
+      return element;
+    });
+  };
+
+  // Modified phase section to handle leader attachments
   const phaseSection = (
     phase: Phase,
     contentFunction: (
@@ -61,7 +108,9 @@ const PrintParent = (
         {settings.contentOptionSetting.Units && (
           <>
             <div className="columns-3 gap-1 auto-cols-min px-1">
-              {contentFunction(processedUnits, settings)}
+              {standaloneUnits.flatMap((unit) =>
+                renderUnitForPhase(unit, phase, settings, contentFunction)
+              )}
             </div>
           </>
         )}
