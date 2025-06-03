@@ -81,7 +81,6 @@ const PrintParent = (
           <div key={`leader-${unit.id}-${phase}`} className="break-inside-avoid leader-unit-group">
             {element}
             <div className="ml-4 border-l-2 border-gray-400 pl-2 mt-1">
-              <div className="text-xs font-bold mb-1">Attached Units:</div>
               {attachedContent}
             </div>
           </div>
