@@ -998,6 +998,7 @@ const useStore = create<StoreState>()(
               }
               // Update the unit being detached
               if (unit.id.toString() === unitId) {
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 const { attached_to_leader_id, ...rest } = unit;
                 return rest;
               }
