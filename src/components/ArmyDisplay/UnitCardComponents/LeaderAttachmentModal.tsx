@@ -29,7 +29,6 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
   // Handle the case where this unit is a leader
   if (isLeader) {
     // Get units already attached to this leader
-    console.log(unit.attached_units);
     const attachedUnits = unit.attached_units 
       ? activeList.units.filter(u => unit.attached_units?.includes(String(u.id)))
       : [];
@@ -46,9 +45,6 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
       return u.datasheet && unit.datasheet && 
         getAttachableUnits(unit.datasheet.id).includes(u.datasheet.id);
     });
-    console.log('Handling leader unit:', unit.name);
-    console.log('Attached Units:', attachedUnits);
-    console.log('Attachable Units:', attachableUnits);
     
     // Handle attaching a unit to this leader
     const handleAttach = (unitId: number) => {
