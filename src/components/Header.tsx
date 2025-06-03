@@ -5,9 +5,16 @@ import Instructions from "./Instructions";
 import Changelog from "./Changelog";
 import useStore from "@/store/store";
 import Print from "./ArmyDisplay/Print";
+import { PencilSquareIcon } from "@heroicons/react/24/outline";
 
 const Header = () => {
   const activeList = useStore((state) => state.activeList);
+  const editForceMode = useStore((state) => state.settings.editForceMode);
+  const toggleEditForceMode = useStore((state) => state.toggleEditForceMode);
+
+  const handleEditForceToggle = () => {
+    toggleEditForceMode(!editForceMode);
+  };
 
   return (
     <header className="bg-gray-800 dark:bg-gray-950 px-2 py-2">
@@ -20,9 +27,27 @@ const Header = () => {
         </div>
         <div className="flex items-center gap-1">
           {activeList >= 0
-            ? [<Print />, <Settings />, <ResetButton />]
-            :[<Instructions />, <Settings />] 
-            }
+            ? [
+                <button
+                  key="edit-force"
+                  onClick={handleEditForceToggle}
+                  className={`bg-${
+                    editForceMode ? "blue-600" : "gray-500"
+                  } text-white rounded p-2 font-bold hover:bg-${
+                    editForceMode ? "blue-700" : "gray-700"
+                  } mx-1 transition-colors`}
+                  aria-label={`${
+                    editForceMode ? "Disable" : "Enable"
+                  } Edit Force Mode`}
+                  id="edit-force-button"
+                >
+                  <PencilSquareIcon className="h-8 w-8" />
+                </button>,
+                <Print key="print" />,
+                <Settings key="settings" />,
+                <ResetButton key="reset" />,
+              ]
+            : [<Instructions key="instructions" />, <Settings key="settings" />]}
         </div>
       </div>
     </header>

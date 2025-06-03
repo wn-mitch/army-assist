@@ -69,6 +69,7 @@ interface StoreState {
   setWeaponsFilter: (weaponsFilter: boolean) => void;
   setTruncateCoreRules: (truncateCoreRules: boolean) => void;
   setListDisplaySetting: (listDisplaySetting: boolean) => void;
+  toggleEditForceMode: (editForceMode: boolean) => void;
   getProcessedUnitList: () => ListUnit[];
   getStratagemsByPhase: (phase: Phase) => Stratagem[];
   getStratagems: () => Stratagem[];
@@ -102,6 +103,7 @@ const useStore = create<StoreState>()(
           weaponsFilter: true,
           truncateCoreRules: true,
           listDisplaySetting: true,
+          editForceMode: false,
           activePhases: {
             [Phase.Pregame]: true,
             [Phase.Command]: true,
@@ -1029,6 +1031,14 @@ const useStore = create<StoreState>()(
               attachment.attached_id === leaderDatasheetId
           ).map((attachment: LeaderAttachment) => attachment.leader_id);
         },
+        toggleEditForceMode: (editForceMode: boolean) => {
+          set((state) => ({
+            settings: {
+              ...state.settings,
+              editForceMode,
+            },
+          }));
+        }
       };
     },
     {

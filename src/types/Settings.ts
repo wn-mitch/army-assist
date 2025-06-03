@@ -19,6 +19,7 @@ interface Settings {
   };
   truncateCoreRules: boolean;
   listDisplaySetting: boolean;
+  editForceMode: boolean;
 }
 
 export default Settings;

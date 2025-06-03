@@ -39,6 +39,7 @@ function ListUnitCard({
   const cardsGroup = useStore((state) => state.settings.cardsGroup);
   const showKeywords = useStore((state) => state.settings.showKeywords);
   const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
+  const forceEditMode = useStore((state) => state.settings.editForceMode);
 
   // Check if this unit can be a leader or be attached to one
   const getAttachableUnits = useStore((state) => state.getAttachableUnits);
@@ -174,7 +175,7 @@ function ListUnitCard({
         {/* Only show buttons in main view, not in attached view */}
         {!isAttachedView && (
           <div className="flex justify-center items-center gap-1 mx-1">
-            {(canBeLeader || canBeAttached) && (
+            {(canBeLeader || canBeAttached) && forceEditMode && (
               <button
                 className="m-auto flex shadow-md rounded-xl bg-indigo-300 border-indigo-300 my-1 text-indigo-700 hover:bg-indigo-400 hover:text-indigo-200 dark:bg-indigo-500 dark:text-indigo-200 dark:hover:bg-indigo-600 dark:hover:text-indigo-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-indigo-400"
                 onClick={(e) => {
@@ -188,7 +189,7 @@ function ListUnitCard({
                 <UserGroupIcon className="h-8 w-8 p-1" />
               </button>
             )}
-            <NoteModal unit={unit} />
+            {forceEditMode && <NoteModal unit={unit} />}
           </div>
         )}
 
