@@ -62510,7 +62510,6 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
             "Saves"
         ]
     },
@@ -62527,7 +62526,8 @@
         "phases": [
             "Command",
             "Shooting",
-            "Fight"
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -70577,7 +70577,6 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
             "Saves"
         ]
     },

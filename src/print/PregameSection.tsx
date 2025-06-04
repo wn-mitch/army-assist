@@ -19,6 +19,9 @@ const PregameSection = (units: ListUnit[], settings: PrintSettings) => {
               {unit.groupCount}x {unit.name}
             </span>
           </div>
+          <div className="flex flex-row">
+            <span className="flex-1 text-center">{unit.keywords}</span>
+          </div>
           {AbilitySection(abilities, settings)}
           {NoteSection(notes, settings)}
         </div>

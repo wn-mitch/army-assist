@@ -5,11 +5,17 @@
     "date": "5/30/25",
     "changes": [
       "New Feature: Unit Notes! You can now add notes to individual units in your list. This is useful for keeping track of unit-specific strategies or reminders.", 
-      "To add a note, click on the pencil icon on the unit card to open the note management modal.",
-      "You can add, edit or delete notes for each unit.",
-      "Notes are saved locally in your browser, so they will persist across sessions BUT NOT ACROSS LIST REFRESHES.",
-      "This feature is still in beta, so please report any issues you encounter.",
-      "I intend to add the ability to export and import notes in the future."
+      "* To add a note, click on the notes icon to activate Force Edit Mode, then click on the pencil icon on the unit card to open the note management modal.",
+      "* You can add, edit or delete notes for each unit.",
+      "* Notes are saved locally in your browser, so they will persist across sessions BUT NOT ACROSS LIST REFRESHES.",
+      "* This feature is still in beta, so please report any issues you encounter.",
+      "* I intend to add the ability to export and import notes in the future.",
+      "New Feature: Leaders! You can now attach a unit to a leader in your list. This is useful for keeping track of which unit is leading a squad or a detachment.",
+      "* To attach a leader, click on the notes icon to activate Force Edit Mode, then click on the leader icon on the unit card to open the leader management modal.",
+      "* This will only display valid unit attachments. Note from the developer: I am not a 40k rules expert, so please let me know if you see any issues with this feature. I'm 99% certain this breaks with things such as Kroot having two leaders.",
+      "* Updates the print pages to include the leader information.",
+      "Fixed an issue where blank keywords were being displayed in the unit cards.",
+      "Now displays the unit keywords in the Pregame section of the print page"
     ]
   },
   {

@@ -78,9 +78,9 @@ const PrintParent = (
       if (index === 0 && attachedContent.length > 0) {
         // Add a wrapper around the first element with the leader and attached units
         return (
-          <div key={`leader-${unit.id}-${phase}`} className="break-inside-avoid leader-unit-group">
+          <div key={`leader-${unit.id}-${phase}`} className="leader-unit-group my-1">
             {element}
-            <div className="ml-4 border-l-2 border-gray-400 pl-2 mt-1">
+            <div className="ml-4 border-l-2 border-gray-400 pl-2">
               {attachedContent}
             </div>
           </div>

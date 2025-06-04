@@ -502,7 +502,7 @@ const useStore = create<StoreState>()(
                 const keywords = DatasheetKeywords.filter(
                   (keyword) => keyword.datasheet_id === datasheet.id
                 )
-                  .map((x) => x.keyword)
+                  .map((x) => x.keyword).filter(x => x !== "")
                   .join(", ");
 
                 return {
@@ -765,7 +765,8 @@ const useStore = create<StoreState>()(
                     item.name === curr.name &&
                     arraysEqual(item.enhancements, curr.enhancements) &&
                     arraysEqual(item.weapons ?? [], curr.weapons ?? []) &&
-                    arraysEqual(item.notes ?? [], curr.notes ?? [])
+                    arraysEqual(item.notes ?? [], curr.notes ?? []) && 
+                    item.attached_to_leader_id === curr.attached_to_leader_id 
                   );
                 });
                 if (index !== -1) {

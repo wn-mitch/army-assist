@@ -39,7 +39,7 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
       if (u.id === unit.id) return false;
       
       // Skip if it's already attached to another leader
-      if (u.attached_to_leader_id && u.attached_to_leader_id !== String(unit.id)) return false;
+      if (u.attached_to_leader_id && unit.datasheet && u.attached_to_leader_id !== String(unit.datasheet.id)) return false;
       
       // Check if this leader can lead this unit
       return u.datasheet && unit.datasheet && 
@@ -115,14 +115,14 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
                         </p>
                       ) : (
                         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-                          {attachedUnits.map(unit => (
-                            <li key={unit.id} className="py-2 flex justify-between items-center">
+                          {attachedUnits.map(attachedUnit => (
+                            <li key={attachedUnit.id} className="py-2 flex justify-between items-center">
                               <span className="text-sm text-gray-800 dark:text-gray-200">
-                                {getUnitName(unit)}
+                                {getUnitName(attachedUnit)}
                               </span>
                               <button
                                 className="ml-2 p-1 text-red-600 hover:bg-red-100 rounded"
-                                onClick={() => handleDetach(unit.id)}
+                                onClick={() => handleDetach(attachedUnit.id)}
                                 title="Detach unit"
                               >
                                 <UserMinusIcon className="h-5 w-5" />
@@ -143,14 +143,15 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
                         </p>
                       ) : (
                         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-                          {attachableUnits.map(unit => (
-                            <li key={unit.id} className="py-2 flex justify-between items-center">
+                          {attachableUnits.map(attachableUnit => (
+                            <li key={attachableUnit.id} className="py-2 flex justify-between items-center">
                               <span className="text-sm text-gray-800 dark:text-gray-200">
-                                {getUnitName(unit)}
+                                {getUnitName(attachableUnit)}
                               </span>
                               <button
                                 className="ml-2 p-1 text-green-600 hover:bg-green-100 rounded"
-                                onClick={() => handleAttach(unit.id)}
+                                onClick={() => handleAttach(attachableUnit.id)}
+                                disabled={(unit.attached_units?.length ?? 0) >= 1}
                                 title="Attach unit to leader"
                               >
                                 <UserPlusIcon className="h-5 w-5" />
