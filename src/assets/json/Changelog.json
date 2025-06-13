@@ -1,8 +1,16 @@
 [
   {
+    "version": "1.12.1",
+    "stateVersion": 23,
+    "date": "6/13/25",
+    "changes": [
+      "Fixed some name mapping issues for Death Guard units with a new data pull from Wahapedia."
+    ]
+  },
+  {
     "version": "1.12.0",
     "stateVersion": 23,
-    "date": "5/30/25",
+    "date": "6/12/25",
     "changes": [
       "New Feature: Unit Notes! You can now add notes to individual units in your list. This is useful for keeping track of unit-specific strategies or reminders.", 
       "* To add a note, click on the notes icon to activate Force Edit Mode, then click on the pencil icon on the unit card to open the note management modal.",

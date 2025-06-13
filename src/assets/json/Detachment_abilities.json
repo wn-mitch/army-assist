@@ -121,7 +121,7 @@
         "faction_id": "AdM",
         "name": "Cyber-Psalm Programming",
         "legend": "In advance of a Cohort Cyberneticas battles, the Legios most talented Datasmiths will feed dogmatic auto-scripture into the programming cores of their robotic charges, as well as oracular schematics and tactical hymnals that delineate the strategy to come. So blessed, the Cohorts robots add their own grinding chants of static to a systematic chorus of praise in the Omnissiah's name.",
-        "description": "LEGIO CYBERNETICA units from your army gain the Doctrina Imperatives army rule ",
+        "description": "Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.",
         "detachment": "Cohort Cybernetica",
         "": ""
     },
@@ -256,7 +256,7 @@
         "faction_id": "AE",
         "name": "Strength from Death",
         "legend": "Surrounded by the slaughter on the battlefield, the Ynnari channel the sinister supernatural gifts of Ynnead to great effect.",
-        "description": "You can use the following rules:Lethal IntentAt the end of your opponent's Shooting phase, if one or more YNNARI units from your army were destroyed this phase, select one YNNARI unit from your army (excluding TITANIC units). That unit can make a Normal move.Lethal SurgeOnce per turn, when a YNNARI unit from your army performs the Fade Back Agile Manoeuvre, it can make a Lethal Surge move instead of a Normal move. If it does, roll one D6 and add 1 to the result: that unit can be moved a number of inches up to the total. When doing so, those models can be moved within Engagement Range of the enemy unit that just triggered that Agile Manoeuvre.Lethal ReprisalAt the start of the Fight phase, select one YNNARI unit from your army (excluding TITANIC units) that is below its Starting Strength. Until the end of the phase, that unit has the Fights First ability.SERVANTS OF THE WHISPERING GODYou can include YNNARI units in your army, even though they do not have the ASURYANI Faction keyword.ASURYANI units (excluding EPIC HEROES) from your army gain the YNNARI keyword.You must include YVRAINE and/or THE YNCARNE in your army, and one of those models must be your WARLORD.",
+        "description": "You can use the following rules:Lethal IntentAt the end of your opponent's Shooting phase, if one or more YNNARI units from your army were destroyed this phase, select one YNNARI INFANTRY or YNNARI MOUNTED unit from your army that was within 6\" of your destroyed unit. That unit can make a Normal move of up to D6+1\".Lethal SurgeOnce per turn, when a YNNARI unit from your army performs the Fade Back Agile Manoeuvre, it can make a Lethal Surge move instead of a Normal move. If it does, roll one D6 and add 1 to the result: that unit can be moved a number of inches up to the total. When doing so, those models can be moved within Engagement Range of the enemy unit that just triggered that Agile Manoeuvre.Lethal ReprisalAt the start of the Fight phase, select one YNNARI unit from your army (excluding TITANIC units) that is below its Starting Strength. Until the end of the phase, that unit has the Fights First ability.SERVANTS OF THE WHISPERING GODYou can include YNNARI units in your army, even though they do not have the ASURYANI Faction keyword.ASURYANI units (excluding EPIC HEROES) from your army gain the YNNARI keyword.You must include YVRAINE and/or THE YNCARNE in your army, and one of those models must be your WARLORD.",
         "detachment": "Devoted of Ynnead",
         "": ""
     },
@@ -481,7 +481,7 @@
         "faction_id": "AS",
         "name": "Righteous Purpose",
         "legend": "Whether high-ranking clergy must be rescued, a priceless relic recovered, or some archheretic slain, these warriors know that to fail after promising victory to the God-Emperor would be infinitely worse than death; this knowledge fills them with righteous purpose and the unflinching will to succeed no matter the odds.",
-        "description": "In your Command phase, you can discard up to 3 of your Miracle dice. For each discarded, you can select one ADEPTA SORORITAS unit from your army. Until the start of your next Command phase, that unit is Righteous. While a unit is Righteous:Add 1\" to the Move characteristic of models in that unit.Improve the Leadership characteristic of models in that unit by 1.Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by BATTLE SISTERS SQUAD, CELESTIAN SACRESANTS and PARAGON WARSUITS models in that unit by 1.KeywordsWhile a CELESTIAN SACRESANTS unit from your army is not Battle-shocked, add 1 to the Objective Control characteristic of Celestian Sacresants models in that unit.",
+        "description": "In your Command phase, you can select up to 3 ADEPTA SORORITAS units from your army (including units that are embarked within TRANSPORTS), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:Add 1\" to the Move characteristic of models in that unit.Improve the Leadership characteristic of models in that unit by 1.Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by BATTLE SISTERS SQUAD, CELESTIAN SACRESANTS and PARAGON WARSUITS models in that unit by 1.KeywordsWhile a CELESTIAN SACRESANTS unit from your army is not Battle-shocked, add 1 to the Objective Control characteristic of Celestian Sacresants models in that unit.",
         "detachment": "Champions of Faith",
         "": ""
     },
@@ -729,12 +729,12 @@
         "": ""
     },
     {
-        "id": "000008398",
-        "faction_id": "DG",
-        "name": "Spread the Sickness",
-        "legend": "To the Death Guard, spreading Nurgle's gifts goes beyond the beings they fight - even the landscapes they tread upon they seek to corrupt, cultivating Nurgle's garden as widely as possible.",
-        "description": "During the Declare Battle Formations step, select one of the Sicknesses below. Until the end of the battle, all units from your army with the Nurgle's Gift ability gain the selected Sickness.Skullsquirm Blight: While an enemy unit is within Contagion Range of this unit, worsen the Ballistic Skill and Weapon Skill characteristics of weapons equipped by models in that enemy unit by 1.Rattlejoint Ague: While an enemy unit is within Contagion Range of this unit, worsen the Save characteristic of models in that enemy unit by 1.Scabrous Soulrot: While an enemy unit is within Contagion Range of this unit, worsen the Leadership and Objective Control characteristics of models in that enemy unit by 1 (to a minimum of 1).If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army is within range of that objective marker, that objective marker is said to be Infected and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. In addition, while an objective marker is Infected and under your control, it has the Nurgle's Gift ability as if it were a unit from your army (so enemy units within Contagion Range of it will have their characteristics modified).",
-        "detachment": "Plague Company",
+        "id": "000010150",
+        "faction_id": "CSM",
+        "name": "Empyric Wellspring",
+        "legend": "The sorcerous powers wielded by a cabal inevitably draw the eyes of the Dark Gods and flood the battlefield with supernatural energies, further enhancing the warp-gifts of their fellow Chaos Space Marines.",
+        "description": "Each time a unit from your army makes a Dark Pact, select one of the following abilities. Your unit has that ability until the end of the phase.Leaping WarpflameWhile this unit is within 9\" of one or more friendly HERETIC ASTARTES PSYKER models, improve the Strength characteristic of ranged weapons equipped by models in this unit by 1.Monstrous ManifestationWhile this unit is within 9\" of one or more friendly HERETIC ASTARTES DAEMON PRINCE or a HERETIC ASTARTES DAEMON PRINCE WITH WINGS models, improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1.",
+        "detachment": "Cabal of Chaos",
         "": ""
     },
     {
@@ -750,7 +750,7 @@
         "id": "000009407",
         "faction_id": "DG",
         "name": "Relentless Spread",
-        "legend": "Like a virus seeking fresh hosts, the unclean worshippers of the Plague God spill through the ships corridors on the hunt for untainted souls.",
+        "legend": "Like a virus seeking fresh hosts, the unclean worshippers of the Plague God spill through the ship's corridors on the hunt for untainted souls.",
         "description": "Each time a DEATH GUARD unit from your army makes a Consolidation move:It can move up to D3+3\" instead of up to 3\".If it cannot end that move within Engagement Range of one or more enemy units that are visible to it (and in Unit Coherency), it can still make that Consolidation move, and when doing so can move in any direction.",
         "detachment": "Unclean Uprising",
         "": ""
@@ -771,6 +771,60 @@
         "legend": "A cloud of winged insects descends over Mortarion's pathogenic sons, obscuring their malodorous ranks and shielding them from the eyes and augurs of the enemy. Beneath thrumming storms of fat-bodied flies, Plague Marines stride towards their wavering foes until they are close enough to unleash punishing volleys of killing fire.",
         "description": "DEATH GUARD INFANTRY units (excluding POXWALKERS units) from your army that are not embarked within a TRANSPORT have the Scouts 5\" and Stealth abilities.",
         "detachment": "Flyblown Host",
+        "": ""
+    },
+    {
+        "id": "000010122",
+        "faction_id": "DG",
+        "name": "Worldblight",
+        "legend": "As the foul tendrils of the Death Guard quest further across the battlefield, they infest even the most secure, holy and heavily warded sites with supernatural disease. To fight amidst such foulness is a virtual death sentence to the foe, win or lose.",
+        "description": "If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army (excluding Battle-shocked units) is within range of that objective marker, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Nurgle's Gift ability as if it were a DEATH GUARD model from your army.",
+        "detachment": "Virulent Vectorium",
+        "": ""
+    },
+    {
+        "id": "000010126",
+        "faction_id": "DG",
+        "name": "Miasmic Bombardment",
+        "legend": "In the wake of preparatory bombardment by artillery weapons both forbidden and foul, the surviving foe are left reeling amidst clouds of plague smog. With their flesh running like tallow and their weapons rusting in their hands, they will be hard-pressed to fight back.",
+        "description": "At the start of the battle round, select a number of enemy units more than 12\" away from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below.BATTLE SIZEUNITSIncursion1Strike Force2Onslaught3",
+        "detachment": "Mortarion's Hammer",
+        "": ""
+    },
+    {
+        "id": "000010130",
+        "faction_id": "DG",
+        "name": "Manifold Maladies",
+        "legend": "A spirit of competition infects Nurgle's champions when they fight alongside one another. With each vying to outdo the others in virulence, the foes are subjected to a riotous string of nightmarish outbreaks amongst their ranks.",
+        "description": "At the start of the battle round, you can select one of the Plagues listed in Nurgle's Gift. Until the end of the battle, that is your chosen Plague instead of any previously chosen Plague.",
+        "detachment": "Champions of Contagion",
+        "": ""
+    },
+    {
+        "id": "000010134",
+        "faction_id": "DG",
+        "name": "Reverberant Rancidity",
+        "legend": "Reality rings like a struck bell as it rebels against the sheer wrongness of Nurgle's daemons. Borne upon these jarring waves of metaphysical disease, magnified and redoubled with every dolorous peal, the Plague God's myriad infections spread and multiply all the faster.",
+        "description": "While a PLAGUE LEGIONS unit from your army is within 7\" of one or more DEATH GUARD units from your army, that PLAGUE LEGIONS unit has the Nurgle's Gift ability.While a DEATH GUARD unit from your army is within 7\" of one or more PLAGUE LEGIONS units from your army, add 3\" to that DEATH GUARD units Contagion Range.PLAGUE LEGIONSYou can include PLAGUE LEGIONS units in your army, even though they do not have the DEATH GUARD Faction keyword. The combined points cost of such units you can include in your army is:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo PLAGUE LEGIONS models from your army can be your WARLORD.",
+        "detachment": "Tallyband Summoners",
+        "": ""
+    },
+    {
+        "id": "000010138",
+        "faction_id": "DG",
+        "name": "Numberless Horde",
+        "legend": "No matter how many Poxwalkers the enemy gun down or tear limb-from-limb at close quarters, more groaning mutants keep coming from every side.",
+        "description": "In your Command phase in each of the following battle rounds, depending on your chosen battle size, add a new POXWALKERS unit with a Starting Strength of 10 to your army, in Strategic Reserves.BATTLE SIZEBATTLE ROUNDSIncursion2,3Strike Force2, 3, 4Onslaught2, 3, 4, 5KEYWORDSPOXWALKERS units from your army gain the BATTLELINE keyword.",
+        "detachment": "Shamblerot Vectorium",
+        "": ""
+    },
+    {
+        "id": "000010142",
+        "faction_id": "DG",
+        "name": "Deadly Vectors",
+        "legend": "The plagues and parasites to which these elite warriors play host are amongst the most lethal in the galaxy. Moment by moment, even the most resilient foes sicken and wither in their presence until all that remains is rotted matter deliquescing sloppily from mouldering bones.",
+        "description": "In your opponent's Command phase, roll 2D6 for each Afflicted enemy unit, subtracting 1 from the result if that unit is Below Half-strength. If the result is 6 or less, that enemy unit suffers D3 mortal wounds.",
+        "detachment": "Death Lord's Chosen",
         "": ""
     },
     {
@@ -832,7 +886,7 @@
         "faction_id": "DRU",
         "name": "Callous Competition",
         "legend": "In this saedath, the Harlequins embody the Reaper, whilst their Drukhari companions are mortal killers.",
-        "description": "At the start of the battle, DRUKHARI units from your army are winning the wager.Each time a DRUKHARI unit from your army destroys an enemy unit, DRUKHARI units from your army are winning the wager.Each time a HARLEQUINS unit from your army destroys an enemy unit, HARLEQUIN units from your army are winning the wager.While DRUKHARI units from your army are winning the wager, HARLEQUIN units from your army are losing the wager, and vice versa.Each time a DRUKHARI or HARLEQUINS model from your army makes an attack, if that model's unit is losing the wager, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.HARLEQUINSYou can include HARLEQUINS units in your army (see Index: Aeldari). The combined points cost of such units depends on your battle size:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo HARLEQUINS models from your army can be your WARLORD.",
+        "description": "At the start of the battle, DRUKHARI units from your army are winning the wager.Each time a DRUKHARI unit from your army destroys an enemy unit, DRUKHARI units from your army are winning the wager.Each time a HARLEQUINS unit from your army destroys an enemy unit, HARLEQUIN units from your army are winning the wager.While DRUKHARI units from your army are winning the wager, HARLEQUIN units from your army are losing the wager, and vice versa.Each time a DRUKHARI or HARLEQUINS model from your army makes an attack, if that model's unit is winning the wager, re-roll a Hit roll of 1. If that model's unit is losing the wager, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 instead.HARLEQUINSYou can include HARLEQUINS units in your army (see Index: Aeldari). The combined points cost of such units depends on your battle size:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo HARLEQUINS models from your army can be your WARLORD.",
         "detachment": "Reaper's Wager",
         "": ""
     },
@@ -1030,7 +1084,7 @@
         "faction_id": "GK",
         "name": "Hallowed Ground",
         "legend": "Purging corrupted nodes of Warp energy, the Grey Knights establish an ever-expanding area of hallowed ground within which their psychic powers and indomitable resolve are greatly enhanced.",
-        "description": "Certain areas of the battlefield are within your army's Hallowed Ground, as follows:Your deployment zone is always within your army's Hallowed Ground.The area of the battlefield within 6\" of one or more PURIFIER SQUAD units from your army is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within No Man's Land, until the end of that phase, No Man's Land is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within your opponent's deployment zone, until the end of that phase, your opponent's deployment zone is within your army's Hallowed Ground.Each time a model in a GREY KNIGHTS unit from your army makes an attack that targets visible target, re-roll a Hit roll of 1. If that unit is a PURIFIER SQUAD and/or is wholly within your army's Hallowed Ground, you can re-roll the Hit roll instead.",
+        "description": "Certain areas of the battlefield are within your army's Hallowed Ground, as follows:Your deployment zone is always within your army's Hallowed Ground.The area of the battlefield within 6\" of one or more PURIFIER SQUAD units from your army is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within No Man's Land, until the end of that phase, No Man's Land is within your army's Hallowed Ground.At the start of any phase, if you control at least half of the objective markers within your opponent's deployment zone, until the end of that phase, your opponent's deployment zone is within your army's Hallowed Ground.Each time a model in a GREY KNIGHTS unit from your army makes a ranged attack that targets a visible target or makes a melee attack, re-roll a Hit roll of 1. If that unit is a PURIFIER SQUAD and/or is wholly within your army's Hallowed Ground, you can re-roll the Hit roll instead.",
         "detachment": "Warpbane Task Force",
         "": ""
     },
@@ -1174,7 +1228,7 @@
         "faction_id": "ORK",
         "name": "Adrenaline Junkies",
         "legend": "If there is one thing Speed Freeks love more than racing full tilt towards the enemy, smashing into them and pulling hair pin turns to do it all again, it is loosing incredible amounts of noisy, chugging dakka as they do so.",
-        "description": "SPEED FREEKS units from your army are eligible to shoot in a turn in which they Advanced or Fell Back.",
+        "description": "SPEED FREEKS units from your army are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back.",
         "detachment": "Kult of Speed",
         "": ""
     },
@@ -1494,11 +1548,20 @@
         "": ""
     },
     {
+        "id": "000010154",
+        "faction_id": "SM",
+        "name": "Dutiful Tenacity",
+        "legend": "Even amongst the Adeptus Astartes, the battle-brothers of the Dark Angels are renowned for their tenacity and resilience on the battlefield. When ordered to war, they are utterly relentless in pursuing their objectives, wading into fields of withering fire and shrugging off blows that would slay mortal warriors outright.",
+        "description": "Each time an attack targets an ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+        "detachment": "Wrath of the Rock",
+        "": ""
+    },
+    {
         "id": "000008441",
         "faction_id": "TAU",
         "name": "Patient Hunter",
         "legend": "The tactical philosophy known as the Kauyon allows for T'au commanders to draw the enemy into a deadly trap, springing it at the perfect moment to deliver a storm of fatal strikes against which none can escape.",
-        "description": "From the third battle round onwards, all ranged weapons equipped by T'AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability, or the [SUSTAINED HITS 2] ability instead while targeting their unit's Spotted unit.",
+        "description": "From the third battle round onwards, ranged weapons equipped by T'AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. In addition, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack's Ballistic skill characteristics and/or all modifiers to the Hit roll.",
         "detachment": "Kauyon",
         "": ""
     },
@@ -1725,6 +1788,15 @@
         "legend": "Tyranid Warriors are adapted to shepherd the hive fleet's teeming swarms to war. Benefiting from heightened senses, hardened forms and great strength, they serve as ferocious beacons for and enforcers of the Hive Mind's indomitable will.",
         "description": "TYRANID WARRIORS (see below) and WINGED TYRANID PRIME units from your army have a 5+ invulnerable save.KEYWORDSTYRANID WARRIORS WITH RANGED BIO-WEAPONS and TYRANID WARRIORS WITH MELEE BIO-WEAPONS units from your army gain the TYRANID WARRIORS and BATTLELINE keywords, and while such a unit is not Battle-shocked, TYRANID WARRIORS models in that unit have an Objective Control characteristic of 3.",
         "detachment": "Warrior Bioform Onslaught",
+        "": ""
+    },
+    {
+        "id": "000010146",
+        "faction_id": "TYR",
+        "name": "Surprise Assault",
+        "legend": "Burrowing Tyranid bioforms burst from the ground in all their horror.",
+        "description": "Each time a TYRANIDS model from your army makes an attack, re-roll a Hit roll of 1.Each time a BURROWER unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units.In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units.If an enemy model (excluding AIRCRAFT) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.KEYWORDSMAWLOC and TRYGON units from your army have the BURROWER keyword.In the Muster Armies step, you can select up to 2 TRYGON models from your army. The selected units gain the CHARACTER keyword.Designer's Note: This means that the selected models can be given Enhancements and one of them can be selected as your WARLORD.",
+        "detachment": "Subterranean Assault",
         "": ""
     },
     {

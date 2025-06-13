@@ -2852,7 +2852,7 @@
         "datasheet_id": "000000482",
         "line": "1",
         "button": "\u2022",
-        "description": "All models in this unit can each have their thoracic bio-weapon replaced with 1 armoured thorax.",
+        "description": "None",
         "": ""
     },
     {
@@ -6769,136 +6769,59 @@
         "": ""
     },
     {
-        "datasheet_id": "000001037",
-        "line": "1",
-        "button": "\u2022",
-        "description": "This model's plague bolt pistol can be replaced with one of the following:1 combi-weapon1 plague combi-bolter1 plague fist1 plague-encrusted exalted weapon1 plasma pistol",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001037",
-        "line": "2",
-        "button": "\u2022",
-        "description": "This model's Astartes chainsword can be replaced with one of the following:1 plague fist1 plague-encrusted exalted weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001037",
-        "line": "3",
-        "button": "\u2022",
-        "description": "This model's plague bolt pistol and Astartes chainsword can be replaced with 1 twin lighting claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "1",
-        "button": "\u2022",
-        "description": "This model's plague combi-bolter can be replaced with one of the following:1 combi-weapon1 plague-encrusted exalted weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "2",
-        "button": "\u2022",
-        "description": "This model's plague-encrusted exalted weapon can be replaced with one of the following:1 chainfist1 plague fist",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "3",
-        "button": "\u2022",
-        "description": "This model's plague combi-bolter and plague-encrusted exalted weapon can be replaced with 1 twin lighting claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "1",
-        "button": "\u2022",
-        "description": "This model's plague combi-bolter can be replaced with one of the following:1 combi-weapon1 plague-encrusted exalted weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "2",
-        "button": "\u2022",
-        "description": "This model's force weapon can be replaced with one of the following:1 chainfist1 plague fist1 plague-encrusted exalted weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "3",
-        "button": "\u2022",
-        "description": "This model's plague combi-bolter and force weapon can be replaced with 1 twin lighting claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001043",
-        "line": "1",
-        "button": "\u2022",
-        "description": "For every 10 models in the unit, 1 Death Guard Cultist's Cultist firearm can be replaced with 1 flamer.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001043",
-        "line": "2",
-        "button": "\u2022",
-        "description": "For every 10 models in the unit, 1 Death Guard Cultist's Cultist firearm can be replaced with 1 heavy stubber.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001043",
-        "line": "3",
-        "button": "\u2022",
-        "description": "For every 10 models in the unit, 1 Death Guard Cultist's Cultist firearm can be replaced with 1 grenade launcher.",
-        "": ""
-    },
-    {
         "datasheet_id": "000001044",
         "line": "1",
         "button": "\u2022",
-        "description": "The Plague Champion's plague boltgun can be replaced with one of the following:1 plague bolt pistol1 plasma gun1 plasma pistol",
+        "description": "The Plague Champion's boltgun can be replaced with one of the following:1 bolt pistol1 plasma gun1 plasma pistol",
         "": ""
     },
     {
         "datasheet_id": "000001044",
         "line": "2",
         "button": "\u2022",
-        "description": "The Plague Champion's plague knives can be replaced with one of the following:1 bubotic weapons1 heavy plague weapon",
+        "description": "The Plague Champion's plague knives can be replaced with one of the following:1 bubotic weapons1 power fist",
         "": ""
     },
     {
         "datasheet_id": "000001044",
         "line": "3",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Plague Marine's plague boltgun can be replaced with 1 blight launcher.",
+        "description": "For every 5 models in this unit, 1 Plague Marine's boltgun can be replaced with 1 blight launcher.",
         "": ""
     },
     {
         "datasheet_id": "000001044",
         "line": "4",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Plague Marine's plague boltgun can be replaced with 1 plague spewer.",
+        "description": "For every 5 models in this unit, 1 Plague Marine's boltgun can be replaced with 1 plague spewer.",
         "": ""
     },
     {
         "datasheet_id": "000001044",
         "line": "5",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Plague Marine's plague boltgun can be replaced with one of the following:1 meltagun1 plague belcher1 plasma gun",
+        "description": "For every 5 models in this unit, 1 Plague Marine's boltgun can be replaced with one of the following:1 meltagun1 plague belcher1 plasma gun",
         "": ""
     },
     {
         "datasheet_id": "000001044",
         "line": "6",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their plague boltgun replaced with 1 bubotic weapons.",
+        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 bubotic weapons.",
         "": ""
     },
     {
         "datasheet_id": "000001044",
         "line": "7",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their plague boltgun replaced with 1 heavy plague weapon.",
+        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 heavy plague weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001044",
+        "line": "8",
+        "button": "\u2022",
+        "description": "One Plague Marine equipped with a boltgun can be equipped with 1 icon of despair. This model's boltgun cannot be replaced.",
         "": ""
     },
     {
@@ -6912,49 +6835,56 @@
         "datasheet_id": "000001046",
         "line": "1",
         "button": "\u2022",
-        "description": "This model's multi-melta can be replaced with one of the following:1 Helbrute plasma cannon1 twin autocannon1 twin lascannon1 twin plague heavy bolter1 Helbrute fist",
+        "description": "This model's multi-melta can be replaced with one of the following:1 plasma cannon1 twin autocannon1 twin lascannon1 twin heavy bolter1 additional Helbrute fist",
         "": ""
     },
     {
         "datasheet_id": "000001046",
         "line": "2",
         "button": "\u2022",
-        "description": "This model's missile launcher can be replaced with one of the following:1 Helbrute fist1 Helbrute hammer1 power scourge",
+        "description": "1 of this model's Helbrute fists can be replaced with 1 missile launcher",
         "": ""
     },
     {
         "datasheet_id": "000001046",
         "line": "3",
         "button": "\u2022",
-        "description": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:1 plague combi-bolter1 heavy flamer",
+        "description": "1 of this model's Helbrute fists can be replaced with one of the following:1 Helbrute hammer1 power scourge",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001046",
+        "line": "4",
+        "button": "\u2022",
+        "description": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:1 combi-bolter*1 heavy flamer*",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001046",
+        "line": "5",
+        "button": "*",
+        "description": "* That Helbrute fist cannot then be replaced.",
         "": ""
     },
     {
         "datasheet_id": "000001047",
         "line": "1",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:1 combi-weapon1 additional plague combi-bolter",
+        "description": "This model can be equipped with one of the following:1 additional combi-bolter1 combi-weapon",
         "": ""
     },
     {
         "datasheet_id": "000001047",
         "line": "2",
         "button": "\u2022",
-        "description": "This model can be equipped with 1 havoc launcher.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001048",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
+        "description": "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.",
         "": ""
     },
     {
         "datasheet_id": "000001049",
         "line": "1",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:1 combi-weapon1 plague combi-bolter",
+        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
         "": ""
     },
     {
@@ -6968,14 +6898,14 @@
         "datasheet_id": "000001050",
         "line": "1",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:2 lascannons2 plague heavy bolters",
+        "description": "This model can be equipped with one of the following:2 lascannons2 heavy bolters",
         "": ""
     },
     {
         "datasheet_id": "000001050",
         "line": "2",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:1 combi-weapon1 plague combi-bolter",
+        "description": "This model can be equipped with one of the following:1 combi-weapon1 combi-bolter",
         "": ""
     },
     {
@@ -6996,63 +6926,21 @@
         "datasheet_id": "000001051",
         "line": "2",
         "button": "\u2022",
-        "description": "This model's reaper autocannon can be replaced with one of the following:1 twin lascannon1 twin plague heavy bolter",
+        "description": "This model's reaper autocannon can be replaced with one of the following:1 twin heavy bolter1 twin lascannon",
         "": ""
     },
     {
         "datasheet_id": "000001051",
         "line": "3",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:1 combi-weapon1 plague combi-bolter",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001052",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001053",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001054",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001055",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001056",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
+        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
         "": ""
     },
     {
         "datasheet_id": "000001057",
         "line": "1",
         "button": "\u2022",
-        "description": "This model's fleshmower can be replaced with one of the following:1 heavy blight launcher2 plaguespitters",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001058",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
+        "description": "This model's fleshmower can be replaced with 2 plaguespitters.",
         "": ""
     },
     {
@@ -8197,34 +8085,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000001367",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001368",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001369",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001370",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000001371",
         "line": "1",
         "button": "\u2022",
@@ -8232,17 +8092,52 @@
         "": ""
     },
     {
-        "datasheet_id": "000001372",
-        "line": "1",
+        "datasheet_id": "000001371",
+        "line": "2",
         "button": "\u2022",
-        "description": "For every 5 models in this unit:Up to 3 models' plague combi-bolters can each be replaced with 1 combi-weapon.1 Blightlord Terminator's plague combi-bolter can be replaced with one of the following: 1 blight launcher; 1 reaper autocannon.1 Blightlord Terminator's plague combi-bolter can be replaced with 1 plague spewer.1 Blightlord Terminator's plague combi-bolter and bubotic blade can be replaced with 1 flail of corruption.",
+        "description": "The Deathshroud Champion can be equipped with 1 icon of despair.",
         "": ""
     },
     {
-        "datasheet_id": "000001374",
+        "datasheet_id": "000001372",
         "line": "1",
         "button": "\u2022",
-        "description": "None",
+        "description": "For every 5 models in this unit, up to 3 models' combi-bolters can each be replaced with 1 combi-weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001372",
+        "line": "2",
+        "button": "\u2022",
+        "description": "For every 5 models in this unit, 1 Blightlord Terminator's combi-bolter and bubotic blade can be replaced with 1 flail of corruption.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001372",
+        "line": "3",
+        "button": "\u2022",
+        "description": "For every 5 models in this unit, 1 Blightlord Terminator's combi-bolter can be replaced with 1 blight launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001372",
+        "line": "4",
+        "button": "\u2022",
+        "description": "For every 5 models in this unit, 1 Blightlord Terminator's combi-bolter can be replaced with 1 reaper autocannon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001372",
+        "line": "5",
+        "button": "\u2022",
+        "description": "For every 5 models in this unit, 1 Blightlord Terminator's combi-bolter can be replaced with 1 plague spewer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001372",
+        "line": "6",
+        "button": "\u2022",
+        "description": "If this unit contains only 3 models, 1 Blightlord Terminator's combi-bolter and bubotic blade can be replaced with 1 plague spewer and 1 close combat weapon.",
         "": ""
     },
     {
@@ -8257,13 +8152,6 @@
         "line": "2",
         "button": "\u2022",
         "description": "This model's heavy slugger can be replaced with 1 rothail volley gun.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001377",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
         "": ""
     },
     {
@@ -9926,24 +9814,17 @@
         "": ""
     },
     {
-        "datasheet_id": "000002460",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000002461",
         "line": "1",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:2 lascannons2 plague heavy bolters",
+        "description": "This model can be equipped with one of the following:2 heavy bolters2 lascannons",
         "": ""
     },
     {
         "datasheet_id": "000002461",
         "line": "2",
         "button": "\u2022",
-        "description": "This model can be equipped with one of the following:1 combi-weapon1 plague combi-bolter",
+        "description": "This model can be equipped with one of the following:1 combi-bolter1 combi-weapon",
         "": ""
     },
     {
@@ -9951,13 +9832,6 @@
         "line": "3",
         "button": "\u2022",
         "description": "This model can be equipped with 1 havoc launcher.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002462",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
         "": ""
     },
     {
@@ -10279,7 +10153,7 @@
         "datasheet_id": "000002535",
         "line": "1",
         "button": "\u2022",
-        "description": "This model's shuriken pistol can be replaced with 1 neuro disruptor; flip belt.",
+        "description": "This model's shuriken pistol can be replaced with 1 neuro disruptor.",
         "": ""
     },
     {
@@ -12159,20 +12033,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000002749",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002750",
-        "line": "1",
-        "button": "\u2022",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000002754",
         "line": "1",
         "button": "\u2022",
@@ -13030,49 +12890,56 @@
         "datasheet_id": "000003584",
         "line": "1",
         "button": "\u2022",
-        "description": "The Plague Champion's plague boltgun can be replaced with one of the following:1 plague bolt pistol1 plasma gun1 plasma pistol",
+        "description": "The Plague Champion's boltgun can be replaced with one of the following:1 bolt pistol1 plasma gun1 plasma pistol",
         "": ""
     },
     {
         "datasheet_id": "000003584",
         "line": "2",
         "button": "\u2022",
-        "description": "The Plague Champion's plague knives can be replaced with one of the following:1 bubotic weapons1 heavy plague weapon",
+        "description": "The Plague Champion's plague knives can be replaced with one of the following:1 bubotic weapons1 power fist",
         "": ""
     },
     {
         "datasheet_id": "000003584",
         "line": "3",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Plague Marine's plague boltgun can be replaced with 1 blight launcher.",
+        "description": "For every 5 models in this unit, 1 Plague Marine's boltgun can be replaced with 1 blight launcher.",
         "": ""
     },
     {
         "datasheet_id": "000003584",
         "line": "4",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Plague Marine's plague boltgun can be replaced with 1 plague spewer.",
+        "description": "For every 5 models in this unit, 1 Plague Marine's boltgun can be replaced with 1 plague spewer.",
         "": ""
     },
     {
         "datasheet_id": "000003584",
         "line": "5",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, 1 Plague Marine's plague boltgun can be replaced with one of the following:1 meltagun1 plague belcher1 plasma gun",
+        "description": "For every 5 models in this unit, 1 Plague Marine's boltgun can be replaced with one of the following:1 meltagun1 plague belcher1 plasma gun",
         "": ""
     },
     {
         "datasheet_id": "000003584",
         "line": "6",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their plague boltgun replaced with 1 bubotic weapons.",
+        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 bubotic weapons.",
         "": ""
     },
     {
         "datasheet_id": "000003584",
         "line": "7",
         "button": "\u2022",
-        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their plague boltgun replaced with 1 heavy plague weapon.",
+        "description": "For every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 heavy plague weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000003584",
+        "line": "8",
+        "button": "\u2022",
+        "description": "One Plague Marine equipped with a boltgun can be equipped with 1 icon of despair. This model's boltgun cannot be replaced.",
         "": ""
     },
     {
@@ -16138,7 +16005,7 @@
         "datasheet_id": "000003886",
         "line": "1",
         "button": "\u2022",
-        "description": "All models in this unit can each have their thoracic bio-weapon replaced with 1 armoured thorax.",
+        "description": "None",
         "": ""
     },
     {
@@ -16460,7 +16327,7 @@
         "datasheet_id": "000003924",
         "line": "1",
         "button": "\u2022",
-        "description": "This model's shuriken pistol can be replaced with 1 neuro disruptor; flip belt.",
+        "description": "This model's shuriken pistol can be replaced with 1 neuro disruptor.",
         "": ""
     },
     {
@@ -19191,6 +19058,62 @@
         "line": "1",
         "button": "\u2022",
         "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "1",
+        "button": "\u2022",
+        "description": "This model's plague flail can be replaced with 1 bileblade.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "2",
+        "button": "\u2022",
+        "description": "This model's bilesword can be replaced with 1 doomsday bell.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Plaguebearer that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Plaguebearer that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Plague Drone that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "2",
+        "button": "\u2022",
+        "description": "1 Plague Drone that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "1",
+        "button": "\u2022",
+        "description": "1 Combat Servitor model can have its 1 phosphor blaster replaced with 1 meltagun.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "2",
+        "button": "\u2022",
+        "description": "Up to 3 Combat Servitor models can each have their 1 phosphor blaster replaced with 1 incendine igniter.",
         "": ""
     }
 ]

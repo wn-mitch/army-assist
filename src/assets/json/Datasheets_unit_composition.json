@@ -1946,7 +1946,7 @@
     {
         "datasheet_id": "000000482",
         "line": "1",
-        "description": "3-6 Raveners",
+        "description": "5 Raveners",
         "": ""
     },
     {
@@ -4482,36 +4482,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000001037",
-        "line": "1",
-        "description": "1 Death Guard Chaos Lord",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "1",
-        "description": "1 Death Guard Chaos Lord in Terminator Armour",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "1",
-        "description": "1 Death Guard Sorcerer in Terminator Armour",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001043",
-        "line": "1",
-        "description": "1 Death Guard Cultist Champion",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001043",
-        "line": "2",
-        "description": "9-19 Death Guard Cultists",
-        "": ""
-    },
-    {
         "datasheet_id": "000001044",
         "line": "1",
         "description": "1 Plague Champion",
@@ -4538,13 +4508,13 @@
     {
         "datasheet_id": "000001046",
         "line": "1",
-        "description": "1 Death Guard Helbrute",
+        "description": "1 Helbrute",
         "": ""
     },
     {
         "datasheet_id": "000001047",
         "line": "1",
-        "description": "1 Death Guard Rhino",
+        "description": "1 Chaos Rhino",
         "": ""
     },
     {
@@ -4556,25 +4526,25 @@
     {
         "datasheet_id": "000001049",
         "line": "1",
-        "description": "1 Death Guard Land Raider",
+        "description": "1 Chaos Land Raider",
         "": ""
     },
     {
         "datasheet_id": "000001050",
         "line": "1",
-        "description": "1 Death Guard Predator Annihilator",
+        "description": "1 Chaos Predator Annihilator",
         "": ""
     },
     {
         "datasheet_id": "000001051",
         "line": "1",
-        "description": "1 Death Guard Defiler",
+        "description": "1 Defiler",
         "": ""
     },
     {
         "datasheet_id": "000001052",
         "line": "1",
-        "description": "1 Death Guard Daemon Prince",
+        "description": "1 Daemon Prince of Nurgle",
         "": ""
     },
     {
@@ -4802,7 +4772,7 @@
     {
         "datasheet_id": "000001133",
         "line": "1",
-        "description": "3-9 Nurgling Swarms",
+        "description": "3-6 Nurgling Swarms",
         "": ""
     },
     {
@@ -5432,7 +5402,7 @@
     {
         "datasheet_id": "000001374",
         "line": "1",
-        "description": "1-3 Myphitic Blight-hulers",
+        "description": "1-2 Myphitic Blight-hulers",
         "": ""
     },
     {
@@ -6842,7 +6812,7 @@
     {
         "datasheet_id": "000002461",
         "line": "1",
-        "description": "1 Death Guard Predator Destructor",
+        "description": "1 Chaos Predator Destructor",
         "": ""
     },
     {
@@ -8372,13 +8342,13 @@
     {
         "datasheet_id": "000002749",
         "line": "1",
-        "description": "1 Death Guard Daemon Prince with Wings",
+        "description": "1 Daemon Prince of Nurgle with Wings",
         "": ""
     },
     {
         "datasheet_id": "000002750",
         "line": "1",
-        "description": "1 Death Guard Icon Bearer",
+        "description": "1 Icon Bearer",
         "": ""
     },
     {
@@ -10436,7 +10406,7 @@
     {
         "datasheet_id": "000003886",
         "line": "1",
-        "description": "3-6 Raveners",
+        "description": "5 Raveners",
         "": ""
     },
     {
@@ -12171,6 +12141,108 @@
         "datasheet_id": "000004108",
         "line": "2",
         "description": "4-9 Flesh Hounds",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004109",
+        "line": "1",
+        "description": "1 Lord of Poxes",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004110",
+        "line": "1",
+        "description": "1 Foetid Bloat-drone",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004111",
+        "line": "1",
+        "description": "1 Rotigus - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "1",
+        "description": "1 Great Unclean One",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "1",
+        "description": "1 Plagueridden",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "2",
+        "description": "9 Plaguebearers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "1",
+        "description": "1 Plaguebringer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "2",
+        "description": "2-5 Plague Drones",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004115",
+        "line": "1",
+        "description": "1-2 Beasts of Nurgle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004116",
+        "line": "1",
+        "description": "3-6 Nurgling Swarms",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "1",
+        "description": "1 Ravener Prime",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "2",
+        "description": "4 Raveners",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "1",
+        "description": "1 Ravener Prime",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "2",
+        "description": "4 Raveners",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "1",
+        "description": "1 Servitor Underseer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "2",
+        "description": "2 Gun Servitors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "3",
+        "description": "6 Combat Servitors",
         "": ""
     }
 ]

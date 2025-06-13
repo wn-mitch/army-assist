@@ -60,6 +60,9 @@ const applyNameOverrides = (unit: ListUnit) => {
     case "Gaunt’s Ghosts":
       unit.name = "Gaunt's Ghosts";
       break;
+    case "Myphitic Blight-hauler":
+      unit.name = "Myphitic Blight-haulers";
+      break;
   }
 
   return unit;

@@ -1036,7 +1036,7 @@
         "ability_id": "",
         "model": "",
         "name": "Bomb Squigs",
-        "description": "Twice per battle, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.Designer's Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
+        "description": "Once per battle, for each bomb squig this unit has, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.Designer's Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -1298,8 +1298,8 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Bomb Squig",
-        "description": "Once per battle, after this unit ends a Normal  move, select one enemy unit within 12\" of this unit and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds. Designer's Note: Place a Bomb Squig token next to the unit, removing it when this unit uses this ability",
+        "name": "Bomb Squigs",
+        "description": "Once per battle, for each bomb squig this unit has, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.Designer's Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
         "type": "Wargear",
         "parameter": "",
         "": "",
@@ -6021,7 +6021,7 @@
         "ability_id": "",
         "model": "",
         "name": "Supreme Strategist",
-        "description": "Once per turn, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+        "description": "Once per battle round, one unit from your army with this ability can use it when a friendly ADEPTUS ASTARTES unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
         "type": "Primarch",
         "parameter": "",
         "": "",
@@ -6522,13 +6522,12 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time this model makes an attack, you can re-roll the Hit roll. While this model is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Command",
-            "Shooting",
             "Fight"
         ]
     },
@@ -7214,7 +7213,7 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -12253,7 +12252,7 @@
         "ability_id": "",
         "model": "",
         "name": "Forward Observers",
-        "description": "Each time this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in their Guided unit that targets their Spotted unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+        "description": "Each time this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in a Guided unit that targets their Spotted unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -12544,12 +12543,13 @@
         "ability_id": "",
         "model": "",
         "name": "Target Uploaded",
-        "description": "Once per turn, when using the Greater Good ability, you can select this unit to be an Observer unit for a second time. When doing so, you can change which enemy unit is this unit's Spotted unit.",
+        "description": "Each time a model in this unit makes an attack that targets their Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and that attack has the [IGNORES COVER] ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -12931,12 +12931,13 @@
         "ability_id": "",
         "model": "",
         "name": "Precise Targeting",
-        "description": "While this model is a Guided unit, each time it makes an attack that targets its Spotted unit, you can re-roll the Hit roll.",
+        "description": "Each time a model in this unit makes an attack that targets a Spotted unit, you can re-roll the Hit roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -14512,7 +14513,7 @@
         "ability_id": "",
         "model": "",
         "name": "Will of the Hive Mind",
-        "description": "Once per turn, one friendly TYRANIDS unit within 12\" of one or more models with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+        "description": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -15500,20 +15501,6 @@
         "": "",
         "phases": [
             "Movement",
-            "Saves"
-        ]
-    },
-    {
-        "datasheet_id": "000000482",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Armoured Thorax",
-        "description": "The bearer has a Save characteristic of 4+.",
-        "type": "Wargear",
-        "parameter": "",
-        "": "",
-        "phases": [
             "Saves"
         ]
     },
@@ -24969,6 +24956,18 @@
     {
         "datasheet_id": "000000719",
         "line": "3",
+        "ability_id": "000008377",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000000719",
+        "line": "4",
         "ability_id": "",
         "model": "",
         "name": "Tempestor Prime",
@@ -24983,7 +24982,7 @@
     },
     {
         "datasheet_id": "000000719",
-        "line": "4",
+        "line": "5",
         "ability_id": "",
         "model": "",
         "name": "Medi-pack",
@@ -24997,7 +24996,7 @@
     },
     {
         "datasheet_id": "000000719",
-        "line": "5",
+        "line": "6",
         "ability_id": "",
         "model": "",
         "name": "Regimental Standard",
@@ -25011,7 +25010,7 @@
     },
     {
         "datasheet_id": "000000719",
-        "line": "6",
+        "line": "7",
         "ability_id": "",
         "model": "",
         "name": "Command Rod",
@@ -25025,7 +25024,7 @@
     },
     {
         "datasheet_id": "000000719",
-        "line": "7",
+        "line": "8",
         "ability_id": "",
         "model": "",
         "name": "Master Vox",
@@ -25039,7 +25038,7 @@
     },
     {
         "datasheet_id": "000000719",
-        "line": "8",
+        "line": "9",
         "ability_id": "",
         "model": "",
         "name": "ORDERS",
@@ -27783,6 +27782,18 @@
     {
         "datasheet_id": "000000845",
         "line": "2",
+        "ability_id": "000008382",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000000845",
+        "line": "3",
         "ability_id": "",
         "model": "",
         "name": "Robotic Bodyguard",
@@ -27796,7 +27807,7 @@
     },
     {
         "datasheet_id": "000000845",
-        "line": "3",
+        "line": "4",
         "ability_id": "",
         "model": "",
         "name": "Repulsor Grid",
@@ -27823,6 +27834,18 @@
     {
         "datasheet_id": "000000846",
         "line": "2",
+        "ability_id": "000008382",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000000846",
+        "line": "3",
         "ability_id": "",
         "model": "",
         "name": "Battle Protocols",
@@ -30969,7 +30992,7 @@
         "ability_id": "",
         "model": "",
         "name": "Storm of Retribution",
-        "description": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If such an attack targets an enemy unit that has destroyed one or more ADEPTA SORORITAS units from your army during the battle, you can re-roll the Wound roll instead.",
+        "description": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. If such an attack targets an enemy unit that has destroyed one or more ADEPTA SORORITAS units from your army during the battle, add 1 to the Hit roll and add 1 to the Wound roll instead.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -32795,6 +32818,20 @@
         "line": "5",
         "ability_id": "",
         "model": "",
+        "name": "Lord of Chaos",
+        "description": "While this model is within 3\" of one or more friendly HERETIC ASTARTES INFANTRY units, this model has the Lone Operative ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000000937",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
         "name": "Daemonic Allegiance",
         "description": "When you select this model to include in your army, you must select one of the keywords below. Until the end of the battle, this model has that keyword and the characteristic modifier stated for that keyword below.",
         "type": "Primarch",
@@ -32806,7 +32843,7 @@
     },
     {
         "datasheet_id": "000000937",
-        "line": "6",
+        "line": "7",
         "ability_id": "",
         "model": "",
         "name": "Khorne",
@@ -32820,7 +32857,7 @@
     },
     {
         "datasheet_id": "000000937",
-        "line": "7",
+        "line": "8",
         "ability_id": "",
         "model": "",
         "name": "Tzeentch",
@@ -32834,7 +32871,7 @@
     },
     {
         "datasheet_id": "000000937",
-        "line": "8",
+        "line": "9",
         "ability_id": "",
         "model": "",
         "name": "Nurgle",
@@ -32848,7 +32885,7 @@
     },
     {
         "datasheet_id": "000000937",
-        "line": "9",
+        "line": "10",
         "ability_id": "",
         "model": "",
         "name": "Slaanesh",
@@ -35166,20 +35203,8 @@
         ]
     },
     {
-        "datasheet_id": "000001037",
+        "datasheet_id": "000001044",
         "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001037",
-        "line": "2",
         "ability_id": "000008396",
         "model": "",
         "name": "",
@@ -35190,225 +35215,27 @@
         "phases": []
     },
     {
-        "datasheet_id": "000001037",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Chaos Lord",
-        "description": "While this model is leading a unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001037",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Desiccation Conduit",
-        "description": "While an enemy unit is within Contagion Range of this model, at the end of the turn, roll one D6: on a 4+, that enemy unit suffers D3 mortal wounds.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "1",
-        "ability_id": "000008343",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Movement"
-        ]
-    },
-    {
-        "datasheet_id": "000001038",
+        "datasheet_id": "000001044",
         "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "3",
-        "ability_id": "000008396",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Chaos Lord",
-        "description": "While this model is leading a unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1.",
+        "name": "Infused with the Blessings of Nurgle",
+        "description": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is Afflicted.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001038",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Desiccation Conduit",
-        "description": "While an enemy unit is within Contagion Range of this model, at the end of the turn, roll one D6: on a 4+, that enemy unit suffers D3 mortal wounds.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "1",
-        "ability_id": "000008343",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight",
-            "Movement"
-        ]
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "3",
-        "ability_id": "000008396",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001041",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Putrescent Vitality (Psychic)",
-        "description": "At the start of the Fight phase, you can roll one D6: on a 1, this PSYKER's unit suffers D3 mortal wounds; on a 2+, until the end of the phase, each time an attack is allocated to a model in this PSYKER's unit, subtract 1 from the Damage characteristic of that attack.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Fight",
             "Shooting"
         ]
     },
     {
-        "datasheet_id": "000001041",
-        "line": "5",
+        "datasheet_id": "000001044",
+        "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Pestilent Familiar (Psychic)",
-        "description": "Once per battle, after selecting targets for a Psychic weapon equipped by this model, until the end of the phase, improve the Strength and Damage characteristics of that weapon by 2. Designer's Note: Place a Pestilent Familiar token next to this model, removing it once this ability has been used.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Shooting",
-            "Fight"
-        ]
-    },
-    {
-        "datasheet_id": "000001043",
-        "line": "1",
-        "ability_id": "000008344",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "6\"",
-        "": "",
-        "phases": [
-            "Pregame"
-        ]
-    },
-    {
-        "datasheet_id": "000001043",
-        "line": "2",
-        "ability_id": "000008396",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001044",
-        "line": "1",
-        "ability_id": "000008396",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": "",
-        "phases": []
-    },
-    {
-        "datasheet_id": "000001044",
-        "line": "2",
-        "ability_id": "",
-        "model": "",
-        "name": "Remorseless",
-        "description": "While this unit is within range of an objective marker you control, each time you take a Battle-shock test for this unit, add 1 to that test.",
-        "type": "Datasheet",
+        "name": "Icon of Despair",
+        "description": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+        "type": "Wargear",
         "parameter": "",
         "": "",
         "phases": [
@@ -35503,8 +35330,8 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Infused with the Blessings of Nurgle",
-        "description": "Each time this model is selected to shoot or fight, after it has finished making its attacks, select one enemy unit that was hit by one or more of those attacks. Until the start of your next turn, that enemy unit is always considered to be within Contagion Range of this model.",
+        "name": "Diseased Malice",
+        "description": "Each time this model makes an attack that targets an Afflicted unit, add 1 to the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -35518,22 +35345,8 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Enraged Impact",
-        "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Charge"
-        ]
-    },
-    {
-        "datasheet_id": "000001046",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Helbrute Fists",
-        "description": "If this model is equipped with two Helbrute fists, those weapons have the [TWIN-LINKED] ability.",
+        "name": "Froth-spattered Frenzy",
+        "description": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -35587,18 +35400,34 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Self Repair",
-        "description": "At the start of your Command phase, this model regains 1 lost wound.",
+        "name": "Fire Support",
+        "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Movement",
+            "Shooting"
         ]
     },
     {
         "datasheet_id": "000001048",
         "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "1",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000001048",
+        "line": "2",
         "ability_id": "000008338",
         "model": "",
         "name": "",
@@ -35610,7 +35439,21 @@
     },
     {
         "datasheet_id": "000001048",
-        "line": "2",
+        "line": "3",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6\"",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000001048",
+        "line": "4",
         "ability_id": "000008396",
         "model": "",
         "name": "",
@@ -35622,16 +35465,17 @@
     },
     {
         "datasheet_id": "000001048",
-        "line": "3",
+        "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Regenerating Monstrosities",
-        "description": "At the start of each player's Command phase, one model in this unit regains up to D3 lost wounds.",
+        "name": "Lethal Ichor",
+        "description": "Each time a melee attack is allocated to a model in this unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -35708,8 +35552,8 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Annihilator",
-        "description": "Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.",
+        "name": "Metalophagic Infection",
+        "description": "In your Shooting phase, after this model has shot, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Roll one D6, adding 1 to the result if that unit is Afflicted; on a 5+, that unit suffers D3 mortal wounds.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -35750,12 +35594,26 @@
         "ability_id": "",
         "model": "",
         "name": "Scuttling Walker",
-        "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move over friendly MONSTER and VEHICLE models and terrain features that are 4\" or less in height as if they were not there.",
+        "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly MONSTER and VEHICLE models and terrain features that are 4\" or less in height.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000001051",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Barrage of Filth",
+        "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
         ]
     },
     {
@@ -35790,14 +35648,41 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Grandfather's Blessing (Aura, Psychic)",
-        "description": "While a friendly DEATH GUARD INFANTRY unit is within Contagion Range of this model, models in that unit have the Feel No Pain 6+ ability.",
+        "name": "Death Guard Defenders",
+        "description": "While this model is within 3\" of one or more friendly DEATH GUARD INFANTRY units, this model has the Lone Operative ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000001052",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Fevered Strategist",
+        "description": "Once per battle round, one model from your army with this ability can use it when a friendly DEATH GUARD unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000001052",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Miasma of Pestilence",
+        "description": "While a friendly DEATH GUARD unit is within 6\" of this model, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Shooting",
-            "Fight",
             "Saves"
         ]
     },
@@ -35858,7 +35743,7 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "The Eater Plague (Psychic)",
+        "name": "Eater Plague (Psychic)",
         "description": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this PSYKER (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this PSYKER) and roll one D6: on a 1, this PSYKER's unit suffers D3 mortal wounds; on a 2-5, that enemy unit suffers D6 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
         "type": "Datasheet",
         "parameter": "",
@@ -35912,11 +35797,12 @@
         "ability_id": "",
         "model": "",
         "name": "Vector of Disease",
-        "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Hit roll.",
+        "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] and [LANCE] abilities.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Fight"
         ]
     },
@@ -35925,14 +35811,12 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Abundance of Sickness",
-        "description": "In the Fight phase, each time this model loses a wound, roll one D6: on a 4+, the closest enemy unit within Engagement Range of this model suffers 1 mortal wound.",
+        "name": "Unholy Resilience",
+        "description": "The first time a model with this ability is destroyed in a battle round, roll one D6 at the end of the phase. On a 2+, set that model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining. Each model can only be set up in this way once per battle.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": [
-            "Fight"
-        ]
+        "phases": []
     },
     {
         "datasheet_id": "000001055",
@@ -35964,7 +35848,7 @@
         "ability_id": "",
         "model": "",
         "name": "Gift of Contagion (Psychic)",
-        "description": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this PSYKER and roll one D6: on a 1, this PSYKER's unit suffers D3 mortal wounds; on a 2+, until the start of your next Shooting phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Wound roll.",
+        "description": "While this model is leading a unit, each time a model in that unit makes an attack that targets a unit that is Afflicted, that attack has the [SUSTAINED HITS 1] ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -35979,14 +35863,14 @@
         "ability_id": "",
         "model": "",
         "name": "Pestilent Fallout (Psychic)",
-        "description": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Plague Wind scored a wound against an enemy INFANTRY unit, until the start of your next turn, subtract 2 from that unit's Move characteristic and subtract 2 from Advance and Charge rolls made for that unit.",
+        "description": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks made with its Plague Wind. Until the end of your opponent's next turn, that unit is enfeebled. While a unit is enfeebled, subtract 2\" from the Move characteristic of models in that unit.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Movement",
             "Shooting",
-            "Charge"
+            "Saves"
         ]
     },
     {
@@ -36019,7 +35903,7 @@
         "ability_id": "",
         "model": "",
         "name": "Curse of the Walking Pox",
-        "description": "Each time a model in this unit makes an attack that destroys an enemy model (excluding MONSTER and VEHICLE models), you can return one destroyed Poxwalker model to this unit. While Typhus is leading this unit, enemy models destroyed as a result of TYPHUS' The Eater Plague ability count as enemy models destroyed by an attack made by a model in this unit for the purposes of this ability.",
+        "description": "Each time a POXWALKER model in this unit makes an attack that destroys an enemy model (excluding MONSTER and VEHICLE models), after this unit has resolved its attacks, you can return one destroyed POXWALKER model to this unit.While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUS' Eater Plague ability count as enemy models destroyed by an attack made by a POXWALKER model in this unit for the purposes of this ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -36036,7 +35920,7 @@
         "name": "",
         "description": "",
         "type": "Core",
-        "parameter": "1",
+        "parameter": "D3",
         "": "",
         "phases": [
             "Fight",
@@ -36100,7 +35984,7 @@
         "ability_id": "",
         "model": "",
         "name": "Sickening Vitality",
-        "description": "While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit.",
+        "description": "While this model is leading a unit, add 1\" to the Move characteristic of models in that unit and you can re-roll Advance and Charge rolls made for that unit.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -36114,15 +35998,14 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "The Bell Tolls",
-        "description": "While an enemy unit is within Contagion Range of this model, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 2 from that test.",
+        "name": "Tocsin of Misery",
+        "description": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 9\" of this model, that enemy unit must take a Battle-shock test, subtracting 1 from that test if it is a PSYKER unit.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Command",
-            "Shooting",
-            "Fight"
+            "Saves"
         ]
     },
     {
@@ -43042,14 +42925,26 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Putrefying Stink",
-        "description": "While this model is leading a unit, models in that unit have the Fights First ability.",
+        "name": "Blinding Spray",
+        "description": "In the Fight phase, you can select one model from your army with this ability to use this ability. If you do, until the end of the phase, that model's unit has the Fights First ability. Each model can only be selected for this ability once per battle.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Fight"
         ]
+    },
+    {
+        "datasheet_id": "000001367",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Putrefying Stink",
+        "description": "Enemy models cannot start or end an Advance move within 9\" of this model.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": []
     },
     {
         "datasheet_id": "000001368",
@@ -43110,13 +43005,15 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Explosive Maladies",
-        "description": "Once per battle round, you can target one unit from your army with this ability with the Grenade Stratagem for 0CP.",
+        "name": "Extraction of Fresh Disease",
+        "description": "The first time this model's unit destroys an enemy unit as the result of a melee attack, until the end of the battle, add 6 to the Objective Control characteristic of this model.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -43162,13 +43059,14 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Diseased Healing",
-        "description": "At the end of your Movement phase, you can select one friendly DEATH GUARD INFANTRY CHARACTER model within 3\" of this model. That model regains up to 3 lost wounds. Each model can only be selected for this ability once per turn.",
+        "name": "Inflamed Infections",
+        "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time this model makes an attack that targets that unit, an unmodified Hit roll of 5+ scores a Critical Hit. If that unit is Below Half-strength, an unmodified Hit roll of 4+ scores a Critical Hit instead.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Movement"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -43201,7 +43099,7 @@
         "ability_id": "",
         "model": "",
         "name": "Malicious Calculations",
-        "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.",
+        "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack's Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -43215,7 +43113,7 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "The Seven-fold Chant",
+        "name": "Sevenfold Chant",
         "description": "In your Command phase, if this model is on the battlefield, roll 2D6: on a 7+, you gain 1CP.",
         "type": "Datasheet",
         "parameter": "",
@@ -43256,12 +43154,40 @@
         "ability_id": "",
         "model": "",
         "name": "Silent Bodyguard",
-        "description": "While a CHARACTER model is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from the Wound roll.",
+        "description": "While a CHARACTER model is leading this unit, that CHARACTER model has the Feel No Pain 4+ ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000001371",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Death Approaches",
+        "description": "In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 9\" horizontally away from all other enemy units.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000001371",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Icon of Despair",
+        "description": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
         ]
     },
     {
@@ -43296,7 +43222,7 @@
         "ability_id": "",
         "model": "",
         "name": "Blistering Fusillade",
-        "description": "Each time a model in this unit makes a ranged attack, if it targets the closest eligible enemy unit, re-roll a Wound roll of 1.",
+        "description": "If this unit has a Starting Strength of 5 or more, or if a CHARACTER is leading this unit, then each time a model in this unit makes a ranged attack that targets an Afflicted unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -43312,7 +43238,7 @@
         "name": "",
         "description": "",
         "type": "Core",
-        "parameter": "1",
+        "parameter": "D3",
         "": "",
         "phases": [
             "Fight",
@@ -43337,12 +43263,13 @@
         "ability_id": "",
         "model": "",
         "name": "Tank Hunters",
-        "description": "Each time a model in this unit makes a ranged attack that targets a VEHICLE unit, add 1 to the Wound roll.",
+        "description": "In your Shooting phase, each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -43378,7 +43305,7 @@
         "ability_id": "",
         "model": "",
         "name": "Spore-laced Shock Waves",
-        "description": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Plagueburst mortar scored a hit against an enemy INFANTRY unit, that INFANTRY unit must take a Battle-shock test.",
+        "description": "In your Shooting phase, each time you select a target for this model's Plagueburst mortar, roll one D6 for the target unit and every other enemy unit within 3\" of the target unit, adding 1 to that roll if the unit being rolled for is Afflicted. On a 6+, the unit being rolled for is struck by spores; after resolving all of this model's attacks against the target unit, each unit struck by spores suffers 03 mortal wounds.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -43444,33 +43371,25 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Host of Plagues",
-        "description": "At the start of the battle round, select one of the abilities in the Host of Plagues section (see left). Until the start of the next battle round, this model has that ability.",
+        "name": "Lord of the Death Guard",
+        "description": "Once per turn, this model can use one of the Lord of the Death Guard abilities (see left).",
         "type": "Datasheet",
         "parameter": "",
         "": "",
-        "phases": [
-            "Pregame",
-            "Command"
-        ]
+        "phases": []
     },
     {
         "datasheet_id": "000001377",
         "line": "6",
         "ability_id": "",
         "model": "",
-        "name": "Lord of the Death Guard",
-        "description": "While a friendly DEATH GUARD unit is within 6\" of this model, that unit can ignore any or all modifiers to its characteristics and to any roll or test made for it (excluding modifiers to saving throws).",
+        "name": "Host of Plagues",
+        "description": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model, adding 1 to the result if that enemy unit is Afflicted: on a 3+, that enemy unit suffers D3 mortal wounds.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
-            "Movement",
-            "Shooting",
-            "Charge",
-            "Fight",
-            "Saves"
+            "Movement"
         ]
     },
     {
@@ -43478,13 +43397,13 @@
         "line": "7",
         "ability_id": "",
         "model": "",
-        "name": "SUPREME COMMANDER",
-        "description": "If this model is in your army, it must be your Warlord.",
-        "type": "Special (\u043f\u0440\u0430\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "name": "Diseased Influence",
+        "description": "Just after an enemy unit ends a Normal, Advance or Fall Back move within 9\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\".",
+        "type": "Primarch",
         "parameter": "",
         "": "",
         "phases": [
-            "Pregame"
+            "Movement"
         ]
     },
     {
@@ -43492,13 +43411,13 @@
         "line": "8",
         "ability_id": "",
         "model": "",
-        "name": "Miasma of Pestilence",
-        "description": "While a friendly DEATH GUARD unit is within 6\" of this model, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack.",
+        "name": "Boon of Death",
+        "description": "In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, until the end of the phase, each time a model in that DEATH GUARD unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; that destroyed model can fight after the attacking unit has finished making its attacks, and it is then removed from play.",
         "type": "Primarch",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
+            "Fight",
             "Saves"
         ]
     },
@@ -43507,14 +43426,14 @@
         "line": "9",
         "ability_id": "",
         "model": "",
-        "name": "Diseased Influence",
-        "description": "While a friendly DEATH GUARD unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Wound roll of 1.",
+        "name": "Inflamed Reprisal",
+        "description": "In your opponent's Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that Death Guard unit can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
         "type": "Primarch",
         "parameter": "",
         "": "",
         "phases": [
             "Shooting",
-            "Fight"
+            "Saves"
         ]
     },
     {
@@ -43522,14 +43441,13 @@
         "line": "10",
         "ability_id": "",
         "model": "",
-        "name": "Toxic Presence",
-        "description": "While a friendly DEATH GUARD unit is within 12\" of this model, add 3\" to the Contagion Range of that unit.",
-        "type": "Primarch",
+        "name": "SUPREME COMMANDER",
+        "description": "If this model is in your army, it must be your WARLORD.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
-            "Fight"
+            "Pregame"
         ]
     },
     {
@@ -49160,14 +49078,12 @@
         "ability_id": "",
         "model": "",
         "name": "Corrupt Machine Spirits",
-        "description": "Once per turn, at the start of your opponent's Shooting phase, select one enemy VEHICLE unit within 12\" of and visible to one or more models from your army with this ability. That unit must take a Leadership test: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase.",
+        "description": "At the start of your Shooting phase, select one visible enemy VEHICLE unit within 12\" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
-            "Fight",
-            "Saves"
+            "Shooting"
         ]
     },
     {
@@ -49176,7 +49092,7 @@
         "ability_id": "",
         "model": "",
         "name": "Spirit Thief",
-        "description": "At the start of your Shooting phase, select one enemy VEHICLE unit within 12\" of this model. Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.",
+        "description": "At the start of your Shooting phase, select one visible enemy VEHICLE unit. Until the end of the phase, each time a friendly HERETIC ASTARTES model makes an attack that targets that unit, re-roll a Wound roll of 1.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -51533,7 +51449,7 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -51825,17 +51741,14 @@
         "ability_id": "",
         "model": "",
         "name": "Embodied Prophecy",
-        "description": "Each time this unit is selected to fight, select one of the following abilities to apply to power weapons equipped by models in this unit until the end of the phase:[SUSTAINED HITS 1][LETHAL HITS]Before making your selection, if this unit made a Charge move this turn, you can discard 1 Miracle dice. If you do, until the end of the phase, both of the abilities above apply to power weapons equipped by models in this unit.",
+        "description": "Each time this unit is selected to fight, select one of the following abilities to apply to melee weapons equipped by models in this unit until the end of the phase:[SUSTAINED HITS 1][LETHAL HITS]If this unit made a Charge move this turn, until the end of the phase, select both abilities above to apply to melee weapons equipped by models in this unit instead.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Command",
-            "Movement",
             "Shooting",
             "Charge",
-            "Fight",
-            "Saves"
+            "Fight"
         ]
     },
     {
@@ -53635,7 +53548,7 @@
         "ability_id": "",
         "model": "",
         "name": "Master Tactician",
-        "description": "At the start of your Command phase, if this unit's MARNEUS CALGAR model is on the battlefield, you gain 1CP.",
+        "description": "At the start of your Command phase, if this unit's Marneus Calgar model is your WARLORD and is on the battlefield, you gain 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -54172,7 +54085,7 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -55691,7 +55604,7 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Master of Destruction",
+        "name": "Virulent Aura",
         "description": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
@@ -55706,7 +55619,7 @@
         "ability_id": "",
         "model": "",
         "name": "Blight Bombardment",
-        "description": "Each time a friendly DEATH GUARD model makes an attack with a Blast weapon that targets a unit that is visible to this model, add 1 to the Hit roll and that attack has the [IGNORES COVER] ability.",
+        "description": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this model. Until the end of the phase, each time a friendly DEATH GUARD model makes a ranged attack that targets that unit, re-roll a Hit roll of 1 (if that attack is made with a Blast weapon, you can re-roll the Hit roll instead).",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -55746,8 +55659,8 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Destructor",
-        "description": "Each time this model makes a ranged attack that targets an INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.",
+        "name": "Hail of Corrosive Disease",
+        "description": "In your Shooting phase, after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks. Until the end of the phase, each time a friendly DEATH GUARD unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -55773,20 +55686,6 @@
     {
         "datasheet_id": "000002462",
         "line": "2",
-        "ability_id": "000008345",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Pregame"
-        ]
-    },
-    {
-        "datasheet_id": "000002462",
-        "line": "3",
         "ability_id": "000008396",
         "model": "",
         "name": "",
@@ -55795,28 +55694,28 @@
         "parameter": "",
         "": "",
         "phases": []
+    },
+    {
+        "datasheet_id": "000002462",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Putrescent Fog",
+        "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
     },
     {
         "datasheet_id": "000002462",
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Putrescent Fog",
-        "description": "While a friendly DEATH GUARD unit is wholly within 6\" of this FORTIFICATION, each time an attack targets that unit, subtract 1 from the Hit roll.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": "",
-        "phases": [
-            "Saves"
-        ]
-    },
-    {
-        "datasheet_id": "000002462",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
         "name": "Diseased Cover",
-        "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack.",
+        "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -55827,16 +55726,30 @@
     },
     {
         "datasheet_id": "000002462",
-        "line": "6",
+        "line": "5",
         "ability_id": "",
         "model": "",
         "name": "Fortification",
-        "description": "While an enemy unit is only within Engagement Range of one or more FORTIFICATIONS from your army: That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+        "description": "While an enemy unit is only within Engagement Range of one or more FORTIFICATIONS from your army:That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000002462",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "DEPLOYMENT",
+        "description": "Both parts of this FORTIFICATION must be set up within 1\" of each other. Both parts are then treated as a single model for all rules purposes.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame"
         ]
     },
     {
@@ -57145,8 +57058,8 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Bomb Squig",
-        "description": "Once per battle for each bomb squig this unit has, after this unit ends a Normal move, you can select one enemy unit within 12\" of it and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.Designer's Note: Place the relevant number of Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
+        "name": "Bomb Squigs",
+        "description": "Once per battle, for each bomb squig this unit has, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.Designer's Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
         "type": "Wargear",
         "parameter": "",
         "": "",
@@ -58154,7 +58067,7 @@
         "ability_id": "",
         "model": "",
         "name": "Will of the Hive Mind",
-        "description": "Once per turn, one friendly TYRANIDS unit within 12\" of one or more models with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+        "description": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -59239,7 +59152,7 @@
         "ability_id": "",
         "model": "",
         "name": "Herald of Ynnead",
-        "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time a friendly AELDARI model makes an attack that targets that unit, you can re-roll the Wound roll.",
+        "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time a friendly AELDARI model makes an attack that targets that unit, you can re-roll a Wound roll of 1.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -61443,7 +61356,7 @@
         "ability_id": "",
         "model": "",
         "name": "ORDERS",
-        "description": "This OFFICER can issue up to 3 Orders to:REGIMENT unitsSQUADRON units",
+        "description": "This OFFICER can issue up to 3 Orders to:REGIMENT unitsSQUADRON unitsTITANIC units",
         "type": "Special (\u043f\u0440\u0430\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
@@ -62510,6 +62423,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Saves"
         ]
     },
@@ -62526,8 +62440,7 @@
         "phases": [
             "Command",
             "Shooting",
-            "Fight",
-            "Saves"
+            "Fight"
         ]
     },
     {
@@ -63441,7 +63354,7 @@
         "ability_id": "",
         "model": "",
         "name": "Unholy Mechanisms",
-        "description": "While a friendly DAEMON VEHICLE unit is within 6\" of this model, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+        "description": "While a friendly DAEMON VEHICLE unit is within 6\" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -63455,12 +63368,26 @@
         "ability_id": "",
         "model": "",
         "name": "Reorder Reality",
-        "description": "Each time an enemy unit within 18\" of this model targets this model, until the end of the phase, that enemy unit's ranged weapons have the [HAZARDOUS] ability.",
+        "description": "Each time an enemy unit within 18\" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit's ranged weapons have the [HAZARDOUS] ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000002679",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Indentured Daemon Engines",
+        "description": "While this model is within 3\" of one or more friendly DAEMON VEHICLE units, this model has the Lone Operative ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
         ]
     },
     {
@@ -63521,12 +63448,11 @@
         "ability_id": "",
         "model": "",
         "name": "The Emperor's Shield",
-        "description": "Each time a melee attack is allocated to this model, on an unmodified saving throw of 6, the attacking unit suffers 1 mortal wound after it has finished making its attacks.",
+        "description": "Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Fight",
             "Saves"
         ]
     },
@@ -63563,13 +63489,14 @@
         "line": "8",
         "ability_id": "",
         "model": "",
-        "name": "All Secrets Revealed",
-        "description": "Once per turn, when your opponent targets a unit from their army with a Stratagem but before that Stratagem's effects are resolved, if that unit is within 12\" of this model, you gain 1CP and that enemy unit must take a Battle-shock test. If that test is failed, in addition to that unit being Battle-shocked, that Stratagem's effects are not resolved (that Stratagem still counts as having been used this phase).",
+        "name": "Mist-wreathed Shadow Realms",
+        "description": "In your Command phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
         "type": "Primarch",
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Movement"
         ]
     },
     {
@@ -63578,7 +63505,7 @@
         "ability_id": "",
         "model": "",
         "name": "Martial Exemplar",
-        "description": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model , each time a model in that unit makes a melee attack, add 1 to the Hit roll.",
+        "description": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
         "type": "Primarch",
         "parameter": "",
         "": "",
@@ -63933,12 +63860,13 @@
         "ability_id": "",
         "model": "",
         "name": "Bio-stimulus",
-        "description": "While a friendly TYRANIDS unit is within 6\" of this model, models in that unit have the Feel No Pain 6+ ability.",
+        "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Saves"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -66335,7 +66263,7 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -66935,8 +66863,8 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Warp Horror (Psychic)",
-        "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it. That unit must take a Battle-shock test.",
+        "name": "Horrifying Visage",
+        "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it. That unit must take a Battle-shock test, subtracting 1 from that test.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -66949,15 +66877,13 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Devastating Assault",
-        "description": "Each time this model ends a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.",
+        "name": "Enfeebling Miasma",
+        "description": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this model, each time that unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting",
-            "Charge",
-            "Fight"
+            "Movement"
         ]
     },
     {
@@ -67003,15 +66929,18 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Seed the Disease",
-        "description": "Once per battle, at the end of your Movement phase, this model can use this ability. If it does, until the start of your next Command phase, this model's unit is treated as having a Contagion Range of 12\".",
+        "name": "Blessed Icon of Disease",
+        "description": "Once per battle, at the start of any phase, you can select one friendly DEATH GUARD unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
+            "Command",
             "Movement",
             "Shooting",
-            "Fight"
+            "Charge",
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -70564,7 +70493,9 @@
         "type": "Faction",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Saves"
+        ]
     },
     {
         "datasheet_id": "000003582",
@@ -70577,6 +70508,7 @@
         "parameter": "",
         "": "",
         "phases": [
+            "Shooting",
             "Saves"
         ]
     },
@@ -70593,7 +70525,8 @@
         "phases": [
             "Command",
             "Shooting",
-            "Fight"
+            "Fight",
+            "Saves"
         ]
     },
     {
@@ -70665,9 +70598,23 @@
         "line": "2",
         "ability_id": "",
         "model": "",
-        "name": "Remorseless",
-        "description": "While this unit is within range of an objective marker you control, each time you take a Battle-shock test for this unit, add 1 to that test.",
+        "name": "Infused with the Blessings of Nurgle",
+        "description": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is Afflicted.",
         "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000003584",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Icon of Despair",
+        "description": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+        "type": "Wargear",
         "parameter": "",
         "": "",
         "phases": [
@@ -78872,7 +78819,7 @@
         "ability_id": "",
         "model": "",
         "name": "INQUISITORIAL RETINUE",
-        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00257\" data-tooltip-content=\"#tooltip_content00257\" data-tooltip-anchor=\"#tooltip_",
+        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00136\" data-tooltip-content=\"#tooltip_content00136\" data-tooltip-anchor=\"#tooltip_",
         "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
         "parameter": "",
         "": "",
@@ -79125,7 +79072,7 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -79221,7 +79168,7 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -79335,13 +79282,12 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time this model makes an attack, you can re-roll the Hit roll. While this model is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Command",
-            "Shooting",
             "Fight"
         ]
     },
@@ -79417,13 +79363,12 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time a model in this unit makes an attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0. ",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Command",
-            "Shooting",
             "Fight"
         ]
     },
@@ -79500,13 +79445,12 @@
         "ability_id": "",
         "model": "",
         "name": "Black Rage",
-        "description": "Each time a model in this unit makes an attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0.",
+        "description": "Each time this model makes a melee attack, you can re-roll the Hit roll. While this model's unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
         "phases": [
             "Command",
-            "Shooting",
             "Fight"
         ]
     },
@@ -80667,7 +80611,7 @@
         "ability_id": "",
         "model": "",
         "name": "Bomb Squigs",
-        "description": "Twice per battle, after this unit ends a Normal move, you can select one enemy unit within 12\" of it and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.Designer's Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
+        "description": "Once per battle, for each bomb squig this unit has, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.Designer's Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -81424,7 +81368,7 @@
         "ability_id": "",
         "model": "",
         "name": "Will of the Hive Mind",
-        "description": "Once per turn, one friendly TYRANIDS unit within 12\" of one or more models with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+        "description": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": "",
@@ -81908,20 +81852,6 @@
         "": "",
         "phases": [
             "Movement",
-            "Saves"
-        ]
-    },
-    {
-        "datasheet_id": "000003886",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Armoured Thorax",
-        "description": "The bearer has a Save characteristic of 4+.",
-        "type": "Wargear",
-        "parameter": "",
-        "": "",
-        "phases": [
             "Saves"
         ]
     },
@@ -92616,6 +92546,748 @@
         "": "",
         "phases": [
             "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004109",
+        "line": "1",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004109",
+        "line": "2",
+        "ability_id": "000008396",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004109",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Gift of Poxes",
+        "description": "Add 3\" to the range of this model's Contagion Range.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004109",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Shroud of Disease",
+        "description": "While this model is leading a unit, that unit cannot be targeted by ranged attacks unless the attacking model is within 18\".",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004110",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D3",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004110",
+        "line": "2",
+        "ability_id": "000008396",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004110",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Explosive Blight",
+        "description": "In your Shooting phase, each time this model makes an attack that destroys an enemy unit, before removing the last model in that unit from play, roll a D6, adding 1 to the result if that unit is Afflicted: on a 5+, each enemy unit within 6\" of that model is Afflicted until the start of your next turn.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004111",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004111",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004111",
+        "line": "3",
+        "ability_id": "000008338",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6+",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004111",
+        "line": "4",
+        "ability_id": "000010120",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004111",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Virulent Blessing (Psychic)",
+        "description": "At the start of the Fight phase, you can select one enemy unit within 24\" and visible to this model. Until the end of the phase, each time an attack made by a PLAGUE LEGIONS model is allocated to a model in that unit, add 1 to the Damage characteristic of that attack.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004111",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Deluge of Nurgle",
+        "description": "While an enemy unit is within 6\" of this model, subtract 2 from the Move characteristic and subtract 1 from the Objective Control characteristic of models in that unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "3",
+        "ability_id": "000008338",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6+",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "4",
+        "ability_id": "000010120",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemon Lord of Nurgle",
+        "description": "While a friendly PLAGUE LEGIONS unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Nurgle's Rot (Psychic)",
+        "description": "At the end of your Movement phase, you can select one enemy unit within 12\" of this model. Until the start of your next Movement phase, that unit is rotted. While a unit is rotted, subtract 1 from the Toughness characteristic of models in that unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Shooting",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004112",
+        "line": "7",
+        "ability_id": "",
+        "model": "",
+        "name": "Reverberating Summons",
+        "description": "Each time a model is destroyed by this weapon, you can select one friendly PLAGUEBEARERS unit within 12\" of the bearer and return 1 destroyed Plaguebearer model to that unit.",
+        "type": "Wargear profile",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "2",
+        "ability_id": "000010120",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Infected Outbreak",
+        "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Icon",
+        "description": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004113",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Instrument of Chaos",
+        "description": "Add 1 to Charge rolls made for the bearer's unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "2",
+        "ability_id": "000010120",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Death's Heads",
+        "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly PLAGUE LEGIONS unit makes an attack that targets that unit, you can re-roll the Wound roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Daemonic Icon",
+        "description": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
+        "datasheet_id": "000004114",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Instrument of Chaos",
+        "description": "Add 1 to Charge rolls made for the bearer's unit.",
+        "type": "Wargear",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Charge"
+        ]
+    },
+    {
+        "datasheet_id": "000004115",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "1",
+        "": "",
+        "phases": [
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004115",
+        "line": "2",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004115",
+        "line": "3",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6\"",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004115",
+        "line": "4",
+        "ability_id": "000010120",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004115",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Grotesque Regeneration",
+        "description": "At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Movement",
+            "Shooting",
+            "Charge",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "datasheet_id": "000004116",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004116",
+        "line": "2",
+        "ability_id": "000008345",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "datasheet_id": "000004116",
+        "line": "3",
+        "ability_id": "000010120",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004116",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Mischief Makers",
+        "description": "Each time an enemy unit (excluding TITAN units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "2",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "3",
+        "ability_id": "000000707",
+        "model": "",
+        "name": "Shadow In The Warp (Ravener Prime only)",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "4",
+        "ability_id": "000000705",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Alpha Invader",
+        "description": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004117",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Hypersensory Arra",
+        "description": "Once per battle round, you can target this unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "1",
+        "ability_id": "000008343",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "2",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "3",
+        "ability_id": "000000707",
+        "model": "",
+        "name": "Shadow In The Warp (Ravener Prime only)",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "4",
+        "ability_id": "000000705",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Alpha Invader",
+        "description": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004118",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Hypersensory Arra",
+        "description": "Once per battle round, you can target this unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command",
+            "Fight"
+        ]
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "1",
+        "ability_id": "000008382",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": "",
+        "phases": []
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "2",
+        "ability_id": "",
+        "model": "",
+        "name": "Network Override",
+        "description": "While this unit contains one or more Tech-Priest models, this unit is:Eligible to perform an Action in a turn in which it Advanced.Eligible to shoot in a turn in which it started an Action.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Movement",
+            "Shooting"
+        ]
+    },
+    {
+        "datasheet_id": "000004119",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "ATTACHED UNIT",
+        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a KATAPHRON BREACHERS unit, it can be attached to this unit instead.",
+        "type": "Fortification (\u043b\u0435\u0432\u0430\u044f \u043a\u043e\u043b\u043e\u043d\u043a\u0430)",
+        "parameter": "",
+        "": "",
+        "phases": [
+            "Command"
         ]
     }
 ]
