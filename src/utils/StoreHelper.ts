@@ -22,6 +22,11 @@ const applyFactionOverrides = (factions: Faction[]) => {
       name: "Deathwatch",
       link: "",
     },
+    {
+      id: "SM",
+      name: "Space Wolves",
+      link: "",
+    },
   ];
 
   return [...factions, ...extraFactions];

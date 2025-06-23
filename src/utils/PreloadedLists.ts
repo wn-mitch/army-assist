@@ -1513,6 +1513,7 @@ const samplePreload = [
 
 const defaultObject = {
   units: [],
+  textFormat: "nr",
   phase: Phase.Command,
   faction: undefined,
   detachment: undefined,

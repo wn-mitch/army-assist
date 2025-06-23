@@ -45,7 +45,8 @@ interface StoreState {
   settings: Settings;
   currentSaveVersion: number;
   reset: () => void;
-  addList: (text?: string) => void;
+  addList: (text?: string, format?: 'nr' | 'listforge') => void;
+  addListListforge: (text?: string) => void;
   hasActiveList: () => boolean;
   setActiveList: (uuid: string) => void;
   getActiveList: () => StoredList;
@@ -53,7 +54,10 @@ interface StoreState {
   editList: (uuid: string, listName: string, listText: string) => void;
   deleteList: (uuid: string) => void;
   refreshArmy: (uuid: string) => void;
-  parseText: (text: string, name: string, listIndex?: string) => boolean;
+  parseText: (text: string, name: string, listIndex?: string, format?: 'nr' | 'listforge') => boolean;
+  parseTextNR: (text: string, name: string, listIndex?: string) => boolean;
+  parseTextListforge: (text: string, name: string, listIndex?: string) => boolean;
+  processUnitsWithDatasheets: (storedList: StoredList, listUnits: ListUnit[], factionAbbreviationId: string, name: string, uuid?: string) => boolean;
   setPhase: (phase: Phase) => void;
   toggleUnit: (unit: ListUnit) => void;
   addNewNote: (unit: ListUnit, note: Note) => void;
@@ -129,10 +133,31 @@ const useStore = create<StoreState>()(
           const listIndex = get().getListIndexByUUID(uuid);
           set({ activeList: listIndex });
         },
-        addList: (text?: string) => {
+        addList: (text?: string, format?: 'nr' | 'listforge') => {
           const newList: StoredList = {
             uuid: v4(),
             text: text || "",
+            textFormat: format || 'nr', // Default to 'nr' if not specified
+            name: text ? "Imported List" : undefined,
+            units: [],
+            phase: Phase.Pregame,
+            faction: undefined,
+            detachment: undefined,
+            created: Date.now().toString(),
+            updated: Date.now().toString(),
+          };
+
+          const storedLists = get().storedLists;
+
+          const newStoredLists = [...storedLists, newList];
+          set({ storedLists: newStoredLists });
+          get().setActiveList(newList.uuid);
+        },
+        addListListforge: (text?: string) => {
+          const newList: StoredList = {
+            uuid: v4(),
+            text: text || "",
+            textFormat: "listforge",
             name: text ? "Imported List" : undefined,
             units: [],
             phase: Phase.Pregame,
@@ -169,6 +194,7 @@ const useStore = create<StoreState>()(
         },
         editList: (uuid: string, listName: string, listText: string) => {
           const listIndex = get().getListIndexByUUID(uuid);
+          const listFormat = get().storedLists[listIndex].textFormat;
           set((state) => {
             const lists = state.storedLists;
             const updatedList = {
@@ -183,7 +209,7 @@ const useStore = create<StoreState>()(
           });
 
           // Reparse the list with the new text
-          get().parseText(listText, listName, uuid);
+          get().parseText(listText, listName, uuid, listFormat);
         },
         deleteList: (uuid: string) => {
           const listIndex = get().getListIndexByUUID(uuid);
@@ -199,15 +225,20 @@ const useStore = create<StoreState>()(
           const listIndex = get().getListIndexByUUID(uuid);
           const list = get().storedLists[listIndex];
           const name = list.name ?? "";
-          get().parseText(list.text, name, list.uuid);
+          get().parseText(list.text, name, list.uuid, list.textFormat);
         },
-        parseText: (text: string, name: string, uuid?: string): boolean => {
-          const activeList = get().activeList;
-          const listIndex = get().getListIndexByUUID(uuid);
-
+        parseText: (text: string, name: string, uuid?: string, format?: 'nr' | 'listforge'): boolean => {
+          if (!format || format === 'nr') {
+            return get().parseTextNR(text, name, uuid);
+          } else {
+            return get().parseTextListforge(text, name, uuid);
+          }
+        },
+        parseTextNR: (text: string, name: string, uuid?: string): boolean => {
           const storedList: StoredList = {
             uuid: uuid || v4(),
             text: text,
+            textFormat: "nr",
             name: undefined,
             units: [],
             phase: Phase.Pregame,
@@ -242,7 +273,6 @@ const useStore = create<StoreState>()(
           }
 
           const factionAbbreviationId = factionAbbreviation.id;
-
           storedList.faction = factionAbbreviationId;
 
           const listUnits: ListUnit[] = [];
@@ -375,6 +405,149 @@ const useStore = create<StoreState>()(
             }
           });
 
+          // Use the shared unit processing method
+          return get().processUnitsWithDatasheets(storedList, listUnits, factionAbbreviationId, name, uuid);
+        },
+        parseTextListforge: (text: string, name: string, uuid?: string): boolean => {
+          console.log("Parsing ListForge text:", text);
+          const activeList = get().activeList;
+          const listIndex = get().getListIndexByUUID(uuid);
+
+          const storedList: StoredList = {
+            uuid: uuid || v4(),
+            text: text,
+            textFormat: "listforge",
+            name: undefined,
+            units: [],
+            phase: Phase.Pregame,
+            faction: undefined,
+            detachment: undefined,
+            created: get().hasActiveList()
+              ? get().getActiveList().created
+              : Date.now().toString(),
+            updated: Date.now().toString(),
+          };
+
+          const lines = text.split("\n");
+          const factionMatch = lines[0].trim().match(/[\w]+ - ([\w'\s]+) -/);
+          const factionMatchName = lines[0]
+            .trim()
+            .match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
+
+          if (!factionMatch || !factionMatchName) {
+            window.alert("Name/Faction/Detachment format not recognized");
+            return false;
+          }
+          
+          const factions = applyFactionOverrides(Factions);
+          const factionAbbreviation = factions.filter(
+            (f) => f.name === factionMatch[1] || f.name === factionMatchName[1]
+          )[0];
+
+          if (!factionAbbreviation) {
+            console.error("Faction abbreviation not found in the list");
+            return false;
+          }
+
+          const factionAbbreviationId = factionAbbreviation.id;
+          storedList.faction = factionAbbreviationId;
+            
+          const detachmentMatch = lines[0].trim().match(/[\w]+ - [\w'\s]+ - ([\w'\s]+)/);
+          console.log("Detachment Match:", detachmentMatch);
+          if (detachmentMatch) {
+            // Name overrides
+            let detachmentName = detachmentMatch[1];
+
+            switch (detachmentName) {
+              case "Pact-bound Zealots":
+                detachmentName = "Pactbound Zealots";
+                break;
+              default:
+                break;
+            }
+
+            storedList.detachment = detachmentName;
+          }
+
+          const listUnits: ListUnit[] = [];
+          let lastParentUnit: ListUnit | null = null;
+
+          lines.forEach((line, index) => {
+            const parentMatch = line.match(/^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/]+)\s\([\d]+ pts\)$/);
+
+            const singleIndentBulletMatch = line.match(/^\s{2}•([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/\d,&]+)$/);
+
+            const doubleIndentBulletMatch = line.match(/^\s{4}•([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/\d,&]+)$/)
+
+            const tripleIndentBulletMatch = line.match(/^\s{6}•([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/\d,&]+)$/);
+
+            if(parentMatch) {
+              // eslint-disable-next-line prefer-const
+              let [, name, details] = parentMatch;
+
+              const weapons = details
+                ?.split(/,(?![^(]*\))/)
+                .filter((name) => name !== "Warlord" && name !== "")
+                .map((name) => name.replace(/^\d+x?\s*/, "").trim())
+                .flatMap((name) => {
+                  const cleanedName = name
+                    .replace(/\s*\((.*?)\)\s*/g, ", $1")
+                    .trim();
+                  return cleanedName.split(",").map((part) => part.trim());
+                });
+
+              const weaponCount = weapons?.reduce((acc, weapon) => {
+                acc[weapon] = 1;
+                return acc;
+              }, {} as Record<string, number>);
+
+              name = name.replace(" [Legends]", "");
+              if (name) {
+                lastParentUnit = {
+                  id: index,
+                  name,
+                  details: details,
+                  children: [],
+                  toggled: true,
+                  count: weaponCount,
+                  groupCount: 1,
+                  points: null,
+                  datasheet_id: null,
+                  weapons: weapons,
+                  weaponsDatasheets: [],
+                  abilities: [],
+                  enhancements: [],
+                  datasheet: null,
+                  datasheetModel: null,
+                  keywords: "",
+                  notes: [],
+                };
+
+                listUnits.push(lastParentUnit);
+              }
+            }
+          })
+
+          // TODO: Implement ListForge parsing logic here
+          // This is where you'll add your ListForge-specific regex patterns
+          
+          // Placeholder implementation - you'll replace this with actual ListForge parsing
+          storedList.name = name !== "" ? name : "ListForge Imported List";
+          
+          const index = activeList >= 0 ? activeList : listIndex;
+          const updatedStoredLists = [...get().storedLists];
+
+          if (index !== undefined) {
+            updatedStoredLists[index] = { ...storedList };
+          } else {
+            console.error("Index is undefined. Cannot update stored lists.");
+          }
+
+          set({ storedLists: updatedStoredLists });
+          // Use the shared unit processing method
+          return get().processUnitsWithDatasheets(storedList, listUnits, factionAbbreviationId, name, uuid);
+        },
+        processUnitsWithDatasheets: (storedList: StoredList, listUnits: ListUnit[], factionAbbreviationId: string, name: string, uuid?: string): boolean => {
           if (listUnits.length > 0) {
             const updatedUnits = listUnits
               .map((unit) => {
@@ -523,11 +696,14 @@ const useStore = create<StoreState>()(
 
             storedList.units = updatedUnits;
           }
+          
           storedList.name =
             name !== ""
               ? name
               : `${storedList.faction} - ${storedList.detachment}`;
 
+          const activeList = get().activeList;
+          const listIndex = get().getListIndexByUUID(uuid);
           const index = activeList >= 0 ? activeList : listIndex;
 
           const updatedStoredLists = [...get().storedLists];
@@ -536,10 +712,10 @@ const useStore = create<StoreState>()(
             updatedStoredLists[index] = { ...storedList };
           } else {
             console.error("Index is undefined. Cannot update stored lists.");
+            return false;
           }
 
           set({ storedLists: updatedStoredLists });
-
           return true;
         },
         setPhase: (phase: Phase) => {
