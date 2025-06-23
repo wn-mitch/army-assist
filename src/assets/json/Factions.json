@@ -1,150 +1,150 @@
 [
     {
-        "id": "AoI",
+        "\u00ef\u00bb\u00bfid": "AoI",
         "name": "Imperial Agents",
         "link": "https://wahapedia.ru/wh40k10ed/factions/imperial-agents",
         "": ""
     },
     {
-        "id": "AM",
+        "\u00ef\u00bb\u00bfid": "AM",
         "name": "Astra Militarum",
         "link": "https://wahapedia.ru/wh40k10ed/factions/astra-militarum",
         "": ""
     },
     {
-        "id": "GC",
+        "\u00ef\u00bb\u00bfid": "GC",
         "name": "Genestealer Cults",
         "link": "https://wahapedia.ru/wh40k10ed/factions/genestealer-cults",
         "": ""
     },
     {
-        "id": "NEC",
+        "\u00ef\u00bb\u00bfid": "NEC",
         "name": "Necrons",
         "link": "https://wahapedia.ru/wh40k10ed/factions/necrons",
         "": ""
     },
     {
-        "id": "AE",
+        "\u00ef\u00bb\u00bfid": "AE",
         "name": "Aeldari",
         "link": "https://wahapedia.ru/wh40k10ed/factions/aeldari",
         "": ""
     },
     {
-        "id": "TL",
+        "\u00ef\u00bb\u00bfid": "TL",
         "name": "Adeptus Titanicus",
         "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-titanicus",
         "": ""
     },
     {
-        "id": "ORK",
+        "\u00ef\u00bb\u00bfid": "ORK",
         "name": "Orks",
         "link": "https://wahapedia.ru/wh40k10ed/factions/orks",
         "": ""
     },
     {
-        "id": "UN",
+        "\u00ef\u00bb\u00bfid": "UN",
         "name": "Unaligned Forces",
         "link": "https://wahapedia.ru/wh40k10ed/factions/unaligned-forces",
         "": ""
     },
     {
-        "id": "GK",
+        "\u00ef\u00bb\u00bfid": "GK",
         "name": "Grey Knights",
         "link": "https://wahapedia.ru/wh40k10ed/factions/grey-knights",
         "": ""
     },
     {
-        "id": "TAU",
-        "name": "T'au Empire",
+        "\u00ef\u00bb\u00bfid": "TAU",
+        "name": "T\u00e2\u0080\u0099au Empire",
         "link": "https://wahapedia.ru/wh40k10ed/factions/t-au-empire",
         "": ""
     },
     {
-        "id": "LoV",
+        "\u00ef\u00bb\u00bfid": "LoV",
         "name": "Leagues of Votann",
         "link": "https://wahapedia.ru/wh40k10ed/factions/leagues-of-votann",
         "": ""
     },
     {
-        "id": "AdM",
+        "\u00ef\u00bb\u00bfid": "AdM",
         "name": "Adeptus Mechanicus",
         "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-mechanicus",
         "": ""
     },
     {
-        "id": "TS",
+        "\u00ef\u00bb\u00bfid": "TS",
         "name": "Thousand Sons",
         "link": "https://wahapedia.ru/wh40k10ed/factions/thousand-sons",
         "": ""
     },
     {
-        "id": "DG",
+        "\u00ef\u00bb\u00bfid": "DG",
         "name": "Death Guard",
         "link": "https://wahapedia.ru/wh40k10ed/factions/death-guard",
         "": ""
     },
     {
-        "id": "EC",
-        "name": "Emperor's Children",
+        "\u00ef\u00bb\u00bfid": "EC",
+        "name": "Emperor\u00e2\u0080\u0099s Children",
         "link": "https://wahapedia.ru/wh40k10ed/factions/emperor-s-children",
         "": ""
     },
     {
-        "id": "WE",
+        "\u00ef\u00bb\u00bfid": "WE",
         "name": "World Eaters",
         "link": "https://wahapedia.ru/wh40k10ed/factions/world-eaters",
         "": ""
     },
     {
-        "id": "QT",
+        "\u00ef\u00bb\u00bfid": "QT",
         "name": "Chaos Knights",
         "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-knights",
         "": ""
     },
     {
-        "id": "CD",
+        "\u00ef\u00bb\u00bfid": "CD",
         "name": "Chaos Daemons",
         "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-daemons",
         "": ""
     },
     {
-        "id": "QI",
+        "\u00ef\u00bb\u00bfid": "QI",
         "name": "Imperial Knights",
         "link": "https://wahapedia.ru/wh40k10ed/factions/imperial-knights",
         "": ""
     },
     {
-        "id": "SM",
+        "\u00ef\u00bb\u00bfid": "SM",
         "name": "Space Marines",
         "link": "https://wahapedia.ru/wh40k10ed/factions/space-marines",
         "": ""
     },
     {
-        "id": "TYR",
+        "\u00ef\u00bb\u00bfid": "TYR",
         "name": "Tyranids",
         "link": "https://wahapedia.ru/wh40k10ed/factions/tyranids",
         "": ""
     },
     {
-        "id": "AC",
+        "\u00ef\u00bb\u00bfid": "AC",
         "name": "Adeptus Custodes",
         "link": "https://wahapedia.ru/wh40k10ed/factions/adeptus-custodes",
         "": ""
     },
     {
-        "id": "AS",
+        "\u00ef\u00bb\u00bfid": "AS",
         "name": "Adepta Sororitas",
         "link": "https://wahapedia.ru/wh40k10ed/factions/adepta-sororitas",
         "": ""
     },
     {
-        "id": "CSM",
+        "\u00ef\u00bb\u00bfid": "CSM",
         "name": "Chaos Space Marines",
         "link": "https://wahapedia.ru/wh40k10ed/factions/chaos-space-marines",
         "": ""
     },
     {
-        "id": "DRU",
+        "\u00ef\u00bb\u00bfid": "DRU",
         "name": "Drukhari",
         "link": "https://wahapedia.ru/wh40k10ed/factions/drukhari",
         "": ""

@@ -2,8 +2,11 @@ import csv
 import json
 import os
 import re
+import pandas as pd
+import requests
+from urllib.parse import urljoin
 
-# http://wahapedia.ru/wh40k10ed/Datasheets_stratagems.csv 
+# http://wahapedia.ru/wh40k10ed/Datasheets_stratagems.csv
 
 replacements = {
     r"<[:\.\-\w\d\s;#\\+()\.,\[\]_=\"/]+>": "",
@@ -11,48 +14,49 @@ replacements = {
     r"\u2018": "\'",
     r"\u2013": "-",
     r" \(Aura\)": "",
-    r"\’": "'",
+    r"\'": "'",
 }
 
 # Define the conditions for rows to be ignored
 ignore_conditions = [
     # Cabal of Sorcerers
     {"id": "000008424", "faction_id": "CSM"},
-    
+
     # Nurgles Gift
     {"id": "000008396", "faction_id": "CSM"},
-    
+
     # Blessings of Khorne
     {"id": "000008428", "faction_id": "CSM"},
-    
+
     # Oath of Moment
     {"id": "000008350", "faction_id": "CSM"},
     {"id": "000008350", "faction_id": "WE"},
     {"id": "000008350", "faction_id": "DG"},
     {"id": "000008350", "faction_id": "TS"},
-    
+
     # Dark Pacts
     {"id": "000008359", "faction_id": "WE"},
     {"id": "000008359", "faction_id": "DG"},
     {"id": "000008359", "faction_id": "TS"},
     {"id": "000008359", "faction_id": "QT"},
     {"id": "000008359", "faction_id": "CD"},
-    
+
     # Thrillseekers when added
-    
+
     # Agents of the Imperium
     {"id": "000008452", "faction_id": "SM"},
-    
+
     # Deathwatch
-    {"id":"000008521", "faction_id" : "SM"},
-    
+    {"id": "000008521", "faction_id": "SM"},
+
     # We don't care about Boarding Actions
-    {"id": "000009218006","name":"EXPLOSIVE CLEARANCE"},
-    {"id": "000009218005","name":"INSANE BRAVERY"},
-    {"id": "000009218004","name":"COUNTER-OFFENSIVE"},
-    {"id": "000009218003","name":"BATTLEFIELD COMMAND"},
-    {"id": "000009218002","name":"COMMAND RE-ROLL"}
+    {"id": "000009218006", "name": "EXPLOSIVE CLEARANCE"},
+    {"id": "000009218005", "name": "INSANE BRAVERY"},
+    {"id": "000009218004", "name": "COUNTER-OFFENSIVE"},
+    {"id": "000009218003", "name": "BATTLEFIELD COMMAND"},
+    {"id": "000009218002", "name": "COMMAND RE-ROLL"}
 ]
+
 
 def should_ignore_row(row):
     for condition in ignore_conditions:
@@ -61,6 +65,7 @@ def should_ignore_row(row):
     if "detachment" in row:
         return False
     return False
+
 
 def csv_to_json(csv_filepath, json_filepath):
     data = []
@@ -76,7 +81,7 @@ def csv_to_json(csv_filepath, json_filepath):
                         value = re.sub(old_text, new_text, value)
                 row[key] = value
             data.append(row)
-            
+
     with open(json_filepath, mode='w', encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4)
 
@@ -94,7 +99,97 @@ def convert_all_csv_in_directory(csv_directory, json_directory):
             print(f'Converted {csv_filepath} to {json_filepath}')
 
 
+def extract_urls_from_excel(excel_filepath):
+    """
+    Extract all CSV filenames from the Export Data Specs Excel file
+    and construct wahapedia URLs
+    Returns a list of dictionaries containing URL information
+    """
+    try:
+        # Read the Excel file
+        df = pd.read_excel(excel_filepath)
+
+        urls = []
+        base_url = "http://wahapedia.ru/wh40k10ed/"
+
+        # Look for CSV filenames in the Specification column
+        for _, row in df.iterrows():
+            if pd.notna(row['Specification']):
+                spec_text = str(row['Specification'])
+
+                # Check if this line contains a CSV filename
+                if spec_text.endswith('.csv'):
+                    csv_filename = spec_text.strip()
+                    full_url = base_url + csv_filename
+
+                    url_info = {
+                        'filename': csv_filename,
+                        'url': full_url,
+                        'description': f"Wahapedia {csv_filename} export"
+                    }
+                    urls.append(url_info)
+
+        return urls
+
+    except Exception as e:
+        print(f"Error reading Excel file: {e}")
+        return []
+
+
+def download_csv_from_url(url, output_directory):
+    """
+    Download a CSV file from a URL to the specified directory
+    """
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+
+        # Extract filename from URL
+        filename = url.split('/')[-1]
+        if not filename.endswith('.csv'):
+            filename += '.csv'
+
+        output_path = os.path.join(output_directory, filename)
+
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(response.text)
+
+        print(f"Downloaded {url} to {output_path}")
+        return output_path
+
+    except Exception as e:
+        print(f"Error downloading {url}: {e}")
+        return None
+
+
+def download_all_csvs_from_specs(excel_filepath, csv_directory):
+    """
+    Extract URLs from Excel specs and download all CSV files
+    """
+    urls = extract_urls_from_excel(excel_filepath)
+
+    if not urls:
+        print("No URLs found in the Excel file")
+        return
+
+    if not os.path.exists(csv_directory):
+        os.makedirs(csv_directory)
+
+    print(f"Found {len(urls)} URLs to download:")
+    for url_info in urls:
+        if 'url' in url_info:
+            print(f"  - {url_info['url']}")
+            download_csv_from_url(url_info['url'], csv_directory)
+
+
 if __name__ == "__main__":
     csv_directory = 'src/assets/csv'
     json_directory = 'src/assets/json'
+    excel_filepath = 'src/assets/csv/Export Data Specs.xlsx'
+
+    # First, extract and download CSVs from the Excel specs
+    print("Extracting URLs from Export Data Specs...")
+    download_all_csvs_from_specs(excel_filepath, csv_directory)
+
+    print("\nConverting all CSV files to JSON...")
     convert_all_csv_in_directory(csv_directory, json_directory)

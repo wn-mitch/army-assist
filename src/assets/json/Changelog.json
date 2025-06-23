@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.12.2",
+    "stateVersion": 23,
+    "date": "6/23/25",
+    "changes": [
+      "Updated the datasets for the new data pull from Wahapedia. This includes the new TSons codices."
+    ]
+  },
+  {
     "version": "1.12.1",
     "stateVersion": 23,
     "date": "6/13/25",

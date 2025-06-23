@@ -1,19 +1,19 @@
-﻿datasheet_id|line|description|
+ï»¿datasheet_id|line|description|
 000000001|1|1 Warboss|
 000000002|1|1 Warboss in Mega Armour|
 000000003|1|1 Warboss on Warbike|
 000000004|1|1 Weirdboy|
 000000006|1|1 Big Mek in Mega Armour|
 000000007|1|1 Big Mek on Warbike|
-000000008|1|1 Ghazghkull Thraka – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000008|1|1 Ghazghkull Thraka â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000008|2|1 Makari|
-000000009|1|1 Kaptin Badrukk – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000010|1|1 Boss Zagstruk – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000011|1|1 Boss Snikrot – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000009|1|1 Kaptin Badrukk â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000010|1|1 Boss Zagstruk â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000011|1|1 Boss Snikrot â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000012|1|1 Mek|
 000000013|1|1 Painboy|
 000000014|1|1 Painboy on Warbike|
-000000015|1|1 Mad Dok Grotsnik – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000015|1|1 Mad Dok Grotsnik â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000016|1|1 Boss Nob|
 000000016|2|9-19 Boyz|
 000000017|1|1 Runtherd and 10 Gretchin|
@@ -84,7 +84,7 @@
 000000073|1|1 Captain|
 000000076|1|1 Lieutenant with Combi-weapon|
 000000079|1|1 Librarian in Terminator Armour|
-000000081|1|1 Captain Sicarius – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000081|1|1 Captain Sicarius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000083|1|1 Captain with Jump Pack|
 000000084|1|1 Stormhawk Interceptor|
 000000085|1|1 Rhino Primaris|
@@ -97,7 +97,7 @@
 000000095|1|1 Chapter Champion|
 000000095|2|1 Ancient|
 000000095|3|2 Honour Guard|
-000000096|1|1 Carab Culln the Risen – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000096|1|1 Carab Culln the Risen â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000097|1|1 Hammerfall Bunker|
 000000098|1|1 Tarantula Sentry Battery|
 000000099|1|1 Tarantula Air Defence Battery|
@@ -120,7 +120,7 @@
 000000118|2|4-9 Assault Terminators|
 000000119|1|1 Librarian in Phobos Armour|
 000000120|1|1 Venerable Dreadnought|
-000000121|1|1 Uriel Ventris – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000121|1|1 Uriel Ventris â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000122|1|1 Dreadnought Drop Pod|
 000000123|1|1 Sicaran Punisher|
 000000124|1|1 Storm Speeder Hailstrike|
@@ -128,7 +128,7 @@
 000000125|2|2-5 Inceptors|
 000000126|1|1 Infernus Sergeant|
 000000126|2|4-9 Infernus Marines|
-000000127|1|1 Iron Father Feirros – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000127|1|1 Iron Father Feirros â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000128|1|1 Infiltrator Sergeant|
 000000128|2|4-9 Infiltrators|
 000000129|1|1 Razorback|
@@ -139,33 +139,33 @@
 000000136|1|1 Brutalis Dreadnought|
 000000137|1|1 Scout Biker Sergeant|
 000000137|2|2-5 Scout Bikers|
-000000138|1|1 Roboute Guilliman – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000138|1|1 Roboute Guilliman â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000139|1|1 Thunderhawk Gunship|
 000000140|1|1 Techmarine|
 000000146|1|1 Hunter|
 000000147|1|1 Vanguard Veteran Sergeant with Jump Pack|
 000000147|2|4-9 Vanguard Veterans with Jump Packs|
 000000148|1|1 Imperial Space Marine|
-000000151|1|1 Commander Dante – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000152|1|1 Captain Tycho – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000153|1|1 Tycho the Lost – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000151|1|1 Commander Dante â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000152|1|1 Captain Tycho â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000153|1|1 Tycho the Lost â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000154|1|1 Librarian Dreadnought|
-000000155|1|1 Chief Librarian Mephiston – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000156|1|1 The Sanguinor – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000157|1|1 Astorath – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000155|1|1 Chief Librarian Mephiston â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000156|1|1 The Sanguinor â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000157|1|1 Astorath â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000158|1|1 Sanguinary Priest|
 000000159|1|1 Sanguinary Priest on Bike|
-000000160|1|1 Brother Corbulo – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000164|1|1 Lemartes – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000160|1|1 Brother Corbulo â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000164|1|1 Lemartes â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000165|1|3-6 Sanguinary Guard|
 000000166|1|1 Death Company Dreadnought|
 000000167|1|1 Furioso Dreadnought|
 000000168|1|1 Baal Predator|
-000000169|1|1 Gabriel Seth – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000218|1|1 Azrael – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000219|1|1 Belial – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000225|1|1 Asmodai – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000226|1|1 Ezekiel – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000169|1|1 Gabriel Seth â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000218|1|1 Azrael â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000219|1|1 Belial â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000225|1|1 Asmodai â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000226|1|1 Ezekiel â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000230|1|1 Deathwing Sergeant|
 000000230|2|4-9 Deathwing Terminators|
 000000231|1|1 Knight Master|
@@ -177,21 +177,21 @@
 000000241|2|2-5 Ravenwing Black Knights|
 000000242|1|1 Land Speeder Vengeance|
 000000243|1|1 Fortress of Redemption|
-000000282|1|1 Logan Grimnar – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000283|1|1 Logan Grimnar on Stormrider – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000282|1|1 Logan Grimnar â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000283|1|1 Logan Grimnar on Stormrider â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000284|1|1 Wolf Lord on Thunderwolf|
-000000285|1|1 Ragnar Blackmane – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000285|1|1 Ragnar Blackmane â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000286|1|1 Krom Dragongaze|
-000000287|1|1 Harald Deathwolf – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000288|1|1 Canis Wolfborn – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000292|1|1 Njal Stormcaller – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000297|1|1 Ulrik the Slayer – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000287|1|1 Harald Deathwolf â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000288|1|1 Canis Wolfborn â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000292|1|1 Njal Stormcaller â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000297|1|1 Ulrik the Slayer â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000300|1|1 Wolf Guard Battle Leader in Terminator Armour|
 000000301|1|1 Wolf Guard Battle Leader on Thunderworlf|
-000000302|1|1 Bjorn the Fell-Handed– <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000302|1|1 Bjorn the Fell-Handedâ <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000303|1|1 Blood Claw Pack Leader|
 000000303|2|9-14 Blood Claws|
-000000304|1|1 Lukas the Trickster – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000304|1|1 Lukas the Trickster â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000305|1|1 Grey Hunter Pack Leader|
 000000305|2|4-9 Grey Hunters|
 000000306|1|1 Iron Priest|
@@ -200,10 +200,10 @@
 000000310|2|4-9 Wolf Scouts|
 000000311|1|1 Wulfen Pack Leader|
 000000311|2|4-9 Wulfen|
-000000314|1|1 Murderfang – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000314|1|1 Murderfang â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000315|1|1 Wolf Guard Pack Leader|
 000000315|2|4-9 Wolf Guard|
-000000317|1|1 Arjac Rockfist – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000317|1|1 Arjac Rockfist â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000318|1|1 Wolf Guard Terminator Pack Leader|
 000000318|2|4-9 Wolf Guard Terminators|
 000000321|1|1 Stormwolf|
@@ -216,13 +216,13 @@
 000000326|1|1 Long Fang Pack Leader|
 000000326|2|4-5 Long Fangs|
 000000358|1|1 Corvus Blackstar|
-000000373|1|1 Kaldor Draigo – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000374|1|1 Grand Master Voldus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000373|1|1 Kaldor Draigo â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000374|1|1 Grand Master Voldus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000375|1|1 Grand Master|
 000000376|1|1 Brother-Captain|
-000000377|1|1 Brother-Captain Stern – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000377|1|1 Brother-Captain Stern â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000379|1|1 Brotherhood Champion|
-000000380|1|1 Castellan Crowe – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000380|1|1 Castellan Crowe â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000381|1|1 Justicar|
 000000381|2|4-9 Grey Knights|
 000000382|1|1 Terminator Justicar|
@@ -250,27 +250,27 @@
 000000403|1|4-12 Tactical Drones|
 000000404|1|1 Ethereal|
 000000405|1|1 Cadre Fireblade|
-000000406|1|1 Commander Farsight – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000407|1|1 Commander Shadowsun – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000408|1|1 Aun’Shi – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000409|1|1 Aun’Va – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000406|1|1 Commander Farsight â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000407|1|1 Commander Shadowsun â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000408|1|1 AunâShi â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000409|1|1 AunâVa â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000409|2|2 Ethereal Guards|
-000000410|1|1 Darkstrider – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000411|1|1 Fire Warrior Shas’ui|
+000000410|1|1 Darkstrider â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000411|1|1 Fire Warrior Shasâui|
 000000411|2|9 Fire Warriors|
-000000412|1|1 Breacher Fire Warrior Shas’ui|
+000000412|1|1 Breacher Fire Warrior Shasâui|
 000000412|2|9 Breacher Fire Warriors|
 000000413|1|1 Long-quill|
 000000413|2|9-19 Kroot Carnivores|
 000000414|1|1-3 Krootox Riders|
 000000415|1|5-10 Kroot Hounds|
-000000417|1|1 Stealth Shas’vre|
-000000417|2|2-5 Stealth Shas’ui|
-000000418|1|1 Crisis Shas’vre|
-000000418|2|2-5 Crisis Shas’ui|
+000000417|1|1 Stealth Shasâvre|
+000000417|2|2-5 Stealth Shasâui|
+000000418|1|1 Crisis Shasâvre|
+000000418|2|2-5 Crisis Shasâui|
 000000420|1|1 Ghostkeel Battlesuit|
 000000421|1|1 Riptide Battlesuit|
-000000422|1|1 Pathfinder Shas’ui|
+000000422|1|1 Pathfinder Shasâui|
 000000422|2|9 Pathfinders|
 000000423|1|1-3 Piranhas|
 000000424|1|1 Devilfish|
@@ -280,19 +280,19 @@
 000000427|2|4-9 Vespid Stingwings|
 000000428|1|1 Firesight Marksman|
 000000430|1|1 Sky Ray Gunship|
-000000431|1|1 Longstrike – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000431|1|1 Longstrike â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000432|1|1 Hammerhead Gunship|
-000000433|1|1 Broadside Shas’vre|
-000000433|2|0-2 Broadside Shas’ui|
+000000433|1|1 Broadside Shasâvre|
+000000433|2|0-2 Broadside Shasâui|
 000000434|1|1 Stormsurge|
 000000435|1|1 Tidewall Droneport|
 000000436|1|1 Tidewall Shieldline|
 000000437|1|1 Tidewall Gunrig|
-000000439|1|1 Shas'o R'alai – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000439|1|1 Shas'o R'alai â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000443|1|1-2 XV9 Hazard Battlesuits|
-000000444|1|1 Y’vahra Battlesuit|
-000000445|1|1 R’varna Battlesuit|
-000000446|1|1 Ta’unar Supremacy Armour|
+000000444|1|1 Yâvahra Battlesuit|
+000000445|1|1 Râvarna Battlesuit|
+000000446|1|1 Taâunar Supremacy Armour|
 000000447|1|2-4 Tetras|
 000000448|1|1 TX42 Piranha|
 000000449|1|2 Heavy Gun Drones|
@@ -305,8 +305,8 @@
 000000458|1|1 Remote Sensor Tower|
 000000459|1|1 Drone Sentry Turret|
 000000460|1|1 Hive Tyrant|
-000000461|1|1 Swarmlord – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000462|1|1 Old One Eye – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000461|1|1 Swarmlord â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000462|1|1 Old One Eye â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000463|1|1 Broodlord|
 000000465|1|1 Tervigon|
 000000467|1|5-10 Genestealers|
@@ -322,7 +322,7 @@
 000000476|1|3-6 Venomthropes|
 000000477|1|1-3 Pyrovores|
 000000478|1|1 Haruspex|
-000000479|1|1 Deathleaper – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000479|1|1 Deathleaper â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000482|1|5 Raveners|
 000000483|1|3 Sky-slasher Swarms|
 000000484|1|10-20 Gargoyles|
@@ -360,14 +360,14 @@
 000000515|1|5-10 Purestrain Genestealers|
 000000516|1|1 Goliath Truck|
 000000521|1|1 Goliath Rockgrinder|
-000000522|1|1 Imotekh the Stormlord – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000522|1|1 Imotekh the Stormlord â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000523|1|1 Overlord|
 000000524|1|1 Lord|
-000000527|1|1 Nemesor Zahndrekh – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000528|1|1 Vargard Obyron – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000530|1|1 Orikan the Diviner – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000531|1|1 Anrakyr the Traveller – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000532|1|1 Trazyn the Infinite – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000527|1|1 Nemesor Zahndrekh â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000528|1|1 Vargard Obyron â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000530|1|1 Orikan the Diviner â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000531|1|1 Anrakyr the Traveller â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000532|1|1 Trazyn the Infinite â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000533|1|1 Catacomb Command Barge|
 000000534|1|10-20 Necron Warriors|
 000000535|1|5-10 Immortals|
@@ -376,8 +376,8 @@
 000000538|1|5-10 Flayed Ones|
 000000539|1|5-10 Triarch Praetorians|
 000000540|1|1 Triarch Stalker|
-000000541|1|1 C’tan Shard of the Nightbringer – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000542|1|1 C’tan Shard of the Deceiver – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000541|1|1 Câtan Shard of the Nightbringer â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000542|1|1 Câtan Shard of the Deceiver â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000543|1|1 Ghost Ark|
 000000544|1|1 Night Scythe|
 000000545|1|1 Doom Scythe|
@@ -387,7 +387,7 @@
 000000552|1|1 Monolith|
 000000553|1|1 Annihilation Barge|
 000000554|1|1 Doomsday Ark|
-000000555|1|1 Transcendent C’tan|
+000000555|1|1 Transcendent Câtan|
 000000556|1|1 Tesseract Vault|
 000000557|1|1 Obelisk|
 000000558|1|1 Canoptek Tomb Stalker|
@@ -397,18 +397,18 @@
 000000562|1|1 Sentry Pylon|
 000000564|1|1 Tesseract Ark|
 000000567|1|1 Gauss Pylon|
-000000568|1|1 Eldrad Ulthran – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000569|1|1 Prince Yriel – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000570|1|1 Illic Nightspear – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000571|1|1 Asurmen – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000572|1|1 Jain Zar – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000573|1|1 Karandras – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000574|1|1 Fuegan – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000575|1|1 Baharroth – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000568|1|1 Eldrad Ulthran â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000569|1|1 Prince Yriel â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000570|1|1 Illic Nightspear â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000571|1|1 Asurmen â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000572|1|1 Jain Zar â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000573|1|1 Karandras â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000574|1|1 Fuegan â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000575|1|1 Baharroth â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000576|1|1 Maugan Ra|
 000000577|1|1 Autarch|
 000000580|1|1 Autarch Skyrunner|
-000000581|1|1 Avatar of Khaine – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000581|1|1 Avatar of Khaine â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000582|1|1 Farseer|
 000000583|1|1 Farseer Skyrunner|
 000000584|1|2-4 Warlocks|
@@ -418,7 +418,7 @@
 000000589|1|10 Guardian Defenders|
 000000589|2|1 Heavy Weapon Platform|
 000000590|1|10 Storm Guardians|
-000000590|2|1 Serpent’s Scale Platform|
+000000590|2|1 Serpentâs Scale Platform|
 000000591|1|3-6 Windriders|
 000000592|1|5-10 Rangers|
 000000593|1|1 Dire Avenger Exarch|
@@ -466,7 +466,7 @@
 000000628|1|1 Revenant Titan|
 000000629|1|0-1 Cloud Dancer Felarch|
 000000629|2|3-6 Corsair Cloud Dancers|
-000000630|1|1 Irillyth – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000630|1|1 Irillyth â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000631|1|1 Phantom Titan|
 000000632|1|0-1 Corsair Reaver Felarch|
 000000632|2|5-10 Corsair Reavers|
@@ -474,10 +474,10 @@
 000000633|2|5-10 Corsair Skyreavers|
 000000634|1|1 Archon|
 000000639|1|1 Succubus|
-000000640|1|1 Lelith Hesperax – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000640|1|1 Lelith Hesperax â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000641|1|1 Haemonculus|
-000000642|1|1 Urien Rakarth – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000643|1|1 Drazhar – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000642|1|1 Urien Rakarth â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000643|1|1 Drazhar â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000644|1|1 Sybarite|
 000000644|2|9 Kabalite Warriors|
 000000646|1|1 Hekatrix|
@@ -530,18 +530,18 @@
 000000707|1|1 Shadowsword|
 000000708|1|1 Stormlord|
 000000709|1|1 Stormsword|
-000000713|1|1 ‘Iron Hand’ Straken – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000714|1|1 Sergeant Harker – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000713|1|1 âIron Handâ Straken â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000714|1|1 Sergeant Harker â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000716|1|1 Commissar|
 000000719|1|1 Tempestor Prime|
 000000719|2|4 Tempestus Scions|
 000000721|1|1 Taurox Prime|
-000000722|1|1 Ogryn Bone ‘ead|
+000000722|1|1 Ogryn Bone âead|
 000000722|2|2-5 Ogryns|
-000000723|1|1 Bullgryn Bone ‘ead|
+000000723|1|1 Bullgryn Bone âead|
 000000723|2|2-5 Bullgryns|
 000000724|1|5-10 Ratlings|
-000000725|1|1 Nork Deddog – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000725|1|1 Nork Deddog â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000727|1|1 Valkyrie|
 000000728|1|1 Atlas Recovery Vehicle|
 000000729|1|1 Salamander Command Vehicle|
@@ -592,7 +592,7 @@
 000000784|1|1 Vulture Gunship|
 000000785|1|1 Imperial Fortress Walls (1 gate section, 2 gate tower sections, 2 tower sections and 2 wall sections)|
 000000786|1|1 Primaris Redoubt|
-000000838|1|1 Belisarius Cawl – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000838|1|1 Belisarius Cawl â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000839|1|1 Tech-Priest Dominus|
 000000840|1|1 Tech-Priest Enginseer|
 000000841|1|3-6 Kataphron Breachers|
@@ -628,13 +628,13 @@
 000000867|1|1 Warhound Titan|
 000000868|1|1 Reaver Titan|
 000000869|1|1 Warlord Titan|
-000000870|1|1 Vindicare Assassin – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000871|1|1 Callidus Assassin – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000872|1|1 Eversor Assassin – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000873|1|1 Culexus Assassin – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000874|1|1 Inquisitor Greyfax – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000875|1|1 Inquisitor Karamazov – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000876|1|1 Inquisitor Coteaz – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000870|1|1 Vindicare Assassin â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000871|1|1 Callidus Assassin â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000872|1|1 Eversor Assassin â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000873|1|1 Culexus Assassin â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000874|1|1 Inquisitor Greyfax â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000875|1|1 Inquisitor Karamazov â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000876|1|1 Inquisitor Coteaz â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000877|1|1 Inquisitor|
 000000882|1|4-5 Custodian Guard|
 000000883|1|1 Venerable Contemptor Dreadnought|
@@ -644,7 +644,7 @@
 000000895|1|2-4 Death Cult Assassins|
 000000896|1|3-10 Arco-flagellants|
 000000897|1|1-2 Penitent Engines|
-000000898|1|1 Celestine – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000898|1|1 Celestine â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000898|2|2 Geminae Superia|
 000000899|1|1 Canoness|
 000000900|1|1 Imagifier|
@@ -671,10 +671,10 @@
 000000921|1|1 Vortex Missile Strongpoint|
 000000922|1|1 Void Shield Generator|
 000000923|1|1 Skyshield Landing Pad|
-000000924|1|1 Abaddon the Despoiler – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000925|1|1 Huron Blackheart – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000926|1|1 Cypher – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000000928|1|1 Fabius Bile – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000924|1|1 Abaddon the Despoiler â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000925|1|1 Huron Blackheart â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000926|1|1 Cypher â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000000928|1|1 Fabius Bile â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000000928|2|1 Surgeon Acolyte|
 000000929|1|1 Chaos Lord|
 000000930|1|1 Chaos Lord in Terminator Armour|
@@ -722,30 +722,28 @@
 000000968|1|1 Maulerfiend|
 000000969|1|1 Defiler|
 000000970|1|1 Khorne Lord of Skulls|
-000001016|1|1 Thousand Sons Sorcerer|
-000001017|1|1 Thousand Sons Sorcerer in Terminator Armour|
-000001019|1|1 Thousand Sons Cultist Champion|
-000001019|2|9-19 Thousand Sons Cultists|
+000001016|1|1 Sorcerer|
+000001017|1|1 Sorcerer In Terminator Armour|
 000001020|1|1 Aspiring Sorcerer|
 000001020|2|4-9 Rubric Marines|
-000001021|1|1 Thousand Sons Helbrute|
-000001022|1|1 Thousand Sons Rhino|
+000001021|1|1 Helbrute|
+000001022|1|1 Chaos Rhino|
 000001023|1|2 Chaos Spawn|
-000001024|1|1 Thousand Sons Heldrake|
-000001025|1|1 Thousand Sons Land Raider|
-000001026|1|1 Thousand Sons Predator Destructor|
-000001027|1|1 Thousand Sons Vindicator|
-000001028|1|1 Thousand Sons Forgefiend|
-000001029|1|1 Thousand Sons Maulerfiend|
-000001030|1|1 Thousand Sons Defiler|
-000001031|1|1 Magnus the Red – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001032|1|1 Ahriman – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001024|1|1 Heldrake|
+000001025|1|1 Chaos Land Raider|
+000001026|1|1 Chaos Predator Destructor|
+000001027|1|1 Chaos Vindicator|
+000001028|1|1 Forgefiend|
+000001029|1|1 Maulerfiend|
+000001030|1|1 Defiler|
+000001031|1|1 Magnus the Red â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001032|1|1 Ahriman â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001033|1|1 Exalted Sorcerer|
 000001034|1|1 Twistbray|
 000001034|2|9-19 Tzaangors|
 000001035|1|1 Scarab Occult Sorcerer|
 000001035|2|4-9 Scarab Occult Terminators|
-000001036|1|1 Thousand Sons Daemon Prince|
+000001036|1|1 Daemon Prince of Tzeentch|
 000001044|1|1 Plague Champion|
 000001044|2|4-9 Plague Marines|
 000001045|1|1 Possessed Champion|
@@ -757,7 +755,7 @@
 000001050|1|1 Chaos Predator Annihilator|
 000001051|1|1 Defiler|
 000001052|1|1 Daemon Prince of Nurgle|
-000001053|1|1 Typhus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001053|1|1 Typhus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001054|1|1 Lord of Contagion|
 000001055|1|1 Malignant Plaguecaster|
 000001056|1|10-20 Poxwalkers|
@@ -770,9 +768,9 @@
 000001098|1|1 Chaos Questoris Knight Magaera|
 000001099|1|1 Chaos Acastus Knight Porphyrion|
 000001100|1|1 Chaos Questoris Knight Styrix|
-000001104|1|1 Karanak – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001105|1|1 Skarbrand – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001106|1|1 Skulltaker – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001104|1|1 Karanak â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001105|1|1 Skarbrand â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001106|1|1 Skulltaker â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001111|1|1 Rendmaster on Blood Throne|
 000001112|1|1 Gore Hound|
 000001112|2|4-9 Flesh Hounds|
@@ -781,16 +779,16 @@
 000001115|1|1 Bloodhunter|
 000001115|2|2-5 Bloodcrushers|
 000001116|1|1 Skull Cannon|
-000001117|1|1 Kairos Fateweaver – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001118|1|1 The Changeling – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001119|1|1 The Blue Scribes – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001117|1|1 Kairos Fateweaver â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001118|1|1 The Changeling â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001119|1|1 The Blue Scribes â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001120|1|1 Lord of Change|
 000001125|1|1 Pyrocaster|
 000001125|2|2-5 Flamers|
 000001126|1|1 Exalted Flamer|
 000001127|1|3-6 Screamers|
 000001128|1|1 Burning Chariot|
-000001129|1|1 Epidemius – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001129|1|1 Epidemius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001130|1|1 Great Unclean One|
 000001132|1|1 Plagueridden|
 000001132|2|9 Plaguebearers|
@@ -798,7 +796,7 @@
 000001134|1|1-2 Beasts of Nurgle|
 000001135|1|1 Plaguebringer|
 000001135|2|2-5 Plague Drones|
-000001136|1|1 The Masque of Slaanesh – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001136|1|1 The Masque of Slaanesh â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001137|1|1 Keeper of Secrets|
 000001138|1|1 Tranceweaver|
 000001139|1|1 Herald of Slaanesh on Steed of Slaanesh|
@@ -812,7 +810,7 @@
 000001145|2|4-9 Seekers|
 000001146|1|1-2 Seeker Chariots|
 000001147|1|1 Exalted Seeker Chariot|
-000001148|1|1 Be’lakor – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001148|1|1 Beâlakor â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001149|1|1 Daemon Prince of Chaos|
 000001150|1|5-10 Furies|
 000001151|1|1 Soul Grinder|
@@ -828,7 +826,7 @@
 000001160|1|1 Scout Sergeant|
 000001160|2|4-9 Scouts|
 000001161|1|1 Sicaran Arcus|
-000001162|1|1 Sergeant Telion – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001162|1|1 Sergeant Telion â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001163|1|1 Sicaran Omega|
 000001164|1|1 Techmarine Gunner|
 000001164|2|1 Thunderfire Cannon|
@@ -872,14 +870,14 @@
 000001317|1|1 Hell Blade|
 000001318|1|1 Hell Talon|
 000001321|1|1 Chaos Thunderhawk|
-000001329|1|1 An'ggrath the Unbound – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001332|1|1 Zarakynel – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001333|1|1 Aetaos'rau'keres – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001329|1|1 An'ggrath the Unbound â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001332|1|1 Zarakynel â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001333|1|1 Aetaos'rau'keres â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001336|1|3 Plague Toads|
 000001337|1|3 Pox Riders|
 000001338|1|1 Spined Chaos Beast|
 000001339|1|1 Giant Chaos Spawn|
-000001340|1|1 Scabeiathrax the Bloated – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001340|1|1 Scabeiathrax the Bloated â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001344|1|1 Librarian with Jump Pack|
 000001345|1|1 Lieutenant in Reiver Armour|
 000001346|1|1 Lieutenant|
@@ -898,10 +896,10 @@
 000001371|1|1 Deathshroud Champion|
 000001371|2|2-5 Deathshroud Terminators|
 000001372|1|1 Blightlord Champion|
-000001372|2|4-9 Blightlord Terminators|
+000001372|2|2-9 Blightlord Terminators|
 000001374|1|1-2 Myphitic Blight-hulers|
 000001376|1|1 Plagueburst Crawler|
-000001377|1|1 Mortarion – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001377|1|1 Mortarion â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001383|1|1 Mukaali Rider Sergeant|
 000001383|2|2 Mukaali Riders|
 000001385|1|1 Grot Bomm Launcha|
@@ -918,9 +916,9 @@
 000001397|1|4 Munitorum Servitors|
 000001398|1|1 Ogryn Bodyguard|
 000001400|1|1 Bonesinger|
-000001406|1|1 Sly Marbo – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001406|1|1 Sly Marbo â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001423|1|1 Ravenwing Talonmaster|
-000001446|1|1 Trajann Valoris – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001446|1|1 Trajann Valoris â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001447|1|1 Shield-Captain|
 000001448|1|1 Shield-Captain in Allarus Terminator Armour|
 000001449|1|1 Shield-Captain on Dawneagle Jetbike|
@@ -935,8 +933,8 @@
 000001462|1|1 Changecaster|
 000001463|1|1 Fateskimmer|
 000001464|1|1 Fluxmaster|
-000001465|1|1 Rotigus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001466|1|1 Horticulous Slimux – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001465|1|1 Rotigus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001466|1|1 Horticulous Slimux â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001467|1|1 Poxbringer|
 000001468|1|1 Sloppity Bilepiper|
 000001469|1|1 Spoilpox Scrivener|
@@ -951,13 +949,13 @@
 000001481|1|1 Armiger Helverin|
 000001482|1|1 Armiger Warglaive|
 000001483|1|1 Knight Preceptor|
-000001484|1|1 Canis Rex – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001484|1|1 Canis Rex â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001485|1|1 Knight Castellan|
 000001486|1|1 Knight Valiant|
 000001509|1|1 Wulfen Dreadnought|
 000001523|1|1 Scout Sniper Sergeant|
 000001523|2|4-9 Scout Snipers|
-000001524|1|1 Sergeant Chronus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001524|1|1 Sergeant Chronus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001525|1|1 Hoplite Alpha|
 000001525|2|4-9 Secutarii Hoplites|
 000001526|1|1 Peltast Alpha|
@@ -974,7 +972,7 @@
 000001545|1|1 Mekboy Workshop|
 000001546|1|1 Abominant|
 000001553|1|1 Preacher|
-000001556|1|1 Haarken Worldclaimer – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001556|1|1 Haarken Worldclaimer â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001557|1|1 Contemptor-Galatus Dreadnought|
 000001558|1|3-6 Aquilon Custodians|
 000001559|1|5 Custodian Guard with Adrasite and Pyrithite Spears|
@@ -995,7 +993,7 @@
 000001574|2|1-2 Atalan Wolfquads*|
 000001576|1|1 Tectonic Fragdrill|
 000001577|1|1 Seraptek Heavy Construct|
-000001579|1|1 Inquisitor Eisenhorn – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001579|1|1 Inquisitor Eisenhorn â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001580|1|1 Tech-Priest Manipulus|
 000001581|1|1 Master of Possession|
 000001583|1|1 Lord Discordant on Helstalker|
@@ -1004,9 +1002,9 @@
 000001587|1|1 Noctilith Crown|
 000001588|1|1 Skull Altar|
 000001589|1|1 Infernal Enrapturess|
-000001596|1|1 Rein – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001596|2|1 Raus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001598|1|1 Amallyn Shadowguide – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001596|1|1 Rein â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001596|2|1 Raus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001598|1|1 Amallyn Shadowguide â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001600|1|1 Rogue Psyker|
 000001601|1|4 Negavolt Cultists|
 000001603|1|4 Spindle Drones|
@@ -1018,11 +1016,11 @@
 000001608|1|1 Land Raider Proteus|
 000001609|1|1 Fire Raptor Gunship|
 000001610|1|1 Storm Speeder Thunderstrike|
-000001611|1|1 Chief Librarian Tigurius – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001611|1|1 Chief Librarian Tigurius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001630|1|1 Ambull|
 000001647|1|1 Contorted Epitome|
-000001648|1|1 Shalaxi Helbane – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000001649|1|1 Syll’Esske – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001648|1|1 Shalaxi Helbane â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001649|1|1 SyllâEsske â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001650|1|1 Skorpius Dunerider|
 000001651|1|1 Skorpius Disintegrator|
 000001658|1|1 Knight Despoiler|
@@ -1037,14 +1035,14 @@
 000001668|1|1 Eliminator Sergeant|
 000001668|2|2 Eliminators|
 000001680|1|1 Ares Gunship|
-000001822|1|1 X-101 – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001822|1|1 X-101 â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001825|1|1 Gladiator Valiant|
 000001991|1|1 Terrax-pattern Termite|
-000001993|1|1 Da Red Gobbo – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000001993|1|1 Da Red Gobbo â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000001994|1|1 Carnodon|
 000001997|1|5-10 Death Company Marines|
-000002063|1|1 Triumph of Saint Katherine – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002064|1|1 Junith Eruita – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002063|1|1 Triumph of Saint Katherine â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002064|1|1 Junith Eruita â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002066|1|1 Zephyrim Superior|
 000002066|2|4-9 Zephyrim|
 000002067|1|1-2 Mortifiers|
@@ -1063,21 +1061,21 @@
 000002085|1|1 Archaeopter Transvector|
 000002086|1|1 Archaeopter Stratoraptor|
 000002087|1|1 Archaeopter Fusilave|
-000002088|1|1 Aleya – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002090|1|1 Inquisitor Draxus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002092|1|1 Illuminor Szeras – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002093|1|1 Archivist – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002088|1|1 Aleya â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002090|1|1 Inquisitor Draxus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002092|1|1 Illuminor Szeras â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002093|1|1 Archivist â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002098|1|1 Hellblaster Sergeant|
 000002098|2|4-9 Hellblasters|
 000002099|1|1 Aggressor Sergeant|
 000002099|2|2-5 Aggressors|
-000002100|1|1 Adrax Agatone – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002100|1|1 Adrax Agatone â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002102|1|1 Land Speeder Typhoon|
 000002103|1|1 Apothecary|
 000002103|2|1 Company Ancient|
 000002103|3|1 Company Champion|
 000002103|4|2 Company Veterans|
-000002105|1|1 Darnath Lysander – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002105|1|1 Darnath Lysander â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002108|1|1 Plasmancer|
 000002109|1|1 Skorpekh Lord|
 000002110|1|3-6 Skorpekh Destroyers|
@@ -1087,7 +1085,7 @@
 000002115|1|1 Canoptek Doomstalker|
 000002116|1|1-3 Lokhust Heavy Destroyers|
 000002173|1|1 Land Raider Redeemer|
-000002199|1|1 Marneus Calgar – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002199|1|1 Marneus Calgar â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002199|2|2 Victrix Honour Guard|
 000002202|1|1 Devastator Sergeant|
 000002202|2|4-9 Devastator Marines|
@@ -1103,8 +1101,8 @@
 000002270|1|1 Desolation Sergeant|
 000002270|2|4 Desolation Marines|
 000002285|1|5-10 Death Company Marines with Bolt Rifles|
-000002291|1|1 Sammael – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002296|1|1 Lazarus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002291|1|1 Sammael â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002296|1|1 Lazarus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002302|1|1 Deathwing Ancient|
 000002302|2|1 Deathwing Apothecary|
 000002302|3|1 Deathwing Champion|
@@ -1115,10 +1113,10 @@
 000002353|1|1 Psychomancer|
 000002354|1|1 Chronomancer|
 000002355|1|1 Hexmark Destroyer|
-000002357|1|1 C’tan Shard of the Void Dragon – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002357|1|1 Câtan Shard of the Void Dragon â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002358|1|3-6 Ophydian Destroyers|
 000002359|1|1-6 Lokhust Destroyers|
-000002360|1|1 Szarekh – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002360|1|1 Szarekh â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002360|2|2 Triarchal Menhirs|
 000002361|1|1-3 Convergence of Dominion Starsteles|
 000002362|1|1 Tomb Citadel|
@@ -1142,12 +1140,12 @@
 000002471|3|1 Sslyth|
 000002471|4|1 Ur-ghul|
 000002472|1|1 Palatine|
-000002473|1|1 Tor Garadon – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002473|1|1 Tor Garadon â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002477|1|1 Technoarcheologist|
 000002478|1|1 Skitarii Marshal|
-000002479|1|1 Morvenn Vahl – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002480|1|1 Aestred Thurga – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002480|2|1 Agathae Dolan – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002479|1|1 Morvenn Vahl â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002480|1|1 Aestred Thurga â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002480|2|1 Agathae Dolan â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002481|1|1 Sacresant Superior|
 000002481|2|4-9 Celestian Sacresants|
 000002482|1|1 Dogmata|
@@ -1156,28 +1154,28 @@
 000002484|1|1 Castigator|
 000002485|1|1 Ibram Gaunt|
 000002485|2|5 Tanith Ghosts|
-000002488|1|1 Zodgrod Wortsnagga – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002488|1|1 Zodgrod Wortsnagga â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002489|1|1 Beastboss|
 000002490|1|1 Beastboss on Squigosaur|
 000002491|1|1 Painboss|
 000002492|1|1 Wurrboy|
-000002493|1|1 Mozrog Skragbad – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002493|1|1 Mozrog Skragbad â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002494|1|1 Beast Snagga Nob|
 000002494|2|9-19 Beast Snagga Boyz|
 000002496|1|1-2 Nob On Smasha Squig|
 000002496|2|3-6 Squighog Boyz|
 000002497|1|1 Kill Rig|
 000002498|1|1 Hunta Rig|
-000002499|1|1 Big’ed Bossbunka|
+000002499|1|1 Bigâed Bossbunka|
 000002500|1|1 Infernal Master|
-000002501|1|1 Thousand Sons Predator Annihilator|
+000002501|1|1 Chaos Predator Annihilator|
 000002507|1|1 Novitiate Superior|
 000002507|2|9 Sisters Novitiate|
 000002509|1|1 Voidmaster|
 000002509|2|4 Voidsmen|
 000002509|3|1 Canid|
 000002518|1|1 Blade Champion|
-000002519|1|1 Valerian – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002519|1|1 Valerian â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002520|1|1 Knight-Centura|
 000002521|1|1 Prosecutor Sister Superior|
 000002521|2|3-9 Prosecutors|
@@ -1204,13 +1202,13 @@
 000002536|1|1 Lead Player|
 000002536|2|4-11 Players|
 000002537|1|1 Death Jester|
-000002538|1|1 Solitaire – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002538|1|1 Solitaire â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002539|1|2-4 Skyweavers|
 000002540|1|1 Voidweaver|
 000002541|1|1 Starweaver|
-000002542|1|1 Yvraine – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002543|1|1 Visarch – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002544|1|1 Yncarne – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002542|1|1 Yvraine â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002543|1|1 Visarch â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002544|1|1 Yncarne â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002562|1|1 War Dog Executioner|
 000002563|1|1 War Dog Stalker|
 000002564|1|1 War Dog Karnivore|
@@ -1242,12 +1240,12 @@
 000002591|1|16 Mutoid Vermin|
 000002592|1|4 Nightmare Hulks|
 000002592|2|3 Gellerpox Mutants|
-000002593|1|1 Ûthar the Destined – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002594|1|1 Kâhl|
+000002593|1|1 Ãthar the Destined â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002594|1|1 KÃ¢hl|
 000002595|1|1 Einhyr Champion|
 000002596|1|1 Grimnyr|
 000002596|2|2 CORVs*|
-000002597|1|1 Brôkhyr Iron-master|
+000002597|1|1 BrÃ´khyr Iron-master|
 000002597|2|1 Ironkin Assistant*|
 000002597|3|3 E-COGs*|
 000002598|1|1 Theyn|
@@ -1257,10 +1255,10 @@
 000002600|1|5-10 Cthonian Beserks|
 000002601|1|3-6 Hernkyn Pioneers|
 000002602|1|1 Sagitaur|
-000002603|1|3-6 Brôkhyr Thunderkyn|
+000002603|1|3-6 BrÃ´khyr Thunderkyn|
 000002604|1|1 Hekaton Land Fortress|
-000002605|1|1 Lord Solar Leontus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002606|1|1 Ursula Creed – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002605|1|1 Lord Solar Leontus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002606|1|1 Ursula Creed â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002607|1|1 Cadian Castellan|
 000002609|1|1 Cadian Commander|
 000002609|2|4 Cadian Veteran Guardsmen|
@@ -1280,9 +1278,9 @@
 000002616|2|4-9 Rough Riders|
 000002617|1|1 Rogal Dorn Battle Tank|
 000002619|1|1 Aegis Defence Line|
-000002621|1|1 Angron – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002622|1|1 Khârn the Betrayer – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002623|1|1 Lord Invocatus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002621|1|1 Angron â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002622|1|1 KhÃ¢rn the Betrayer â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002623|1|1 Lord Invocatus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002624|1|1 Daemon Prince of Khorne|
 000002625|1|1 Lord on Juggernaut|
 000002626|1|1 Master of Executions|
@@ -1309,9 +1307,9 @@
 000002641|1|1 Heldrake|
 000002642|1|1 Khorne Lord of Skulls|
 000002677|1|1 Ancient in Terminator Armour|
-000002678|1|1 Chaplain Cassius – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002679|1|1 Vashtorr the Arkifane – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002682|1|1 Lion El’Jonson – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002678|1|1 Chaplain Cassius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002679|1|1 Vashtorr the Arkifane â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002682|1|1 Lion ElâJonson â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002683|1|1 Proctor-Vigilant|
 000002683|2|9 Vigilants|
 000002683|3|1 Cyber-mastiff|
@@ -1331,7 +1329,7 @@
 000002691|2|2-5 Tyranid Warriors|
 000002692|1|1 Tyranid Prime|
 000002692|2|2-5 Tyranid Warriors|
-000002693|1|3-6 Von Ryan’s Leapers|
+000002693|1|3-6 Von Ryanâs Leapers|
 000002694|1|1 Winged Tyranid Prime|
 000002700|1|1 Astraeus|
 000002701|1|1 Captain in Phobos Armour|
@@ -1342,14 +1340,14 @@
 000002705|1|1 Gladiator Lancer|
 000002706|1|1 Ironclad Dreadnought|
 000002707|1|1 Judiciar|
-000002708|1|1 Kayvaan Shrike – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002709|1|1 Kor’sarro Khan – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002708|1|1 Kayvaan Shrike â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002709|1|1 Korâsarro Khan â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002710|1|1 Land Raider Helios|
 000002711|1|1 Land Speeder|
 000002712|1|1 Outrider Sergeant|
 000002712|2|2-5 Outriders|
 000002712|3|0-1 Invader ATV|
-000002713|1|1 Pedro Kantor – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002713|1|1 Pedro Kantor â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002714|1|1 Predator Annihilator|
 000002715|1|1 Predator Destructor|
 000002717|1|1 Redemptor Dreadnought|
@@ -1363,7 +1361,7 @@
 000002724|1|1 Thunderhawk Transporter|
 000002725|1|1 Veteran Sergeant|
 000002725|2|4 Tyrannic War Veterans|
-000002726|1|1 Vulkan He’stan – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002726|1|1 Vulkan Heâstan â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002727|1|1 Whirlwind|
 000002728|1|1 Whirlwind Scorpius|
 000002729|1|1 Xiphon Interceptor|
@@ -1394,9 +1392,7 @@
 000002751|1|1 Norn Emissary|
 000002752|1|1 Norn Assimilator|
 000002753|1|1 Neurolictor|
-000002754|1|1 Ahriman – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002755|1|1 Exalted Sorcerer|
-000002756|1|1 Thousand Sons Daemon Prince with Wings|
 000002757|1|1 Daemon Prince of Khorne with Wings|
 000002758|1|1 Daemon Prince of Chaos with Wings|
 000002759|1|1 Autarch Wayleaper|
@@ -1407,17 +1403,17 @@
 000002762|2|1 Death Cult Assassin|
 000002762|3|1 Lectro-Maester|
 000002762|4|1 Rejuvenat Adept|
-000002763|1|1 Janus Draik – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002764|1|1 Neyam Shai Murad – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002763|1|1 Janus Draik â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002764|1|1 Neyam Shai Murad â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002765|1|1 Navigator|
-000002766|1|1 UR-025 – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002766|1|1 UR-025 â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002767|1|5-10 Inquisitorial Agents|
 000002767|2|1-2 Gun Servitors*|
 000002768|1|1 Grey Knights Relic Razorback|
 000002769|1|1 Armiger Moirax|
-000002770|1|1 Sir Hekhtur – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002771|1|1 Ephrael Stern – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002771|2|1 Kyganil of the Bloody Tears – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002770|1|1 Sir Hekhtur â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002771|1|1 Ephrael Stern â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002771|2|1 Kyganil of the Bloody Tears â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002772|1|1 Ancient|
 000002772|2|1 Company Champion|
 000002772|3|2 Company Veterans|
@@ -1426,21 +1422,21 @@
 000002776|1|1 Assault Intercessor Sergeant with Jump Pack|
 000002776|2|4-9 Assault Intercessors with Jump Packs|
 000002779|1|10 MODELS MAXIMUM|
-000002779|2|3‑10 Kill Team Infiltrators|
-000002779|3|0‑3 Kill Team Infiltrators with bolt sniper rifles|
-000002779|4|0‑4 Kill Team Infiltrators with Deathwatch occulus bolt carbines|
-000002779|5|0‑4 Kill Team Infiltrators with combat knives|
+000002779|2|3â10 Kill Team Infiltrators|
+000002779|3|0â3 Kill Team Infiltrators with bolt sniper rifles|
+000002779|4|0â4 Kill Team Infiltrators with Deathwatch occulus bolt carbines|
+000002779|5|0â4 Kill Team Infiltrators with combat knives|
 000002780|1|10 MODELS MAXIMUM|
 000002780|2|1 Kill Team Sergeant|
 000002780|3|2-9 Kill Team Intercessors|
 000002780|4|0-4 Kill Team Intercessors with plasma incinerators|
 000002780|5|0-4 Kill Team Intercessors with heavy bolt pistols|
-000002780|6|0‑4 Kill Team Intercessors with pyreblasters|
-000002780|7|0‑2 Kill Team Intercessors with superfrag rocket launchers|
+000002780|6|0â4 Kill Team Intercessors with pyreblasters|
+000002780|7|0â2 Kill Team Intercessors with superfrag rocket launchers|
 000002781|1|10 MODELS MAXIMUM|
-000002781|2|3‑10 Kill Team Heavy Intercessors|
-000002781|3|0‑3 Kill Team Heavy Intercessors with power fists|
-000002781|4|0‑3 Kill Team Heavy Intercessors with melta rifles|
+000002781|2|3â10 Kill Team Heavy Intercessors|
+000002781|3|0â3 Kill Team Heavy Intercessors with power fists|
+000002781|4|0â3 Kill Team Heavy Intercessors with melta rifles|
 000002783|1|1 Watch Sergeant|
 000002783|2|4-9 Deathwatch Veterans|
 000002786|1|1 Impulsor|
@@ -1449,11 +1445,11 @@
 000002789|1|1 Gladiator Reaper|
 000002790|1|1 Repulsor Executioner|
 000002791|1|1 Repulsor|
-000002792|1|1 Chaplain Grimaldus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002792|1|1 Chaplain Grimaldus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002792|2|3 Cenobyte Servitors|
 000002793|1|1 Castellan|
-000002794|1|1 High Marshal Helbrecht – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000002795|1|1 Emperor’s Champion – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002794|1|1 High Marshal Helbrecht â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000002795|1|1 Emperorâs Champion â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000002796|1|1 Marshal|
 000002797|1|1 Primaris Sword Brother|
 000002797|2|5-11 Primaris Initiates|
@@ -1588,20 +1584,20 @@
 000003688|1|1 Falchion|
 000003689|1|1 Falchion|
 000003690|1|1 Falchion|
-000003691|1|1 Da Red Gobbo – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000003692|1|1 Grotmas Gitz – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003691|1|1 Da Red Gobbo â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003692|1|1 Grotmas Gitz â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003693|1|1 Overlord with Translocation Shroud |
 000003694|1|1-3 Sydonian Dragoons|
 000003695|1|1 Sydonian Skatros|
 000003696|1|1 Chapter Master Draaken Vorn - <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003697|1|1 Chapter Champion Facio - <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003698|1|3-6 Inner Circle Companions|
-000003699|1|1 Crisis Sunforge Shas’vre|
-000003699|2|2 Crisis Sunforge Shas’ui|
-000003700|1|1 Crisis Fireknife Shas’vre|
-000003700|2|2 Crisis Fireknife Shas’ui|
-000003701|1|1 Crisis Starscythe Shas’vre|
-000003701|2|2 Crisis Starscythe Shas’ui|
+000003699|1|1 Crisis Sunforge Shasâvre|
+000003699|2|2 Crisis Sunforge Shasâui|
+000003700|1|1 Crisis Fireknife Shasâvre|
+000003700|2|2 Crisis Fireknife Shasâui|
+000003701|1|1 Crisis Starscythe Shasâvre|
+000003701|2|2 Crisis Starscythe Shasâui|
 000003702|1|1 Kroot Trail Shaper|
 000003703|1|1 Kroot War Shaper|
 000003704|1|1 Kroot Flesh Shaper|
@@ -1619,7 +1615,7 @@
 000003715|1|1 Benefictus|
 000003716|1|1 Acolyte Leader|
 000003716|2|4-9 Acolyte Hybrids|
-000003811|1|1 Celestian Sacresant Aveline – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003811|1|1 Celestian Sacresant Aveline â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003812|1|1 Ministorum Priest|
 000003813|1|1 Terminator Justicar|
 000003813|2|4 Grey Knights Terminators|
@@ -1632,7 +1628,7 @@
 000003818|2|9 Battle Sisters|
 000003819|1|1 Immolator|
 000003820|1|1 Inquisitorial Chimera|
-000003821|1|1 Chaplain Cassius – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003821|1|1 Chaplain Cassius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003821|2|8 Kill Team Veterans:<br><ul style="list-style-type:circle;"><li>Vael Donatus</li><li>Zameon Gydrael</li><li>Rodricus Grytt</li><li>Antor Delassio</li><li>Edryc Setorax</li><li>Jensus Natorian</li><li>Drenn Redblade</li><li>Ennox Sorrlock</li></ul>|
 000003821|3|1 Kill Team Terminator (Garran Branatar)|
 000003821|4|1 Kill Team Biker (Jetek Suberei)|
@@ -1672,7 +1668,7 @@
 000003835|1|1 Death Company Dreadnought|
 000003836|1|5-10 Death Company Marines|
 000003837|1|5-10  Death Company Marines with Jump Packs|
-000003838|1|1 Lieutenant Titus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003838|1|1 Lieutenant Titus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003839|1|1 Tech-Priest Dominus|
 000003840|1|1 Tech-Priest Manipulus|
 000003841|1|1 Skitarii Marshal|
@@ -1716,15 +1712,15 @@
 000003873|2|4-9 Deathwatch Terminators|
 000003874|1|10 MODELS MAXIMUM|
 000003874|2|1 Kill Team Sergeant with Jump Pack|
-000003874|3|2‑9 Kill Team Intercessors with Jump Packs|
-000003874|4|0‑5 Kill Team Heavy Intercessors with Jump Packs|
-000003875|1|1 Chaplain Cassius – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003874|3|2â9 Kill Team Intercessors with Jump Packs|
+000003874|4|0â5 Kill Team Heavy Intercessors with Jump Packs|
+000003875|1|1 Chaplain Cassius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003875|2|8 Kill Team Veterans:<br><ul style="list-style-type:circle;"><li>Vael Donatus</li><li>Zameon Gydrael</li><li>Rodricus Grytt</li><li>Antor Delassio</li><li>Edryc Setorax</li><li>Jensus Natorian</li><li>Drenn Redblade</li><li>Ennox Sorrlock</li></ul>|
 000003875|3|1 Kill Team Terminator (Garran Branatar)|
 000003875|4|1 Kill Team Biker (Jetek Suberei)|
 000003876|1|1 Visionary|
 000003876|2|4-9 Legionaries|
-000003877|1|1 Deathleaper – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003877|1|1 Deathleaper â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003878|1|1 Parasite of Mortrex|
 000003879|1|1 Winged Hive Tyrant|
 000003880|1|1 Winged Tyranid Prime|
@@ -1735,10 +1731,10 @@
 000003885|1|1 Neurolictor|
 000003886|1|5 Raveners|
 000003887|1|1 Trygon|
-000003888|1|3-6 Von Ryan’s Leapers|
+000003888|1|3-6 Von Ryanâs Leapers|
 000003889|1|1 Lord Commissar|
 000003889|2|5 Veteran Guardsmen|
-000003890|1|1 Lord Marshal Dreir – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003890|1|1 Lord Marshal Dreir â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003891|1|1 Catachan Commander|
 000003891|2|4 Veteran Guardsmen|
 000003892|1|1 Rogal Dorn Tank Commander|
@@ -1751,7 +1747,7 @@
 000003897|1|2 Ordnance Teams|
 000003898|1|1 Ridemaster|
 000003898|2|4-9 Death Riders|
-000003909|1|1 Lhykhis – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003909|1|1 Lhykhis â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003910|1|1 D-cannon Platform|
 000003911|1|1 Shadow Weaver Platform|
 000003912|1|1 Vibro Cannon Platform|
@@ -1769,10 +1765,10 @@
 000003920|1|1 Raider|
 000003921|1|1 Venom|
 000003922|1|1 Minka Lesk - <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000003922|2|4 Lesk’s Heroes|
+000003922|2|4 Leskâs Heroes|
 000003923|1|1 Death Jester|
 000003924|1|1 Shadowseer|
-000003925|1|1 Solitaire – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003925|1|1 Solitaire â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003926|1|1 Troupe Master|
 000003927|1|1 Starweaver|
 000003928|1|2-4 Skyweavers|
@@ -1793,7 +1789,7 @@
 000003934|2|5-10 Corsair Reavers|
 000003935|1|0-1 Corsair Skyreaver Felarch|
 000003935|2|5-10 Corsair Skyreavers|
-000003937|1|1 Provisionally Prepared – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000003937|1|1 Provisionally Prepared â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003938|1|1 Cadian Castellan|
 000003939|1|1 Cadian Commander|
 000003939|2|4 Cadian Veteran Guardsmen|
@@ -1808,7 +1804,7 @@
 000003946|1|1 Quartermaster Revenant|
 000003946|2|4 Medicae Servitors|
 000003947|1|1 Minka Lesk - <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
-000003947|2|4 Lesk’s Heroes|
+000003947|2|4 Leskâs Heroes|
 000003948|1|1 Shock Trooper Sergeant and 9 Shock Troopers|
 000003948|2|OR|
 000003948|3|2 Shock Trooper Sergeants and 18 Shock Troopers|
@@ -1980,7 +1976,7 @@
 000004075|5|4 Sanctifiers|
 000004076|1|1 Blood Herald|
 000004076|2|7 Goremongers|
-000004077|1|1 Fulgrim – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004077|1|1 Fulgrim â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000004078|1|1 Lord Exultant|
 000004079|1|1 Obsessionist|
 000004079|2|4-9 Tormentors|
@@ -1989,7 +1985,7 @@
 000004081|1|1 Terminator Champion|
 000004081|2|4 Chaos Terminators|
 000004082|1|1 Chaos Land Raider|
-000004083|1|1 Lucius the Eternal – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004083|1|1 Lucius the Eternal â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000004084|1|1 Lord Kakophonist|
 000004085|1|1 Sorcerer|
 000004086|1|1 Daemon Prince of Slaanesh|
@@ -2001,7 +1997,7 @@
 000004091|1|1 Maulerfiend|
 000004092|1|1 Heldrake|
 000004093|1|1 Chaos Rhino|
-000004094|1|1 Shalaxi Helbane – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004094|1|1 Shalaxi Helbane â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000004095|1|1 Alluress|
 000004095|2|9 Daemonettes|
 000004096|1|1 Blissbringer|
@@ -2013,9 +2009,9 @@
 000004099|2|5 Noise Marines|
 000004100|1|1 Tormentbringer|
 000004101|1|1-2 Hellflayers|
-000004102|1|1 Karanak – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004102|1|1 Karanak â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000004103|1|1 Slaughterbound|
-000004104|1|1 Skarbrand – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004104|1|1 Skarbrand â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000004105|1|1 Bloodthirster|
 000004106|1|1 Bloodreaper|
 000004106|2|9 Bloodletters|
@@ -2025,7 +2021,7 @@
 000004108|2|4-9 Flesh Hounds|
 000004109|1|1 Lord of Poxes|
 000004110|1|1 Foetid Bloat-drone|
-000004111|1|1 Rotigus – <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004111|1|1 Rotigus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000004112|1|1 Great Unclean One|
 000004113|1|1 Plagueridden|
 000004113|2|9 Plaguebearers|
@@ -2040,3 +2036,14 @@
 000004119|1|1 Servitor Underseer|
 000004119|2|2 Gun Servitors|
 000004119|3|6 Combat Servitors|
+000004120|1|1 Daemon Prince of Tzeentch with Wings|
+000004121|1|2-4 Sekhetar Robots|
+000004122|1|1 Aviarch|
+000004122|2|2-5 Enlightened|
+000004123|1|1 Kairos Fateweaver â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004124|1|1 Lord of Change|
+000004125|1|1 Pyrocaster|
+000004125|2|2-5 Flamers|
+000004126|1|3-6 Screamers|
+000004127|1|10 Pink Horrors|
+000004128|1|10 Blue Horrors|
