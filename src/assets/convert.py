@@ -9,12 +9,37 @@ from urllib.parse import urljoin
 # http://wahapedia.ru/wh40k10ed/Datasheets_stratagems.csv
 
 replacements = {
+    # HTML tags
     r"<[:\.\-\w\d\s;#\\+()\.,\[\]_=\"/]+>": "",
-    r"\u2019": "\'",
-    r"\u2018": "\'",
-    r"\u2013": "-",
+
+    # BOM artifacts - handle both individual and combined sequences
+    r"\u00ef\u00bb\u00bf": "",  # UTF-8 BOM sequence
+    r"ï»¿": "",  # BOM as literal characters
+    r"\u00ef": "",  # Individual BOM components
+    r"\u00bb": "",
+    r"\u00bf": "",
+
+    # Common UTF-8 encoding artifacts for punctuation
+    r"\u00e2\u0080\u0099": "'",  # Right single quotation mark (')
+    r"\u00e2\u0080\u0098": "'",  # Left single quotation mark (')
+    r"\u00e2\u0080\u009c": '"',  # Left double quotation mark (")
+    r"\u00e2\u0080\u009d": '"',  # Right double quotation mark (")
+    r"\u00e2\u0080\u0093": "-",  # En dash (–)
+    r"\u00e2\u0080\u0094": "-",  # Em dash (—)
+    r"\u00e2\u0080\u00a6": "...",  # Horizontal ellipsis (…)
+
+    # Standard Unicode replacements
+    r"\u2019": "'",  # Right single quotation mark
+    r"\u2018": "'",  # Left single quotation mark
+    r"\u201c": '"',  # Left double quotation mark
+    r"\u201d": '"',  # Right double quotation mark
+    r"\u2013": "-",  # En dash
+    r"\u2014": "-",  # Em dash
+    r"\u2026": "...",  # Horizontal ellipsis
+
+    # Game-specific cleanup
     r" \(Aura\)": "",
-    r"\'": "'",
+    r"\'": "'",  # Normalize apostrophes
 }
 
 # Define the conditions for rows to be ignored
@@ -58,6 +83,32 @@ ignore_conditions = [
 ]
 
 
+def clean_text(text):
+    """
+    Clean text by applying all replacements in the correct order
+    """
+    if text is None:
+        return text
+
+    # Convert to string if not already
+    text = str(text)
+
+    # First, handle BOM at the start of strings specifically
+    if text.startswith('\ufeff'):
+        text = text[1:]
+    if text.startswith('ï»¿'):
+        text = text[3:]
+
+    # Apply all replacements
+    for pattern, replacement in replacements.items():
+        text = re.sub(pattern, replacement, text)
+
+    # Final cleanup - remove any remaining null bytes or weird characters
+    text = text.replace('\x00', '')
+
+    return text
+
+
 def should_ignore_row(row):
     for condition in ignore_conditions:
         if all(row.get(key) == value for key, value in condition.items()):
@@ -70,20 +121,56 @@ def should_ignore_row(row):
 def csv_to_json(csv_filepath, json_filepath):
     data = []
 
-    with open(csv_filepath, mode='r', encoding='utf-8-sig') as csv_file:
-        csv_reader = csv.DictReader(csv_file, delimiter='|')
-        for row in csv_reader:
-            if should_ignore_row(row):
-                continue
-            for key, value in row.items():
-                if value is not None:
-                    for old_text, new_text in replacements.items():
-                        value = re.sub(old_text, new_text, value)
-                row[key] = value
-            data.append(row)
+    # Try different encoding approaches
+    encodings_to_try = ['utf-8-sig', 'utf-8', 'latin1']
+
+    for encoding in encodings_to_try:
+        try:
+            with open(csv_filepath, mode='r', encoding=encoding) as csv_file:
+                content = csv_file.read()
+                # Clean the entire content first
+                content = clean_text(content)
+
+                # Parse the cleaned content
+                lines = content.split('\n')
+                if not lines:
+                    continue
+
+                # Get headers and clean them
+                headers = [clean_text(h) for h in lines[0].split('|')]
+
+                for line in lines[1:]:
+                    if not line.strip():
+                        continue
+
+                    values = line.split('|')
+                    if len(values) != len(headers):
+                        continue
+
+                    row = {}
+                    for i, header in enumerate(headers):
+                        if i < len(values):
+                            row[header] = clean_text(values[i])
+                        else:
+                            row[header] = ""
+
+                    if not should_ignore_row(row):
+                        data.append(row)
+
+                break  # If we get here, parsing was successful
+
+        except UnicodeDecodeError:
+            continue  # Try next encoding
+        except Exception as e:
+            print(f"Error parsing {csv_filepath} with {encoding}: {e}")
+            continue
+
+    if not data:
+        print(f"Failed to parse {csv_filepath} with any encoding")
+        return
 
     with open(json_filepath, mode='w', encoding='utf-8') as json_file:
-        json.dump(data, json_file, indent=4)
+        json.dump(data, json_file, indent=4, ensure_ascii=False)
 
 
 def convert_all_csv_in_directory(csv_directory, json_directory):
