@@ -38,7 +38,7 @@ replacements = {
 
     # Game-specific cleanup
     r" \(Aura\)": "",
-    r"\'": "'",
+    r"\'": "'",  # Normalize apostrophes
 }
 
 # Define the conditions for rows to be ignored
