@@ -18,6 +18,21 @@ replacements = {
     r"\u00bb": "",
     r"\u00bf": "",
 
+    # Removes cyrillic
+    "Ð": "",
+    "Ñ": "",
+    "¡": "",
+    "": "",
+    "": "",
+    "µ": "",
+    "°": "",
+    "²": "",
+    "": "",
+    "º": "",
+    "¾": "",
+    "¾": "",
+    "½": "",
+
     # Common UTF-8 encoding artifacts for punctuation
     r"\u00e2\u0080\u0099": "'",  # Right single quotation mark (')
     r"\u00e2\u0080\u0098": "'",  # Left single quotation mark (')

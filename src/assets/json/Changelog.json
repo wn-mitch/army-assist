@@ -1,5 +1,15 @@
 [
   {
+    "version": "1.13",
+    "stateVersion": 24,
+    "date": "7/31/25",
+    "changes": [
+      "New Feature: Listforge integration. You can now import lists from Listforge directly into Army Assist, using a soon to be released button from their end.",
+      "Updated the data sets to the newest codices.",
+      "Fixed several issues related to cyrillic characters in abilities and unit names"
+    ]
+  },
+  {
     "version": "1.12.2",
     "stateVersion": 23,
     "date": "6/23/25",
@@ -20,7 +30,7 @@
     "stateVersion": 23,
     "date": "6/12/25",
     "changes": [
-      "New Feature: Unit Notes! You can now add notes to individual units in your list. This is useful for keeping track of unit-specific strategies or reminders.", 
+      "New Feature: Unit Notes! You can now add notes to individual units in your list. This is useful for keeping track of unit-specific strategies or reminders.",
       "* To add a note, click on the notes icon to activate Force Edit Mode, then click on the pencil icon on the unit card to open the note management modal.",
       "* You can add, edit or delete notes for each unit.",
       "* Notes are saved locally in your browser, so they will persist across sessions BUT NOT ACROSS LIST REFRESHES.",
