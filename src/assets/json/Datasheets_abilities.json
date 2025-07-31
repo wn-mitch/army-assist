@@ -3027,17 +3027,6 @@
     {
         "datasheet_id": "000000084",
         "line": "2",
-        "ability_id": "000008342",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000084",
-        "line": "3",
         "ability_id": "000008350",
         "model": "",
         "name": "",
@@ -3048,7 +3037,7 @@
     },
     {
         "datasheet_id": "000000084",
-        "line": "4",
+        "line": "3",
         "ability_id": "",
         "model": "",
         "name": "Interceptor",
@@ -3173,8 +3162,41 @@
         "ability_id": "",
         "model": "",
         "name": "Drop Pod Assault",
-        "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it.",
+        "description": "This model must start the battle in Reserves and can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models.",
         "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000087",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Combat Disembarkation",
+        "description": "Each time a unit disembarks from this model after it has been set up on the battlefield, that unit is still eligible to declare a charge this turn.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000087",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Deployment Complete",
+        "description": "Once this unit is set up on the battlefield and all units within it have disembarked, until the end of the battle, units cannot embark within this TRANSPORT.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000087",
+        "line": "7",
+        "ability_id": "",
+        "model": "",
+        "name": "Designer's Note",
+        "description": "The highlighted portions of this model are the only parts that are considered to make up its hull. Models can be set up or end a move on any part of this model that is not highlighted in red. If any models are on non-highlighted sections of this model when it is destroyed, place those models as close to their original position as possible, on the battlefield, after removing this model.$000003426",
+        "type": "ÐÐµÐ· Ð·Ð°Ð³Ð¾ÐÐ¾Ð²ÐºÐ°",
         "parameter": "",
         "": ""
     },
@@ -6627,7 +6649,7 @@
         "ability_id": "",
         "model": "",
         "name": "High King of Fenris",
-        "description": "Once per battle, in your Charge phase, this model can use this ability. If it does, until the end of the turn, you can re-roll Charge rolls made for ADEPTUS ASTARTES units from your army and, until the end of the turn, each time an ADEPTUS ASTARTES model from your army makes a melee attack, you can re-roll the Hit roll.",
+        "description": "Once per battle round, in your Movement phase, you can select one friendly SPACE WOLVES unit that is in Strategic Reserves. If you do, until the end of the phase, for the purpose of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -6637,8 +6659,8 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "The Great Wolf",
-        "description": "Each time this model destroys an enemy unit, you gain 1CP.",
+        "name": "Guile of the Wolf",
+        "description": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP (this is not cumulative with any other rules that increase the CP cost of that Stratagem).",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -6648,130 +6670,9 @@
         "line": "6",
         "ability_id": "",
         "model": "",
-        "name": "LOGAN GRIMNAR",
-        "description": "Your army cannot contain both LOGAN GRIMNAR and LOGAN GRIMNAR ON STORMRIDER.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000283",
-        "line": "1",
-        "ability_id": "000008339",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000283",
-        "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000283",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000283",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "High King of Fenris",
-        "description": "Once per battle, in your Charge phase, this model can use this ability. If it does, until the end of the turn, you can re-roll Charge rolls made for ADEPTUS ASTARTES units from your army and, until the end of the turn, each time an ADEPTUS ASTARTES model from your army makes a melee attack, you can re-roll the Hit roll.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000283",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "The Great Wolf",
-        "description": "Each time this model destroys an enemy unit, you gain 1CP.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000283",
-        "line": "6",
-        "ability_id": "",
-        "model": "",
-        "name": "LOGAN GRIMNAR",
-        "description": "Your army cannot contain both LOGAN GRIMNAR and LOGAN GRIMNAR ON STORMRIDER.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Rites of Battle",
-        "description": "Once per battleÂ round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Speed of the Hunter",
-        "description": "Add 1 to Advance and Charge rolls made for this model's unit.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Relic Shield",
-        "description": "The bearer has a Wounds characteristic of 7.",
-        "type": "Wargear",
+        "name": "EMBARKING WITHIN TRANSPORTS",
+        "description": "This model can embark within friendly ADEPTUS ASTARTES TRANSPORT models that can transport TERMINATOR models. When doing so, it takes up the space of 4 INFANTRY models.",
+        "type": "Fortification (ÐÐµÐ²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
         "parameter": "",
         "": ""
     },
@@ -6803,7 +6704,7 @@
         "ability_id": "",
         "model": "",
         "name": "War Howl",
-        "description": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced.",
+        "description": "While this model is leading a BLOOD CLAWS unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll. While this model is leading a WOLF GUARD HEADTAKERS unit, that unit is eligible to declare a charge in a turn in which it Advanced.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -6814,13 +6715,13 @@
         "ability_id": "",
         "model": "",
         "name": "Battle-lust",
-        "description": "Each time this model ends a Charge move, until the end of the turn, add 2 to the Attacks and Strength characteristics of this model's Frostfang.",
+        "description": "Each time this model ends a Charge move, until the end of the turn, add 2 to the Attacks characteristic of this model's Frostfang weapon.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
     },
     {
-        "datasheet_id": "000000286",
+        "datasheet_id": "000000292",
         "line": "1",
         "ability_id": "000008346",
         "model": "",
@@ -6831,7 +6732,7 @@
         "": ""
     },
     {
-        "datasheet_id": "000000286",
+        "datasheet_id": "000000292",
         "line": "2",
         "ability_id": "000008350",
         "model": "",
@@ -6842,145 +6743,13 @@
         "": ""
     },
     {
-        "datasheet_id": "000000286",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Refuse to Accept Defeat",
-        "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000286",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "The Fierce Eye",
-        "description": "In your Shooting phase, you can select one enemy INFANTRY unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000287",
-        "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000287",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000287",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Lord of the Wolfkin",
-        "description": "While this model is leading a unit, each time that unit makes a Charge move, until the end of the turn, crushing teeth and claws equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000287",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Mantle of the Troll King",
-        "description": "Once per phase, when resolving an attack made against this model, after you make a saving throw for this model, you can change the Damage characteristic of that attack to 0.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000288",
-        "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000288",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000288",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Born of Wolves",
-        "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000288",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Alpha Predator",
-        "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy units suffers D3+3 mortal wounds.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000292",
-        "line": "1",
-        "ability_id": "000008343",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000292",
-        "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
         "datasheet_id": "000000292",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "",
         "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
+        "name": "Wind Walker (Psychic)",
+        "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and each time that unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit.",
+        "type": "Datasheet",
         "parameter": "",
         "": ""
     },
@@ -6989,19 +6758,8 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Stormcaller (Psychic)",
-        "description": "While this model is leading a unit, models in that unit have the Stealth ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000292",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Runic Armour",
-        "description": "Each time a Psychic Attack targets this model's unit, subtract 1 from the Wound roll.",
+        "name": "Tempest's Wrath (Psychic)",
+        "description": "In your Shooting phase, after this model's unit has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks made with this model's Living Lightning weapon. Until the start of your next turn, that enemy unit is stormwracked. While a unit is stormwracked, subtract 6\" from the Range characteristic of ranged weapons equipped by models in that unit (to a minimum of 12\").",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7045,7 +6803,7 @@
         "ability_id": "",
         "model": "",
         "name": "Slayer's Oath",
-        "description": "While this model is leading a unit, at the start of the Fight phase, select one enemy unit within Engagement Range of this model's unit. Until the end of the phase, each time a model in this model's unit makes a melee attack that targets that enemy unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. If that enemy unit is a CHARACTER, VEHICLE or MONSTER unit, until the end of the phase, each time a model in this model's unit makes a melee attack that targets that enemy unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+        "description": "At the start of the battle, select one of the following keywords to be this model's Slayer's Oath: CHARACTER; MONSTER; VEHICLE. The first time this model's unit destroys a unit with this model's Slayer's Oath keyword, if your Detachment rule has a Saga, until the end of the battle, this model's unit receives the benefits of that Detachment rule as if that Saga had been completed.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7055,130 +6813,9 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Wolf Helm of Russ",
-        "description": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, models in that unit have a Leadership characteristic of 5+.",
+        "name": "Oathbound",
+        "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll. If that attack targets a unit that has this model's Slayer's Oath keyword (see above), add 1 to the Wound roll as well.",
         "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "1",
-        "ability_id": "000008343",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Tactical Precision",
-        "description": "While this model is leading a unit, weapons equipped by models in that unit with have the [LETHAL HITS] ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Huskarl to the Jarl",
-        "description": "While this model is attached to a unit that contains another CHARACTER model, all CHARACTER models in that unit have the Feel No Pain 4+ ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "6",
-        "ability_id": "",
-        "model": "",
-        "name": "Relic Shield",
-        "description": "The bearer has a Wounds characteristic of 6.",
-        "type": "Wargear",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Tactical Precision",
-        "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Aggressive Hunter",
-        "description": "Once per battle, in your opponent's Shooting phase, after an enemy unit has finished making its attacks, if this model's unit was targeted by one or more of those attacks, this model's unit can make a Normal move of up to D6\", but must end that move as close as possible to the closest enemy unit. When doing so, models in this model's unit can be moved within Engagement Range of that enemy unit.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Storm Shield",
-        "description": "The bearer has a 4+ invulnerable save.",
-        "type": "Wargear",
         "parameter": "",
         "": ""
     },
@@ -7221,7 +6858,7 @@
         "ability_id": "",
         "model": "",
         "name": "Legendary Tenacity",
-        "description": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack.",
+        "description": "Each time an attack targets this model, if the Strength characteristic of that attack is greater than this model's Toughness characteristic, subtract 1 from the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7231,8 +6868,8 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Lord of Deceit",
-        "description": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP.",
+        "name": "Ancient Tactician",
+        "description": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7254,74 +6891,8 @@
         "ability_id": "",
         "model": "",
         "name": "Berserk Charge",
-        "description": "Each time this unit makes a Charge move, until the end of the turn, add 1 to the Attacks and Strength characteristics of melee weapons equipped by models in this unit.",
+        "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
         "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000303",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "ATTACHED UNIT",
-        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to an ASSAULT INTERCESSOR SQUAD or ASSAULT SQUAD, it can instead be attached to this unit.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000304",
-        "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000304",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000304",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Pelt of the Doppegangrel",
-        "description": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000304",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Last Laugh",
-        "description": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, roll one D6: on a 4+, the attacking unit suffers D6 mortal wounds and is Battle-shocked.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000304",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "MASTER OF MISCHIEF",
-        "description": "This model cannot be your Warlord.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
         "parameter": "",
         "": ""
     },
@@ -7342,19 +6913,8 @@
         "ability_id": "",
         "model": "",
         "name": "Cunning Hunters",
-        "description": "This unit is eligible to shoot in a turn in which it Fell Back or Advanced.",
+        "description": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target is within range of an objective marker, you can re-roll the Wound roll instead.",
         "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000305",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "ATTACHED UNIT",
-        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a TACTICAL SQUAD, it can instead be attached to this unit.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
         "parameter": "",
         "": ""
     },
@@ -7386,7 +6946,7 @@
         "ability_id": "",
         "model": "",
         "name": "Iron Priest",
-        "description": "While this model is within 3\" of one or more friendly ADEPTUS ASTARTES VEHICLE units, this model has the Lone Operative ability",
+        "description": "While this model is within 3\" of one or more friendly ADEPTUS ASTARTES VEHICLE units, this model has the Lone Operative ability.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7396,8 +6956,8 @@
         "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Blessing of the Omnissiah",
-        "description": "In your Command phase, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn.",
+        "name": "Gift of the Iron Wolf",
+        "description": "In your Command phase, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, select one ranged weapon equipped by that model to have the [RAPID FIRE 1] ability. Each model can only be selected for this ability or the Blessing of the Omnissiah ability once per turn.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7407,8 +6967,8 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "Vengeance of the Omnissiah",
-        "description": "If a friendly ADEPTUS ASTARTES VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model's tempest hammer has an Attacks characteristic of 6.",
+        "name": "Judgement of the Omnissiah",
+        "description": "Each time this model makes an attack that targets an enemy unit within Engagement Range of one or more friendly ADEPTUS ASTARTES VEHICLE units, you can re-roll the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7469,30 +7029,19 @@
         "": ""
     },
     {
-        "datasheet_id": "000000310",
+        "datasheet_id": "000000311",
         "line": "1",
-        "ability_id": "000008345",
+        "ability_id": "000010256",
         "model": "",
         "name": "",
         "description": "",
-        "type": "Core",
+        "type": "Faction",
         "parameter": "",
         "": ""
     },
     {
-        "datasheet_id": "000000310",
+        "datasheet_id": "000000311",
         "line": "2",
-        "ability_id": "000008344",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "6\"",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000310",
-        "line": "3",
         "ability_id": "000008350",
         "model": "",
         "name": "",
@@ -7502,57 +7051,24 @@
         "": ""
     },
     {
-        "datasheet_id": "000000310",
-        "line": "4",
+        "datasheet_id": "000000311",
+        "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Guerrilla Tactics",
-        "description": "At the end of your opponent's turn, if this unit is more than 6\" away from all enemy models, you can remove this unit from the battlefield and place it into Strategic Reserves.",
+        "name": "Savage Frenzy",
+        "description": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of this unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
     },
     {
         "datasheet_id": "000000311",
-        "line": "1",
-        "ability_id": "000008338",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "6+",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000311",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000311",
-        "line": "3",
+        "line": "4",
         "ability_id": "",
         "model": "",
-        "name": "Storm Shield",
-        "description": "The bearer has a 4+ invulnerable save.",
+        "name": "Death Totem",
+        "description": "Each time the bearer makes a melee attack, re-roll a Hit roll of 1.",
         "type": "Wargear",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000311",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Death Frenzy",
-        "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
-        "type": "Datasheet",
         "parameter": "",
         "": ""
     },
@@ -7581,7 +7097,7 @@
     {
         "datasheet_id": "000000314",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000010256",
         "model": "",
         "name": "",
         "description": "",
@@ -7592,11 +7108,11 @@
     {
         "datasheet_id": "000000314",
         "line": "4",
-        "ability_id": "",
+        "ability_id": "000008350",
         "model": "",
-        "name": "Murder-maker",
-        "description": "Each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot as if it were your Shooting phase or fight as if it were the Fight phase.",
-        "type": "Datasheet",
+        "name": "",
+        "description": "",
+        "type": "Faction",
         "parameter": "",
         "": ""
     },
@@ -7605,53 +7121,31 @@
         "line": "5",
         "ability_id": "",
         "model": "",
-        "name": "FORCE OF UNTAMED DESTRUCTION",
-        "description": "This model cannot be your Warlord.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000315",
-        "line": "1",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000315",
-        "line": "2",
-        "ability_id": "",
-        "model": "",
-        "name": "Chosen Companions",
-        "description": "While a CHARACTER model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll.",
+        "name": "Murder-maker",
+        "description": "In the Fight phase, each time an attack targets a friendly WULFEN unit within 6\" of this model, if a model in that unit is destroyed as a result of that attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
     },
     {
-        "datasheet_id": "000000315",
-        "line": "3",
+        "datasheet_id": "000000314",
+        "line": "6",
         "ability_id": "",
         "model": "",
-        "name": "Storm Shield",
-        "description": "The bearer has a 4+ invulnerable save.",
-        "type": "Wargear",
+        "name": "Bestial Fury",
+        "description": "You can re-roll Advance and Charge rolls made for this model.",
+        "type": "Datasheet",
         "parameter": "",
         "": ""
     },
     {
-        "datasheet_id": "000000315",
-        "line": "4",
+        "datasheet_id": "000000314",
+        "line": "7",
         "ability_id": "",
         "model": "",
-        "name": "ATTACHED UNIT",
-        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD, it can instead be attached to this unit instead.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
+        "name": "FORCE OF UNTAMED DESTRUCTION",
+        "description": "This model cannot be your WARLORD.",
+        "type": "Fortification (ÐÐµÐ²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
         "parameter": "",
         "": ""
     },
@@ -7694,7 +7188,7 @@
         "ability_id": "",
         "model": "",
         "name": "Anvil of Endurance",
-        "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
+        "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7705,7 +7199,7 @@
         "ability_id": "",
         "model": "",
         "name": "Champion of the Kingsguard",
-        "description": "You can target this model with the <a href=\"/wh40k10ed/the-rules/test_/#Ð¡ÑÑÐ°ÑÐµÐ³ÐµÐ¼Ð°\">Epic Challenge Stratagem for 0CP. In addition, each time this model makes a melee attack that targets a Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+        "description": "Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -7735,6 +7229,17 @@
     {
         "datasheet_id": "000000318",
         "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Rugged Resilience",
+        "description": "Each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000318",
+        "line": "4",
         "ability_id": "",
         "model": "",
         "name": "Storm Shield",
@@ -7744,85 +7249,30 @@
         "": ""
     },
     {
-        "datasheet_id": "000000318",
-        "line": "4",
+        "datasheet_id": "000000322",
+        "line": "1",
+        "ability_id": "000008350",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000322",
+        "line": "2",
         "ability_id": "",
         "model": "",
-        "name": "Wolf Guard",
-        "description": "Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack's Ballistic Skill or Weapon Skill characteristic and/or to the Hit roll. In addition, each time a model in this unit makes an attack that targets the enemy unit you selected for the Oath of Moment ability this turn, add 1 to the Hit roll.",
+        "name": "Thunderous Charge",
+        "description": "Each time a model in this unit makes a melee attack with its Wolf Guard weapon, if it made a Charge move this turn, add 1 to the Damage characteristic of that attack.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
     },
     {
-        "datasheet_id": "000000318",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "ATTACHED UNIT",
-        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a TERMINATOR SQUAD, it can instead be attached to this unit.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000321",
-        "line": "1",
-        "ability_id": "000008339",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "D6",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000321",
-        "line": "2",
-        "ability_id": "000008342",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000321",
+        "datasheet_id": "000000322",
         "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000321",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Into the Foe",
-        "description": "If a unit disembarks from this Transport before it moves, until the end of the turn, that unit is eligible to charge in a turn in which it Advanced.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000322",
-        "line": "1",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000322",
-        "line": "2",
         "ability_id": "",
         "model": "",
         "name": "Storm Shield",
@@ -7832,17 +7282,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000000322",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Ferocious Charge",
-        "description": "Each time this unit makes a Charge move, until the end of the turn, add 1 to the Damage characteristic of melee weapons equipped by models in this unit.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
         "datasheet_id": "000000323",
         "line": "1",
         "ability_id": "000008350",
@@ -7858,141 +7297,20 @@
         "line": "2",
         "ability_id": "",
         "model": "",
-        "name": "Swift Hunters",
-        "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+        "name": "Predatory Instinct",
+        "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, it can make a Normal move of up to D6\".",
         "type": "Datasheet",
         "parameter": "",
         "": ""
     },
     {
-        "datasheet_id": "000000324",
-        "line": "1",
-        "ability_id": "000008343",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
+        "datasheet_id": "000000323",
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Headstrong",
-        "description": "You can re-roll Charge rolls made for this unit. Each time this unit makes a Charge move, until the end of the turn, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
+        "name": "Hunting Hounds",
+        "description": "While this unit is within 6\" of one or more friendly SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, models in it have an Objective Control characteristic of 1.",
         "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "ATTACHED UNIT",
-        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to ASSAULT INTERCESSORS WITH JUMP PACKS or an ASSAULT SQUAD WITH JUMP PACKS, it can instead be attached to this unit instead.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000325",
-        "line": "1",
-        "ability_id": "000008339",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "D6",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000325",
-        "line": "2",
-        "ability_id": "000008342",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000325",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000325",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Frozen Prey",
-        "description": "In your Shooting phase, after this model has shot, if an enemy MONSTER or VEHICLE unit was hit by one or more of those attacks made with this model's helfrost destructor, until the end of your opponent's next turn, that enemy unit is Frozen. While a unit is Frozen, subtract 2 from that unit's Move characteristic, and subtract 2 from Advance and Charge rolls made for that unit.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "1",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "2",
-        "ability_id": "",
-        "model": "",
-        "name": "Fire Discipline",
-        "description": "Each time this unit Remains Stationary, if it includes a Long Fang Pack Leader, you can select one enemy unit that is visible to that model. Until the end of the turn, each time a model in this unit makes a ranged attack that targets that enemy unit, re-roll a Hit roll of 1.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Armorium Cherub",
-        "description": "Once per battle, after making a Hit roll for a model in this unit, you can change that roll to an unmodified 6.Designer's Note: Place an Armorium Cherub token next to the unit, removing it once this ability has been used.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "ATTACHED UNIT",
-        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a DEVASTATOR SQUAD, it can instead be attached to this unit.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
         "parameter": "",
         "": ""
     },
@@ -27469,6 +26787,17 @@
     {
         "datasheet_id": "000001022",
         "line": "2",
+        "ability_id": "000008334",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "2",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001022",
+        "line": "3",
         "ability_id": "",
         "model": "",
         "name": "Sorcerous Support",
@@ -36536,7 +35865,7 @@
         "ability_id": "",
         "model": "",
         "name": "Mutating Vortex",
-        "description": "At the end of your Movement phase, roll one 06 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds. Each enemy unit within range of this ability must then take a Battle-shock test.",
+        "description": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds. Each enemy unit within range of this ability must then take a Battle-shock test.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -36547,7 +35876,7 @@
         "ability_id": "",
         "model": "",
         "name": "Immaterial Flare",
-        "description": "While a friendly THOUSAND SONS PSYKER model is within 6\" of this model, each time that model Channels the Warp, add 1 to the Psychic test result.",
+        "description": "While a friendly THOUSAND SONS PSYKER model is within 6\" of this model, each time that model Channels the Warp, add 1 to the Psychic test result. This is not cumulative with any other modifiers to the Psychic test result.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -37043,61 +36372,6 @@
         "model": "",
         "name": "Overwhelming Firestorm",
         "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by this model this phase. That unit must take a Battle-shock test.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001509",
-        "line": "1",
-        "ability_id": "000008339",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "1",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001509",
-        "line": "2",
-        "ability_id": "000008338",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "6+",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001509",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001509",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Blizzard Shield",
-        "description": "The bearer has a 4+ invulnerable save.",
-        "type": "Wargear",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001509",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Bestial Rage",
-        "description": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -40243,7 +39517,7 @@
         "ability_id": "",
         "model": "",
         "name": "Dread Dominion",
-        "description": "While a friendly WAR DOG is within 9\" of this model, each time that WAR DOG takes a Battle-shock test, add 1 to that test.",
+        "description": "While a friendly WAR DOG model is within 9\" of this model, improve that WAR DOG model's Leadership and Objective Control characteristics by 1.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -40353,7 +39627,7 @@
         "ability_id": "",
         "model": "",
         "name": "Obsessive Ruthlessness",
-        "description": "Each time this model makes a ranged attack against a Monster or Vehicle unit, that attack has the [DEVASTATING WOUNDS] ability.",
+        "description": "Each time this model makes a ranged attack that targets a MONSTER or VEHICLE unit, that attack has the [DEVASTATING WOUNDS] ability.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -40364,7 +39638,7 @@
         "ability_id": "",
         "model": "",
         "name": "Taskmaster",
-        "description": "While a friendly WAR DOG model is within 9\" of this model, each time that War Dog model makes a ranged attack, re-roll a Hit roll of 1.",
+        "description": "While a friendly WAR DOG model is within 9\" of this model, each time that WAR DOG model makes a ranged attack, re-roll a Hit roll of 1.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -40408,7 +39682,7 @@
         "ability_id": "",
         "model": "",
         "name": "Bloodlust",
-        "description": "Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [SUSTAINED HITS 1] ability. In addition, once per battle, this model is eligible to declare a charge in a turn in which it Advanced.",
+        "description": "Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [DEVASTATING WOUNDS] ability.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -47294,7 +46568,7 @@
         "ability_id": "",
         "model": "",
         "name": "Executioner",
-        "description": "Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll.",
+        "description": "Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model's attacks, before removing the last model in that unit from the battlefield, each unit from your opponent's army that is within 3\" of it must take a Battle-shock test.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -47313,6 +46587,17 @@
     {
         "datasheet_id": "000002563",
         "line": "2",
+        "ability_id": "000008344",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6\"",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002563",
+        "line": "3",
         "ability_id": "000008512",
         "model": "",
         "name": "",
@@ -47323,7 +46608,7 @@
     },
     {
         "datasheet_id": "000002563",
-        "line": "3",
+        "line": "4",
         "ability_id": "",
         "model": "",
         "name": "Stalker",
@@ -47360,7 +46645,7 @@
         "ability_id": "",
         "model": "",
         "name": "Karnivore",
-        "description": "You can re-roll Charge rolls made for this model.",
+        "description": "You can re-roll Advance and Charge rolls made for this model.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -47393,7 +46678,7 @@
         "ability_id": "",
         "model": "",
         "name": "Brigand",
-        "description": "Each time this model makes a ranged attack that targets the closest eligible enemy unit, improve the Armour Penetration characteristic of that attack by 1.",
+        "description": "Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -47426,7 +46711,7 @@
         "ability_id": "",
         "model": "",
         "name": "Huntsman",
-        "description": "Each time this model makes an attack against a MONSTER or VEHICLE unit, re-roll a Wound roll of 1 and re-roll a Damage roll of 1.",
+        "description": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, you can re-roll the Wound roll.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -47470,7 +46755,7 @@
         "ability_id": "",
         "model": "",
         "name": "Vortex Terrors (Psychic)",
-        "description": "At the start of your Shooting phase, select one enemy unit within 12\" of this model. That enemy unit must take a Battle-shock test.",
+        "description": "At the start of your Shooting phase, select one enemy unit within 24\" of and visible to this model. That enemy unit must take a Battle-shock test.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -49714,7 +48999,7 @@
         "ability_id": "",
         "model": "",
         "name": "Icon of Khorne",
-        "description": "Each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+        "description": "If the bearer's unit contains one or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
         "type": "Wargear",
         "parameter": "",
         "": ""
@@ -49747,7 +49032,7 @@
         "ability_id": "",
         "model": "",
         "name": "Icon of Khorne",
-        "description": "Each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+        "description": "If the bearer's unit contains one or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
         "type": "Wargear",
         "parameter": "",
         "": ""
@@ -55422,8 +54707,8 @@
         "line": "3",
         "ability_id": "",
         "model": "",
-        "name": "Wisdom of the Ancients",
-        "description": "While a friendly ADEPTUS ASTARTES INFANTRY unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+        "name": "Fervour of the Ancients",
+        "description": "While a friendly SPACE WOLVES unit is within 6\" of this model, add 1 to Advance and Charge rolls made for that unit.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -55436,292 +54721,6 @@
         "name": "Blizzard Shield",
         "description": "The bearer has a 4+ invulnerable save.",
         "type": "Wargear",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "1",
-        "ability_id": "000008343",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Storm Shield",
-        "description": "The bearer has a 4+ invulnerable save.",
-        "type": "Wargear",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Inspiring Leader",
-        "description": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "6",
-        "ability_id": "",
-        "model": "",
-        "name": "Pack Leader",
-        "description": "This model cannot be your Warlord and cannot be given Enhancements.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "1",
-        "ability_id": "000008343",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "2",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Storm Shield",
-        "description": "The bearer has a Wounds characteristic of 4.",
-        "type": "Wargear",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Inspiring Leader",
-        "description": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "6",
-        "ability_id": "",
-        "model": "",
-        "name": "Pack Leader",
-        "description": "This model cannot be your Warlord and cannot be given Enhancements.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Storm Shield",
-        "description": "The bearer has a 4+ invulnerable save.",
-        "type": "Wargear",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Inspiring Leader",
-        "description": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "Pack Leader",
-        "description": "This model cannot be your Warlord and cannot be given Enhancements.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002805",
-        "line": "1",
-        "ability_id": "000008346",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002805",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002805",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Close In for the Kill",
-        "description": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002805",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "Alpha Hunter",
-        "description": "While this model is leading a unit, models in that unit have the Scouts 6\" ability.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002805",
-        "line": "5",
-        "ability_id": "",
-        "model": "",
-        "name": "WOLFKIN",
-        "description": "This model cannot be your Warlord and cannot be given Enhancements.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002806",
-        "line": "1",
-        "ability_id": "000008344",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Core",
-        "parameter": "6\"",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002806",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002806",
-        "line": "3",
-        "ability_id": "",
-        "model": "",
-        "name": "Morkai's Howl",
-        "description": "In your Shooting phase, you can select one enemy unit within 12\" of this unit (if a Lieutenant in Reiver Armour is leading this unit, you can select one enemy unit within 18\" instead). That unit must take a Battle-shock test, subtracting 1 from the result if it is a PSYKER unit. If that test is failed, in addition to being Battle-shocked, that unit is Stunned until the start of your next Shooting phase. While a unit is Stunned, each time a model in that unit makes a Psychic Attack, subtract 1 from the Hit roll.",
-        "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002806",
-        "line": "4",
-        "ability_id": "",
-        "model": "",
-        "name": "ATTACHED UNIT",
-        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a REIVER SQUAD, it can instead be attached to this unit.",
-        "type": "Special (ÐÑÐ°Ð²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
         "parameter": "",
         "": ""
     },
@@ -56083,7 +55082,7 @@
         "ability_id": "",
         "model": "",
         "name": "Icon of Khorne",
-        "description": "Each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+        "description": "If the bearer's unit contains one or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
         "type": "Wargear",
         "parameter": "",
         "": ""
@@ -56179,7 +55178,7 @@
     {
         "datasheet_id": "000003585",
         "line": "3",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56234,7 +55233,7 @@
     {
         "datasheet_id": "000003586",
         "line": "3",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56267,7 +55266,7 @@
     {
         "datasheet_id": "000003587",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -56322,7 +55321,7 @@
     {
         "datasheet_id": "000003588",
         "line": "3",
-        "ability_id": "000008359",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -56366,7 +55365,7 @@
     {
         "datasheet_id": "000003589",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -56410,7 +55409,7 @@
     {
         "datasheet_id": "000003590",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -56464,17 +55463,6 @@
     },
     {
         "datasheet_id": "000003591",
-        "line": "3",
-        "ability_id": "000008359",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003591",
         "line": "4",
         "ability_id": "",
         "model": "",
@@ -56509,7 +55497,7 @@
     {
         "datasheet_id": "000003592",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56553,7 +55541,7 @@
     {
         "datasheet_id": "000003593",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56586,7 +55574,7 @@
     {
         "datasheet_id": "000003594",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56619,7 +55607,7 @@
     {
         "datasheet_id": "000003595",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56652,7 +55640,7 @@
     {
         "datasheet_id": "000003596",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56699,7 +55687,7 @@
         "ability_id": "",
         "model": "",
         "name": "Lord of Chaos",
-        "description": "OnceÂ perÂ battleÂ round,Â oneÂ unitÂ fromÂ yourÂ armyÂ withÂ thisÂ abilityÂ can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+        "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -56728,17 +55716,6 @@
     },
     {
         "datasheet_id": "000003598",
-        "line": "2",
-        "ability_id": "000008359",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003598",
         "line": "3",
         "ability_id": "",
         "model": "",
@@ -56757,17 +55734,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003599",
-        "line": "2",
-        "ability_id": "000008359",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -56795,7 +55761,7 @@
     {
         "datasheet_id": "000003600",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -56839,7 +55805,7 @@
     {
         "datasheet_id": "000003601",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -56872,7 +55838,7 @@
     {
         "datasheet_id": "000003602",
         "line": "2",
-        "ability_id": "000008359",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -56915,17 +55881,6 @@
     },
     {
         "datasheet_id": "000003603",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003603",
         "line": "4",
         "ability_id": "",
         "model": "",
@@ -56960,7 +55915,7 @@
     {
         "datasheet_id": "000003604",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -57004,7 +55959,7 @@
     {
         "datasheet_id": "000003605",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -57048,7 +56003,7 @@
     {
         "datasheet_id": "000003606",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -57080,17 +56035,6 @@
     },
     {
         "datasheet_id": "000003607",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003607",
         "line": "3",
         "ability_id": "",
         "model": "",
@@ -57125,7 +56069,7 @@
     {
         "datasheet_id": "000003608",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -57169,7 +56113,7 @@
     {
         "datasheet_id": "000003609",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -57213,7 +56157,7 @@
     {
         "datasheet_id": "000003610",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -57256,17 +56200,6 @@
     },
     {
         "datasheet_id": "000003611",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003611",
         "line": "3",
         "ability_id": "",
         "model": "",
@@ -57312,7 +56245,7 @@
     {
         "datasheet_id": "000003612",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -57367,7 +56300,7 @@
     {
         "datasheet_id": "000003613",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -57422,7 +56355,7 @@
     {
         "datasheet_id": "000003614",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -57487,17 +56420,6 @@
     },
     {
         "datasheet_id": "000003615",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003615",
         "line": "4",
         "ability_id": "",
         "model": "",
@@ -57532,7 +56454,7 @@
     {
         "datasheet_id": "000003616",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -57576,7 +56498,7 @@
     {
         "datasheet_id": "000003617",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -57620,7 +56542,7 @@
     {
         "datasheet_id": "000003618",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -57648,17 +56570,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D6",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003619",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -57686,7 +56597,7 @@
     {
         "datasheet_id": "000003620",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -57719,7 +56630,7 @@
     {
         "datasheet_id": "000003621",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -57752,7 +56663,7 @@
     {
         "datasheet_id": "000003622",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -57780,17 +56691,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003623",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -57818,7 +56718,7 @@
     {
         "datasheet_id": "000003624",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -57851,7 +56751,7 @@
     {
         "datasheet_id": "000003625",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -57884,7 +56784,7 @@
     {
         "datasheet_id": "000003626",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -57912,17 +56812,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D6",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003627",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -57950,7 +56839,7 @@
     {
         "datasheet_id": "000003628",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -57983,7 +56872,7 @@
     {
         "datasheet_id": "000003629",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -58016,7 +56905,7 @@
     {
         "datasheet_id": "000003630",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -58044,17 +56933,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D6",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003631",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -58093,7 +56971,7 @@
     {
         "datasheet_id": "000003632",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -58137,7 +57015,7 @@
     {
         "datasheet_id": "000003633",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -58181,7 +57059,7 @@
     {
         "datasheet_id": "000003634",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -58230,17 +57108,6 @@
         "name": "",
         "description": "",
         "type": "Core",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003635",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
         "parameter": "",
         "": ""
     },
@@ -58280,7 +57147,7 @@
     {
         "datasheet_id": "000003636",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -58324,7 +57191,7 @@
     {
         "datasheet_id": "000003637",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -58368,7 +57235,7 @@
     {
         "datasheet_id": "000003638",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -58396,17 +57263,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003639",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -58445,7 +57301,7 @@
     {
         "datasheet_id": "000003640",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -58489,7 +57345,7 @@
     {
         "datasheet_id": "000003641",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -58533,7 +57389,7 @@
     {
         "datasheet_id": "000003642",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -58576,17 +57432,6 @@
     },
     {
         "datasheet_id": "000003643",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003643",
         "line": "3",
         "ability_id": "",
         "model": "",
@@ -58610,7 +57455,7 @@
     {
         "datasheet_id": "000003644",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -58643,7 +57488,7 @@
     {
         "datasheet_id": "000003645",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -58676,7 +57521,7 @@
     {
         "datasheet_id": "000003646",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -58704,17 +57549,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003647",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -58753,7 +57587,7 @@
     {
         "datasheet_id": "000003648",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -58797,7 +57631,7 @@
     {
         "datasheet_id": "000003649",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -58841,7 +57675,7 @@
     {
         "datasheet_id": "000003650",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -58884,17 +57718,6 @@
     },
     {
         "datasheet_id": "000003651",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003651",
         "line": "3",
         "ability_id": "",
         "model": "",
@@ -58918,7 +57741,7 @@
     {
         "datasheet_id": "000003652",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -58951,7 +57774,7 @@
     {
         "datasheet_id": "000003653",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -58984,7 +57807,7 @@
     {
         "datasheet_id": "000003654",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -59012,17 +57835,6 @@
         "description": "",
         "type": "Core",
         "parameter": "1",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003655",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -59061,7 +57873,7 @@
     {
         "datasheet_id": "000003656",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -59105,7 +57917,7 @@
     {
         "datasheet_id": "000003657",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -59149,7 +57961,7 @@
     {
         "datasheet_id": "000003658",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -59188,17 +58000,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003659",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -59237,7 +58038,7 @@
     {
         "datasheet_id": "000003660",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -59281,7 +58082,7 @@
     {
         "datasheet_id": "000003661",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -59325,7 +58126,7 @@
     {
         "datasheet_id": "000003662",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -59368,17 +58169,6 @@
     },
     {
         "datasheet_id": "000003663",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003663",
         "line": "3",
         "ability_id": "",
         "model": "",
@@ -59402,7 +58192,7 @@
     {
         "datasheet_id": "000003664",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -59435,7 +58225,7 @@
     {
         "datasheet_id": "000003665",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -59468,7 +58258,7 @@
     {
         "datasheet_id": "000003666",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -59484,17 +58274,6 @@
         "name": "Interceptor",
         "description": "Each time this model makes a ranged attack that targets a unit that can Fly, add 1 to the Hit roll.",
         "type": "Datasheet",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003667",
-        "line": "1",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
         "parameter": "",
         "": ""
     },
@@ -59512,7 +58291,7 @@
     {
         "datasheet_id": "000003668",
         "line": "1",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -59534,7 +58313,7 @@
     {
         "datasheet_id": "000003669",
         "line": "1",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -59556,7 +58335,7 @@
     {
         "datasheet_id": "000003670",
         "line": "1",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -59599,17 +58378,6 @@
     },
     {
         "datasheet_id": "000003671",
-        "line": "3",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003671",
         "line": "4",
         "ability_id": "",
         "model": "",
@@ -59644,7 +58412,7 @@
     {
         "datasheet_id": "000003672",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -59688,7 +58456,7 @@
     {
         "datasheet_id": "000003673",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -59732,7 +58500,7 @@
     {
         "datasheet_id": "000003674",
         "line": "3",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -59760,17 +58528,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003675",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -59809,7 +58566,7 @@
     {
         "datasheet_id": "000003676",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -59853,7 +58610,7 @@
     {
         "datasheet_id": "000003677",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -59897,7 +58654,7 @@
     {
         "datasheet_id": "000003678",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -59936,17 +58693,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D6",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003679",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -59974,7 +58720,7 @@
     {
         "datasheet_id": "000003680",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -60007,7 +58753,7 @@
     {
         "datasheet_id": "000003681",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -60040,7 +58786,7 @@
     {
         "datasheet_id": "000003682",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -60068,17 +58814,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D3",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003683",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -60117,7 +58852,7 @@
     {
         "datasheet_id": "000003684",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -60161,7 +58896,7 @@
     {
         "datasheet_id": "000003685",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -60205,7 +58940,7 @@
     {
         "datasheet_id": "000003686",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -60244,17 +58979,6 @@
         "description": "",
         "type": "Core",
         "parameter": "D6+2",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003687",
-        "line": "2",
-        "ability_id": "000008350",
-        "model": "",
-        "name": "",
-        "description": "",
-        "type": "Faction",
-        "parameter": "",
         "": ""
     },
     {
@@ -60282,7 +59006,7 @@
     {
         "datasheet_id": "000003688",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008396",
         "model": "",
         "name": "",
         "description": "",
@@ -60315,7 +59039,7 @@
     {
         "datasheet_id": "000003689",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008428",
         "model": "",
         "name": "",
         "description": "",
@@ -60348,7 +59072,7 @@
     {
         "datasheet_id": "000003690",
         "line": "2",
-        "ability_id": "000008350",
+        "ability_id": "000008359",
         "model": "",
         "name": "",
         "description": "",
@@ -61264,7 +59988,7 @@
         "ability_id": "",
         "model": "",
         "name": "Shokk-boosta",
-        "description": "You can re-roll Advance rolls made for this model's unit. In addition, each time this model's unit makes a Normal, Advance or Fall Back move, until that move is finished, models in that unit can move horizontally through models and terrain features (but cannot finish a move on top of another model or its base).",
+        "description": "You can re-roll Advance rolls made for this model's unit. In addition, each time this model's unit makes a Normal, Advance or Fall Back move, models in that unit can move through models and terrain features. When doing so, they can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
         "type": "Datasheet",
         "parameter": "",
         "": ""
@@ -62683,7 +61407,7 @@
         "ability_id": "",
         "model": "",
         "name": "INQUISITORIAL RETINUE",
-        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00269\" data-tooltip-content=\"#tooltip_content00269\" data-tooltip-anchor=\"#tooltip_",
+        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00104\" data-tooltip-content=\"#tooltip_content00104\" data-tooltip-anchor=\"#tooltip_",
         "type": "Fortification (ÐÐµÐ²Ð°Ñ ÐºÐ¾ÐÐ¾Ð½ÐºÐ°)",
         "parameter": "",
         "": ""
@@ -74586,6 +73310,336 @@
         "model": "",
         "name": "Exploding Horrors",
         "description": "Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more BRIMSTONE HORROR models in this unit. For each BRIMSTONE HORROR model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004129",
+        "line": "1",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004129",
+        "line": "2",
+        "ability_id": "000008350",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004129",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Healing Balms",
+        "description": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding CHARACTER models) to that unit.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004129",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Litany of Hate",
+        "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "1",
+        "ability_id": "000008346",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "2",
+        "ability_id": "000008350",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Tempered Ferocity",
+        "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability and, each time a model in that unit makes an attack that targets an enemy unit within 6\", re-roll a Hit roll of 1.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Heroic Last Stand",
+        "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Storm Shield",
+        "description": "The bearer has a Wounds characteristic of 6.",
+        "type": "Wargear",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "1",
+        "ability_id": "000008350",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "2",
+        "ability_id": "",
+        "model": "",
+        "name": "Let Loose the Wolves",
+        "description": "At the start of the Declare Battle Formations step, split this unit into two units, one containing all of its HEADTAKERS models and one containing all of its HUNTING WOLVES models, with new Starting Strengths accordingly.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Headhunters",
+        "description": "At the start of the battle, select one unit from your opponent's army to be this unit's quarry. Weapons equipped by HEADTAKERS models in this unit have the [DEVASTATING WOUNDS] and [PRECISION] abilities while targeting its quarry. Each time this unit's quarry is destroyed, select one new enemy unit to be this unit's quarry. This ability can be used even if this unit is embarked within a TRANSPORT.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Hunting Hounds",
+        "description": "While this unit is within 6\" of one or more friendly SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, HUNTING WOLVES models in it have an Objective Control characteristic of 1.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Storm Shield",
+        "description": "The bearer has a 4+ invulnerable save.",
+        "type": "Wargear",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004132",
+        "line": "1",
+        "ability_id": "000010256",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004132",
+        "line": "2",
+        "ability_id": "000008350",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004132",
+        "line": "3",
+        "ability_id": "",
+        "model": "",
+        "name": "Hammer Blow",
+        "description": "In the Fight phase, after this unit has fought, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Until the end of the next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004132",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Death Totem",
+        "description": "Each time the bearer makes a melee attack, re-roll a Hit roll of 1.",
+        "type": "Wargear",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "1",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "2",
+        "ability_id": "000008338",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "6+",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "3",
+        "ability_id": "000010256",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "4",
+        "ability_id": "000008350",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Bestial Rage",
+        "description": "Each time an enemy unit is selected to shoot, after that unit has shot, if this model lost one or more wounds as a result of those attacks, this model can make a Bestial Rage move. To do so, roll one D6, adding 2 to the result: this model can be moved a number of inches up to the result, but must finish that move as close as possible to the closest enemy unit (excluding AIRCRAFT), When doing so, this model can be moved within Engagement Range of that enemy unit. Each model can only make one Bestial Rage move per phase.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "6",
+        "ability_id": "",
+        "model": "",
+        "name": "Violent Fury",
+        "description": "If this model is equipped with two melee weapons, those weapon profiles have the [TWIN-LINKED] ability.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "7",
+        "ability_id": "",
+        "model": "",
+        "name": "Blizzard Shield",
+        "description": "The bearer has a 4+ invulnerable save.",
+        "type": "Wargear",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004134",
+        "line": "1",
+        "ability_id": "000008339",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Core",
+        "parameter": "D6",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004134",
+        "line": "2",
+        "ability_id": "000008512",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004134",
+        "line": "3",
+        "ability_id": "000008513",
+        "model": "",
+        "name": "",
+        "description": "",
+        "type": "Faction",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004134",
+        "line": "4",
+        "ability_id": "",
+        "model": "",
+        "name": "Methodical Destruction",
+        "description": "At the start of the first battle round, select one unit from your opponent's army to be this model's victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model's victim is destroyed, select one new enemy unit to be this model's victim.",
+        "type": "Datasheet",
+        "parameter": "",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004134",
+        "line": "5",
+        "ability_id": "",
+        "model": "",
+        "name": "Close-range Killers",
+        "description": "While a friendly WAR DOG model is within 9\" of this model, each time that WAR DOG model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.",
         "type": "Datasheet",
         "parameter": "",
         "": ""

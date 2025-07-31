@@ -22,6 +22,11 @@ const applyFactionOverrides = (factions: Faction[]) => {
       name: "Deathwatch",
       link: "",
     },
+    {
+      id: "SM",
+      name: "Space Wolves",
+      link: "",
+    },
   ];
 
   return [...factions, ...extraFactions];
@@ -532,6 +537,9 @@ const addAbilityIfFound = (
 };
 
 const splitWeaponsAnd = (weapons: string[]): string[] => {
+  if (!weapons || weapons.length === 0) {
+    return [];
+  }
   if (weapons[weapons.length - 1].includes(" and ")) {
     const lastItem = weapons[weapons.length - 1];
     const otherWeapons = weapons.slice(0, -1);

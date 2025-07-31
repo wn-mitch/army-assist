@@ -805,13 +805,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000000087",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's storm bolter can be replaced with 1 deathwind launcher.",
-        "": ""
-    },
-    {
         "datasheet_id": "000000092",
         "line": "1",
         "button": "â¢",
@@ -1470,192 +1463,38 @@
         "": ""
     },
     {
-        "datasheet_id": "000000282",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000283",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's bolt pistol can be replaced with one of the following:1 combi-weapon1 master-crafted boltgun1 plasma pistol1 storm bolter1 power fist1 relic weapon1 thunder hammer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's relic weapon can be replaced with one of the following:1 plasma pistol1 power fist1 thunder hammer1 relic shield and 1 close combat weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "3",
-        "button": "â¢",
-        "description": "This model's bolt pistol and relic weapon can be replaced with 1 twin lightning claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000285",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000286",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000287",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000288",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000292",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000297",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's power weapon can be replaced with one of the following:1 chainfist1 power fist1 relic shield and 1 close combat weapon1 thunder hammer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's storm bolter and power weapon can be replaced with 1 twin lightning claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "3",
-        "button": "â¢",
-        "description": "This model's storm bolter can be replaced with one of the following:1 chainfist1 power fist1 power weapon1 thunder hammer1 combi-weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's bolt pistol and relic weapon can be replaced with 1 twin lightning claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's bolt pistol can be replaced with one of the following:1 combi-weapon1 master-crafted boltgun1 plasma pistol1 storm bolter1 power fist1 relic weapon1 thunder hammer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "3",
-        "button": "â¢",
-        "description": "This model's relic weapon can be replaced with one of the following:1 plasma pistol1 power fist1 thunder hammer1 storm shield and 1 close combat weapon",
-        "": ""
-    },
-    {
         "datasheet_id": "000000302",
         "line": "1",
         "button": "â¢",
-        "description": "This model's assault cannon can be replaced with one of the following:heavy plasma cannonhelfrost cannonmulti-meltatwin lascannon",
+        "description": "This model's assault cannon can be replaced with one of the following:Helfrost cannonMulti-melta",
         "": ""
     },
     {
         "datasheet_id": "000000303",
         "line": "1",
-        "button": "â¢",
-        "description": "The Blood Claw Pack Leader's Astartes chainsword can be replaced with one of the following:1 power fist1 power weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000303",
-        "line": "2",
         "button": "â¢",
         "description": "The Blood Claw Pack Leader's bolt pistol can be replaced with 1 plasma pistol.",
         "": ""
     },
     {
         "datasheet_id": "000000303",
-        "line": "3",
+        "line": "2",
         "button": "â¢",
-        "description": "Up to 2 Blood Claws can each have their Astartes chainsword replaced with one of the following:1 flamer and 1 close combat weapon1 grav-gun and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000304",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
+        "description": "The Blood Claw Pack Leader's Astartes chainsword can be replaced with 1 power weapon.",
         "": ""
     },
     {
         "datasheet_id": "000000305",
         "line": "1",
         "button": "â¢",
-        "description": "1 Grey Hunter's bolt pistol can be replaced with 1 plasma pistol.",
+        "description": "The Grey Hunter Pack Leader's bolt carbine can be replaced with 1 plasma pistol.",
         "": ""
     },
     {
         "datasheet_id": "000000305",
         "line": "2",
         "button": "â¢",
-        "description": "Any number of models can each be equipped with 1 Astartes chainsword.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000305",
-        "line": "3",
-        "button": "â¢",
-        "description": "The Grey Hunter Pack Leader's close combat weapon can be replaced with one of the following:1 power fist1 power weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000305",
-        "line": "4",
-        "button": "â¢",
-        "description": "Up to 2 Grey Hunters can each have their boltgun replaced with one of the following:1 flamer1 grav-gun1 meltagun1 plasma gun",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000306",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
+        "description": "The Grey Hunter Pack Leader's Astartes chainsword can be replaced with one of the following1 power fist1 power weapon",
         "": ""
     },
     {
@@ -1666,178 +1505,45 @@
         "": ""
     },
     {
-        "datasheet_id": "000000310",
-        "line": "1",
-        "button": "â¢",
-        "description": "1 Wolf Scout's boltgun and bolt pistol can be  replaced with one of the following:1 bolt pistol and 1 power weapon1 plasma pistol and 1 boltgun",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000310",
-        "line": "2",
-        "button": "â¢",
-        "description": "1 Wolf Scout's boltgun can be replaced with one of the following:1 flamer1 grav-gun1 heavy bolter1 meltagun1 missile launcher1 plasma gun",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000310",
-        "line": "3",
-        "button": "â¢",
-        "description": "Any number of models can each have their boltgun replaced with one of the following:1 Astartes shotgun1 combat knife",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000310",
-        "line": "4",
-        "button": "â¢",
-        "description": "The Wolf Scout Pack Leader's bolt pistol and boltgun can be replaced with with 1 twin lightning claws, or two different weapons from the following list:*1 bolt pistol1 boltgun1 combi-weapon1 grav-pistol1 hand flamer1 inferno pistol1 plasma pistol1 storm bolter1 Astartes chainsword1 power fist1 power weapon1 thunder hammer.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000310",
-        "line": "5",
-        "button": "*",
-        "description": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)",
-        "": ""
-    },
-    {
         "datasheet_id": "000000311",
         "line": "1",
         "button": "â¢",
-        "description": "Any number of models can each be equipped with 1 stormfrag auto-launcher.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000311",
-        "line": "2",
-        "button": "â¢",
-        "description": "Any number of models can each have their Wulfen claws and melee weapons replaced with 1 Wulfen hammer and 1 storm shield.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000314",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000315",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of models can have their bolt pistol replaced with one of the following:1 boltgun1 combi-weapon1 plasma pistol1 storm bolter1 storm shield",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000317",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
+        "description": "Any number of models can each have their death totem replaced with 1 stormfrag auto-launcher.",
         "": ""
     },
     {
         "datasheet_id": "000000318",
         "line": "1",
         "button": "â¢",
-        "description": "Any number of models can each have their power fist and storm bolter or power weapon and storm bolter replaced with two of the following:1 storm bolter*1 combi-weapon*1 chainfist1 power fist1 power weapon1 thunder hammer1 storm shield*",
+        "description": "Any number of models can each have their storm bolter replaced with 1 storm shield.",
         "": ""
     },
     {
         "datasheet_id": "000000318",
         "line": "2",
         "button": "â¢",
-        "description": "For every 5 models in this unit, one Wolf Guard Terminator can replace its storm bolter with one of the following:1 assault cannon1 heavy flamer1 storm bolter and 1 cyclone missile launcher (this model's storm bolter cannot be replaced)",
+        "description": "For every 5 models in this unit, 1 Wolf Guard Terminator can replace its storm bolter and master-crafted power weapon with 1 assault cannon and 1 powerfist.",
         "": ""
     },
     {
         "datasheet_id": "000000318",
         "line": "3",
         "button": "â¢",
-        "description": "Any number of models can each have their power fist and storm bolter or power weapon and storm bolter replaced with 1 twin lightning claws. ",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000318",
-        "line": "4",
-        "button": "*",
-        "description": "* Each model cannot have duplicates of these pieces of wargear and cannot have both a storm bolter and a combi-weapon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000321",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's 2 skyhammer missile launchers can replaced with one of the following:2 twin heavy bolters2 twin multi-meltas",
+        "description": "The Wolf Guard Terminator Pack Leader's storm bolter and master-crafted power weapon can be replaced with 1 of the following:1 relic greataxe1 twin lightning claws",
         "": ""
     },
     {
         "datasheet_id": "000000322",
         "line": "1",
         "button": "â¢",
-        "description": "Any number of models can each have their bolt pistol replaced with one of the following:1 boltgun1 plasma pistol1 storm shield",
+        "description": "Any number of models can each have their bolt pistol replaced with one of the following:1 boltgun1 storm shield",
         "": ""
     },
     {
-        "datasheet_id": "000000323",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
-        "line": "1",
-        "button": "â¢",
-        "description": "The Skyclaw Pack Leader's Astartes chainsword can be replaced with one of the following:1 power fist1 power weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
+        "datasheet_id": "000000322",
         "line": "2",
         "button": "â¢",
-        "description": "The Skyclaw Pack Leader's bolt pistol can be replaced with 1 plasma pistol.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
-        "line": "3",
-        "button": "â¢",
-        "description": "Up to 2 Skyclaws can each have their bolt pistol and Astartes chainsword replaced with one of the following:1 plasma pistol and 1 Astartes chainsword1 flamer and 1 close combat weapon1 grav-gun and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000325",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's 2 skyhammer missile launchers can be replaced with one of the following:2 twin multi-meltas2 twin heavy bolters",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000325",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's twin stormstrike missile launcher can be replaced with 1 twin lascannon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of Long Fangs can each have their boltgun replaced with one of the following:1 grav-cannon1 heavy bolter1 heavy flamer1 lascannon1 missile launcher1 multi-melta1 plasma cannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "2",
-        "button": "â¢",
-        "description": "The Long Fang Pack Leader's boltgun can be replace with one of the following1 flamer1 grav-gun1 meltagun1 plasma gun1 plasma pistol",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "3",
-        "button": "â¢",
-        "description": "The Long Fang Pack Leader's close combat weapon can be replaced with one of the following:1 Astartes chainsword1 power fist1 power weapon",
+        "description": "For every 3 models in this unit, one model's bolt pistol can be replaced with 1 plasma pistol.",
         "": ""
     },
     {
@@ -7311,7 +7017,7 @@
         "datasheet_id": "000001159",
         "line": "1",
         "button": "â¢",
-        "description": "One Incusor can be equipped with 1 haywire mine.",
+        "description": "One Incursor can be equipped with 1 haywire mine.",
         "": ""
     },
     {
@@ -8540,20 +8246,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000001509",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of this model's storm bolters can each be replaced with 1 heavy flamer.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001509",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's Fenrisian great axe or great wolf claw and storm bolter can be replaced with 1 blizzard shield and 1 storm bolter.",
-        "": ""
-    },
-    {
         "datasheet_id": "000001523",
         "line": "1",
         "button": "â¢",
@@ -8998,14 +8690,14 @@
         "datasheet_id": "000001658",
         "line": "2",
         "button": "â¢",
-        "description": "This model's reaper chainsword can be replaced with 1 of the following:1 daemonbreath thermal cannon1 despoiler gatling cannon and 1 heavy darkflamer1 despoiler battle cannon and 1 diabolus heavy stubber",
+        "description": "This model's reaper chainsword can be replaced with one of the following:1 daemonbreath thermal cannon1 despoiler gatling cannon and 1 heavy darkflamer1 despoiler battle cannon and 1 diabolus heavy stubber",
         "": ""
     },
     {
         "datasheet_id": "000001658",
         "line": "3",
         "button": "â¢",
-        "description": "This model's warpstrike claw can be replaced with 1 of the following:1 daemonbreath thermal cannon1 despoiler gatling cannon and 1 heavy darkflamer1 despoiler battle cannon and 1 diabolus heavy stubber",
+        "description": "This model's warpstrike claw can be replaced with one of the following:1 daemonbreath thermal cannon1 despoiler gatling cannon and 1 heavy darkflamer1 despoiler battle cannon and 1 diabolus heavy stubber",
         "": ""
     },
     {
@@ -9019,14 +8711,14 @@
         "datasheet_id": "000001659",
         "line": "1",
         "button": "â¢",
-        "description": "This model's brimstone volcano lance and ectoplasma decimator can be replaced with 1 darkflame cannon and 1 warpshock harpoon.",
+        "description": "This model's 2 gheiststrike missile launchers and twin Desecrator cannon can be replaced with 1 gheiststrike missile launcher and 2 twin Desecrator cannons.",
         "": ""
     },
     {
         "datasheet_id": "000001659",
         "line": "2",
         "button": "â¢",
-        "description": "This model's 2 gheiststrike missile launchers and twin desecrator cannon can be replaced with 1 gheiststrike missile launcher and 2 twin desecrator cannons.",
+        "description": "This model's brimstone volcano lance and ectoplasma decimator can be replaced with 1 darkflame cannon and 1 warpshock harpoon.",
         "": ""
     },
     {
@@ -9034,13 +8726,6 @@
         "line": "1",
         "button": "â¢",
         "description": "This model's reaper chainsword can be replaced with 1 warpstrike claw.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001661",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
         "": ""
     },
     {
@@ -10175,13 +9860,6 @@
         "line": "1",
         "button": "â¢",
         "description": "This model's diabolus heavy stubber can be replaced with 1 daemonbreath meltagun.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002567",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
         "": ""
     },
     {
@@ -12589,105 +12267,21 @@
         "datasheet_id": "000002801",
         "line": "1",
         "button": "â¢",
-        "description": "This model's Dreadnought combat weapon and storm bolter can be replaced with one of the following:1 missile launcher and 1 close combat weapon1 Dreadnought combat weapon and 1 heavy flamer",
+        "description": "This model's assault cannon can be replaced with one of the following:1 helfrost cannon1 multi-melta",
         "": ""
     },
     {
         "datasheet_id": "000002801",
         "line": "2",
         "button": "â¢",
-        "description": "This model's assault cannon can be replaced with one of the following:1 helfrost cannon1 multi-melta1 plasma cannon1 twin lascannon",
+        "description": "This model's storm bolter can be replaced with 1 heavy flamer.",
         "": ""
     },
     {
         "datasheet_id": "000002801",
         "line": "3",
         "button": "â¢",
-        "description": "This model's assault cannon, storm bolter and Dreadnought combat weapon can be replaced with one of the following:1 Fenrisian great axe, 1 blizzard shield and 1 storm bolter1 Fenrisian great axe, 1 blizzard shield and 1 heavy flamer",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's bolt pistol and Astartes chainsword can be replaced with two different weapons from the following list:*1 bolt pistol1 combi-weapon1 plasma pistol1 storm bolter1 Astartes chainsword1 power fist1 power weapon1 thunder hammer1 storm shield",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "3",
-        "button": "*",
-        "description": " * This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's storm bolter and power weapon can be replaced with 1 twin lightning claws.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's storm bolter and power weapon can be replaced with two different options from the following list:*1 assault cannon1 heavy flamer1 cyclone missile launcher and 1 storm bolter1 storm bolter1 chainfist1 power fist1 thunder hammer1 storm shield",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "3",
-        "button": "â¢",
-        "description": "This model's storm bolter can be replaced with 1 combi-weapon. ",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "4",
-        "button": "*",
-        "description": "* This model can only be equipped with two ranged weapons if one of them is a cyclone missile launcher and the other is either a storm bolter or a combi-weapon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's bolt pistol and boltgun can be replaced with 1 twin lightning claws. ",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's bolt pistol and boltgun can be replaced with two different weapons from the following list:*1 bolt pistol1 boltgun1 combi-weapon1 plasma pistol1 storm bolter1 Astartes chainsword1 power fist1 power weapon1 thunder hammer1 storm shield",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "3",
-        "button": "*",
-        "description": "*  This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002805",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002806",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
+        "description": "This model's assault cannon, storm bolter and Dreadnought combat weapon can be replaced with one of the following:1 Fenrisian greataxe, 1 blizzard shield and 1 storm bolter1 Fenrisian greataxe, 1 blizzard shield and 1 heavy flamer",
         "": ""
     },
     {
@@ -19044,6 +18638,48 @@
         "line": "2",
         "button": "â¢",
         "description": "1 Pink Horror that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's master-crafted power weapon can be replaced with 1 thunder hammer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's storm shield can be replaced with one of the following:1 master-crafted bolt carbine1 master-crafted heavy bolt pistol1 plasma pistol",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "1",
+        "button": "â¢",
+        "description": "All of the models in this unit can each have their master-crafted power weapon and storm shield replaced with 1 paired master-crafted power weapons.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004132",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can each have their death totem replaced with 1 stormfrag auto-launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's Fenrisian greataxe or great wolf claw and storm bolter can be replaced with 1 blizzard shield and 1 heavy flamer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "2",
+        "button": "â¢",
+        "description": "If this model is not equipped with a storm bolter, its heavy flamer can be replaced with 1 storm bolter.",
         "": ""
     }
 ]

@@ -4,9 +4,9 @@
         "name": "Agents of the Imperium",
         "type": "Codex",
         "edition": "10",
-        "version": "1.2",
-        "errata_date": "12.03.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_warhammer40000_codex_imperial_agents_march_2025-owqeftyadv-uek156e8ls.pdf",
+        "version": "1.3",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_imperial_agents-vvpb98sg57-u9hvcumwcd.pdf",
         "": ""
     },
     {
@@ -14,9 +14,9 @@
         "name": "Munitorum Field Manual",
         "type": "Expansion",
         "edition": "10",
-        "version": "2.9",
-        "errata_date": "18.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_jun25_wh40k_core&key_munitorum_field_manual-y0txrlwrql-tew4cikewu.pdf",
+        "version": "3.0",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_core_rules_munitorum_field_manual-j2xkyfhbhi-c7cduebtjl.pdf",
         "": ""
     },
     {
@@ -34,9 +34,9 @@
         "name": "Balance Dataslate",
         "type": "Rulebook",
         "edition": "10",
-        "version": "June 2025",
-        "errata_date": "18.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_jun25_wh40k_core&key_balance_dataslate-lt8xrtdmxq-ehmx9nxsc9.pdf",
+        "version": "July 2025",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_core_rules_balance_dataslate-ncerqiz1ww-mvmnhyqgww.pdf",
         "": ""
     },
     {
@@ -44,9 +44,9 @@
         "name": "Boarding Actions",
         "type": "Expansion",
         "edition": "10",
-        "version": "1.0",
-        "errata_date": "16.10.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/warhammer40000_otherrules_boardingactionscompanion_eng.16.10.pdf",
+        "version": "1.1",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_other_rules_boarding_actions_companion-hyatd8cog7-wpqvdzf1mt.pdf",
         "": ""
     },
     {
@@ -54,9 +54,9 @@
         "name": "Astra Militarum",
         "type": "Codex",
         "edition": "10",
-        "version": "1.2",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_04-06_warhammer_40000_codex_astra_militarum-ordnezrvf0-ehl0cftwye.pdf",
+        "version": "1.3",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_astra_militarum-48slckjkgx-yvfnulltcj.pdf",
         "": ""
     },
     {
@@ -74,9 +74,9 @@
         "name": "Necrons",
         "type": "Codex",
         "edition": "10",
-        "version": "1.2",
-        "errata_date": "16.10.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/warhammer40000_faqs&errata_necrons_eng_16.10.pdf",
+        "version": "1.3",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_necrons-fw1gsh33ps-lspxlaahah.pdf",
         "": ""
     },
     {
@@ -104,9 +104,9 @@
         "name": "Aeldari",
         "type": "Codex",
         "edition": "10",
-        "version": "1.3",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_06-04_warhammer_40000_codex_aeldari-s3sq1pt7wg-ww6w7pu1mt.pdf",
+        "version": "1.4",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_aeldari-ujycbw7yq5-knkovl9zgn.pdf",
         "": ""
     },
     {
@@ -124,9 +124,9 @@
         "name": "Orks",
         "type": "Codex",
         "edition": "10",
-        "version": "1.4",
-        "errata_date": "12.03.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_warhammer40000_codex_orks_march_2025-bnojgjhpw6-9acwro6ros.pdf",
+        "version": "1.5",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_orks-dky5ikgakr-qer2tyrr00.pdf",
         "": ""
     },
     {
@@ -154,9 +154,9 @@
         "name": "T'au Empire",
         "type": "Codex",
         "edition": "10",
-        "version": "1.3",
-        "errata_date": "15.01.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_warhammer_40000_codex_tau_empire-nl0kxfby46-ipepdoawbb.pdf",
+        "version": "1.4",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_tau_empire-leiskloizy-pfywwtgrol.pdf",
         "": ""
     },
     {
@@ -194,9 +194,9 @@
         "name": "Thousand Sons",
         "type": "Codex",
         "edition": "10",
-        "version": "1.0",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_4-qqpkfqbc4m.pdf",
+        "version": "1.1",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_thousand_sons-c4mg5pt4or-ma7qejzdsq.pdf",
         "": ""
     },
     {
@@ -214,9 +214,9 @@
         "name": "Emperor's Children",
         "type": "Codex",
         "edition": "10",
-        "version": "1.0",
-        "errata_date": "14.05.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_14-05_warhammer_40000_codex_faq_and_errata_emperor's_children-os1jbseyln-4sxktk1dqq.pdf",
+        "version": "1.1",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_emperor's_children-gfq6xyaqzj-bc75qyhghe.pdf",
         "": ""
     },
     {
@@ -224,19 +224,19 @@
         "name": "World Eaters",
         "type": "Codex",
         "edition": "10",
-        "version": "1.0",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_04-06_warhammer_40000_codex_world_eaters-uhovkjjakb-aunezirz2m.pdf",
+        "version": "1.1",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_world_eaters-phyvxe2wlg-b10fa1u5di.pdf",
         "": ""
     },
     {
         "id": "000000070",
         "name": "Chaos Knights",
-        "type": "Index",
+        "type": "Codex",
         "edition": "10",
-        "version": "",
-        "errata_date": "11.12.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_warhammer40000_chaos_knights_dec24-qkc4qvg5er-jv2ynmwchh.pdf",
+        "version": "1.0",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_chaos_knights-hpcvhyu2jw-k8jj4efxxj.pdf",
         "": ""
     },
     {
@@ -245,8 +245,8 @@
         "type": "Index",
         "edition": "10",
         "version": "",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_4-ibtczkfetx.pdf",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_index_chaos_daemons-gceuhmmyhy-5mafgovge4.pdf",
         "": ""
     },
     {
@@ -274,9 +274,9 @@
         "name": "Tyranids",
         "type": "Codex",
         "edition": "10",
-        "version": "1.2",
-        "errata_date": "16.10.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/warhammer40000_faqs&errata_tyranids_eng_16.10.pdf",
+        "version": "1.3",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_tyranids-atlfhonwwb-pdbedyunmm.pdf",
         "": ""
     },
     {
@@ -324,9 +324,9 @@
         "name": "Chaos Space Marines",
         "type": "Codex",
         "edition": "10",
-        "version": "",
-        "errata_date": "16.10.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/warhammer40000_faqs&errata_chaosspacemarines_eng_16.10.pdf",
+        "version": "1.2",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_chaos_space_marines-taddztvlai-xwtrceemrz.pdf",
         "": ""
     },
     {
@@ -457,6 +457,16 @@
         "version": "",
         "errata_date": "19.02.2025 0:00:00",
         "errata_link": "https://assets.warhammer-community.com/eng_warhammer40000_legends_datasheet_cards_drukhari-dbm6tdwqpy-07onyf6jqf.pdf",
+        "": ""
+    },
+    {
+        "id": "000000343",
+        "name": "Drop Pod",
+        "type": "Datasheet",
+        "edition": "10",
+        "version": "",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_other_rules_space_marines_drop_pod-ubd1ln59ih-pw3qzixxxo.pdf",
         "": ""
     },
     {
@@ -1062,11 +1072,11 @@
     {
         "id": "000000036",
         "name": "Space Wolves",
-        "type": "Index",
+        "type": "Codex Supplement",
         "edition": "10",
-        "version": "",
-        "errata_date": "15.01.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_wh40k_index_space_wolves_jan25-qddgvlyihf-uuyx93hff7.pdf",
+        "version": "1.0",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_space_wolves-lokqm9xkd3-1zi3xzzqih.pdf",
         "": ""
     },
     {
@@ -1094,9 +1104,9 @@
         "name": "Dark Angels",
         "type": "Codex Supplement",
         "edition": "10",
-        "version": "1.3",
-        "errata_date": "11.12.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_wh40k_codexfaq&errata_dark_angels_dec2024-c9pldkg75j-bw4uaukene.pdf",
+        "version": "1.4",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_dark_angels-rpnv8va4bw-4tbusbi0pn.pdf",
         "": ""
     },
     {
@@ -1175,8 +1185,8 @@
         "type": "Expansion",
         "edition": "10",
         "version": "",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_4-zbpu5ror0b.pdf",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_other_rules_tyranids_subterranean_assault-fy3w2qyitb-9qk1h9lwr5.pdf",
         "": ""
     },
     {
@@ -1195,8 +1205,8 @@
         "type": "Expansion",
         "edition": "10",
         "version": "",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_04-06_warhammer_40000_chaos_space_marines_cabal_of_chaos-rmpgj4m2kb-is4ibuswtw.pdf",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_other_rules_chaos_space_marines_cabal_of_chaos-7rhobuav4f-vygfk2yrv4.pdf",
         "": ""
     },
     {

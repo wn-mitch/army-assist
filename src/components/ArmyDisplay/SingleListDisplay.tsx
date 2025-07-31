@@ -12,10 +12,10 @@ const SingleListDisplay = ({
   const parseText = useStore((state) => state.parseText);
   const hasUnits = activeList.units.length > 0;
   const hasText = activeList.text;
-
+  
   useEffect(() => {
     if (!hasUnits && hasText) {
-      parseText(activeList.text, activeList.name ?? "");
+      parseText(activeList.text, activeList.name ?? "", activeListIndex.toString(), activeList.textFormat);
     }
   }, [hasUnits, hasText, activeList.text, activeList.name, parseText]);
 

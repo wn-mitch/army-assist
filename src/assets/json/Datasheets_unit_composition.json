@@ -1074,39 +1074,9 @@
         "": ""
     },
     {
-        "datasheet_id": "000000283",
-        "line": "1",
-        "description": "1 Logan Grimnar on Stormrider - EPIC HERO",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000284",
-        "line": "1",
-        "description": "1 Wolf Lord on Thunderwolf",
-        "": ""
-    },
-    {
         "datasheet_id": "000000285",
         "line": "1",
         "description": "1 Ragnar Blackmane - EPIC HERO",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000286",
-        "line": "1",
-        "description": "1 Krom Dragongaze",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000287",
-        "line": "1",
-        "description": "1 Harald Deathwolf - EPIC HERO",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000288",
-        "line": "1",
-        "description": "1 Canis Wolfborn - EPIC HERO",
         "": ""
     },
     {
@@ -1119,18 +1089,6 @@
         "datasheet_id": "000000297",
         "line": "1",
         "description": "1 Ulrik the Slayer - EPIC HERO",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000300",
-        "line": "1",
-        "description": "1 Wolf Guard Battle Leader in Terminator Armour",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000301",
-        "line": "1",
-        "description": "1 Wolf Guard Battle Leader on Thunderworlf",
         "": ""
     },
     {
@@ -1148,13 +1106,7 @@
     {
         "datasheet_id": "000000303",
         "line": "2",
-        "description": "9-14 Blood Claws",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000304",
-        "line": "1",
-        "description": "1 Lukas the Trickster - EPIC HERO",
+        "description": "9-19 Blood Claws",
         "": ""
     },
     {
@@ -1166,7 +1118,7 @@
     {
         "datasheet_id": "000000305",
         "line": "2",
-        "description": "4-9 Grey Hunters",
+        "description": "9 Grey Hunters",
         "": ""
     },
     {
@@ -1182,45 +1134,15 @@
         "": ""
     },
     {
-        "datasheet_id": "000000310",
-        "line": "1",
-        "description": "1 Wolf Scout Pack Leader",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000310",
-        "line": "2",
-        "description": "4-9 Wolf Scouts",
-        "": ""
-    },
-    {
         "datasheet_id": "000000311",
         "line": "1",
-        "description": "1 Wulfen Pack Leader",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000311",
-        "line": "2",
-        "description": "4-9 Wulfen",
+        "description": "5-10 Wulfen",
         "": ""
     },
     {
         "datasheet_id": "000000314",
         "line": "1",
         "description": "1 Murderfang - EPIC HERO",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000315",
-        "line": "1",
-        "description": "1 Wolf Guard Pack Leader",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000315",
-        "line": "2",
-        "description": "4-9 Wolf Guard",
         "": ""
     },
     {
@@ -1242,12 +1164,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000000321",
-        "line": "1",
-        "description": "1 Stormwolf",
-        "": ""
-    },
-    {
         "datasheet_id": "000000322",
         "line": "1",
         "description": "1 Thunderwolf Cavalry Pack Leader",
@@ -1263,36 +1179,6 @@
         "datasheet_id": "000000323",
         "line": "1",
         "description": "5-10 Fenrisian Wolves",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
-        "line": "1",
-        "description": "1 Skyclaw Pack Leader",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000324",
-        "line": "2",
-        "description": "4-14 Skyclaws",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000325",
-        "line": "1",
-        "description": "1 Stormfang Gunship",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "1",
-        "description": "1 Long Fang Pack Leader",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000326",
-        "line": "2",
-        "description": "4-5 Long Fangs",
         "": ""
     },
     {
@@ -5718,12 +5604,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000001509",
-        "line": "1",
-        "description": "1 Wulfen Dreadnought",
-        "": ""
-    },
-    {
         "datasheet_id": "000001523",
         "line": "1",
         "description": "1 Scout Sniper Sergeant",
@@ -8762,43 +8642,7 @@
     {
         "datasheet_id": "000002801",
         "line": "1",
-        "description": "1 Space Wolves Venerable Dreadnought",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002802",
-        "line": "1",
-        "description": "1 Wolf Guard Pack Leader with Jump Pack",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002803",
-        "line": "1",
-        "description": "1 Wolf Guard Pack Leader in Terminator Armour",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002804",
-        "line": "1",
-        "description": "1 Wolf Guard Pack Leader",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002805",
-        "line": "1",
-        "description": "1 Cyberwolf",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002806",
-        "line": "1",
-        "description": "1 Hound of Morkai Pack Leader",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002806",
-        "line": "2",
-        "description": "4-9 Hound of Morkai",
+        "description": "1 Venerable Dreadnought",
         "": ""
     },
     {
@@ -12285,6 +12129,48 @@
         "datasheet_id": "000004128",
         "line": "1",
         "description": "10 Blue Horrors",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004129",
+        "line": "1",
+        "description": "1 Wolf Priest",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004130",
+        "line": "1",
+        "description": "1 Wolf Guard Battle Leader",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "1",
+        "description": "3-6 Wolf Guard Headtakers",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004131",
+        "line": "2",
+        "description": "0-6 Hunting Wolves",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004132",
+        "line": "1",
+        "description": "5-10 Wulfen",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004133",
+        "line": "1",
+        "description": "1 Wulfen Dreadnought",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004134",
+        "line": "1",
+        "description": "1 Knight Ruinator",
         "": ""
     }
 ]

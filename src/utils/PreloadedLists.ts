@@ -1,5 +1,4 @@
 import Phase from "@/types/Phase";
-import StoredList from "@/types/StoredList";
 import { v4 } from "uuid";
 
 const InvalidText = `Invalid - Invalid - Invalid
@@ -1501,6 +1500,7 @@ const samplePreload = [
   {
     uuid: "8a776952-8b58-4fd8-99f6-5db83d484da4",
     text: TauText,
+    textFormat: "nr" as const,
     name: "(Sample) 2K Tau List",
     units: [],
     phase: Phase.Command,
@@ -1513,6 +1513,7 @@ const samplePreload = [
 
 const defaultObject = {
   units: [],
+  textFormat: "nr" as const,
   phase: Phase.Command,
   faction: undefined,
   detachment: undefined,

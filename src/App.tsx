@@ -8,15 +8,25 @@ import useStore from "./store/store";
 function App() {
   const isDarkMode = useStore((state) => state.settings.isDarkMode);
   const addListFromURLString = useStore((state) => state.addList);
+  const addListListforge = useStore((state) => state.addListListforge);
 
   useEffect(() => {
     const path = window.location.pathname.substring(1); // Remove the leading '/'
     if (path) {
       const decodedData = LZstring.decompressFromEncodedURIComponent(path);
-      addListFromURLString(decodedData)
+      
+      // Check if the path starts with 'listforge/'
+      if (path.startsWith('listforge/')) {
+        const listforgeData = path.substring(10); // Remove 'listforge/' prefix
+        const decodedListforgeData = LZstring.decompressFromEncodedURIComponent(listforgeData);
+        addListListforge(decodedListforgeData);
+      } else {
+        addListFromURLString(decodedData);
+      }
+      
       window.history.replaceState({}, document.title, "/");
     }
-  }, [addListFromURLString]);
+  }, [addListFromURLString, addListListforge]);
 
   useEffect(() => {
     if (isDarkMode) {
