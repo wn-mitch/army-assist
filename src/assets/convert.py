@@ -1,4 +1,3 @@
-import csv
 import json
 import os
 import re
@@ -39,7 +38,7 @@ replacements = {
 
     # Game-specific cleanup
     r" \(Aura\)": "",
-    r"\'": "'",  # Normalize apostrophes
+    r"\'": "'",
 }
 
 # Define the conditions for rows to be ignored

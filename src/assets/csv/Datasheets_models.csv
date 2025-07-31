@@ -78,7 +78,7 @@
 000000084|1|Stormhawk Interceptor|20+"|9|3+|-||10|6+|0|120 x 92mm flying base||
 000000085|1|Rhino Primaris|12"|9|3+|-||10|6+|3|Use model||
 000000086|1|Firestrike Servo-turrets|3"|6|2+|-||6|6+|2|80mm||
-000000087|1|Drop Pod|-|7|3+|-||8|6+|2|Use model||
+000000087|1|Drop Pod|-|7|3+|-||8|6+|0|Use model||
 000000091|1|Ballistus Dreadnought|8"|10|2+|-||12|6+|4|90mm||
 000000092|1|Sicaran Venator|10"|11|2+|-||14|6+|4|Use model||
 000000093|1|Typhon|10"|12|2+|-||18|6+|6|Use model||
@@ -152,35 +152,21 @@
 000000241|1|Ravenwing Black Knights|12"|5|3+|5||3|6+|2|75 x 42mm||
 000000242|1|Land Speeder Vengeance|14"|8|3+|5||10|6+|3|60mm flying base||
 000000243|1|Fortress Of Redemption|-|13|2+|-||30|7+|0|Use model||
-000000282|1|Logan Grimnar|5"|5|2+|4||6|6+|1|40mm||
-000000283|1|Logan Grimnar On Stormrider|10"|6|2+|4||12|6+|4|120 x 92mm||
-000000284|1|Wolf Lord On Thunderwolf|10"|6|3+|4||6|6+|2|60mm||
-000000285|1|Ragnar Blackmane|6"|4|3+|4||5|6+|1|40mm||
-000000286|1|Krom Dragongaze|6"|4|3+|4||4|6+|1|32mm||
-000000287|1|Harald Deathwolf|10"|6|3+|4||7|6+|2|60mm||
-000000288|1|Canis Wolfborn|10"|6|3+|-||6|6+|2|60mm||
-000000292|1|Njal Stormcaller|5"|5|2+|4||5|6+|1|40mm||
-000000297|1|Ulrik The Slayer|6"|4|3+|4||4|5+|1|32mm||
-000000300|1|Wolf Guard Battle Leader In Terminator Armour|5"|5|2+|4||5|6+|1|40mm||
-000000301|1|Wolf Guard Battle Leader On Thunderwolf|10"|6|3+|-||5|6+|2|60mm||
-000000302|1|Bjorn The Fell-handed|8"|9|2+|-||8|6+|3|60mm||
-000000303|1|Blood Claws|6"|4|3+|-||2|6+|2|32mm||
-000000304|1|Lukas The Trickster|6"|4|3+|-||4|6+|1|32mm||
-000000305|1|Grey Hunters|6"|4|3+|-||2|6+|2|32mm||
-000000306|1|Iron Priest|6"|4|2+|-||4|6+|1|32mm||
+000000282|1|Logan Grimnar|6"|5|2+|4||8|6+|1|80mm||
+000000285|1|Ragnar Blackmane|7"|4|3+|4||5|6+|1|40mm||
+000000292|1|Njal Stormcaller|7"|4|3+|4||4|6+|1|40mm||
+000000297|1|Ulrik The Slayer|7"|4|3+|4||4|5+|1|32mm||
+000000302|1|Bjorn The Fell-handed|9"|9|2+|5||8|6+|3|60mm||
+000000303|1|Blood Claws|7"|4|3+|-||2|6+|2|32mm||
+000000305|1|Grey Hunters|7"|4|3+|-||2|6+|3|32mm||
+000000306|1|Iron Priest|7"|4|2+|-||4|6+|1|32mm||
 000000308|1|Iron Priest On Thunderwolf|10"|6|2+|-||5|6+|2|60mm||
-000000310|1|Wolf Scouts|6"|4|4+|-||2|6+|1|28mm||
-000000311|1|Wulfen|8"|5|4+|-||2|6+|0|40mm||
-000000314|1|Murderfang|8"|9|2+|-||8|6+|0|60mm||
-000000315|1|Wolf Guard|6"|4|3+|-||2|5+|1|32mm||
-000000317|1|Arjac Rockfist|5"|5|2+|4||6|6+|1|40mm||
-000000318|1|Wolf Guard Terminators|5"|5|2+|4||3|6+|1|40mm||
-000000321|1|Stormwolf|20+"|10|3+|-||14|6+|0|120 x 92mm flying base||
-000000322|1|Thunderwolf Cavalry|10"|6|3+|-||4|6+|2|60mm||
+000000311|1|Wulfen|9"|6|4+|-||2|7+|0|40mm||
+000000314|1|Murderfang|9"|9|2+|-||8|6+|0|60mm||
+000000317|1|Arjac Rockfist|6"|5|2+|4||6|6+|1|40mm||
+000000318|1|Wolf Guard Terminators|6"|5|2+|4||3|6+|1|40mm||
+000000322|1|Thunderwolf Cavalry|12"|6|3+|-||4|6+|2|60mm||
 000000323|1|Fenrisian Wolves|10"|4|6+|-||1|8+|0|40mm||
-000000324|1|Skyclaws|12"|4|3+|-||2|6+|1|32mm||
-000000325|1|Stormfang Gunship|20+"|10|3+|-||14|6+|0|120 x 92mm flying base||
-000000326|1|Long Fangs|6"|4|3+|-||2|6+|1|32mm||
 000000358|1|Corvus Blackstar|20+"|10|3+|-||14|6+|0|120 x 92mm flying base||
 000000373|1|Kaldor Draigo|5"|5|2+|4||7|6+|1|40mm||
 000000374|1|Grand Master Voldus|5"|5|2+|4||6|6+|1|40mm||
@@ -846,7 +832,6 @@
 000001484|1|Canis Rex|10"|11|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|26|5+|10|170 x 109mm||
 000001485|1|Knight Castellan|8"|12|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|28|6+|10|170 x 109mm||
 000001486|1|Knight Valiant|8"|12|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|28|6+|10|170 x 109mm||
-000001509|1|Wulfen Dreadnought|8"|9|2+|-||8|6+|0|60mm||
 000001523|1|Scout Sniper Squad|6"|4|4+|-||2|6+|1|25mm||
 000001524|1|Sergeant Chronus|6"|4|2+|-||3|6+|1|25mm||
 000001525|1|Secutarii Hoplites|6"|3|5+|4||1|7+|1|25mm||
@@ -911,10 +896,10 @@
 000001649|1|Syllâesske|9"|6|6+|4||9|6+|2|50mm||
 000001650|1|Skorpius Dunerider|12"|9|3+|-||11|7+|2|Use model||
 000001651|1|Skorpius Disintegrator|10"|10|2+|-||12|7+|3|Use model||
-000001658|1|Knight Despoiler|10"|12|3+|5| * This model has a 5+ invulnerable save against ranged attacks|22|6+|10|170 x 109mm||
-000001659|1|Knight Tyrant|8"|13|2+|5|* This model has a 5+ invulnerable save against ranged attacks.|24|6+|10|170 x 109mm||
-000001660|1|Knight Desecrator|10"|12|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|22|6+|10|170 x 109mm||
-000001661|1|Knight Rampager|12"|12|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|22|6+|10|170 x 109mm||
+000001658|1|Knight Despoiler|10"|11|3+|5| * Against ranged attacks only|26|6+|10|170 x 109mm||
+000001659|1|Knight Tyrant|8"|12|3+|5|* Against ranged attacks only|28|6+|10|170 x 109mm||
+000001660|1|Knight Desecrator|10"|11|3+|5|* Against ranged attacks only|26|6+|10|170 x 109mm||
+000001661|1|Knight Rampager|12"|11|3+|5|* Against ranged attacks only|26|6+|10|170 x 109mm||
 000001662|1|Chaos Acastus Knight Asterius|8"|13|2+|5|* Against ranged attacks only|30|6+|10|Use model||
 000001663|1|War Dog Moirax|12"|10|3+|5|* Against ranged attacks only|12|7+|8|100mm||
 000001664|1|Acastus Knight Asterius|8"|13|2+|5|* Against ranged attacks only|30|6+|10|Use model||
@@ -1062,12 +1047,12 @@
 000002542|1|Yvraine|8"|3|6+|4||4|6+|1|75 x 42mm||
 000002543|1|The Visarch|8"|3|2+|4||5|6+|1|32mm||
 000002544|1|The Yncarne|10"|10|2+|4||12|6+|3|80mm||
-000002562|1|War Dog Executioner|12"|10|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|12|7+|8|100mm||
-000002563|1|War Dog Stalker|12"|10|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|12|7+|8|100mm||
-000002564|1|War Dog Karnivore|14"|10|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|12|7+|8|100mm||
-000002565|1|War Dog Brigand|12"|10|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|12|7+|8|100mm||
-000002566|1|War Dog Huntsman|12"|10|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|12|7+|8|100mm||
-000002567|1|Knight Abominant|10"|12|3+|5|* This model has a 5+ invulnerable save against ranged attacks.|22|6+|10|170 x 109mm||
+000002562|1|War Dog Executioner|12"|9|3+|5|* Against ranged attacks only|14|7+|6|100mm||
+000002563|1|War Dog Stalker|12"|9|3+|5|* Against ranged attacks only|14|7+|6|100mm||
+000002564|1|War Dog Karnivore|14"|9|3+|5|* Against ranged attacks only|14|7+|6|100mm||
+000002565|1|War Dog Brigand|12"|9|3+|5|* Against ranged attacks only|14|7+|6|100mm||
+000002566|1|War Dog Huntsman|12"|9|3+|5|* Against ranged attacks only|14|7+|6|100mm||
+000002567|1|Knight Abominant|10"|11|3+|5|* Against ranged attacks only|26|6+|10|170 x 109mm||
 000002568|1|Impulsor|12"|9|3+|-||11|6+|2|100mm||
 000002569|1|CULT DEMAGOGUE|6"|3|6+|-||4|6+|1|32mm||
 000002569|2|OTHER MODELS|6"|3|6+|-||1|7+|1|28mm||
@@ -1076,7 +1061,7 @@
 000002571|2|TORMENT|6"|4|6+|-||3|7+|1|40mm||
 000002572|1|Chaos Predator Annihilator|10"|10|3+|-||11|6+|3|Use model||
 000002582|1|Bloodthirster|12"|11|3+|4||18|6+|5|120 x 92mm||
-000002583|1|Blue Horrors|6"|3|8+|4||1|8+|1|25mm||
+000002583|1|Blue Horrors|6"|3|7+|4||1|8+|1|25mm||
 000002584|1|PINK HORROR|6"|3|7+|4||1|7+|2|32mm||
 000002584|2|BLUE HORROR/BRIMSTONE HORROR|6"|3|7+|4||1|8+|1|25mm||
 000002587|1|Imperial Navy Breachers|6"|3|4+|-||1|7+|2|25mm|Navis Armsman 28mm if armed with endurant shield, las-volley, meltagun or plasmagun|
@@ -1251,12 +1236,7 @@
 000002798|1|Primaris Sword Brethren|6"|4|3+|-||3|6+|1|40mm||
 000002799|1|NEOPHYTES|6"|4|4+|-||2|6+|2|25mm||
 000002799|2|OTHER MODELS|6"|4|3+|-||2|6+|2|32mm||
-000002801|1|Space Wolves Venerable Dreadnought|6"|9|2+|-||8|6+|3|60mm||
-000002802|1|Wolf Guard Pack Leader With Jump Pack|12"|4|3+|-||2|6+|1|32mm||
-000002803|1|Wolf Guard Pack Leader In Terminator Armour|5"|5|2+|4||3|6+|1|40mm||
-000002804|1|Wolf Guard Pack Leader|6"|4|3+|-||2|6+|1|32mm||
-000002805|1|Cyberwolf|10"|4|6+|6||2|7+|0|40mm||
-000002806|1|Hounds Of Morkai|6"|4|3+|6|*  This invulnerable save is improved to 4+ against Psychic Attacks.|2|6+|1|32mm||
+000002801|1|Venerable Dreadnought|8"|9|2+|-||8|6+|3|60mm||
 000002807|1|Castellum Stronghold|-|13|2+|-||50|6+|0|Use model||
 000002808|1|Wall Of Martyrs Bunker|-|13|2+|-||10|7+|0|Use model||
 000002809|1|Wall Of Martyrs Defence Line|-|12|2+|-||10|7+|0|Use model||
@@ -1733,3 +1713,10 @@
 000004127|1|PINK HORROR|6"|3|7+|4||1|7+|1|32mm||
 000004127|2|BLUE HORROR/BRIMSTONE HORROR|6"|3|7+|4||1|8+|0|25mm||
 000004128|1|Blue Horrors/Brimstone Horror|6"|3|7+|4||1|8+|0|25mm||
+000004129|1|Wolf Priest|7"|4|3+|4||4|6+|1|40mm||
+000004130|1|Wolf Guard Battle Leader|7"|4|3+|4||5|6+|1|32mm||
+000004131|1|Wolf Guard Headtakers|7"|4|3+|-||3|6+|1|40mm||
+000004131|2|Hunting Wolves|10"|4|6+|-||1|8+|0|60 x 35mm||
+000004132|1|Wulfen|9"|6|4+|4||2|7+|0|40mm||
+000004133|1|Wulfen Dreadnought|9"|9|2+|-||8|6+|0|60mm||
+000004134|1|Knight Ruinator|10"|11|3+|5| * Against ranged attacks only|26|6+|10|170 x 109mm||

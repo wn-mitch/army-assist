@@ -1325,9 +1325,9 @@
     {
         "id": "000008518",
         "faction_id": "QT",
-        "name": "Forged in Terror",
-        "legend": "Chaos Knights are servants of shadow and terror; wherever they stride, fear and madness spread.",
-        "description": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of a CHAOS KNIGHTS model from your army, that enemy unit must take a Battleshock test. For the purposes of this ability, if a unit has a Starting Strength of 1, it is considered to be below its Starting Strength while it has lost one or more wounds.Designer's Note: This means that all enemy units within range of this Aura ability that have lost one or more models must take a Battle-shock test in your opponent's Command phase, not just those that are Below Half-strength.",
+        "name": "Paragons of Terror",
+        "legend": "Steeped in the dark powers of the warp, bred into bloodlines who make a tradition of cruelty and a virtue of malice, these merciless warriors delight in spreading fear and dismay.",
+        "description": "At the start of the first battle round, after selecting one or more Dread abilities to be active for your army, you can select one additional Dread ability to be active for your army (this additional Dread ability cannot be randomly selected).",
         "detachment": "Traitoris Lance",
         "": ""
     },
@@ -1338,6 +1338,33 @@
         "legend": "Mortal thralls and foes alike are sacrificed to empower the fallen nobility.",
         "description": "TITANIC CHAOS KNIGHTS units from your army have the following abilities:Dread Tyrants: While a friendly DAMNED unit is within 9\" of this unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.CHAOS KNIGHTS units from your army have the following abilities:Dark Sacrifice: Each time a CHAOS KNIGHTS unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly DAMNED unit within 6\". That DAMNED unit must take a Leadership test: if passed, destroy D3 models in that DAMNED unit; if failed, destroy D3+3 models in that DAMNED unit. In either case, then select one of the following abilities for your CHAOS KNIGHTS unit's weapons to have until the end of the phase: [LETHAL HITS]; [SUSTAINED HITS 1].WRETCHED THRALLSYou can include DAMNED units in your army (see Codex: Chaos Space Marines). The combined points cost of such units depends on your battle size:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo DAMNED models from your army can be your WARLORD.",
         "detachment": "Iconoclast Fiefdom",
+        "": ""
+    },
+    {
+        "id": "000010303",
+        "faction_id": "QT",
+        "name": "Malefic Surge",
+        "legend": "Calling upon heretical - often supernatural - powers, these Knights are infused with strange and terrible might.",
+        "description": "In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.Unholy Hunger: When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the phase, add 3\" to its Move characteristic.Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.Unnatural Fortitude: When this unit is selected as the target of an attack, until the end of the phase, models in this unit have a 5+ invulnerable save and the Feel No Pain 6+ ability.Designer's Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.",
+        "detachment": "Infernal Lance",
+        "": ""
+    },
+    {
+        "id": "000010307",
+        "faction_id": "QT",
+        "name": "Tyrannical Court",
+        "legend": "Every one of these egomaniacal warriors seeks to claim all the battlefield glory for themselves, at any cost.",
+        "description": "Improve the Objective Control characteristic of CHAOS KNIGHTS CHARACTER models from your army by 2. In addition, once per battle round, if your WARLORD is on the battlefield, you can use the Claimed for the Dark Gods Stratagem for 0CP.",
+        "detachment": "Lords of Dread",
+        "": ""
+    },
+    {
+        "id": "000010311",
+        "faction_id": "QT",
+        "name": "Marked Prey",
+        "legend": "Once War Dogs have singled out a victim, they target it relentlessly until it is dragged down and torn apart.",
+        "description": "At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability.KEYWORDSWhile using the Houndpack Lance Detachment, the following rules apply:Your army must include three or more WAR DOG units.WAR DOG units from your army have the BATTLELINE keyword.When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.**Designer's Note: This means that the selected units can be given Enhancements and one of them can be selected as your WARLORD.",
+        "detachment": "Houndpack Lance",
         "": ""
     },
     {
@@ -1419,15 +1446,6 @@
         "legend": "On the eve of battle, the warriors of a Black Templars crusade gather together to be led in prayer and contemplation by their Chaplains. In their righteous zeal, united in their hatred of the foe, they swear a mighty vow to uphold in the battle ahead.",
         "description": "At the start of the first battle round, select one of the four Templar Vows below to be active for ADEPTUS ASTARTES units from your army until the end of the battle.Suffer Not the Unclean to LiveMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.Uphold the Honour of the EmperorModels in this unit have the Feel No Pain 6+ ability and a Leadership characteristic of 5+.Abhor the Witch, Destroy the WitchModels in this unit have a 4+ invulnerable save against Psychic Attacks and melee weapons equipped by models in this unit have the [ANTI-PSYKER 4+] ability.Accept Any Challenge, No Matter the OddsMelee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
         "detachment": "Righteous Crusaders",
-        "": ""
-    },
-    {
-        "id": "000008530",
-        "faction_id": "SM",
-        "name": "Deeds Worthy of Saga",
-        "legend": "Legendary deeds in the midst of battle are an intoxicating mead. Those who witness them are inspired to greater feats of daring and valour, determined to prove themselves worthy of their champions.",
-        "description": "At the start of the first battle round, select one of the Sagas listed below (excluding Saga of Majesty); that Saga is considered to be completed by your army, and all ADEPTUS ASTARTES models from your army gain the associated benefit until the end of the battle. At the end of each player's turn, you can select one of the Sagas listed below (excluding the Saga you selected at the start of the first battle round). If that Saga was completed by your army during that turn, all ADEPTUS ASTARTES models from your army gain the associated benefit until the end of the battle. You can only select each Saga once per battle.SAGA OF THE WARRIOR BORNThis Saga is completed if one or more ADEPTUS ASTARTES CHARACTER models from your army destroyed one or more enemy CHARACTER models during that turn.Benefit Once Completed: Melee weapons equipped by ADEPTUS ASTARTES models from your army have the [SUSTAINED HITS 1] ability.SAGA OF MAJESTYThis Saga is completed if you controlled one or more objective markers in your opponent's deployment zone at the end of that turn, and one or more ADEPTUS ASTARTES CHARACTER models from your army were within range of that objective marker.Benefit Once Completed: Improve the Objective Control characteristic of ADEPTUS ASTARTES models from your army by 1.SAGA OF THE BEARThis Saga is completed if one or more ADEPTUS ASTARTES CHARACTER models from your army were reduced to below half of their starting number of wounds during that turn, but were not destroyed at the end of that turn.Benefit Once Completed: ADEPTUS ASTARTES models from your army have the Feel No Pain 6+ ability.SAGA OF THE BEASTSLAYERThis Saga is completed if one or more ADEPTUS ASTARTES CHARACTER models from your army destroyed one or more enemy MONSTER or VEHICLE models during that turn.Benefit Once Completed: Melee weapons equipped by ADEPTUS ASTARTES models from your army have the [LETHAL HITS] ability.",
-        "detachment": "Champions of Russ",
         "": ""
     },
     {
@@ -1557,11 +1575,38 @@
         "": ""
     },
     {
+        "id": "000010260",
+        "faction_id": "SM",
+        "name": "Pack's Quarry",
+        "legend": "At their Wolf Lord's command, the Space Wolves advance upon their prey with lupine hunger, singling out the weak and overwhelming the strong with concentrated force and furious aggression.",
+        "description": "Each time a model in a SPACE WOLVES unit from your army makes a melee attack that targets an enemy unit, if that enemy unit is within Engagement Range of one or more other ADEPTUS ASTARTES units from your army, or if the attacking unit contains more models than that enemy unit:Add 1 to the Hit roll.If your Saga is completed (see below), add 1 to the Wound roll as well.Saga of the HunterAt the start of the first battle round, your Quarry tally is 0. Each time an ADEPTUS ASTARTES unit from your army fights, after all of those attacks have been resolved, add 1 to your Quarry tally for each enemy unit destroyed by those attacks.Once your Quarry tally is equal to or greater than the number shown in the table below (depending on the battle size), your Saga is completed.BATTLE SIZEQUARRY TALLYIncursion2Strike Force3Onslaught4",
+        "detachment": "Saga of the Hunter",
+        "": ""
+    },
+    {
+        "id": "000010264",
+        "faction_id": "SM",
+        "name": "Heroes All",
+        "legend": "Every Space Wolves warrior seeks to forge a saga worthy of retelling.",
+        "description": "Each time an ADEPTUS ASTARTES unit from your army is selected to shoot or fight, apply one of the following when resolving those attacks:If your Saga is completed (see below), you can re-roll one Hit roll, one Wound roll and one Damage roll.Otherwise, if that unit is a SPACE WOLVES CHARACTER unit, you can re-roll one Hit roll, one Wound roll or one Damage roll.Saga of the BoldEach time a SPACE WOLVES CHARACTER unit from your army does one of the following, that unit achieves that Boast. Once three or more different Boasts have been achieved by units from your army, your Saga is completed.Your Hide as a Trophy: That unit destroys your Oath of Moment target.Slay Them All: That unit destroys your Oath of Moment target, and that is the second Oath of Moment target destroyed by that unit in this battle.Overrun Their Position: At the end of either player's turn, that unit is wholly within your opponent's deployment zone.Hold the Line: From the second battle round onwards, at the end of your Command phase, that unit is within range of an objective marker you control that is not within your deployment zone.",
+        "detachment": "Saga of the Bold",
+        "": ""
+    },
+    {
+        "id": "000010268",
+        "faction_id": "SM",
+        "name": "Legendary Slayers",
+        "legend": "Some Space Wolves seek only to bring down the most monstrous and deadly foes. With hunting packs of Fenrisian wolves, Thunderwolf Cavalry and rampaging bands of Wulfen, they seek to hunt down and slay mighty champions, towering monstrosities and rumbling war machines, demoralising the foe and earning glorious victories.",
+        "description": "Each time an ADEPTUS ASTARTES model from your army makes an attack, if that attack targets a CHARACTER, MONSTER or VEHICLE unit or if your Saga is completed (see below), that attack has the [lethal hits] ability.Saga of the BeastslayerAt the start of the first battle round, your Beastslayer tally is 0, and you determine your Beastslayer target by halving the number of units from your opponent's army that have one or more of the following keywords (rounding up): CHARACTER, MONSTER, VEHICLE.Each time an ADEPTUS ASTARTES unit from your army shoots or fights, after all of those attacks have been resolved, add 1 to your Beastslayer tally for each enemy unit with one or more of the following keywords destroyed by those attacks: CHARACTER, MONSTER, VEHICLE.Once your Beastslayer tally is equal to or greater than your Beastslayer target, your Saga is completed.",
+        "detachment": "Saga of the Beastslayer",
+        "": ""
+    },
+    {
         "id": "000008441",
         "faction_id": "TAU",
         "name": "Patient Hunter",
         "legend": "The tactical philosophy known as the Kauyon allows for T'au commanders to draw the enemy into a deadly trap, springing it at the perfect moment to deliver a storm of fatal strikes against which none can escape.",
-        "description": "From the third battle round onwards, ranged weapons equipped by T'AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. In addition, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack's Ballistic skill characteristics and/or all modifiers to the Hit roll.",
+        "description": "During the third, fourth and fifth battle rounds, ranged weapons equipped by T'AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack's Ballistic skill characteristics and/or all modifiers to the Hit roll.",
         "detachment": "Kauyon",
         "": ""
     },
@@ -1705,7 +1750,7 @@
         "faction_id": "TS",
         "name": "Warpmeld Sacrifice",
         "legend": "The flesh and bone ofTzeentch's malleable servants flow like molten wax when his mutative power is invoked in ritual pleas. Some, such as the devoted Tzaangors, willingly make such requests, while more mindless abominations have their pact made for them by their callous masters. No boon is without its price, however. Some suffer changes so rapid that they burst apart, are absorbed by heaving mounds that were once allies or reduced to mewling piles of bubbling flesh.",
-        "description": "Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT units from your army are selected as a target of one or more of those attacks, each of those TZEENTCH MUTANT units can make a Warpmeld Sacrifice. If it does, that TZEENTCH MUTANT unit suffers D3 mortal wounds and until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll.Each time a TZEENTCH MUTANT unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, that unit suffers D3 mortal wounds and until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll.KEYWORDSTZAANGORS units from your army have the BATTLELINE keyword, and while such a unit is not Battle-shocked, add 1 to the Objective Control characteristic of TZAANGOR models in that unit.",
+        "description": "Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks, each of those TZEENTCH MUTANT units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.Each time a TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.KEYWORDSTZAANGORS units from your army have the BATTLELINE keyword, and while such a unit is not Battle-shocked, add 1 to the Objective Control characteristic of TZAANGOR models in that unit.",
         "detachment": "Warpmeld Pact",
         "": ""
     },
