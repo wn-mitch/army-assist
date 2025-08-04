@@ -14,16 +14,19 @@ function App() {
     const path = window.location.pathname.substring(1); // Remove the leading '/'
     if (path) {
       const decodedData = LZstring.decompressFromEncodedURIComponent(path);
-      
+
       // Check if the path starts with 'listforge/'
-      if (path.startsWith('listforge/')) {
+      if (path.startsWith("listforge/")) {
         const listforgeData = path.substring(10); // Remove 'listforge/' prefix
-        const decodedListforgeData = LZstring.decompressFromEncodedURIComponent(listforgeData);
+        console.log(listforgeData);
+        const decodedListforgeData =
+          LZstring.decompressFromEncodedURIComponent(listforgeData);
+        console.log("decodedData", decodedListforgeData);
         addListListforge(decodedListforgeData);
       } else {
         addListFromURLString(decodedData);
       }
-      
+
       window.history.replaceState({}, document.title, "/");
     }
   }, [addListFromURLString, addListListforge]);

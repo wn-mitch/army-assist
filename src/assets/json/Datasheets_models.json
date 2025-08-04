@@ -3186,7 +3186,7 @@
     {
         "datasheet_id": "000000408",
         "line": "1",
-        "name": "Aunâshi",
+        "name": "Aunshi",
         "M": "6\"",
         "T": "3",
         "Sv": "6+",
@@ -3202,7 +3202,7 @@
     {
         "datasheet_id": "000000409",
         "line": "1",
-        "name": "AUNâVA",
+        "name": "AUNVA",
         "M": "6\"",
         "T": "3",
         "Sv": "5+",
@@ -3666,7 +3666,7 @@
     {
         "datasheet_id": "000000444",
         "line": "1",
-        "name": "Yâvahra Battlesuit",
+        "name": "Yvahra Battlesuit",
         "M": "10\"",
         "T": "9",
         "Sv": "2+",
@@ -3682,7 +3682,7 @@
     {
         "datasheet_id": "000000445",
         "line": "1",
-        "name": "Râvarna Battlesuit",
+        "name": "Rvarna Battlesuit",
         "M": "8\"",
         "T": "10",
         "Sv": "2+",
@@ -3698,7 +3698,7 @@
     {
         "datasheet_id": "000000446",
         "line": "1",
-        "name": "Taâunar Supremacy Armour",
+        "name": "Taunar Supremacy Armour",
         "M": "8\"",
         "T": "13",
         "Sv": "2+",
@@ -4962,7 +4962,7 @@
     {
         "datasheet_id": "000000541",
         "line": "1",
-        "name": "Câtan Shard Of The Nightbringer",
+        "name": "Ctan Shard Of The Nightbringer",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -4978,7 +4978,7 @@
     {
         "datasheet_id": "000000542",
         "line": "1",
-        "name": "Câtan Shard Of The Deceiver",
+        "name": "Ctan Shard Of The Deceiver",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -5138,7 +5138,7 @@
     {
         "datasheet_id": "000000555",
         "line": "1",
-        "name": "Transcendent Câtan",
+        "name": "Transcendent Ctan",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -5634,7 +5634,7 @@
     {
         "datasheet_id": "000000590",
         "line": "2",
-        "name": "SERPENTâS SCALE PLATFORM",
+        "name": "SERPENTS SCALE PLATFORM",
         "M": "7\"",
         "T": "3",
         "Sv": "4+",
@@ -7266,7 +7266,7 @@
     {
         "datasheet_id": "000000713",
         "line": "1",
-        "name": "âIron Handâ Straken",
+        "name": "Iron Hand Straken",
         "M": "6\"",
         "T": "3",
         "Sv": "3+",
@@ -11266,7 +11266,7 @@
     {
         "datasheet_id": "000001148",
         "line": "1",
-        "name": "Beâlakor",
+        "name": "Belakor",
         "M": "12\"",
         "T": "11",
         "Sv": "3+",
@@ -14306,7 +14306,7 @@
     {
         "datasheet_id": "000001649",
         "line": "1",
-        "name": "Syllâesske",
+        "name": "Syllesske",
         "M": "9\"",
         "T": "6",
         "Sv": "6+",
@@ -15522,7 +15522,7 @@
     {
         "datasheet_id": "000002357",
         "line": "1",
-        "name": "Câtan Shard Of The Void Dragon",
+        "name": "Ctan Shard Of The Void Dragon",
         "M": "6\"",
         "T": "11",
         "Sv": "4+",
@@ -16274,7 +16274,7 @@
     {
         "datasheet_id": "000002499",
         "line": "1",
-        "name": "Bigâed Bossbunka",
+        "name": "Biged Bossbunka",
         "M": "-",
         "T": "10",
         "Sv": "3+",
@@ -18034,7 +18034,7 @@
     {
         "datasheet_id": "000002682",
         "line": "1",
-        "name": "Lion Elâjonson",
+        "name": "Lion Eljonson",
         "M": "8\"",
         "T": "9",
         "Sv": "2+",
@@ -18210,7 +18210,7 @@
     {
         "datasheet_id": "000002693",
         "line": "1",
-        "name": "Von Ryanâs Leapers",
+        "name": "Von Ryans Leapers",
         "M": "10\"",
         "T": "5",
         "Sv": "4+",
@@ -18386,7 +18386,7 @@
     {
         "datasheet_id": "000002709",
         "line": "1",
-        "name": "Korâsarro Khan",
+        "name": "Korsarro Khan",
         "M": "6\"",
         "T": "4",
         "Sv": "3+",
@@ -18658,7 +18658,7 @@
     {
         "datasheet_id": "000002726",
         "line": "1",
-        "name": "Vulkan Heâstan",
+        "name": "Vulkan Hestan",
         "M": "6\"",
         "T": "4",
         "Sv": "2+",
@@ -19682,7 +19682,7 @@
     {
         "datasheet_id": "000002795",
         "line": "1",
-        "name": "The Emperorâs Champion",
+        "name": "The Emperors Champion",
         "M": "6\"",
         "T": "4",
         "Sv": "2+",
@@ -23394,7 +23394,7 @@
     {
         "datasheet_id": "000003888",
         "line": "1",
-        "name": "Von Ryanâs Leapers",
+        "name": "Von Ryans Leapers",
         "M": "10\"",
         "T": "5",
         "Sv": "4+",
@@ -23858,7 +23858,7 @@
     {
         "datasheet_id": "000003922",
         "line": "2",
-        "name": "LESKâS VETERANS",
+        "name": "LESKS VETERANS",
         "M": "6\"",
         "T": "3",
         "Sv": "5+",
@@ -24322,7 +24322,7 @@
     {
         "datasheet_id": "000003947",
         "line": "2",
-        "name": "LESKâS VETERANS",
+        "name": "LESKS VETERANS",
         "M": "6\"",
         "T": "3",
         "Sv": "5+",
