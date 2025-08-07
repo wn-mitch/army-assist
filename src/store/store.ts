@@ -299,7 +299,6 @@ const useStore = create<StoreState>()(
                         );
                         return false;
                     }
-                    console.log(factionMatch);
 
                     const factions = applyFactionOverrides(Factions);
                     const factionAbbreviation = factions.filter(

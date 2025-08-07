@@ -3,7 +3,6 @@ import os
 import re
 import pandas as pd
 import requests
-from urllib.parse import urljoin
 
 # http://wahapedia.ru/wh40k10ed/Datasheets_stratagems.csv
 
@@ -19,7 +18,9 @@ replacements = {
     r"\u00bf": "",
 
     # Removes cyrillic
-    "â":"",
+    "Ã¢":"â",
+    "â":"'",
+    "â":"-",
     "Ð": "",
     "Ñ": "",
     "":"",

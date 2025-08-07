@@ -38,6 +38,7 @@ const applyFactionOverrides = (factions: Faction[]) => {
 };
 
 const applyNameOverrides = (unit: ListUnit) => {
+    console.log(unit);
     switch (unit.name) {
         case "Vyper":
             unit.name = "Vypers";
@@ -410,6 +411,14 @@ const applyWeaponAndEnhancementOverrides = (
             break;
         case "Kill Rig":
             weapons = findAndReplace(weapons, "’Eavy lobba", "'Eavy Lobba");
+            updateCounts("’Eavy lobba", "'Eavy Lobba");
+            break;
+        case "Angron":
+            weapons = findAndReplace(
+                weapons,
+                "Samni’arius and Spinegrinder",
+                "Samni'arius and Spinegrinder",
+            );
             updateCounts("’Eavy lobba", "'Eavy Lobba");
             break;
     }

@@ -8723,7 +8723,7 @@
     },
     {
         "datasheet_id": "000000402",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -8772,7 +8772,7 @@
     },
     {
         "datasheet_id": "000000403",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -8800,7 +8800,7 @@
     },
     {
         "datasheet_id": "000000404",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -8828,7 +8828,7 @@
     },
     {
         "datasheet_id": "000000405",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -8863,7 +8863,7 @@
     },
     {
         "datasheet_id": "000000406",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -8919,7 +8919,7 @@
     },
     {
         "datasheet_id": "000000407",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -8968,7 +8968,7 @@
     },
     {
         "datasheet_id": "000000408",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -8982,7 +8982,7 @@
     },
     {
         "datasheet_id": "000000408",
-        "keyword": "AunShi",
+        "keyword": "Aun'Shi",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -9010,7 +9010,7 @@
     },
     {
         "datasheet_id": "000000409",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9018,28 +9018,28 @@
     {
         "datasheet_id": "000000409",
         "keyword": "Ethereal",
-        "model": "AUNVA",
+        "model": "AUN'VA",
         "is_faction_keyword": "false",
         "": ""
     },
     {
         "datasheet_id": "000000409",
-        "keyword": "AunVa",
-        "model": "AUNVA",
+        "keyword": "Aun'Va",
+        "model": "AUN'VA",
         "is_faction_keyword": "false",
         "": ""
     },
     {
         "datasheet_id": "000000409",
         "keyword": "Epic Hero",
-        "model": "AUNVA",
+        "model": "AUN'VA",
         "is_faction_keyword": "false",
         "": ""
     },
     {
         "datasheet_id": "000000409",
         "keyword": "Character",
-        "model": "AUNVA",
+        "model": "AUN'VA",
         "is_faction_keyword": "false",
         "": ""
     },
@@ -9052,7 +9052,7 @@
     },
     {
         "datasheet_id": "000000410",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9094,7 +9094,7 @@
     },
     {
         "datasheet_id": "000000411",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9143,7 +9143,7 @@
     },
     {
         "datasheet_id": "000000412",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9192,7 +9192,7 @@
     },
     {
         "datasheet_id": "000000413",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9227,7 +9227,7 @@
     },
     {
         "datasheet_id": "000000414",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9262,7 +9262,7 @@
     },
     {
         "datasheet_id": "000000415",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9290,7 +9290,7 @@
     },
     {
         "datasheet_id": "000000417",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9325,7 +9325,7 @@
     },
     {
         "datasheet_id": "000000418",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9367,7 +9367,7 @@
     },
     {
         "datasheet_id": "000000420",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9416,7 +9416,7 @@
     },
     {
         "datasheet_id": "000000421",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9458,7 +9458,7 @@
     },
     {
         "datasheet_id": "000000422",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9493,7 +9493,7 @@
     },
     {
         "datasheet_id": "000000423",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9521,7 +9521,7 @@
     },
     {
         "datasheet_id": "000000424",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9563,7 +9563,7 @@
     },
     {
         "datasheet_id": "000000425",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9598,7 +9598,7 @@
     },
     {
         "datasheet_id": "000000426",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9633,7 +9633,7 @@
     },
     {
         "datasheet_id": "000000427",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9661,7 +9661,7 @@
     },
     {
         "datasheet_id": "000000428",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9696,7 +9696,7 @@
     },
     {
         "datasheet_id": "000000430",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9731,7 +9731,7 @@
     },
     {
         "datasheet_id": "000000431",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9773,7 +9773,7 @@
     },
     {
         "datasheet_id": "000000432",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9801,7 +9801,7 @@
     },
     {
         "datasheet_id": "000000433",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9836,7 +9836,7 @@
     },
     {
         "datasheet_id": "000000434",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9878,7 +9878,7 @@
     },
     {
         "datasheet_id": "000000435",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9920,7 +9920,7 @@
     },
     {
         "datasheet_id": "000000436",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -9962,7 +9962,7 @@
     },
     {
         "datasheet_id": "000000437",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10004,7 +10004,7 @@
     },
     {
         "datasheet_id": "000000439",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10067,7 +10067,7 @@
     },
     {
         "datasheet_id": "000000443",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10109,14 +10109,14 @@
     },
     {
         "datasheet_id": "000000444",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
     },
     {
         "datasheet_id": "000000444",
-        "keyword": "Yvahra",
+        "keyword": "Y'vahra",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -10151,7 +10151,7 @@
     },
     {
         "datasheet_id": "000000445",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10179,7 +10179,7 @@
     },
     {
         "datasheet_id": "000000445",
-        "keyword": "Rvarna",
+        "keyword": "R'varna",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -10193,7 +10193,7 @@
     },
     {
         "datasheet_id": "000000446",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10228,14 +10228,14 @@
     },
     {
         "datasheet_id": "000000446",
-        "keyword": "Taunar Supremacy Armour",
+        "keyword": "Ta'unar Supremacy Armour",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
     },
     {
         "datasheet_id": "000000447",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10270,7 +10270,7 @@
     },
     {
         "datasheet_id": "000000448",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10298,7 +10298,7 @@
     },
     {
         "datasheet_id": "000000449",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10326,7 +10326,7 @@
     },
     {
         "datasheet_id": "000000452",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10361,7 +10361,7 @@
     },
     {
         "datasheet_id": "000000453",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10396,7 +10396,7 @@
     },
     {
         "datasheet_id": "000000454",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10431,7 +10431,7 @@
     },
     {
         "datasheet_id": "000000455",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10466,7 +10466,7 @@
     },
     {
         "datasheet_id": "000000456",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10515,7 +10515,7 @@
     },
     {
         "datasheet_id": "000000457",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10571,7 +10571,7 @@
     },
     {
         "datasheet_id": "000000458",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -10592,7 +10592,7 @@
     },
     {
         "datasheet_id": "000000459",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -13189,7 +13189,7 @@
     },
     {
         "datasheet_id": "000000541",
-        "keyword": "Ctan Shard of the Nightbringer",
+        "keyword": "C'tan Shard of the Nightbringer",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -13259,7 +13259,7 @@
     },
     {
         "datasheet_id": "000000542",
-        "keyword": "Ctan Shard of the Deceiver",
+        "keyword": "C'tan Shard of the Deceiver",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -13595,7 +13595,7 @@
     },
     {
         "datasheet_id": "000000555",
-        "keyword": "Transcendent Ctan",
+        "keyword": "Transcendent C'tan",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -19314,7 +19314,7 @@
     },
     {
         "datasheet_id": "000000713",
-        "keyword": "Iron Hand Straken",
+        "keyword": "âIron Hand' Straken",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -31375,7 +31375,7 @@
     },
     {
         "datasheet_id": "000001148",
-        "keyword": "Belakor",
+        "keyword": "Be'lakor",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -35456,7 +35456,7 @@
     },
     {
         "datasheet_id": "000001391",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -35484,7 +35484,7 @@
     },
     {
         "datasheet_id": "000001392",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -37087,7 +37087,7 @@
     },
     {
         "datasheet_id": "000001477",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -37136,7 +37136,7 @@
     },
     {
         "datasheet_id": "000001478",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -40041,7 +40041,7 @@
     },
     {
         "datasheet_id": "000001649",
-        "keyword": "SyllEsske",
+        "keyword": "Syll'Esske",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -43513,7 +43513,7 @@
     },
     {
         "datasheet_id": "000002357",
-        "keyword": "Ctan Shard of the Void Dragon",
+        "keyword": "C'tan Shard of the Void Dragon",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -44738,7 +44738,7 @@
     },
     {
         "datasheet_id": "000002485",
-        "keyword": "Gaunts Ghosts",
+        "keyword": "Gaunt's Ghosts",
         "model": "ALL MODELS",
         "is_faction_keyword": "false",
         "": ""
@@ -45193,7 +45193,7 @@
     },
     {
         "datasheet_id": "000002499",
-        "keyword": "Biged Bossbunka",
+        "keyword": "Big'ed Bossbunka",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -47405,7 +47405,7 @@
     },
     {
         "datasheet_id": "000002588",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -47671,7 +47671,7 @@
     },
     {
         "datasheet_id": "000002594",
-        "keyword": "KÃ¢hl",
+        "keyword": "Kâhl",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -48686,7 +48686,7 @@
     },
     {
         "datasheet_id": "000002622",
-        "keyword": "KhÃ¢rn the Betrayer",
+        "keyword": "Khârn the Betrayer",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -49960,7 +49960,7 @@
     },
     {
         "datasheet_id": "000002682",
-        "keyword": "Lion ElJonson",
+        "keyword": "Lion El'Jonson",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -50436,7 +50436,7 @@
     },
     {
         "datasheet_id": "000002693",
-        "keyword": "Von Ryans Leapers",
+        "keyword": "Von Ryan's Leapers",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -50954,7 +50954,7 @@
     },
     {
         "datasheet_id": "000002709",
-        "keyword": "Korsarro Khan",
+        "keyword": "Kor'sarro Khan",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -51710,7 +51710,7 @@
     },
     {
         "datasheet_id": "000002726",
-        "keyword": "Vulkan Hestan",
+        "keyword": "Vulkan He'stan",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -54720,7 +54720,7 @@
     },
     {
         "datasheet_id": "000002795",
-        "keyword": "The Emperors Champion",
+        "keyword": "The Emperor's Champion",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -77792,7 +77792,7 @@
     },
     {
         "datasheet_id": "000003699",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -77841,7 +77841,7 @@
     },
     {
         "datasheet_id": "000003700",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -77890,7 +77890,7 @@
     },
     {
         "datasheet_id": "000003701",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -77939,7 +77939,7 @@
     },
     {
         "datasheet_id": "000003702",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -77981,7 +77981,7 @@
     },
     {
         "datasheet_id": "000003703",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -78023,7 +78023,7 @@
     },
     {
         "datasheet_id": "000003704",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -78065,7 +78065,7 @@
     },
     {
         "datasheet_id": "000003705",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -78100,7 +78100,7 @@
     },
     {
         "datasheet_id": "000003706",
-        "keyword": "Tau Empire",
+        "keyword": "T'au Empire",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -82979,7 +82979,7 @@
     },
     {
         "datasheet_id": "000003888",
-        "keyword": "Von Ryans Leapers",
+        "keyword": "Von Ryan's Leapers",
         "model": "",
         "is_faction_keyword": "false",
         "": ""
@@ -84176,7 +84176,7 @@
     },
     {
         "datasheet_id": "000003922",
-        "keyword": "Hells Last",
+        "keyword": "Hell's Last",
         "model": " ALL MODELS",
         "is_faction_keyword": "false",
         "": ""
@@ -85485,7 +85485,7 @@
     },
     {
         "datasheet_id": "000003947",
-        "keyword": "Hells Last",
+        "keyword": "Hell's Last",
         "model": " ALL MODELS",
         "is_faction_keyword": "false",
         "": ""
@@ -102628,7 +102628,7 @@
     },
     {
         "datasheet_id": "000004077",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -102705,7 +102705,7 @@
     },
     {
         "datasheet_id": "000004078",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -102768,7 +102768,7 @@
     },
     {
         "datasheet_id": "000004079",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -102824,7 +102824,7 @@
     },
     {
         "datasheet_id": "000004080",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -102880,7 +102880,7 @@
     },
     {
         "datasheet_id": "000004081",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -102929,7 +102929,7 @@
     },
     {
         "datasheet_id": "000004082",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -102978,7 +102978,7 @@
     },
     {
         "datasheet_id": "000004083",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103041,7 +103041,7 @@
     },
     {
         "datasheet_id": "000004084",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103090,7 +103090,7 @@
     },
     {
         "datasheet_id": "000004085",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103153,7 +103153,7 @@
     },
     {
         "datasheet_id": "000004086",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103216,7 +103216,7 @@
     },
     {
         "datasheet_id": "000004087",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103279,7 +103279,7 @@
     },
     {
         "datasheet_id": "000004088",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103321,7 +103321,7 @@
     },
     {
         "datasheet_id": "000004089",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103363,7 +103363,7 @@
     },
     {
         "datasheet_id": "000004090",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103405,7 +103405,7 @@
     },
     {
         "datasheet_id": "000004091",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103461,7 +103461,7 @@
     },
     {
         "datasheet_id": "000004092",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103524,7 +103524,7 @@
     },
     {
         "datasheet_id": "000004093",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
@@ -103909,7 +103909,7 @@
     },
     {
         "datasheet_id": "000004099",
-        "keyword": "Emperors Children",
+        "keyword": "Emperor's Children",
         "model": "",
         "is_faction_keyword": "true",
         "": ""
