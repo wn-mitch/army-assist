@@ -920,6 +920,7 @@ const useStore = create<StoreState>()(
                                     .filter((x) => x !== "")
                                     .join(", ");
 
+                                console.log(unit);
                                 return {
                                     ...unit,
                                     abilities: allAbilities,

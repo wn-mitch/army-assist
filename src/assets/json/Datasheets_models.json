@@ -18667,7 +18667,7 @@
         "W": "5",
         "Ld": "6+",
         "OC": "1",
-        "base_size": "25mm",
+        "base_size": "32mm",
         "base_size_descr": "",
         "": ""
     },
@@ -27051,7 +27051,7 @@
         "W": "5",
         "Ld": "6+",
         "OC": "1",
-        "base_size": "",
+        "base_size": "40mm",
         "base_size_descr": "",
         "": ""
     },
@@ -27451,7 +27451,7 @@
         "W": "5",
         "Ld": "6+",
         "OC": "1",
-        "base_size": "32mm",
+        "base_size": "40mm",
         "base_size_descr": "",
         "": ""
     },

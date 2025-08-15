@@ -431,6 +431,114 @@ const applyMissingWeapons = (
     weaponDatasheets: DatasheetWargear[],
 ) => {
     switch (unit.name) {
+        case "Accursed Cultists": {
+            const blasphemousAppendages: DatasheetWargear = {
+                datasheet_id: "999999999",
+                line: "1",
+                line_in_wargear: "1",
+                name: "Blasphemous appendages",
+                description: "",
+                dice: "",
+                range: "Melee",
+                type: "Melee",
+                A: "2",
+                BS_WS: "4",
+                S: "4",
+                AP: "0",
+                D: "1",
+            };
+
+            const hideousMutations: DatasheetWargear = {
+                datasheet_id: "999999999",
+                line: "1",
+                line_in_wargear: "1",
+                name: "Hideous mutations",
+                description: "",
+                dice: "",
+                range: "Melee",
+                type: "Melee",
+                A: "D6+2",
+                BS_WS: "4",
+                S: "5",
+                AP: "-1",
+                D: "2",
+            };
+
+            weaponDatasheets = addWeaponIfFound(
+                weapons,
+                weaponDatasheets,
+                blasphemousAppendages,
+            );
+            weaponDatasheets = addWeaponIfFound(
+                weapons,
+                weaponDatasheets,
+                hideousMutations,
+            );
+            break;
+        }
+
+        case "Dark Commune": {
+            const ccW: DatasheetWargear = {
+                datasheet_id: "999999999",
+                line: "1",
+                line_in_wargear: "1",
+                name: "Close combat weapon",
+                description: "",
+                dice: "",
+                range: "Melee",
+                type: "Melee",
+                A: "1",
+                BS_WS: "4",
+                S: "3",
+                AP: "0",
+                D: "1",
+            };
+
+            const communeBlade = {
+                datasheet_id: "999999999",
+                line: "1",
+                line_in_wargear: "1",
+                name: "Commune blade",
+                description: "",
+                dice: "",
+                range: "Melee",
+                type: "Melee",
+                A: "2",
+                BS_WS: "4",
+                S: "4",
+                AP: "-2",
+                D: "1",
+            };
+
+            const communeStave = {
+                datasheet_id: "999999999",
+                line: "1",
+                line_in_wargear: "1",
+                name: "Commune stave",
+                description: "devastating wounds",
+                dice: "",
+                range: "Melee",
+                type: "Melee",
+                A: "2",
+                BS_WS: "4",
+                S: "3",
+                AP: "0",
+                D: "D3",
+            };
+
+            const newWeapons = [ccW, communeBlade, communeStave];
+
+            for (const weapon of newWeapons) {
+                weaponDatasheets = addWeaponIfFound(
+                    weapons,
+                    weaponDatasheets,
+                    weapon,
+                );
+            }
+
+            break;
+        }
+
         case "Rogal Dorn Commander": {
             const meltagun: DatasheetWargear = {
                 datasheet_id: "999999999",

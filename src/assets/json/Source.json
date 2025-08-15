@@ -270,6 +270,16 @@
         "": ""
     },
     {
+        "id": "000000300",
+        "name": "Grotmas Calendar: Deathwatch",
+        "type": "Index",
+        "edition": "10",
+        "version": "",
+        "errata_date": "07.12.2024 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_wh40k_grotmas_index_deathwatch_7_12_2024-jtxo505gbc-skehgnr7np.pdf",
+        "": ""
+    },
+    {
         "id": "000000020",
         "name": "Tyranids",
         "type": "Codex",
@@ -350,16 +360,6 @@
         "": ""
     },
     {
-        "id": "000000300",
-        "name": "Grotmas Calendar: Deathwatch",
-        "type": "Index",
-        "edition": "10",
-        "version": "",
-        "errata_date": "07.12.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_wh40k_grotmas_index_deathwatch_7_12_2024-jtxo505gbc-skehgnr7np.pdf",
-        "": ""
-    },
-    {
         "id": "000000088",
         "name": "Games Workshop: Da Red Gobbo",
         "type": "Datasheet",
@@ -367,36 +367,6 @@
         "version": "",
         "errata_date": "03.11.2023 0:00:00",
         "errata_link": "https://www.warhammer-community.com/wp-content/uploads/2023/11/tvW7Dd5Ihf78pINe.pdf",
-        "": ""
-    },
-    {
-        "id": "000000257",
-        "name": "Legends: Aeldari",
-        "type": "Datasheet",
-        "edition": "10",
-        "version": "",
-        "errata_date": "23.04.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_23-8hbccy3h1i-ljsv8m3xwd.pdf",
-        "": ""
-    },
-    {
-        "id": "000000249",
-        "name": "Legends: Astra Militarum",
-        "type": "Datasheet",
-        "edition": "10",
-        "version": "",
-        "errata_date": "19.02.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_wh40k_legends_datasheet_astra_militarum_feb25-xqnjebk2vx-iuygj9zq0n.pdf",
-        "": ""
-    },
-    {
-        "id": "000000335",
-        "name": "Death Korps of Krieg",
-        "type": "Expansion",
-        "edition": "10",
-        "version": "",
-        "errata_date": "23.04.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_23-04_warhammer40000_other_rules_astra_militarum_death_korp_of_krieg_datasheet-w4jezt0twq-hdnqb0dxdf.pdf",
         "": ""
     },
     {
@@ -417,6 +387,16 @@
         "version": "",
         "errata_date": "17.09.2024 0:00:00",
         "errata_link": "https://assets.warhammer-community.com/warhammer40000_legends_spacemarines_eng_24.09-axmokvkcu8.pdf",
+        "": ""
+    },
+    {
+        "id": "000000257",
+        "name": "Legends: Aeldari",
+        "type": "Datasheet",
+        "edition": "10",
+        "version": "",
+        "errata_date": "23.04.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_23-8hbccy3h1i-ljsv8m3xwd.pdf",
         "": ""
     },
     {
@@ -457,16 +437,6 @@
         "version": "",
         "errata_date": "19.02.2025 0:00:00",
         "errata_link": "https://assets.warhammer-community.com/eng_warhammer40000_legends_datasheet_cards_drukhari-dbm6tdwqpy-07onyf6jqf.pdf",
-        "": ""
-    },
-    {
-        "id": "000000343",
-        "name": "Drop Pod",
-        "type": "Datasheet",
-        "edition": "10",
-        "version": "",
-        "errata_date": "09.07.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_other_rules_space_marines_drop_pod-ubd1ln59ih-pw3qzixxxo.pdf",
         "": ""
     },
     {
@@ -547,6 +517,16 @@
         "version": "",
         "errata_date": "19.02.2025 0:00:00",
         "errata_link": "https://assets.warhammer-community.com/eng_wh40k_imperial_armour_astra_militarum_feb25-lbctgzule5-nyvjt8tlbl.pdf",
+        "": ""
+    },
+    {
+        "id": "000000249",
+        "name": "Legends: Astra Militarum",
+        "type": "Datasheet",
+        "edition": "10",
+        "version": "",
+        "errata_date": "19.02.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_wh40k_legends_datasheet_astra_militarum_feb25-xqnjebk2vx-iuygj9zq0n.pdf",
         "": ""
     },
     {
@@ -1060,66 +1040,6 @@
         "": ""
     },
     {
-        "id": "000000337",
-        "name": "Raveners",
-        "type": "Datasheet",
-        "edition": "10",
-        "version": "",
-        "errata_date": "04.06.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_04-06_warhammer_40000_raveners_datasheets-dlnyibicfq-a89bcwy0vj.pdf",
-        "": ""
-    },
-    {
-        "id": "000000036",
-        "name": "Space Wolves",
-        "type": "Codex Supplement",
-        "edition": "10",
-        "version": "1.0",
-        "errata_date": "09.07.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_space_wolves-lokqm9xkd3-1zi3xzzqih.pdf",
-        "": ""
-    },
-    {
-        "id": "000000276",
-        "name": "Legends: Dark Angels",
-        "type": "Datasheet",
-        "edition": "10",
-        "version": "",
-        "errata_date": "17.09.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/warhammer40000_legends_darkangels_eng_24.09-jtwifszi9t.pdf",
-        "": ""
-    },
-    {
-        "id": "000000021",
-        "name": "Blood Angels",
-        "type": "Codex Supplement",
-        "edition": "10",
-        "version": "1.0",
-        "errata_date": "16.10.2024 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/warhammer40000_faqs&errata_bloodangels_eng_16.10.pdf",
-        "": ""
-    },
-    {
-        "id": "000000023",
-        "name": "Dark Angels",
-        "type": "Codex Supplement",
-        "edition": "10",
-        "version": "1.4",
-        "errata_date": "09.07.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_dark_angels-rpnv8va4bw-4tbusbi0pn.pdf",
-        "": ""
-    },
-    {
-        "id": "000000035",
-        "name": "Deathwatch",
-        "type": "Index",
-        "edition": "10",
-        "version": "",
-        "errata_date": "15.01.2025 0:00:00",
-        "errata_link": "https://assets.warhammer-community.com/eng_grotmas_advent_index_deathwatch_jan25-3hkhyr4ern-el7g9t2q0t.pdf",
-        "": ""
-    },
-    {
         "id": "000000327",
         "name": "Black Library: Hell's Last",
         "type": "Datasheet",
@@ -1180,6 +1100,16 @@
         "": ""
     },
     {
+        "id": "000000335",
+        "name": "Death Korps of Krieg",
+        "type": "Expansion",
+        "edition": "10",
+        "version": "",
+        "errata_date": "23.04.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_23-04_warhammer40000_other_rules_astra_militarum_death_korp_of_krieg_datasheet-w4jezt0twq-hdnqb0dxdf.pdf",
+        "": ""
+    },
+    {
         "id": "000000336",
         "name": "Tyranids - Subterranean assault",
         "type": "Expansion",
@@ -1187,6 +1117,16 @@
         "version": "",
         "errata_date": "09.07.2025 0:00:00",
         "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_other_rules_tyranids_subterranean_assault-fy3w2qyitb-9qk1h9lwr5.pdf",
+        "": ""
+    },
+    {
+        "id": "000000337",
+        "name": "Raveners",
+        "type": "Datasheet",
+        "edition": "10",
+        "version": "",
+        "errata_date": "04.06.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_04-06_warhammer_40000_raveners_datasheets-dlnyibicfq-a89bcwy0vj.pdf",
         "": ""
     },
     {
@@ -1217,6 +1157,66 @@
         "version": "",
         "errata_date": "04.06.2025 0:00:00",
         "errata_link": "https://assets.warhammer-community.com/eng_4-nsq7dnhutp.pdf",
+        "": ""
+    },
+    {
+        "id": "000000343",
+        "name": "Drop Pod",
+        "type": "Datasheet",
+        "edition": "10",
+        "version": "",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_other_rules_space_marines_drop_pod-ubd1ln59ih-pw3qzixxxo.pdf",
+        "": ""
+    },
+    {
+        "id": "000000036",
+        "name": "Space Wolves",
+        "type": "Codex Supplement",
+        "edition": "10",
+        "version": "1.0",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_space_wolves-lokqm9xkd3-1zi3xzzqih.pdf",
+        "": ""
+    },
+    {
+        "id": "000000276",
+        "name": "Legends: Dark Angels",
+        "type": "Datasheet",
+        "edition": "10",
+        "version": "",
+        "errata_date": "17.09.2024 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/warhammer40000_legends_darkangels_eng_24.09-jtwifszi9t.pdf",
+        "": ""
+    },
+    {
+        "id": "000000021",
+        "name": "Blood Angels",
+        "type": "Codex Supplement",
+        "edition": "10",
+        "version": "1.0",
+        "errata_date": "16.10.2024 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/warhammer40000_faqs&errata_bloodangels_eng_16.10.pdf",
+        "": ""
+    },
+    {
+        "id": "000000023",
+        "name": "Dark Angels",
+        "type": "Codex Supplement",
+        "edition": "10",
+        "version": "1.4",
+        "errata_date": "09.07.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_09-07_warhammer40000_codex_faqsanderrata_dark_angels-rpnv8va4bw-4tbusbi0pn.pdf",
+        "": ""
+    },
+    {
+        "id": "000000035",
+        "name": "Deathwatch",
+        "type": "Index",
+        "edition": "10",
+        "version": "",
+        "errata_date": "15.01.2025 0:00:00",
+        "errata_link": "https://assets.warhammer-community.com/eng_grotmas_advent_index_deathwatch_jan25-3hkhyr4ern-el7g9t2q0t.pdf",
         "": ""
     }
 ]

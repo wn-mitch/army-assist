@@ -367,7 +367,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement"
+            "Movement",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -713,7 +715,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement"
+            "Movement",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -2443,7 +2447,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Movement"
+            "Movement",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -3485,7 +3491,8 @@
         "phases": [
             "Pregame",
             "Command",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -5515,7 +5522,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -5639,7 +5648,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -6175,7 +6185,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -8707,6 +8719,7 @@
         "": "",
         "phases": [
             "Command",
+            "Shooting",
             "Fight"
         ]
     },
@@ -10220,7 +10233,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -10430,7 +10444,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -12968,7 +12984,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -13037,7 +13054,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -13484,7 +13502,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -15214,7 +15233,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -15852,10 +15872,10 @@
         "": "",
         "phases": [
             "Shooting",
+            "Fight",
             "Saves",
             "Movement",
             "Charge",
-            "Fight",
             "Command"
         ]
     },
@@ -16339,7 +16359,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -18181,7 +18202,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -18513,7 +18535,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -19248,7 +19271,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -20346,7 +20370,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -20484,7 +20509,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -23036,7 +23062,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -24224,7 +24251,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -24663,7 +24691,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -25676,7 +25706,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -26066,7 +26097,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -27999,7 +28031,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -32450,7 +32483,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -34518,7 +34553,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -35401,7 +35437,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -36277,6 +36314,7 @@
         "": "",
         "phases": [
             "Shooting",
+            "Fight",
             "Saves"
         ]
     },
@@ -37078,7 +37116,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -37336,7 +37375,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -37418,7 +37458,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -38466,7 +38507,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -40089,7 +40131,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -44237,7 +44280,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -45961,7 +46005,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -47223,7 +47269,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -47688,7 +47735,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -47730,7 +47778,10 @@
         "type": "Wargear",
         "parameter": "",
         "": "",
-        "phases": []
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
     },
     {
         "datasheet_id": "000001574",
@@ -48154,7 +48205,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -49267,6 +49319,7 @@
         "": "",
         "phases": [
             "Shooting",
+            "Fight",
             "Saves"
         ]
     },
@@ -49490,7 +49543,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -51044,7 +51098,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -60311,7 +60366,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -63942,7 +63998,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -64395,7 +64452,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -65673,7 +65731,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -67136,7 +67195,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -75253,7 +75313,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -77099,7 +77160,7 @@
         "ability_id": "",
         "model": "",
         "name": "INQUISITORIAL RETINUE",
-        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00355\" data-tooltip-content=\"#tooltip_content00355\" data-tooltip-anchor=\"#tooltip_",
+        "description": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 DAEMONHOST unit occuring in your army, increase the maximum number of RETINUE units permitted in your army by 1.At the start of the Declare Battle Formations step, this unit can join one INQUISITORIAL AGENTS unit from your army that is being led by an <span class=\"tooltip00336\" data-tooltip-content=\"#tooltip_content00336\" data-tooltip-anchor=\"#tooltip_",
         "type": "Fortification ( )",
         "parameter": "",
         "": "",
@@ -77673,7 +77734,7 @@
         "ability_id": "",
         "model": "",
         "name": "DEATH COMPANY",
-        "description": "If a CHAPLAIN model from your army with the Leader ability can be attached to a TACTICAL SQUAD, it can be attached to this unit instead.If a CHARACTER unit from your army with the Leader ability can be attached to a DEATH COMPANY MARINES unit, it can be attached to this unit instead.",
+        "description": "If a CHAPLAIN model from your army with the Leader ability can be attached to a TACTICAL SQUAD, it can be attached to this unit instead.If a CHARACTER unit from your army with the Leader ability can be attached to a DEATH COMPANY MARINES unit, it can be attached to this unit",
         "type": "Special ( )",
         "parameter": "",
         "": "",
@@ -77754,7 +77815,7 @@
         "ability_id": "",
         "model": "",
         "name": "DEATH COMPANY",
-        "description": "If a CHAPLAIN model from your army with the Leader ability can be attached to ASSAULT INTERCESSORS WITH JUMP PACKS or an ASSAULT SQUAD WITH JUMP PACKS, it can be attached to this unit instead.If a ",
+        "description": "If a CHAPLAIN model from your army with the Leader ability can be attached to ASSAULT INTERCESSORS WITH JUMP PACKS or an ASSAULT SQUAD WITH JUMP PACKS, it can be attached to this unit instead.If a <span class=\"tooltipCharacter\" data-tooltip-content=\"#tooltip_contentCharacter\" data-tooltip-anchor=\"#tooltip_conten",
         "type": "Special ( )",
         "parameter": "",
         "": "",
@@ -80830,7 +80891,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -83473,7 +83535,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -84706,7 +84769,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -84923,7 +84987,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -85437,7 +85502,8 @@
         "": "",
         "phases": [
             "Movement",
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -86284,7 +86350,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -86734,7 +86801,9 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Command"
+            "Command",
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -88978,7 +89047,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -91210,7 +91280,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -92499,7 +92570,8 @@
         "parameter": "",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     }
 ]

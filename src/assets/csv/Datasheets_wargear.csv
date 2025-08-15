@@ -4849,7 +4849,7 @@
 000002564|3|1||Reaper chaintalon|<a href="/wh40k10ed/the-rules/core-rules/#Sustained-Hits">sustained hits 1</a>|Melee|Melee|12|3|8|-2|1|
 000002564|4|1||Slaughterclaw|<a href="/wh40k10ed/the-rules/core-rules/#Sustained-Hits">sustained hits 1</a>|Melee|Melee|6|3|12|-3|D6+2|
 000002565|1|1||Avenger chaincannon||24|Ranged|12|3|6|-1|1|
-000002565|2|1||Daemonbreath spear|<a href="/wh40k10ed/the-rules/core-rules/#Melta">melta 4</a>|24|Ranged|2|3|12|-4|D6|
+000002565|2|1||Daemonbreath spear|<a href="/wh40k10ed/the-rules/core-rules/#Melta">melta 4</a>|18|Ranged|2|3|12|-4|D6|
 000002565|3|1||Diabolus heavy stubber|<a href="/wh40k10ed/the-rules/core-rules/#Rapid-Fire">rapid fire 3</a>|36|Ranged|3|3|5|0|1|
 000002565|4|1||Havoc multi-launcher|<a href="/wh40k10ed/the-rules/core-rules/#Blast">blast</a>, <a href="/wh40k10ed/the-rules/core-rules/#Indirect-Fire">indirect fire</a>|48|Ranged|D6|3|5|0|1|
 000002565|5|1||Armoured feet||Melee|Melee|4|3|6|0|1|
@@ -6265,8 +6265,8 @@
 000003832|3|1||Master-crafted chainsword||Melee|Melee|7|2|4|-1|2|
 000003832|4|1||Power fist||Melee|Melee|5|2|8|-2|2|
 000003832|5|1||Relic weapon||Melee|Melee|6|2|5|-2|2|
-000003833|1|1||Heavy bolt pistol |<a href="/wh40k10ed/the-rules/core-rules/#Pistol">Pistol</a>|18|Ranged|1|2|4|-1|1|
-000003833|2|1||Inferno pistol|<a href="/wh40k10ed/the-rules/core-rules/#Melta">melta 2</a>, <a href="/wh40k10ed/the-rules/core-rules/#Pistol">pistol</a>|6|Ranged|1|2|8|-4|D3|
+000003833|1|1||Hand flamer|<a href="/wh40k10ed/the-rules/core-rules/#Ignores-Cover">ignores cover</a>, <a href="/wh40k10ed/the-rules/core-rules/#Pistol">pistol</a>, <a href="/wh40k10ed/the-rules/core-rules/#Torrent">torrent</a>|12|Ranged|D6|N/A|3|0|1|
+000003833|2|1||Heavy bolt pistol |<a href="/wh40k10ed/the-rules/core-rules/#Pistol">Pistol</a>|18|Ranged|1|2|4|-1|1|
 000003833|3|1||Plasma pistol - standard|<a href="/wh40k10ed/the-rules/core-rules/#Pistol">Pistol</a>|12|Ranged|1|2|7|-2|1|
 000003833|4|2||Plasma pistol - supercharge|<a href="/wh40k10ed/the-rules/core-rules/#Hazardous">hazardous</a>, <a href="/wh40k10ed/the-rules/core-rules/#Pistol">pistol</a>|12|Ranged|1|2|8|-3|2|
 000003833|5|1||Astartes chainsword||Melee|Melee|7|2|4|-1|1|

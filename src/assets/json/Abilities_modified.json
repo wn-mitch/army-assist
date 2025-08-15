@@ -3,7 +3,7 @@
         "id": "000000705",
         "name": "Synapse",
         "legend": "Some Tyranids serve as synaptic conduits or nodal relays through which a portion of the Hive Mind's iron will flows, overriding the natural instincts of the swarm to direct the teeming warrior-beasts to function as a single, gestalt organism on the battlefield.",
-        "faction_id": "GC",
+        "faction_id": "TYR",
         "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
         "": "",
         "phases": [
@@ -15,7 +15,7 @@
         "id": "000000705",
         "name": "Synapse",
         "legend": "Some Tyranids serve as synaptic conduits or nodal relays through which a portion of the Hive Mind's iron will flows, overriding the natural instincts of the swarm to direct the teeming warrior-beasts to function as a single, gestalt organism on the battlefield.",
-        "faction_id": "TYR",
+        "faction_id": "GC",
         "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
         "": "",
         "phases": [
@@ -200,6 +200,7 @@
         "phases": [
             "Command",
             "Shooting",
+            "Fight",
             "Saves"
         ]
     },
@@ -309,6 +310,7 @@
             "Movement",
             "Shooting",
             "Charge",
+            "Fight",
             "Saves"
         ]
     },
@@ -352,7 +354,8 @@
         "description": "If your Army Faction is T'AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the MARKERLIGHT keyword, that attack has the [IGNORES COVER] ability.",
         "": "",
         "phases": [
-            "Shooting"
+            "Shooting",
+            "Fight"
         ]
     },
     {
@@ -431,6 +434,7 @@
         "phases": [
             "Pregame",
             "Shooting",
+            "Fight",
             "Saves"
         ]
     },
@@ -593,7 +597,7 @@
         "id": "000009994",
         "name": "Thrill Seekers",
         "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
         "": "",
         "phases": [
@@ -606,7 +610,7 @@
         "id": "000009994",
         "name": "Thrill Seekers",
         "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
-        "faction_id": "EC",
+        "faction_id": "CSM",
         "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
         "": "",
         "phases": [
