@@ -38,7 +38,6 @@ const applyFactionOverrides = (factions: Faction[]) => {
 };
 
 const applyNameOverrides = (unit: ListUnit) => {
-    console.log(unit);
     switch (unit.name) {
         case "Vyper":
             unit.name = "Vypers";
