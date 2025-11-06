@@ -1,6 +1,6 @@
 import React from "react";
 import QRCode from "react-qr-code";
-import * as pako from "pako";
+import pako from "pako";
 
 const formatDate = (dateString: string) => {
     const date = new Date(parseInt(dateString, 10));
@@ -12,10 +12,10 @@ const linkBuilder = (text: string) => {
     const compressed = pako.gzip(text);
     // Convert to base64 for URL safety
     const compressionString = btoa(String.fromCharCode(...compressed));
-    // const baseURL = "http://armyassist.xyz/";
+    const baseURL = "http://armyassist.xyz/";
     // const baseURL = "http://192.168.86.20:5173/";
     // const baseURL = "https://list-management.40k-army-assist.pages.dev/";
-    const baseURL = "http://localhost:5173/";
+    // const baseURL = "http://localhost:5173/";
     const fullURL = `${baseURL}${compressionString}`;
     return fullURL;
 };

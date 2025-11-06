@@ -430,7 +430,7 @@
         "datasheet_id": "000000049",
         "line": "2",
         "button": "â¢",
-        "description": "For every four models in this unit, one model can be equipped with one of the following in addition to any other weapons:1 big shoota1 grotzooka1 kustom mega-blasta1 rokkit launcha1 skorcha",
+        "description": "For every four models in this unit, one model can be equipped with one of the following in addition to any other weapons:1 Grot tank shoota1 grotzooka1 kustom mega-blasta1 rokkit launcha1 skorcha",
         "": ""
     },
     {
@@ -1463,6 +1463,97 @@
         "": ""
     },
     {
+        "datasheet_id": "000000283",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000284",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's bolt pistol can be replaced with one of the following:1 combi-weapon1 master-crafted boltgun1 plasma pistol1 storm bolter1 power fist1 relic weapon1 thunder hammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000284",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's relic weapon can be replaced with one of the following:1 plasma pistol1 power fist1 thunder hammer1 relic shield and 1 close combat weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000284",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model's bolt pistol and relic weapon can be replaced with 1 twin lightning claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000286",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000287",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000288",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000300",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's power weapon can be replaced with one of the following:1 chainfist1 power fist1 relic shield and 1 close combat weapon1 thunder hammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000300",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's storm bolter and power weapon can be replaced with 1 twin lightning claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000300",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model's storm bolter can be replaced with one of the following:1 chainfist1 power fist1 power weapon1 thunder hammer1 combi-weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000301",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's bolt pistol and relic weapon can be replaced with 1 twin lightning claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000301",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's bolt pistol can be replaced with one of the following:1 combi-weapon1 master-crafted boltgun1 plasma pistol1 storm bolter1 power fist1 relic weapon1 thunder hammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000301",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model's relic weapon can be replaced with one of the following:1 plasma pistol1 power fist1 thunder hammer1 storm shield and 1 close combat weapon",
+        "": ""
+    },
+    {
         "datasheet_id": "000000302",
         "line": "1",
         "button": "â¢",
@@ -1481,6 +1572,13 @@
         "line": "2",
         "button": "â¢",
         "description": "The Blood Claw Pack Leader's Astartes chainsword can be replaced with 1 power weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000304",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
         "": ""
     },
     {
@@ -1505,10 +1603,52 @@
         "": ""
     },
     {
+        "datasheet_id": "000000310",
+        "line": "1",
+        "button": "â¢",
+        "description": "1 Wolf Scout's boltgun and bolt pistol can be  replaced with one of the following:1 bolt pistol and 1 power weapon1 plasma pistol and 1 boltgun",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000310",
+        "line": "2",
+        "button": "â¢",
+        "description": "1 Wolf Scout's boltgun can be replaced with one of the following:1 flamer1 grav-gun1 heavy bolter1 meltagun1 missile launcher1 plasma gun",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000310",
+        "line": "3",
+        "button": "â¢",
+        "description": "Any number of models can each have their boltgun replaced with one of the following:1 Astartes shotgun1 combat knife",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000310",
+        "line": "4",
+        "button": "â¢",
+        "description": "The Wolf Scout Pack Leader's bolt pistol and boltgun can be replaced with with 1 twin lightning claws, or two different weapons from the following list:*1 bolt pistol1 boltgun1 combi-weapon1 grav-pistol1 hand flamer1 inferno pistol1 plasma pistol1 storm bolter1 Astartes chainsword1 power fist1 power weapon1 thunder hammer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000310",
+        "line": "5",
+        "button": "*",
+        "description": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)",
+        "": ""
+    },
+    {
         "datasheet_id": "000000311",
         "line": "1",
         "button": "â¢",
         "description": "Any number of models can each have their death totem replaced with 1 stormfrag auto-launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000315",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can have their bolt pistol replaced with one of the following:1 boltgun1 combi-weapon1 plasma pistol1 storm bolter1 storm shield",
         "": ""
     },
     {
@@ -1533,6 +1673,13 @@
         "": ""
     },
     {
+        "datasheet_id": "000000321",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's 2 skyhammer missile launchers can replaced with one of the following:2 twin heavy bolters2 twin multi-meltas",
+        "": ""
+    },
+    {
         "datasheet_id": "000000322",
         "line": "1",
         "button": "â¢",
@@ -1544,6 +1691,62 @@
         "line": "2",
         "button": "â¢",
         "description": "For every 3 models in this unit, one model's bolt pistol can be replaced with 1 plasma pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000324",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Skyclaw Pack Leader's Astartes chainsword can be replaced with one of the following:1 power fist1 power weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000324",
+        "line": "2",
+        "button": "â¢",
+        "description": "The Skyclaw Pack Leader's bolt pistol can be replaced with 1 plasma pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000324",
+        "line": "3",
+        "button": "â¢",
+        "description": "Up to 2 Skyclaws can each have their bolt pistol and Astartes chainsword replaced with one of the following:1 plasma pistol and 1 Astartes chainsword1 flamer and 1 close combat weapon1 grav-gun and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000325",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's 2 skyhammer missile launchers can be replaced with one of the following:2 twin multi-meltas2 twin heavy bolters",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000325",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's twin stormstrike missile launcher can be replaced with 1 twin lascannon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000326",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of Long Fangs can each have their boltgun replaced with one of the following:1 grav-cannon1 heavy bolter1 heavy flamer1 lascannon1 missile launcher1 multi-melta1 plasma cannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000326",
+        "line": "2",
+        "button": "â¢",
+        "description": "The Long Fang Pack Leader's boltgun can be replace with one of the following1 flamer1 grav-gun1 meltagun1 plasma gun1 plasma pistol",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000326",
+        "line": "3",
+        "button": "â¢",
+        "description": "The Long Fang Pack Leader's close combat weapon can be replaced with one of the following:1 Astartes chainsword1 power fist1 power weapon",
         "": ""
     },
     {
@@ -1582,13 +1785,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000000374",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000000375",
         "line": "1",
         "button": "â¢",
@@ -1610,20 +1806,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000000379",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000380",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000000381",
         "line": "1",
         "button": "â¢",
@@ -1634,28 +1816,28 @@
         "datasheet_id": "000000382",
         "line": "1",
         "button": "â¢",
-        "description": "For every 5 models in this unit, 1 Brotherhood Terminator's storm bolter can be replaced with one of the following:1 incinerator1 psilencer1 psycannon",
+        "description": "For every 5 models in this unit, 1 Terminator's storm bolter can be replaced with one of the following:1 incinerator1 psilencer1 psycannon",
         "": ""
     },
     {
         "datasheet_id": "000000382",
         "line": "2",
         "button": "â¢",
-        "description": "1 Brotherhood Terminator can have its storm bolter replaced with 1 narthecium.*",
+        "description": "1 Terminator can have its storm bolter replaced with 1 Apothecary's narthecium.",
         "": ""
     },
     {
         "datasheet_id": "000000382",
         "line": "3",
         "button": "â¢",
-        "description": "1 Brotherhood Terminator equipped with a storm bolter can be equipped with 1 Ancient's banner.*",
+        "description": "1 Terminator's storm bolter can be replaced with one of the following:1 incinerator and 1 Ancient's banner1 psilencer and 1 Ancient's banner1 psycannon and 1 Ancient's banner1 storm bolter and 1 Ancient's banner*",
         "": ""
     },
     {
         "datasheet_id": "000000382",
         "line": "4",
         "button": "*",
-        "description": "* You cannot select both of these options for the same model.",
+        "description": "* That model's storm bolter cannot be replaced.",
         "": ""
     },
     {
@@ -1676,7 +1858,21 @@
         "datasheet_id": "000000384",
         "line": "2",
         "button": "â¢",
-        "description": "1 Paladin equipped with a storm bolter and Nemesis force weapon can be equipped with 1 Ancient's banner. That model's storm bolter can be replaced with one of the following:1 incinerator1 psilencer1 psycannon",
+        "description": "1 Paladin can have its storm bolter replaced with 1 Apothecary's narthecium.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000384",
+        "line": "3",
+        "button": "â¢",
+        "description": "1 Paladin's storm bolter can be replaced with one of the following:1 incinerator and 1 Ancient's banner1 psilencer and 1 Ancient's banner1 psycannon and 1 Ancient's banner1 storm bolter and 1 Ancient's banner*",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000384",
+        "line": "4",
+        "button": "*",
+        "description": "* That model's storm bolter cannot be replaced.",
         "": ""
     },
     {
@@ -1697,14 +1893,14 @@
         "datasheet_id": "000000389",
         "line": "1",
         "button": "â¢",
-        "description": "This model can be equipped with up to two of the following, but cannot take duplicates:1 gatling psilencer1 heavy incinerator1 heavy psycannon",
+        "description": "This model's dreadfists can be replaced with one of the following:1 Nemesis daemon greathammer1 Nemesis greatsword",
         "": ""
     },
     {
         "datasheet_id": "000000389",
         "line": "2",
         "button": "â¢",
-        "description": "This model's dreadfists can be replaced with one of the following:1 Nemesis daemon greathammer1 Nemesis greatsword",
+        "description": "This model can be equipped with up to two of the following, but cannot take duplicates:1 gatling psilencer1 heavy incinerator1 heavy psycannon",
         "": ""
     },
     {
@@ -1809,21 +2005,21 @@
         "datasheet_id": "000000395",
         "line": "3",
         "button": "â¢",
-        "description": "This model's twin heavy bolter can be replaced with one of the following:1 twin assault cannon1 twin lascannon",
+        "description": "This model's twin heavy bolter can be replaced with 1 twin lascannon.",
         "": ""
     },
     {
         "datasheet_id": "000000396",
         "line": "1",
         "button": "â¢",
-        "description": "This model can be equipped with 1 additional storm bolter.",
+        "description": "This model can be equipped with 1 hunter-killer missile.",
         "": ""
     },
     {
         "datasheet_id": "000000396",
         "line": "2",
         "button": "â¢",
-        "description": "This model can be equipped with 1 hunter-killer missile.",
+        "description": "This model can be equipped with 1 additional storm bolter.",
         "": ""
     },
     {
@@ -1855,24 +2051,17 @@
         "": ""
     },
     {
-        "datasheet_id": "000000399",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's boltgun can be replaced with 1 bolt pistol.",
-        "": ""
-    },
-    {
         "datasheet_id": "000000400",
         "line": "1",
         "button": "â¢",
-        "description": "This model's assault cannon can be replaced with one of the following:1 heavy plasma cannon1 multi-melta1 twin lascannon",
+        "description": "This model's assault cannon can be replaced with one of the following:1 heavy plasma cannon1 twin lascannon",
         "": ""
     },
     {
         "datasheet_id": "000000400",
         "line": "2",
         "button": "â¢",
-        "description": "This model's storm bolter and Dreadnought combat weapon can be replaced with one of the following:1 missile launcher and 1 armoured feet1 heavy flamer and 1 Dreadnought combat weapon",
+        "description": "This model's storm bolter can be replaced with 1 heavy flamer.",
         "": ""
     },
     {
@@ -3517,28 +3706,14 @@
         "datasheet_id": "000000634",
         "line": "1",
         "button": "â¢",
-        "description": "This model's splinter pistol can be replaced with 1 blast pistol.",
+        "description": "This model's splinter pistol can be replaced with one of the following:1 blast pistol1 soul trap",
         "": ""
     },
     {
-        "datasheet_id": "000000639",
-        "line": "1",
+        "datasheet_id": "000000634",
+        "line": "2",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 blast pistol1 splinter pistol",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000640",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000641",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
+        "description": "This model's huskblade can be replaced with one of the following:1 agoniser1 master-crafted power weapon",
         "": ""
     },
     {
@@ -3549,24 +3724,17 @@
         "": ""
     },
     {
-        "datasheet_id": "000000643",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000000644",
         "line": "1",
         "button": "â¢",
-        "description": "The Sybarite's close combat weapon can be replaced with 1 Sybarite weapon.",
+        "description": "The Sybarite's close combat weapon can be replaced with 1 power weapon.",
         "": ""
     },
     {
         "datasheet_id": "000000644",
         "line": "2",
         "button": "â¢",
-        "description": "The Sybarite can be equipped with 1 phantasm grenade launcher.",
+        "description": "The Sybarite can be equipped with one of the following:1 Kabalite icon1 phantasm grenade launcher",
         "": ""
     },
     {
@@ -3608,49 +3776,63 @@
         "datasheet_id": "000000646",
         "line": "1",
         "button": "â¢",
-        "description": "The Hekatrix can be equipped with 1 phantasm grenade launcher.",
+        "description": "The Hekatrix's splinter pistol can be replaced with 1 blast pistol.",
         "": ""
     },
     {
         "datasheet_id": "000000646",
         "line": "2",
         "button": "â¢",
-        "description": "The Hekatrix's splinter pistol can be replaced with 1 blast pistol.",
+        "description": "The Hekatrix's Hekatarii blade can be replaced with 1 power weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000646",
+        "line": "3",
+        "button": "â¢",
+        "description": "Up to 3 Wyches can each have their splinter pistol and Hekatarii blade replaced with 1 gladiatorial weapons.",
         "": ""
     },
     {
         "datasheet_id": "000000648",
         "line": "1",
         "button": "â¢",
-        "description": "The Klaivex's klaive can be replaced with 1 demilklaives.",
+        "description": "The Klaivex's klaive can be replaced with 1 demiklaives.",
         "": ""
     },
     {
-        "datasheet_id": "000000649",
-        "line": "1",
+        "datasheet_id": "000000648",
+        "line": "2",
         "button": "â¢",
-        "description": "None",
+        "description": "For every 5 models in this unit, it can be equipped with 1 Incubi Shrine token.",
         "": ""
     },
     {
         "datasheet_id": "000000650",
         "line": "1",
         "button": "â¢",
-        "description": "For every 5 models in the unit:1 model can be equipped with 1 hexrifle*1 model can be equipped with 1 liquifier gun*1 model can be equipped with 1 ossefactor*1 model can be equipped with 1 stinger pistol*",
+        "description": "For every 5 models in this unit:1 model's twin torturer's tools can be replaced with 1 hexrifle and 1 torturer's tool1 model's twin torturer's tools can be replaced with 1 liquifier gun and 1 torturer's tool1 model's twin torturer's tools can be replaced with 1 ossefactor and 1 torturer's tool1 model's twin torturer's tools can be replaced with 1 stinger pistol and 1 torturer's tool",
         "": ""
     },
     {
         "datasheet_id": "000000650",
         "line": "2",
-        "button": "*",
-        "description": "* Each model cannot be equipped with more than 1 ranged weapon.",
+        "button": "â¢",
+        "description": "The Acothyst's twin torturer's tools can be replaced with 1 power weapon and 1 torturer's tool.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000650",
+        "line": "3",
+        "button": "â¢",
+        "description": "If the Acothyst is not equipped with a power weapon, its torturer's tool can be replaced with 1 power weapon.",
         "": ""
     },
     {
         "datasheet_id": "000000651",
         "line": "1",
         "button": "â¢",
-        "description": "Any number of models can each be equipped with 1 liquifier gun.",
+        "description": "Any number of models can each replace their paired monstrous weapons with 1 monstrous weapon and 1 liquifier gun.",
         "": ""
     },
     {
@@ -3678,21 +3860,14 @@
         "datasheet_id": "000000658",
         "line": "1",
         "button": "â¢",
-        "description": "For every 3 models in this unit, 1 model can be equipped with one of the following:1 grav-talon1 cluster caltrops",
+        "description": "For every 3 models in this unit, 1 model's splinter rifle can be replaced with one of the following:1 blaster1 heat lance",
         "": ""
     },
     {
         "datasheet_id": "000000658",
         "line": "2",
         "button": "â¢",
-        "description": "For every 3 models in this unit, 1 model's splinter rifle can be replaced with one of the following:1 blaster1 heat lance",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000658",
-        "line": "3",
-        "button": "â¢",
-        "description": "The Arena Champion can be equipped with 1 agoniser.",
+        "description": "For every 3 models in this unit, 1 model can be equipped with one of the following:1 cluster caltrops1 grav-talon",
         "": ""
     },
     {
@@ -3706,7 +3881,14 @@
         "datasheet_id": "000000659",
         "line": "2",
         "button": "â¢",
-        "description": "The Helliarch's hellglaive can be replaced with 1 splinter pistol and 1 Helliarch weapon.",
+        "description": "The Helliarch's hellglaive can be replaced with one of the following:1 splinter pistol and 1 power weapon.1 splinter pistol and 1 stunclaw.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000659",
+        "line": "3",
+        "button": "â¢",
+        "description": "If the Helliarch is equipped with 1 splinter pistol, it can be equipped with 1 hellglaive (that model's hellglaive cannot be replaced).",
         "": ""
     },
     {
@@ -3727,56 +3909,49 @@
         "datasheet_id": "000000661",
         "line": "1",
         "button": "â¢",
-        "description": "The model's 2 void lances can be replaced with 2 dark scythes.",
+        "description": "This model can be equipped with 1 Voidraven missiles.",
         "": ""
     },
     {
         "datasheet_id": "000000661",
         "line": "2",
         "button": "â¢",
-        "description": "This model can be equipped with 1 Voidraven missiles.",
+        "description": "This model's 2 void lances can be replaced with 2 dark scythes.",
         "": ""
     },
     {
         "datasheet_id": "000000662",
         "line": "1",
         "button": "â¢",
-        "description": "The Solarite can be equipped with 1 Solarite weapon.",
+        "description": "The Solarite's shardcarbine can be replaced with one of the following:1 blast pistol and 1 power weapon1 splinter pistol and 1 power weapon",
         "": ""
     },
     {
         "datasheet_id": "000000662",
         "line": "2",
         "button": "â¢",
-        "description": "The Solarite can replace its shardcarbine with one of the following:1 blast pistol1 splinter pistol",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000662",
-        "line": "3",
-        "button": "â¢",
-        "description": "Up to 4 Scourges can each replace their shardcarbine with one of the following:1 blaster1 dark lance1 Drukhari haywire blaster1 heat lance1 shredder1 splinter cannon",
+        "description": "Any number of Scourges can each replace their splinter cannon with one of the following:1 blaster1 dark lance1 haywire blaster1 heat lance1 shredder",
         "": ""
     },
     {
         "datasheet_id": "000000663",
         "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can each replace their twin splinter cannon with one of the following:1 stinger pod1 twin haywire blaster1 twin heat lance",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000663",
+        "line": "2",
         "button": "â¢",
         "description": "Any number of models can each replace one of their macro-scalpels with one of the following:1 Talos ichor injector1 twin liquifier gun",
         "": ""
     },
     {
         "datasheet_id": "000000663",
-        "line": "2",
-        "button": "â¢",
-        "description": "Any number of models can each replace one of their macro-scalpels with one of the following:1 chain-flails1 Talos gauntlet",
-        "": ""
-    },
-    {
-        "datasheet_id": "000000663",
         "line": "3",
         "button": "â¢",
-        "description": "Any number of models can each replace their twin splinter cannon with one of the following:1 twin Drukhari haywire blasters1 twin heat lance1 stinger pod",
+        "description": "Any number of models can each replace one of their macro-scalpels with one of the following:1 chain flails1 Talos gauntlet",
         "": ""
     },
     {
@@ -5204,7 +5379,7 @@
         "datasheet_id": "000000855",
         "line": "3",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 Icarus autocannons1 ironstorm missile pod1 stormspear rocket pod",
+        "description": "This model can be equipped with one of the following:1 ironstorm missile pod1 stormspear rocket pod1 twin Icarus autocannon",
         "": ""
     },
     {
@@ -5225,7 +5400,7 @@
         "datasheet_id": "000000856",
         "line": "3",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 Icarus autocannons1 ironstorm missile pod1 stormspear rocket pod",
+        "description": "This model can be equipped with one of the following:1 ironstorm missile pod1 stormspear rocket pod1 twin Icarus autocannon",
         "": ""
     },
     {
@@ -5246,7 +5421,7 @@
         "datasheet_id": "000000857",
         "line": "3",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 Icarus autocannons1 ironstorm missile pod1 stormspear rocket pod",
+        "description": "This model can be equipped with one of the following:1 ironstorm missile pod1 stormspear rocket pod1 twin Icarus autocannon",
         "": ""
     },
     {
@@ -5260,7 +5435,7 @@
         "datasheet_id": "000000858",
         "line": "2",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 Icarus autocannons1 ironstorm missile pod1 stormspear rocket pod",
+        "description": "This model can be equipped with one of the following:1 ironstorm missile pod1 stormspear rocket pod1 twin Icarus autocannon",
         "": ""
     },
     {
@@ -5281,7 +5456,7 @@
         "datasheet_id": "000000859",
         "line": "3",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 Icarus autocannons1 ironstorm missile pod1 stormspear rocket pod",
+        "description": "This model can be equipped with one of the following:1 ironstorm missile pod1 stormspear rocket pod1 twin Icarus autocannon",
         "": ""
     },
     {
@@ -6419,6 +6594,90 @@
         "": ""
     },
     {
+        "datasheet_id": "000001037",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's plague bolt pistol can be replaced with one of the following:1 combi-weapon1 plague combi-bolter1 plague fist1 plague-encrusted exalted weapon1 plasma pistol",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001037",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's Astartes chainsword can be replaced with one of the following:1 plague fist1 plague-encrusted exalted weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001037",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model's plague bolt pistol and Astartes chainsword can be replaced with 1 twin lighting claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001038",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's plague combi-bolter can be replaced with one of the following:1 combi-weapon1 plague-encrusted exalted weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001038",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's plague-encrusted exalted weapon can be replaced with one of the following:1 chainfist1 plague fist",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001038",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model's plague combi-bolter and plague-encrusted exalted weapon can be replaced with 1 twin lighting claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001041",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's plague combi-bolter can be replaced with one of the following:1 combi-weapon1 plague-encrusted exalted weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001041",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's force weapon can be replaced with one of the following:1 chainfist1 plague fist1 plague-encrusted exalted weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001041",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model's plague combi-bolter and force weapon can be replaced with 1 twin lighting claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001043",
+        "line": "1",
+        "button": "â¢",
+        "description": "For every 10 models in the unit, 1 Death Guard Cultist's Cultist firearm can be replaced with 1 flamer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001043",
+        "line": "2",
+        "button": "â¢",
+        "description": "For every 10 models in the unit, 1 Death Guard Cultist's Cultist firearm can be replaced with 1 heavy stubber.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001043",
+        "line": "3",
+        "button": "â¢",
+        "description": "For every 10 models in the unit, 1 Death Guard Cultist's Cultist firearm can be replaced with 1 grenade launcher.",
+        "": ""
+    },
+    {
         "datasheet_id": "000001044",
         "line": "1",
         "button": "â¢",
@@ -7385,27 +7644,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000001196",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model can be equipped with 1 hunter-killer missile.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001196",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model can be equipped with 1 multi-melta.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001196",
-        "line": "3",
-        "button": "â¢",
-        "description": "This model can be equipped with 1 storm bolter.",
-        "": ""
-    },
-    {
         "datasheet_id": "000001197",
         "line": "1",
         "button": "â¢",
@@ -7689,14 +7927,21 @@
         "datasheet_id": "000001360",
         "line": "1",
         "button": "â¢",
-        "description": "This model can be equipped with up to two of the following, but cannot take duplicates:1 gatling psilencer1 heavy incinerator1 heavy psycannon",
+        "description": "This model's dreadfists can be replaced with one of the following:1 Nemesis daemon greathammer1 Nemesis flail1 Nemesis greatsword1 Nemesis mace",
         "": ""
     },
     {
         "datasheet_id": "000001360",
         "line": "2",
         "button": "â¢",
-        "description": "This model's dreadfists can be replaced with one of the following:1 Nemesis daemon greathammer1 Nemesis greatsword",
+        "description": "This model can be equipped with up to two of the following, but cannot take duplicates:1 gatling psilencer1 heavy incinerator1 heavy psycannon1 sublimator",
+        "": ""
+    },
+    {
+        "datasheet_id": "000001360",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model can be equipped with 1 fragstorm grenade launcher.",
         "": ""
     },
     {
@@ -7704,13 +7949,6 @@
         "line": "1",
         "button": "â¢",
         "description": "This model can be equipped with one of the following:1 combi-weapon1 storm bolter",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001362",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
         "": ""
     },
     {
@@ -8207,7 +8445,7 @@
         "datasheet_id": "000001483",
         "line": "1",
         "button": "â¢",
-        "description": "This model's Preceptor multi-laser can be replaced with one of the following:1 meltagun1 Questoris heavy stubber",
+        "description": "This model's Questoris multi-laser can be replaced with one of the following1 meltagun1 Questoris heavy stubber",
         "": ""
     },
     {
@@ -8221,28 +8459,21 @@
         "datasheet_id": "000001483",
         "line": "3",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 Icarus autocannons1 ironstorm missile pod1 stormspear rocket pod",
-        "": ""
-    },
-    {
-        "datasheet_id": "000001484",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
+        "description": "This model can be equipped with one of the following:1 ironstorm missile pod1 stormspear rocket pod1 twin Icarus autocannon",
         "": ""
     },
     {
         "datasheet_id": "000001485",
         "line": "1",
         "button": "â¢",
-        "description": "This model's 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with:1 shieldbreaker missile launcher and 2 twin siegebreaker cannons",
+        "description": "This model's 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons.",
         "": ""
     },
     {
         "datasheet_id": "000001486",
         "line": "1",
         "button": "â¢",
-        "description": "This model's 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with:1 shieldbreaker missile launcher and 2 twin siegebreaker cannons",
+        "description": "This model's 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons.",
         "": ""
     },
     {
@@ -10087,17 +10318,10 @@
         "": ""
     },
     {
-        "datasheet_id": "000002593",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000002594",
         "line": "1",
         "button": "â¢",
-        "description": "This model's Autoch-pattern combi-bolter can be replaced with 1 volkanite disintegrator.",
+        "description": "This model's Autoch-pattem combi-bolter can be replaced with 1 volkanite disintegrator.",
         "": ""
     },
     {
@@ -10129,66 +10353,38 @@
         "": ""
     },
     {
-        "datasheet_id": "000002596",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002597",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000002598",
         "line": "1",
         "button": "â¢",
-        "description": "All models in this unit can each have their Autoch-pattern bolter replaced with 1 ion blaster.",
+        "description": "Any number of Hearthkyn Warriors can each have their Autoch-pattern bolter replaced with 1 ion blaster.",
         "": ""
     },
     {
         "datasheet_id": "000002598",
         "line": "2",
         "button": "â¢",
-        "description": "Up to 2 Hearthkyn Warriors can each have their  Autoch-pattern bolter or ion blaster replaced with one of the following:1 HYLas auto rifle*1 HYLas rotary cannon*1 L7 missile launcher*1 EtaCarn plasma beamer*1 magna-rail rifle*1 Kin melee weapon",
+        "description": "Up to 2 Hearthkyn Warriors can each have their  Autoch-pattern bolter or ion blaster replaced with one of the following (duplicates are not allowed):1 HYLas auto rifle1 HYLas rotary cannon1 L7 missile launcher1 EtaCarn plasma beamer1 magna-rail rifle",
         "": ""
     },
     {
         "datasheet_id": "000002598",
         "line": "3",
         "button": "â¢",
-        "description": "Up to 3 different Hearthkyn Warriors equipped with either an Autoch-pattern bolter or an ion blaster can each be equipped with one of the  following (to a maximum of 1 of each per unit):1 medipack**1 comms array**1 pan spectral scanner**",
+        "description": "Up to 2 Hearthkyn Warriors can each have their Autoch-pattern bolter or ion blaster replaced with 1 plasma knife.",
         "": ""
     },
     {
         "datasheet_id": "000002598",
         "line": "4",
         "button": "â¢",
-        "description": "The Theyn's Autoch-pattern bolt pistol can be replaced with one of the following:1 ion pistol1 EtaCarn plasma pistol",
+        "description": "The Theyn's Autoch-pattern bolter can be replaced with one of the following:1 ion blaster1 Theyn's pistol",
         "": ""
     },
     {
         "datasheet_id": "000002598",
         "line": "5",
         "button": "â¢",
-        "description": "The Theyn's Autoch-pattern bolter or ion blaster can be replaced with 1 Kin melee weapon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002598",
-        "line": "6",
-        "button": "*",
-        "description": "* You can only select each of these options once per unit",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002598",
-        "line": "7",
-        "button": "*",
-        "description": "** This model's Autoch-pattern bolter or ion blaster cannot be replaced.",
+        "description": "The Theyn can be equipped with 1 Theyn's melee weapon.",
         "": ""
     },
     {
@@ -10209,7 +10405,7 @@
         "datasheet_id": "000002599",
         "line": "3",
         "button": "â¢",
-        "description": "The Hesyr's concussion gauntlet or plasma blade gauntlet can be replaced with 1 concussion hammer.",
+        "description": "The Hesyr's concussion gauntlet or plasma blade gauntlet can be replaced with 1 graviton hammer.",
         "": ""
     },
     {
@@ -10237,35 +10433,49 @@
         "datasheet_id": "000002600",
         "line": "3",
         "button": "â¢",
-        "description": "For every 5 models in this unit, 1 model that is not equipped with a twin concussion gauntlet can be equipped with 1 mole grenade launcher. If a model is equipped with a mole grenade launcher, add 1 to its Wounds and Attacks characteristics.*",
+        "description": "For every 5 models in this unit, 1 model that is not equipped with a twin concussion gauntlet or a mole grenade launcher can be equipped with 1 mole grenade launcher.*",
         "": ""
     },
     {
         "datasheet_id": "000002600",
         "line": "4",
         "button": "*",
-        "description": "* Designer's Note: If a Cthonian Beserk is equipped with a mole grenade launcher, it will be accompanied by an L-COG unit: both models should be placed on the same base and together they act as a single model for all rules purposes (albeit one with improved characteristics).",
+        "description": "* Designer's Note: If a Cthonian Beserk is equipped with a mole grenade launcher, it will be accompanied by an L-COG unit: both models should be placed on the same base and together they act as a single model for all rules purposes.",
         "": ""
     },
     {
         "datasheet_id": "000002601",
         "line": "1",
         "button": "â¢",
-        "description": "For every 3 models in this unit, 1 model can be equipped with one of the following (if a model is equipped with any of these weapons, add 1 to its Wounds characteristic):1 HYLas rotary cannon1 ion beamer",
+        "description": "For every 3 models in this unit, 1 model can be equipped with one of the following::1 HYLas rotary cannon1 ion beamer",
         "": ""
     },
     {
         "datasheet_id": "000002601",
         "line": "2",
         "button": "â¢",
-        "description": "Up to 3 different models that are not equipped with either a HYLas rotary cannon or an ion beamer can each be equipped with 1 of the following (to a maximum of 1 of each per unit):1 comms array*1 pan spectral scanner*1 rollbar searchlight*",
+        "description": "1 model that is not equipped with either a HYLas rotary cannon or an ion beamer can be equipped with 1 multiwave comms array.*",
         "": ""
     },
     {
         "datasheet_id": "000002601",
         "line": "3",
+        "button": "â¢",
+        "description": "1 model that is not equipped with either a HYLas rotary cannon or an ion beamer can be equipped with 1 panspectral scanner.*",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002601",
+        "line": "4",
+        "button": "â¢",
+        "description": "1 model that is not equipped with either a HYLas rotary cannon or an ion beamer can be equipped with 1 rollbar searchlight.*",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002601",
+        "line": "5",
         "button": "*",
-        "description": "* This model cannot be equipped with a HYLas rotary cannon or an ion beamer.",
+        "description": "* A model can only take one of these options, and cannot be equipped with a HYLas rotary cannon or an ion beamer.",
         "": ""
     },
     {
@@ -10279,21 +10489,21 @@
         "datasheet_id": "000002603",
         "line": "1",
         "button": "â¢",
-        "description": "All models in this unit can each have their bolt cannon replaced with 1 SP conversion beamer.",
+        "description": "All models in this unit can each have their bolt cannon replaced with 1 graviton blast cannon.",
         "": ""
     },
     {
         "datasheet_id": "000002603",
         "line": "2",
         "button": "â¢",
-        "description": "All models in this unit can each have their bolt cannon replaced with 1 graviton blast cannon.",
+        "description": "All models in this unit can each have their bolt cannon replaced with 1 SP conversion beamer.",
         "": ""
     },
     {
         "datasheet_id": "000002604",
         "line": "1",
         "button": "â¢",
-        "description": "This model can do one of the following:Replace 1 twin bolt cannon with 1 twin ion beamerReplace 2 twin bolt cannons with 2 twin ion beamers",
+        "description": "This model's 2 twin bolt cannons can be replaced with one of the following:1 twin bolt cannon and 1 twin ion beamer2 twin ion beamers",
         "": ""
     },
     {
@@ -10307,7 +10517,7 @@
         "datasheet_id": "000002604",
         "line": "3",
         "button": "â¢",
-        "description": "This model's pan spectral scanner can be replaced with 1 Hekaton warhead.",
+        "description": "This model's panspectral scanner can be replaced with 1 Hekaton warhead.",
         "": ""
     },
     {
@@ -10867,7 +11077,7 @@
         "datasheet_id": "000002685",
         "line": "2",
         "button": "â¢",
-        "description": "1 Exaction Vigilant that is equipped with an Arbites combat shotgun can be equipped with 1 excruciatormaul.*",
+        "description": "1 Exaction Vigilant that is equipped with an Arbites combat shotgun can be equipped with 1 excruciator maul.*",
         "": ""
     },
     {
@@ -11700,14 +11910,14 @@
         "datasheet_id": "000002761",
         "line": "2",
         "button": "â¢",
-        "description": "One Legionnaire's boltgun can be replaced with one of the following:1 Heavy flamer1 Multi-melta",
+        "description": "One Legionnaire's boltgun can be replaced with one of the following:1 heavy flamer1 multi-melta",
         "": ""
     },
     {
         "datasheet_id": "000002761",
         "line": "3",
         "button": "â¢",
-        "description": "One Legionnaire's boltgun can be replaced with one of the following:1 Flamer1 Meltagun1 Plasma gun",
+        "description": "One Legionnaire's boltgun can be replaced with one of the following:1 flamer1 meltagun1 plasma gun",
         "": ""
     },
     {
@@ -11806,13 +12016,6 @@
         "line": "2",
         "button": "â¢",
         "description": "This model's volkite veuglaire can be replaced with one of the following:1 siege claw and 1 rad cleanser1 graviton pulsar1 lightning lock1 conversion beam cannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002770",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
         "": ""
     },
     {
@@ -12001,32 +12204,32 @@
         "datasheet_id": "000002786",
         "line": "1",
         "button": "â¢",
+        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002786",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002786",
+        "line": "3",
+        "button": "â¢",
         "description": "This model can be equipped with one of the following:1 bellicatus missile array1 ironhail skytalon array1 orbital comms array1 shield dome",
         "": ""
     },
     {
-        "datasheet_id": "000002786",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002786",
-        "line": "3",
+        "datasheet_id": "000002787",
+        "line": "1",
         "button": "â¢",
         "description": "This model's 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
         "": ""
     },
     {
         "datasheet_id": "000002787",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model can be equipped with 1 Icarus rocket pod.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002787",
         "line": "2",
         "button": "â¢",
         "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
@@ -12036,63 +12239,63 @@
         "datasheet_id": "000002787",
         "line": "3",
         "button": "â¢",
-        "description": "This model's 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
+        "description": "This model can be equipped with 1 Icarus rocket pod.",
         "": ""
     },
     {
         "datasheet_id": "000002788",
         "line": "1",
         "button": "â¢",
-        "description": "This model can be equipped with 1 Icarus rocket pod.",
+        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
         "": ""
     },
     {
         "datasheet_id": "000002788",
         "line": "2",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
+        "description": "This model can be equipped with 1 Icarus rocket pod.",
         "": ""
     },
     {
         "datasheet_id": "000002789",
         "line": "1",
         "button": "â¢",
-        "description": "This model can be equipped with 1 Icarus rocket pod.",
+        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
         "": ""
     },
     {
         "datasheet_id": "000002789",
         "line": "2",
         "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002790",
-        "line": "1",
-        "button": "â¢",
         "description": "This model can be equipped with 1 Icarus rocket pod.",
         "": ""
     },
     {
         "datasheet_id": "000002790",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002790",
-        "line": "3",
+        "line": "1",
         "button": "â¢",
         "description": "This model's macro plasma incinerator can be replaced with 1 heavy laser destroyer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002790",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model can be equipped with one of the following:1 ironhail heavy stubber1 multi-melta",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002790",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model can be equipped with 1 Icarus rocket pod.",
         "": ""
     },
     {
         "datasheet_id": "000002791",
         "line": "1",
         "button": "â¢",
-        "description": "This model can be equipped with 1 multi-melta.",
+        "description": "This model's twin heavy bolter can be replaced with 1 twin lascannon.",
         "": ""
     },
     {
@@ -12106,14 +12309,7 @@
         "datasheet_id": "000002791",
         "line": "3",
         "button": "â¢",
-        "description": "This model's twin heavy bolter can be replaced with 1 twin lascannon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002792",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
+        "description": "This model can be equipped with 1 multi-melta.",
         "": ""
     },
     {
@@ -12138,13 +12334,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000002795",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000002796",
         "line": "1",
         "button": "â¢",
@@ -12152,115 +12341,66 @@
         "": ""
     },
     {
-        "datasheet_id": "000002797",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of Primaris Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002797",
-        "line": "2",
-        "button": "â¢",
-        "description": "Any number of Primaris Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002797",
-        "line": "3",
-        "button": "â¢",
-        "description": "For every 10 models in this unit, up to 2 Primaris Initiates can each have their bolt rifle replaced with one of the following:1 heavy bolt pistol and 1 power fist1 pyreblaster",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002797",
-        "line": "4",
-        "button": "â¢",
-        "description": "The Primaris Sword Brother's heavy bolt pistol can be replaced with 1 pyre pistol.",
-        "": ""
-    },
-    {
         "datasheet_id": "000002798",
         "line": "1",
         "button": "â¢",
-        "description": "Any number of Primaris Sword Brothers can each have their Astartes chainsword replaced with 1 power weapon.",
+        "description": "Any number of Sword Brothers can each have their Astartes chainsword replaced with 1 master-crafted power weapon.",
         "": ""
     },
     {
         "datasheet_id": "000002798",
         "line": "2",
         "button": "â¢",
-        "description": "For every 5 models in this unit, 1 Primaris Sword Brother's Astartes chainsword can be replaced with 1 thunder hammer.",
+        "description": "For every 5 models in this unit, 1 Sword Brother's Astartes chainsword can be replaced with 1 thunder hammer.",
         "": ""
     },
     {
         "datasheet_id": "000002798",
         "line": "3",
         "button": "â¢",
-        "description": "For every 5 models in this unit, 1 Primaris Sword Brother's heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.",
+        "description": "For every 5 models in this unit, 1 Sword Brother's heavy bolt pistol can be replaced with 1 plasma pistol.",
         "": ""
     },
     {
         "datasheet_id": "000002798",
         "line": "4",
         "button": "â¢",
-        "description": "For every 5 models in this unit, 1 Primaris Sword Brother's heavy bolt pistol can be replaced with 1 plasma pistol.",
+        "description": "For every 5 models in this unit, up to 2 Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol.",
         "": ""
     },
     {
         "datasheet_id": "000002798",
         "line": "5",
         "button": "â¢",
-        "description": "For every 5 models in this unit, up to 2 Primaris Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002798",
-        "line": "6",
-        "button": "â¢",
-        "description": "The Sword Brother Castellan's heavy bolt pistol and Astartes chainsword can be replaced with one of the following:1 combi-weapon and 1 Astartes chainsword.1 combi-weapon and 1 master-crafted power weapon.1 heavy bolt pistol and 1 master-crafted power weapon.",
+        "description": "For every 5 models in this unit, 1 Sword Brother's heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.",
         "": ""
     },
     {
         "datasheet_id": "000002799",
         "line": "1",
         "button": "â¢",
-        "description": "The Sword Brother's bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list:*1 Astartes chainsword1 bolt pistol1 boltgun1 combi-weapon1 grav-pistol1 hand flamer1 inferno pistol1 plasma pistol1 power fist1 power weapon1 storm bolter1 thunder hammer",
+        "description": "The Sword Brother's heavy bolt pistol can be replaced with 1 pyre pistol.",
         "": ""
     },
     {
         "datasheet_id": "000002799",
         "line": "2",
         "button": "â¢",
-        "description": "Any number of Neophytes can each have their boltgun replaced with one of the following:1 Astartes shotgun1 combat knife",
+        "description": "Any number of Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon.",
         "": ""
     },
     {
         "datasheet_id": "000002799",
         "line": "3",
         "button": "â¢",
-        "description": "Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword.",
+        "description": "Any number of Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword.",
         "": ""
     },
     {
         "datasheet_id": "000002799",
         "line": "4",
         "button": "â¢",
-        "description": "1 Initiate's boltgun can be replaced with one of the following:1 flamer1 plasma gun1 meltagun1 grav-gun",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002799",
-        "line": "5",
-        "button": "â¢",
-        "description": "1 Initiate's boltgun can be replaced with one of the following:1 power weapon1 power fist1 heavy bolter1 heavy flamer1 grav-cannon1 lascannon1 missile launcher1 multi-melta1 plasma cannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000002799",
-        "line": "6",
-        "button": "*",
-        "description": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).",
+        "description": "For every 10 models in this unit, up to 2 Initiates can each have their bolt rifle replaced with one of the following:1 heavy bolt pistol and 1 power fist1 pyreblaster",
         "": ""
     },
     {
@@ -12282,6 +12422,90 @@
         "line": "3",
         "button": "â¢",
         "description": "This model's assault cannon, storm bolter and Dreadnought combat weapon can be replaced with one of the following:1 Fenrisian greataxe, 1 blizzard shield and 1 storm bolter1 Fenrisian greataxe, 1 blizzard shield and 1 heavy flamer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002802",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002802",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's bolt pistol and Astartes chainsword can be replaced with two different weapons from the following list:*1 bolt pistol1 combi-weapon1 plasma pistol1 storm bolter1 Astartes chainsword1 power fist1 power weapon1 thunder hammer1 storm shield",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002802",
+        "line": "3",
+        "button": "*",
+        "description": " * This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002803",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's storm bolter and power weapon can be replaced with 1 twin lightning claws.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002803",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's storm bolter and power weapon can be replaced with two different options from the following list:*1 assault cannon1 heavy flamer1 cyclone missile launcher and 1 storm bolter1 storm bolter1 chainfist1 power fist1 thunder hammer1 storm shield",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002803",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model's storm bolter can be replaced with 1 combi-weapon. ",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002803",
+        "line": "4",
+        "button": "*",
+        "description": "* This model can only be equipped with two ranged weapons if one of them is a cyclone missile launcher and the other is either a storm bolter or a combi-weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002804",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's bolt pistol and boltgun can be replaced with 1 twin lightning claws. ",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002804",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's bolt pistol and boltgun can be replaced with two different weapons from the following list:*1 bolt pistol1 boltgun1 combi-weapon1 plasma pistol1 storm bolter1 Astartes chainsword1 power fist1 power weapon1 thunder hammer1 storm shield",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002804",
+        "line": "3",
+        "button": "*",
+        "description": "*  This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002805",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000002806",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
         "": ""
     },
     {
@@ -15820,223 +16044,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000003924",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's shuriken pistol can be replaced with 1 neuro disruptor.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003926",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's shuriken pistol can be replaced with one of the following:1 fusion pistol1 neuro disruptor",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003926",
-        "line": "2",
-        "button": "â¢",
-        "description": "This model's Troupe Master's blade can be replaced with 1 Harlequin's special weapon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003928",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of models can each have their shuriken cannon replaced with 1 Skyweaver haywire cannon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003928",
-        "line": "2",
-        "button": "â¢",
-        "description": "Any number of models can each have their star bolas replaced with 1 zephyrglaive.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003929",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of models can each have their Harlequin's blade replaced with 1 Harlequin's special weapon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003929",
-        "line": "2",
-        "button": "â¢",
-        "description": "The Lead Player's Harlequin's blade can be replaced with 1 power sword.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003929",
-        "line": "3",
-        "button": "â¢",
-        "description": "If this unit contains 9 or fewer models:Up to 2 models can each have their shuriken pistol replaced with 1 neuro disruptorUp to 2 models can each have their shuriken pistol replaced with 1 fusion pistol",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003929",
-        "line": "4",
-        "button": "â¢",
-        "description": "If this unit contains 10 or more models:Up to 4 models can each have their shuriken pistol replaced with 1 neuro disruptorUp to 4 models can each have their shuriken pistol replaced with 1 fusion pistol",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003930",
-        "line": "1",
-        "button": "â¢",
-        "description": "This model's Voidweaver haywire cannon can be replaced with 1 prismatic cannon.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003931",
-        "line": "1",
-        "button": "â¢",
-        "description": "The Voidreaver Felarch's shuriken pistol can be replaced with one of the following:1 neuro disruptor1 shuriken rifle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003931",
-        "line": "2",
-        "button": "â¢",
-        "description": "The Voidreaver Felarch can be equipped with:1 mistshield",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003931",
-        "line": "3",
-        "button": "â¢",
-        "description": "Any number of Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003931",
-        "line": "4",
-        "button": "â¢",
-        "description": "For every 5 models in this unit, 1 Corsair Voidreaver's power sword or shuriken rifle can be replaced with one of the following:1 blaster1 shredder",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003931",
-        "line": "5",
-        "button": "â¢",
-        "description": "If this unit contains 10 models, 1 Corsair Voidreaver's shuriken rifle can be replaced with one of the following:1 shuriken cannon1 wraithcannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of Corsair Voidscarred can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "2",
-        "button": "â¢",
-        "description": "The Voidscarred Felarch's shuriken pistol can be replaced with one of the following:1 neuro disruptor1 shuriken rifle",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "3",
-        "button": "â¢",
-        "description": "The Voidscarred Felarch can be equipped with 1 mistshield.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "4",
-        "button": "â¢",
-        "description": "For every 5 models in this unit, 1 Corsair  Voidscarred's shuriken rifle can be replaced with one of the following:1 blaster1 shredder",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "5",
-        "button": "â¢",
-        "description": "If this unit contains 10 models, 1 Corsair Voidscarred's shuriken rifle can be replaced with one of the following:1 shuriken cannon1 wraithcannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "6",
-        "button": "â¢",
-        "description": "If this unit contains 10 models, 1 Corsair Voidscarred's shuriken rifle can be replaced with 1 long rifle. ",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "7",
-        "button": "â¢",
-        "description": "If this unit contains 10 models, 1 Corsair Voidscarred's power sword can be  replaced with 1 fusion pistol.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003932",
-        "line": "8",
-        "button": "â¢",
-        "description": "1 Corsair Voidscarred model equipped with a shuriken pistol and power sword can be equipped with 1 FaolchÃ.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003933",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of models can each have their twin shuriken catapult replaced with one of the following:1 dark lance1 dissonance cannon1 scatter laser1 shuriken cannon1 splinter cannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003933",
-        "line": "2",
-        "button": "â¢",
-        "description": "The Cloud Dancer Felarch can be equipped with one of the following:1 dissonance pistol1 void sabre",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003934",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of models can each have their Corsair firearm replaced with 1 spar-glaive.",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003934",
-        "line": "2",
-        "button": "â¢",
-        "description": "For every 5 models in this unit, 1 model's Corsair firearm can be replaced with one of the following:1 Aeldari missile launcher1 blaster1 dark lance1 flamer1 fusion gun1 shredder1 shuriken cannon1 splinter cannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003934",
-        "line": "3",
-        "button": "â¢",
-        "description": "The Corsair Reaver Felarch can be equipped with one of the following:1 dissonance pistol1 void sabre",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003935",
-        "line": "1",
-        "button": "â¢",
-        "description": "Any number of models can each have their Corsair firearm replaced with one of the following:1 shardcarbine1 shuriken catapult1 spar-glaive",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003935",
-        "line": "2",
-        "button": "â¢",
-        "description": "For every 5 models in this unit, 1 model's Corsair firearm can be replaced with one of the following:1 Aeldari missile launcher1 blaster1 dark lance1 flamer1 fusion gun1 shredder1 shuriken cannon1 splinter cannon",
-        "": ""
-    },
-    {
-        "datasheet_id": "000003935",
-        "line": "3",
-        "button": "â¢",
-        "description": "The Corsair Skyreaver Felarch can be equipped with one of the following:1 dissonance pistol1 void sabre",
-        "": ""
-    },
-    {
         "datasheet_id": "000003937",
         "line": "1",
         "button": "â¢",
@@ -18680,6 +18687,573 @@
         "line": "2",
         "button": "â¢",
         "description": "If this model is not equipped with a storm bolter, its heavy flamer can be replaced with 1 storm bolter.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004135",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's absolvor bolt pistol can be replaced with 1 pyre pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004135",
+        "line": "2",
+        "button": "â¢",
+        "description": "If this model is equipped with an absolvor bolt pistol, it can be equipped with 1 master-crafted power weapon (this model's absolvor bolt pistol cannot be replaced).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004137",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Sternguard Veteran Squad Leader's Sternguard bolt rifle can be replaced with one of the following: 1 Astartes chainsword 1 combi-weapon 1 power fist 1 power weapon 1 Astartes chainsword and 1 Sternguard bolt rifle*1 power fist and 1 Sternguard bolt rifle*1 power weapon and 1 Sternguard bolt rifle*",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004137",
+        "line": "2",
+        "button": "â¢",
+        "description": " Any number of Sternguard Veterans can each have their Sternguard bolt rifle replaced with 1 combi-weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004137",
+        "line": "3",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 Sternguard Veteran's Sternguard bolt rifle can be replaced with one of the following: 1 pyrecannon1 Sternguard heavy bolter",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004137",
+        "line": "4",
+        "button": "*",
+        "description": "* This model's Sternguard bolt rifle cannot be replaced.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004138",
+        "line": "1",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 Terminator's storm bolter can be replaced with one of the following:1 assault cannon1 heavy flamer1 cyclone missile launcher and 1 storm bolter.*",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004138",
+        "line": "2",
+        "button": "â¢",
+        "description": "Any number of models can each have their power fist replaced with 1 chainfist.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004138",
+        "line": "3",
+        "button": "â¢",
+        "description": "The Terminator Squad Leader's power fist can be replaced with 1 power weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004138",
+        "line": "4",
+        "button": "*",
+        "description": "* This model's storm bolter cannot be replaced.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004139",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model can be equipped with 1 hunter-killer missile.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004139",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model can be equipped with 1 multi-melta.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004139",
+        "line": "3",
+        "button": "â¢",
+        "description": "This model can be equipped with 1 storm bolter.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004143",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Steeljack Theyn's heavy volkanite disintegrator and plasma knife can be replaced with 1 Autoch-pattern bolter and 1 plasma sword.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004144",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models in this unit can each have their plasma sword replaced with 1 concussion gauntlet.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004145",
+        "line": "1",
+        "button": "â¢",
+        "description": "All models in this unit can each have their breacher ordnance replaced with 1 tremor shells.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004146",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models in this unit can each have their magna-rail cannon replaced with 1 HYLas rotary cannon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004146",
+        "line": "2",
+        "button": "â¢",
+        "description": "Any number of models can each be equipped with 1 smoke launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004147",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model can be equipped with 1 smoke launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004154",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Sword Brother's bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list*:1 Astartes chainsword1 bolt pistol1 boltgun1 combi-weapon1 grav-pistol1 hand flamer1 inferno pistol1 plasma pistol1 power fist1 power weapon1 storm bolter1 thunder hammer",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004154",
+        "line": "2",
+        "button": "â¢",
+        "description": "Any number of Neophytes can each have their boltgun replaced with one of the following: 1 Astartes shotgun1 combat knife",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004154",
+        "line": "3",
+        "button": "â¢",
+        "description": "Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004154",
+        "line": "4",
+        "button": "â¢",
+        "description": "1 Initiate's boltgun can be replaced with one of the following:1 flamer1 plasma gun1 meltagun1 grav-gun",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004154",
+        "line": "5",
+        "button": "â¢",
+        "description": "1 Initiate's boltgun can be replaced with one of the following:1 power weapon1 power fist1 heavy bolter1 heavy flamer1 grav-cannon1 lascannon1 missile launcher1 multi-melta1 plasma cannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004154",
+        "line": "6",
+        "button": "*",
+        "description": "*This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Kabalite Archsybarite's close combat weapon can be replaced with 1 power weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "2",
+        "button": "â¢",
+        "description": "The Kabalite Archsybarite's splinter rifle can be replaced with one of the following:1 blast pistol1 splinter pistol",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "3",
+        "button": "â¢",
+        "description": "The Kabalite Archsybarite can be equipped with one of the following:1 Kabalite icon1 phantasm grenade launcher",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "4",
+        "button": "â¢",
+        "description": "1 Kabalite Agent's splinter rifle can be replaced with one of the following:1 blaster1 shredder",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "5",
+        "button": "â¢",
+        "description": "1 Kabalite Agent's splinter rifle can be replaced with one of the following:1 dark lance1 splinter cannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "6",
+        "button": "â¢",
+        "description": "1 Kabalite Agent's splinter rifle can be replaced with 1 stinger pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "7",
+        "button": "â¢",
+        "description": "1 Kabalite Agent's splinter rifle can be replaced with 1 shardcarbine.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "8",
+        "button": "â¢",
+        "description": "1 Kabalite Agent's splinter rifle can be replaced with 1 pain sculptors.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "9",
+        "button": "â¢",
+        "description": "1 Kabalite Agent's splinter rifle can be replaced with 1 splinter pistol and 1 razorflail.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004156",
+        "line": "10",
+        "button": "â¢",
+        "description": "1 Kabalite Agent equipped with a splinter rifle can be equipped with 1 stimm-needler. This model's splinter rifle cannot be replaced.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004157",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Solarite's shardcarbine can be replaced with one of the following:1 blast pistol and 1 power weapon1 splinter pistol and 1 power weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004157",
+        "line": "2",
+        "button": "â¢",
+        "description": "1 Scourge's shardcarbine can be replaced with one of the following:1 blaster1 shredder",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004159",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's shuriken pistol can be replaced with 1 neuro disruptor.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004161",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's shuriken pistol can be replaced with one of the following:1 fusion pistol1 neuro disruptor",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004161",
+        "line": "2",
+        "button": "â¢",
+        "description": "This model's Troupe Master's blade can be replaced with 1 Harlequin's special weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004163",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can each have their shuriken cannon replaced with 1 Skyweaver haywire cannon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004163",
+        "line": "2",
+        "button": "â¢",
+        "description": "Any number of models can each have their star bolas replaced with 1 zephyrglaive.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004164",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can each have their Harlequin's blade replaced with 1 Harlequin's special weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004164",
+        "line": "2",
+        "button": "â¢",
+        "description": "The Lead Player's Harlequin's blade can be replaced with 1 power sword.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004164",
+        "line": "3",
+        "button": "â¢",
+        "description": "If this unit contains 9 or fewer models:Up to 2 models can each have their shuriken pistol replaced with 1 neuro disruptorUp to 2 models can each have their shuriken pistol replaced with 1 fusion pistol",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004164",
+        "line": "4",
+        "button": "â¢",
+        "description": "If this unit contains 10 or more models:Up to 4 models can each have their shuriken pistol replaced with 1 neuro disruptorUp to 4 models can each have their shuriken pistol replaced with 1 fusion pistol",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004165",
+        "line": "1",
+        "button": "â¢",
+        "description": "This model's Voidweaver haywire cannon can be replaced with 1 prismatic cannon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004168",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Voidreaver Felarch's shuriken pistol can be replaced with one of the following:1 neuro disruptor1 shuriken rifle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004168",
+        "line": "2",
+        "button": "â¢",
+        "description": "The Voidreaver Felarch can be equipped with:1 mistshield",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004168",
+        "line": "3",
+        "button": "â¢",
+        "description": "Any number of Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004168",
+        "line": "4",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 Corsair Voidreaver's power sword or shuriken rifle can be replaced with one of the following:1 blaster1 shredder",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004168",
+        "line": "5",
+        "button": "â¢",
+        "description": "If this unit contains 10 models, 1 Corsair Voidreaver's shuriken rifle can be replaced with one of the following:1 shuriken cannon1 wraithcannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of Corsair Voidscarred can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "2",
+        "button": "â¢",
+        "description": "The Voidscarred Felarch's shuriken pistol can be replaced with one of the following:1 neuro disruptor1 shuriken rifle",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "3",
+        "button": "â¢",
+        "description": "The Voidscarred Felarch can be equipped with 1 mistshield.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "4",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 Corsair  Voidscarred's shuriken rifle can be replaced with one of the following:1 blaster1 shredder",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "5",
+        "button": "â¢",
+        "description": "If this unit contains 10 models, 1 Corsair Voidscarred's shuriken rifle can be replaced with one of the following:1 shuriken cannon1 wraithcannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "6",
+        "button": "â¢",
+        "description": "If this unit contains 10 models, 1 Corsair Voidscarred's shuriken rifle can be replaced with 1 long rifle. ",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "7",
+        "button": "â¢",
+        "description": "If this unit contains 10 models, 1 Corsair Voidscarred's power sword can be  replaced with 1 fusion pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004169",
+        "line": "8",
+        "button": "â¢",
+        "description": "1 Corsair Voidscarred model equipped with a shuriken pistol and power sword can be equipped with 1 FaolchÃ.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004170",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can each have their twin shuriken catapult replaced with one of the following:1 dark lance1 dissonance cannon1 scatter laser1 shuriken cannon1 splinter cannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004170",
+        "line": "2",
+        "button": "â¢",
+        "description": "The Cloud Dancer Felarch can be equipped with one of the following:1 dissonance pistol1 void sabre",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004171",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can each have their Corsair firearm replaced with 1 spar-glaive.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004171",
+        "line": "2",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 model's Corsair firearm can be replaced with one of the following:1 Aeldari missile launcher1 blaster1 dark lance1 flamer1 fusion gun1 shredder1 shuriken cannon1 splinter cannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004171",
+        "line": "3",
+        "button": "â¢",
+        "description": "The Corsair Reaver Felarch can be equipped with one of the following:1 dissonance pistol1 void sabre",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004172",
+        "line": "1",
+        "button": "â¢",
+        "description": "Any number of models can each have their Corsair firearm replaced with one of the following:1 shardcarbine1 shuriken catapult1 spar-glaive",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004172",
+        "line": "2",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 model's Corsair firearm can be replaced with one of the following:1 Aeldari missile launcher1 blaster1 dark lance1 flamer1 fusion gun1 shredder1 shuriken cannon1 splinter cannon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004172",
+        "line": "3",
+        "button": "â¢",
+        "description": "The Corsair Skyreaver Felarch can be equipped with one of the following:1 dissonance pistol1 void sabre",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004173",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004174",
+        "line": "1",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's infernus heavy bolter can be replaced with one of the following:1 frag cannon.1 hellstorm bolt rifle and 1 Astartes grenade launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004174",
+        "line": "2",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's heavy thunder hammer can be replaced with 1 power weapon and 1 Astartes shield.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004174",
+        "line": "3",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's stalker bolt rifle can be replaced with 1 plasma incinerator.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004174",
+        "line": "4",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's Deathwatch marksman bolt carbine can be replaced with 1 combat knife.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004175",
+        "line": "1",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's infernus heavy bolter can be replaced with one of the following:1 frag cannon.1 hellstorm bolt rifle and 1 Astartes grenade launcher.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004175",
+        "line": "2",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's heavy thunder hammer can be replaced with 1 power weapon and 1 Astartes shield.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004175",
+        "line": "3",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's stalker bolt rifle can be replaced with 1 plasma incinerator.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004175",
+        "line": "4",
+        "button": "â¢",
+        "description": "For every 5 models in the unit, up to 1 model's Deathwatch marksman bolt carbine can be replaced with 1 combat knife.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004176",
+        "line": "1",
+        "button": "â¢",
+        "description": "All models in this unit can each have their gauss scalpel replaced with 1 tesla caster.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004176",
+        "line": "2",
+        "button": "â¢",
+        "description": "1 model's gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004176",
+        "line": "3",
+        "button": "â¢",
+        "description": "1 model's gauss scalpel or tesla caster can be replaced with 1 accelerator mandible.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004177",
+        "line": "1",
+        "button": "â¢",
+        "description": "1 model's twin gauss reaper can be replaced with 1 transdimensional isolator.",
         "": ""
     }
 ]

@@ -148,5 +148,11 @@
         "name": "Drukhari",
         "link": "https://wahapedia.ru/wh40k10ed/factions/drukhari",
         "": ""
+    },
+    {
+        "id": "UA",
+        "name": "Unbound Adversaries",
+        "link": "https://wahapedia.ru/wh40k10ed/factions/unbound-adversaries",
+        "": ""
     }
 ]

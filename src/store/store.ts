@@ -794,6 +794,7 @@ const useStore = create<StoreState>()(
                                     ).map((ability) =>
                                         applyAbilityOverrides(ability),
                                     );
+                                console.log(matchingAbilities);
 
                                 if (unit.children && unit.children.length > 0) {
                                     const details = unit.children
@@ -920,7 +921,7 @@ const useStore = create<StoreState>()(
                                     .filter((x) => x !== "")
                                     .join(", ");
 
-                                console.log(unit);
+                                console.log(unit, allAbilities);
                                 return {
                                     ...unit,
                                     abilities: allAbilities,

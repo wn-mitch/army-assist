@@ -60,7 +60,7 @@
 000000044|1|â¢|Any number of Spanners can each have their big shoota replaced with one of the following:<ul style="list-style-type:circle"><li>1 kustom mega-blasta</li><li>1 rokkit launcha</li></ul>|
 000000045|1|â¢|This unit can be equipped with 1 ammo runt.|
 000000049|1|â¢|Any number of models can each have their big shoota replaced with one of the following:<ul style="list-style-type:circle"><li>1 grotzooka</li><li>1 kustom mega-blasta</li><li>1 rokkit launcha</li><li>1 skorcha</li></ul>|
-000000049|2|â¢|For every four models in this unit, one model can be equipped with one of the following in addition to any other weapons:<ul style="list-style-type:circle"><li>1 big shoota</li><li>1 grotzooka</li><li>1 kustom mega-blasta</li><li>1 rokkit launcha</li><li>1 skorcha</li></ul>|
+000000049|2|â¢|For every four models in this unit, one model can be equipped with one of the following in addition to any other weapons:<ul style="list-style-type:circle"><li>1 Grot tank shoota</li><li>1 grotzooka</li><li>1 kustom mega-blasta</li><li>1 rokkit launcha</li><li>1 skorcha</li></ul>|
 000000050|1|â¢|This modelâs twin big shoota can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin grotzooka</li><li>1 twin kustom mega-blasta</li><li>1 twin rokkit launcha</li><li>1 twin skorcha</li></ul>|
 000000050|2|â¢|This modelâs twin grotzooka can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin big shoota</li><li>1 twin kustom mega-blasta</li><li>1 twin rokkit launcha</li><li>1 twin skorcha</li></ul>|
 000000051|1|â¢|This model can be equipped with 1 kannon.|
@@ -208,41 +208,69 @@
 000000241|1|â¢|For every 3 models in this unit, 1 model can replace its plasma talon with 1 Astartes grenade launcher.|
 000000242|1|â¢|This modelâs heavy bolter can be replaced with 1 assault cannon.|
 000000243|1|â¢|This model can be equipped with up to 4 heavy bolters.|
+000000283|1|â¢|None|
+000000284|1|â¢|This modelâs bolt pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 combi-weapon</li><li>1 master-crafted boltgun</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 relic weapon</li><li>1 thunder hammer</li></ul>|
+000000284|2|â¢|This modelâs relic weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 plasma pistol</li><li>1 power fist</li><li>1 thunder hammer</li><li>1 relic shield and 1 close combat weapon</li></ul>|
+000000284|3|â¢|This modelâs bolt pistol and relic weapon can be replaced with 1 twin lightning claws.|
+000000286|1|â¢|None|
+000000287|1|â¢|None|
+000000288|1|â¢|None|
+000000300|1|â¢|This modelâs power weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 chainfist</li><li>1 power fist</li><li>1 relic shield and 1 close combat weapon</li><li>1 thunder hammer</li></ul>|
+000000300|2|â¢|This modelâs storm bolter and power weapon can be replaced with 1 twin lightning claws.|
+000000300|3|â¢|This modelâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 chainfist</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 combi-weapon</li></ul>|
+000000301|1|â¢|This modelâs bolt pistol and relic weapon can be replaced with 1 twin lightning claws.|
+000000301|2|â¢|This modelâs bolt pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 combi-weapon</li><li>1 master-crafted boltgun</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 power fist</li><li>1 relic weapon</li><li>1 thunder hammer</li></ul>|
+000000301|3|â¢|This modelâs relic weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 plasma pistol</li><li>1 power fist</li><li>1 thunder hammer</li><li>1 storm shield and 1 close combat weapon</li></ul>|
 000000302|1|â¢|This modelâs assault cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>Helfrost cannon</li><li>Multi-melta</li></ul>|
 000000303|1|â¢|The Blood Claw Pack Leaderâs bolt pistol can be replaced with 1 plasma pistol.|
 000000303|2|â¢|The Blood Claw Pack Leaderâs Astartes chainsword can be replaced with 1 power weapon.|
+000000304|1|â¢|None|
 000000305|1|â¢|The Grey Hunter Pack Leaderâs bolt carbine can be replaced with 1 plasma pistol.|
 000000305|2|â¢|The Grey Hunter Pack Leaderâs Astartes chainsword can be replaced with one of the following<ul style="list-style-type:circle"><li>1 power fist</li><li>1 power weapon</li></ul>|
 000000308|1|â¢|This modelâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 bolt pistol</li><li>1 helfrost pistol</li></ul>|
+000000310|1|â¢|1 Wolf Scoutâs boltgun and bolt pistol can be  replaced with one of the following:<ul style="list-style-type:circle"><li>1 bolt pistol and 1 power weapon</li><li>1 plasma pistol and 1 boltgun</li></ul>|
+000000310|2|â¢|1 Wolf Scoutâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 flamer</li><li>1 grav-gun</li><li>1 heavy bolter</li><li>1 meltagun</li><li>1 missile launcher</li><li>1 plasma gun</li></ul>|
+000000310|3|â¢|Any number of models can each have their boltgun replaced with one of the following:<ul style="list-style-type:circle"><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>|
+000000310|4|â¢|The Wolf Scout Pack Leaderâs bolt pistol and boltgun can be replaced with with 1 twin lightning claws, or two different weapons from the following list:*<ul style="list-style-type:circle"><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer.</li></ul>|
+000000310|5|*|* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)|
 000000311|1|â¢|Any number of models can each have their death totem replaced with 1 stormfrag auto-launcher.|
+000000315|1|â¢|Any number of models can have their bolt pistol replaced with one of the following:<ul style="list-style-type:circle"><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 storm shield</li></ul>|
 000000318|1|â¢|Any number of models can each have their storm bolter replaced with 1 storm shield.|
 000000318|2|â¢|For every 5 models in this unit, 1 Wolf Guard Terminator can replace its storm bolter and master-crafted power weapon with 1 assault cannon and 1 powerfist.|
 000000318|3|â¢|The Wolf Guard Terminator Pack Leaderâs storm bolter and master-crafted power weapon can be replaced with 1 of the following:<ul style="list-style-type:circle"><li>1 relic greataxe</li><li>1 twin lightning claws</li></ul>|
+000000321|1|â¢|This modelâs 2 skyhammer missile launchers can replaced with one of the following:<ul style="list-style-type:circle"><li>2 twin heavy bolters</li><li>2 twin multi-meltas</li></ul>|
 000000322|1|â¢|Any number of models can each have their bolt pistol replaced with one of the following:<ul style="list-style-type:circle"><li>1 boltgun</li><li>1 storm shield</li></ul>|
 000000322|2|â¢|For every 3 models in this unit, one modelâs bolt pistol can be replaced with 1 plasma pistol.|
+000000324|1|â¢|The Skyclaw Pack Leaderâs Astartes chainsword can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 power fist</li><li>1 power weapon</li></ul>|
+000000324|2|â¢|The Skyclaw Pack Leaderâs bolt pistol can be replaced with 1 plasma pistol.|
+000000324|3|â¢|Up to 2 Skyclaws can each have their bolt pistol and Astartes chainsword replaced with one of the following:<ul style="list-style-type:circle"><li>1 plasma pistol and 1 Astartes chainsword</li><li>1 flamer and 1 close combat weapon</li><li>1 grav-gun and 1 close combat weapon</li><li>1 meltagun and 1 close combat weapon</li><li>1 plasma gun and 1 close combat weapon</li></ul>|
+000000325|1|â¢|This modelâs 2 skyhammer missile launchers can be replaced with one of the following:<ul style="list-style-type:circle"><li>2 twin multi-meltas</li><li>2 twin heavy bolters</li></ul>|
+000000325|2|â¢|This modelâs twin stormstrike missile launcher can be replaced with 1 twin lascannon.|
+000000326|1|â¢|Any number of Long Fangs can each have their boltgun replaced with one of the following:<ul style="list-style-type:circle"><li>1 grav-cannon</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>|
+000000326|2|â¢|The Long Fang Pack Leaderâs boltgun can be replace with one of the following<ul style="list-style-type:circle"><li>1 flamer</li><li>1 grav-gun</li><li>1 meltagun</li><li>1 plasma gun</li><li>1 plasma pistol</li></ul>|
+000000326|3|â¢|The Long Fang Pack Leaderâs close combat weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li></ul>|
 000000358|1|â¢|This modelâs twin assault cannon can be replaced with 1 twin lascannon.|
 000000358|2|â¢|This modelâs 2 Blackstar rocket launchers can be replaced with 2 stormstrike missile launchers.|
 000000358|3|â¢|This model can be equipped with 1 hurricane bolter.|
 000000358|4|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 auspex array</li><li>1 infernum halo-launcher</li></ul>|
 000000373|1|â¢|None|
-000000374|1|â¢|None|
 000000375|1|â¢|This modelâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator</li><li>1 psilencer</li><li>1 psycannon</li></ul>|
 000000376|1|â¢|This modelâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator</li><li>1 psilencer</li><li>1 psycannon</li></ul>|
 000000377|1|â¢|None|
-000000379|1|â¢|None|
-000000380|1|â¢|None|
 000000381|1|â¢|For every 5 models in this unit, 1 Grey Knightâs storm bolter and Nemesis force weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator and 1 close combat weapon</li><li>1 psilencer and 1 close combat weapon</li><li>1 psycannon and 1 close combat weapon</li></ul>|
-000000382|1|â¢|For every 5 models in this unit, 1 Brotherhood Terminatorâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator</li><li>1 psilencer</li><li>1 psycannon</li></ul>|
-000000382|2|â¢|1 Brotherhood Terminator can have its storm bolter replaced with 1 narthecium.*|
-000000382|3|â¢|1 Brotherhood Terminator equipped with a storm bolter can be equipped with 1 Ancientâs banner.*|
-000000382|4|*|* You cannot select both of these options for the same model.|
+000000382|1|â¢|For every 5 models in this unit, 1 Terminatorâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator</li><li>1 psilencer</li><li>1 psycannon</li></ul>|
+000000382|2|â¢|1 Terminator can have its storm bolter replaced with 1 Apothecaryâs narthecium.|
+000000382|3|â¢|1 Terminatorâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator and 1 Ancientâs banner</li><li>1 psilencer and 1 Ancientâs banner</li><li>1 psycannon and 1 Ancientâs banner</li><li>1 storm bolter and 1 Ancientâs banner*</li></ul>|
+000000382|4|*|* That modelâs storm bolter cannot be replaced.|
 000000383|1|â¢|For every 5 models in this unit, up to 2 Purifiers can each have their storm bolter and Nemesis force weapon replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator and 1 close combat weapon</li><li>1 psilencer and 1 close combat weapon</li><li>1 psycannon and 1 close combat weapon</li></ul>|
 000000384|1|â¢|For every 5 models in this unit, up to 2 Paladins can each have their storm bolter replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator</li><li>1 psilencer</li><li>1 psycannon</li></ul>|
-000000384|2|â¢|1 Paladin equipped with a storm bolter and Nemesis force weapon can be equipped with 1 Ancientâs banner. That modelâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator</li><li>1 psilencer</li><li>1 psycannon</li></ul>|
+000000384|2|â¢|1 Paladin can have its storm bolter replaced with 1 Apothecaryâs narthecium.|
+000000384|3|â¢|1 Paladinâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator and 1 Ancientâs banner</li><li>1 psilencer and 1 Ancientâs banner</li><li>1 psycannon and 1 Ancientâs banner</li><li>1 storm bolter and 1 Ancientâs banner*</li></ul>|
+000000384|4|*|* That modelâs storm bolter cannot be replaced.|
 000000387|1|â¢|For every 5 models in this unit, 1 Interceptorâs storm bolter and Nemesis force weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator and 1 close combat weapon</li><li>1 psilencer and 1 close combat weapon</li><li>1 psycannon and 1 close combat weapon</li></ul>|
 000000388|1|â¢|Up to 4 Purgators can each have their storm bolter and Nemesis force weapon replaced with one of the following:<ul style="list-style-type:circle"><li>1 incinerator and 1 close combat weapon</li><li>1 psilencer and 1 close combat weapon</li><li>1 psycannon and 1 close combat weapon</li></ul>|
-000000389|1|â¢|This model can be equipped with up to two of the following, but cannot take duplicates:<ul style="list-style-type:circle"><li>1 gatling psilencer</li><li>1 heavy incinerator</li><li>1 heavy psycannon</li></ul>|
-000000389|2|â¢|This modelâs dreadfists can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Nemesis daemon greathammer</li><li>1 Nemesis greatsword</li></ul>|
+000000389|1|â¢|This modelâs dreadfists can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Nemesis daemon greathammer</li><li>1 Nemesis greatsword</li></ul>|
+000000389|2|â¢|This model can be equipped with up to two of the following, but cannot take duplicates:<ul style="list-style-type:circle"><li>1 gatling psilencer</li><li>1 heavy incinerator</li><li>1 heavy psycannon</li></ul>|
 000000390|1|â¢|This modelâs assault cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin lascannon</li></ul>|
 000000390|2|â¢|This modelâs assault cannon, storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy psycannon, 1 storm bolter and 1 Nemesis doomglaive</li><li>1 heavy psycannon, 1 incinerator and 1 Nemesis doomglaive</li></ul>|
 000000390|3|â¢|This modelâs storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 missile launcher and 1 armoured feet</li><li>1 heavy flamer and 1 Dreadnought combat weapon</li></ul>|
@@ -257,37 +285,36 @@
 000000393|3|â¢|This model can be equipped with 1 storm bolter.|
 000000395|1|â¢|This model can be equipped with 1 hunter-killer missile.|
 000000395|2|â¢|This model can be equipped with 1 storm bolter.|
-000000395|3|â¢|This modelâs twin heavy bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin assault cannon</li><li>1 twin lascannon</li></ul>|
-000000396|1|â¢|This model can be equipped with 1 additional storm bolter.|
-000000396|2|â¢|This model can be equipped with 1 hunter-killer missile.|
+000000395|3|â¢|This modelâs twin heavy bolter can be replaced with 1 twin lascannon.|
+000000396|1|â¢|This model can be equipped with 1 hunter-killer missile.|
+000000396|2|â¢|This model can be equipped with 1 additional storm bolter.|
 000000397|1|â¢|Up to 2 models can each have their Servitorâs servo-arm replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy bolter and 1 Servitorâs tools</li><li>1 multi-melta and 1 Servitorâs tools</li><li>1 plasma cannon and 1 Servitorâs tools</li></ul>|
 000000398|1|â¢|This model can be equipped with 2 hurricane bolters.|
 000000398|2|â¢|This modelâs twin assault cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin heavy plasma cannon</li><li>1 twin lascannon</li></ul>|
 000000398|3|â¢|This modelâs typhoon missile launcher can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin heavy bolter</li><li>1 twin multi-melta</li></ul>|
-000000399|1|â¢|This modelâs boltgun can be replaced with 1 bolt pistol.|
-000000400|1|â¢|This modelâs assault cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 twin lascannon</li></ul>|
-000000400|2|â¢|This modelâs storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 missile launcher and 1 armoured feet</li><li>1 heavy flamer and 1 Dreadnought combat weapon</li></ul>|
+000000400|1|â¢|This modelâs assault cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy plasma cannon</li><li>1 twin lascannon</li></ul>|
+000000400|2|â¢|This modelâs storm bolter can be replaced with 1 heavy flamer.|
 000000402|1|â¢|This modelâs high-output burst cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 burst cannon</li><li>1 cyclic ion blaster*</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system*</li></ul>|
-000000402|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000402|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000000402|3|â¢|This model can be equipped with up to three of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 burst cannon</li><li>1 cyclic ion blaster*</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system* </li></ul>|
 000000402|4|*|* This model cannot have duplicates of these pieces of wargear.|
 000000403|1|â¢|None|
 000000404|1|â¢|This model can be equipped with 1 hover drone.|
-000000404|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
-000000405|1|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000404|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000405|1|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000000408|1|â¢|None|
 000000409|1|â¢|None|
-000000411|1|â¢|The Fire Warrior Shasâui can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">guardian</span> <span class="tt kwbu">drone</span></span> (it cannot take duplicates of this piece of wargear)</li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000411|1|â¢|The Fire Warrior Shasâui can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">guardian</span> <span class="tt kwbu">drone</span></span> (it cannot take duplicates of this piece of wargear)</li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000000411|2|â¢|Any number of Fire Warrior models can each have their pulse rifle replaced with 1 pulse carbine.|
-000000412|1|â¢|The Breacher Fire Warrior Shasâui can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">guardian</span> <span class="tt kwbu">drone</span></span> (it cannot take duplicates of this piece of wargear)</li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000412|1|â¢|The Breacher Fire Warrior Shasâui can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">guardian</span> <span class="tt kwbu">drone</span></span> (it cannot take duplicates of this piece of wargear)</li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000000413|1|â¢|The Long-quillâs Kroot rifle can be replaced with 1 Kroot carbine.|
 000000413|2|â¢|For every 10 models in this unit, one Kroot Carnivoreâs Kroot rifle can be replaced with 1 Tanglebomb launcher.|
 000000414|1|â¢|Any number of models can each have their repeater cannon replaced with 1 tanglecannon.|
-000000417|1|â¢|The Stealth Shasâvre can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000417|1|â¢|The Stealth Shasâvre can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000000417|2|â¢|For every 3 models in the unit, 1 modelâs burst cannon can be replaced with 1 fusion blaster.|
 000000417|3|â¢|For every 3 models in the unit, 1 model can be equipped with 1 battlesuit support system.|
 000000418|1|â¢|Any number of models can each have their burst cannon replaced with one of the following:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 cyclic ion blaster</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system*</li></ul>|
-000000418|2|â¢|Any number of models can be equipped with up to two of the following, and can take duplicate<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000418|2|â¢|Any number of models can be equipped with up to two of the following, and can take duplicate<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000000418|3|â¢|Any number of models can each be equipped with up to three of the following, and can take duplicates**:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 burst cannon</li><li>1 cyclic ion blaster</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system* </li></ul>|
 000000418|4|*|* Each model cannot have duplicates of these pieces of wargear.|
 000000418|5|*|** Each model cannot be equipped with more than 3 ranged weapons.|
@@ -296,9 +323,9 @@
 000000420|3|â¢|This model can be equipped with one battlesuit support system.|
 000000421|1|â¢|This modelâs heavy burst cannon can be replaced with 1 ion accelerator.|
 000000421|2|â¢|This modelâs twin plasma rifles can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin fusion blaster</li><li>1 twin smart missile system</li></ul>|
-000000421|3|â¢|This model can be equipped with up to 2 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">missile</span> <span class="tt kwbu">drones</span></span>.|
+000000421|3|â¢|This model can be equipped with up to 2 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">missile</span> <span class="tt kwbu">drones</span></span>.|
 000000422|1|â¢|The Pathfinder Shasâui can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 grav-inhibitor drone</li><li>1 pulse accelerator drone</li><li>1 recon drone</li></ul>|
-000000422|2|â¢|The Pathfinder Shasâui can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000422|2|â¢|The Pathfinder Shasâui can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000000422|3|â¢|Up to 3 Pathfinders can each have their pulse carbine replaced with one of the following:<ul style="list-style-type:circle"><li>1 ion rifle</li><li>1 rail rifle</li></ul>|
 000000422|4|â¢|1 model in this unit equipped with a pulse carbine can be equipped with 1 semi-automatic grenade launcher. That modelâs pulse carbine cannot be replaced.|
 000000423|1|â¢|Any number of models can each have their Piranha burst cannon can be replaced with 1 Piranha fusion blaster.|
@@ -318,7 +345,7 @@
 000000432|3|â¢|This model can be equipped with up to 2 seeker missiles.|
 000000433|1|â¢|Any number of models can each have their heavy rail rifle replaced with 1 high-yield missile pods.|
 000000433|2|â¢|Any number of models can each be equipped with up to two of the following, but cannot take duplicates:<ul style="list-style-type:circle"><li>1 seeker missile</li><li>1 twin plasma rifle*</li><li>1 twin smart missile system*</li><li>1 weapon support system</li></ul>|
-000000433|3|â¢|Any number of models can each be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">missile</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span> </li></ul>|
+000000433|3|â¢|Any number of models can each be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">missile</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span> </li></ul>|
 000000433|4|*|* No model can be equipped with both a twin plasma rifle and twin smart missile system at the same time.|
 000000434|1|â¢|This modelâs pulse driver cannon can be replaced with 1 pulse blast cannon.|
 000000434|2|â¢|This modelâs twin Tâau flamer can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin airbursting fragmentation projector</li><li>1 twin burst cannon</li></ul>|
@@ -329,9 +356,9 @@
 000000443|1|â¢|Any number of models can each have their fusion cascade replaced with one of the following:<ul style="list-style-type:circle"><li>1 phased ion gun</li><li>1 twin hazard burst cannon</li></ul>|
 000000443|2|â¢|Any number of models can each have their twin hazard burst cannon replaced with one of the following:<ul style="list-style-type:circle"><li>1 fusion cascade</li><li>1 phased ion gun</li></ul>|
 000000443|3|â¢|Any number of models can each be equipped with one of the following:<ul style="list-style-type:circle"><li>1 battlesuit support system</li><li>1 shield generator</li><li>1 weapon support system</li></ul>|
-000000443|4|â¢|Any number of models can each be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
-000000444|1|â¢|This model can be equipped with up to 2 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">missile</span> <span class="tt kwbu">drones</span></span>.|
-000000445|1|â¢|This model can be equipped with up to 2 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">missile</span> <span class="tt kwbu">drones</span></span>.|
+000000443|4|â¢|Any number of models can each be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000000444|1|â¢|This model can be equipped with up to 2 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">missile</span> <span class="tt kwbu">drones</span></span>.|
+000000445|1|â¢|This model can be equipped with up to 2 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">missile</span> <span class="tt kwbu">drones</span></span>.|
 000000446|1|â¢|This modelâs tri-axis ion cannon can be replaced with 1 fusion eradicator.|
 000000446|2|â¢|This modelâs fusion eradicator can be replaced with 1 tri-axis ion cannon.|
 000000446|3|â¢|This modelâs 3 pulse ordnance drivers can be replaced with one of the following:<ul style="list-style-type:circle"><li>2 nexus missile launchers</li><li>1 heavy rail cannon array and 1 fragmentation cluster shell launcher</li></ul>|
@@ -501,44 +528,42 @@
 000000633|1|â¢|Any number of models can each have their Corsair firearm replaced with one of the following:<ul style="list-style-type:circle"><li>1 shardcarbine</li><li>1 shuriken catapult</li><li>1 spar-glaive</li></ul>|
 000000633|2|â¢|For every 5 models in this unit, 1 modelâs Corsair firearm can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Aeldari missile launcher</li><li>1 blaster</li><li>1 dark lance</li><li>1 flamer</li><li>1 fusion gun</li><li>1 shredder</li><li>1 shuriken cannon</li><li>1 splinter cannon</li></ul>|
 000000633|3|â¢|The Corsair Skyreaver Felarch can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 dissonance pistol</li><li>1 void sabre</li></ul>|
-000000634|1|â¢|This modelâs splinter pistol can be replaced with 1 blast pistol.|
-000000639|1|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 blast pistol</li><li>1 splinter pistol</li></ul>|
-000000640|1|â¢|None|
-000000641|1|â¢|None|
+000000634|1|â¢|This model's splinter pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blast pistol</li><li>1 soul trap</li></ul>|
+000000634|2|â¢|This modelâs huskblade can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 agoniser</li><li>1 master-crafted power weapon</li></ul>|
 000000642|1|â¢|None|
-000000643|1|â¢|None|
-000000644|1|â¢|The Sybariteâs close combat weapon can be replaced with 1 Sybarite weapon.|
-000000644|2|â¢|The Sybarite can be equipped with 1 phantasm grenade launcher.|
+000000644|1|â¢|The Sybariteâs close combat weapon can be replaced with 1 power weapon.|
+000000644|2|â¢|The Sybarite can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Kabalite icon</li><li>1 phantasm grenade launcher</li></ul>|
 000000644|3|â¢|The Sybariteâs splinter rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blast pistol</li><li>1 splinter pistol</li></ul>|
 000000644|4|â¢|1 Kabalite Warriorâs splinter rifle can be replaced with 1 blaster.|
 000000644|5|â¢|1 Kabalite Warriorâs splinter rifle can be replaced with 1 dark lance.|
 000000644|6|â¢|1 Kabalite Warriorâs splinter rifle can be replaced with 1 shredder.|
 000000644|7|â¢|1 Kabalite Warriorâs splinter rifle can be replaced with 1 splinter cannon.|
-000000646|1|â¢|The Hekatrix can be equipped with 1 phantasm grenade launcher.|
-000000646|2|â¢|The Hekatrixâs splinter pistol can be replaced with 1 blast pistol.|
-000000648|1|â¢|The Klaivexâs klaive can be replaced with 1 demilklaives.|
-000000649|1|â¢|None|
-000000650|1|â¢|For every 5 models in the unit:<ul style="list-style-type:circle"><li>1 model can be equipped with 1 hexrifle*</li><li>1 model can be equipped with 1 liquifier gun*</li><li>1 model can be equipped with 1 ossefactor*</li><li>1 model can be equipped with 1 stinger pistol*</li></ul>|
-000000650|2|*|* Each model cannot be equipped with more than 1 ranged weapon.|
-000000651|1|â¢|Any number of models can each be equipped with 1 liquifier gun.|
+000000646|1|â¢|The Hekatrixâs splinter pistol can be replaced with 1 blast pistol.|
+000000646|2|â¢|The Hekatrixâs Hekatarii blade can be replaced with 1 power weapon.|
+000000646|3|â¢|Up to 3 Wyches can each have their splinter pistol and Hekatarii blade replaced with 1 gladiatorial weapons.|
+000000648|1|â¢|The Klaivexâs klaive can be replaced with 1 demiklaives.|
+000000648|2|â¢|For every 5 models in this unit, it can be equipped with 1 Incubi Shrine token.|
+000000650|1|â¢|For every 5 models in this unit:<ul style="list-style-type:circle"><li>1 modelâs twin torturerâs tools can be replaced with 1 hexrifle and 1 torturerâs tool</li><li>1 modelâs twin torturerâs tools can be replaced with 1 liquifier gun and 1 torturerâs tool</li><li>1 modelâs twin torturerâs tools can be replaced with 1 ossefactor and 1 torturerâs tool</li><li>1 modelâs twin torturerâs tools can be replaced with 1 stinger pistol and 1 torturerâs tool</li></ul>|
+000000650|2|â¢|The Acothystâs twin torturerâs tools can be replaced with 1 power weapon and 1 torturerâs tool.|
+000000650|3|â¢|If the Acothyst is not equipped with a power weapon, its torturerâs tool can be replaced with 1 power weapon.|
+000000651|1|â¢|Any number of models can each replace their paired monstrous weapons with 1 monstrous weapon and 1 liquifier gun.|
 000000652|1|â¢|None|
 000000656|1|â¢|This modelâs dark lance can be replaced with 1 disintegrator cannon.|
 000000657|1|â¢|This modelâs twin splinter rifle can be replaced with 1 splinter cannon.|
-000000658|1|â¢|For every 3 models in this unit, 1 model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 grav-talon</li><li>1 cluster caltrops</li></ul>|
-000000658|2|â¢|For every 3 models in this unit, 1 modelâs splinter rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 heat lance</li></ul>|
-000000658|3|â¢|The Arena Champion can be equipped with 1 agoniser.|
+000000658|1|â¢|For every 3 models in this unit, 1 modelâs splinter rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 heat lance</li></ul>|
+000000658|2|â¢|For every 3 models in this unit, 1 model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 cluster caltrops</li><li>1 grav-talon</li></ul>|
 000000659|1|â¢|The Helliarch can be equipped with 1 phantasm grenade launcher.|
-000000659|2|â¢|The Helliarchâs hellglaive can be replaced with 1 splinter pistol and 1 Helliarch weapon.|
+000000659|2|â¢|The Helliarchâs hellglaive can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 splinter pistol and 1 power weapon.</li><li>1 splinter pistol and 1 stunclaw.</li></ul>|
+000000659|3|â¢|If the Helliarch is equipped with 1 splinter pistol, it can be equipped with 1 hellglaive (that modelâs hellglaive cannot be replaced).|
 000000660|1|â¢|This modelâs 2 dark lances can be replaced with 2 disintegrator cannons.|
 000000660|2|â¢|This modelâs twin splinter rifle can be replaced with 1 splinter cannon.|
-000000661|1|â¢|The modelâs 2 void lances can be replaced with 2 dark scythes.|
-000000661|2|â¢|This model can be equipped with 1 Voidraven missiles.|
-000000662|1|â¢|The Solarite can be equipped with 1 Solarite weapon.|
-000000662|2|â¢|The Solarite can replace its shardcarbine with one of the following:<ul style="list-style-type:circle"><li>1 blast pistol</li><li>1 splinter pistol</li></ul>|
-000000662|3|â¢|Up to 4 Scourges can each replace their shardcarbine with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 dark lance</li><li>1 Drukhari haywire blaster</li><li>1 heat lance</li><li>1 shredder</li><li>1 splinter cannon</li></ul>|
-000000663|1|â¢|Any number of models can each replace one of their macro-scalpels with one of the following:<ul style="list-style-type:circle"><li>1 Talos ichor injector</li><li>1 twin liquifier gun</li></ul>|
-000000663|2|â¢|Any number of models can each replace one of their macro-scalpels with one of the following:<ul style="list-style-type:circle"><li>1 chain-flails</li><li>1 Talos gauntlet</li></ul>|
-000000663|3|â¢|Any number of models can each replace their twin splinter cannon with one of the following:<ul style="list-style-type:circle"><li>1 twin Drukhari haywire blasters</li><li>1 twin heat lance</li><li>1 stinger pod</li></ul>|
+000000661|1|â¢|This model can be equipped with 1 Voidraven missiles.|
+000000661|2|â¢|This modelâs 2 void lances can be replaced with 2 dark scythes.|
+000000662|1|â¢|The Solariteâs shardcarbine can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blast pistol and 1 power weapon</li><li>1 splinter pistol and 1 power weapon</li></ul>|
+000000662|2|â¢|Any number of Scourges can each replace their splinter cannon with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 dark lance</li><li>1 haywire blaster</li><li>1 heat lance</li><li>1 shredder</li></ul>|
+000000663|1|â¢|Any number of models can each replace their twin splinter cannon with one of the following:<ul style="list-style-type:circle"><li>1 stinger pod</li><li>1 twin haywire blaster</li><li>1 twin heat lance</li></ul>|
+000000663|2|â¢|Any number of models can each replace one of their macro-scalpels with one of the following:<ul style="list-style-type:circle"><li>1 Talos ichor injector</li><li>1 twin liquifier gun</li></ul>|
+000000663|3|â¢|Any number of models can each replace one of their macro-scalpels with one of the following:<ul style="list-style-type:circle"><li>1 chain flails</li><li>1 Talos gauntlet</li></ul>|
 000000664|1|â¢|Any number of models can each be equipped with 1 spirit vortex.|
 000000665|1|â¢|Any number of this modelâs dark lances can each be replaced with 1 disintegrator cannon.|
 000000666|1|â¢|None|
@@ -742,18 +767,18 @@
 000000854|3|â¢|This model can be equipped with 1 broad spectrum data-tether.|
 000000855|1|â¢|This modelâs meltagun can be replaced with 1 Questoris heavy stubber.|
 000000855|2|â¢|This modelâs reaper chainsword can be replaced with 1 thunderstrike gauntlet.|
-000000855|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Icarus autocannons</li><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li></ul>|
+000000855|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li><li>1 twin Icarus autocannon</li></ul>|
 000000856|1|â¢|This modelâs meltagun can be replaced with 1 Questoris heavy stubber.|
 000000856|2|â¢|This modelâs reaper chainsword can be replaced with 1 thunderstrike gauntlet.|
-000000856|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Icarus autocannons</li><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li></ul>|
+000000856|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li><li>1 twin Icarus autocannon</li></ul>|
 000000857|1|â¢|This modelâs meltagun can be replaced with 1 Questoris heavy stubber.|
 000000857|2|â¢|This modelâs reaper chainsword can be replaced with 1 thunderstrike gauntlet.|
-000000857|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Icarus autocannons</li><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li></ul>|
+000000857|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li><li>1 twin Icarus autocannon</li></ul>|
 000000858|1|â¢|This modelâs meltagun can be replaced with 1 Questoris heavy stubber.|
-000000858|2|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Icarus autocannons</li><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li></ul>|
+000000858|2|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li><li>1 twin Icarus autocannon</li></ul>|
 000000859|1|â¢|This modelâs meltagun can be replaced with 1 Questoris heavy stubber.|
 000000859|2|â¢|This modelâs thermal cannon can be replaced with:<ul style="list-style-type:circle"><li>1 rapid-fire battle cannon and 1 Questoris heavy stubber</li></ul>|
-000000859|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Icarus autocannons</li><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li></ul>|
+000000859|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li><li>1 twin Icarus autocannon</li><b></b><br></ul>|
 000000860|1|â¢|This modelâs 2 Acastus autocannons can be replaced with one of the following:<ul style="list-style-type:circle"><li>2 lascannons</li><li>1 Acastus autocannon and 1 lascannon</li></ul>|
 000000860|2|â¢|This modelâs Acastus ironstorm missile pod can be replaced with 1 helios defence missiles.|
 000000861|1|â¢|None|
@@ -916,6 +941,18 @@
 000001035|1|â¢|The Scarab Occult Sorcererâs inferno combi-bolter can be replaced with 1 Prosperine khopesh.|
 000001035|2|â¢|For every 5 models in this unit, 1 Scarab Occult Terminatorâs inferno combi-bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy warpflamer</li><li>1 soulreaper cannon</li></ul>|
 000001035|3|â¢|For every 5 models in this unit, 1 Scarab Occult Terminator can be equipped with 1 hellfyre missile rack.|
+000001037|1|â¢|This modelâs plague bolt pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 combi-weapon</li><li>1 plague combi-bolter</li><li>1 plague fist</li><li>1 plague-encrusted exalted weapon</li><li>1 plasma pistol</li></ul>|
+000001037|2|â¢|This modelâs Astartes chainsword can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 plague fist</li><li>1 plague-encrusted exalted weapon</li></ul>|
+000001037|3|â¢|This modelâs plague bolt pistol and Astartes chainsword can be replaced with 1 twin lighting claws.|
+000001038|1|â¢|This modelâs plague combi-bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 combi-weapon</li><li>1 plague-encrusted exalted weapon</li></ul>|
+000001038|2|â¢|This modelâs plague-encrusted exalted weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 chainfist</li><li>1 plague fist</li></ul>|
+000001038|3|â¢|This modelâs plague combi-bolter and plague-encrusted exalted weapon can be replaced with 1 twin lighting claws.|
+000001041|1|â¢|This modelâs plague combi-bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 combi-weapon</li><li>1 plague-encrusted exalted weapon</li></ul>|
+000001041|2|â¢|This modelâs force weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 chainfist</li><li>1 plague fist</li><li>1 plague-encrusted exalted weapon</li></ul>|
+000001041|3|â¢|This modelâs plague combi-bolter and force weapon can be replaced with 1 twin lighting claws.|
+000001043|1|â¢|For every 10 models in the unit, 1 Death Guard Cultistâs Cultist firearm can be replaced with 1 flamer.|
+000001043|2|â¢|For every 10 models in the unit, 1 Death Guard Cultistâs Cultist firearm can be replaced with 1 heavy stubber.|
+000001043|3|â¢|For every 10 models in the unit, 1 Death Guard Cultistâs Cultist firearm can be replaced with 1 grenade launcher.|
 000001044|1|â¢|The Plague Championâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 bolt pistol</li><li>1 plasma gun</li><li>1 plasma pistol</li></ul>|
 000001044|2|â¢|The Plague Championâs plague knives can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 bubotic weapons</li><li>1 power fist</li></ul>|
 000001044|3|â¢|For every 5 models in this unit, 1 Plague Marineâs boltgun can be replaced with 1 blight launcher.|
@@ -1054,9 +1091,6 @@
 000001192|2|â¢|This modelâs assault cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Dreadnought inferno cannon</li><li>1 heavy plasma cannon</li><li>1 multi-melta</li><li>1 storm bolter and 1 Dreadnought combat weapon</li><li>1 heavy flamer and 1 Dreadnought combat weapon</li><li>1 twin lascannon</li></ul>|
 000001193|1|â¢|Any number of models can each have their Centurion bolters replaced with 1 Centurion missile launcher.|
 000001193|2|â¢|Any number of models can each have their grav-cannon replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin heavy bolter</li><li>1 twin lascannon</li></ul>|
-000001196|1|â¢|This model can be equipped with 1 hunter-killer missile.|
-000001196|2|â¢|This model can be equipped with 1 multi-melta.|
-000001196|3|â¢|This model can be equipped with 1 storm bolter.|
 000001197|1|â¢|This modelâs Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery.|
 000001197|2|â¢|This modelâs Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor.|
 000001199|1|â¢|This model can be equipped with 1 hunter-killer missile.|
@@ -1097,10 +1131,10 @@
 000001347|3|â¢|This model can be equipped with 1 hunter-killer missile.|
 000001348|1|â¢|This modelâs bolt pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 plasma pistol</li><li>1 storm bolter</li></ul>|
 000001355|1|â¢|None|
-000001360|1|â¢|This model can be equipped with up to two of the following, but cannot take duplicates:<ul style="list-style-type:circle"><li>1 gatling psilencer</li><li>1 heavy incinerator</li><li>1 heavy psycannon</li></ul>|
-000001360|2|â¢|This modelâs dreadfists can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Nemesis daemon greathammer</li><li>1 Nemesis greatsword</li></ul>|
+000001360|1|â¢|This modelâs dreadfists can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Nemesis daemon greathammer</li><li>1 Nemesis flail</li><li>1 Nemesis greatsword<br><li>1 Nemesis mace</li></ul>|
+000001360|2|â¢|This model can be equipped with up to two of the following, but cannot take duplicates:<ul style="list-style-type:circle"><li>1 gatling psilencer</li><li>1 heavy incinerator</li><li>1 heavy psycannon</li><li>1 sublimator</li></ul>|
+000001360|3|â¢|This model can be equipped with 1 fragstorm grenade launcher.|
 000001361|1|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 combi-weapon</li><li>1 storm bolter</li></ul>|
-000001362|1|â¢|None|
 000001363|1|â¢|This modelâs las-talon can be replaced with 1 icarus stormcannon.|
 000001363|2|â¢|This modelâs skyhammer missile launcher can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin heavy bolter</li><li>1 typhoon missile launcher</li></ul>|
 000001364|1|â¢|This modelâs skyhammer missile launcher can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin heavy bolter</li><li>1 twin lascannon</li><li>1 typhoon missile launcher</li></ul>|
@@ -1161,22 +1195,21 @@
 000001470|1|â¢|None|
 000001474|1|â¢|Any number of models can each have their divining spear replaced with 1 autopistol and 1 chainsword.|
 000001477|1|â¢|This modelâs burst cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 cyclic ion blaster</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system*</li></ul>|
-000001477|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000001477|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000001477|3|â¢|This model can be equipped with up to three of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 burst cannon</li><li>1 cyclic ion blaster</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system*</li></ul>|
 000001477|4|*|* This model cannot have duplicates of these pieces of wargear.|
 000001478|1|â¢|This modelâs burst cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 cyclic ion blaster*</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system*</li></ul>|
-000001478|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000001478|2|â¢|This model can be equipped with up to two of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000001478|3|â¢|This model can be equipped with up to three of the following, and can take duplicates:<ul style="list-style-type:circle"><li>1 airbursting fragmentation projector*</li><li>1 battlesuit support system*</li><li>1 burst cannon</li><li>1 cyclic ion blaster*</li><li>1 fusion blaster</li><li>1 missile pod</li><li>1 plasma rifle</li><li>1 shield generator*</li><li>1 Tâau flamer</li><li>1 weapon support system* </li></ul>|
 000001478|4|*|* This model cannot have duplicates of these pieces of wargear. |
 000001479|1|â¢|This modelâs 2 iliastus accelerator culverins can be replaced with one of the following:<ul style="list-style-type:circle"><li>2 arachnus storm cannons</li><li>2 Telemon caestus and 2 twin plasma projectors</li><li>1 iliastus accelerator culverin and 1 arachnus storm cannon</li><li>1 iliastus accelerator culverin, 1 Telemon caestus and 1 twin plasma projector</li><li>1 arachnus storm cannon, 1 Telemon caestus and 1 twin plasma projector</li></ul>|
 000001481|1|â¢|This modelâs Questoris heavy stubber can be replaced with 1 meltagun.|
 000001482|1|â¢|This modelâs Questoris heavy stubber can be replaced with 1 meltagun.|
-000001483|1|â¢|This modelâs Preceptor multi-laser can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 meltagun</li><li>1 Questoris heavy stubber</li></ul>|
+000001483|1|â¢|This modelâs Questoris multi-laser can be replaced with one of the following<ul style="list-style-type:circle"><li>1 meltagun</li><li>1 Questoris heavy stubber</li></ul>|
 000001483|2|â¢|This modelâs reaper chainsword can be replaced with 1 thunderstrike gauntlet.|
-000001483|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Icarus autocannons</li><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li></ul>|
-000001484|1|â¢|None|
-000001485|1|â¢|This modelâs 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with:<ul style="list-style-type:circle"><li>1 shieldbreaker missile launcher and 2 twin siegebreaker cannons</li></ul>|
-000001486|1|â¢|This modelâs 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with:<ul style="list-style-type:circle"><li>1 shieldbreaker missile launcher and 2 twin siegebreaker cannons</li></ul>|
+000001483|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironstorm missile pod</li><li>1 stormspear rocket pod</li><li>1 twin Icarus autocannon</li></ul>|
+000001485|1|â¢|This modelâs 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons.|
+000001486|1|â¢|This modelâs 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons.|
 000001523|1|â¢|1 Scout Sniperâs scout sniper rifle can be replaced with 1 missile launcher.|
 000001524|1|â¢|None|
 000001525|1|â¢|The Hoplite Alphaâs arc lance can be replaced with 1 Archeotech pistol.|
@@ -1440,38 +1473,35 @@
 000002590|3|â¢|The Traitor Sergeantâs corrupted pistol can be replaced with 1 boltgun.|
 000002591|1|â¢|None|
 000002592|1|â¢|None|
-000002593|1|â¢|None|
-000002594|1|â¢|This modelâs Autoch-pattern combi-bolter can be replaced with 1 volkanite disintegrator.|
+000002594|1|â¢|This modelâs Autoch-pattem combi-bolter can be replaced with 1 volkanite disintegrator.|
 000002594|2|â¢|This modelâs forgewrought plasma axe can be replaced with 1 mass gauntlet.|
 000002594|3|â¢|This modelâs rampart crest can be replaced with 1 teleport crest.|
 000002595|1|â¢|This modelâs mass hammer can be replaced with 1 darkstar axe.|
 000002595|2|â¢|This modelâs weavefield crest can be replaced with 1 teleport crest.|
-000002596|1|â¢|None|
-000002597|1|â¢|None|
-000002598|1|â¢|All models in this unit can each have their Autoch-pattern bolter replaced with 1 ion blaster.|
-000002598|2|â¢|Up to 2 Hearthkyn Warriors can each have their  Autoch-pattern bolter or ion blaster replaced with one of the following:<ul style="list-style-type:circle"><li>1 HYLas auto rifle*</li><li>1 HYLas rotary cannon*</li><li>1 L7 missile launcher*</li><li>1 EtaCarn plasma beamer*</li><li>1 magna-rail rifle*</li><li>1 Kin melee weapon</li></ul>|
-000002598|3|â¢|Up to 3 different Hearthkyn Warriors equipped with either an Autoch-pattern bolter or an ion blaster can each be equipped with one of the  following (to a maximum of 1 of each per unit):<ul style="list-style-type:circle"><li>1 medipack**</li><li>1 comms array**</li><li>1 pan spectral scanner**</li></ul>|
-000002598|4|â¢|The Theynâs Autoch-pattern bolt pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 ion pistol</li><li>1 EtaCarn plasma pistol</li></ul>|
-000002598|5|â¢|The Theynâs Autoch-pattern bolter or ion blaster can be replaced with 1 Kin melee weapon.|
-000002598|6|*|* You can only select each of these options once per unit|
-000002598|7|*|** This modelâs Autoch-pattern bolter or ion blaster cannot be replaced.|
+000002598|1|â¢|Any number of Hearthkyn Warriors can each have their Autoch-pattern bolter replaced with 1 ion blaster.|
+000002598|2|â¢|Up to 2 Hearthkyn Warriors can each have their  Autoch-pattern bolter or ion blaster replaced with one of the following (duplicates are not allowed):<ul style="list-style-type:circle"><li>1 HYLas auto rifle</li><li>1 HYLas rotary cannon</li><li>1 L7 missile launcher</li><li>1 EtaCarn plasma beamer</li><li>1 magna-rail rifle</li></ul>|
+000002598|3|â¢|Up to 2 Hearthkyn Warriors can each have their Autoch-pattern bolter or ion blaster replaced with 1 plasma knife.|
+000002598|4|â¢|The Theynâs Autoch-pattern bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 ion blaster</li><li>1 Theynâs pistol</li></ul>|
+000002598|5|â¢|The Theyn can be equipped with 1 Theynâs melee weapon.|
 000002599|1|â¢|All models in this unit can each have their EtaCarn plasma gun replaced with 1 volkanite disintegrator.|
 000002599|2|â¢|All models in this unit can each have their concussion gauntlet replaced with 1 plasma blade gauntlet.|
-000002599|3|â¢|The Hesyrâs concussion gauntlet or plasma blade gauntlet can be replaced with 1 concussion hammer.|
+000002599|3|â¢|The Hesyrâs concussion gauntlet or plasma blade gauntlet can be replaced with 1 graviton hammer.|
 000002599|4|â¢|The Hesyrâs weavefield crest can be replaced with 1 teleport crest.|
 000002600|1|â¢|All models in this unit can each have their heavy plasma axe replaced with 1 concussion maul.|
 000002600|2|â¢|For every 5 models in this unit, 1 model that is not equipped with a mole grenade launcher can have its heavy plasma axe or concussion maul replaced with 1 twin concussion gauntlet.|
-000002600|3|â¢|For every 5 models in this unit, 1 model that is not equipped with a twin concussion gauntlet can be equipped with 1 mole grenade launcher. If a model is equipped with a mole grenade launcher, add 1 to its Wounds and Attacks characteristics.*|
-000002600|4|*|<b>* Designerâs Note:</b> If a Cthonian Beserk is equipped with a mole grenade launcher, it will be accompanied by an L-COG unit: both models should be placed on the same base and together they act as a single model for all rules purposes (albeit one with improved characteristics).|
-000002601|1|â¢|For every 3 models in this unit, 1 model can be equipped with one of the following (if a model is equipped with any of these weapons, add 1 to its Wounds characteristic):<ul style="list-style-type:circle"><li>1 HYLas rotary cannon</li><li>1 ion beamer</li></ul>|
-000002601|2|â¢|Up to 3 different models that are not equipped with either a HYLas rotary cannon or an ion beamer can each be equipped with 1 of the following (to a maximum of 1 of each per unit):<ul style="list-style-type:circle"><li>1 comms array*</li><li>1 pan spectral scanner*</li><li>1 rollbar searchlight*</li></ul>|
-000002601|3|*|* This model cannot be equipped with a HYLas rotary cannon or an ion beamer.|
+000002600|3|â¢|For every 5 models in this unit, 1 model that is not equipped with a twin concussion gauntlet or a mole grenade launcher can be equipped with 1 mole grenade launcher.*|
+000002600|4|*|<b>* Designerâs Note:</b> If a Cthonian Beserk is equipped with a mole grenade launcher, it will be accompanied by an L-COG unit: both models should be placed on the same base and together they act as a single model for all rules purposes.|
+000002601|1|â¢|For every 3 models in this unit, 1 model can be equipped with one of the following::<ul style="list-style-type:circle"><li>1 HYLas rotary cannon</li><li>1 ion beamer</li></ul>|
+000002601|2|â¢|1 model that is not equipped with either a HYLas rotary cannon or an ion beamer can be equipped with 1 multiwave comms array.*|
+000002601|3|â¢|1 model that is not equipped with either a HYLas rotary cannon or an ion beamer can be equipped with 1 panspectral scanner.*|
+000002601|4|â¢|1 model that is not equipped with either a HYLas rotary cannon or an ion beamer can be equipped with 1 rollbar searchlight.*|
+000002601|5|*|* A model can only take one of these options, and cannot be equipped with a HYLas rotary cannon or an ion beamer.|
 000002602|1|â¢|This modelâs HYLas beam cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 L7 missile launcher and 1 Sagitaur missile launcher</li><li>1 MATR autocannon</li></ul>|
-000002603|1|â¢|All models in this unit can each have their bolt cannon replaced with 1 SP conversion beamer.|
-000002603|2|â¢|All models in this unit can each have their bolt cannon replaced with 1 graviton blast cannon.|
-000002604|1|â¢|This model can do one of the following:<ul style="list-style-type:circle"><li>Replace 1 twin bolt cannon with 1 twin ion beamer</li><li>Replace 2 twin bolt cannons with 2 twin ion beamers</li></ul>|
+000002603|1|â¢|All models in this unit can each have their bolt cannon replaced with 1 graviton blast cannon.|
+000002603|2|â¢|All models in this unit can each have their bolt cannon replaced with 1 SP conversion beamer.|
+000002604|1|â¢|This modelâs 2 twin bolt cannons can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 twin bolt cannon and 1 twin ion beamer</li><li>2 twin ion beamers</li></ul>|
 000002604|2|â¢|This modelâs cyclic ion cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 SP heavy conversion beamer</li><li>1 heavy magna-rail cannon</li></ul>|
-000002604|3|â¢|This modelâs pan spectral scanner can be replaced with 1 Hekaton warhead.|
+000002604|3|â¢|This modelâs panspectral scanner can be replaced with 1 Hekaton warhead.|
 000002607|1|â¢|This modelâs chainsword can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 boltgun and 1 close combat weapon</li><li>1 power fist</li><li>1 power weapon</li></ul>|
 000002607|2|â¢|This modelâs laspistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 bolt pistol</li><li>1 plasma pistol</li></ul>|
 000002609|1|â¢|1 Cadian Veteran Guardsmanâs lasgun and regimental standard can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 flamer</li><li>1 grenade launcher</li><li>1 meltagun</li><li>1 plasma gun</li></ul>|
@@ -1551,7 +1581,7 @@
 000002683|2|â¢|The Proctor-Vigilant can be equipped with 1 nuncio aquila.|
 000002684|1|â¢|The Proctor-Subductor can be equipped with 1 nuncio aquila.|
 000002685|1|â¢|Up to 2 Exaction Vigilants can each have their Arbites combat shotgun replaced with one of the following (duplicates are not allowed):<ul style="list-style-type:circle"><li>1 executioner shotgun</li><li>1 Arbites grenade launcher</li><li>1 heavy stubber</li><li>1 webber</li></ul>|
-000002685|2|â¢|1 Exaction Vigilant that is equipped with an Arbites combat shotgun can be equipped with 1 excruciatormaul.*|
+000002685|2|â¢|1 Exaction Vigilant that is equipped with an Arbites combat shotgun can be equipped with 1 excruciator maul.*|
 000002685|3|â¢|1 other Exaction Vigilant that is equipped with an Arbites combat shotgun can be equipped with 1 Arbites medi-kit.*|
 000002685|4|â¢|1 other Exaction Vigilant that is equipped with an Arbites combat shotgun can be equipped with 1 soulguilt scanner.*|
 000002685|5|â¢|The Proctor-Exactant can be equipped with 1 nuncio aquila.|
@@ -1670,8 +1700,8 @@
 000002760|3|â¢|If this model is equipped with 1 psychic gifts, its Inquisitorial melee weapon can be replaced with 1 force weapon.|
 000002760|4|â¢|If this model is equipped with 1 psychic gifts, its storm bolter can be replaced with 1 psycannon.|
 000002761|1|â¢|The Legionnaire Sergeantâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 bolt pistol and 1 power weapon</li><li>1 plasma pistol and 1 power weapon</li><li>1 bolt pistol and 1 Astartes chainsword</li><li>1 plasma pistol and 1 Astartes chainsword</li></ul>|
-000002761|2|â¢|One Legionnaireâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Heavy flamer</li><li>1 Multi-melta</li></ul>|
-000002761|3|â¢|One Legionnaireâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Flamer</li><li>1 Meltagun</li><li>1 Plasma gun</li></ul>|
+000002761|2|â¢|One Legionnaireâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy flamer</li><li>1 multi-melta</li></ul>|
+000002761|3|â¢|One Legionnaireâs boltgun can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 flamer</li><li>1 meltagun</li><li>1 plasma gun</li></ul>|
 000002763|1|â¢|None|
 000002764|1|â¢|None|
 000002766|1|â¢|None|
@@ -1686,7 +1716,6 @@
 000002768|3|â¢|This modelâs twin heavy bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 multi-melta</li><li>1 twin assault cannon</li><li>1 twin lascannon</li><li>1 twin psycannon</li></ul>|
 000002769|1|â¢|This modelâs graviton pulsar can be replaced with one of the following;<ul style="list-style-type:circle"><li>1 siege claw and 1 rad cleanser</li><li>1 lightning lock</li><li>1 conversion beam cannon</li><li>1 volkite veuglaire</li></ul>|
 000002769|2|â¢|This modelâs volkite veuglaire can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 siege claw and 1 rad cleanser</li><li>1 graviton pulsar</li><li>1 lightning lock</li><li>1 conversion beam cannon</li></ul>|
-000002770|1|â¢|None|
 000002775|1|â¢|This modelâs bolt rifle and close combat weapon can be replaced with 1 power weapon.|
 000002776|1|â¢|For every 5 models in this unit, 1 Assault Intercessor with Jump Packâs heavy bolt pistol can be replaced with 1 plasma pistol. |
 000002776|2|â¢|The Assault Intercessor Sergeant with Jump Packâs Astartes chainsword can be replaced with one of the following: <br><ul style="list-style-type:circle"><li>1 power weapon </li><li>1 power fist </li></ul>|
@@ -1713,47 +1742,50 @@
 000002783|7|â¢|1 modelâs boltgun and power weapon can be replaced with 1 Black Shield blades.|
 000002783|8|â¢|The Watch Sergeantâs power weapon can be replaced with 1 xenophase blade.|
 000002783|9|â¢|The Watch Sergeantâs boltgun can be replaced with 1 combi-weapon.|
-000002786|1|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 bellicatus missile array</li><li>1 ironhail skytalon array</li><li>1 orbital comms array</li><li>1 shield dome</li></ul>|
-000002786|2|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
-000002786|3|â¢|This modelâs 2 storm bolters can be replaced with 2 fragstorm grenade launchers.|
-000002787|1|â¢|This model can be equipped with 1 Icarus rocket pod.|
+000002786|1|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
+000002786|2|â¢|This modelâs 2 storm bolters can be replaced with 2 fragstorm grenade launchers.|
+000002786|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 bellicatus missile array</li><li>1 ironhail skytalon array</li><li>1 orbital comms array</li><li>1 shield dome</li></ul>|
+000002787|1|â¢|This modelâs 2 storm bolters can be replaced with 2 fragstorm grenade launchers.|
 000002787|2|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
-000002787|3|â¢|This modelâs 2 storm bolters can be replaced with 2 fragstorm grenade launchers.|
-000002788|1|â¢|This model can be equipped with 1 Icarus rocket pod.|
-000002788|2|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
-000002789|1|â¢|This model can be equipped with 1 Icarus rocket pod.|
-000002789|2|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
-000002790|1|â¢|This model can be equipped with 1 Icarus rocket pod.|
+000002787|3|â¢|This model can be equipped with 1 Icarus rocket pod.|
+000002788|1|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
+000002788|2|â¢|This model can be equipped with 1 Icarus rocket pod.|
+000002789|1|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
+000002789|2|â¢|This model can be equipped with 1 Icarus rocket pod.|
+000002790|1|â¢|This modelâs macro plasma incinerator can be replaced with 1 heavy laser destroyer.|
 000002790|2|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 ironhail heavy stubber</li><li>1 multi-melta</li></ul>|
-000002790|3|â¢|This modelâs macro plasma incinerator can be replaced with 1 heavy laser destroyer.|
-000002791|1|â¢|This model can be equipped with 1 multi-melta.|
+000002790|3|â¢|This model can be equipped with 1 Icarus rocket pod.|
+000002791|1|â¢|This modelâs twin heavy bolter can be replaced with 1 twin lascannon.|
 000002791|2|â¢|This modelâs heavy onslaught gatling cannon can be replaced with 1 las-talon.|
-000002791|3|â¢|This modelâs twin heavy bolter can be replaced with 1 twin lascannon.|
-000002792|1|â¢|None|
+000002791|3|â¢|This model can be equipped with 1 multi-melta.|
 000002793|1|â¢|This modelâs combi-weapon can be replaced with 1 heavy bolt pistol.|
 000002793|2|â¢|This modelâs master-crafted power weapon can be replaced with 1 Astartes chainsword.|
 000002794|1|â¢|None|
-000002795|1|â¢|None|
 000002796|1|â¢|This modelâs plasma pistol can be replaced with one combi-weapon.|
-000002797|1|â¢|Any number of Primaris Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword.|
-000002797|2|â¢|Any number of Primaris Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon.|
-000002797|3|â¢|For every 10 models in this unit, up to 2 Primaris Initiates can each have their bolt rifle replaced with one of the following:<ul style="list-style-type:circle"><li>1 heavy bolt pistol and 1 power fist</li><li>1 pyreblaster</li></ul>|
-000002797|4|â¢|The Primaris Sword Brotherâs heavy bolt pistol can be replaced with 1 pyre pistol.|
-000002798|1|â¢|Any number of Primaris Sword Brothers can each have their Astartes chainsword replaced with 1 power weapon.|
-000002798|2|â¢|For every 5 models in this unit, 1 Primaris Sword Brotherâs Astartes chainsword can be replaced with 1 thunder hammer.|
-000002798|3|â¢|For every 5 models in this unit, 1 Primaris Sword Brotherâs heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.|
-000002798|4|â¢|For every 5 models in this unit, 1 Primaris Sword Brotherâs heavy bolt pistol can be replaced with 1 plasma pistol.|
-000002798|5|â¢|For every 5 models in this unit, up to 2 Primaris Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol.|
-000002798|6|â¢|The Sword Brother Castellanâs heavy bolt pistol and Astartes chainsword can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 combi-weapon and 1 Astartes chainsword.</li><li>1 combi-weapon and 1 master-crafted power weapon.</li><li>1 heavy bolt pistol and 1 master-crafted power weapon.</li></ul>|
-000002799|1|â¢|The Sword Brotherâs bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list:*<br><ul style="list-style-type:circle"><li>1 Astartes chainsword</li><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 power fist</li><li>1 power weapon</li><li>1 storm bolter</li><li>1 thunder hammer</li></ul>|
-000002799|2|â¢|Any number of Neophytes can each have their boltgun replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>|
-000002799|3|â¢|Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword.|
-000002799|4|â¢|1 Initiateâs boltgun can be replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 flamer</li><li>1 plasma gun</li><li>1 meltagun</li><li>1 grav-gun</li></ul>|
-000002799|5|â¢|1 Initiateâs boltgun can be replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 power weapon</li><li>1 power fist</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 grav-cannon</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>|
-000002799|6|*|* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).|
+000002798|1|â¢|Any number of Sword Brothers can each have their Astartes chainsword replaced with 1 master-crafted power weapon.|
+000002798|2|â¢|For every 5 models in this unit, 1 Sword Brotherâs Astartes chainsword can be replaced with 1 thunder hammer.|
+000002798|3|â¢|For every 5 models in this unit, 1 Sword Brotherâs heavy bolt pistol can be replaced with 1 plasma pistol.|
+000002798|4|â¢|For every 5 models in this unit, up to 2 Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol.|
+000002798|5|â¢|For every 5 models in this unit, 1 Sword Brotherâs heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.|
+000002799|1|â¢|The Sword Brotherâs heavy bolt pistol can be replaced with 1 pyre pistol.|
+000002799|2|â¢|Any number of Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon.|
+000002799|3|â¢|Any number of Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword.|
+000002799|4|â¢|For every 10 models in this unit, up to 2 Initiates can each have their bolt rifle replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 heavy bolt pistol and 1 power fist</li><li>1 pyreblaster</li></ul>|
 000002801|1|â¢|This modelâs assault cannon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 helfrost cannon</li><li>1 multi-melta</li></ul>|
 000002801|2|â¢|This modelâs storm bolter can be replaced with 1 heavy flamer.|
 000002801|3|â¢|This modelâs assault cannon, storm bolter and Dreadnought combat weapon can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Fenrisian greataxe, 1 blizzard shield and 1 storm bolter</li><li>1 Fenrisian greataxe, 1 blizzard shield and 1 heavy flamer</li></ul>|
+000002802|1|â¢|This modelâs bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.|
+000002802|2|â¢|This modelâs bolt pistol and Astartes chainsword can be replaced with two different weapons from the following list:*<ul style="list-style-type:circle"><li>1 bolt pistol</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>|
+000002802|3|*| * This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).|
+000002803|1|â¢|This modelâs storm bolter and power weapon can be replaced with 1 twin lightning claws.|
+000002803|2|â¢|This modelâs storm bolter and power weapon can be replaced with two different options from the following list:*<ul style="list-style-type:circle"><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 cyclone missile launcher and 1 storm bolter</li><li>1 storm bolter</li><li>1 chainfist</li><li>1 power fist</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>|
+000002803|3|â¢|This modelâs storm bolter can be replaced with 1 combi-weapon. |
+000002803|4|*|* This model can only be equipped with two ranged weapons if one of them is a cyclone missile launcher and the other is either a storm bolter or a combi-weapon.|
+000002804|1|â¢|This modelâs bolt pistol and boltgun can be replaced with 1 twin lightning claws. |
+000002804|2|â¢|This modelâs bolt pistol and boltgun can be replaced with two different weapons from the following list:*<ul style="list-style-type:circle"><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 plasma pistol</li><li>1 storm bolter</li><li>1 Astartes chainsword</li><li>1 power fist</li><li>1 power weapon</li><li>1 thunder hammer</li><li>1 storm shield</li></ul>|
+000002804|3|*|*  This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).|
+000002805|1|â¢|None|
+000002806|1|â¢|None|
 000002807|1|â¢|This model can be equipped with up to three of the following (but cannot be equipped with duplicates of the same weapon):<ul style="list-style-type:circle"><li>1 Castellum air defence missiles</li><li>1 multi-melta</li><li>1 twin assault cannon</li><li>1 twin heavy bolter</li><li>1 twin heavy flamer</li><li>1 twin lascannon</li></ul>|
 000002807|2|â¢|This model can be equipped with up to two of the following (but cannot be equipped with duplicates of the same weapon):<ul style="list-style-type:circle"><li>1 Castellum air defence missiles</li><li>1 Castellum battle cannon</li><li>1 Castellum Icarus quad lascannon</li><li>1 multi-melta</li><li>1 twin heavy bolter</li><li>1 twin assault cannon</li><li>1 twin heavy flamer</li><li>1 twin lascannon</li><li>1 Whirlwind castellan launcher</li><li>Comms antenna</li></ul>|
 000002808|1|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 comms antenna</li><li>1 Icarus lascannon</li><li>1 quad-gun</li></ul>|
@@ -2022,13 +2054,13 @@
 000003690|2|â¢|This modelâs twin heavy bolter can be replaced with 1 twin heavy flamer|
 000003690|3|â¢|This model can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 multi-melta</li><li>1 storm bolter</li></ul>|
 000003695|1|â¢|This modelâs radium jezzail can be replaced with 1 Skatros transuranic arquebus.|
-000003699|1|â¢|Any number of models can be equipped with up to two of the following, but cannot take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000003699|1|â¢|Any number of models can be equipped with up to two of the following, but cannot take duplicates:<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000003700|1|â¢|Any number of models can each have their plasma rifle replaced with 1 missile pod.|
 000003700|2|â¢|Any number of models can each have their missile pod replaced with 1 plasma rifle.|
-000003700|3|â¢|Any number of models can be equipped with up to two of the following, but cannot take duplicates<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000003700|3|â¢|Any number of models can be equipped with up to two of the following, but cannot take duplicates<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000003701|1|â¢|Any number of models can each have their burst cannon replaced with 1 Tâau flamer.|
 000003701|2|â¢|Any number of models can each have their Tâau flamer replaced with 1 burst cannon.|
-000003701|3|â¢|Any number of models can be equipped with up to two of the following, but cannot take duplicates<ul style="list-style-type:circle"><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00398" data-tooltip-content="#tooltip_content00398"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
+000003701|3|â¢|Any number of models can be equipped with up to two of the following, but cannot take duplicates<ul style="list-style-type:circle"><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">gun</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">marker</span> <span class="tt kwbu">drone</span></span></li><li>1 <span class="tooltip00359" data-tooltip-content="#tooltip_content00359"><span class="tt kwbu">shield</span> <span class="tt kwbu">drone</span></span></li></ul>|
 000003703|1|â¢|This modelâs dart-bow and tri-bade can be replaced with 1 bladestave and prey-hook.|
 000003705|1|â¢|This modelâs Kroot long gun can be replaced with 1 blast javelin and 1 hunting javelin.|
 000003707|1|â¢|This modelâs kustom mega-blasta can be replaced with 1 traktor blasta.|
@@ -2259,37 +2291,6 @@
 000003920|1|â¢|This modelâs dark lance can be replaced with 1 disintegrator cannon.|
 000003921|1|â¢|This modelâs twin splinter rifle can be replaced with 1 splinter cannon.|
 000003922|1|â¢|None|
-000003924|1|â¢|This modelâs shuriken pistol can be replaced with 1 neuro disruptor.|
-000003926|1|â¢|This modelâs shuriken pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 fusion pistol</li><li>1 neuro disruptor</li></ul>|
-000003926|2|â¢|This model's Troupe Master's blade can be replaced with 1 Harlequin's special weapon.|
-000003928|1|â¢|Any number of models can each have their shuriken cannon replaced with 1 Skyweaver haywire cannon.|
-000003928|2|â¢|Any number of models can each have their star bolas replaced with 1 zephyrglaive.|
-000003929|1|â¢|Any number of models can each have their Harlequinâs blade replaced with 1 Harlequinâs special weapon.|
-000003929|2|â¢|The Lead Playerâs Harlequinâs blade can be replaced with 1 power sword.|
-000003929|3|â¢|If this unit contains 9 or fewer models:<ul style="list-style-type:circle"><li>Up to 2 models can each have their shuriken pistol replaced with 1 neuro disruptor</li><li>Up to 2 models can each have their shuriken pistol replaced with 1 fusion pistol</li></ul>|
-000003929|4|â¢|If this unit contains 10 or more models:<ul style="list-style-type:circle"><li>Up to 4 models can each have their shuriken pistol replaced with 1 neuro disruptor</li><li>Up to 4 models can each have their shuriken pistol replaced with 1 fusion pistol</li></ul>|
-000003930|1|â¢|This modelâs Voidweaver haywire cannon can be replaced with 1 prismatic cannon.|
-000003931|1|â¢|The Voidreaver Felarchâs shuriken pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 neuro disruptor</li><li>1 shuriken rifle</li></ul>|
-000003931|2|â¢|The Voidreaver Felarch can be equipped with:<ul style="list-style-type:circle"><li>1 mistshield</li></ul>|
-000003931|3|â¢|Any number of Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.|
-000003931|4|â¢|For every 5 models in this unit, 1 Corsair Voidreaverâs power sword or shuriken rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 shredder</li></ul>|
-000003931|5|â¢|If this unit contains 10 models, 1 Corsair Voidreaverâs shuriken rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 shuriken cannon</li><li>1 wraithcannon</li></ul>|
-000003932|1|â¢|Any number of Corsair Voidscarred can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.|
-000003932|2|â¢|The Voidscarred Felarchâs shuriken pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 neuro disruptor</li><li>1 shuriken rifle</li></ul>|
-000003932|3|â¢|The Voidscarred Felarch can be equipped with 1 mistshield.|
-000003932|4|â¢|For every 5 models in this unit, 1 Corsair  Voidscarredâs shuriken rifle can be replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 blaster</li><li>1 shredder</li></ul>|
-000003932|5|â¢|If this unit contains 10 models, 1 Corsair Voidscarredâs shuriken rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 shuriken cannon</li><li>1 wraithcannon</li></ul>|
-000003932|6|â¢|If this unit contains 10 models, 1 Corsair Voidscarredâs shuriken rifle can be replaced with 1 long rifle. |
-000003932|7|â¢|If this unit contains 10 models, 1 Corsair Voidscarredâs power sword can be  replaced with 1 fusion pistol.|
-000003932|8|â¢|1 Corsair Voidscarred model equipped with a shuriken pistol and power sword can be equipped with 1 FaolchÃº.|
-000003933|1|â¢|Any number of models can each have their twin shuriken catapult replaced with one of the following:<ul style="list-style-type:circle"><li>1 dark lance</li><li>1 dissonance cannon</li><li>1 scatter laser</li><li>1 shuriken cannon</li><li>1 splinter cannon</li></ul>|
-000003933|2|â¢|The Cloud Dancer Felarch can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 dissonance pistol</li><li>1 void sabre</li></ul>|
-000003934|1|â¢|Any number of models can each have their Corsair firearm replaced with 1 spar-glaive.|
-000003934|2|â¢|For every 5 models in this unit, 1 modelâs Corsair firearm can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Aeldari missile launcher</li><li>1 blaster</li><li>1 dark lance</li><li>1 flamer</li><li>1 fusion gun</li><li>1 shredder</li><li>1 shuriken cannon</li><li>1 splinter cannon</li></ul>|
-000003934|3|â¢|The Corsair Reaver Felarch can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 dissonance pistol</li><li>1 void sabre</li></ul>|
-000003935|1|â¢|Any number of models can each have their Corsair firearm replaced with one of the following:<ul style="list-style-type:circle"><li>1 shardcarbine</li><li>1 shuriken catapult</li><li>1 spar-glaive</li></ul>|
-000003935|2|â¢|For every 5 models in this unit, 1 modelâs Corsair firearm can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Aeldari missile launcher</li><li>1 blaster</li><li>1 dark lance</li><li>1 flamer</li><li>1 fusion gun</li><li>1 shredder</li><li>1 shuriken cannon</li><li>1 splinter cannon</li></ul>|
-000003935|3|â¢|The Corsair Skyreaver Felarch can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 dissonance pistol</li><li>1 void sabre</li></ul>|
 000003937|1|â¢|None|
 000003938|1|â¢|This modelâs chainsword can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 boltgun and 1 close combat weapon</li><li>1 power fist</li><li>1 power weapon</li></ul>|
 000003938|2|â¢|This modelâs laspistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 bolt pistol</li><li>1 plasma pistol</li></ul>|
@@ -2668,3 +2669,84 @@
 000004132|1|â¢|Any number of models can each have their death totem replaced with 1 stormfrag auto-launcher.|
 000004133|1|â¢|This modelâs Fenrisian greataxe or great wolf claw and storm bolter can be replaced with 1 blizzard shield and 1 heavy flamer.|
 000004133|2|â¢|If this model is not equipped with a storm bolter, its heavy flamer can be replaced with 1 storm bolter.|
+000004135|1|â¢|This modelâs absolvor bolt pistol can be replaced with 1 pyre pistol.|
+000004135|2|â¢|If this model is equipped with an absolvor bolt pistol, it can be equipped with 1 master-crafted power weapon (this modelâs absolvor bolt pistol cannot be replaced).|
+000004137|1|â¢|The Sternguard Veteran Squad Leaderâs Sternguard bolt rifle can be replaced with one of the following: <br><ul style="list-style-type:circle"><li>1 Astartes chainsword </li><li>1 combi-weapon </li><li>1 power fist </li><li>1 power weapon </li><li>1 Astartes chainsword and 1 Sternguard bolt rifle*</li><li>1 power fist and 1 Sternguard bolt rifle*</li><li>1 power weapon and 1 Sternguard bolt rifle*</li></ul>|
+000004137|2|â¢| Any number of Sternguard Veterans can each have their Sternguard bolt rifle replaced with 1 combi-weapon.|
+000004137|3|â¢|For every 5 models in this unit, 1 Sternguard Veteranâs Sternguard bolt rifle can be replaced with one of the following: <br><ul style="list-style-type:circle"><li>1 pyrecannon</li><li>1 Sternguard heavy bolter</li></ul>|
+000004137|4|*|* This model's Sternguard bolt rifle cannot be replaced.|
+000004138|1|â¢|For every 5 models in this unit, 1 Terminatorâs storm bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 assault cannon</li><li>1 heavy flamer</li><li>1 cyclone missile launcher and 1 storm bolter.*</li></ul>|
+000004138|2|â¢|Any number of models can each have their power fist replaced with 1 chainfist.|
+000004138|3|â¢|The Terminator Squad Leaderâs power fist can be replaced with 1 power weapon.|
+000004138|4|*|* This modelâs storm bolter cannot be replaced.|
+000004139|1|â¢|This model can be equipped with 1 hunter-killer missile.|
+000004139|2|â¢|This model can be equipped with 1 multi-melta.|
+000004139|3|â¢|This model can be equipped with 1 storm bolter.|
+000004143|1|â¢|The Steeljack Theynâs heavy volkanite disintegrator and plasma knife can be replaced with 1 Autoch-pattern bolter and 1 plasma sword.|
+000004144|1|â¢|Any number of models in this unit can each have their plasma sword replaced with 1 concussion gauntlet.|
+000004145|1|â¢|All models in this unit can each have their breacher ordnance replaced with 1 tremor shells.|
+000004146|1|â¢|Any number of models in this unit can each have their magna-rail cannon replaced with 1 HYLas rotary cannon.|
+000004146|2|â¢|Any number of models can each be equipped with 1 smoke launcher.|
+000004147|1|â¢|This model can be equipped with 1 smoke launcher.|
+000004154|1|â¢|The Sword Brotherâs bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list*:<br><ul style="list-style-type:circle"><li>1 Astartes chainsword</li><li>1 bolt pistol</li><li>1 boltgun</li><li>1 combi-weapon</li><li>1 grav-pistol</li><li>1 hand flamer</li><li>1 inferno pistol</li><li>1 plasma pistol</li><li>1 power fist</li><li>1 power weapon</li><li>1 storm bolter</li><li>1 thunder hammer</li></ul>|
+000004154|2|â¢|Any number of Neophytes can each have their boltgun replaced with one of the following: <br><ul style="list-style-type:circle"><li>1 Astartes shotgun</li><li>1 combat knife</li></ul>|
+000004154|3|â¢|Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword.|
+000004154|4|â¢|1 Initiateâs boltgun can be replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 flamer</li><li>1 plasma gun</li><li>1 meltagun</li><li>1 grav-gun</li></ul>|
+000004154|5|â¢|1 Initiateâs boltgun can be replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 power weapon</li><li>1 power fist</li><li>1 heavy bolter</li><li>1 heavy flamer</li><li>1 grav-cannon</li><li>1 lascannon</li><li>1 missile launcher</li><li>1 multi-melta</li><li>1 plasma cannon</li></ul>|
+000004154|6|*|*This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol).|
+000004156|1|â¢|The Kabalite Archsybariteâs close combat weapon can be replaced with 1 power weapon.|
+000004156|2|â¢|The Kabalite Archsybariteâs splinter rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blast pistol</li><li>1 splinter pistol</li></ul>|
+000004156|3|â¢|The Kabalite Archsybarite can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 Kabalite icon</li><li>1 phantasm grenade launcher</li></ul>|
+000004156|4|â¢|1 Kabalite Agent's splinter rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 shredder</li></ul>|
+000004156|5|â¢|1 Kabalite Agentâs splinter rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 dark lance</li><li>1 splinter cannon</li></ul>|
+000004156|6|â¢|1 Kabalite Agentâs splinter rifle can be replaced with 1 stinger pistol.|
+000004156|7|â¢|1 Kabalite Agentâs splinter rifle can be replaced with 1 shardcarbine.|
+000004156|8|â¢|1 Kabalite Agentâs splinter rifle can be replaced with 1 pain sculptors.|
+000004156|9|â¢|1 Kabalite Agentâs splinter rifle can be replaced with 1 splinter pistol and 1 razorflail.|
+000004156|10|â¢|1 Kabalite Agent equipped with a splinter rifle can be equipped with 1 stimm-needler. This modelâs splinter rifle cannot be replaced.|
+000004157|1|â¢|The Solariteâs shardcarbine can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blast pistol and 1 power weapon</li><li>1 splinter pistol and 1 power weapon</li></ul>|
+000004157|2|â¢|1 Scourgeâs shardcarbine can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 shredder</li></ul>|
+000004159|1|â¢|This modelâs shuriken pistol can be replaced with 1 neuro disruptor.|
+000004161|1|â¢|This modelâs shuriken pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 fusion pistol</li><li>1 neuro disruptor</li></ul>|
+000004161|2|â¢|This model's Troupe Master's blade can be replaced with 1 Harlequin's special weapon.|
+000004163|1|â¢|Any number of models can each have their shuriken cannon replaced with 1 Skyweaver haywire cannon.|
+000004163|2|â¢|Any number of models can each have their star bolas replaced with 1 zephyrglaive.|
+000004164|1|â¢|Any number of models can each have their Harlequinâs blade replaced with 1 Harlequinâs special weapon.|
+000004164|2|â¢|The Lead Playerâs Harlequinâs blade can be replaced with 1 power sword.|
+000004164|3|â¢|If this unit contains 9 or fewer models:<ul style="list-style-type:circle"><li>Up to 2 models can each have their shuriken pistol replaced with 1 neuro disruptor</li><li>Up to 2 models can each have their shuriken pistol replaced with 1 fusion pistol</li></ul>|
+000004164|4|â¢|If this unit contains 10 or more models:<ul style="list-style-type:circle"><li>Up to 4 models can each have their shuriken pistol replaced with 1 neuro disruptor</li><li>Up to 4 models can each have their shuriken pistol replaced with 1 fusion pistol</li></ul>|
+000004165|1|â¢|This modelâs Voidweaver haywire cannon can be replaced with 1 prismatic cannon.|
+000004168|1|â¢|The Voidreaver Felarchâs shuriken pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 neuro disruptor</li><li>1 shuriken rifle</li></ul>|
+000004168|2|â¢|The Voidreaver Felarch can be equipped with:<ul style="list-style-type:circle"><li>1 mistshield</li></ul>|
+000004168|3|â¢|Any number of Corsair Voidreavers in this unit can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.|
+000004168|4|â¢|For every 5 models in this unit, 1 Corsair Voidreaverâs power sword or shuriken rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 blaster</li><li>1 shredder</li></ul>|
+000004168|5|â¢|If this unit contains 10 models, 1 Corsair Voidreaverâs shuriken rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 shuriken cannon</li><li>1 wraithcannon</li></ul>|
+000004169|1|â¢|Any number of Corsair Voidscarred can each have their shuriken pistol and power sword replaced with 1 shuriken rifle.|
+000004169|2|â¢|The Voidscarred Felarchâs shuriken pistol can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 neuro disruptor</li><li>1 shuriken rifle</li></ul>|
+000004169|3|â¢|The Voidscarred Felarch can be equipped with 1 mistshield.|
+000004169|4|â¢|For every 5 models in this unit, 1 Corsair  Voidscarredâs shuriken rifle can be replaced with one of the following:<br><ul style="list-style-type:circle"><li>1 blaster</li><li>1 shredder</li></ul>|
+000004169|5|â¢|If this unit contains 10 models, 1 Corsair Voidscarredâs shuriken rifle can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 shuriken cannon</li><li>1 wraithcannon</li></ul>|
+000004169|6|â¢|If this unit contains 10 models, 1 Corsair Voidscarredâs shuriken rifle can be replaced with 1 long rifle. |
+000004169|7|â¢|If this unit contains 10 models, 1 Corsair Voidscarredâs power sword can be  replaced with 1 fusion pistol.|
+000004169|8|â¢|1 Corsair Voidscarred model equipped with a shuriken pistol and power sword can be equipped with 1 FaolchÃº.|
+000004170|1|â¢|Any number of models can each have their twin shuriken catapult replaced with one of the following:<ul style="list-style-type:circle"><li>1 dark lance</li><li>1 dissonance cannon</li><li>1 scatter laser</li><li>1 shuriken cannon</li><li>1 splinter cannon</li></ul>|
+000004170|2|â¢|The Cloud Dancer Felarch can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 dissonance pistol</li><li>1 void sabre</li></ul>|
+000004171|1|â¢|Any number of models can each have their Corsair firearm replaced with 1 spar-glaive.|
+000004171|2|â¢|For every 5 models in this unit, 1 modelâs Corsair firearm can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Aeldari missile launcher</li><li>1 blaster</li><li>1 dark lance</li><li>1 flamer</li><li>1 fusion gun</li><li>1 shredder</li><li>1 shuriken cannon</li><li>1 splinter cannon</li></ul>|
+000004171|3|â¢|The Corsair Reaver Felarch can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 dissonance pistol</li><li>1 void sabre</li></ul>|
+000004172|1|â¢|Any number of models can each have their Corsair firearm replaced with one of the following:<ul style="list-style-type:circle"><li>1 shardcarbine</li><li>1 shuriken catapult</li><li>1 spar-glaive</li></ul>|
+000004172|2|â¢|For every 5 models in this unit, 1 modelâs Corsair firearm can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 Aeldari missile launcher</li><li>1 blaster</li><li>1 dark lance</li><li>1 flamer</li><li>1 fusion gun</li><li>1 shredder</li><li>1 shuriken cannon</li><li>1 splinter cannon</li></ul>|
+000004172|3|â¢|The Corsair Skyreaver Felarch can be equipped with one of the following:<ul style="list-style-type:circle"><li>1 dissonance pistol</li><li>1 void sabre</li></ul>|
+000004173|1|â¢|None|
+000004174|1|â¢|For every 5 models in the unit, up to 1 modelâs infernus heavy bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 frag cannon.</li><li>1 hellstorm bolt rifle and 1 Astartes grenade launcher.</li></ul>|
+000004174|2|â¢|For every 5 models in the unit, up to 1 modelâs heavy thunder hammer can be replaced with 1 power weapon and 1 Astartes shield.|
+000004174|3|â¢|For every 5 models in the unit, up to 1 modelâs stalker bolt rifle can be replaced with 1 plasma incinerator.|
+000004174|4|â¢|For every 5 models in the unit, up to 1 modelâs Deathwatch marksman bolt carbine can be replaced with 1 combat knife.|
+000004175|1|â¢|For every 5 models in the unit, up to 1 modelâs infernus heavy bolter can be replaced with one of the following:<ul style="list-style-type:circle"><li>1 frag cannon.</li><li>1 hellstorm bolt rifle and 1 Astartes grenade launcher.</li></ul>|
+000004175|2|â¢|For every 5 models in the unit, up to 1 modelâs heavy thunder hammer can be replaced with 1 power weapon and 1 Astartes shield.|
+000004175|3|â¢|For every 5 models in the unit, up to 1 modelâs stalker bolt rifle can be replaced with 1 plasma incinerator.|
+000004175|4|â¢|For every 5 models in the unit, up to 1 modelâs Deathwatch marksman bolt carbine can be replaced with 1 combat knife.|
+000004176|1|â¢|All models in this unit can each have their gauss scalpel replaced with 1 tesla caster.|
+000004176|2|â¢|1 modelâs gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector.|
+000004176|3|â¢|1 modelâs gauss scalpel or tesla caster can be replaced with 1 accelerator mandible.|
+000004177|1|â¢|1 modelâs twin gauss reaper can be replaced with 1 transdimensional isolator.|

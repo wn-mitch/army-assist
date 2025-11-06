@@ -1,5 +1,15 @@
 [
     {
+        "version": "1.14.0",
+        "stateVersion": 25,
+        "date": "11/6/25",
+        "changes": [
+            "Updated the data sets to the newest codices.",
+            "Fixed issue with Ghazghkull's weapons",
+            "Fixed an issue with FNP displaying on the MVB sheet"
+        ]
+    },
+    {
         "version": "1.13.1",
         "stateVersion": 24,
         "date": "8/15/25",
