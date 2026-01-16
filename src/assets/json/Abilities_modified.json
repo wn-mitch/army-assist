@@ -3,8 +3,8 @@
         "id": "000000705",
         "name": "Synapse",
         "legend": "Some Tyranids serve as synaptic conduits or nodal relays through which a portion of the Hive Mind's iron will flows, overriding the natural instincts of the swarm to direct the teeming warrior-beasts to function as a single, gestalt organism on the battlefield.",
-        "faction_id": "GC",
-        "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+        "faction_id": "TYR",
+        "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly Synapse models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
         "": "",
         "phases": [
             "Command",
@@ -15,8 +15,8 @@
         "id": "000000705",
         "name": "Synapse",
         "legend": "Some Tyranids serve as synaptic conduits or nodal relays through which a portion of the Hive Mind's iron will flows, overriding the natural instincts of the swarm to direct the teeming warrior-beasts to function as a single, gestalt organism on the battlefield.",
-        "faction_id": "TYR",
-        "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+        "faction_id": "GC",
+        "description": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly Synapse models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6. Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
         "": "",
         "phases": [
             "Command",
@@ -28,7 +28,7 @@
         "name": "Shadow in the Warp",
         "legend": "Tyranids flood the battlefield with the psychic signature of the hive fleet - an icy, alien dread that gnaws at the minds of their prey and smothers even the most stalwart courage. When faced with such unfathomable horror, many are driven insane or suffer catastrophic neural damage.",
         "faction_id": "TYR",
-        "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+        "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more Synapse units from your army, subtract 1 from that test.",
         "": "",
         "phases": [
             "Command",
@@ -40,7 +40,7 @@
         "name": "Shadow in the Warp",
         "legend": "Tyranids flood the battlefield with the psychic signature of the hive fleet - an icy, alien dread that gnaws at the minds of their prey and smothers even the most stalwart courage. When faced with such unfathomable horror, many are driven insane or suffer catastrophic neural damage.",
         "faction_id": "GC",
-        "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+        "description": "If your Army Faction is TYRANIDS, once per battle, in either player's Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more Synapse units from your army, subtract 1 from that test.",
         "": "",
         "phases": [
             "Command",
@@ -195,7 +195,7 @@
         "name": "Oath of Moment",
         "legend": "In battle, Space Marines swear mighty oaths to destroy the enemies of the Emperor and uphold the honour of their Chapter, and such vows are sacrosanct. When the Angels of Death strike, they do so with the precision of a surgeon and the force of a thunderbolt. Experience and strategic expertise help them to read the shifting shape of the battle with post-human speed and clarity, directing their wrath towards one priority target after another. Command assets are annihilated, leaving the enemy reeling leaderless. Heavy armour, potent artillery and the vaunted elites of the foe's forces are laid waste with horrifying speed, until the Emperor's Angels of Death stand victorious over a field of smouldering wreckage and bolt-riddled corpses, and honour is finally satisfied.",
         "faction_id": "SM",
-        "description": "If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:You can re-roll the Hit roll.If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLACK TEMPLARS, BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.",
+        "description": "If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:You can re-roll the Hit roll.If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Black Templars, Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
         "": "",
         "phases": [
             "Command",
@@ -203,6 +203,15 @@
             "Fight",
             "Saves"
         ]
+    },
+    {
+        "id": "000008351",
+        "name": "Space Marine Chapters",
+        "legend": "",
+        "faction_id": "SM",
+        "description": "If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit's Chapter. For example, Marneus Calgar has both the ADEPTUS ASTARTES and ULTRAMARINES Faction keywords, and is therefore from the Ultramarines Chapter.You cannot include units from more than one Chapter in your army.If your army includes one or more BLACK TEMPLARS units, it cannot include any Adeptus Astartes Psyker models, and cannot include any of the following models that do not have the Black Templars keyword: Gladiator Lancer; Gladiator Reaper; Gladiator Valiant; Impulsor; Repulsor; Repulsor Executioner.If your army includes one or more DEATHWATCH units, it cannot include any of the following units: Devastator Squad; Scout Squad; Tactical Squad.If your army includes one or more SPACE WOLVES units, it cannot include any of the following units: Apothecary; Devastator Squad; Tactical Squad.",
+        "": "",
+        "phases": []
     },
     {
         "id": "000008359",
@@ -215,6 +224,17 @@
             "Shooting",
             "Fight",
             "Saves"
+        ]
+    },
+    {
+        "id": "000008360",
+        "name": "Cult of the Dark Gods",
+        "legend": "Some traitors have given themselves entirely to the service of the Dark Gods, and they are so lost to damnation that they barely resemble the warriors they once were.",
+        "faction_id": "CSM",
+        "description": "If your Army Faction is HERETIC ASTARTES, you can include any of the following units in your army, and when you do so their Faction keywords are replaced with HERETIC ASTARTES:Khorne Berzerkers (see World Eaters)Rubric Marines (see Thousand Sons)Plague Marines (see Death Guard)Noise Marines (see Emperor's Children)The combined points value of such units you can include in your army depends on the battle size, as follows:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 pts",
+        "": "",
+        "phases": [
+            "Pregame"
         ]
     },
     {
@@ -234,7 +254,7 @@
         "name": "Voice of Command",
         "legend": "Raised and trained to instil unwavering obedience, officers of the Imperial Guard command authority and respect, and issue orders with imperious bellows that cut through the clamour of war.",
         "faction_id": "AM",
-        "description": "If your Army Faction is ASTRA MILITARUM, OFFICER models with this ability can issue Orders. Each OFFICER's datasheet will specify how many Orders it can issue in a battle round and which units are eligible to receive those Orders. Each time an Officer model issues an Order, select one of the Orders below, then select one eligible friendly unit within 6\" of that Officer model to issue it to.OFFICER models can issue Orders in your Command phase and at the end of a phase in which they disembarked from a TRANSPORT or were set up on the battlefield.Until the start of your next Command phase, the unit you selected is affected by that Order. Unless otherwise stated, a unit can only be affected by one Order at a time (any Order subsequently issued to that unit replaces the current one). Orders cannot be issued to Battle-shocked units, and if a unit being affected by an Order becomes Battle-shocked, that Order ceases to affect that unit.Only ASTRA MILITARUM models gain the benefit of an Order issued to their unit.Move! Move! Move!M+3\"Add 3\" to the Move characteristic of models in this unit.Fix Bayonets!WS+1Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.Take Aim!BS+1Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.First Rank, Fire! Second Rank, Fire!A+1Improve the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1.Take Cover!SV+1Improve the Save characteristic of models in this unit by 1 (this cannot improve a model's Save to better than 3+).Duty and Honour!LD+1OC+1Improve the Leadership and Objective Control characteristics of models in this unit by 1.",
+        "description": "If your Army Faction is ASTRA MILITARUM, Officer models with this ability can issue Orders. Each OFFICER's datasheet will specify how many Orders it can issue in a battle round and which units are eligible to receive those Orders. Each time an Officer model issues an Order, select one of the Orders below, then select one eligible friendly unit within 6\" of that Officer model to issue it to.OFFICER models can issue Orders in your Command phase and at the end of a phase in which they disembarked from a Transport or were set up on the battlefield.Until the start of your next Command phase, the unit you selected is affected by that Order. Unless otherwise stated, a unit can only be affected by one Order at a time (any Order subsequently issued to that unit replaces the current one). Orders cannot be issued to Battle-shocked units, and if a unit being affected by an Order becomes Battle-shocked, that Order ceases to affect that unit.Only ASTRA MILITARUM models gain the benefit of an Order issued to their unit.Move! Move! Move!M+3\"Add 3\" to the Move characteristic of models in this unit.Fix Bayonets!WS+1Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.Take Aim!BS+1Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.First Rank, Fire! Second Rank, Fire!A+1Improve the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1.Take Cover!SV+1Improve the Save characteristic of models in this unit by 1 (this cannot improve a model's Save to better than 3+).Duty and Honour!LD+1OC+1Improve the Leadership and Objective Control characteristics of models in this unit by 1.",
         "": "",
         "phases": [
             "Command",
@@ -290,7 +310,7 @@
         "name": "Nurgle's Gift",
         "legend": "The Death Guard are warriors of the Plague God Nurgle. Their bloated bodies are riddled with corruption, and their mere presence causes the foe to sicken and wither in the grip of supernatural diseases while the battlefield falls to rot and ruin around them.",
         "faction_id": "DG",
-        "description": "If your Army Faction is DEATH GUARD, while an enemy unit is within Contagion Range of one or more DEATH GUARD models from your army, it is Afflicted (see below).CONTAGION RANGEContagion Range changes over the course of the battle:AFFLICTEDDuring the Declare Battle Formations step, select one of the Plagues below. Until the end of the battle, while an enemy unit is Afflicted, subtract 1 from the Toughness characteristic of models in that unit, and that unit has the effect of your chosen Plague.Skullsquirm BlightThis horrifying affliction sees the minds and senses of the victim gnawed gradually away from within.Each time a model in this unit makes an attack, subtract 1 from the Hit roll.Rattlejoint AgueLimbs shuddering with fever palsy, bones turned brittle as glass, these warriors can barely act to defend themselves.Worsen the Save characteristic of models in this unit by 1.Scabrous SoulrotVictims of this insidious ailment become glassy eyed and morose as their very animus and essence decay.Worsen the Move, Leadership, and Objective Control characteristics of models in this unit by 1 (this rule can only worsen a model's Objective Control characteristic to a minimum of 1).",
+        "description": "If your Army Faction is DEATH GUARD, while an enemy unit is within Contagion Range of one or more Death Guard models from your army, it is Afflicted (see below).CONTAGION RANGEContagion Range changes over the course of the battle:AFFLICTEDDuring the Declare Battle Formations step, select one of the Plagues below. Until the end of the battle, while an enemy unit is Afflicted, subtract 1 from the Toughness characteristic of models in that unit, and that unit has the effect of your chosen Plague.Skullsquirm BlightThis horrifying affliction sees the minds and senses of the victim gnawed gradually away from within.Each time a model in this unit makes an attack, subtract 1 from the Hit roll.Rattlejoint AgueLimbs shuddering with fever palsy, bones turned brittle as glass, these warriors can barely act to defend themselves.Worsen the Save characteristic of models in this unit by 1.Scabrous SoulrotVictims of this insidious ailment become glassy eyed and morose as their very animus and essence decay.Worsen the Move, Leadership, and Objective Control characteristics of models in this unit by 1 (this rule can only worsen a model's Objective Control characteristic to a minimum of 1).",
         "": "",
         "phases": [
             "Command",
@@ -304,7 +324,7 @@
         "name": "Cabal of Sorcerers",
         "legend": "The Thousand Sons are wreathed in the energies of the Warp. It is the gift of their sorcerous leaders to channel this power through battlefield ritual, to divine forbidden knowledge, to weave illusory magicks or to ravage their foes with empyric fire and mutation.",
         "faction_id": "TS",
-        "description": "If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.PSYCHIC TEST SEQUENCERoll 2D6Channel the Warp(Optional)Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds.If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.DESTINY'S RUIN (PSYCHIC)WARP CHARGE5Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.TEMPORAL SURGE (PSYCHIC)WARP CHARGE6Select one friendly THOUSAND SONS unit that is not within Engagement Range of one or more enemy units and is within 24\" of and visible to the manifesting model. That unit can make a Normal move of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.DOOMBOLT (PSYCHIC)WARP CHARGE7Select one enemy unit within 24\" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.TWIST OF FATE (PSYCHIC)WARP CHARGE9Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.",
+        "description": "If your Army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.PSYCHIC TEST SEQUENCERoll 2D6Channel the Warp(Optional)Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds.If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.DESTINY'S RUIN (PSYCHIC)WARP CHARGE5Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.TEMPORAL SURGE (PSYCHIC)WARP CHARGE6Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24\" of and visible to the manifesting model. That unit can make a Normal move of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.DOOMBOLT (PSYCHIC)WARP CHARGE7Select one enemy unit within 24\" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.TWIST OF FATE (PSYCHIC)WARP CHARGE9Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.",
         "": "",
         "phases": [
             "Movement",
@@ -347,15 +367,38 @@
         ]
     },
     {
+        "id": "000008434",
+        "name": "Daemonic Pact",
+        "legend": "When the mortal servants of the Dark Gods march to war, the most favoured may find daemonic entities accompanying them. ",
+        "faction_id": "CD",
+        "description": "If every model from your army has the Chaos Knights or Heretic Astartes keyword, you can include LEGIONES DAEMONICA units in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. The combined points cost of such units you can include depends on your battle size, as shown below.IncursionUp to 250 ptsStrike ForceUp to 500 ptsOnslaughtUp to 750 ptsNone of these models can be your WARLORD, and they cannot be given Enhancements.In addition, for each of the following keywords, the number of non-BATTLELINE units with that keyword you include in this way cannot be greater than the number of BATTLELINE units with that keyword you include in this way:KhorneTzeentchNurgleSlaanesh",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command"
+        ]
+    },
+    {
         "id": "000008439",
         "name": "For the Greater Good",
         "legend": "The Hunter Cadres battle for the betterment of the T'au Empire, not for personal gain or egotistic accomplishments. This burning commitment allows for prodigiously effective covering fire. Enemies are pinned in place by deadly bursts of pulse blasts, or the infamous T'au markerlight is used to expose even well-fortified enemy positions, allowing other T'au warriors to fall on the vulnerable enemies with murderous force.",
         "faction_id": "TAU",
-        "description": "If your Army Faction is T'AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the MARKERLIGHT keyword, that attack has the [IGNORES COVER] ability.",
+        "description": "If your Army Faction is T'AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding Fortification and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
         "": "",
         "phases": [
             "Shooting",
             "Fight"
+        ]
+    },
+    {
+        "id": "000008445",
+        "name": "Strands of Fate",
+        "legend": "The Aeldari live on the brink of extinction. As such, their Farseers have become adept at reading future events, seeing the many strands of fate ahead of their people and the consequences of following each one. Taken at the right time, a simple action can avoid calamitous outcomes, aiding the Aeldari in their continued struggle for survival.",
+        "faction_id": "AE",
+        "description": "If your Army Faction is AELDARI, at the start of the battle, make a Strands of Fate roll by rolling six D6.If you wish, you can then re-roll all of these dice, but if you do, roll one less D6. You can continue re-rolling all of the dice in this manner, rolling one less D6 each time you do, until you are satisfied with the results rolled (or until you only have a single D6 remaining).When you are satisfied with the results rolled, those remaining dice become your Fate dice for the battle. These results cannot be changed or re-rolled further, unless a rule specifically states otherwise. Keep your Fate dice to one side - this is your Fate dice pool.Once per phase, before making a dice roll for a model or unit from your army with the Strands of Fate ability, if you have one or more dice in your Fate dice pool, you can use one of those Fate dice. To do so, select one of those Fate dice to substitute that dice roll. The dice that is being substituted is not rolled; instead, the value of the selected Fate dice is used as if it had been rolled (this counts as an unmodified dice roll of that value for all rules purposes). Each Fate dice can only be used in this way once. After using a Fate dice, remove it from your Fate dice pool and roll all remaining dice that are part of that dice roll (if any). You can use Fate dice for any of the following types of dice roll:Advance rollBattle-shock testCharge rollDamage rollHit rollSaving throwWound roll",
+        "": "",
+        "phases": [
+            "Pregame"
         ]
     },
     {
@@ -376,7 +419,7 @@
         "name": "Code Chivalric",
         "legend": "Imperial Knights fight by a stringent set of codes. In addition to defeating the foe, honour must always be upheld.",
         "faction_id": "QI",
-        "description": "If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army's Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.To determine your army's Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.To determine your army's Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).&nbsp;DeedD6We vow to lay low the tyrant...At the start of the battle, select one CHARACTER model in your opponent's army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.&nbsp;&nbsp;We swear to rechum the realm...This deed is completed at the end of your opponent's turn if you control more objective markers than your opponent.&nbsp;&nbsp;We pledge to reap a great tally...This deed is completed at the end of a turn if the number of destroyed enemy units is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).&nbsp;&nbsp;&nbsp;QualityD6...with our martial valour risen over all.Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.&nbsp;&nbsp;...and we are eager for the challenge.Add 2\" to this model's Move characteristic and add 1 to Advance and Charge rolls made for this model.&nbsp;&nbsp;...yet shall our legacy be unsullied.Improve this model's Objective Control characteristic by 2 and its Leadership characteristic by 1.&nbsp;",
+        "description": "If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army's Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.To determine your army's Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.To determine your army's Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).&nbsp;DeedD6We vow to lay low the tyrant...At the start of the battle, select one CHARACTER model in your opponent's army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.&nbsp;&nbsp;We swear to reclaim the realm...This deed is completed at the end of your opponent's turn if you control more objective markers than your opponent.&nbsp;&nbsp;We pledge to reap a great tally...This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).&nbsp;&nbsp;&nbsp;QualityD6...with our martial valour risen over all.Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.&nbsp;&nbsp;...and we are eager for the challenge.Add 2\" to this model's Move characteristic and add 1 to Advance and Charge rolls made for this model.&nbsp;&nbsp;...yet shall our legacy be unsullied.Improve this model's Objective Control characteristic by 2 and its Leadership characteristic by 1.&nbsp;",
         "": "",
         "phases": [
             "Pregame",
@@ -389,13 +432,38 @@
         ]
     },
     {
+        "id": "000008459",
+        "name": "Bondsman",
+        "legend": "Those honoured to serve a great hero do so unto death.",
+        "faction_id": "QI",
+        "description": "Some Imperial Knights models have a Bondsman ability, tagged with the word \u00e2\u0098Bondsman'. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly Armiger model within 12\" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.",
+        "": "",
+        "phases": [
+            "Command"
+        ]
+    },
+    {
         "id": "000008460",
         "name": "Super-heavy Walker",
         "legend": "Imperial Knights tower over the battlefield, striding over lesser warriors to eagerly engage the foe.",
         "faction_id": "QI",
-        "description": "It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+        "description": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height. When doing so:It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
         "": "",
-        "phases": []
+        "phases": [
+            "Movement"
+        ]
+    },
+    {
+        "id": "000008461",
+        "name": "Freeblades",
+        "legend": "Freeblades often wander the galaxy, aiding the armies of the Imperium against the xenos and heretics who threaten the Emperor's realm.",
+        "faction_id": "QI",
+        "description": "If every model in your army has the IMPERIUM keyword, you can include either one Titanic Imperial Knights model or up to three Armiger models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your WARLORD, and they cannot be given Enhancements.",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command"
+        ]
     },
     {
         "id": "000008466",
@@ -431,7 +499,7 @@
         "name": "Power from Pain",
         "legend": "The Drukhari feed on suffering and terror. Every arc of blood that jets from a blade-slit artery, every scream of agonised horror, every vertiginous moment of shock or despair experienced by their prey surges through the Drukhari like an intoxicant. As the battle rages, the denizens of the Dark City drink deep of the floodtide of pain. Sinews singing with stolen strength, motions blurred to preternatural swiftness, they howl in exhilarated bloodlust and fight all the harder to extract yet sweeter agonies from those who dare resist them.",
         "faction_id": "DRU",
-        "description": "Pain AbilitiesAll DRUKHARI units have a Pain ability, tagged with the word \u00e2\u0098Pain'. Pain abilities only apply to a unit while it is Empowered. If your Army Faction is DRUKHARI, you can Empower units from your army with Pain abilities by spending Pain tokens (see below).Designer's Note: You can also spend Pain tokens to activate additional effects in certain other rules such as Enhancements and Stratagems.Gaining Pain TokensIf your Army Faction is DRUKHARI, you gain Pain tokens as follows:1 Pain token at the start of your Command phase.1 Pain token each time an enemy unit is destroyed.1 Pain token each time an enemy unit fails a Battle-shock test.Each time you gain a Pain token, keep it to one side - this is your Pain token pool. Each time you spend a Pain token, reduce your Pain token pool by the same amount.Empowered Through PainEach Pain ability will state when you can spend Pain tokens to Empower that unit. When you do, until the end of the phase, that unit is Empowered and all Pain abilities it has take effect. While an Attached unit is Empowered, the Pain abilities of all Leader and Bodyguard units in that unit take effect - you do not need to spend additional Pain tokens to activate each of those Pain abilities.Example: At the start of your Charge phase, you spend 1 Pain token to Empower a unit of Wyches. The unit becomes Empowered, and so its Acrobatic Gladiators ability takes effect until the end of the phase. A Succubus is leading the unit, and so its Lithe Agility ability also takes effect until the end of the phase (no additional Pain token is required to activate that ability as well).",
+        "description": "Pain AbilitiesAll Drukhari units have a Pain ability, tagged with the word \u00e2\u0098Pain'. Pain abilities only apply to a unit while it is Empowered. If your Army Faction is DRUKHARI, you can Empower units from your army with Pain abilities by spending Pain tokens (see below).Designer's Note: You can also spend Pain tokens to activate additional effects in certain other rules such as Enhancements and Stratagems.Gaining Pain TokensIf your Army Faction is DRUKHARI, you gain Pain tokens as follows:1 Pain token at the start of your Command phase.1 Pain token each time an enemy unit is destroyed.1 Pain token each time an enemy unit fails a Battle-shock test.Each time you gain a Pain token, keep it to one side - this is your Pain token pool. Each time you spend a Pain token, reduce your Pain token pool by the same amount.Empowered Through PainEach Pain ability will state when you can spend Pain tokens to Empower that unit. When you do, until the end of the phase, that unit is Empowered and all Pain abilities it has take effect. While an Attached unit is Empowered, the Pain abilities of all Leader and Bodyguard units in that unit take effect - you do not need to spend additional Pain tokens to activate each of those Pain abilities.Example: At the start of your Charge phase, you spend 1 Pain token to Empower a unit of Wyches. The unit becomes Empowered, and so its Acrobatic Gladiators ability takes effect until the end of the phase. A Succubus is leading the unit, and so its Lithe Agility ability also takes effect until the end of the phase (no additional Pain token is required to activate that ability as well).",
         "": "",
         "phases": [
             "Command",
@@ -461,10 +529,22 @@
         "name": "Super-heavy Walker",
         "legend": "",
         "faction_id": "QT",
-        "description": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height. When doing so:It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+        "description": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding Titanic models) and sections of terrain features that are 4\" or less in height. When doing so:It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
         "": "",
         "phases": [
             "Movement"
+        ]
+    },
+    {
+        "id": "000008514",
+        "name": "Dreadblades",
+        "legend": "Dreadblades stalk the galaxy, carving a path of destruction alongside other forces of Chaos.",
+        "faction_id": "QT",
+        "description": "If every model in your army has the CHAOS keyword, you can include either 1 Titanic Chaos Knights model or up to 3 War Dog models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your WARLORD, and they cannot be given Enhancements.",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command"
         ]
     },
     {
@@ -472,7 +552,7 @@
         "name": "Kill Team",
         "legend": "",
         "faction_id": "SM",
-        "description": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value.For the purposes of determining which models in this unit can embark within a TRANSPORT, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the TERMINATOR, MOUNTED or JUMP PACK keywords.For the purposes of interacting with terrain features, all models in units with this ability are considered INFANTRY models, even though similar models in other units may have the MOUNTED or JUMP PACK keywords.Designer's Note: While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, TRANSPORT and Benefit of Cover rules.",
+        "description": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value.For the purposes of determining which models in this unit can embark within a Transport, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the Terminator, Mounted or Jump Pack keywords.For the purposes of interacting with terrain features, all models in units with this ability are considered INFANTRY models, even though similar models in other units may have the MOUNTED or JUMP PACK keywords.Designer's Note: While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, TRANSPORT and Benefit of Cover rules.",
         "": "",
         "phases": [
             "Movement",
@@ -484,7 +564,7 @@
         "name": "Kill Team",
         "legend": "",
         "faction_id": "AoI",
-        "description": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value.For the purposes of determining which models in this unit can embark within a TRANSPORT, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the TERMINATOR, MOUNTED or JUMP PACK keywords.For the purposes of interacting with terrain features, all models in units with this ability are considered INFANTRY models, even though similar models in other units may have the MOUNTED or JUMP PACK keywords.Designer's Note: While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, TRANSPORT and Benefit of Cover rules.",
+        "description": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value.For the purposes of determining which models in this unit can embark within a Transport, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the Terminator, Mounted or Jump Pack keywords.For the purposes of interacting with terrain features, all models in units with this ability are considered INFANTRY models, even though similar models in other units may have the MOUNTED or JUMP PACK keywords.Designer's Note: While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, TRANSPORT and Benefit of Cover rules.",
         "": "",
         "phases": [
             "Movement",
@@ -506,6 +586,44 @@
             "Fight",
             "Saves"
         ]
+    },
+    {
+        "id": "000008533",
+        "name": "Towering Example",
+        "legend": "",
+        "faction_id": "TL",
+        "description": "When mustering your army, if your Army Faction is ADEPTUS TITANICUS, ignore the Select Detachment Rules step. In the Select Warlord step, select one ADEPTUS TITANICUS model from your army to be your WARLORD, even though that model does not have the CHARACTER keyword.",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000008534",
+        "name": "Titanic Support",
+        "legend": "",
+        "faction_id": "TL",
+        "description": "If every model in your army has the IMPERIUM keyword, you can include 1 ADEPTUS TITANICUS model in your army, even if it does not have the Faction keyword you selected in the Select Army Faction step.",
+        "": "",
+        "phases": [
+            "Pregame"
+        ]
+    },
+    {
+        "id": "000008535",
+        "name": "Titanicus Traitoris",
+        "legend": "",
+        "faction_id": "TL",
+        "description": "You can use the ADEPTUS TITANICUS datasheets in this document to represent TITANICUS TRAITORIS models if you wish. To do so, on those datasheets and on this Army Rules card, replace all instances of the IMPERIUM keyword with CHAOS, and replace all instances of the ADEPTUS TITANICUS Faction keyword with TITANICUS TRAITORIS. For the purposes of points values, use those published for the equivalent ADEPTUS TITANICUS models.",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000008536",
+        "name": "Designer's Note",
+        "legend": "",
+        "faction_id": "TL",
+        "description": "Designer's Note: Titans are colossal war machines that can turn the tide of battle. As such, the points values of some of these models are greater than even Onslaught-sized battles can accommodate; they are designed for battlefields of the most apocalyptic scale you can imagine!",
+        "": "",
+        "phases": []
     },
     {
         "id": "000008537",
@@ -530,11 +648,68 @@
         ]
     },
     {
+        "id": "000008767",
+        "name": "The Unforgiven",
+        "legend": "None fight with more grim determination than the sons of the Lion, and their specialised companies - known as the Deathwing and the Ravenwing in the case of the Dark Angels - are the bane of their terrified foes.",
+        "faction_id": "SM",
+        "description": "If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that units Chapter. For example, Asmodai has both the ADEPTUS ASTARTES and DARK ANGELS Faction keywords, and is therefore from the Dark Angels Chapter.You cannot include units from more than one Chapter in your army.Designer's Note: The rules presented in this section assume that the ADEPTUS ASTARTES units in your army are from the Dark Angels Chapter, but they can also be used to represent any Dark Angels successor Chapter, such as one described in the background section of this book, or even one of your own invention. However, players who wish to faithfully recreate the Dark Angels Chapter on the tabletop should only include Dark Angels Epic Heroes if their collection is intended to represent the First Founding Chapter itself; Ezekiel is the Chief Librarian of the Dark Angels, for example, and not of any of their successors.",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000008768",
+        "name": "The Ravenwing",
+        "legend": "",
+        "faction_id": "SM",
+        "description": "The following ADEPTUS ASTARTES units gain the Ravenwing keyword if they are drawn from the Dark Angels Chapter:Mounted unitsVehicle units that can FLY",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000008808",
+        "name": "The Deathwing",
+        "legend": "",
+        "faction_id": "SM",
+        "description": "The following ADEPTUS ASTARTES units gain the Deathwing keyword if they are drawn from the Dark Angels Chapter:Terminator unitsBladeguard Ancient, Bladeguard Veteran Squad, Sternguard Veteran Squad and Vanguard Veteran Squad with Jump Packs unitsLand Raider, Land Raider Crusader, Land Raider Redeemer, Repulsor and Repulsor Executioner unitsDreadnought units",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000009183",
+        "name": "The Sons of Sanguinius",
+        "legend": "The noble Blood Angels favour swift, mobile warfare. Clad in crimson, the Sons of Sanguinius close in on their foes with lightning speed. Above, angels clad in burnished gold soar from the heavens to crash into their foes. The Death Company, afflicted by a terrible genetic curse, thunder into the foe with inhuman savagery, their black plate flecked with the blood of their victims.",
+        "faction_id": "SM",
+        "description": "If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit's Chapter. For example, Lemartes has both the ADEPTUS ASTARTES and BLOOD ANGELS Faction keywords, and is therefore from the Blood Angels Chapter.You cannot include units from more than one Chapter in your army.Designer's Note: The rules presented in this section assume that the ADEPTUS ASTARTES units in your army are from the Blood Angels Chapter, but they can also be used to represent any Blood Angels successor Chapter, such as one described in the background section of this book, or even one of your own invention. However, players who wish to faithfully recreate the Blood Angels Chapter on the tabletop should only include Blood Angels Epic Heroes if their collection is intended to represent the First Founding Chapter itself; Mephiston is the Chief Librarian of the Blood Angels, for example, and not of any of their successors.",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000009792",
+        "name": "Kill Teams",
+        "legend": "When faced with an array of missions to complete and varying enemies to lay low, the Deathwatch are highly adept at forming effective kill teams that mesh starkly diverse armour and equipment.",
+        "faction_id": "SM",
+        "description": "Each time an attack targets a Kill Team unit from your army that contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what result is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest Toughness characteristic.For the purposes of determining which models can embark within a Transport model, KILL TEAM models follow the normal restrictions listed on the TRANSPORT model.",
+        "": "",
+        "phases": [
+            "Movement",
+            "Saves"
+        ]
+    },
+    {
+        "id": "000009853",
+        "name": "Deathwatch",
+        "legend": "",
+        "faction_id": "SM",
+        "description": "Your army can include Adeptus Astartes Deathwatch units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.With the exception of Kill Team Cassius (see Legends: Agents of the Imperium), your army cannot include any Agents of the Imperium Deathwatch units.Your army cannot include any of the following units: Assault Squad; Assault Squad with Jump Packs; Attack Bike Squad; Devastator Squad; Land Speeder Storm; Relic Terminator Squad; Scout Bike Squad; Scout Squad; Scout Sniper Squad; Tactical Squad; Terminator Assault Squad; Terminator Squad.",
+        "": "",
+        "phases": []
+    },
+    {
         "id": "000009894",
         "name": "Battle Focus",
         "legend": "In war, as in all things, the Aeldari bring the full might of their intellect, skill and agility to bear upon the task. Coupled with their exceptional technology, this ensures they move with swiftness and grace that is impossible for the foe to match.",
         "faction_id": "AE",
-        "description": "If your Army Faction is ASURYANI, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown in the table below.BATTLE SIZEBATTLE FOCUS TOKENSIncursion2Strike Force4Onslaught6Each time one of the triggers shown in the Agile Manoeuvres section below occurs, you can spend one Battle Focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.<div style=\"text-align:center; font-family: 'ConduitITC', arial; font-size: 2em;\">AGILE MANOEUVRESSWIFT AS THE WINDTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).EFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.FLITTING SHADOWSTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at that unit.STAR ENGINESTRIGGER: When an eligible VEHICLE unit from your army is selected to make a Normal move.EFFECT: Until the end of the phase, add D6+l\" to the Move characteristic of models in that unit.SUDDEN STRIKETRIGGER: When an eligible unit from your army is selected to fight.EFFECT: Until the end of the phase, each time a model in that unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".OPPORTUNITY SEIZEDTRIGGER: When an enemy unit ends a Fall Back move.EFFECT: One eligible unit from your army (excluding TITANIC units) that started the phase within Engagement Range of that enemy unit can make a Normal move of up to D6+1\".FADE BACKTRIGGER: In your opponent's Shooting phase, just after an enemy unit has shot.EFFECT: One eligible unit from your army (excluding TITANIC units) that was hit by one or more of those attacks can make a Normal move of up to D6+1\".",
+        "description": "If your Army Faction is Asuryani, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown in the table below.BATTLE SIZEBATTLE FOCUS TOKENSIncursion2Strike Force4Onslaught6Each time one of the triggers shown in the Agile Manoeuvres section below occurs, you can spend one Battle Focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.<div style=\"text-align:center; font-family: 'ConduitITC', arial; font-size: 2em;\">AGILE MANOEUVRESSWIFT AS THE WINDTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).EFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.FLITTING SHADOWSTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at that unit.STAR ENGINESTRIGGER: When an eligible VEHICLE unit from your army is selected to make an Advance move.EFFECT: Until the end of the turn, Ranged weapons equipped by this unit have the [ASSAULT] ability.SUDDEN STRIKETRIGGER: When an eligible unit from your army is selected to fight.EFFECT: Until the end of the phase, each time a model in that unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".OPPORTUNITY SEIZEDTRIGGER: When an enemy unit ends a Fall Back move.EFFECT: One eligible unit from your army (excluding TITANIC units) that started the phase within Engagement Range of that enemy unit can make a Normal move of up to D6+1\".FADE BACKTRIGGER: In your opponent's Shooting phase, just after an enemy unit has shot.EFFECT: One eligible unit from your army (excluding TITANIC units) that was hit by one or more of those attacks can make a Normal move of up to D6+1\".",
         "": "",
         "phases": [
             "Pregame",
@@ -550,10 +725,25 @@
         "name": "Battle Focus",
         "legend": "In war, as in all things, the Aeldari bring the full might of their intellect, skill and agility to bear upon the task. Coupled with their exceptional technology, this ensures they move with swiftness and grace that is impossible for the foe to match.",
         "faction_id": "DRU",
-        "description": "If your Army Faction is ASURYANI, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown in the table below.BATTLE SIZEBATTLE FOCUS TOKENSIncursion2Strike Force4Onslaught6Each time one of the triggers shown in the Agile Manoeuvres section below occurs, you can spend one Battle Focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.<div style=\"text-align:center; font-family: 'ConduitITC', arial; font-size: 2em;\">AGILE MANOEUVRESSWIFT AS THE WINDTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).EFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.FLITTING SHADOWSTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at that unit.STAR ENGINESTRIGGER: When an eligible VEHICLE unit from your army is selected to make a Normal move.EFFECT: Until the end of the phase, add D6+l\" to the Move characteristic of models in that unit.SUDDEN STRIKETRIGGER: When an eligible unit from your army is selected to fight.EFFECT: Until the end of the phase, each time a model in that unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".OPPORTUNITY SEIZEDTRIGGER: When an enemy unit ends a Fall Back move.EFFECT: One eligible unit from your army (excluding TITANIC units) that started the phase within Engagement Range of that enemy unit can make a Normal move of up to D6+1\".FADE BACKTRIGGER: In your opponent's Shooting phase, just after an enemy unit has shot.EFFECT: One eligible unit from your army (excluding TITANIC units) that was hit by one or more of those attacks can make a Normal move of up to D6+1\".",
+        "description": "If your Army Faction is Asuryani, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown in the table below.BATTLE SIZEBATTLE FOCUS TOKENSIncursion2Strike Force4Onslaught6Each time one of the triggers shown in the Agile Manoeuvres section below occurs, you can spend one Battle Focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.<div style=\"text-align:center; font-family: 'ConduitITC', arial; font-size: 2em;\">AGILE MANOEUVRESSWIFT AS THE WINDTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).EFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.FLITTING SHADOWSTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at that unit.STAR ENGINESTRIGGER: When an eligible VEHICLE unit from your army is selected to make an Advance move.EFFECT: Until the end of the turn, Ranged weapons equipped by this unit have the [ASSAULT] ability.SUDDEN STRIKETRIGGER: When an eligible unit from your army is selected to fight.EFFECT: Until the end of the phase, each time a model in that unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".OPPORTUNITY SEIZEDTRIGGER: When an enemy unit ends a Fall Back move.EFFECT: One eligible unit from your army (excluding TITANIC units) that started the phase within Engagement Range of that enemy unit can make a Normal move of up to D6+1\".FADE BACKTRIGGER: In your opponent's Shooting phase, just after an enemy unit has shot.EFFECT: One eligible unit from your army (excluding TITANIC units) that was hit by one or more of those attacks can make a Normal move of up to D6+1\".",
         "": "",
         "phases": [
             "Pregame",
+            "Command",
+            "Movement",
+            "Shooting",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "id": "000009895",
+        "name": "Agile Manoeuvres",
+        "legend": "",
+        "faction_id": "AE",
+        "description": "SWIFT AS THE WINDTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).EFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.FLITTING SHADOWSTRIGGER: When an eligible unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.EFFECT: Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at that unit.STAR ENGINESTRIGGER: When an eligible VEHICLE unit from your army is selected to make an Advance move.EFFECT: Until the end of the turn, Ranged weapons equipped by this unit have the [ASSAULT] ability.SUDDEN STRIKETRIGGER: When an eligible unit from your army is selected to fight.EFFECT: Until the end of the phase, each time a model in that unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".OPPORTUNITY SEIZEDTRIGGER: When an enemy unit ends a Fall Back move.EFFECT: One eligible unit from your army (excluding TITANIC units) that started the phase within Engagement Range of that enemy unit can make a Normal move of up to D6+1\".FADE BACKTRIGGER: In your opponent's Shooting phase, just after an enemy unit has shot.EFFECT: One eligible unit from your army (excluding TITANIC units) that was hit by one or more of those attacks can make a Normal move of up to D6+1\".",
+        "": "",
+        "phases": [
             "Command",
             "Movement",
             "Shooting",
@@ -566,7 +756,7 @@
         "name": "Disparate Paths",
         "legend": "",
         "faction_id": "AE",
-        "description": "When mustering your army, you can include HARLEQUINS units in your army, even though they do not have the ASURYANI Faction keyword. Unless otherwise stated, you cannot select HARLEQUINS or YNNARI as your Army Faction.",
+        "description": "When mustering your army, you can include Harlequins units in your army, even though they do not have the Asuryani Faction keyword. Unless otherwise stated, you cannot select HARLEQUINS or Ynnari as your Army Faction.",
         "": "",
         "phases": [
             "Pregame"
@@ -577,10 +767,22 @@
         "name": "Disparate Paths",
         "legend": "",
         "faction_id": "DRU",
-        "description": "When mustering your army, you can include HARLEQUINS units in your army, even though they do not have the ASURYANI Faction keyword. Unless otherwise stated, you cannot select HARLEQUINS or YNNARI as your Army Faction.",
+        "description": "When mustering your army, you can include Harlequins units in your army, even though they do not have the Asuryani Faction keyword. Unless otherwise stated, you cannot select HARLEQUINS or Ynnari as your Army Faction.",
         "": "",
         "phases": [
             "Pregame"
+        ]
+    },
+    {
+        "id": "000009974",
+        "name": "Corsairs and Travelling Players",
+        "legend": "",
+        "faction_id": "DRU",
+        "description": "If your Army Faction is DRUKHARI, you can include Harlequins and Anhrathe units in your army, even though they do not have the DRUKHARI Faction keyword. The combined points value of HARLEQUINS and/or ANHRATHE units you can include in your army depends on the battle size, as follows:Incursion: Up to 250 ptsStrike Force: Up to 500 ptsOnslaught: Up to 750 ptsNo HARLEQUINS or ANHRATHE models included in your army in this way can be your WARLORD, and they cannot be given Enhancements.",
+        "": "",
+        "phases": [
+            "Pregame",
+            "Command"
         ]
     },
     {
@@ -588,7 +790,7 @@
         "name": "Thrill Seekers",
         "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
         "faction_id": "EC",
-        "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
+        "description": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
         "": "",
         "phases": [
             "Movement",
@@ -601,7 +803,7 @@
         "name": "Thrill Seekers",
         "legend": "The Emperor's Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never-ending hunger for fresh experience.",
         "faction_id": "CSM",
-        "description": "If your Army Faction is EMPEROR'S CHILDREN, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
+        "description": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:It cannot target a unit it was within Engagement Range of at the start of the turn.It cannot target a unit that was the target of another units charge or attack this phase.",
         "": "",
         "phases": [
             "Movement",
@@ -614,7 +816,7 @@
         "name": "Pact of Excess",
         "legend": "By enacting the most lurid and excessive acts of ritual violence, the Emperor's Children may shatter reality itself and summon forth the daemons of Slaanesh.",
         "faction_id": "EC",
-        "description": "When mustering your army, unless specifically stated otherwise, you cannot select LEGIONS OF EXCESS as your Army Faction.",
+        "description": "When mustering your army, unless specifically stated otherwise, you cannot select Legions of Excess as your Army Faction.",
         "": "",
         "phases": []
     },
@@ -623,7 +825,7 @@
         "name": "Pact of Blood",
         "legend": "Through acts of frenzied violence and unbound savagery, the World Eaters may open a rent in reality, allowing the daemons of Khorne to spill forth from that infernal domain.",
         "faction_id": "WE",
-        "description": "When mustering your army, unless specifically stated otherwise, you cannot select BLOOD LEGIONS as your Army Faction.",
+        "description": "When mustering your army, unless specifically stated otherwise, you cannot select Blood Legions as your Army Faction.",
         "": "",
         "phases": []
     },
@@ -632,7 +834,7 @@
         "name": "Pact of Decay",
         "legend": "The daemons of Nurgle are not native to realspace, but instead must be summoned through the rotting veil by way of generous sacrifice and acts of foul worship.",
         "faction_id": "DG",
-        "description": "When mustering your army, unless specifically stated otherwise, you cannot select PLAGUE LEGIONS as your Army Faction.",
+        "description": "When mustering your army, unless specifically stated otherwise, you cannot select Plague Legions as your Army Faction.",
         "": "",
         "phases": []
     },
@@ -641,7 +843,7 @@
         "name": "Pact of Sorcery",
         "legend": "The daemons of Tzeentch are drawn through the barriers of the Warp by rituals of transmutation.",
         "faction_id": "TS",
-        "description": "When mustering your army, unless specifically stated otherwise, you cannot select SCINTILLATING LEGIONS as your Army Faction.",
+        "description": "When mustering your army, unless specifically stated otherwise, you cannot select Scintillating Legions as your Army Faction.",
         "": "",
         "phases": []
     },
@@ -650,11 +852,29 @@
         "name": "Curse of the Wulfen",
         "legend": "Only while fighting at the side of their battle-brothers can the feral Wulfen control their frenzied aggression.",
         "faction_id": "SM",
-        "description": "While this unit is within 6\" of one or more friendly SPACE WOLVES CHARACTER models (excluding WULFEN models) or within 12\" of one or more friendly WOLF PRIEST models, if it is not Battle-shocked, add 1 to the Objective Control characteristic of INFANTRY models in it and add 3 to the Objective Control characteristic of VEHICLE models in it.",
+        "description": "While this unit is within 6\" of one or more friendly Space Wolves Character models (excluding Wulfen models) or within 12\" of one or more friendly Wolf Priest models, if it is not Battle-shocked, add 1 to the Objective Control characteristic of Infantry models in it and add 3 to the Objective Control characteristic of Vehicle models in it.",
         "": "",
         "phases": [
             "Command"
         ]
+    },
+    {
+        "id": "000010257",
+        "name": "Sagas",
+        "legend": "The battles fought and glorious victories won by the Great Companies of Fenris are retold in mighty sagas.",
+        "faction_id": "SM",
+        "description": "Each Detachment rule in this book includes a Saga you can complete, with additional effects that apply once you have done so.",
+        "": "",
+        "phases": []
+    },
+    {
+        "id": "000010258",
+        "name": "Sons of Russ",
+        "legend": "The Great Companies of the Space Wolves are renowned for their ferocity and steadfast loyalty to the Imperium.",
+        "faction_id": "SM",
+        "description": "If an Adeptus Astartes unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit's Chapter. For example, Ragnar Blackmane has both the ADEPTUS ASTARTES and Space Wolves Faction keywords, and is therefore from the Space Wolves Chapter.You cannot include units from more than one Chapter in your army.If your army uses any of the Detachments from this book, it can include SPACE WOLVES units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.Designer's Note: The rules presented in this section assume that the ADEPTUS ASTARTES units in your army are from the Space Wolves Chapter, but they can also be used to represent any Space Wolves successor Chapter, such as one described in the background section of this book, or even one of your own invention. However, players who wish to faithfully recreate the Space Wolves Chapter on the tabletop should only include Space Wolves Epic Heroes if their collection is intended to represent the First Founding Chapter itself; Logan Grimnar is the Great Wolf of the Space Wolves, for example, and not of any of their successors.",
+        "": "",
+        "phases": []
     },
     {
         "id": "000010345",
@@ -669,11 +889,20 @@
         ]
     },
     {
+        "id": "000010389",
+        "name": "Heirs of Sigismund",
+        "legend": "",
+        "faction_id": "SM",
+        "description": "If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that units Chapter. For example, High Marshal Helbrecht has both the ADEPTUS ASTARTES and BLACK TEMPLARS Faction keywords, and is therefore from the Black Templars Chapter.You cannot include units from more than one Chapter in your army.If your army includes one or more units from the Black Templars Chapter or you are using one of the Detachments found below:ADEPTUS ASTARTES units from your army lose the Oath of Moment army rule (if they have it), and it is replaced with the Templar Vows army rule (see above).You cannot use the 1st Company Task Force Detachment (see Codex: Space Marines).Your army cannot include any Adeptus Astartes Psyker models.Your army cannot include the following datasheets from Codex: Space Marines: Gladiator Lancer; Gladiator Reaper; Gladiator Valiant; Impulsor; Land Raider Crusader; Repulsor; Repulsor Executioner; Sternguard Veteran Squad; Terminator Squad.",
+        "": "",
+        "phases": []
+    },
+    {
         "id": "000010432",
         "name": "Prioritised Efficiency",
         "legend": "As the Kin truth describes, Luck has. Need keeps. Toil earns. The kinhost's ability to efficiently switch its strategic footing embodies this wisdom. It results from swift assessments of a foe's possessions, how best to seize them for the kindred's need and then to stubbornly toil to hold them against counterattacks.",
         "faction_id": "LoV",
-        "description": "If your Army Faction is LEAGUES OF VOTANN, LEAGUES OF VOTANN units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those LEAGUES OF VOTANN units have will change depending on how many Yield points (YP) you currently have:At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase.At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase.At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase.Hostile AcquisitionEach time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll.You can re-roll Advance and Charge rolls made for this unit.Fortify TakeoverEach time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll.Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic and this unit is not a VEHICLE, subtract 1 from the Wound roll.Yield PointsAt the end of each player's Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy:You control one or more objective markers not within your deployment zone.You control two or more objective markers not within your deployment zone.You control more objective markers than your opponent.In your turn, YP gained in this way are always gained before checking which ability LEAGUES OF VOTANN units from your army have.Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule.Designer's Note: This means you can use rules that let you gain or spend YP to influence which ability your units have - Hostile Acquisition or Fortify Takeover - depending on which will be most beneficial to you. Remember that your army only changes ability at the end of your Command phase, so you will - sometimes need to plan ahead if you want your army to stay in or change ability.Example: In her third turn, Freida's units had the Hostile Acquisition ability, as she had 6YP at the end of her Command phase. In her fourth turn, at the end of her Command phase, she controls one objective marker within her deployment zone, and one objective marker not within her deployment zone, and her opponent controls two objective markers. Freida gains 2YP, so she now has 8YP, and her units now have the Fortify Takeover ability instead.During her turn, Freida uses a Stratagem that allows her to spend YP. She spends 2YP, bringing her total down to 6YP. However, units from her army still have Fortify Takeover - it will only change if, at the end of her next Command phase, she still has fewer than 7YP.",
+        "description": "If your Army Faction is LEAGUES OF VOTANN, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those LEAGUES OF VOTANN units have will change depending on how many Yield points (YP) you currently have:At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase.At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase.At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase.Hostile AcquisitionEach time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll.You can re-roll Advance and Charge rolls made for this unit.Fortify TakeoverEach time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll.Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic and this unit is not a VEHICLE, subtract 1 from the Wound roll.Yield PointsAt the end of each player's Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy:You control one or more objective markers not within your deployment zone.You control two or more objective markers not within your deployment zone.You control more objective markers than your opponent.In your turn, YP gained in this way are always gained before checking which ability LEAGUES OF VOTANN units from your army have.Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule.Designer's Note: This means you can use rules that let you gain or spend YP to influence which ability your units have - Hostile Acquisition or Fortify Takeover - depending on which will be most beneficial to you. Remember that your army only changes ability at the end of your Command phase, so you will - sometimes need to plan ahead if you want your army to stay in or change ability.Example: In her third turn, Freida's units had the Hostile Acquisition ability, as she had 6YP at the end of her Command phase. In her fourth turn, at the end of her Command phase, she controls one objective marker within her deployment zone, and one objective marker not within her deployment zone, and her opponent controls two objective markers. Freida gains 2YP, so she now has 8YP, and her units now have the Fortify Takeover ability instead.During her turn, Freida uses a Stratagem that allows her to spend YP. She spends 2YP, bringing her total down to 6YP. However, units from her army still have Fortify Takeover - it will only change if, at the end of her next Command phase, she still has fewer than 7YP.",
         "": "",
         "phases": [
             "Pregame",

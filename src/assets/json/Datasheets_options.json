@@ -777,6 +777,13 @@
         "": ""
     },
     {
+        "datasheet_id": "000000083",
+        "line": "4",
+        "button": "â¢",
+        "description": "If this model is equipped with a heavy bolt pistol and an Astartes chainsword, it can be equipped with 1 relic shield. This model's heavy bolt pistol and Astartes chainsword cannot be replaced.",
+        "": ""
+    },
+    {
         "datasheet_id": "000000084",
         "line": "1",
         "button": "â¢",
@@ -2180,21 +2187,35 @@
         "datasheet_id": "000000417",
         "line": "1",
         "button": "â¢",
-        "description": "The Stealth Shas'vre can be equipped with up to two of the following, and can take duplicates:1 gun drone1 marker drone1 shield drone",
+        "description": "The Stealth Shas'vre can be equipped with 1 gun drone.",
         "": ""
     },
     {
         "datasheet_id": "000000417",
         "line": "2",
         "button": "â¢",
-        "description": "For every 3 models in the unit, 1 model's burst cannon can be replaced with 1 fusion blaster.",
+        "description": "The Stealth Shas'vre can be equipped with 1 marker drone.",
         "": ""
     },
     {
         "datasheet_id": "000000417",
         "line": "3",
         "button": "â¢",
-        "description": "For every 3 models in the unit, 1 model can be equipped with 1 battlesuit support system.",
+        "description": "The Stealth Shas'vre can be equipped with 1 pulse pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000417",
+        "line": "4",
+        "button": "â¢",
+        "description": " 1 Stealth Shas'ui can be equipped with 1 homing beacon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000417",
+        "line": "5",
+        "button": "â¢",
+        "description": "2 models can each have their burst cannon replaced with 1 fusion blaster.",
         "": ""
     },
     {
@@ -2376,7 +2397,7 @@
         "datasheet_id": "000000431",
         "line": "2",
         "button": "â¢",
-        "description": "This model's 2 twin pulse carbines can be replaced with one of the following:2 accelerator burst cannons2 twin smart missile systems",
+        "description": "This model's 2 twin pulse carbines can be replaced with one of the following:2 accelerator burst cannons2 smart missile systems",
         "": ""
     },
     {
@@ -6219,14 +6240,49 @@
         "datasheet_id": "000000958",
         "line": "2",
         "button": "â¢",
-        "description": "The Raptor Champion's Astartes chainsword can be replaced with one of the following:1 accursed weapon1 power fist",
+        "description": "The Raptor Champion's Astartes chainsword can be replaced with one of the following:1 accursed weapon1 heavy melee weapon",
         "": ""
     },
     {
         "datasheet_id": "000000958",
         "line": "3",
         "button": "â¢",
-        "description": "For every 5 models in this unit, up to 2 Raptors can each have their bolt pistol replaced with 1 plasma pistol, or have their bolt pistol and Astartes chainsword replaced with one of the following:1 flamer and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
+        "description": "For every 5 models in this unit, up to 2 Raptors can each have their bolt pistol replaced with 1 plasma pistol (these models' Astartes chainswords cannot be replaced).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000958",
+        "line": "4",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, up to 2 Raptors can each have their Astartes chainsword replaced with 1 heavy melee weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000958",
+        "line": "5",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 Raptor can replace their Astartes chainsword with 1 mutations.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000958",
+        "line": "6",
+        "button": "â¢",
+        "description": "Up to 2 Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once):1 flamer and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000958",
+        "line": "7",
+        "button": "â¢",
+        "description": "If this unit contains 10 models, up to 2 additional Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once):1 flamer and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000000959",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
         "": ""
     },
     {
@@ -15225,13 +15281,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000003838",
-        "line": "1",
-        "button": "â¢",
-        "description": "None",
-        "": ""
-    },
-    {
         "datasheet_id": "000003839",
         "line": "1",
         "button": "â¢",
@@ -18168,14 +18217,42 @@
         "datasheet_id": "000004067",
         "line": "2",
         "button": "â¢",
-        "description": "The Raptor Champion's Astartes chainsword can be replaced with one of the following:1 accursed weapon1 power fist",
+        "description": "The Raptor Champion's Astartes chainsword can be replaced with one of the following:1 accursed weapon1 heavy melee weapon",
         "": ""
     },
     {
         "datasheet_id": "000004067",
         "line": "3",
         "button": "â¢",
-        "description": "For every 5 models in this unit, up to 2 Raptors can each have their bolt pistol replaced with 1 plasma pistol, or have their bolt pistol and Astartes chainsword replaced with one of the following:1 flamer and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
+        "description": "For every 5 models in this unit, up to 2 Raptors can each have their bolt pistol replaced with 1 plasma pistol (these models' Astartes chainswords cannot be replaced).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004067",
+        "line": "4",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, up to 2 Raptors can each have their Astartes chainsword replaced with 1 heavy melee weapon.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004067",
+        "line": "5",
+        "button": "â¢",
+        "description": "For every 5 models in this unit, 1 Raptor can replace their Astartes chainsword with 1 mutations.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004067",
+        "line": "6",
+        "button": "â¢",
+        "description": "Up to 2 Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once):1 flamer and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004067",
+        "line": "7",
+        "button": "â¢",
+        "description": "If this unit contains 10 models, up to 2 additional Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once):1 flamer and 1 close combat weapon1 meltagun and 1 close combat weapon1 plasma gun and 1 close combat weapon",
         "": ""
     },
     {
@@ -18211,6 +18288,13 @@
         "line": "2",
         "button": "â¢",
         "description": "This model can be equipped with 1 Chaos familiar.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004073",
+        "line": "1",
+        "button": "â¢",
+        "description": "None",
         "": ""
     },
     {
@@ -19254,6 +19338,76 @@
         "line": "1",
         "button": "â¢",
         "description": "1 model's twin gauss reaper can be replaced with 1 transdimensional isolator.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "1",
+        "button": "â¢",
+        "description": "1 Wolf Scout's plasma pistol can be replaced with 1 plasma gun.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "2",
+        "button": "â¢",
+        "description": "1 Wolf Scout equipped with a plasma pistol can be equipped with 1 haywire mine (That model's plasma pistol cannot be replaced).",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "3",
+        "button": "â¢",
+        "description": "1 Wolf Scout's plasma pistol and combat blade can be replaced with 1 bolt pistol, 1 Thunderclap and 1 runic stave.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "4",
+        "button": "â¢",
+        "description": "If this unit contains 12 models, 1 Wolf Scout's plasma pistol can be replaced with 1 instigator bolt carbine.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "1",
+        "button": "â¢",
+        "description": "The Celestian Insidiant Superior's condemnor bolt pistol can be replaced with 1 inferno pistol.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "2",
+        "button": "â¢",
+        "description": "Up to 2 Celestian Insidiants can each have their condemnor bolt pistol replaced with 1 Ministorum hand flamer.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "3",
+        "button": "â¢",
+        "description": "Up to 2 Celestian Insidiants can each have their condemnor bolt pistol and null mace replaced with 1 blessed sword.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "4",
+        "button": "â¢",
+        "description": "One Celestian Insidiant's condemnor bolt pistol and null mace can be replaced with 1 virge of admonition.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "5",
+        "button": "â¢",
+        "description": "One Celestian Insidiant's condemnor bolt pistol can be replaced with 1 denuncia oratory.",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "6",
+        "button": "â¢",
+        "description": "One Celestian Insidiant equipped with 1 condemnor bolt pistol can be equipped with 1 simulacrum imperialis (that model's condemnor bolt pistol cannot be replaced).",
         "": ""
     }
 ]

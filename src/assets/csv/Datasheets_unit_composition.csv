@@ -264,7 +264,7 @@
 000000414|1|1-3 Krootox Riders|
 000000415|1|5-10 Kroot Hounds|
 000000417|1|1 Stealth Shasâvre|
-000000417|2|2-5 Stealth Shasâui|
+000000417|2|4 Stealth Shasâui|
 000000418|1|1 Crisis Shasâvre|
 000000418|2|2-5 Crisis Shasâui|
 000000420|1|1 Ghostkeel Battlesuit|
@@ -1662,7 +1662,6 @@
 000003835|1|1 Death Company Dreadnought|
 000003836|1|5-10 Death Company Marines|
 000003837|1|5-10  Death Company Marines with Jump Packs|
-000003838|1|1 Lieutenant Titus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000003839|1|1 Tech-Priest Dominus|
 000003840|1|1 Tech-Priest Manipulus|
 000003841|1|1 Skitarii Marshal|
@@ -2102,3 +2101,26 @@
 000004178|1|1 Geomancer|
 000004179|1|1 Judiciar Xacharus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
 000004180|1|1 Chaplain Kastiel â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004181|1|1 Da Red Gobboâs Tinboy â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004182|1|1 Wolf Scout Pack Leader|
+000004182|2|4 Wolf Scouts|
+000004182|3|1 Hunting Wolf|
+000004182|4|OR|
+000004182|5|1 Wolf Scout Pack Leader|
+000004182|6|9 Wolf Scouts|
+000004182|7|2 Hunting Wolves|
+000004183|1|1 Marneus Calgar in Armour of Antilochus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004184|1|1 Cato Sicarius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004185|1|0-1 Chapter Ancient â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004185|2|0-1 Chapter Champion â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004185|3|1-6 Victrix Honour Guard|
+000004186|1|1 Nekrosor Ammentar â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004187|1|1 Captain Titus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004188|1|1 Ancient Gadriel â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004188|2|1 Veteran Sergeant Metaurus â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004188|3| 1 Gaius Silva â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004188|4| 1 Aemelia Minervas â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004188|5|1 Dainal Kornelius â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004188|6|1 Lucia Vestha â <span class="kwb">EPIC</span> <span class="kwb">HERO</span>|
+000004189|1|1 Celestian Insidiant Superior|
+000004189|2|9 Celestian Insidiants|

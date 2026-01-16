@@ -1592,7 +1592,7 @@
     {
         "datasheet_id": "000000417",
         "line": "2",
-        "description": "2-5 Stealth Shas'ui",
+        "description": "4 Stealth Shas'ui",
         "": ""
     },
     {
@@ -9978,12 +9978,6 @@
         "": ""
     },
     {
-        "datasheet_id": "000003838",
-        "line": "1",
-        "description": "1 Lieutenant Titus - EPIC HERO",
-        "": ""
-    },
-    {
         "datasheet_id": "000003839",
         "line": "1",
         "description": "1 Tech-Priest Dominus",
@@ -12615,6 +12609,144 @@
         "datasheet_id": "000004180",
         "line": "1",
         "description": "1 Chaplain Kastiel - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004181",
+        "line": "1",
+        "description": "1 Da Red Gobbo's Tinboy - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "1",
+        "description": "1 Wolf Scout Pack Leader",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "2",
+        "description": "4 Wolf Scouts",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "3",
+        "description": "1 Hunting Wolf",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "4",
+        "description": "OR",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "5",
+        "description": "1 Wolf Scout Pack Leader",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "6",
+        "description": "9 Wolf Scouts",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004182",
+        "line": "7",
+        "description": "2 Hunting Wolves",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004183",
+        "line": "1",
+        "description": "1 Marneus Calgar in Armour of Antilochus - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004184",
+        "line": "1",
+        "description": "1 Cato Sicarius - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004185",
+        "line": "1",
+        "description": "0-1 Chapter Ancient - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004185",
+        "line": "2",
+        "description": "0-1 Chapter Champion - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004185",
+        "line": "3",
+        "description": "1-6 Victrix Honour Guard",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004186",
+        "line": "1",
+        "description": "1 Nekrosor Ammentar - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004187",
+        "line": "1",
+        "description": "1 Captain Titus - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004188",
+        "line": "1",
+        "description": "1 Ancient Gadriel - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004188",
+        "line": "2",
+        "description": "1 Veteran Sergeant Metaurus - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004188",
+        "line": "3",
+        "description": " 1 Gaius Silva - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004188",
+        "line": "4",
+        "description": " 1 Aemelia Minervas - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004188",
+        "line": "5",
+        "description": "1 Dainal Kornelius - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004188",
+        "line": "6",
+        "description": "1 Lucia Vestha - EPIC HERO",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "1",
+        "description": "1 Celestian Insidiant Superior",
+        "": ""
+    },
+    {
+        "datasheet_id": "000004189",
+        "line": "2",
+        "description": "9 Celestian Insidiants",
         "": ""
     }
 ]
