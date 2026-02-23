@@ -5,7 +5,7 @@
         "date": "2/22/26",
         "changes": [
             "Migrated data source from Wahapedia to game-datacards. Unit names, weapons, and abilities now match ListForge natively.",
-            "Removed NewRecruit (NR) format support. Lists should now be imported from ListForge (listforge.net).",
+            "Removed NewRecruit (NR) format support. Lists should now be imported from ListForge (listforge.club).",
             "Eliminated ~700 lines of manual name/weapon/ability override mappings.",
             "This update clears saved lists due to the data source change. Please re-import your lists from ListForge."
         ]
