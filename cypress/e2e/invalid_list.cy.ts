@@ -13,7 +13,7 @@ describe("Invalid list submission to verify the presence of the error", () => {
         expect(str).to.equal("Name/Faction/Detachment format not recognized");
       } else if (alertCount === 2) {
         expect(str).to.equal(
-          "Error: Invalid List Format. Use the NR format (NewRecruit.eu). If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!"
+          "Error: Invalid List Format. Use the ListForge format (listforge.net). If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!"
         );
       } else {
         throw new Error("Unexpected alert fired");

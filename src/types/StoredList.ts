@@ -4,7 +4,7 @@ import Phase from "./Phase";
 interface StoredList {
   uuid: string;
   text: string;
-  textFormat: "nr" | "listforge";
+  textFormat: "listforge";
   name: string | undefined;
   units: ListUnit[];
   phase: Phase;

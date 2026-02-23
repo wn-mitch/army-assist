@@ -81,18 +81,12 @@ function Instructions() {
             </DialogTitle>
             <ol className="list-decimal list-inside text-base">
               <li>
-                Create a list on NewRecruit.eu. If you don't know what that is,
-                or just want to explore the site's features before deciding to
-                rebuild a list, you can click the sample on the List Dashboard
+                Create a list on ListForge (listforge.net). If you just want to
+                explore the site's features, you can click the sample on the
+                List Dashboard
               </li>
-              <li>Click Export</li>
-              <li>Click the "Text" Option</li>
-              <li>Select the Format as "NR"</li>
-              <li>
-                Under the "Export Options" dropdown, ensure "Include constant
-                selections" is checked
-              </li>
-              <li>Click Copy to Clipboard</li>
+              <li>Click Export or Share</li>
+              <li>Copy the list text to your clipboard</li>
               <li>Paste into the pastebox</li>
               <li>Please report any issues you find in the discord below</li>
             </ol>
@@ -153,7 +147,7 @@ function Instructions() {
             </div>
 
             <div className="mt-4 text-center text-gray-500">
-              Powered by Wahapedia
+              Data from game-datacards
             </div>
           </div>
         </div>

@@ -1496,12 +1496,64 @@ Riptide Battlesuit [190 pts]: Riptide fists, Ion accelerator, Twin smart missile
 ## Dedicated Transport [85 pts]
 Devilfish [85 pts]: Accelerator burst cannon, Armoured hull, 2x Seeker missile, 2 Smart missile systems (2x Smart missile system)`;
 
+const SampleListForgeText = `Xenos - T'au Empire - Auxiliary Cadre
+Commander Farsight (95 pts)
+  • Dawn Blade
+  • High-intensity plasma rifle
+Cadre Fireblade (50 pts)
+  • Close combat weapon
+  • Fireblade pulse rifle
+Strike Team (75 pts)
+  • 1x Fire Warrior Shas'ui
+    • Close combat weapon
+    • Pulse pistol
+    • Pulse rifle
+    • Support turret
+    • Guardian Drone
+    • Shield Drone
+  • 9x Fire Warrior w/ pulse rifle
+    • Close combat weapon
+    • Pulse pistol
+    • Pulse rifle
+Kroot Carnivores (65 pts)
+  • 1x Long-quill
+    • Close combat weapon
+    • Kroot pistol
+    • Kroot rifle
+  • 9x Kroot Carnivores
+    • Close combat weapon
+    • Kroot rifle
+Stealth Battlesuits (60 pts)
+  • 1x Stealth Shas'vre
+    • Battlesuit fists
+    • Burst cannon
+  • 2x Stealth Shas'ui w/ burst cannon
+    • Battlesuit fists
+    • Burst cannon
+Broadside Battlesuits (90 pts)
+  • 1x Broadside Shas'vre
+    • Crushing bulk
+    • Heavy rail rifle
+    • Seeker missile
+    • Twin plasma rifle
+Crisis Sunforge Battlesuits (150 pts)
+  • 1x Crisis Sunforge Shas'vre
+    • 2x Fusion blaster
+    • Battlesuit fists
+  • 2x Crisis Sunforge Shas'ui
+    • Battlesuit fists
+    • 2x Fusion blaster
+Ghostkeel Battlesuit (160 pts)
+  • Ghostkeel fists
+  • Fusion collider
+  • Twin fusion blaster`;
+
 const samplePreload = [
   {
     uuid: "8a776952-8b58-4fd8-99f6-5db83d484da4",
-    text: TauText,
-    textFormat: "nr" as const,
-    name: "(Sample) 2K Tau List",
+    text: SampleListForgeText,
+    textFormat: "listforge" as const,
+    name: "(Sample) T'au Empire List",
     units: [],
     phase: Phase.Command,
     faction: undefined,
@@ -1513,7 +1565,7 @@ const samplePreload = [
 
 const defaultObject = {
   units: [],
-  textFormat: "nr" as const,
+  textFormat: "listforge" as const,
   phase: Phase.Command,
   faction: undefined,
   detachment: undefined,

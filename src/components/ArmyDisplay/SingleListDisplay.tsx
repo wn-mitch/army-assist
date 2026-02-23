@@ -15,7 +15,7 @@ const SingleListDisplay = ({
   
   useEffect(() => {
     if (!hasUnits && hasText) {
-      parseText(activeList.text, activeList.name ?? "", activeListIndex.toString(), activeList.textFormat);
+      parseText(activeList.text, activeList.name ?? "", activeListIndex.toString());
     }
   }, [hasUnits, hasText, activeList.text, activeList.name, parseText]);
 

@@ -7,39 +7,27 @@ import useStore from "./store/store";
 
 function App() {
     const isDarkMode = useStore((state) => state.settings.isDarkMode);
-    const addListFromURLString = useStore((state) => state.addList);
-    const addListListforge = useStore((state) => state.addListListforge);
+    const addList = useStore((state) => state.addList);
 
     useEffect(() => {
         const path = window.location.pathname.substring(1); // Remove the leading '/'
         if (path) {
-            // Check if the path starts with 'listforge/'
-            if (path.startsWith("listforge/")) {
-                const listforgeData = path.substring(10); // Remove 'listforge/' prefix
-                const decodedListforgeData = decompressFromURL(listforgeData);
-                if (!decodedListforgeData) {
-                    console.error(
-                        "Error adding listforge list from URL string:",
-                        decodedListforgeData,
-                    );
-                    return;
-                }
-                addListListforge(decodedListforgeData);
-            } else {
-                const decodedData = decompressFromURL(path);
-                if (!decodedData) {
-                    console.error(
-                        "Error adding newrecruit list from URL string:",
-                        decodedData,
-                    );
-                    return;
-                }
-                addListFromURLString(decodedData);
+            // Strip optional 'listforge/' prefix for backwards compatibility
+            const data = path.startsWith("listforge/")
+                ? path.substring(10)
+                : path;
+            const decodedData = decompressFromURL(data);
+            if (!decodedData) {
+                console.error(
+                    "Error adding list from URL string:",
+                    decodedData,
+                );
+                return;
             }
-
+            addList(decodedData);
             window.history.replaceState({}, document.title, "/");
         }
-    }, [addListFromURLString, addListListforge]);
+    }, [addList]);
 
     useEffect(() => {
         if (isDarkMode) {

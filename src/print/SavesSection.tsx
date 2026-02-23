@@ -15,10 +15,9 @@ const SavesSection = (units: ListUnit[], settings: PrintSettings) => {
 
     const invSave = unit.datasheetModel?.inv_sv;
 
-    const feelNoPainId = "000008338";
     const fnp = datasheetAbilities.find(
       (ability) =>
-        ability.ability_id === feelNoPainId &&
+        ability.name.startsWith("Feel No Pain") &&
         unit.datasheetModel &&
         ability.datasheet_id === unit.datasheetModel.datasheet_id
     );

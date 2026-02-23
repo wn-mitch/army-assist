@@ -25,15 +25,7 @@ import StoredList from "@/types/StoredList";
 import LeaderAttachment from "@/types/LeaderAttachment";
 
 import { getCurrentStateVersion } from "@/utils/VersionHelper";
-import {
-    applyAbilityOverrides,
-    applyFactionOverrides,
-    applyMissingAbilities,
-    applyMissingWeapons,
-    applyNameOverrides,
-    applyWeaponAndEnhancementOverrides,
-    arraysEqual,
-} from "@/utils/StoreHelper";
+import { arraysEqual } from "@/utils/StoreHelper";
 import Settings from "@/types/Settings";
 import { samplePreload, testingPreload } from "@/utils/PreloadedLists";
 import Note from "@/types/Note";
@@ -45,8 +37,7 @@ interface StoreState {
     settings: Settings;
     currentSaveVersion: number;
     reset: () => void;
-    addList: (text?: string, format?: "nr" | "listforge") => void;
-    addListListforge: (text?: string) => void;
+    addList: (text?: string) => void;
     hasActiveList: () => boolean;
     setActiveList: (uuid: string) => void;
     getActiveList: () => StoredList;
@@ -58,9 +49,7 @@ interface StoreState {
         text: string,
         name: string,
         listIndex?: string,
-        format?: "nr" | "listforge",
     ) => boolean;
-    parseTextNR: (text: string, name: string, listIndex?: string) => boolean;
     parseTextListforge: (
         text: string,
         name: string,
@@ -149,27 +138,7 @@ const useStore = create<StoreState>()(
                     const listIndex = get().getListIndexByUUID(uuid);
                     set({ activeList: listIndex });
                 },
-                addList: (text?: string, format?: "nr" | "listforge") => {
-                    const newList: StoredList = {
-                        uuid: v4(),
-                        text: text || "",
-                        textFormat: format || "nr", // Default to 'nr' if not specified
-                        name: text ? "Imported List" : undefined,
-                        units: [],
-                        phase: Phase.Pregame,
-                        faction: undefined,
-                        detachment: undefined,
-                        created: Date.now().toString(),
-                        updated: Date.now().toString(),
-                    };
-
-                    const storedLists = get().storedLists;
-
-                    const newStoredLists = [...storedLists, newList];
-                    set({ storedLists: newStoredLists });
-                    get().setActiveList(newList.uuid);
-                },
-                addListListforge: (text?: string) => {
+                addList: (text?: string) => {
                     const newList: StoredList = {
                         uuid: v4(),
                         text: text || "",
@@ -214,7 +183,6 @@ const useStore = create<StoreState>()(
                     listText: string,
                 ) => {
                     const listIndex = get().getListIndexByUUID(uuid);
-                    const listFormat = get().storedLists[listIndex].textFormat;
                     set((state) => {
                         const lists = state.storedLists;
                         const updatedList = {
@@ -229,7 +197,7 @@ const useStore = create<StoreState>()(
                     });
 
                     // Reparse the list with the new text
-                    get().parseText(listText, listName, uuid, listFormat);
+                    get().parseText(listText, listName, uuid);
                 },
                 deleteList: (uuid: string) => {
                     const listIndex = get().getListIndexByUUID(uuid);
@@ -245,243 +213,14 @@ const useStore = create<StoreState>()(
                     const listIndex = get().getListIndexByUUID(uuid);
                     const list = get().storedLists[listIndex];
                     const name = list.name ?? "";
-                    get().parseText(
-                        list.text,
-                        name,
-                        list.uuid,
-                        list.textFormat,
-                    );
+                    get().parseText(list.text, name, list.uuid);
                 },
                 parseText: (
                     text: string,
                     name: string,
                     uuid?: string,
-                    format?: "nr" | "listforge",
                 ): boolean => {
-                    if (!format || format === "nr") {
-                        return get().parseTextNR(text, name, uuid);
-                    } else {
-                        return get().parseTextListforge(text, name, uuid);
-                    }
-                },
-                parseTextNR: (
-                    text: string,
-                    name: string,
-                    uuid?: string,
-                ): boolean => {
-                    const storedList: StoredList = {
-                        uuid: uuid || v4(),
-                        text: text,
-                        textFormat: "nr",
-                        name: undefined,
-                        units: [],
-                        phase: Phase.Pregame,
-                        faction: undefined,
-                        detachment: undefined,
-                        created: get().hasActiveList()
-                            ? get().getActiveList().created
-                            : Date.now().toString(),
-                        updated: Date.now().toString(),
-                    };
-
-                    const lines = text.split("\n");
-
-                    const factionMatch = lines[0]
-                        .trim()
-                        .match(/[\w]+ - ([\w'\s]+) -/);
-                    const factionMatchName = lines[0]
-                        .trim()
-                        .match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
-
-                    if (!factionMatch || !factionMatchName) {
-                        window.alert(
-                            "Name/Faction/Detachment format not recognized",
-                        );
-                        return false;
-                    }
-
-                    const factions = applyFactionOverrides(Factions);
-                    const factionAbbreviation = factions.filter(
-                        (f) =>
-                            f.name === factionMatch[1] ||
-                            f.name === factionMatchName[1],
-                    )[0];
-
-                    if (!factionAbbreviation) {
-                        console.error(
-                            "Faction abbreviation not found in the list",
-                        );
-                        return false;
-                    }
-
-                    const factionAbbreviationId = factionAbbreviation.id;
-                    storedList.faction = factionAbbreviationId;
-
-                    const listUnits: ListUnit[] = [];
-                    let lastParentUnit: ListUnit | null = null;
-
-                    lines.forEach((line, index) => {
-                        const detachmentMatch = line.match(
-                            /Detachment[\sChoices]*: ([\w\s-]+)/,
-                        );
-
-                        if (detachmentMatch) {
-                            // Name overrides
-                            let name = detachmentMatch[1];
-
-                            switch (name) {
-                                case "Pact-bound Zealots":
-                                    name = "Pactbound Zealots";
-                                    break;
-                                default:
-                                    break;
-                            }
-
-                            storedList.detachment = name;
-                        }
-
-                        const parentMatch = line.match(
-                            /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’]+)\s\[\d+[\s]?pts\]:\s?([\d()A-Za-zÀ-ÖØ-öø-ÿ\s\/,&’'-]+)?$/,
-                        );
-                        const childMatch = line.match(
-                            /(\d+)x\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-’'/&()]+)([\s[\]\d\w]+)?:\s([()A-Za-zÀ-ÖØ-öø-ÿ\s,'&\d-]+)/,
-                        );
-
-                        if (parentMatch) {
-                            // eslint-disable-next-line prefer-const
-                            let [, name, details] = parentMatch;
-
-                            const weapons = details
-                                ?.split(/,(?![^(]*\))/)
-                                .filter(
-                                    (name) => name !== "Warlord" && name !== "",
-                                )
-                                .map((name) =>
-                                    name.replace(/^\d+x?\s*/, "").trim(),
-                                )
-                                .flatMap((name) => {
-                                    const cleanedName = name
-                                        .replace(/\s*\((.*?)\)\s*/g, ", $1")
-                                        .trim();
-                                    return cleanedName
-                                        .split(",")
-                                        .map((part) => part.trim());
-                                });
-
-                            const weaponCount = weapons?.reduce(
-                                (acc, weapon) => {
-                                    acc[weapon] = 1;
-                                    return acc;
-                                },
-                                {} as Record<string, number>,
-                            );
-
-                            name = name.replace(" [Legends]", "");
-                            if (name) {
-                                lastParentUnit = {
-                                    id: index,
-                                    name,
-                                    details: details,
-                                    children: [],
-                                    toggled: true,
-                                    count: weaponCount,
-                                    groupCount: 1,
-                                    points: null,
-                                    datasheet_id: null,
-                                    weapons: weapons,
-                                    weaponsDatasheets: [],
-                                    abilities: [],
-                                    enhancements: [],
-                                    datasheet: null,
-                                    datasheetModel: null,
-                                    keywords: "",
-                                    notes: [],
-                                };
-
-                                listUnits.push(lastParentUnit);
-                            }
-                        } else if (childMatch) {
-                            const [, count, name, , details] = childMatch;
-
-                            const weapons = details
-                                ?.split(/,(?![^(]*\))/)
-                                .filter(
-                                    (name) => name !== "Warlord" && name !== "",
-                                )
-                                .flatMap((name) => {
-                                    const cleanedName = name
-                                        .replace(/\s*\((.*?)\)\s*/g, ", $1")
-                                        .trim();
-                                    return cleanedName
-                                        .split(",")
-                                        .map((part) => part.trim());
-                                });
-
-                            const updatedWeapons = weapons?.flatMap(
-                                (weapon) => {
-                                    const match = weapon.match(
-                                        /(\d+)x\s+([A-Za-z\s\'-]+)/,
-                                    );
-                                    if (match) {
-                                        const matchCount = parseInt(
-                                            match[1],
-                                            10,
-                                        );
-                                        const weaponName = match[2];
-                                        return Array(matchCount).fill(
-                                            weaponName,
-                                        );
-                                    }
-                                    return weapon;
-                                },
-                            );
-
-                            const weaponCount = updatedWeapons?.reduce(
-                                (acc, weapon) => {
-                                    acc[weapon] =
-                                        parseInt(count) *
-                                        updatedWeapons.filter(
-                                            (item) => item === weapon,
-                                        ).length;
-                                    return acc;
-                                },
-                                {} as Record<string, number>,
-                            );
-
-                            const unit: ListUnit = {
-                                id: index,
-                                name,
-                                details: details,
-                                toggled: true,
-                                count: weaponCount,
-                                groupCount: 1,
-                                points: null,
-                                datasheet_id: null,
-                                children: [],
-                                weapons: updatedWeapons,
-                                weaponsDatasheets: [],
-                                abilities: [],
-                                enhancements: [],
-                                datasheet: null,
-                                datasheetModel: null,
-                                keywords: "",
-                                notes: [],
-                            };
-
-                            if (lastParentUnit && lastParentUnit.children) {
-                                lastParentUnit.children.push(unit);
-                            }
-                        }
-                    });
-
-                    // Use the shared unit processing method
-                    return get().processUnitsWithDatasheets(
-                        storedList,
-                        listUnits,
-                        factionAbbreviationId,
-                        name,
-                        uuid,
-                    );
+                    return get().parseTextListforge(text, name, uuid);
                 },
                 parseTextListforge: (
                     text: string,
@@ -521,8 +260,7 @@ const useStore = create<StoreState>()(
                         return false;
                     }
 
-                    const factions = applyFactionOverrides(Factions);
-                    const factionAbbreviation = factions.filter(
+                    const factionAbbreviation = Factions.filter(
                         (f) =>
                             f.name === factionMatch[1] ||
                             f.name === factionMatchName[1],
@@ -543,17 +281,7 @@ const useStore = create<StoreState>()(
                         .match(/[\w]+ - [\w'\s]+ - ([\w'\s]+)/);
 
                     if (detachmentMatch) {
-                        let detachmentName = detachmentMatch[1];
-
-                        switch (detachmentName) {
-                            case "Pact-bound Zealots":
-                                detachmentName = "Pactbound Zealots";
-                                break;
-                            default:
-                                break;
-                        }
-
-                        storedList.detachment = detachmentName;
+                        storedList.detachment = detachmentMatch[1];
                     }
 
                     const listUnits: ListUnit[] = [];
@@ -561,19 +289,19 @@ const useStore = create<StoreState>()(
 
                     lines.forEach((line, index) => {
                         const parentMatch = line.match(
-                            /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/]+)\s\([\d]+ pts\)$/,
+                            /^([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'''\/]+)\s\([\d]+ pts\)$/,
                         );
 
                         const singleIndentBulletMatch = line.match(
-                            /^\s{2}•\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/\d,&\:]+)$/,
+                            /^\s{2}•\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'''\/\d,&\:]+)$/,
                         );
 
                         const doubleIndentBulletMatch = line.match(
-                            /^\s{4}•\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/\d,&\:]+)$/,
+                            /^\s{4}•\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'''\/\d,&\:]+)$/,
                         );
 
                         const tripleIndentBulletMatch = line.match(
-                            /^\s{6}•\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/\d,&\:]+)$/,
+                            /^\s{6}•\s([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'''\/\d,&\:]+)$/,
                         );
 
                         if (parentMatch) {
@@ -648,7 +376,7 @@ const useStore = create<StoreState>()(
                             const [, name] = doubleIndentBulletMatch;
                             const [, , count, itemName] =
                                 name.match(
-                                    /((\d+)x\s+)?([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/,&]+)/,
+                                    /((\d+)x\s+)?([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'''\/,&]+)/,
                                 ) || [];
 
                             const unit: ListUnit = {
@@ -679,7 +407,7 @@ const useStore = create<StoreState>()(
 
                             const [, , count, itemName] =
                                 name.match(
-                                    /((\d+)x\s+)?([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'‘’\/,&]+)/,
+                                    /((\d+)x\s+)?([A-Za-zÀ-ÖØ-öø-ÿ\s\-\[\]'''\/,&]+)/,
                                 ) || [];
 
                             const unit: ListUnit = {
@@ -742,8 +470,6 @@ const useStore = create<StoreState>()(
                     if (listUnits.length > 0) {
                         const updatedUnits = listUnits
                             .map((unit) => {
-                                unit = applyNameOverrides(unit);
-
                                 const datasheetsMatchingName =
                                     Datasheets.filter(
                                         (item) =>
@@ -791,10 +517,7 @@ const useStore = create<StoreState>()(
                                         (ability: Ability) =>
                                             ability.datasheet_id ===
                                             datasheetModel.datasheet_id,
-                                    ).map((ability) =>
-                                        applyAbilityOverrides(ability),
                                     );
-                                console.log(matchingAbilities);
 
                                 if (unit.children && unit.children.length > 0) {
                                     const details = unit.children
@@ -845,13 +568,7 @@ const useStore = create<StoreState>()(
                                             .map((part) => part.trim());
                                     });
 
-                                // Weapon Overrides
-                                unit.weapons =
-                                    applyWeaponAndEnhancementOverrides(
-                                        datasheet,
-                                        weapons,
-                                        unit.count ?? {},
-                                    );
+                                unit.weapons = weapons;
 
                                 const updatedCount: Record<string, number> = {};
 
@@ -889,19 +606,6 @@ const useStore = create<StoreState>()(
                                                 wargear.datasheet_id,
                                     );
 
-                                const allWeaponsDatasheets =
-                                    applyMissingWeapons(
-                                        unit,
-                                        unit.weapons ?? [],
-                                        weaponsDatasheets,
-                                    );
-
-                                const allAbilities = applyMissingAbilities(
-                                    unit,
-                                    unit.weapons ?? [],
-                                    matchingAbilities ?? [],
-                                );
-
                                 const matchingEnhancements =
                                     Enhancements.filter(
                                         (enhancement: Enhancement) =>
@@ -921,11 +625,10 @@ const useStore = create<StoreState>()(
                                     .filter((x) => x !== "")
                                     .join(", ");
 
-                                console.log(unit, allAbilities);
                                 return {
                                     ...unit,
-                                    abilities: allAbilities,
-                                    weaponsDatasheets: allWeaponsDatasheets,
+                                    abilities: matchingAbilities,
+                                    weaponsDatasheets: weaponsDatasheets,
                                     datasheet: datasheet,
                                     datasheetModel: datasheetModel,
                                     keywords: keywords,
