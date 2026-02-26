@@ -36,6 +36,10 @@ export default function Pastebox() {
                     value={text}
                     onChange={handleChange}
                 />
+                <p className="mt-1 text-xs text-gray-400">
+                    Tip: avoid using &quot; - &quot; (space-dash-space) in your
+                    ListForge list name.
+                </p>
             </div>
             <div className="flex mb-2">
                 <button

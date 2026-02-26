@@ -248,14 +248,14 @@ const useStore = create<StoreState>()(
                     const lines = text.split("\n");
                     const factionMatch = lines[0]
                         .trim()
-                        .match(/[\w]+ - ([\w'\s]+) -/);
+                        .match(/^.+? - ([\w''\s\-]+) -/);
                     const factionMatchName = lines[0]
                         .trim()
-                        .match(/[\w\-\s]*[\w]+ - ([\w'\s]+) - /);
+                        .match(/^.+? - ([\w''\s\-]+) - /);
 
                     if (!factionMatch || !factionMatchName) {
                         window.alert(
-                            "Name/Faction/Detachment format not recognized",
+                            "Name/Faction/Detachment format not recognized. Note: using ' - ' (space-dash-space) in your ListForge list name will break parsing.",
                         );
                         return false;
                     }
@@ -278,10 +278,10 @@ const useStore = create<StoreState>()(
 
                     const detachmentMatch = lines[0]
                         .trim()
-                        .match(/[\w]+ - [\w'\s]+ - ([\w'\s]+)/);
+                        .match(/^.+? - [\w''\s\-]+ - ([\w''\s\-]+?)(?:\s*\()/);
 
                     if (detachmentMatch) {
-                        storedList.detachment = detachmentMatch[1];
+                        storedList.detachment = detachmentMatch[1].trim();
                     }
 
                     const listUnits: ListUnit[] = [];
@@ -467,34 +467,77 @@ const useStore = create<StoreState>()(
                     name: string,
                     uuid?: string,
                 ): boolean => {
+                    // Faction name prefixes used by ListForge/BSData that differ
+                    // from canonical GW datasheet names
+                    const FACTION_NAME_PREFIXES: Record<string, string[]> = {
+                        WE: ["World Eater", "World Eaters"],
+                        DG: ["Death Guard"],
+                        TS: ["Thousand Sons", "Thousand Son"],
+                        EC: [
+                            "Emperor's Children",
+                            "Emperors Children",
+                        ],
+                        CSM: [
+                            "Chaos Space Marine",
+                            "Chaos Space Marines",
+                        ],
+                    };
+
+                    const findDatasheet = (unitName: string) => {
+                        const lowerName = unitName.toLowerCase();
+                        let matches = Datasheets.filter(
+                            (item) =>
+                                item.name.toLowerCase() === lowerName,
+                        );
+
+                        if (matches.length > 0) {
+                            const factionMatch = matches.find(
+                                (item) =>
+                                    item.faction_id ===
+                                    factionAbbreviationId,
+                            );
+                            return factionMatch || matches[0];
+                        }
+
+                        // Fallback: strip faction prefix and retry
+                        const prefixes =
+                            FACTION_NAME_PREFIXES[
+                                factionAbbreviationId
+                            ] || [];
+                        for (const prefix of prefixes) {
+                            if (
+                                lowerName.startsWith(
+                                    prefix.toLowerCase() + " ",
+                                )
+                            ) {
+                                const stripped = unitName
+                                    .substring(prefix.length + 1)
+                                    .trim();
+                                matches = Datasheets.filter(
+                                    (item) =>
+                                        item.name.toLowerCase() ===
+                                        stripped.toLowerCase(),
+                                );
+                                if (matches.length > 0) {
+                                    const factionMatch = matches.find(
+                                        (item) =>
+                                            item.faction_id ===
+                                            factionAbbreviationId,
+                                    );
+                                    return factionMatch || matches[0];
+                                }
+                            }
+                        }
+
+                        return undefined;
+                    };
+
                     if (listUnits.length > 0) {
                         const updatedUnits = listUnits
                             .map((unit) => {
-                                const datasheetsMatchingName =
-                                    Datasheets.filter(
-                                        (item) =>
-                                            item.name.toLowerCase() ===
-                                            unit.name.toLowerCase(),
-                                    );
-
-                                // Create an array of all unique factions in the datasheets
-                                const uniqueFactions = Array.from(
-                                    new Set(
-                                        datasheetsMatchingName.map(
-                                            (item) => item.faction_id,
-                                        ),
-                                    ),
+                                const datasheet = findDatasheet(
+                                    unit.name,
                                 );
-
-                                const datasheet = uniqueFactions.includes(
-                                    factionAbbreviationId,
-                                )
-                                    ? datasheetsMatchingName.filter(
-                                          (item) =>
-                                              item.faction_id ===
-                                              factionAbbreviationId,
-                                      )[0]
-                                    : datasheetsMatchingName[0];
 
                                 if (!datasheet) {
                                     window.alert(

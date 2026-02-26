@@ -1,68 +1,136 @@
 #!/usr/bin/env python3
 """
-Extracts data from game-datacards/datasources JSON files and transforms them
-into the app's existing Wahapedia-compatible JSON format.
+Extracts data from the 39k.pro JS bundle and transforms it into the app's
+existing JSON format.
 
 Usage:
-    python3 src/assets/extract_datacards.py
+    python3 src/assets/extract_datacards.py [path_to_bundle.js]
 
-Downloads faction JSONs from the game-datacards GitHub repo, transforms them
-to match the existing TypeScript types (Datasheet, DatasheetModel, Ability, etc.),
-and runs the keyword-based phase tagger.
+If no path is given, fetches the current bundle from https://39k.pro/.
 """
 
 import json
 import os
 import re
 import hashlib
+import ssl
+import sys
 import urllib.request
 
-REPO_BASE = "https://raw.githubusercontent.com/game-datacards/datasources/main/10th/json"
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "json")
 
-# Faction files to download and their faction IDs used by the app.
-# Maps game-datacards filename -> app faction_id
-FACTION_FILES = {
-    "adeptasororitas.json": "AS",
-    "adeptuscustodes.json": "AC",
-    "adeptusmechanicus.json": "AdM",
-    "aeldari.json": "AE",
-    "agents.json": "AoI",
-    "astramilitarum.json": "AM",
-    "blacktemplar.json": "SM",
-    "bloodangels.json": "SM",
-    "chaos_spacemarines.json": "CSM",
-    "chaosdaemons.json": "CD",
-    "chaosknights.json": "QT",
-    "darkangels.json": "SM",
-    "deathguard.json": "DG",
-    "deathwatch.json": "SM",
-    "drukhari.json": "DRU",
-    "emperors_children.json": "EC",
-    "greyknights.json": "GK",
-    "gsc.json": "GC",
-    "imperialknights.json": "QI",
-    "marines_leviathan.json": "SM",
-    "necrons.json": "NEC",
-    "orks.json": "ORK",
-    "space_marines.json": "SM",
-    "spacewolves.json": "SM",
-    "tau.json": "TAU",
-    "thousandsons.json": "TS",
-    "tyranids.json": "TYR",
-    "unaligned.json": "UN",
-    "votann.json": "LoV",
-    "worldeaters.json": "WE",
+# Maps publication name → app faction_id
+PUBLICATION_TO_FACTION = {
+    "Adepta Sororitas": "AS",
+    "Adeptus Custodes": "AC",
+    "Adeptus Mechanicus": "AdM",
+    "Aeldari": "AE",
+    "Agents of the Imperium": "AoI",
+    "Astra Militarum": "AM",
+    "Black Templars": "SM",
+    "Blood Angels": "SM",
+    "Chaos Daemons": "CD",
+    "Chaos Knights": "QT",
+    "Chaos Space Marines": "CSM",
+    "Dark Angels": "SM",
+    "Death Guard": "DG",
+    "Deathwatch": "SM",
+    "Drukhari": "DRU",
+    "Emperor's Children": "EC",
+    "Genestealer Cults": "GC",
+    "Grey Knights": "GK",
+    "Imperial Armour: Aeldari": "AE",
+    "Imperial Armour: Astra Militarum": "AM",
+    "Imperial Armour: Chaos Daemons": "CD",
+    "Imperial Armour: Chaos Space Marines": "CSM",
+    "Imperial Armour: Chaos Titan Legions": "QT",
+    "Imperial Armour: Death Guard": "DG",
+    "Imperial Armour: Drukhari": "DRU",
+    "Imperial Armour: Grey Knights": "GK",
+    "Imperial Armour: Imperial Knights": "QI",
+    "Imperial Armour: Necrons": "NEC",
+    "Imperial Armour: Orks": "ORK",
+    "Imperial Armour: Space Marines": "SM",
+    "Imperial Armour: T'au Empire": "TAU",
+    "Imperial Armour: Titan Legions": "QI",
+    "Imperial Armour: Tyranids": "TYR",
+    "Imperial Knights": "QI",
+    "Leagues of Votann": "LoV",
+    "Necrons": "NEC",
+    "Orks": "ORK",
+    "Space Marines": "SM",
+    "Space Wolves": "SM",
+    "T'au Empire": "TAU",
+    "Thousand Sons": "TS",
+    "Tyranids": "TYR",
+    "Unaligned Forces": "UN",
+    "World Eaters": "WE",
 }
 
-# Subfaction files that share a parent faction_id but have their own name in the factions list
-SM_SUBFACTION_FILES = {
-    "blacktemplar.json",
-    "bloodangels.json",
-    "darkangels.json",
-    "deathwatch.json",
-    "spacewolves.json",
-    "marines_leviathan.json",
+# faction_keyword name → app faction_id
+FACTION_KEYWORD_TO_FACTION = {
+    "Adepta Sororitas": "AS",
+    "Adeptus Astartes": "SM",
+    "Adeptus Custodes": "AC",
+    "Adeptus Mechanicus": "AdM",
+    "Aeldari": "AE",
+    "Agents of the Imperium": "AoI",
+    "Astra Militarum": "AM",
+    "Chaos Daemons": "CD",
+    "Chaos Knights": "QT",
+    "Chaos Space Marines": "CSM",
+    "Death Guard": "DG",
+    "Drukhari": "DRU",
+    "Emperor's Children": "EC",
+    "Genestealer Cults": "GC",
+    "Grey Knights": "GK",
+    "Heretic Astartes": "CSM",
+    "Imperial Knights": "QI",
+    "Leagues of Votann": "LoV",
+    "Necrons": "NEC",
+    "Orks": "ORK",
+    "T'au Empire": "TAU",
+    "Thousand Sons": "TS",
+    "Tyranids": "TYR",
+    "Unaligned": "UN",
+    "World Eaters": "WE",
+}
+
+# SM subfaction publications — get a separate faction entry but share faction_id SM
+SM_SUBFACTION_PUBLICATIONS = {
+    "Black Templars",
+    "Blood Angels",
+    "Dark Angels",
+    "Deathwatch",
+    "Space Wolves",
+}
+
+# Canonical display names for each faction_id (matching ListForge/BSData expectations)
+FACTION_DISPLAY_NAMES = {
+    "AS": "Adepta Sororitas",
+    "AC": "Adeptus Custodes",
+    "AdM": "Adeptus Mechanicus",
+    "AE": "Aeldari",
+    "AoI": "Agents of the Imperium",
+    "AM": "Astra Militarum",
+    "SM": "Space Marines",
+    "CSM": "Chaos Space Marines",
+    "CD": "Chaos Daemons",
+    "QT": "Chaos Knights",
+    "DG": "Death Guard",
+    "DRU": "Drukhari",
+    "EC": "Emperor's Children",
+    "GC": "Genestealer Cults",
+    "GK": "Grey Knights",
+    "QI": "Imperial Knights",
+    "LoV": "Leagues of Votann",
+    "NEC": "Necrons",
+    "ORK": "Orks",
+    "TAU": "T'au Empire",
+    "TS": "Thousand Sons",
+    "TYR": "Tyranids",
+    "UN": "Unaligned Forces",
+    "WE": "World Eaters",
 }
 
 
@@ -71,49 +139,354 @@ def stable_id(text: str) -> str:
     return hashlib.md5(text.encode()).hexdigest()[:9]
 
 
-def download_json(filename: str) -> dict:
-    """Download a JSON file from the game-datacards repo."""
-    url = f"{REPO_BASE}/{filename}"
-    print(f"  Downloading {filename}...")
-    req = urllib.request.Request(url, headers={"User-Agent": "army-assist-extractor"})
-    with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read().decode())
+# ─── JS Bundle Parsing ──────────────────────────────────────────────────────
+
+def fetch_bundle_url():
+    """Fetch 39k.pro and find the current bundle URL."""
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+    req = urllib.request.Request(
+        "https://39k.pro/",
+        headers={"User-Agent": "Mozilla/5.0 army-assist-extractor"},
+    )
+    with urllib.request.urlopen(req, context=ctx) as resp:
+        html = resp.read().decode()
+    m = re.search(r'src="(/assets/index-[^"]+\.js)"', html)
+    if not m:
+        raise RuntimeError("Could not find bundle URL in 39k.pro HTML")
+    return "https://39k.pro" + m.group(1)
 
 
-def strip_markdown(text: str) -> str:
-    """Remove markdown bold/italic markers from text."""
-    text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
-    text = re.sub(r'\*([^*]+)\*', r'\1', text)
-    return text
+def download_bundle(url: str) -> str:
+    """Download the JS bundle."""
+    print(f"Downloading bundle from {url}...")
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+    req = urllib.request.Request(
+        url, headers={"User-Agent": "Mozilla/5.0 army-assist-extractor"}
+    )
+    with urllib.request.urlopen(req, context=ctx) as resp:
+        return resp.read().decode()
 
 
-def rules_to_text(rules_list: list) -> str:
-    """Convert a game-datacards rules array into a single description string."""
-    parts = []
-    for rule in rules_list:
-        rtype = rule.get("type", "text")
-        text = rule.get("text", "")
-        if rtype == "header":
-            parts.append(text + ": ")
-        elif rtype == "text" or rtype == "quote":
-            parts.append(strip_markdown(text))
-        # Skip 'image' type
-    return "".join(parts)
+def extract_js_array(content: str, start: int) -> str:
+    """Extract a JSON array starting at position `start` (the '[' char)."""
+    depth = 0
+    i = start
+    in_string = False
+    string_char = None
+    prev_char = ""
+
+    while i < len(content):
+        c = content[i]
+
+        if in_string:
+            if c == "\\" and prev_char != "\\":
+                prev_char = c
+                i += 1
+                continue
+            if c == string_char and prev_char != "\\":
+                in_string = False
+            prev_char = c
+            i += 1
+            continue
+
+        if c in ('"', "'", "`"):
+            in_string = True
+            string_char = c
+        elif c == "[":
+            depth += 1
+        elif c == "]":
+            depth -= 1
+            if depth == 0:
+                return content[start : i + 1]
+
+        prev_char = c
+        i += 1
+
+    raise RuntimeError(f"Unmatched bracket starting at offset {start}")
 
 
-def parse_core_ability(core_str: str):
-    """Parse a core ability string like 'Feel No Pain 5+' or 'Scout 6"' into (name, parameter)."""
-    patterns = [
-        (r'^(Feel No Pain)\s+(\d\+)$', None),
-        (r'^(Deadly Demise)\s+(.+)$', None),
-        (r'^(Scout)\s+(.+)$', None),
-        (r'^(Firing Deck)\s+(.+)$', None),
+def js_to_json(js_str: str) -> str:
+    """Convert JS object literal syntax to valid JSON using a state-machine parser."""
+    out = []
+    i = 0
+    n = len(js_str)
+
+    while i < n:
+        c = js_str[i]
+
+        # ── Backtick string ──────────────────────────────────────────
+        if c == '`':
+            i += 1
+            buf = []
+            while i < n and js_str[i] != '`':
+                if js_str[i] == '\\' and i + 1 < n:
+                    next_c = js_str[i + 1]
+                    if next_c == '`':
+                        buf.append('`')
+                        i += 2
+                        continue
+                    elif next_c == 'n':
+                        buf.append('\\n')
+                        i += 2
+                        continue
+                    elif next_c == '\\':
+                        buf.append('\\\\')
+                        i += 2
+                        continue
+                    else:
+                        buf.append('\\')
+                        buf.append(next_c)
+                        i += 2
+                        continue
+                elif js_str[i] == '\n':
+                    buf.append('\\n')
+                    i += 1
+                    continue
+                elif js_str[i] == '\r':
+                    i += 1
+                    continue
+                elif js_str[i] == '\t':
+                    buf.append('\\t')
+                    i += 1
+                    continue
+                elif js_str[i] == '"':
+                    buf.append('\\"')
+                    i += 1
+                    continue
+                buf.append(js_str[i])
+                i += 1
+            i += 1  # skip closing backtick
+            out.append('"')
+            out.append(''.join(buf))
+            out.append('"')
+            continue
+
+        # ── Single-quoted string ─────────────────────────────────────
+        if c == "'":
+            i += 1
+            buf = []
+            while i < n and js_str[i] != "'":
+                if js_str[i] == '\\' and i + 1 < n:
+                    next_c = js_str[i + 1]
+                    if next_c == "'":
+                        buf.append("'")
+                        i += 2
+                        continue
+                    elif next_c == '"':
+                        buf.append('\\"')
+                        i += 2
+                        continue
+                    else:
+                        buf.append(js_str[i])
+                        buf.append(next_c)
+                        i += 2
+                        continue
+                elif js_str[i] == '"':
+                    buf.append('\\"')
+                    i += 1
+                    continue
+                buf.append(js_str[i])
+                i += 1
+            i += 1  # skip closing quote
+            out.append('"')
+            out.append(''.join(buf))
+            out.append('"')
+            continue
+
+        # ── Double-quoted string (pass through, fix JS escapes) ─────
+        if c == '"':
+            out.append(c)
+            i += 1
+            while i < n and js_str[i] != '"':
+                if js_str[i] == '\\' and i + 1 < n:
+                    next_c = js_str[i + 1]
+                    # Convert JS \xNN to JSON \u00NN
+                    if next_c == 'x' and i + 3 < n:
+                        hex_digits = js_str[i + 2 : i + 4]
+                        out.append('\\u00')
+                        out.append(hex_digits)
+                        i += 4
+                        continue
+                    out.append(js_str[i])
+                    out.append(next_c)
+                    i += 2
+                    continue
+                # Escape bare control characters
+                ch = js_str[i]
+                if ord(ch) < 0x20:
+                    out.append(f'\\u{ord(ch):04x}')
+                    i += 1
+                    continue
+                out.append(ch)
+                i += 1
+            if i < n:
+                out.append(js_str[i])  # closing quote
+                i += 1
+            continue
+
+        # ── !0 / !1 → true / false ──────────────────────────────────
+        if c == '!' and i + 1 < n and js_str[i + 1] in ('0', '1'):
+            out.append('true' if js_str[i + 1] == '0' else 'false')
+            i += 2
+            continue
+
+        # ── Number literal (including scientific notation like 1e3) ──
+        if c.isdigit() or (c == '-' and i + 1 < n and js_str[i + 1].isdigit()):
+            j = i
+            if c == '-':
+                j += 1
+            while j < n and js_str[j].isdigit():
+                j += 1
+            if j < n and js_str[j] == '.':
+                j += 1
+                while j < n and js_str[j].isdigit():
+                    j += 1
+            if j < n and js_str[j] in ('e', 'E'):
+                j += 1
+                if j < n and js_str[j] in ('+', '-'):
+                    j += 1
+                while j < n and js_str[j].isdigit():
+                    j += 1
+            num_str = js_str[i:j]
+            # Convert scientific notation to integer for JSON compatibility
+            try:
+                val = float(num_str)
+                if val == int(val) and 'e' in num_str.lower():
+                    out.append(str(int(val)))
+                else:
+                    out.append(num_str)
+            except ValueError:
+                out.append(num_str)
+            i = j
+            continue
+
+        # ── Unquoted key: identifier followed by : ───────────────────
+        if c.isalpha() or c == '_':
+            # Collect the identifier
+            j = i
+            while j < n and (js_str[j].isalnum() or js_str[j] == '_'):
+                j += 1
+            word = js_str[i:j]
+
+            # Check if followed by ':'  (it's a key)
+            if j < n and js_str[j] == ':':
+                # It's a key — but check it's not a value keyword
+                if word == 'null':
+                    out.append('null')
+                elif word == 'true':
+                    out.append('true')
+                elif word == 'false':
+                    out.append('false')
+                else:
+                    out.append('"')
+                    out.append(word)
+                    out.append('"')
+                i = j
+                continue
+            else:
+                # It's a value keyword (null, true, false) or something else
+                if word in ('null', 'true', 'false'):
+                    out.append(word)
+                    i = j
+                    continue
+                else:
+                    # Unknown bare word — quote it as a string
+                    out.append('"')
+                    out.append(word)
+                    out.append('"')
+                    i = j
+                    continue
+
+        # ── Trailing commas: skip comma before ] or } ────────────────
+        if c == ',':
+            # Look ahead past whitespace for ] or }
+            j = i + 1
+            while j < n and js_str[j] in ' \t\n\r':
+                j += 1
+            if j < n and js_str[j] in ']}':
+                i = j  # skip the comma
+                continue
+            out.append(c)
+            i += 1
+            continue
+
+        # ── Everything else (brackets, colons, numbers, etc.) ────────
+        out.append(c)
+        i += 1
+
+    return ''.join(out)
+
+
+def find_table(content: str, table_name: str, signature_field: str) -> list:
+    """Find a table in the JS bundle by name and signature field, extract and parse it."""
+    pattern = r"(?<![a-zA-Z_])" + re.escape(table_name) + r":\["
+    for m in re.finditer(pattern, content):
+        start = m.start()
+        # Check if the signature field appears within the first 500 chars
+        peek = content[start : start + 500]
+        if signature_field in peek:
+            # Found the right table instance
+            array_start = content.index("[", start)
+            js_array = extract_js_array(content, array_start)
+            json_str = js_to_json(js_array)
+            try:
+                return json.loads(json_str)
+            except json.JSONDecodeError as e:
+                # Try to show context around the error
+                pos = e.pos or 0
+                context = json_str[max(0, pos - 100) : pos + 100]
+                print(f"  JSON parse error in {table_name} at pos {pos}: {e.msg}")
+                print(f"  Context: ...{context}...")
+                raise
+    raise RuntimeError(f"Table '{table_name}' with signature '{signature_field}' not found")
+
+
+def extract_tables(content: str) -> dict:
+    """Extract all needed tables from the JS bundle."""
+    tables = {}
+
+    table_specs = [
+        ("datasheet", "publicationId:"),
+        ("miniature", "movement:"),
+        ("publication", "factionKeywordId:"),
+        ("faction_keyword", "commonName:"),
+        ("keyword", "allyRestrictingKeywordId:"),
+        ("wargear_item", "wargearType:"),
+        ("wargear_item_profile", "ballisticSkill:"),
+        ("wargear_item_profile_wargear_ability", "wargearItemProfileId:"),
+        ("wargear_ability", "lore:"),
+        ("wargear_option_group", "isStaticWargear:"),
+        ("wargear_option", "wargearOptionGroupId:"),
+        ("datasheet_ability", "abilityType:"),
+        ("datasheet_datasheet_ability", "datasheetAbilityId:"),
+        ("datasheet_sub_ability", "datasheetAbilityId:"),
+        ("datasheet_rule", "datasheetId:"),
+        ("datasheet_damage", "datasheetId:"),
+        ("datasheet_faction_keyword", "factionKeywordId:"),
+        ("miniature_keyword", "miniatureId:"),
+        ("invulnerable_save", "rangedSave:"),
+        ("stratagem", "whenRules:"),
+        ("enhancement", "basePointsCost:"),
+        ("army_rule", "publicationId:"),
+        ("detachment_rule", "detachmentId:"),
+        ("detachment", "bannerImage:"),
+        ("rule_container_component", "textContent:"),
     ]
-    for pattern, _ in patterns:
-        m = re.match(pattern, core_str)
-        if m:
-            return m.group(1), m.group(2)
-    return core_str, ""
+
+    for table_name, sig in table_specs:
+        print(f"  Extracting {table_name}...")
+        try:
+            tables[table_name] = find_table(content, table_name, sig)
+            print(f"    -> {len(tables[table_name])} rows")
+        except RuntimeError as e:
+            print(f"    WARNING: {e}")
+            tables[table_name] = []
+
+    return tables
 
 
 # ─── Phase tagging ───────────────────────────────────────────────────────────
@@ -393,463 +766,26 @@ def determine_phases(description: str, is_stratagem: bool = False) -> list:
     return phases
 
 
-# ─── Main extraction ─────────────────────────────────────────────────────────
+def strip_markdown(text: str) -> str:
+    """Remove markdown bold/italic markers from text."""
+    text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
+    text = re.sub(r'\*([^*]+)\*', r'\1', text)
+    return text
 
-def extract_all():
-    datasheets = []
-    datasheet_models = []
-    datasheet_abilities = []
-    datasheet_wargear = []
-    datasheet_keywords = []
-    datasheet_leader = []
-    enhancements = []
-    stratagems = []
-    factions = []
-    army_abilities = []
-    detachment_abilities = []
 
-    # Track seen datasheet IDs to avoid duplicates across SM subfaction files
-    seen_datasheet_ids = set()
-    # Track faction IDs we've already added to factions list
-    seen_faction_ids = set()
-
-    # Download and process core stratagems first
-    print("Downloading core.json...")
-    core_data = download_json("core.json")
-    for strat in core_data.get("stratagems", []):
-        stratagems.append({
-            "faction_id": "",
-            "name": strat["name"].upper(),
-            "id": strat["id"],
-            "type": f"Core - {strat.get('type', '')} Stratagem",
-            "cp_cost": str(strat.get("cost", "")),
-            "legend": strat.get("fluff", ""),
-            "turn": strat.get("turn", ""),
-            "phase": ", ".join(p.capitalize() + " phase" for p in strat.get("phase", [])) if strat.get("phase") else "",
-            "detachment": "",
-            "detachment_id": "",
-            "description": build_stratagem_description(strat),
-        })
-
-    for filename, app_faction_id in FACTION_FILES.items():
-        print(f"\nProcessing {filename} (faction: {app_faction_id})...")
-        try:
-            data = download_json(filename)
-        except Exception as e:
-            print(f"  ERROR downloading {filename}: {e}")
-            continue
-
-        gc_faction_id = data.get("id", "")
-        gc_faction_name = data.get("name", "")
-
-        # Build faction entry
-        if app_faction_id not in seen_faction_ids:
-            factions.append({
-                "id": app_faction_id,
-                "name": gc_faction_name,
-                "link": data.get("link", ""),
-            })
-            seen_faction_ids.add(app_faction_id)
-
-        # For SM subfactions, add extra faction entry so lists using the subfaction name resolve
-        if filename in SM_SUBFACTION_FILES and gc_faction_name:
-            factions.append({
-                "id": app_faction_id,
-                "name": gc_faction_name,
-                "link": data.get("link", ""),
-            })
-
-        # ─── Datasheets ──────────────────────────────────────────────
-        # Build a name->id lookup for leader cross-referencing within this faction
-        # Use uppercase keys since leads.units[] uses UPPERCASE names
-        name_to_id = {}
-        for ds in data.get("datasheets", []):
-            ds_id = ds["id"]
-            name_to_id[ds["name"].upper()] = ds_id
-
-        for ds in data.get("datasheets", []):
-            ds_id = ds["id"]
-
-            if ds_id in seen_datasheet_ids:
-                continue
-            seen_datasheet_ids.add(ds_id)
-
-            # Damaged ability info
-            damaged_w = ""
-            damaged_desc = ""
-            if ds["abilities"].get("damaged") and ds["abilities"]["damaged"].get("range"):
-                damaged_w = ds["abilities"]["damaged"]["range"]
-                damaged_desc = ds["abilities"]["damaged"].get("description", "")
-
-            datasheets.append({
-                "id": ds_id,
-                "name": ds["name"],
-                "faction_id": app_faction_id,
-                "source_id": "",
-                "legend": ds.get("fluff", ""),
-                "role": "",
-                "loadout": ds.get("loadout", ""),
-                "transport": ds.get("transport", ""),
-                "virtual": "false",
-                "leader_head": ds.get("leader", ""),
-                "leader_footer": "",
-                "damaged_w": damaged_w,
-                "damaged_description": damaged_desc,
-                "link": "",
-            })
-
-            # ─── Stats / Models ──────────────────────────────────────
-            invul_value = ""
-            invul_info = ""
-            invul_data = ds["abilities"].get("invul")
-            if invul_data and invul_data.get("value"):
-                invul_value = invul_data["value"]
-                invul_info = invul_data.get("info", "") or ""
-                # Strip the "+" from invul for consistency with existing data
-                # Existing data stores just the number (e.g., "5" not "5+")
-                if invul_value.endswith("+"):
-                    invul_value = invul_value[:-1]
-
-            for line_idx, stat in enumerate(ds.get("stats", []), start=1):
-                datasheet_models.append({
-                    "datasheet_id": ds_id,
-                    "line": str(line_idx),
-                    "name": stat.get("name", ds["name"]),
-                    "M": stat.get("m", ""),
-                    "T": stat.get("t", ""),
-                    "Sv": stat.get("sv", ""),
-                    "inv_sv": invul_value if invul_value else "-",
-                    "inv_sv_descr": invul_info,
-                    "W": stat.get("w", ""),
-                    "Ld": stat.get("ld", ""),
-                    "OC": stat.get("oc", ""),
-                    "base_size": "",
-                    "base_size_descr": "",
-                })
-
-            # ─── Weapons ─────────────────────────────────────────────
-            wargear_line = 1
-            for weapon_group in ds.get("rangedWeapons", []):
-                for profile in weapon_group.get("profiles", []):
-                    rng = profile.get("range", "")
-                    if rng and rng != "Melee":
-                        rng = rng.replace('"', '').replace("\"", "")
-                    datasheet_wargear.append({
-                        "datasheet_id": ds_id,
-                        "line": str(wargear_line),
-                        "line_in_wargear": "1",
-                        "dice": "",
-                        "name": profile["name"],
-                        "description": ", ".join(k.lower() for k in profile.get("keywords", [])),
-                        "range": rng,
-                        "type": "Ranged",
-                        "A": profile.get("attacks", ""),
-                        "BS_WS": profile.get("skill", "").replace("+", ""),
-                        "S": profile.get("strength", ""),
-                        "AP": profile.get("ap", ""),
-                        "D": profile.get("damage", ""),
-                    })
-                    wargear_line += 1
-
-            for weapon_group in ds.get("meleeWeapons", []):
-                for profile in weapon_group.get("profiles", []):
-                    datasheet_wargear.append({
-                        "datasheet_id": ds_id,
-                        "line": str(wargear_line),
-                        "line_in_wargear": "1",
-                        "dice": "",
-                        "name": profile["name"],
-                        "description": ", ".join(k.lower() for k in profile.get("keywords", [])),
-                        "range": "Melee",
-                        "type": "Melee",
-                        "A": profile.get("attacks", ""),
-                        "BS_WS": profile.get("skill", "").replace("+", ""),
-                        "S": profile.get("strength", ""),
-                        "AP": profile.get("ap", ""),
-                        "D": profile.get("damage", ""),
-                    })
-                    wargear_line += 1
-
-            # ─── Abilities ───────────────────────────────────────────
-            ability_line = 1
-
-            # Core abilities
-            for core_str in ds["abilities"].get("core", []):
-                name, parameter = parse_core_ability(core_str)
-
-                # Build description for core abilities
-                description = get_core_ability_description(name)
-
-                datasheet_abilities.append({
-                    "datasheet_id": ds_id,
-                    "line": str(ability_line),
-                    "ability_id": "",
-                    "model": "",
-                    "name": name if not parameter else f"{name} {parameter}",
-                    "description": description,
-                    "type": "Core",
-                    "parameter": parameter,
-                })
-                ability_line += 1
-
-            # Faction abilities
-            for faction_str in ds["abilities"].get("faction", []):
-                datasheet_abilities.append({
-                    "datasheet_id": ds_id,
-                    "line": str(ability_line),
-                    "ability_id": "",
-                    "model": "",
-                    "name": faction_str,
-                    "description": "",
-                    "type": "Faction",
-                    "parameter": "",
-                })
-                ability_line += 1
-
-            # Other abilities
-            for ability in ds["abilities"].get("other", []):
-                desc = strip_markdown(ability.get("description", ""))
-                datasheet_abilities.append({
-                    "datasheet_id": ds_id,
-                    "line": str(ability_line),
-                    "ability_id": "",
-                    "model": "",
-                    "name": ability["name"],
-                    "description": desc,
-                    "type": "Other",
-                    "parameter": "",
-                })
-                ability_line += 1
-
-            # Wargear abilities
-            for ability in ds["abilities"].get("wargear", []):
-                desc = strip_markdown(ability.get("description", ""))
-                datasheet_abilities.append({
-                    "datasheet_id": ds_id,
-                    "line": str(ability_line),
-                    "ability_id": "",
-                    "model": "",
-                    "name": ability["name"],
-                    "description": desc,
-                    "type": "Wargear",
-                    "parameter": "",
-                })
-                ability_line += 1
-
-            # Special abilities
-            for ability in ds["abilities"].get("special", []):
-                desc = strip_markdown(ability.get("description", ""))
-                datasheet_abilities.append({
-                    "datasheet_id": ds_id,
-                    "line": str(ability_line),
-                    "ability_id": "",
-                    "model": "",
-                    "name": ability["name"],
-                    "description": desc,
-                    "type": "Special",
-                    "parameter": "",
-                })
-                ability_line += 1
-
-            # Primarch abilities
-            for ability in ds["abilities"].get("primarch", []):
-                desc = strip_markdown(ability.get("description", ""))
-                datasheet_abilities.append({
-                    "datasheet_id": ds_id,
-                    "line": str(ability_line),
-                    "ability_id": "",
-                    "model": "",
-                    "name": ability["name"],
-                    "description": desc,
-                    "type": "Primarch",
-                    "parameter": "",
-                })
-                ability_line += 1
-
-            # Damaged ability
-            if damaged_w and damaged_desc:
-                datasheet_abilities.append({
-                    "datasheet_id": ds_id,
-                    "line": str(ability_line),
-                    "ability_id": "",
-                    "model": "",
-                    "name": f"Damaged: {damaged_w}",
-                    "description": strip_markdown(damaged_desc),
-                    "type": "Other",
-                    "parameter": "",
-                })
-                ability_line += 1
-
-            # ─── Keywords ────────────────────────────────────────────
-            for kw in ds.get("keywords", []):
-                datasheet_keywords.append({
-                    "datasheet_id": ds_id,
-                    "keyword": kw,
-                    "model": "",
-                    "is_faction_keyword": "true" if kw in ds.get("factions", []) else "false",
-                })
-
-            # Also add faction keywords
-            for fkw in ds.get("factions", []):
-                if fkw not in ds.get("keywords", []):
-                    datasheet_keywords.append({
-                        "datasheet_id": ds_id,
-                        "keyword": fkw,
-                        "model": "",
-                        "is_faction_keyword": "true",
-                    })
-
-            # ─── Leader attachments ──────────────────────────────────
-            if ds.get("leads") and ds["leads"].get("units"):
-                for unit_name in ds["leads"]["units"]:
-                    # Look up the target unit's ID (leads uses UPPERCASE names)
-                    target_id = name_to_id.get(unit_name.upper(), "")
-                    if target_id:
-                        datasheet_leader.append({
-                            "leader_id": ds_id,
-                            "attached_id": target_id,
-                        })
-
-        # ─── Stratagems ──────────────────────────────────────────────
-        for strat in data.get("stratagems", []):
-            phase_str = ", ".join(
-                p.capitalize() + " phase" for p in strat.get("phase", [])
-            ) if strat.get("phase") else ""
-
-            stratagems.append({
-                "faction_id": app_faction_id,
-                "name": strat["name"].upper(),
-                "id": strat.get("id", ""),
-                "type": f"{strat.get('detachment', '')} - {strat.get('type', '')} Stratagem",
-                "cp_cost": str(strat.get("cost", "")),
-                "legend": strat.get("fluff", ""),
-                "turn": strat.get("turn", ""),
-                "phase": phase_str,
-                "detachment": strat.get("detachment", ""),
-                "detachment_id": "",
-                "description": build_stratagem_description(strat),
-            })
-
-        # ─── Enhancements ────────────────────────────────────────────
-        for enh in data.get("enhancements", []):
-            enhancements.append({
-                "faction_id": app_faction_id,
-                "id": enh.get("id", ""),
-                "name": enh["name"],
-                "cost": str(enh.get("cost", "")),
-                "detachment": enh.get("detachment", ""),
-                "detachment_id": "",
-                "legend": "",
-                "description": strip_markdown(enh.get("description", "")),
-            })
-
-        # ─── Army rules ──────────────────────────────────────────────
-        for rule in data.get("rules", {}).get("army", []):
-            rule_name = rule.get("name", "")
-            rule_text = rules_to_text(rule.get("rules", []))
-            army_abilities.append({
-                "id": stable_id(f"{app_faction_id}-{rule_name}"),
-                "name": rule_name,
-                "legend": "",
-                "faction_id": app_faction_id,
-                "description": strip_markdown(rule_text),
-            })
-
-        # ─── Detachment rules ────────────────────────────────────────
-        for det_rule in data.get("rules", {}).get("detachment", []):
-            det_name = det_rule.get("detachment", "")
-            for sub_rule in det_rule.get("rules", []):
-                rule_name = sub_rule.get("name", "")
-                rule_text = rules_to_text(sub_rule.get("rules", []))
-                detachment_abilities.append({
-                    "id": stable_id(f"{app_faction_id}-{det_name}-{rule_name}"),
-                    "faction_id": app_faction_id,
-                    "name": rule_name,
-                    "legend": "",
-                    "description": strip_markdown(rule_text),
-                    "detachment": det_name,
-                    "detachment_id": "",
-                })
-
-    # Add extra faction aliases needed by the app
-    extra_factions = [
-        {"id": "AE", "name": "Ynnari", "link": ""},
-        {"id": "SM", "name": "Adeptus Astartes", "link": ""},
-        {"id": "TAU", "name": "T'au Empire", "link": ""},
+def parse_core_ability(core_str: str):
+    """Parse a core ability string like 'Feel No Pain 5+' into (name, parameter)."""
+    patterns = [
+        r'^(Feel No Pain)\s+(\d\+)$',
+        r'^(Deadly Demise)\s+(.+)$',
+        r'^(Scout)\s+(.+)$',
+        r'^(Firing Deck)\s+(.+)$',
     ]
-    for ef in extra_factions:
-        # Only add if not already present
-        if not any(f["id"] == ef["id"] and f["name"] == ef["name"] for f in factions):
-            factions.append(ef)
-
-    # ─── Phase tagging ───────────────────────────────────────────────
-    print("\nRunning phase tagger on abilities...")
-    for ability in datasheet_abilities:
-        desc = ability.get("description", "")
-        name = ability.get("name", "")
-        # Use name + description for phase detection
-        text = f"{name} {desc}"
-        ability["phases"] = determine_phases(text)
-
-    print("Running phase tagger on army abilities...")
-    for ability in army_abilities:
-        ability["phases"] = determine_phases(ability.get("description", ""))
-
-    print("Running phase tagger on detachment abilities...")
-    for ability in detachment_abilities:
-        ability["phases"] = determine_phases(ability.get("description", ""))
-
-    print("Running phase tagger on enhancements...")
-    for enh in enhancements:
-        enh["phases"] = determine_phases(enh.get("description", ""))
-
-    print("Running phase tagger on stratagems...")
-    for strat in stratagems:
-        strat["phases"] = determine_phases(strat.get("phase", ""), is_stratagem=True)
-
-    # ─── Write output files ──────────────────────────────────────────
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-    files = {
-        "Datasheets.json": datasheets,
-        "Datasheets_models.json": datasheet_models,
-        "Datasheets_abilities.json": datasheet_abilities,
-        "Datasheets_abilities_modified.json": datasheet_abilities,
-        "Datasheets_wargear.json": datasheet_wargear,
-        "Datasheets_keywords.json": datasheet_keywords,
-        "Datasheets_leader.json": datasheet_leader,
-        "Enhancements.json": enhancements,
-        "Enhancements_modified.json": enhancements,
-        "Stratagems.json": stratagems,
-        "Stratagems_modified.json": stratagems,
-        "Factions.json": factions,
-        "Abilities.json": army_abilities,
-        "Abilities_modified.json": army_abilities,
-        "Detachment_abilities.json": detachment_abilities,
-        "Detachment_abilities_modified.json": detachment_abilities,
-    }
-
-    for fname, data in files.items():
-        path = os.path.join(OUTPUT_DIR, fname)
-        with open(path, "w") as f:
-            json.dump(data, f, indent=4, ensure_ascii=False)
-        print(f"  Wrote {fname} ({len(data)} entries)")
-
-    print(f"\nDone! {len(datasheets)} datasheets, {len(factions)} factions.")
-
-
-def build_stratagem_description(strat: dict) -> str:
-    """Build the combined description from when/target/effect/restrictions fields."""
-    parts = []
-    if strat.get("when"):
-        parts.append(f"WHEN: {strat['when']}")
-    if strat.get("target"):
-        parts.append(f"TARGET: {strat['target']}")
-    if strat.get("effect"):
-        parts.append(f"EFFECT: {strat['effect']}")
-    if strat.get("restrictions"):
-        parts.append(f"RESTRICTIONS: {strat['restrictions']}")
-    return strip_markdown("".join(parts))
+    for pattern in patterns:
+        m = re.match(pattern, core_str)
+        if m:
+            return m.group(1), m.group(2)
+    return core_str, ""
 
 
 def get_core_ability_description(name: str) -> str:
@@ -871,5 +807,778 @@ def get_core_ability_description(name: str) -> str:
     return descriptions.get(name, "")
 
 
+# ─── Main extraction ─────────────────────────────────────────────────────────
+
+def extract_all(bundle_content: str):
+    tables = extract_tables(bundle_content)
+
+    # Build lookup indices
+    print("\nBuilding indices...")
+
+    # publication id -> publication record
+    pub_by_id = {p["id"]: p for p in tables["publication"]}
+
+    # faction_keyword id -> record (built first since pub_to_faction needs it)
+    fk_by_id = {fk["id"]: fk for fk in tables["faction_keyword"]}
+
+    # publication id -> faction_id (app)
+    pub_to_faction = {}
+    for pub in tables["publication"]:
+        pub_name = pub["name"]
+        faction_id = PUBLICATION_TO_FACTION.get(pub_name)
+        if not faction_id:
+            # Try stripping common prefixes
+            for prefix in ["Codex: ", "Index: ", "Combat Patrol: "]:
+                if pub_name.startswith(prefix):
+                    stripped = pub_name[len(prefix):]
+                    faction_id = PUBLICATION_TO_FACTION.get(stripped)
+                    if faction_id:
+                        break
+        if not faction_id:
+            # Try via factionKeywordId -> faction_keyword -> FACTION_KEYWORD_TO_FACTION
+            fk_id = pub.get("factionKeywordId")
+            if fk_id:
+                fk = fk_by_id.get(fk_id, {})
+                fk_name = fk.get("name", "")
+                faction_id = FACTION_KEYWORD_TO_FACTION.get(fk_name)
+        if faction_id:
+            pub_to_faction[pub["id"]] = faction_id
+
+    # keyword id -> record
+    kw_by_id = {kw["id"]: kw for kw in tables["keyword"]}
+
+    # datasheet_ability id -> record
+    ability_by_id = {a["id"]: a for a in tables["datasheet_ability"]}
+
+    # datasheetAbilityId -> list of sub-abilities
+    sub_abilities_by_parent = {}
+    for sa in tables["datasheet_sub_ability"]:
+        parent_id = sa.get("datasheetAbilityId", "")
+        sub_abilities_by_parent.setdefault(parent_id, []).append(sa)
+
+    # wargear_item id -> record
+    wargear_item_by_id = {wi["id"]: wi for wi in tables["wargear_item"]}
+
+    # wargear_ability id -> record
+    wargear_ability_by_id = {wa["id"]: wa for wa in tables["wargear_ability"]}
+
+    # wargear_item_profile id -> list of wargear_ability names
+    profile_abilities = {}
+    for link in tables["wargear_item_profile_wargear_ability"]:
+        pid = link["wargearItemProfileId"]
+        aid = link["wargearAbilityId"]
+        wa = wargear_ability_by_id.get(aid, {})
+        profile_abilities.setdefault(pid, []).append(wa.get("name", ""))
+
+    # datasheet id -> invulnerable_save record
+    invul_by_ds = {}
+    for inv in tables["invulnerable_save"]:
+        ds_id = inv.get("datasheetId")
+        if ds_id:
+            invul_by_ds[ds_id] = inv
+
+    # datasheet id -> datasheet_damage records
+    damage_by_ds = {}
+    for dmg in tables["datasheet_damage"]:
+        ds_id = dmg.get("datasheetId")
+        if ds_id:
+            damage_by_ds.setdefault(ds_id, []).append(dmg)
+
+    # datasheet id -> datasheet_rule records
+    rules_by_ds = {}
+    for rule in tables["datasheet_rule"]:
+        ds_id = rule.get("datasheetId")
+        if ds_id:
+            rules_by_ds.setdefault(ds_id, []).append(rule)
+
+    # miniature datasheetId -> list of miniatures
+    minis_by_ds = {}
+    for mini in tables["miniature"]:
+        ds_id = mini.get("datasheetId", "")
+        minis_by_ds.setdefault(ds_id, []).append(mini)
+
+    # Sort miniatures by displayOrder
+    for ds_id in minis_by_ds:
+        minis_by_ds[ds_id].sort(key=lambda m: m.get("displayOrder", 0))
+
+    # datasheetId -> list of ability links (sorted by displayOrder)
+    ability_links_by_ds = {}
+    for link in tables["datasheet_datasheet_ability"]:
+        ds_id = link.get("datasheetId", "")
+        ability_links_by_ds.setdefault(ds_id, []).append(link)
+    for ds_id in ability_links_by_ds:
+        ability_links_by_ds[ds_id].sort(key=lambda x: x.get("displayOrder", 0))
+
+    # datasheetId -> list of faction keyword links
+    ds_fk_links = {}
+    for link in tables["datasheet_faction_keyword"]:
+        ds_id = link.get("datasheetId", "")
+        ds_fk_links.setdefault(ds_id, []).append(link)
+
+    # miniatureId -> list of keyword links
+    mini_kw_links = {}
+    for link in tables["miniature_keyword"]:
+        mid = link.get("miniatureId", "")
+        mini_kw_links.setdefault(mid, []).append(link)
+
+    # wargearItemId -> list of profiles
+    profiles_by_wargear = {}
+    for prof in tables["wargear_item_profile"]:
+        wi_id = prof.get("wargearItemId", "")
+        profiles_by_wargear.setdefault(wi_id, []).append(prof)
+
+    # Build datasheetId -> set of wargearItemIds via wargear_option_group + wargear_option
+    # Chain: wargear_option_group (datasheetId) -> wargear_option (wargearOptionGroupId -> wargearItemId)
+    wog_to_ds = {}  # wargearOptionGroupId -> datasheetId
+    for wog in tables.get("wargear_option_group", []):
+        wog_to_ds[wog["id"]] = wog.get("datasheetId", "")
+
+    wargear_to_ds = {}  # wargearItemId -> set of datasheetIds
+    for wo in tables.get("wargear_option", []):
+        wi_id = wo.get("wargearItemId", "")
+        wog_id = wo.get("wargearOptionGroupId", "")
+        ds_id = wog_to_ds.get(wog_id, "")
+        if ds_id and wi_id:
+            wargear_to_ds.setdefault(wi_id, set()).add(ds_id)
+
+    # Build datasheetId -> list of wargear_item_profiles
+    wargear_profiles_by_ds = {}
+    for prof in tables["wargear_item_profile"]:
+        wi_id = prof.get("wargearItemId", "")
+        ds_ids = wargear_to_ds.get(wi_id, set())
+        for ds_id in ds_ids:
+            wargear_profiles_by_ds.setdefault(ds_id, []).append(prof)
+
+    # detachment id -> record
+    det_by_id = {d["id"]: d for d in tables["detachment"]}
+
+    # army_rule id -> record
+    army_rule_by_id = {ar["id"]: ar for ar in tables["army_rule"]}
+
+    # detachment_rule id -> record
+    det_rule_by_id = {dr["id"]: dr for dr in tables["detachment_rule"]}
+
+    # rule_container_component: armyRuleId -> list of text components
+    rcc_by_army_rule = {}
+    rcc_by_det_rule = {}
+    for rcc in tables["rule_container_component"]:
+        ar_id = rcc.get("armyRuleId")
+        dr_id = rcc.get("detachmentRuleId")
+        if ar_id:
+            rcc_by_army_rule.setdefault(ar_id, []).append(rcc)
+        if dr_id:
+            rcc_by_det_rule.setdefault(dr_id, []).append(rcc)
+
+    # Sort rule components by displayOrder
+    for key in rcc_by_army_rule:
+        rcc_by_army_rule[key].sort(key=lambda x: x.get("displayOrder", 0))
+    for key in rcc_by_det_rule:
+        rcc_by_det_rule[key].sort(key=lambda x: x.get("displayOrder", 0))
+
+    # army_rule_faction_keyword junction: find it
+    print("  Extracting army_rule_faction_keyword junction...")
+    try:
+        ar_fk_junction = find_table(bundle_content, "army_rule_faction_keyword", "armyRuleId:")
+        print(f"    -> {len(ar_fk_junction)} rows")
+    except RuntimeError:
+        # Try alternate naming
+        try:
+            ar_fk_junction = find_table(bundle_content, "army_rule", "factionKeywordId:")
+            print(f"    -> {len(ar_fk_junction)} rows")
+        except RuntimeError:
+            ar_fk_junction = []
+            print("    WARNING: not found, army rules won't have faction mapping")
+
+    # armyRuleId -> factionKeywordId
+    ar_to_fk = {}
+    for entry in ar_fk_junction:
+        ar_to_fk[entry.get("armyRuleId", "")] = entry.get("factionKeywordId", "")
+
+    # ─── Build output data ───────────────────────────────────────────────
+
+    datasheets = []
+    datasheet_models = []
+    datasheet_abilities = []
+    datasheet_wargear = []
+    datasheet_keywords = []
+    datasheet_leader = []
+    enhancements_out = []
+    stratagems_out = []
+    factions = []
+    army_abilities = []
+    detachment_abilities = []
+
+    seen_faction_ids = set()
+
+    print("\nProcessing datasheets...")
+    for ds in tables["datasheet"]:
+        ds_id = ds["id"]
+        pub_id = ds.get("publicationId", "")
+        faction_id = pub_to_faction.get(pub_id, "")
+
+        if not faction_id:
+            # Try to infer faction from faction keywords on this datasheet
+            fk_links = ds_fk_links.get(ds_id, [])
+            for fk_link in fk_links:
+                fk_id = fk_link.get("factionKeywordId", "")
+                fk = fk_by_id.get(fk_id, {})
+                fk_name = fk.get("name", "")
+                if fk_name in FACTION_KEYWORD_TO_FACTION:
+                    faction_id = FACTION_KEYWORD_TO_FACTION[fk_name]
+                    break
+
+        if not faction_id:
+            # Skip datasheets we can't map to a faction
+            continue
+
+        # Skip combat patrol datasheets
+        pub = pub_by_id.get(pub_id, {})
+        if pub.get("isCombatPatrol"):
+            continue
+
+        # Build faction entry
+        pub = pub_by_id.get(pub_id, {})
+        pub_name = pub.get("name", "")
+
+        if faction_id not in seen_faction_ids:
+            faction_display = FACTION_DISPLAY_NAMES.get(faction_id, faction_id)
+            factions.append({
+                "id": faction_id,
+                "name": faction_display,
+                "link": "",
+            })
+            seen_faction_ids.add(faction_id)
+
+        # SM subfaction extra entries
+        # Derive subfaction name from publication
+        subfaction_name = pub_name
+        for prefix in ["Codex: ", "Codex Supplement: ", "Index: "]:
+            if subfaction_name.startswith(prefix):
+                subfaction_name = subfaction_name[len(prefix):]
+                break
+        if subfaction_name in SM_SUBFACTION_PUBLICATIONS:
+            if not any(f["name"] == subfaction_name and f["id"] == "SM" for f in factions):
+                factions.append({
+                    "id": "SM",
+                    "name": subfaction_name,
+                    "link": "",
+                })
+
+        # Damaged info
+        damaged_w = ""
+        damaged_desc = ""
+        damage_records = damage_by_ds.get(ds_id, [])
+        if damage_records:
+            dmg = damage_records[0]
+            damaged_w = dmg.get("name", "")
+            damaged_desc = strip_markdown(dmg.get("rules", ""))
+
+        # Leader/transport info from datasheet_rule
+        leader_text = ""
+        transport_text = ""
+        loadout_text = ds.get("unitComposition", "") or ""
+        for rule in rules_by_ds.get(ds_id, []):
+            rule_name = (rule.get("name", "") or "").lower()
+            rule_text = rule.get("rules", "") or ""
+            if rule_name == "leader":
+                leader_text = strip_markdown(rule_text)
+            elif rule_name == "transport":
+                transport_text = strip_markdown(rule_text)
+
+        datasheets.append({
+            "id": ds_id,
+            "name": ds["name"],
+            "faction_id": faction_id,
+            "source_id": "",
+            "legend": ds.get("lore", "") or "",
+            "role": "",
+            "loadout": strip_markdown(loadout_text),
+            "transport": transport_text,
+            "virtual": "false",
+            "leader_head": leader_text,
+            "leader_footer": "",
+            "damaged_w": damaged_w,
+            "damaged_description": damaged_desc,
+            "link": "",
+        })
+
+        # ─── Stats / Models ──────────────────────────────────────────
+        invul = invul_by_ds.get(ds_id, {})
+        invul_value = invul.get("save", "") or ""
+        invul_info = invul.get("rules", "") or ""
+        if invul_value.endswith("+"):
+            invul_value = invul_value[:-1]
+
+        miniatures = minis_by_ds.get(ds_id, [])
+        for line_idx, mini in enumerate(miniatures, start=1):
+            mv = mini.get("movement", "") or ""
+            sv = mini.get("save", "") or ""
+
+            datasheet_models.append({
+                "datasheet_id": ds_id,
+                "line": str(line_idx),
+                "name": mini.get("name", ds["name"]),
+                "M": mv,
+                "T": mini.get("toughness", "") or "",
+                "Sv": sv,
+                "inv_sv": invul_value if invul_value else "-",
+                "inv_sv_descr": strip_markdown(invul_info),
+                "W": mini.get("wounds", "") or "",
+                "Ld": mini.get("leadership", "") or "",
+                "OC": mini.get("objectiveControl", "") or "",
+                "base_size": ds.get("baseSize", "") or "",
+                "base_size_descr": "",
+            })
+
+        # ─── Weapons ─────────────────────────────────────────────────
+        profiles = wargear_profiles_by_ds.get(ds_id, [])
+        # Sort by displayOrder
+        profiles.sort(key=lambda p: p.get("displayOrder", 0))
+
+        wargear_line = 1
+        for prof in profiles:
+            prof_type = prof.get("type", "")
+            is_melee = prof_type == "melee"
+            is_ranged = prof_type == "ranged"
+
+            rng = prof.get("range", "") or ""
+            if is_melee:
+                rng = "Melee"
+            elif rng:
+                rng = rng.replace('"', '').replace("\"", "")
+
+            bs_ws = ""
+            if is_ranged:
+                bs_ws = (prof.get("ballisticSkill", "") or "").replace("+", "")
+            else:
+                bs_ws = (prof.get("weaponSkill", "") or "").replace("+", "")
+
+            # Get weapon ability keywords
+            ability_names = profile_abilities.get(prof["id"], [])
+            description = ", ".join(n.lower() for n in ability_names if n)
+
+            # Use the wargear_item name if the profile name is "standard"
+            name = prof.get("name", "")
+            if name == "standard":
+                wi_id = prof.get("wargearItemId", "")
+                wi = wargear_item_by_id.get(wi_id, {})
+                name = wi.get("name", name)
+            # If profile has a distinct name and differs from wargear_item,
+            # it's a weapon profile variant — prefix with wargear_item name
+            elif name:
+                wi_id = prof.get("wargearItemId", "")
+                wi = wargear_item_by_id.get(wi_id, {})
+                wi_name = wi.get("name", "")
+                if wi_name and wi_name != name:
+                    name = f"{wi_name} – {name}"
+
+            datasheet_wargear.append({
+                "datasheet_id": ds_id,
+                "line": str(wargear_line),
+                "line_in_wargear": "1",
+                "dice": "",
+                "name": name,
+                "description": description,
+                "range": rng,
+                "type": "Ranged" if is_ranged else "Melee",
+                "A": prof.get("attacks", "") or "",
+                "BS_WS": bs_ws,
+                "S": prof.get("strength", "") or "",
+                "AP": prof.get("armourPenetration", "") or "",
+                "D": prof.get("damage", "") or "",
+            })
+            wargear_line += 1
+
+        # ─── Abilities ───────────────────────────────────────────────
+        ability_line = 1
+        ability_links = ability_links_by_ds.get(ds_id, [])
+
+        for link in ability_links:
+            ab_id = link.get("datasheetAbilityId", "")
+            ab = ability_by_id.get(ab_id, {})
+            if not ab:
+                continue
+
+            ab_type = ab.get("abilityType", "")
+            ab_name = ab.get("name", "")
+            ab_rules = strip_markdown(ab.get("rules", "") or "")
+
+            # Map abilityType to our type categories
+            type_map = {
+                "core": "Core",
+                "faction": "Faction",
+                "datasheet": "Other",
+                "wargear": "Wargear",
+                "special": "Special",
+                "primarch": "Primarch",
+            }
+            mapped_type = type_map.get(ab_type, "Other")
+
+            # For core abilities, extract parameter and add description
+            parameter = ""
+            if mapped_type == "Core":
+                ab_name, parameter = parse_core_ability(ab_name)
+                if not ab_rules or ab_rules == "-":
+                    ab_rules = get_core_ability_description(ab_name)
+                if parameter:
+                    ab_name = f"{ab_name} {parameter}"
+
+            # For faction abilities, rules is often just "-"
+            if mapped_type == "Faction" and ab_rules == "-":
+                ab_rules = ""
+
+            # Handle sub-abilities (e.g., Primarch abilities)
+            sub_abs = sub_abilities_by_parent.get(ab_id, [])
+            if sub_abs:
+                sub_abs.sort(key=lambda x: x.get("displayOrder", 0))
+                if ab.get("subAbilityHeader"):
+                    ab_rules = ab.get("subAbilityHeader", "") + " "
+                for sub in sub_abs:
+                    sub_name = sub.get("name", "")
+                    sub_rules = strip_markdown(sub.get("rules", "") or "")
+                    ab_rules += f"{sub_name}: {sub_rules} "
+                ab_rules = ab_rules.strip()
+
+            datasheet_abilities.append({
+                "datasheet_id": ds_id,
+                "line": str(ability_line),
+                "ability_id": "",
+                "model": "",
+                "name": ab_name,
+                "description": ab_rules,
+                "type": mapped_type,
+                "parameter": parameter,
+            })
+            ability_line += 1
+
+        # Damaged ability
+        if damaged_w and damaged_desc:
+            datasheet_abilities.append({
+                "datasheet_id": ds_id,
+                "line": str(ability_line),
+                "ability_id": "",
+                "model": "",
+                "name": damaged_w,
+                "description": damaged_desc,
+                "type": "Other",
+                "parameter": "",
+            })
+            ability_line += 1
+
+        # ─── Keywords ────────────────────────────────────────────────
+        # Faction keywords
+        for fk_link in ds_fk_links.get(ds_id, []):
+            fk_id = fk_link.get("factionKeywordId", "")
+            fk = fk_by_id.get(fk_id, {})
+            fk_name = fk.get("name", "")
+            if fk_name:
+                datasheet_keywords.append({
+                    "datasheet_id": ds_id,
+                    "keyword": fk_name,
+                    "model": "",
+                    "is_faction_keyword": "true",
+                })
+
+        # Unit keywords (from miniatures)
+        seen_keywords = set()
+        for mini in miniatures:
+            for kw_link in mini_kw_links.get(mini["id"], []):
+                kw_id = kw_link.get("keywordId", "")
+                kw = kw_by_id.get(kw_id, {})
+                kw_name = kw.get("name", "")
+                if kw_name and kw_name not in seen_keywords:
+                    seen_keywords.add(kw_name)
+                    datasheet_keywords.append({
+                        "datasheet_id": ds_id,
+                        "keyword": kw_name,
+                        "model": "",
+                        "is_faction_keyword": "false",
+                    })
+
+        # ─── Leader attachments ──────────────────────────────────────
+        # From datasheet_rule with name "Leader", parse the unit names
+        for rule in rules_by_ds.get(ds_id, []):
+            rule_name = (rule.get("name", "") or "").lower()
+            if rule_name == "leader":
+                rule_text = rule.get("rules", "") or ""
+                # Parse "■ **UNIT NAME**" patterns
+                for m in re.finditer(r'■\s*\*\*([^*]+)\*\*', rule_text):
+                    target_name = m.group(1).strip()
+                    # Find matching datasheet by name and faction
+                    target_ds = None
+                    for other_ds in tables["datasheet"]:
+                        if other_ds["name"].upper() == target_name.upper():
+                            other_faction = pub_to_faction.get(other_ds.get("publicationId", ""), "")
+                            if other_faction == faction_id:
+                                target_ds = other_ds
+                                break
+                    if not target_ds:
+                        # Try without faction match
+                        for other_ds in tables["datasheet"]:
+                            if other_ds["name"].upper() == target_name.upper():
+                                target_ds = other_ds
+                                break
+                    if target_ds:
+                        datasheet_leader.append({
+                            "leader_id": ds_id,
+                            "attached_id": target_ds["id"],
+                        })
+
+    # ─── Stratagems ──────────────────────────────────────────────────────
+    print("Processing stratagems...")
+
+    # Build core stratagem entries
+    core_strat_phase_map = {
+        "yourTurn": "Your turn",
+        "opponentsTurn": "Opponent's turn",
+        "either": "Either player's turn",
+    }
+
+    for strat in tables["stratagem"]:
+        pub_id = strat.get("publicationId", "")
+        det_id = strat.get("detachmentId", "")
+        faction_id = pub_to_faction.get(pub_id, "")
+
+        det = det_by_id.get(det_id, {})
+        det_name = det.get("name", "")
+
+        # Build description
+        parts = []
+        if strat.get("whenRules"):
+            parts.append(f"WHEN: {strat['whenRules']}")
+        if strat.get("targetRules"):
+            parts.append(f"TARGET: {strat['targetRules']}")
+        if strat.get("effectRules"):
+            parts.append(f"EFFECT: {strat['effectRules']}")
+        if strat.get("restrictionRules"):
+            parts.append(f"RESTRICTIONS: {strat['restrictionRules']}")
+        description = strip_markdown("".join(parts))
+
+        # Phase from whenRules
+        when = strat.get("whenRules", "") or ""
+        phase_str = when.split(".")[0] if when else ""
+
+        # Category mapping
+        category = strat.get("category", "")
+        category_map = {
+            "battleTactic": "Battle Tactic",
+            "strategicPloy": "Strategic Ploy",
+            "epicDeed": "Epic Deed",
+        }
+        cat_display = category_map.get(category, category)
+
+        turn = strat.get("key", "")
+        turn_display = core_strat_phase_map.get(turn, turn)
+
+        type_str = f"{det_name} - {cat_display} Stratagem" if det_name else f"Core - {cat_display} Stratagem"
+
+        stratagems_out.append({
+            "faction_id": faction_id,
+            "name": strat["name"].upper(),
+            "id": strat["id"],
+            "type": type_str,
+            "cp_cost": str(strat.get("cpCost", "")),
+            "legend": strat.get("lore", "") or "",
+            "turn": turn_display,
+            "phase": phase_str,
+            "detachment": det_name,
+            "detachment_id": "",
+            "description": description,
+        })
+
+    # ─── Enhancements ────────────────────────────────────────────────────
+    print("Processing enhancements...")
+    for enh in tables["enhancement"]:
+        pub_id = enh.get("publicationId", "")
+        det_id = enh.get("detachmentId", "")
+        faction_id = pub_to_faction.get(pub_id, "")
+        if not faction_id:
+            continue
+
+        # Skip combat patrol enhancements (no detachment, no cost)
+        if enh.get("isCombatPatrol"):
+            continue
+
+        det = det_by_id.get(det_id, {})
+        det_name = det.get("name", "")
+
+        cost = enh.get("basePointsCost")
+        cost_str = str(cost) if cost is not None else ""
+
+        enhancements_out.append({
+            "faction_id": faction_id,
+            "id": enh["id"],
+            "name": enh["name"],
+            "cost": cost_str,
+            "detachment": det_name,
+            "detachment_id": "",
+            "legend": "",
+            "description": strip_markdown(enh.get("rules", "") or ""),
+        })
+
+    # ─── Army Rules ──────────────────────────────────────────────────────
+    print("Processing army rules...")
+    seen_army_abilities = set()  # (faction_id, name) for dedup
+    for ar in tables["army_rule"]:
+        if ar.get("hiddenFromCommandBunker"):
+            continue
+
+        ar_id = ar["id"]
+        fk_id = ar_to_fk.get(ar_id, "")
+        fk = fk_by_id.get(fk_id, {})
+        fk_name = fk.get("name", "")
+        faction_id = FACTION_KEYWORD_TO_FACTION.get(fk_name, "")
+
+        if not faction_id:
+            # Try via publication
+            pub_id = ar.get("publicationId", "")
+            faction_id = pub_to_faction.get(pub_id, "")
+
+        if not faction_id:
+            continue
+
+        # Skip combat patrol army rules
+        pub = pub_by_id.get(ar.get("publicationId", ""), {})
+        if pub.get("isCombatPatrol"):
+            continue
+
+        # Deduplicate by (faction_id, name)
+        dedup_key = (faction_id, ar["name"])
+        if dedup_key in seen_army_abilities:
+            continue
+        seen_army_abilities.add(dedup_key)
+
+        # Build rules text from rule_container_components
+        components = rcc_by_army_rule.get(ar_id, [])
+        rules_text = " ".join(
+            strip_markdown(c.get("textContent", "") or "")
+            for c in components
+            if c.get("textContent")
+        )
+
+        army_abilities.append({
+            "id": stable_id(f"{faction_id}-{ar['name']}"),
+            "name": ar["name"],
+            "legend": "",
+            "faction_id": faction_id,
+            "description": rules_text,
+        })
+
+    # ─── Detachment Rules ────────────────────────────────────────────────
+    print("Processing detachment rules...")
+    for dr in tables["detachment_rule"]:
+        if dr.get("hiddenFromCommandBunker"):
+            continue
+
+        dr_id = dr["id"]
+        det_id = dr.get("detachmentId", "")
+        det = det_by_id.get(det_id, {})
+        det_name = det.get("name", "")
+
+        # Get faction from detachment's publication
+        det_pub_id = det.get("publicationId", "")
+        faction_id = pub_to_faction.get(det_pub_id, "")
+
+        if not faction_id:
+            continue
+
+        # Build rules text from rule_container_components
+        components = rcc_by_det_rule.get(dr_id, [])
+        rules_text = " ".join(
+            strip_markdown(c.get("textContent", "") or "")
+            for c in components
+            if c.get("textContent")
+        )
+
+        detachment_abilities.append({
+            "id": stable_id(f"{faction_id}-{det_name}-{dr['name']}"),
+            "faction_id": faction_id,
+            "name": dr["name"],
+            "legend": "",
+            "description": rules_text,
+            "detachment": det_name,
+            "detachment_id": "",
+        })
+
+    # Add extra faction aliases needed by the app
+    extra_factions = [
+        {"id": "AE", "name": "Ynnari", "link": ""},
+        {"id": "AE", "name": "Craftworlds", "link": ""},
+        {"id": "SM", "name": "Adeptus Astartes", "link": ""},
+        {"id": "TAU", "name": "T'au Empire", "link": ""},
+    ]
+    for ef in extra_factions:
+        if not any(f["id"] == ef["id"] and f["name"] == ef["name"] for f in factions):
+            factions.append(ef)
+
+    # ─── Phase tagging ───────────────────────────────────────────────────
+    print("\nRunning phase tagger on abilities...")
+    for ability in datasheet_abilities:
+        desc = ability.get("description", "")
+        name = ability.get("name", "")
+        text = f"{name} {desc}"
+        ability["phases"] = determine_phases(text)
+
+    print("Running phase tagger on army abilities...")
+    for ability in army_abilities:
+        ability["phases"] = determine_phases(ability.get("description", ""))
+
+    print("Running phase tagger on detachment abilities...")
+    for ability in detachment_abilities:
+        ability["phases"] = determine_phases(ability.get("description", ""))
+
+    print("Running phase tagger on enhancements...")
+    for enh in enhancements_out:
+        enh["phases"] = determine_phases(enh.get("description", ""))
+
+    print("Running phase tagger on stratagems...")
+    for strat in stratagems_out:
+        strat["phases"] = determine_phases(strat.get("phase", ""), is_stratagem=True)
+
+    # ─── Write output files ──────────────────────────────────────────────
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    files = {
+        "Datasheets.json": datasheets,
+        "Datasheets_models.json": datasheet_models,
+        "Datasheets_abilities.json": datasheet_abilities,
+        "Datasheets_abilities_modified.json": datasheet_abilities,
+        "Datasheets_wargear.json": datasheet_wargear,
+        "Datasheets_keywords.json": datasheet_keywords,
+        "Datasheets_leader.json": datasheet_leader,
+        "Enhancements.json": enhancements_out,
+        "Enhancements_modified.json": enhancements_out,
+        "Stratagems.json": stratagems_out,
+        "Stratagems_modified.json": stratagems_out,
+        "Factions.json": factions,
+        "Abilities.json": army_abilities,
+        "Abilities_modified.json": army_abilities,
+        "Detachment_abilities.json": detachment_abilities,
+        "Detachment_abilities_modified.json": detachment_abilities,
+    }
+
+    for fname, data in files.items():
+        path = os.path.join(OUTPUT_DIR, fname)
+        with open(path, "w") as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+        print(f"  Wrote {fname} ({len(data)} entries)")
+
+    print(f"\nDone! {len(datasheets)} datasheets, {len(factions)} factions.")
+
+
 if __name__ == "__main__":
-    extract_all()
+    if len(sys.argv) > 1:
+        bundle_path = sys.argv[1]
+        print(f"Reading bundle from {bundle_path}...")
+        with open(bundle_path, "r") as f:
+            content = f.read()
+    else:
+        try:
+            bundle_url = fetch_bundle_url()
+            content = download_bundle(bundle_url)
+        except Exception as e:
+            print(f"Failed to fetch bundle: {e}")
+            print("Usage: python3 src/assets/extract_datacards.py [path_to_bundle.js]")
+            sys.exit(1)
+
+    extract_all(content)
