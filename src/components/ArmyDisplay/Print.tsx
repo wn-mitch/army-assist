@@ -41,6 +41,7 @@ function Print() {
 
   const [filterCoreStratagems, setFilterCoreStratagems] = useState(true);
   const [truncateCoreAbilities, setTruncateCoreAbilities] = useState(true);
+  const [columnCount, setColumnCount] = useState<1 | 2 | 3>(3);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -65,6 +66,7 @@ function Print() {
     filterCoreStratagems: filterCoreStratagems,
     truncateCoreAbilities: truncateCoreAbilities,
     weaponsFilter: weaponsFilter,
+    columnCount: columnCount,
   };
 
   return (
@@ -172,6 +174,23 @@ function Print() {
                     onChange={() =>
                       setPhaseOptionSetting(phaseOption as PhaseOption)
                     }
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                Column Layout
+              </h2>
+              <div className="mt-2 divide-y divide-gray-800 dark:divide-gray-200 border-b border-t dark:border-gray-200 border-gray-800">
+                {([1, 2, 3] as const).map((count) => (
+                  <SettingsOption
+                    key={count}
+                    label={`${count} Column${count > 1 ? "s" : ""}`}
+                    checked={columnCount === count}
+                    id={`column-${count}-setting`}
+                    onChange={() => setColumnCount(count)}
                   />
                 ))}
               </div>

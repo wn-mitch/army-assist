@@ -21,6 +21,7 @@ import PhaseAbilities from "./PhaseAbilities";
 import NoteModal from "@/components/NoteModal";
 import PhaseNotes from "./PhaseNotes";
 import LeaderAttachmentModal from "./LeaderAttachmentModal";
+import { filterWeaponsByCount } from "@/utils/UnitHelper";
 
 function ListUnitCard({
   unit,
@@ -71,16 +72,7 @@ function ListUnitCard({
   let toggled = true;
 
   const filteredWeapons = weaponsFilter
-    ? unit.weaponsDatasheets.filter((weapon) =>
-        Object.keys(unit.count ?? {}).some((name: string) => {
-          return (
-            name &&
-            weapon.name &&
-            (name.toLowerCase().includes(weapon.name.toLowerCase()) ||
-              weapon.name.toLowerCase().includes(name.toLowerCase()))
-          );
-        })
-      )
+    ? filterWeaponsByCount(unit.weaponsDatasheets, unit.count)
     : unit.weaponsDatasheets;
 
   const phasedWeapons = filteredWeapons.filter((wargear) =>

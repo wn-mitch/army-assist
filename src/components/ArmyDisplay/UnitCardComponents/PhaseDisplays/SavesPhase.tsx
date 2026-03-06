@@ -4,6 +4,14 @@ import datasheetAbilities from "@/assets/json/Datasheets_abilities.json";
 import ModelSaveTable from "./ModelSaveTable";
 import ListUnit from "@/types/ListUnit";
 
+function formatInvSaveDescr(descr: string): string {
+  if (!descr) return "";
+  const lower = descr.toLowerCase();
+  if (lower.includes("melee")) return "vs. Melee";
+  if (lower.includes("ranged")) return "vs. Ranged";
+  return descr;
+}
+
 const SavesPhase = ({
   unit,
 }: {
@@ -16,6 +24,7 @@ const SavesPhase = ({
 
   const save = unit.datasheetModel.Sv;
   const invSave = unit.datasheetModel.inv_sv;
+  const invSaveDescr = formatInvSaveDescr(unit.datasheetModel.inv_sv_descr);
 
   const fnp = datasheetAbilities.find(
     (ability) =>
@@ -31,6 +40,7 @@ const SavesPhase = ({
     <ModelSaveTable
       save={saveText}
       invSave={invSaveText}
+      invSaveDescr={invSaveDescr}
       fnp={fnpText}
       toughness={unit.datasheetModel.T}
       wounds={unit.datasheetModel.W}

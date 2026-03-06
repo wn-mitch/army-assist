@@ -5,6 +5,7 @@ import TableHeaderCell from "./TableComponents.tsx/TableHeaderCell";
 function ModelSaveTable({
   save,
   invSave,
+  invSaveDescr,
   fnp,
   toughness,
   wounds,
@@ -12,6 +13,7 @@ function ModelSaveTable({
 }: {
   save: string;
   invSave: string;
+  invSaveDescr?: string;
   fnp: string;
   toughness: string;
   wounds: string;
@@ -32,7 +34,10 @@ function ModelSaveTable({
       <tbody>
         <tr className="text-sm border dark:border-gray-600">
           <TableCell className="w-1/6 pl-1 dark:font-semibold">{save}</TableCell>
-          <TableCell className="w-1/6 dark:font-semibold">{invSave !== "-" ? `${invSave}` : "-"}</TableCell>
+          <TableCell className="w-1/6 dark:font-semibold">
+            {invSave !== "-" ? `${invSave}` : "-"}
+            {invSaveDescr ? <div className="text-xs text-gray-500 dark:text-gray-400">({invSaveDescr})</div> : null}
+          </TableCell>
           <TableCell className="w-1/6 dark:font-semibold">{fnp ? `${fnp}` : "-"}</TableCell>
           <TableCell className="w-1/6 dark:font-semibold">{toughness}</TableCell>
           <TableCell className="w-1/6 dark:font-semibold">{wounds}</TableCell>

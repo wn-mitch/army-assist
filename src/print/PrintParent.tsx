@@ -37,7 +37,7 @@ const PrintParent = (
   const stratagems = getStratagems();
 
   const filteredStratagems = settings.filterCoreStratagems
-    ? stratagems.filter((stratagem) => stratagem.faction_id !== "")
+    ? stratagems.filter((stratagem) => stratagem.detachment !== "Core Rules")
     : stratagems;
 
   const getArmyAbilities = useStore((state) => state.getArmyAbilities);
@@ -90,6 +90,13 @@ const PrintParent = (
     });
   };
 
+  const columnClass =
+    settings.columnCount === 1
+      ? "columns-1"
+      : settings.columnCount === 2
+        ? "columns-2"
+        : "columns-3";
+
   // Modified phase section to handle leader attachments
   const phaseSection = (
     phase: Phase,
@@ -106,7 +113,7 @@ const PrintParent = (
         </h1>
         {settings.contentOptionSetting.Units && (
           <>
-            <div className="columns-3 gap-1 auto-cols-min px-1">
+            <div className={`${columnClass} gap-1 auto-cols-min px-1`}>
               {standaloneUnits.flatMap((unit) =>
                 renderUnitForPhase(unit, phase, settings, contentFunction)
               )}
@@ -121,7 +128,8 @@ const PrintParent = (
                   {PhaseStratagemSection(
                     filteredStratagems.filter((stratagem) =>
                       stratagem.phases.includes(phase)
-                    )
+                    ),
+                    columnClass
                   )}
                 </div>
               </>
@@ -156,7 +164,7 @@ const PrintParent = (
         <>
           {settings.phaseOptionSetting === PhaseOption.Compact && (
             <div className="break-inside-avoid">
-              {CollectiveStratagemSection(filteredStratagems)}
+              {CollectiveStratagemSection(filteredStratagems, columnClass)}
             </div>
           )}
         </>
@@ -164,7 +172,7 @@ const PrintParent = (
 
       {settings.contentOptionSetting.ArmyAbilities && (
         <div className="break-inside-avoid">
-          {ArmyDetachmentRuleSection(armyAbilities)}
+          {ArmyDetachmentRuleSection(armyAbilities, columnClass)}
         </div>
       )}
 

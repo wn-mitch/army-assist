@@ -483,11 +483,26 @@ const useStore = create<StoreState>()(
                         ],
                     };
 
+                    // Normalize American → British spelling for datasheet matching
+                    const SPELLING_NORMALIZATIONS: [RegExp, string][] = [
+                        [/armor/gi, "armour"],
+                        [/honor/gi, "honour"],
+                        [/favor/gi, "favour"],
+                    ];
+
+                    const normalizeSpelling = (name: string): string => {
+                        let normalized = name;
+                        for (const [pattern, replacement] of SPELLING_NORMALIZATIONS) {
+                            normalized = normalized.replace(pattern, replacement);
+                        }
+                        return normalized;
+                    };
+
                     const findDatasheet = (unitName: string) => {
-                        const lowerName = unitName.toLowerCase();
+                        const lowerName = normalizeSpelling(unitName.toLowerCase());
                         let matches = Datasheets.filter(
                             (item) =>
-                                item.name.toLowerCase() === lowerName,
+                                normalizeSpelling(item.name.toLowerCase()) === lowerName,
                         );
 
                         if (matches.length > 0) {
@@ -515,8 +530,8 @@ const useStore = create<StoreState>()(
                                     .trim();
                                 matches = Datasheets.filter(
                                     (item) =>
-                                        item.name.toLowerCase() ===
-                                        stripped.toLowerCase(),
+                                        normalizeSpelling(item.name.toLowerCase()) ===
+                                        normalizeSpelling(stripped.toLowerCase()),
                                 );
                                 if (matches.length > 0) {
                                     const factionMatch = matches.find(
@@ -1011,31 +1026,22 @@ const useStore = create<StoreState>()(
                     const detachment = storedList.detachment;
 
                     const stratagems = Stratagems.map((stratagem) => {
-                        const [splitDetachment, splitType] =
-                            stratagem.type.split(" - ");
-                        if (splitDetachment === "Core") {
-                            return {
-                                ...stratagem,
-                                detachment: "Core",
-                                type: splitType,
-                            };
-                        } else {
-                            return {
-                                ...stratagem,
-                                type: splitType,
-                            };
-                        }
+                        const splitType =
+                            stratagem.type.split(" - ")[1] ?? stratagem.type;
+                        return {
+                            ...stratagem,
+                            type: splitType,
+                        };
                     })
                         .filter(
                             (stratagem) =>
                                 stratagem.faction_id === faction ||
-                                stratagem.faction_id === "",
+                                stratagem.detachment === "Core Rules",
                         )
                         .filter((stratagem) => {
                             return (
                                 stratagem.detachment === detachment ||
-                                stratagem.detachment === "" ||
-                                stratagem.detachment === "Core"
+                                stratagem.detachment === "Core Rules"
                             );
                         })
                         .filter((stratagem) => stratagem.phases.includes(phase))
@@ -1065,31 +1071,22 @@ const useStore = create<StoreState>()(
                     const detachment = storedList.detachment;
 
                     const stratagems = Stratagems.map((stratagem) => {
-                        const [splitDetachment, splitType] =
-                            stratagem.type.split(" - ");
-                        if (splitDetachment === "Core") {
-                            return {
-                                ...stratagem,
-                                detachment: "Core",
-                                type: splitType,
-                            };
-                        } else {
-                            return {
-                                ...stratagem,
-                                type: splitType,
-                            };
-                        }
+                        const splitType =
+                            stratagem.type.split(" - ")[1] ?? stratagem.type;
+                        return {
+                            ...stratagem,
+                            type: splitType,
+                        };
                     })
                         .filter(
                             (stratagem) =>
                                 stratagem.faction_id === faction ||
-                                stratagem.faction_id === "",
+                                stratagem.detachment === "Core Rules",
                         )
                         .filter((stratagem) => {
                             return (
                                 stratagem.detachment === detachment ||
-                                stratagem.detachment === "" ||
-                                stratagem.detachment === "Core"
+                                stratagem.detachment === "Core Rules"
                             );
                         })
                         .filter((stratagem) => {
@@ -1119,6 +1116,10 @@ const useStore = create<StoreState>()(
                         model: "",
                         parameter: "",
                     }));
+
+                    if (!detachment) {
+                        return [...filteredArmyAbilities];
+                    }
 
                     const filteredDetachmentAbilities =
                         DetachmentAbilities.filter(

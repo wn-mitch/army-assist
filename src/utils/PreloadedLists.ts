@@ -1548,6 +1548,11 @@ Ghostkeel Battlesuit (160 pts)
   • Fusion collider
   • Twin fusion blaster`;
 
+const JudiciarText = `Imperium - Space Marines - Gladius Task Force
+Judiciar (75 pts)
+  • Absolvor bolt pistol
+  • Executioner relic blade`;
+
 const samplePreload = [
   {
     uuid: "8a776952-8b58-4fd8-99f6-5db83d484da4",
@@ -1734,6 +1739,12 @@ const testingPreload = [
   {
     text: Tau4225,
     name: "Tau 4/2/25",
+    uuid: v4(),
+    ...defaultObject,
+  },
+  {
+    text: JudiciarText,
+    name: "Judiciar Invuln Test",
     uuid: v4(),
     ...defaultObject,
   },

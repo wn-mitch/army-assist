@@ -7,4 +7,5 @@ export default interface PrintSettings {
   filterCoreStratagems: boolean;
   truncateCoreAbilities: boolean;
   weaponsFilter: boolean;
+  columnCount: 1 | 2 | 3;
 }

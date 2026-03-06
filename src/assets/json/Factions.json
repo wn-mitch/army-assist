@@ -140,6 +140,41 @@
         "link": ""
     },
     {
+        "id": "SM",
+        "name": "Iron Hands",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Raven Guard",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Salamanders",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Ultramarines",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "White Scars",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Imperial Fists",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Crimson Fists",
+        "link": ""
+    },
+    {
         "id": "TAU",
         "name": "T'au Empire",
         "link": ""

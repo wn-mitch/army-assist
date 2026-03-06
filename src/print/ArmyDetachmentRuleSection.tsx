@@ -1,9 +1,9 @@
 import Ability from "@/types/Ability";
 import React from "react";
 
-const ArmyDetachmentRuleSection = (abilities: Ability[]) => {
+const ArmyDetachmentRuleSection = (abilities: Ability[], columnClass: string = "columns-2") => {
   return (
-    <div className="columns-2 gap-1 auto-cols-min px-1">
+    <div className={`${columnClass} gap-1 auto-cols-min px-1`}>
       {abilities.map((ability) => {
         return (
           <div className="border border-black break-inside-avoid first:mt-0 my-1">

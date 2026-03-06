@@ -2,7 +2,7 @@ import ListUnit from "@/types/ListUnit";
 import React from "react";
 import AbilitySection from "./AbilitySection";
 import Phase from "@/types/Phase";
-import { getPhasedAbilities, getPhasedNotes } from "@/utils/UnitHelper";
+import { getPhasedAbilities, getPhasedNotes, filterWeaponsByCount } from "@/utils/UnitHelper";
 import PrintSettings from "@/types/PrintSettings";
 import NoteSection from "./NoteSection";
 
@@ -12,11 +12,7 @@ const FightSection = (units: ListUnit[], settings: PrintSettings) => {
     const notes = getPhasedNotes(unit, Phase.Fight);
     
     const weapons = settings.weaponsFilter
-      ? unit.weaponsDatasheets.filter((weapon) =>
-          Object.keys(unit.count ?? {}).some((name: string) => {
-            return weapon.name?.toLowerCase().includes(name.toLowerCase());
-          })
-        )
+      ? filterWeaponsByCount(unit.weaponsDatasheets, unit.count)
       : unit.weaponsDatasheets;
 
     const filteredWeapons = weapons.filter(

@@ -2,9 +2,9 @@ import React from "react";
 
 import { Stratagem } from "@/types/Stratagem";
 
-const PhaseStratagemSection = (stratagems: Stratagem[]) => {
+const PhaseStratagemSection = (stratagems: Stratagem[], columnClass: string = "columns-3") => {
   return (
-    <div className="columns-3 gap-1 auto-cols-min px-1">
+    <div className={`${columnClass} gap-1 auto-cols-min px-1`}>
       {stratagems.map((stratagem) => {
         return (
           <div className="border border-black break-inside-avoid first:mt-0 my-1 px-1">

@@ -1,5 +1,17 @@
 [
     {
+        "version": "2.0.1",
+        "stateVersion": 27,
+        "date": "3/6/26",
+        "changes": [
+            "Conditional invulnerable saves now display an annotation (e.g., 'vs. Melee', 'vs. Ranged') in both the saves tab and print view.",
+            "Fixed core stratagem filtering to use the new data format from game-datacards.",
+            "Fixed unit name matching for American vs. British spelling variants (e.g., Armor → Armour).",
+            "Added configurable column layout (1/2/3 columns) to the print view.",
+            "Extracted and improved weapon filtering logic for consistency across interactive and print views."
+        ]
+    },
+    {
         "version": "2.0.0",
         "stateVersion": 27,
         "date": "2/22/26",
