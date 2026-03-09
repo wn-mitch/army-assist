@@ -511,7 +511,10 @@ const useStore = create<StoreState>()(
                                     item.faction_id ===
                                     factionAbbreviationId,
                             );
-                            return factionMatch || matches[0];
+                            const cdMatch = matches.find(
+                                (item) => item.faction_id === "CD",
+                            );
+                            return factionMatch || cdMatch || matches[0];
                         }
 
                         // Fallback: strip faction prefix and retry
@@ -539,7 +542,15 @@ const useStore = create<StoreState>()(
                                             item.faction_id ===
                                             factionAbbreviationId,
                                     );
-                                    return factionMatch || matches[0];
+                                    const cdMatch = matches.find(
+                                        (item) =>
+                                            item.faction_id === "CD",
+                                    );
+                                    return (
+                                        factionMatch ||
+                                        cdMatch ||
+                                        matches[0]
+                                    );
                                 }
                             }
                         }

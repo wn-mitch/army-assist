@@ -1324,6 +1324,19 @@ def extract_all(bundle_content: str):
                             "attached_id": target_ds["id"],
                         })
 
+    # ─── Post-processing: fix missing invuln save descriptions ──────────
+    INVULN_DESCR_FIXES = {
+        ("Chaos Questoris Knight Styrix", "QT"): "Against ranged attacks only",
+        ("Chaos Questoris Knight Magaera", "QT"): "Against ranged attacks only",
+        ("Chaos Cerastus Knight Atrapos", "QT"): "Against ranged attacks only",
+    }
+    ds_lookup = {d["id"]: d for d in datasheets}
+    for model in datasheet_models:
+        ds = ds_lookup.get(model["datasheet_id"], {})
+        key = (ds.get("name", ""), ds.get("faction_id", ""))
+        if key in INVULN_DESCR_FIXES:
+            model["inv_sv_descr"] = INVULN_DESCR_FIXES[key]
+
     # ─── Stratagems ──────────────────────────────────────────────────────
     print("Processing stratagems...")
 
