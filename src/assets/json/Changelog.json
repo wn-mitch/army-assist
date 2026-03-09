@@ -1,5 +1,16 @@
 [
     {
+        "version": "2.1.0",
+        "stateVersion": 27,
+        "date": "3/9/26",
+        "changes": [
+            "Re-added New Recruit (NR) JSON import support. You can now import lists directly from New Recruit JSON export files.",
+            "Added a file upload button to the paste screen for importing NR JSON files.",
+            "Fixed missing invulnerable save descriptions for Chaos Knight variants (Knight Abominant, Knight Desecrator, War Dog Stalker).",
+            "Improved datasheet lookup to prefer Chaos Daemons faction for shared datasheets."
+        ]
+    },
+    {
         "version": "2.0.1",
         "stateVersion": 27,
         "date": "3/6/26",

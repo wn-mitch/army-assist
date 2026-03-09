@@ -4,6 +4,7 @@ import React from "react";
 export default function Pastebox() {
     const [text, setText] = React.useState("");
     const store = useStore();
+    const fileInputRef = React.useRef<HTMLInputElement>(null);
 
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setText(event.target.value);
@@ -15,9 +16,33 @@ export default function Pastebox() {
 
         if (!result) {
             window.alert(
-                "Error: Invalid List Format. Use the ListForge format (listforge.club). If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!",
+                "Error: Invalid List Format. Use the ListForge format (listforge.club) or import a New Recruit (.json) file. If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!",
             );
             setText("");
+        }
+    };
+
+    const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const content = e.target?.result as string;
+            if (!content) return;
+
+            const result = store.parseText(content, "");
+            if (!result) {
+                window.alert(
+                    "Error: Could not parse the uploaded file. Ensure it is a valid New Recruit JSON export.",
+                );
+            }
+        };
+        reader.readAsText(file);
+
+        // Reset input so the same file can be re-uploaded
+        if (fileInputRef.current) {
+            fileInputRef.current.value = "";
         }
     };
 
@@ -31,7 +56,7 @@ export default function Pastebox() {
                     id="comment"
                     name="comment"
                     rows={5}
-                    placeholder="Paste in your Army List from ListForge (listforge.club). Please double check the site abilities/weapons vs. what you know is on the list!"
+                    placeholder="Paste in your Army List from ListForge (listforge.club), or use the Import button below to upload a New Recruit JSON file."
                     className="block w-full resize-none h-full rounded-md bg-white dark:bg-gray-900 px-3 py-1.5 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 dark:focus:outline-gray-400 sm:text-sm/6"
                     value={text}
                     onChange={handleChange}
@@ -41,12 +66,26 @@ export default function Pastebox() {
                     ListForge list name.
                 </p>
             </div>
-            <div className="flex mb-2">
+            <div className="flex mb-2 gap-2 mx-10">
                 <button
                     type="submit"
-                    className="inline-flex flex-1 items-center justify-center rounded-md bg-gray-600 dark:bg-gray-600 mx-10 px-3 py-2 text-sm font-semibold text-white dark:text-gray-200 shadow-sm hover:bg-gray-500 dark:hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 dark:focus-visible:outline-gray-400 dark:hover:text-gray-800"
+                    className="inline-flex flex-1 items-center justify-center rounded-md bg-gray-600 dark:bg-gray-600 px-3 py-2 text-sm font-semibold text-white dark:text-gray-200 shadow-sm hover:bg-gray-500 dark:hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 dark:focus-visible:outline-gray-400 dark:hover:text-gray-800"
                 >
                     Submit
+                </button>
+                <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".json"
+                    className="hidden"
+                    onChange={handleFileUpload}
+                />
+                <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="inline-flex flex-1 items-center justify-center rounded-md bg-gray-600 dark:bg-gray-600 px-3 py-2 text-sm font-semibold text-white dark:text-gray-200 shadow-sm hover:bg-gray-500 dark:hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 dark:focus-visible:outline-gray-400 dark:hover:text-gray-800"
+                >
+                    Import NR File
                 </button>
             </div>
         </form>

@@ -50,6 +50,11 @@ interface StoreState {
         name: string,
         listIndex?: string,
     ) => boolean;
+    parseNRJson: (
+        text: string,
+        name: string,
+        uuid?: string,
+    ) => boolean;
     parseTextListforge: (
         text: string,
         name: string,
@@ -220,7 +225,174 @@ const useStore = create<StoreState>()(
                     name: string,
                     uuid?: string,
                 ): boolean => {
+                    try {
+                        const json = JSON.parse(text);
+                        if (json.roster) {
+                            return get().parseNRJson(text, name, uuid);
+                        }
+                    } catch {
+                        // Not JSON, fall through to listforge parser
+                    }
                     return get().parseTextListforge(text, name, uuid);
+                },
+                parseNRJson: (
+                    text: string,
+                    name: string,
+                    uuid?: string,
+                ): boolean => {
+                    const activeList = get().activeList;
+                    const listIndex = get().getListIndexByUUID(uuid);
+
+                    const storedList: StoredList = {
+                        uuid: uuid || v4(),
+                        text: text,
+                        textFormat: "nrjson",
+                        name: undefined,
+                        units: [],
+                        phase: Phase.Pregame,
+                        faction: undefined,
+                        detachment: undefined,
+                        created: get().hasActiveList()
+                            ? get().getActiveList().created
+                            : Date.now().toString(),
+                        updated: Date.now().toString(),
+                    };
+
+                    let roster;
+                    try {
+                        roster = JSON.parse(text).roster;
+                    } catch {
+                        return false;
+                    }
+
+                    if (!roster || !roster.forces || roster.forces.length === 0) {
+                        return false;
+                    }
+
+                    const force = roster.forces[0];
+
+                    // Extract faction from catalogueName (e.g. "Chaos - Chaos Knights")
+                    const catalogueName: string = force.catalogueName || "";
+                    const catalogueSegments = catalogueName.split(" - ").map((s: string) => s.trim());
+                    const factionMatch = Factions.find((f) =>
+                        catalogueSegments.some((seg: string) => f.name === seg),
+                    );
+
+                    if (!factionMatch) {
+                        console.error("Faction not found for catalogueName:", catalogueName);
+                        return false;
+                    }
+
+                    const factionId = factionMatch.id;
+                    storedList.faction = factionId;
+
+                    // Extract detachment
+                    const detachmentSelection = (force.selections || []).find(
+                        (s: { name: string }) => s.name === "Detachment",
+                    );
+                    if (detachmentSelection?.selections?.length > 0) {
+                        storedList.detachment = detachmentSelection.selections[0].name;
+                    }
+
+                    // Extract roster name
+                    const rosterName = roster.name || name;
+
+                    // Extract units: selections where type is "model" or "unit"
+                    // and primary category is not "Configuration"
+                    interface NRSelection {
+                        name: string;
+                        type: string;
+                        costs?: { name: string; value: number }[];
+                        selections?: NRSelection[];
+                        categories?: { name: string; primary: boolean }[];
+                    }
+
+                    const isConfiguration = (sel: NRSelection): boolean => {
+                        return (sel.categories || []).some(
+                            (c: { name: string; primary: boolean }) => c.primary && c.name === "Configuration",
+                        );
+                    };
+
+                    const selections: NRSelection[] = force.selections || [];
+                    const unitSelections = selections.filter(
+                        (s) => (s.type === "model" || s.type === "unit") && !isConfiguration(s),
+                    );
+
+                    const listUnits: ListUnit[] = unitSelections.map(
+                        (sel: NRSelection, index: number) => {
+                            // Get points
+                            const ptsCost = (sel.costs || []).find(
+                                (c: { name: string; value: number }) => c.name === "pts",
+                            );
+                            const points = ptsCost ? ptsCost.value : null;
+
+                            // Get wargear from sub-selections
+                            const subSelections = sel.selections || [];
+                            const wargearNames = subSelections
+                                .map((sub: NRSelection) => sub.name);
+                            const details = wargearNames.join(", ");
+
+                            // For "unit" type, extract child models
+                            const children: ListUnit[] = [];
+                            if (sel.type === "unit") {
+                                const childModels = subSelections.filter(
+                                    (sub: NRSelection) => sub.type === "model",
+                                );
+                                childModels.forEach((child: NRSelection, childIndex: number) => {
+                                    const childWargear = (child.selections || [])
+                                        .map((sub: NRSelection) => sub.name)
+                                        .join(", ");
+                                    children.push({
+                                        id: index * 1000 + childIndex,
+                                        name: child.name,
+                                        details: childWargear,
+                                        children: [],
+                                        toggled: true,
+                                        count: {},
+                                        groupCount: 1,
+                                        points: null,
+                                        datasheet_id: null,
+                                        weapons: [],
+                                        weaponsDatasheets: [],
+                                        abilities: [],
+                                        enhancements: [],
+                                        datasheet: null,
+                                        datasheetModel: null,
+                                        keywords: "",
+                                        notes: [],
+                                    });
+                                });
+                            }
+
+                            return {
+                                id: index,
+                                name: sel.name,
+                                details: details,
+                                children: children,
+                                toggled: true,
+                                count: {},
+                                groupCount: 1,
+                                points: points,
+                                datasheet_id: null,
+                                weapons: [],
+                                weaponsDatasheets: [],
+                                abilities: [],
+                                enhancements: [],
+                                datasheet: null,
+                                datasheetModel: null,
+                                keywords: "",
+                                notes: [],
+                            };
+                        },
+                    );
+
+                    return get().processUnitsWithDatasheets(
+                        storedList,
+                        listUnits,
+                        factionId,
+                        rosterName,
+                        uuid,
+                    );
                 },
                 parseTextListforge: (
                     text: string,
