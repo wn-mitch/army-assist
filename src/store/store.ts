@@ -28,6 +28,31 @@ import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import { arraysEqual } from "@/utils/StoreHelper";
 import Settings from "@/types/Settings";
 import { samplePreload, testingPreload } from "@/utils/PreloadedLists";
+
+// Normalize American → British spelling and common variants for matching
+const SPELLING_NORMALIZATIONS: [RegExp, string][] = [
+    [/armor/gi, "armour"],
+    [/honor/gi, "honour"],
+    [/favor/gi, "favour"],
+    [/berserker/gi, "berzerker"],
+];
+
+const normalizeSpelling = (name: string): string => {
+    let normalized = name;
+    for (const [pattern, replacement] of SPELLING_NORMALIZATIONS) {
+        normalized = normalized.replace(pattern, replacement);
+    }
+    return normalized;
+};
+
+// Faction-specific unit name aliases for ListForge → canonical datasheet names
+const FACTION_UNIT_ALIASES: Record<string, Record<string, string>> = {
+    WE: {
+        "daemon prince": "Daemon Prince of Khorne",
+        "daemon prince with wings": "Daemon Prince of Khorne with Wings",
+        "rhino": "Chaos Rhino",
+    },
+};
 import Note from "@/types/Note";
 
 interface StoreState {
@@ -288,7 +313,9 @@ const useStore = create<StoreState>()(
 
                     // Extract detachment
                     const detachmentSelection = (force.selections || []).find(
-                        (s: { name: string }) => s.name === "Detachment",
+                        (s: { name: string }) =>
+                            s.name === "Detachment" ||
+                            s.name === "Detachment Choice",
                     );
                     if (detachmentSelection?.selections?.length > 0) {
                         storedList.detachment = detachmentSelection.selections[0].name;
@@ -450,10 +477,20 @@ const useStore = create<StoreState>()(
 
                     const detachmentMatch = lines[0]
                         .trim()
-                        .match(/^.+? - [\w''\s\-]+ - ([\w''\s\-]+?)(?:\s*\()/);
+                        .match(/^.+? - [\w''\s\-]+ - ([\w''\s\-]+?)(?:\s*[\(\[])/);
 
                     if (detachmentMatch) {
                         storedList.detachment = detachmentMatch[1].trim();
+                    } else {
+                        for (const line of lines) {
+                            const detLine = line
+                                .trim()
+                                .match(/^Detachment(?:\s+Choice)?:\s*(.+)$/);
+                            if (detLine) {
+                                storedList.detachment = detLine[1].trim();
+                                break;
+                            }
+                        }
                     }
 
                     const listUnits: ListUnit[] = [];
@@ -655,21 +692,6 @@ const useStore = create<StoreState>()(
                         ],
                     };
 
-                    // Normalize American → British spelling for datasheet matching
-                    const SPELLING_NORMALIZATIONS: [RegExp, string][] = [
-                        [/armor/gi, "armour"],
-                        [/honor/gi, "honour"],
-                        [/favor/gi, "favour"],
-                    ];
-
-                    const normalizeSpelling = (name: string): string => {
-                        let normalized = name;
-                        for (const [pattern, replacement] of SPELLING_NORMALIZATIONS) {
-                            normalized = normalized.replace(pattern, replacement);
-                        }
-                        return normalized;
-                    };
-
                     const findDatasheet = (unitName: string) => {
                         const lowerName = normalizeSpelling(unitName.toLowerCase());
                         let matches = Datasheets.filter(
@@ -723,6 +745,41 @@ const useStore = create<StoreState>()(
                                         cdMatch ||
                                         matches[0]
                                     );
+                                }
+                            }
+                        }
+
+                        // Fallback: check faction-specific unit aliases
+                        const aliases = FACTION_UNIT_ALIASES[factionAbbreviationId];
+                        if (aliases) {
+                            // Try both the raw lowered name and any prefix-stripped version
+                            const candidates = [lowerName];
+                            for (const prefix of prefixes) {
+                                if (lowerName.startsWith(prefix.toLowerCase() + " ")) {
+                                    candidates.push(
+                                        lowerName.substring(prefix.length + 1).trim(),
+                                    );
+                                }
+                            }
+                            for (const candidate of candidates) {
+                                const aliasTarget = aliases[normalizeSpelling(candidate)];
+                                if (aliasTarget) {
+                                    matches = Datasheets.filter(
+                                        (item) =>
+                                            item.name.toLowerCase() ===
+                                            aliasTarget.toLowerCase(),
+                                    );
+                                    if (matches.length > 0) {
+                                        const factionMatch = matches.find(
+                                            (item) =>
+                                                item.faction_id ===
+                                                factionAbbreviationId,
+                                        );
+                                        const cdMatch = matches.find(
+                                            (item) => item.faction_id === "CD",
+                                        );
+                                        return factionMatch || cdMatch || matches[0];
+                                    }
                                 }
                             }
                         }
@@ -1223,7 +1280,7 @@ const useStore = create<StoreState>()(
                         )
                         .filter((stratagem) => {
                             return (
-                                stratagem.detachment === detachment ||
+                                normalizeSpelling(stratagem.detachment) === normalizeSpelling(detachment ?? "") ||
                                 stratagem.detachment === "Core Rules"
                             );
                         })
@@ -1268,7 +1325,7 @@ const useStore = create<StoreState>()(
                         )
                         .filter((stratagem) => {
                             return (
-                                stratagem.detachment === detachment ||
+                                normalizeSpelling(stratagem.detachment) === normalizeSpelling(detachment ?? "") ||
                                 stratagem.detachment === "Core Rules"
                             );
                         })
@@ -1308,7 +1365,7 @@ const useStore = create<StoreState>()(
                         DetachmentAbilities.filter(
                             (ability) =>
                                 ability.faction_id === faction &&
-                                ability.detachment === detachment,
+                                normalizeSpelling(ability.detachment) === normalizeSpelling(detachment),
                         ).map((x) => ({
                             ...x,
                             type: "Detachment",

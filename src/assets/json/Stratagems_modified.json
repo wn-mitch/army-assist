@@ -9935,7 +9935,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "DEVOTED DUELLISTS",
         "id": "aa1ddd3f-02c4-5315-ac19-1fc0db558fe3",
         "type": "Slaanesh’s Chosen - Battle Tactic Stratagem",
@@ -9952,7 +9952,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "HEIGHTENED JEALOUSY",
         "id": "dfe61f14-cdb0-525c-9e71-ae8f1fdf4c47",
         "type": "Slaanesh’s Chosen - Battle Tactic Stratagem",
@@ -9970,7 +9970,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "REFUSAL TO BE OUTDONE",
         "id": "9009efbd-11f9-5348-b9ed-030876a5ceeb",
         "type": "Slaanesh’s Chosen - Battle Tactic Stratagem",
@@ -9987,7 +9987,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "SUSTAINED BY AGONY",
         "id": "71678e4b-c4f0-5e1d-a007-77886e826e4e",
         "type": "Carnival of Excess - Battle Tactic Stratagem",
@@ -10004,7 +10004,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "SYCOPHANTIC SURGE",
         "id": "073c5e82-5930-5730-b38f-0af3df97d709",
         "type": "Carnival of Excess - Battle Tactic Stratagem",
@@ -10021,7 +10021,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "UNCANNY REACTIONS",
         "id": "2bf0f8d7-b057-554e-ac27-9784d7d96085",
         "type": "Carnival of Excess - Battle Tactic Stratagem",
@@ -10038,7 +10038,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CRUEL BLADESMAN",
         "id": "b14d1e92-4aa0-57cc-a007-6c536f2ac9a0",
         "type": "Peerless Bladesmen - Battle Tactic Stratagem",
@@ -10055,7 +10055,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "DEFT PARRY",
         "id": "3ea3dc57-64d5-565d-abf5-8938f1e3e9e7",
         "type": "Peerless Bladesmen - Battle Tactic Stratagem",
@@ -10072,7 +10072,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "INCESSANT VIOLENCE",
         "id": "6aaa4f22-7508-5062-a532-b76b4a7a563c",
         "type": "Peerless Bladesmen - Battle Tactic Stratagem",
@@ -10089,7 +10089,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "VIOLENT EXCESS",
         "id": "7dae14c0-cd31-5f7c-9a6e-06f3b87fd023",
         "type": "Mercurial Host - Battle Tactic Stratagem",
@@ -10106,7 +10106,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "HONOUR THE PRINCE",
         "id": "d422145a-7bfd-586a-b6f2-c8a1d2eb21db",
         "type": "Mercurial Host - Battle Tactic Stratagem",
@@ -10123,7 +10123,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CAPRICIOUS REACTIONS",
         "id": "e617f44b-35ad-57aa-ba42-e11b0d8197f8",
         "type": "Mercurial Host - Battle Tactic Stratagem",
@@ -10140,7 +10140,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CONTEMPTUOUS DISREGARD",
         "id": "1190816a-dc74-52c2-bd62-26e2fe65ef03",
         "type": "Court of the Phoenician - Battle Tactic Stratagem",
@@ -10158,7 +10158,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CLOSE-QUARTERS EXCRUCIATION",
         "id": "750e1d5c-69a7-59a6-8d70-f2835eb32252",
         "type": "Court of the Phoenician - Battle Tactic Stratagem",
@@ -10175,7 +10175,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "EUPHORIC INSPIRATION",
         "id": "cfaa3a12-153e-5cc5-827d-d202a62e5834",
         "type": "Court of the Phoenician - Battle Tactic Stratagem",
@@ -10192,7 +10192,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "MARTIAL PERFECTION",
         "id": "87a93d52-f74c-5ef7-aee6-6654c0a5a0b8",
         "type": "Coterie of the Conceited - Battle Tactic Stratagem",
@@ -10209,7 +10209,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "COMBAT STIMMS",
         "id": "93478450-0c62-54b2-96f3-d7692d5d708c",
         "type": "Mercurial Host - Battle Tactic Stratagem",
@@ -10226,7 +10226,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "PRIDEFUL SUPERIORITY",
         "id": "32a93fad-5360-5aca-b979-c250fbc41890",
         "type": "Court of the Phoenician - Battle Tactic Stratagem",
@@ -10243,7 +10243,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "DIABOLIC MAJESTY",
         "id": "26185bb0-1186-5c92-ba8a-78fea3733c3d",
         "type": "Slaanesh’s Chosen - Epic Deed Stratagem",
@@ -10261,7 +10261,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "DYNAMIC BREAKTHROUGH",
         "id": "e6e31833-3e59-5cf6-abfa-39e781a9198d",
         "type": "Rapid Evisceration - Epic Deed Stratagem",
@@ -10278,7 +10278,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "UNSHAKEABLE OPPONENTS",
         "id": "fbfd0215-b803-5df4-ba9a-3e101dfc90d0",
         "type": "Coterie of the Conceited - Epic Deed Stratagem",
@@ -10295,7 +10295,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "UNBOUND ARROGANCE",
         "id": "c921d34f-ca4f-523d-b95d-f1ca668f08ea",
         "type": "Coterie of the Conceited - Epic Deed Stratagem",
@@ -10313,7 +10313,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "BEAUTIFUL DEATH",
         "id": "2dbe2a54-564e-5fb2-8c28-cc52566455e3",
         "type": "Slaanesh’s Chosen - Strategic Ploy Stratagem",
@@ -10330,7 +10330,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "VENGEFUL SURGE",
         "id": "9576d57b-6d04-5303-80be-cdece5ce0544",
         "type": "Slaanesh’s Chosen - Strategic Ploy Stratagem",
@@ -10347,7 +10347,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "ECSTATIC SLAUGHTER",
         "id": "5404ad68-53d5-5003-a19d-999b144adf61",
         "type": "Carnival of Excess - Strategic Ploy Stratagem",
@@ -10364,7 +10364,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "TERRIFYING SPECTACLE",
         "id": "a9ffc21f-87ab-5a25-8cbe-f154add9e1e4",
         "type": "Peerless Bladesmen - Strategic Ploy Stratagem",
@@ -10381,7 +10381,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "ON TO THE NEXT",
         "id": "832b740d-0c8d-5d0e-bdc5-a5a213fa267b",
         "type": "Rapid Evisceration - Strategic Ploy Stratagem",
@@ -10398,7 +10398,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "ADVANCE AND CLAIM",
         "id": "8593ab58-a19e-5a0d-97af-9bd97b973181",
         "type": "Rapid Evisceration - Strategic Ploy Stratagem",
@@ -10415,7 +10415,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CEASELESS ONSLAUGHT",
         "id": "eea7b049-4e48-56c3-83e1-a9a374b9ad4e",
         "type": "Rapid Evisceration - Strategic Ploy Stratagem",
@@ -10432,7 +10432,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "REACTIVE DISEMBARKATION",
         "id": "4d06bc91-657d-5a93-94dc-3df205cdc26c",
         "type": "Rapid Evisceration - Strategic Ploy Stratagem",
@@ -10449,7 +10449,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "OUTFLANKING STRIKE",
         "id": "bffd38cc-11c1-5116-ac6b-2011b6b281a6",
         "type": "Rapid Evisceration - Strategic Ploy Stratagem",
@@ -10466,7 +10466,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "DARK VIGOUR",
         "id": "ba53a1b4-1564-5c0b-b7e0-e427378edd75",
         "type": "Mercurial Host - Strategic Ploy Stratagem",
@@ -10483,7 +10483,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CRUEL RAIDERS",
         "id": "79689db9-e48d-55f6-9937-d07243e2083c",
         "type": "Mercurial Host - Strategic Ploy Stratagem",
@@ -10500,7 +10500,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "SINUOUS BREACH",
         "id": "07cea8e9-8fd3-56a2-990c-aff6a6ae3e77",
         "type": "Court of the Phoenician - Strategic Ploy Stratagem",
@@ -10518,7 +10518,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CATALYTIC STIMULUS",
         "id": "8d34b743-15f6-5341-80b1-675b96650ad7",
         "type": "Court of the Phoenician - Strategic Ploy Stratagem",
@@ -10535,7 +10535,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "PROTECTION OF THE DARK PRINCE",
         "id": "aa03344d-44c1-5b5a-96bb-6a7249d82404",
         "type": "Coterie of the Conceited - Strategic Ploy Stratagem",
@@ -10556,7 +10556,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "EMBRACE THE PAIN",
         "id": "0a75ee19-bfb8-592d-a823-1061a12bd3d5",
         "type": "Coterie of the Conceited - Strategic Ploy Stratagem",
@@ -10573,7 +10573,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "VIOLENT CRESCENDO",
         "id": "9623415b-61c3-510f-9f74-1453daff0101",
         "type": "Carnival of Excess - Strategic Ploy Stratagem",
@@ -10590,7 +10590,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "DARK APPARITIONS",
         "id": "8657b48a-dce7-50d3-923a-63ce212299ab",
         "type": "Carnival of Excess - Strategic Ploy Stratagem",
@@ -10607,7 +10607,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "CUT DOWN THE WEAK",
         "id": "feecb25c-20d3-53a1-b854-dd98c034ef08",
         "type": "Peerless Bladesmen - Strategic Ploy Stratagem",
@@ -10624,7 +10624,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "DEATH ECSTASY",
         "id": "7f5b51bb-efc8-58ef-be9b-068b065ded99",
         "type": "Peerless Bladesmen - Strategic Ploy Stratagem",
@@ -10641,7 +10641,7 @@
         ]
     },
     {
-        "faction_id": "CSM",
+        "faction_id": "EC",
         "name": "ARMOUR OF ABHORRENCE",
         "id": "25c68091-c01c-5cd9-879b-849cc6f9b05f",
         "type": "Coterie of the Conceited - Wargear Stratagem",

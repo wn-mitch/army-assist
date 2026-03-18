@@ -18,6 +18,7 @@ const filterWeaponsByCount = <T extends { name?: string | null }>(
 ): T[] => {
   if (!count) return weapons;
   const countKeys = Object.keys(count);
+  if (countKeys.length === 0) return weapons;
   return weapons.filter((weapon) =>
     countKeys.some((name) => {
       if (!name || !weapon.name) return false;

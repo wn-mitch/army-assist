@@ -6,7 +6,6 @@
 
 ## WIP
 * Support missing weapon profiles and remapping out weapon names. This is going to be a long WIP as test case coverage is extended across armies.
-* Create a pipeline for importing new Wahapedia updates. Currently has two seperate python scripts that need to be combined. Also planning to add a site feature that indicates the last data sync from Wahapedia.
 
 ## Someday
 * User accounts

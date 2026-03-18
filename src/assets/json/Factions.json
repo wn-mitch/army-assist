@@ -1,7 +1,12 @@
 [
     {
-        "id": "AoI",
-        "name": "Agents of the Imperium",
+        "id": "AS",
+        "name": "Adepta Sororitas",
+        "link": ""
+    },
+    {
+        "id": "AC",
+        "name": "Adeptus Custodes",
         "link": ""
     },
     {
@@ -10,48 +15,13 @@
         "link": ""
     },
     {
-        "id": "SM",
-        "name": "Space Marines",
+        "id": "AE",
+        "name": "Aeldari",
         "link": ""
     },
     {
-        "id": "SM",
-        "name": "Dark Angels",
-        "link": ""
-    },
-    {
-        "id": "CSM",
-        "name": "Chaos Space Marines",
-        "link": ""
-    },
-    {
-        "id": "ORK",
-        "name": "Orks",
-        "link": ""
-    },
-    {
-        "id": "LoV",
-        "name": "Leagues of Votann",
-        "link": ""
-    },
-    {
-        "id": "WE",
-        "name": "World Eaters",
-        "link": ""
-    },
-    {
-        "id": "QI",
-        "name": "Imperial Knights",
-        "link": ""
-    },
-    {
-        "id": "DG",
-        "name": "Death Guard",
-        "link": ""
-    },
-    {
-        "id": "GC",
-        "name": "Genestealer Cults",
+        "id": "AoI",
+        "name": "Agents of the Imperium",
         "link": ""
     },
     {
@@ -60,8 +30,93 @@
         "link": ""
     },
     {
+        "id": "SM",
+        "name": "Black Templar",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Black Templars",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Blood Angels",
+        "link": ""
+    },
+    {
+        "id": "CSM",
+        "name": "Chaos Space Marines",
+        "link": ""
+    },
+    {
         "id": "CD",
         "name": "Chaos Daemons",
+        "link": ""
+    },
+    {
+        "id": "QT",
+        "name": "Chaos Knights",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Dark Angels",
+        "link": ""
+    },
+    {
+        "id": "DG",
+        "name": "Death Guard",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Deathwatch",
+        "link": ""
+    },
+    {
+        "id": "DRU",
+        "name": "Drukhari",
+        "link": ""
+    },
+    {
+        "id": "EC",
+        "name": "Emperor's Children",
+        "link": ""
+    },
+    {
+        "id": "GK",
+        "name": "Grey Knights",
+        "link": ""
+    },
+    {
+        "id": "GC",
+        "name": "Genestealer Cults",
+        "link": ""
+    },
+    {
+        "id": "QI",
+        "name": "Imperial Knights",
+        "link": ""
+    },
+    {
+        "id": "NEC",
+        "name": "Necrons",
+        "link": ""
+    },
+    {
+        "id": "ORK",
+        "name": "Orks",
+        "link": ""
+    },
+    {
+        "id": "SM",
+        "name": "Space Wolves",
+        "link": ""
+    },
+    {
+        "id": "TAU",
+        "name": "T'au Empire",
         "link": ""
     },
     {
@@ -75,58 +130,18 @@
         "link": ""
     },
     {
-        "id": "NEC",
-        "name": "Necrons",
+        "id": "LoV",
+        "name": "Votann",
         "link": ""
     },
     {
-        "id": "AE",
-        "name": "Aeldari",
-        "link": ""
-    },
-    {
-        "id": "DRU",
-        "name": "Drukhari",
+        "id": "WE",
+        "name": "World Eaters",
         "link": ""
     },
     {
         "id": "SM",
-        "name": "Black Templars",
-        "link": ""
-    },
-    {
-        "id": "GK",
-        "name": "Grey Knights",
-        "link": ""
-    },
-    {
-        "id": "SM",
-        "name": "Blood Angels",
-        "link": ""
-    },
-    {
-        "id": "QT",
-        "name": "Chaos Knights",
-        "link": ""
-    },
-    {
-        "id": "SM",
-        "name": "Deathwatch",
-        "link": ""
-    },
-    {
-        "id": "SM",
-        "name": "Space Wolves",
-        "link": ""
-    },
-    {
-        "id": "AS",
-        "name": "Adepta Sororitas",
-        "link": ""
-    },
-    {
-        "id": "AC",
-        "name": "Adeptus Custodes",
+        "name": "Adeptus Astartes",
         "link": ""
     },
     {
@@ -135,8 +150,8 @@
         "link": ""
     },
     {
-        "id": "SM",
-        "name": "Adeptus Astartes",
+        "id": "AE",
+        "name": "Craftworlds",
         "link": ""
     },
     {
@@ -172,16 +187,6 @@
     {
         "id": "SM",
         "name": "Crimson Fists",
-        "link": ""
-    },
-    {
-        "id": "TAU",
-        "name": "T'au Empire",
-        "link": ""
-    },
-    {
-        "id": "AE",
-        "name": "Craftworlds",
         "link": ""
     }
 ]
