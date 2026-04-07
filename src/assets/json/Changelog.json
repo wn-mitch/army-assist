@@ -1,5 +1,13 @@
 [
     {
+        "version": "2.1.1",
+        "stateVersion": 27,
+        "date": "4/7/26",
+        "changes": [
+            "Fixed Leagues of Votann lists failing to import from both ListForge text paste and NR JSON file upload."
+        ]
+    },
+    {
         "version": "2.1.0",
         "stateVersion": 27,
         "date": "3/9/26",
