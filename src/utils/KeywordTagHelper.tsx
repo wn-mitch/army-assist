@@ -335,6 +335,13 @@ const tagDetails: { [key: string]: TagDetail } = {
     ringColor: "ring-zinc-900 dark:ring-zinc-500",
     textColor: "text-zinc-800 dark:text-zinc-200",
   },
+  Overcharge: {
+    name: "Overcharge",
+    icon: <GiPlasmaBolt className="h-5 w-5" />,
+    bgColor: "bg-orange-200 dark:bg-orange-900",
+    ringColor: "ring-orange-900 dark:ring-orange-500",
+    textColor: "text-orange-800 dark:text-orange-200",
+  },
 };
 
 export default tagDetails;

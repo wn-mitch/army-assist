@@ -4,7 +4,8 @@
         "stateVersion": 27,
         "date": "4/7/26",
         "changes": [
-            "Fixed Leagues of Votann lists failing to import from both ListForge text paste and NR JSON file upload."
+            "Fixed Leagues of Votann lists failing to import from both ListForge text paste and NR JSON file upload.",
+            "Added missing 'Overcharge' weapon keyword tag for the Arkanyst Evaluator's Transmatter inverter."
         ]
     },
     {
