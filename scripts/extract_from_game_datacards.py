@@ -439,6 +439,9 @@ def transform_datasheet(ds: dict) -> dict:
     }
 
 
+_COMPOSITION_COUNT_RE = re.compile(r"^\s*(\d+(?:-\d+)?)\s+(.+?)\s*$")
+
+
 def transform_models(ds: dict) -> list:
     abilities = ds.get("abilities", {})
     invul = abilities.get("invul", {})
@@ -447,8 +450,12 @@ def transform_models(ds: dict) -> list:
     # Strip the "+" from "4+" for inv_sv
     inv_sv = inv_val.replace("+", "") if inv_val else ""
 
+    # baseSize lives at datasheet level upstream; propagate to every stat row.
+    base_size = ds.get("baseSize", "") or ""
+
+    stats = ds.get("stats", [])
     models = []
-    for i, stat in enumerate(ds.get("stats", [])):
+    for i, stat in enumerate(stats):
         models.append({
             "datasheet_id": ds["id"],
             "line": str(i + 1),
@@ -461,9 +468,55 @@ def transform_models(ds: dict) -> list:
             "W": stat.get("w", ""),
             "Ld": stat.get("ld", ""),
             "OC": stat.get("oc", ""),
-            "base_size": "",
+            "base_size": base_size,
             "base_size_descr": "",
         })
+
+    # Synthesize per-model rows from the `composition` field. game-datacards
+    # only exposes `stats[]` (often one row per datasheet), but lists squad
+    # composition as strings like "1 Infernus Sergeant", "4-9 Infernus Marines".
+    # Emit extra rows for each unique model name so Bevy's list parser can
+    # resolve sergeants, champions and named characters. Synthesized rows
+    # share the primary stat line — upstream doesn't expose per-model distinct
+    # stats (a named-character overlay is a separate follow-up).
+    if stats:
+        primary = stats[0]
+        existing_lower = {m["name"].lower() for m in models}
+        line = len(models) + 1
+        for entry in ds.get("composition", []):
+            match = _COMPOSITION_COUNT_RE.match(entry)
+            if not match:
+                continue
+            name = match.group(2).strip()
+            # Skip choice-style entries ("A or B") — they're not single-model names.
+            if " or " in name.lower():
+                continue
+            lower = name.lower()
+            # Dedupe case-insensitive, tolerant of singular/plural.
+            if (
+                lower in existing_lower
+                or (lower.endswith("s") and lower[:-1] in existing_lower)
+                or f"{lower}s" in existing_lower
+            ):
+                continue
+            existing_lower.add(lower)
+            models.append({
+                "datasheet_id": ds["id"],
+                "line": str(line),
+                "name": name,
+                "M": primary.get("m", ""),
+                "T": primary.get("t", ""),
+                "Sv": primary.get("sv", ""),
+                "inv_sv": inv_sv,
+                "inv_sv_descr": inv_descr,
+                "W": primary.get("w", ""),
+                "Ld": primary.get("ld", ""),
+                "OC": primary.get("oc", ""),
+                "base_size": base_size,
+                "base_size_descr": "",
+            })
+            line += 1
+
     return models
 
 
@@ -610,6 +663,17 @@ def transform_wargear(ds: dict) -> list:
                 })
                 line += 1
 
+    return result
+
+
+def transform_points(ds: dict) -> list:
+    result = []
+    for entry in ds.get("points", []):
+        result.append({
+            "datasheet_id": ds["id"],
+            "models": entry.get("models", ""),
+            "cost": entry.get("cost", ""),
+        })
     return result
 
 
@@ -806,6 +870,7 @@ def main():
     datasheet_abilities = []
     datasheet_wargear = []
     datasheet_keywords = []
+    datasheet_points = []
     stratagems = []
     enhancements = []
     army_abilities = []
@@ -819,15 +884,33 @@ def main():
         stratagems.append(transform_stratagem(s, is_core=True))
     print(f"  Core Rules: {len(core_data.get('stratagems', []))} stratagems")
 
-    # Fetch each faction
+    # Fetch all faction data up front so we can detect datasheet IDs that are
+    # shared across multiple factions (e.g. Chaos Rhino / Chaos Spawn appear in
+    # 5 chaos faction files with the same id). Downstream consumers like Bevy
+    # track `id -> faction` with a single-value map, so shared ids collapse
+    # faction membership. Suffix the id with the faction during emission to
+    # restore per-faction uniqueness.
+    fetched = []  # list of (fname, data, raw_faction_id, faction_id, faction_name)
     for fname in FACTION_FILES:
         print(f"Fetching {fname}.json...")
         data = fetch_json(fname)
-
         raw_faction_id = data.get("id", "")
         faction_id = map_faction_id(raw_faction_id)
         faction_name = data.get("name", fname)
+        fetched.append((fname, data, raw_faction_id, faction_id, faction_name))
 
+    id_to_factions: dict[str, set[str]] = {}
+    for (_, data, _, faction_id, _) in fetched:
+        for ds in data.get("datasheets", []):
+            id_to_factions.setdefault(ds["id"], set()).add(faction_id)
+
+    # Dedupe datasheets emitted more than once with the same effective id.
+    # SM chapter subfactions all map to faction_id "SM" and each chapter's
+    # upstream file re-lists shared units (Terminator Squad, etc.) with the
+    # same upstream id — without this guard we'd emit 3+ identical rows.
+    emitted_ds_ids: set[str] = set()
+
+    for (fname, data, raw_faction_id, faction_id, faction_name) in fetched:
         # Track factions
         if faction_id not in factions_seen:
             factions_seen[faction_id] = faction_name
@@ -841,11 +924,18 @@ def main():
         ds_list = data.get("datasheets", [])
         all_datasheets_raw.extend(ds_list)
         for ds in ds_list:
+            # Disambiguate shared datasheet ids by suffixing faction.
+            if len(id_to_factions.get(ds["id"], set())) > 1:
+                ds["id"] = f"{ds['id']}-{faction_id}"
+            if ds["id"] in emitted_ds_ids:
+                continue
+            emitted_ds_ids.add(ds["id"])
             datasheets.append(transform_datasheet(ds))
             datasheet_models.extend(transform_models(ds))
             datasheet_abilities.extend(transform_abilities(ds))
             datasheet_wargear.extend(transform_wargear(ds))
             datasheet_keywords.extend(transform_keywords(ds))
+            datasheet_points.extend(transform_points(ds))
 
         # Stratagems
         strats = data.get("stratagems", [])
@@ -900,6 +990,7 @@ def main():
         "Datasheets_abilities_modified.json": datasheet_abilities,
         "Datasheets_wargear.json": datasheet_wargear,
         "Datasheets_keywords.json": datasheet_keywords,
+        "Datasheets_points.json": datasheet_points,
         "Datasheets_leader.json": leader_attachments,
         "Enhancements.json": enhancements,
         "Enhancements_modified.json": enhancements,
