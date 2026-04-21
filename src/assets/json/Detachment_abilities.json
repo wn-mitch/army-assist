@@ -6,7 +6,7 @@
         "detachment": "Penitent Host",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, you can select one of the following Vows of Atonement to be active for your army until the start of the next battle round. You can only select each Vow of Atonement once per battle.\nThe Path of the Penitent: Add 3\" to the Move characteristic of PENITENT models from your army.\nAbsolution in Battle: Each time a unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by PENITENT models in that unit.\nDeath Before Disgrace: Each time a PENITENT model from your army is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+        "description": "At the start of the battle round, you can select one of the following Vows of Atonement to be active for your army until the start of the next battle round. You can only select each Vow of Atonement once per battle.\nThe Path of the Penitent: Add 3\"to the Move characteristic of PENITENT models from your army.\nAbsolution in Battle: Each time a unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by PENITENT models in that unit.\nDeath Before Disgrace: Each time a PENITENT model from your army is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
         "phases": [
             "Pregame",
             "Command",
@@ -36,7 +36,7 @@
         "detachment": "Bringers of Flame",
         "detachment_id": "",
         "legend": "",
-        "description": "Ranged weapons equipped by ADEPTA SORORITAS models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 6\", add 1 to the Strength characteristic of that attack.",
+        "description": "Ranged weapons equipped by ADEPTA SORORITAS models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 6\",add 1 to the Strength characteristic of that attack.",
         "phases": [
             "Shooting"
         ]
@@ -48,7 +48,7 @@
         "detachment": "Champions of Faith",
         "detachment_id": "",
         "legend": "",
-        "description": "In your Command phase, you can select up to 3 ADEPTA SORORITAS units from your army (including units that are embarked within TRANSPORTS), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by BATTLE SISTERS SQUAD, CELESTIAN SACRESANTS and PARAGON WARSUITS models in that unit by 1.",
+        "description": "In your Command phase, you can select up to 3 ADEPTA SORORITAS units from your army (including units that are embarked within TRANSPORTS), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n\n■ Add 1\"to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by BATTLE SISTERS SQUAD, CELESTIAN SACRESANTS and PARAGON WARSUITS models in that unit by 1.",
         "phases": [
             "Command",
             "Movement"
@@ -78,7 +78,7 @@
         "detachment": "Lions of the Emperor",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a model in an ADEPTUS CUSTODES unit from your army (excluding VEHICLES) makes an attack, if there are no other friendly units within 6\" of that unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+        "description": "Each time a model in an ADEPTUS CUSTODES unit from your army (excluding VEHICLES) makes an attack, if there are no other friendly units within 6\"of that unit, add 1 to the Hit roll and add 1 to the Wound roll.",
         "phases": [
             "Shooting",
             "Fight"
@@ -119,7 +119,7 @@
         "detachment": "Solar Spearhead",
         "detachment_id": "",
         "legend": "",
-        "description": "Add 2\" to the Move characteristic of models in ADEPTUS CUSTODES WALKER units from your army and add 1 to Advance and Charge rolls made for such units.",
+        "description": "Add 2\"to the Move characteristic of models in ADEPTUS CUSTODES WALKER units from your army and add 1 to Advance and Charge rolls made for such units.",
         "phases": [
             "Movement",
             "Charge"
@@ -146,7 +146,7 @@
         "detachment": "Null Maiden Vigil",
         "detachment_id": "",
         "legend": "",
-        "description": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is either a PSYKER unit or below its Starting Strength is within 12\" of one or more ANATHEMA PSYKANA models from your army, that enemy unit must take a Battle‑shock test. If that unit is Below Half‑strength, it must subtract 1 from its Battle‑shock test this phase instead.\n\nDesigner’s Note: This means that all enemy PSYKER units within range of this Aura ability and all enemy units within range of this Aura ability that have lost one or more models must take a Battle‑shock test in your opponent’s Command phase, not just those that are Below Half‑strength.",
+        "description": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is either a PSYKER unit or below its Starting Strength is within 12\"of one or more ANATHEMA PSYKANA models from your army, that enemy unit must take a Battle‑shock test. If that unit is Below Half‑strength, it must subtract 1 from its Battle‑shock test this phase instead.\n\nDesigner’s Note: This means that all enemy PSYKER units within range of this Aura ability and all enemy units within range of this Aura ability that have lost one or more models must take a Battle‑shock test in your opponent’s Command phase, not just those that are Below Half‑strength.",
         "phases": []
     },
     {
@@ -156,7 +156,7 @@
         "detachment": "Talons of the Emperor",
         "detachment_id": "",
         "legend": "",
-        "description": "ANATHEMA PSYKANA units from your army gain the following the ability:\n\nNull Aegis (Aura): While an ADEPTUS CUSTODES unit is within 6\" of this unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.\n\nAll other ADEPTUS CUSTODES units from your army gain the following ability:\n\nDeadly Unity (Aura): While an ANATHEMA PSYKANA unit is within 6\" of this unit, each time a model in that ANATHEMA PSYKANA unit makes an attack, add 1 to the Hit roll.",
+        "description": "ANATHEMA PSYKANA units from your army gain the following the ability:\n\nNull Aegis (Aura):While an ADEPTUS CUSTODES unit is within 6\"of this unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.\n\nAll other ADEPTUS CUSTODES units from your army gain the following ability:\n\nDeadly Unity (Aura):While an ANATHEMA PSYKANA unit is within 6\"of this unit, each time a model in that ANATHEMA PSYKANA unit makes an attack, add 1 to the Hit roll.",
         "phases": [
             "Shooting",
             "Fight",
@@ -170,7 +170,7 @@
         "detachment": "Haloscreed Battle Clade",
         "detachment_id": "",
         "legend": "",
-        "description": "In your Command phase, select one or more ADEPTUS MECHANICUS units from your army (including units that are embarked within TRANSPORTS). The maximum number of units you can select depends on the battle size, as follows:INCURSION: 1 UNIT\nSTRIKE FORCE: 2 UNITS\nONSLAUGHT: 3 UNITSUntil the start of your next Command phase, those units gain the HALO OVERRIDE keyword. Then, select one of the Override abilities below. Until the start of your next Command phase, units from your army with the HALO OVERRIDE keyword have the selected Override ability:\nElectromotive Energisation: Add 2\" to the Move characteristic of models in this unit.\nMicroactuator Bracing: Add 1 to the Toughness characteristic of models in this unit.\nPredation Protocols: This unit is eligible to declare a charge in a turn in which it Advanced.\nMuted Servomotors: Models in this unit have the Stealth ability.",
+        "description": "In your Command phase, select one or more ADEPTUS MECHANICUS units from your army (including units that are embarked within TRANSPORTS). The maximum number of units you can select depends on the battle size, as follows:INCURSION:1 UNIT\nSTRIKE FORCE:2 UNITS\nONSLAUGHT:3 UNITSUntil the start of your next Command phase, those units gain the HALO OVERRIDE keyword. Then, select one of the Override abilities below. Until the start of your next Command phase, units from your army with the HALO OVERRIDE keyword have the selected Override ability:\nElectromotive Energisation: Add 2\"to the Move characteristic of models in this unit.\nMicroactuator Bracing: Add 1 to the Toughness characteristic of models in this unit.\nPredation Protocols: This unit is eligible to declare a charge in a turn in which it Advanced.\nMuted Servomotors: Models in this unit have the Stealth ability.",
         "phases": [
             "Command",
             "Movement",
@@ -185,7 +185,7 @@
         "detachment": "Cohort Cybernetica",
         "detachment_id": "",
         "legend": "",
-        "description": "Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle‐shocked, add 1 to the Objective Control characteristic of models in that unit.",
+        "description": "Add 2\"to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle‐shocked, add 1 to the Objective Control characteristic of models in that unit.",
         "phases": [
             "Command",
             "Movement"
@@ -198,7 +198,7 @@
         "detachment": "Skitarii Hunter Cohort",
         "detachment_id": "",
         "legend": "",
-        "description": "SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units from your army have the Stealth ability, and each time a ranged attack targets a SICARIAN unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+        "description": "SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units from your army have the Stealth ability, and each time a ranged attack targets a SICARIAN unit from your army, unless the attacking model is within 12\",the target has the Benefit of Cover against that attack.",
         "phases": [
             "Shooting",
             "Saves"
@@ -250,6 +250,20 @@
     },
     {
         "id": "",
+        "name": "Murderous Imperative",
+        "faction_id": "AdM",
+        "detachment": "Eradication Cohort",
+        "detachment_id": "",
+        "legend": "",
+        "description": "Each time a model in a SKITARII unit from your army makes an attack:\n\n■ If the Protector Imperative is active for that unit, re‑roll a Hit roll of 1.\n■ If the Conqueror Imperative is active for that unit, re‑roll a Wound roll of 1.",
+        "phases": [
+            "Shooting",
+            "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "id": "",
         "name": "Acrobatic Onslaught",
         "faction_id": "AE",
         "detachment": "Ghosts of the Webway",
@@ -294,7 +308,7 @@
         "detachment": "Spirit Conclave",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time an ASURYANI PSYKER model from your army is destroyed by an enemy unit, that enemy unit gains a Vengeful Dead token. Each time a WRAITH CONSTRUCT model from your army makes an attack that targets a unit with one or more Vengeful Dead tokens, add 1 to the Hit roll and add 1 to the Wound roll.\n\nASURYANI PSYKER models from your army have the following ability:\n\nSpirit Guides (Aura): While a WRAITHBLADES, WRAITHGUARD or WRAITHLORD unit from your army is within 12\" of this model, that unit has the Battle Focus ability.",
+        "description": "Each time an ASURYANI PSYKER model from your army is destroyed by an enemy unit, that enemy unit gains a Vengeful Dead token. Each time a WRAITH CONSTRUCT model from your army makes an attack that targets a unit with one or more Vengeful Dead tokens, add 1 to the Hit roll and add 1 to the Wound roll.\n\nASURYANI PSYKER models from your army have the following ability:\n\nSpirit Guides (Aura): While a WRAITHBLADES, WRAITHGUARD or WRAITHLORD unit from your army is within 12\"of this model, that unit has the Battle Focus ability.",
         "phases": [
             "Shooting",
             "Fight"
@@ -307,7 +321,7 @@
         "detachment": "Devoted of Ynnead",
         "detachment_id": "",
         "legend": "",
-        "description": "You can use the following rules:Lethal IntentAt the end of your opponent’s Shooting phase, if one or more YNNARI units from your army were destroyed this phase, select one YNNARI INFANTRY or YNNARI MOUNTED unit from your army that was within 6\" of your destroyed unit. That unit can make a Normal move of up to D6+1\".\nLethal Surge: Once per turn, when a YNNARI unit from your army performs the Fade Back Agile Manoeuvre, it can make a Lethal Surge move instead of a Normal move. If it does, roll one D6 and add 1 to the result: that unit can be moved a number of inches up to the total. When doing so, those models can be moved within Engagement Range of the enemy unit that just triggered that Agile Manoeuvre.Lethal ReprisalAt the start of the Fight phase, select one YNNARI unit from your army (excluding TITANIC units) that is below its Starting Strength. Until the end of the phase, that unit has the Fights First ability.",
+        "description": "You can use the following rules:Lethal IntentAt the end of your opponent’s Shooting phase, if one or more YNNARI units from your army were destroyed this phase, select one YNNARI INFANTRY or YNNARI MOUNTED unit from your army that was within 6\"of your destroyed unit. That unit can make a Normal move of up to D6+1\".\nLethal Surge: Once per turn, when a YNNARI unit from your army performs the Fade Back Agile Manoeuvre, it can make a Lethal Surge move instead of a Normal move. If it does, roll one D6 and add 1 to the result:that unit can be moved a number of inches up to the total. When doing so, those models can be moved within Engagement Range of the enemy unit that just triggered that Agile Manoeuvre.Lethal ReprisalAt the start of the Fight phase, select one YNNARI unit from your army (excluding TITANIC units) that is below its Starting Strength. Until the end of the phase, that unit has the Fights First ability.",
         "phases": [
             "Movement",
             "Shooting",
@@ -346,7 +360,7 @@
         "detachment": "Corsair Coterie",
         "detachment_id": "",
         "legend": "",
-        "description": "While an objective marker is under your control, each time an enemy unit ends a Normal, Advance, Fall Back or Charge move within range of that objective marker, roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.\n\nANHRATHE units from your army have the following ability:\n\nVoid Thieves: At the end of a phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+        "description": "While an objective marker is under your control, each time an enemy unit ends a Normal, Advance, Fall Back or Charge move within range of that objective marker, roll one D6:on a 2+, that enemy unit suffers D3 mortal wounds.\n\nANHRATHE units from your army have the following ability:\n\nVoid Thieves: At the end of a phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
         "phases": [
             "Charge"
         ]
@@ -403,7 +417,7 @@
         "detachment": "Warhost",
         "detachment_id": "",
         "legend": "",
-        "description": "■ At the start of the battle round, you receive 1 additional Battle Focus token.\n■ Each time a unit from your army performs the Swift as the Wind Agile Manoeuvre, until the end of the phase, add an additional 1\" to the Move characteristic of models in that unit.\n■ Each time a unit from your army performs an Agile Manoeuvre that involves rolling a D6, add 1 to the result.",
+        "description": "■ At the start of the battle round, you receive 1 additional Battle Focus token.\n■ Each time a unit from your army performs the Swift as the Wind Agile Manoeuvre, until the end of the phase, add an additional 1\"to the Move characteristic of models in that unit.\n■ Each time a unit from your army performs an Agile Manoeuvre that involves rolling a D6, add 1 to the result.",
         "phases": [
             "Pregame",
             "Command",
@@ -458,7 +472,7 @@
         "detachment": "Veiled Blade Elimination Force",
         "detachment_id": "",
         "legend": "",
-        "description": "OFFICIO ASSASSINORUM units from your army can use the Overkill, Soulless Horror and Shieldbreaker abilities twice per battle, instead of once per battle (but cannot use such an ability more than once in the same battle round).\n\nWhen mustering your army, each OFFICIO ASSASSINORUM unit from your army has the relevant Extremis ability shown below, and you must increase the points cost of each of those units by the amount shown. If this causes your army to exceed the points limit for the battle you are playing, you cannot include that unit in your army.\nExtremis Abilities: The agents of the Callidus Temple are known to utilisevat‐grown doubles to confound their foes.\n\nCALLIDUS ASSASSIN models only. Twice per battle, in your Movement phase, you can select one other friendly INFANTRY model that is on the battlefield and not within Engagement Range of one or more enemy units. The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and this model is removed from the battlefield and set up again as close as possible to where that destroyed model was and not within Engagement Range of one or more enemy units. This ability cannot be used more than once in the same battle round.This Culexus operative has been outfitted with various grenades tailored to destroy their assigned targets.\n\nCULEXUS ASSASSIN models only. Each time this model is targeted with the Grenades Stratagem, 1 mortal wound is inflicted for each D6 roll of 3+ instead of for each 4+.This Eversor agent’s neurons have been surgically spliced to enhance awareness and speed of thought.\n\nEVERSOR ASSASSIN models only. Once per battle round, you can target this model with the Heroic Intervention or Counter‑offensive Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.These projectiles are tipped with miniaturised melta charges that detonate on impact.\n\nVINDICARE ASSASSIN models only. This model’s exitus rifle has the [ANTI‑MONSTER 4+] and [ANTI‑VEHICLE 4+]  abilities.",
+        "description": "OFFICIO ASSASSINORUM units from your army can use the Overkill, Soulless Horror and Shieldbreaker abilities twice per battle, instead of once per battle (but cannot use such an ability more than once in the same battle round).\n\nWhen mustering your army, each OFFICIO ASSASSINORUM unit from your army has the relevant Extremis ability shown below, and you must increase the points cost of each of those units by the amount shown. If this causes your army to exceed the points limit for the battle you are playing, you cannot include that unit in your army.\nExtremis Abilities: The agents of the Callidus Temple are known to utilisevat‐grown doubles to confound their foes.\n\nCALLIDUS ASSASSIN models only. Twice per battle, in your Movement phase, you can select one other friendly INFANTRY model that is on the battlefield and not within Engagement Range of one or more enemy units. The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and this model is removed from the battlefield and set up again as close as possible to where that destroyed model was and not within Engagement Range of one or more enemy units. This ability cannot be used more than once in the same battle round.This Culexus operative has been outfitted with various grenades tailored to destroy their assigned targets.\n\nCULEXUS ASSASSIN models only. Each time this model is targeted with the Grenades Stratagem, 1 mortal wound is inflicted for each D6 roll of 3+ instead of for each 4+.This Eversor agent’s neurons have been surgically spliced to enhance awareness and speed of thought.\n\nEVERSOR ASSASSIN models only. Once per battle round, you can target this model with the Heroic Intervention or Counter‑offensive Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.These projectiles are tipped with miniaturised melta charges that detonate on impact.\n\nVINDICARE ASSASSIN models only. This model’s exitus rifle has the [ANTI‑MONSTER 4+] and [ANTI‑VEHICLE 4+]abilities.",
         "phases": [
             "Command",
             "Movement",
@@ -512,7 +526,7 @@
         "detachment": "Hammer of the Emperor",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a SQUADRON unit from your army Advances, do not make an Advance roll for it; until the end of the phase, add 6\" to the Move characteristic of models in that unit, and when making that Advance move, that unit can move within Engagement Range of enemy models but cannot end that move within Engagement Range of enemy models.",
+        "description": "Each time a SQUADRON unit from your army Advances, do not make an Advance roll for it; until the end of the phase, add 6\"to the Move characteristic of models in that unit, and when making that Advance move, that unit can move within Engagement Range of enemy models but cannot end that move within Engagement Range of enemy models.",
         "phases": [
             "Movement"
         ]
@@ -588,7 +602,7 @@
         "detachment": "Siege Regiment",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, select one of the following types of artillery support.\n\n■ Creeping Barrage: Roll one D6 for each enemy unit that is more than 12\" from every model from your army that is on the battlefield: On a 5+, until the end of the battle round, that unit is shaken. While a unit is shaken, subtract 2” from its Move characteristic and subtract 2 from Charge rolls made for it. The maximum number of units that can be shaken by this rule in each battle round depends on the battle size, as shown below.\n\n■ Incendiary Bombardment: Select a number of enemy units more than 12\" from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are scattered. While a unit is scattered, it cannot have the Benefit of Cover. The maximum number of units you can select in this way depends on the battle size, as shown below.\n\n■ Smoke Shells: Select a number of units from your army. Until the end of the battle round, those units have the Stealth ability. The maximum number of units you can select in this way depends on the battle size, as shown below.-",
+        "description": "At the start of the battle round, select one of the following types of artillery support.\n\n■ Creeping Barrage: Roll one D6 for each enemy unit that is more than 12\"from every model from your army that is on the battlefield:On a 5+, until the end of the battle round, that unit is shaken. While a unit is shaken, subtract 2” from its Move characteristic and subtract 2 from Charge rolls made for it. The maximum number of units that can be shaken by this rule in each battle round depends on the battle size, as shown below.\n\n■ Incendiary Bombardment: Select a number of enemy units more than 12\"from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are scattered. While a unit is scattered, it cannot have the Benefit of Cover. The maximum number of units you can select in this way depends on the battle size, as shown below.\n\n■ Smoke Shells: Select a number of units from your army. Until the end of the battle round, those units have the Stealth ability. The maximum number of units you can select in this way depends on the battle size, as shown below.-",
         "phases": [
             "Pregame",
             "Command",
@@ -641,7 +655,7 @@
         "detachment": "Wrathful Procession",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, you can select one of the Litanies listed below. If you do, until the end of the battle round, that Litany is active and its effects apply to all ADEPTUS ASTARTES INFANTRY and ADEPTUS ASTARTES MOUNTED units from your army.\nChorus of Relentless Hate: Add 2\" to the Move characteristic of models in this unit and add 1 to Advance rolls made for it.\nRite of Perfervid Wrath: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\nChant of Deathless Devotion: Models in this unit have a 5+ invulnerable save against ranged attacks.",
+        "description": "At the start of the battle round, you can select one of the Litanies listed below. If you do, until the end of the battle round, that Litany is active and its effects apply to all ADEPTUS ASTARTES INFANTRY and ADEPTUS ASTARTES MOUNTED units from your army.\nChorus of Relentless Hate: Add 2\"to the Move characteristic of models in this unit and add 1 to Advance rolls made for it.\nRite of Perfervid Wrath: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\nChant of Deathless Devotion: Models in this unit have a 5+ invulnerable save against ranged attacks.",
         "phases": [
             "Pregame",
             "Command",
@@ -670,7 +684,7 @@
         "detachment": "Angelic Inheritors",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all ADEPTUS ASTARTES CHARACTER units from your army.\n\nSanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n\nCarmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.\n\nTheir Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit.",
+        "description": "At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all ADEPTUS ASTARTES CHARACTER units from your army.\n\nSanguinary Grace:This unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n\nCarmine Wrath:Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.\n\nTheir Appointed Hour:You can re‑roll Advance and Charge rolls made for this unit.",
         "phases": [
             "Pregame",
             "Command",
@@ -742,7 +756,7 @@
         "detachment": "Cabal of Chaos",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a unit from your army makes a Dark Pact, select one of the following abilities. Your unit has that ability until the end of the phase.\n\nLeaping Warpflame\nWhile this unit is within 9\" of one or more friendly HERETIC ASTARTES PSYKER models, improve the Strength characteristic of ranged weapons equipped by models in this unit by 1.\n\nMonstrous Manifestation\nWhile this unit is within 9\" of one or more friendly HERETIC ASTARTES DAEMON PRINCE or a HERETIC ASTARTES DAEMON PRINCE WITH WINGS models, improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1.",
+        "description": "Each time a unit from your army makes a Dark Pact, select one of the following abilities. Your unit has that ability until the end of the phase.\n\nLeaping Warpflame\nWhile this unit is within 9\"of one or more friendly HERETIC ASTARTES PSYKER models, improve the Strength characteristic of ranged weapons equipped by models in this unit by 1.\n\nMonstrous Manifestation\nWhile this unit is within 9\"of one or more friendly HERETIC ASTARTES DAEMON PRINCE or a HERETIC ASTARTES DAEMON PRINCE WITH WINGS models, improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1.",
         "phases": [
             "Shooting",
             "Fight",
@@ -782,7 +796,7 @@
         "detachment": "Deceptors",
         "detachment_id": "",
         "legend": "",
-        "description": "In the Declare Battle Formations step, you can select a number of LEGIONARIES and CULTIST MOB units from your army: until the end of the battle, those units, and any CHARACTER units attached to them (excluding EPIC HEROES), have the Infiltrators ability. The maximum number of units you can select in this way depends on the battle size, as shown below.-",
+        "description": "In the Declare Battle Formations step, you can select a number of LEGIONARIES and CULTIST MOB units from your army:until the end of the battle, those units, and any CHARACTER units attached to them (excluding EPIC HEROES), have the Infiltrators ability. The maximum number of units you can select in this way depends on the battle size, as shown below.-",
         "phases": [
             "Pregame",
             "Command"
@@ -826,7 +840,7 @@
         "detachment": "Dread Talons",
         "detachment_id": "",
         "legend": "",
-        "description": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test.\n\nEach time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result.\n\nEnemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
+        "description": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\"of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test.\n\nEach time an enemy unit within 12\"of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result.\n\nEnemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
         "phases": [
             "Command"
         ]
@@ -838,7 +852,7 @@
         "detachment": "Chaos Cult",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a DAMNED unit from your army with the Dark Pacts ability is selected  to make a Normal or Advance move or declare a charge (excluding units that arrived from Reserves this turn), it can make a Desperate Pact (see below). If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit.Desperate PactsEach time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved.",
+        "description": "Each time a DAMNED unit from your army with the Dark Pacts ability is selectedto make a Normal or Advance move or declare a charge (excluding units that arrived from Reserves this turn), it can make a Desperate Pact (see below). If it does, until the end of the phase, add 2\"to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit.Desperate PactsEach time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved.",
         "phases": [
             "Movement",
             "Shooting",
@@ -868,10 +882,22 @@
         "detachment": "Nightmare Hunt",
         "detachment_id": "",
         "legend": "",
-        "description": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase.\n\nEach time a HERETIC ASTARTES model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll.\n\nEach time an attack targets a HERETIC ASTARTES unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll.\n\nEach time a HERETIC ASTARTES model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
+        "description": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\"of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase.\n\nEach time a HERETIC ASTARTES model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll.\n\nEach time an attack targets a HERETIC ASTARTES unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll.\n\nEach time a HERETIC ASTARTES model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
         "phases": [
             "Shooting",
             "Fight"
+        ]
+    },
+    {
+        "id": "",
+        "name": "Warp Portals",
+        "faction_id": "CSM",
+        "detachment": "Warpstrike Champions",
+        "detachment_id": "",
+        "legend": "",
+        "description": "At the end of your opponent’s turn, you can select a number of HERETIC ASTARTES TERMINATOR, OBLITERATORS and MUTILATORS units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\n\nBattle Size - Number of Units\nIncursion - Up to 1 unit\nStrike Force - Up to 2 units\nOnslaught Up - to 3 units\n\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+        "phases": [
+            "Movement"
         ]
     },
     {
@@ -881,10 +907,22 @@
         "detachment": "Pactbound Zealots",
         "detachment_id": "",
         "legend": "",
-        "description": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below.\nUnits That Gained [LETHAL HITS]: ■ KHORNE: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ TZEENTCH: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1.\nUnits That Gained [SUSTAINED HITS 1]: ■ NURGLE: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ SLAANESH: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1.",
+        "description": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster:KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below.\nUnits That Gained [LETHAL HITS]: ■ KHORNE:Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ TZEENTCH:Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ CHAOS UNDIVIDED:Each time a model in this unit makes an attack, re-roll a Hit roll of 1.\nUnits That Gained [SUSTAINED HITS 1]: ■ NURGLE:Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ SLAANESH:Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ CHAOS UNDIVIDED:Each time a model in this unit makes an attack, re-roll a Hit roll of 1.",
         "phases": [
             "Shooting",
             "Fight",
+            "Saves"
+        ]
+    },
+    {
+        "id": "",
+        "name": "Soul Forge Boons",
+        "faction_id": "CSM",
+        "detachment": "Cult of the Arkifane",
+        "detachment_id": "",
+        "legend": "",
+        "description": "HERETIC ASTARTES VEHICLE units from your army gain the DAEMON keyword.\n\nHERETIC ASTARTES VEHICLE, LORD DISCORDANT and VASHTORR THE ARKIFANE units from your army gain the SOUL FORGE keyword.\n\nSOUL FORGE units from your army have a 5+ invulnerable save.",
+        "phases": [
             "Saves"
         ]
     },
@@ -895,7 +933,7 @@
         "detachment": "Creations of Bile",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle, select which augmentations are active for HERETIC ASTARTES INFANTRY models (excluding DAMNED models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If FABIUS BILE is your WARLORD, when randomly determining your augmentations, you can re‑roll one or both of the dice. Duplicated augmentations have no additional effect.\n\n1 - Cholinergic Accelerants: Add 1 to the Attacks characteristic of melee weapons equipped by this model.\n2 - Hyperadrenal Infusion: Add 2\"  to the Move characteristic of this model.\n3 - Paraneural Reactions: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.\n4 - Supracutaneous Chitination: Improve the Toughness characteristic of this model by 1.\n5 - Macrotensile Sinews: Add 1 to the Strength characteristic of melee weapons equipped by this model.\n6 - Ophthalmic Enhancement: Improve the Ballistic Skill characteristic of ranged weapons equipped by this model by 1.",
+        "description": "At the start of the battle, select which augmentations are active for HERETIC ASTARTES INFANTRY models (excluding DAMNED models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If FABIUS BILE is your WARLORD, when randomly determining your augmentations, you can re‑roll one or both of the dice. Duplicated augmentations have no additional effect.\n\n1 - Cholinergic Accelerants:Add 1 to the Attacks characteristic of melee weapons equipped by this model.\n2 - Hyperadrenal Infusion:Add 2\"to the Move characteristic of this model.\n3 - Paraneural Reactions:Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.\n4 - Supracutaneous Chitination:Improve the Toughness characteristic of this model by 1.\n5 - Macrotensile Sinews:Add 1 to the Strength characteristic of melee weapons equipped by this model.\n6 - Ophthalmic Enhancement:Improve the Ballistic Skill characteristic of ranged weapons equipped by this model by 1.",
         "phases": [
             "Pregame",
             "Command",
@@ -912,7 +950,7 @@
         "detachment": "Blood Legion",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time an enemy unit (excluding AIRCRAFT) ends a Normal or Advance move within 6\" of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a Surge move towards that enemy unit. To do so, roll one D6: models in your unit move a number of inches up to this result, but your unit must end that move as close as possible to that enemy unit. When doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is within Engagement Range of one or more enemy units.&#x20;",
+        "description": "Each time an enemy unit (excluding AIRCRAFT) ends a Normal or Advance move within 6\"of one or more LEGIONES DAEMONICA KHORNE units from your army, one of those LEGIONES DAEMONICA KHORNE units can make a Surge move towards that enemy unit. To do so, roll one D6:models in your unit move a number of inches up to this result, but your unit must end that move as close as possible to that enemy unit. When doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is within Engagement Range of one or more enemy units.&#x20;",
         "phases": [
             "Movement"
         ]
@@ -934,7 +972,7 @@
         "detachment": "Daemonic Incursion",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a LEGIONES DAEMONICA unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units with which it shares the KHORNE, TZEENTCH, NURGLE or SLAANESH keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 9\".",
+        "description": "Each time a LEGIONES DAEMONICA unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\"of one or more friendly BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units with which it shares the KHORNE, TZEENTCH, NURGLE or SLAANESH keyword, it can be set up anywhere that is more than 6\"horizontally away from all enemy models, instead of more than 9\".",
         "phases": [
             "Command",
             "Movement"
@@ -947,7 +985,7 @@
         "detachment": "Plague Legion",
         "detachment_id": "",
         "legend": "",
-        "description": "While an enemy unit is within 9\" of one or more LEGIONES DAEMONICA NURGLE units from your army, that enemy unit is within your army’s Shadow of Chaos. In each player’s Command phase, select one enemy unit within your army’s Shadow of Chaos. That unit must take a Battle‑shock test.",
+        "description": "While an enemy unit is within 9\"of one or more LEGIONES DAEMONICA NURGLE units from your army, that enemy unit is within your army’s Shadow of Chaos. In each player’s Command phase, select one enemy unit within your army’s Shadow of Chaos. That unit must take a Battle‑shock test.",
         "phases": [
             "Command"
         ]
@@ -959,7 +997,7 @@
         "detachment": "Shadow Legion",
         "detachment_id": "",
         "legend": "",
-        "description": "If your Army Faction is LEGIONES DAEMONICA, you can use this Shadow Legion Detachment rule.\nFirst Prince of Chaos: Units from your army have the relevant abilities presented below.The most murderous seek not to hide in the Dark Master’s pall. The shadows extend before them, offering a rapid route to slaughter.\n\nSHADOW LEGION KHORNE units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.Mutative agents of change, touched by the Dark Master’s umbral aura, summon llusory magicks to confound and confuse their desperate foes.\n\nSHADOW LEGION TZEENTCH units only. Each time an attack targets this unit, subtract 1 from the Hit roll.Borne upon the gloaming wisp of Be’lakor’s shadow, this debilitating curse atrophies muscle and withers flesh, greatly weakening its victims.\n\nSHADOW LEGION NURGLE units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.The Dark Master’s shadow falls across his thralls, masking their approach.\n\nSHADOW LEGION SLAANESH units only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit.Be’lakor’s immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate‐filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy’s midst.\n\nSHADOW LEGION UNDIVIDED units only.\n■ This unit has the Dark Pacts army rule, and can use it as described in Codex: Chaos Space Marines, even though your Army Faction is not HERETIC ASTARTES. If this unit is BE’LAKOR, it automatically passes the Leadership test required for Dark Pacts.\n■ SHADOW LEGION HERETIC ASTARTES models in this unit have the Deep Strike ability.",
+        "description": "If your Army Faction is LEGIONES DAEMONICA, you can use this Shadow Legion Detachment rule.\nFirst Prince of Chaos: Units from your army have the relevant abilities presented below.The most murderous seek not to hide in the Dark Master’s pall. The shadows extend before them, offering a rapid route to slaughter.\n\nSHADOW LEGION KHORNE units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.Mutative agents of change, touched by the Dark Master’s umbral aura, summon llusory magicks to confound and confuse their desperate foes.\n\nSHADOW LEGION TZEENTCH units only. Each time an attack targets this unit, subtract 1 from the Hit roll.Borne upon the gloaming wisp of Be’lakor’s shadow, this debilitating curse atrophies muscle and withers flesh, greatly weakening its victims.\n\nSHADOW LEGION NURGLE units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.The Dark Master’s shadow falls across his thralls, masking their approach.\n\nSHADOW LEGION SLAANESH units only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit.Be’lakor’s immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate‐filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy’s midst.\n\nSHADOW LEGION UNDIVIDED units only.\n■ This unit has the Dark Pacts army rule, and can use it as described in Codex:Chaos Space Marines, even though your Army Faction is not HERETIC ASTARTES. If this unit is BE’LAKOR, it automatically passes the Leadership test required for Dark Pacts.\n■ SHADOW LEGION HERETIC ASTARTES models in this unit have the Deep Strike ability.",
         "phases": [
             "Command",
             "Movement",
@@ -976,7 +1014,7 @@
         "detachment": "Scintillating Legion",
         "detachment_id": "",
         "legend": "",
-        "description": "You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re‑roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\n\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re‑roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\n\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\n\nDesigner’s Note: When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re‑roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once.",
+        "description": "You start the battle with three Flux tokens (we recommend using a dice to track how many Flux tokens you have). You can spend one Flux token just after an Advance roll, Hit roll, Wound roll, Damage roll, saving throw or Hazardous test is made for a LEGIONES DAEMONICA TZEENTCH model or LEGIONES DAEMONICA TZEENTCH unit from your army to re‑roll the result of that roll, throw or test. Flux tokens can also be spent to enhance the effect of some Stratagems. Each time you spend a Flux token, reduce the number of Flux tokens you have by one and your opponent gains one Flux token.\n\nWhenever your opponent has one or more Flux tokens, they can spend one Flux token after an Advance roll, Hit roll, Wound roll or saving throw is made for a model or unit from their army, to re‑roll the result of that roll or throw. If they do, they reduce the number of Flux tokens they have by one and you gain one Flux token. This is ignored if your opponent has the Fates in Flux Detachment rule.\n\nIn your Command phase, if your opponent has one or more Flux tokens, you gain one Flux token.\n\nDesigner’s Note:When using fast dice rolling, this rule can be used to spend any number of Flux tokens (up to the amount you have), to re‑roll a number of dice up to the amount spent, after rolling multiple rolls or saving throws at once.",
         "phases": [
             "Command"
         ]
@@ -1000,7 +1038,7 @@
         "detachment": "Legion of Excess",
         "detachment_id": "",
         "legend": "",
-        "description": "LEGIONES DAEMONICA SLAANESH units from your army have the following ability:\n\nSeductive Gambit: Each time this unit ends a Charge move, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the Fights First ability, but instead, each time a model in this unit makes an attack, you can re‐roll the Hit roll and you can re‐roll a Wound roll of 1.",
+        "description": "LEGIONES DAEMONICA SLAANESH units from your army have the following ability:\n\nSeductive Gambit:Each time this unit ends a Charge move, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the Fights First ability, but instead, each time a model in this unit makes an attack, you can re‐roll the Hit roll and you can re‐roll a Wound roll of 1.",
         "phases": [
             "Shooting",
             "Charge",
@@ -1014,7 +1052,7 @@
         "detachment": "Iconoclast Fiefdom",
         "detachment_id": "",
         "legend": "",
-        "description": "TITANIC CHAOS KNIGHTS units from your army have the following abilities:\n\nDread Tyrants (Aura): While a friendly DAMNED unit is within 9\" of this unit, each time a model in that unit makes an attack, re‐roll a Hit roll of 1 and re‐roll a Wound roll of 1.\n\nCHAOS KNIGHTS units from your army have the following abilities:\n\nDark Sacrifice: Each time a CHAOS KNIGHTS unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly DAMNED unit within 6\". That DAMNED unit must take a Leadership test: if passed, destroy D3 models in that DAMNED unit; if failed, destroy D3+3 models in that DAMNED unit. In either case, then select one of the following abilities for your CHAOS KNIGHTS unit’s weapons to have until the end of the phase: [LETHAL HITS]; [SUSTAINED HITS 1].",
+        "description": "TITANIC CHAOS KNIGHTS units from your army have the following abilities:\n\nDread Tyrants (Aura):While a friendly DAMNED unit is within 9\"of this unit, each time a model in that unit makes an attack, re‐roll a Hit roll of 1 and re‐roll a Wound roll of 1.\n\nCHAOS KNIGHTS units from your army have the following abilities:\n\nDark Sacrifice:Each time a CHAOS KNIGHTS unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly DAMNED unit within 6\". That DAMNED unit must take a Leadership test:if passed, destroy D3 models in that DAMNED unit; if failed, destroy D3+3 models in that DAMNED unit. In either case, then select one of the following abilities for your CHAOS KNIGHTS unit’s weapons to have until the end of the phase:[LETHAL HITS]; [SUSTAINED HITS 1].",
         "phases": [
             "Shooting",
             "Fight"
@@ -1039,13 +1077,25 @@
         "detachment": "Infernal Lance",
         "detachment_id": "",
         "legend": "",
-        "description": "In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n\n■ Unholy Hunger: When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the phase, add 3\" to its Move characteristic.\n\n■ Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n\n■ Unnatural Fortitude: When this unit is selected as the target of an attack, until the end of the phase, select one of the following:\n○ Models in this unit have a 5+ invulnerable save.\n○ Models in this unit have the Feel No Pain 6+ ability.\n\nDesigner’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase",
+        "description": "In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n\n■ Unholy Hunger: When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the phase, add 3\"to its Move characteristic.\n\n■ Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n\n■ Unnatural Fortitude: When this unit is selected as the target of an attack, until the end of the phase, select one of the following:\n○ Models in this unit have a 5+ invulnerable save.\n○ Models in this unit have the Feel No Pain 6+ ability.\n\nDesigner’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase",
         "phases": [
             "Command",
             "Movement",
             "Shooting",
             "Fight",
             "Saves"
+        ]
+    },
+    {
+        "id": "",
+        "name": "Masters of the Pack",
+        "faction_id": "QT",
+        "detachment": "Helhunt Lance",
+        "detachment_id": "",
+        "legend": "",
+        "description": "If a TITANIC CHAOS KNIGHTS unit from your army has an Aura ability that affects friendly WAR DOG units, while two or more friendly WAR DOG models are within range of that TITANIC CHAOS KNIGHTS unit’s Aura ability, that TITANIC CHAOS KNIGHTS unit is affected by that Aura ability as well.\n\nExample: Two friendly War Dog models are within 9” of a Knight Desecrator when it is selected to shoot. As a result, the Knight Desecrator’s Taskmaster ability also affects itself, even though it does not have the War Dog keyword, so each time that Knight Desecrator makes a ranged attack, Hit rolls of 1 are re‑rolled.",
+        "phases": [
+            "Shooting"
         ]
     },
     {
@@ -1082,7 +1132,7 @@
         "detachment": "Inner Circle Task Force",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of your Movement phase, select one of the following:\n\n■ Defensive Footing: Select one objective marker you control. Until the start of your next Movement phase, that objective marker is your Vowed objective marker.\n■ Aggressive Push: Select one or more objective markers you do not control. Until the start of your next Movement phase, each of those objective markers is one of your Vowed objective markers. If a rule refers to a unit or model being within range of your Vowed objective marker, that rule takes effect if that unit or model is within range of one or more of your Vowed objective markers.\n\nEach time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objective markers, add 1 to the Wound roll.",
+        "description": "At the start of your Movement phase, select one of the following:\n\n■ Defensive Footing:Select one objective marker you control. Until the start of your next Movement phase, that objective marker is your Vowed objective marker.\n■ Aggressive Push:Select one or more objective markers you do not control. Until the start of your next Movement phase, each of those objective markers is one of your Vowed objective markers. If a rule refers to a unit or model being within range of your Vowed objective marker, that rule takes effect if that unit or model is within range of one or more of your Vowed objective markers.\n\nEach time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objective markers, add 1 to the Wound roll.",
         "phases": [
             "Movement",
             "Shooting",
@@ -1157,7 +1207,7 @@
         "detachment": "Flyblown Host",
         "detachment_id": "",
         "legend": "",
-        "description": "DEATH GUARD INFANTRY units (excluding POXWALKERS units) from your army that are not embarked within a TRANSPORT have the Scouts 5\" and Stealth abilities.",
+        "description": "DEATH GUARD INFANTRY units (excluding POXWALKERS units) from your army that are not embarked within a TRANSPORT have the Scouts 5\"and Stealth abilities.",
         "phases": [
             "Pregame",
             "Movement"
@@ -1170,7 +1220,7 @@
         "detachment": "Tallyband Summoners",
         "detachment_id": "",
         "legend": "",
-        "description": "While a PLAGUE LEGIONS unit from your army is within 7\" of one or more DEATH GUARD units from your army, that PLAGUE LEGIONS unit has the Nurgle’s Gift ability.\n\nWhile a DEATH GUARD unit from your army is within 7\" of one or more PLAGUE LEGIONS units from your army, add 3\" to that DEATH GUARD unit’s Contagion Range.",
+        "description": "While a PLAGUE LEGIONS unit from your army is within 7\"of one or more DEATH GUARD units from your army, that PLAGUE LEGIONS unit has the Nurgle’s Gift ability.\n\nWhile a DEATH GUARD unit from your army is within 7\"of one or more PLAGUE LEGIONS units from your army, add 3\"to that DEATH GUARD unit’s Contagion Range.",
         "phases": [
             "Shooting",
             "Fight"
@@ -1196,7 +1246,7 @@
         "detachment": "Mortarion’s Hammer",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, select a number of enemy units more than 12\" away from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below.-",
+        "description": "At the start of the battle round, select a number of enemy units more than 12\"away from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below.-",
         "phases": [
             "Pregame",
             "Command"
@@ -1246,7 +1296,7 @@
         "detachment": "Spectacle of Spite",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of your Command phase, select which Combat Drugs will be active for your army until the start of your next Command phase. To do so, either select one from the list below (you cannot select the same Combat Drug more than once per battle), or randomly select two by rolling two D6. When doing so randomly, Combat Drugs you have previously selected can become active again, but if you randomly select one that is already active for your army, it has no additional effect.\n1. Adrenalight: Add 1 to the Attacks characteristic of melee weapons equipped by WYCH CULT models from your army.\n2. Hypex: Add 2\" to the Move characteristic of WYCH CULT models from your army.\n3. Serpentin: Improve the Weapon Skill characteristic of melee weapons equipped by WYCH CULT models from your army by 1.\n4. Painbringer: Add 1 to the Toughness characteristic of WYCH CULT models from your army.\n5. Grave Lotus: Add 1 to the Strength characteristic of melee weapons equipped by WYCH CULT models from your army.\n6. Splintermind: Improve the Leadership characteristic of WYCH CULT models from your army by 1, and improve the Ballistic Skill characteristic of ranged weapons equipped by WYCH CULT models from your army by 1.",
+        "description": "At the start of your Command phase, select which Combat Drugs will be active for your army until the start of your next Command phase. To do so, either select one from the list below (you cannot select the same Combat Drug more than once per battle), or randomly select two by rolling two D6. When doing so randomly, Combat Drugs you have previously selected can become active again, but if you randomly select one that is already active for your army, it has no additional effect.\n1. Adrenalight: Add 1 to the Attacks characteristic of melee weapons equipped by WYCH CULT models from your army.\n2. Hypex: Add 2\"to the Move characteristic of WYCH CULT models from your army.\n3. Serpentin: Improve the Weapon Skill characteristic of melee weapons equipped by WYCH CULT models from your army by 1.\n4. Painbringer: Add 1 to the Toughness characteristic of WYCH CULT models from your army.\n5. Grave Lotus: Add 1 to the Strength characteristic of melee weapons equipped by WYCH CULT models from your army.\n6. Splintermind: Improve the Leadership characteristic of WYCH CULT models from your army by 1, and improve the Ballistic Skill characteristic of ranged weapons equipped by WYCH CULT models from your army by 1.",
         "phases": [
             "Command",
             "Movement",
@@ -1354,7 +1404,7 @@
         "detachment": "Carnival of Excess",
         "detachment_id": "",
         "legend": "",
-        "description": "■ While an EMPEROR’S CHILDREN unit from your army is within 6\" of one or more friendly LEGIONS OF EXCESS units, it is Empowered.\n■ While a LEGIONS OF EXCESS unit from your army is within 6\" of one or more friendly EMPEROR’S CHILDREN units, it is Empowered.\n\nWhile a unit from your army is Empowered, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. If such a weapon already has that ability, each time an attack is made with that weapon, an unmodified Hit roll of 5+ scores a Critical Hit.",
+        "description": "■ While an EMPEROR’S CHILDREN unit from your army is within 6\"of one or more friendly LEGIONS OF EXCESS units, it is Empowered.\n■ While a LEGIONS OF EXCESS unit from your army is within 6\"of one or more friendly EMPEROR’S CHILDREN units, it is Empowered.\n\nWhile a unit from your army is Empowered, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. If such a weapon already has that ability, each time an attack is made with that weapon, an unmodified Hit roll of 5+ scores a Critical Hit.",
         "phases": [
             "Shooting",
             "Fight"
@@ -1471,7 +1521,7 @@
         "detachment": "Warpbane Task Force",
         "detachment_id": "",
         "legend": "",
-        "description": "Certain areas of the battlefield are within your army’s Hallowed Ground, as follows:\n\n■ Your deployment zone is always within your army’s Hallowed Ground.\n■ The area of the battlefield within 6\" of one or more PURIFIER SQUAD units from your army is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Hallowed Ground.\n\nEach time a model in a GREY KNIGHTS unit from your army makes a ranged attack that targets a visible target or makes a melee attack, re‐roll a Hit roll of 1. If that unit is a PURIFIER SQUAD and/or is wholly within your army’s Hallowed Ground, you can re‐roll the Hit roll instead.",
+        "description": "Certain areas of the battlefield are within your army’s Hallowed Ground, as follows:\n\n■ Your deployment zone is always within your army’s Hallowed Ground.\n■ The area of the battlefield within 6\"of one or more PURIFIER SQUAD units from your army is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Hallowed Ground.\n\nEach time a model in a GREY KNIGHTS unit from your army makes a ranged attack that targets a visible target or makes a melee attack, re‐roll a Hit roll of 1. If that unit is a PURIFIER SQUAD and/or is wholly within your army’s Hallowed Ground, you can re‐roll the Hit roll instead.",
         "phases": [
             "Command",
             "Movement",
@@ -1515,7 +1565,7 @@
         "detachment": "Sanctic Spearhead",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a GREY KNIGHTS VEHICLE unit from your army Advances, do not make an Advance roll for it; until the end of the phase, add 6\" to the Move characteristic of models in that unit, and until the end of the turn, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+        "description": "Each time a GREY KNIGHTS VEHICLE unit from your army Advances, do not make an Advance roll for it; until the end of the phase, add 6\"to the Move characteristic of models in that unit, and until the end of the turn, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
         "phases": [
             "Movement",
             "Shooting"
@@ -1528,7 +1578,7 @@
         "detachment": "Brood Brothers Auxilia",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time an ASTRA MILITARUM unit from your army (see below) is selected to shoot, you can select one enemy unit within 18\" of and visible to that unit. If you do, until the end of the phase, models in that ASTRA MILITARUM unit can only target that enemy unit (and only if it is an eligible target) and that enemy unit is caught in overlapping fire. While an enemy unit is caught in overlapping fire, each time a GENESTEALER CULTS model from your army targets that enemy unit with a ranged attack, add 1 to the Hit roll.",
+        "description": "Each time an ASTRA MILITARUM unit from your army (see below) is selected to shoot, you can select one enemy unit within 18\"of and visible to that unit. If you do, until the end of the phase, models in that ASTRA MILITARUM unit can only target that enemy unit (and only if it is an eligible target) and that enemy unit is caught in overlapping fire. While an enemy unit is caught in overlapping fire, each time a GENESTEALER CULTS model from your army targets that enemy unit with a ranged attack, add 1 to the Hit roll.",
         "phases": [
             "Shooting"
         ]
@@ -1540,7 +1590,7 @@
         "detachment": "Brood Brothers Auxilia",
         "detachment_id": "",
         "legend": "",
-        "description": "You can include ASTRA MILITARUM units in your army, even though they do not have the GENESTEALER CULTS Faction keyword. The combined points cost of such units you can include in your army is:-A GENESTEALER CULTS model must be your WARLORD, and ASTRA MILITARUM models from your army lose the Voice of Command ability if they have it. You cannot include units with any of the following keywords in your army using this rule: AIRCRAFT; COMMISSAR; EPIC HERO; MILITARUM TEMPESTUS; OGRYN; RATLING; TECH-PRIEST ENGINSEER; MINISTORUM PRIEST.",
+        "description": "You can include ASTRA MILITARUM units in your army, even though they do not have the GENESTEALER CULTS Faction keyword. The combined points cost of such units you can include in your army is:-A GENESTEALER CULTS model must be your WARLORD, and ASTRA MILITARUM models from your army lose the Voice of Command ability if they have it. You cannot include units with any of the following keywords in your army using this rule:AIRCRAFT; COMMISSAR; EPIC HERO; MILITARUM TEMPESTUS; OGRYN; RATLING; TECH-PRIEST ENGINSEER; MINISTORUM PRIEST.",
         "phases": [
             "Pregame"
         ]
@@ -1578,7 +1628,7 @@
         "detachment": "Final Day",
         "detachment_id": "",
         "legend": "",
-        "description": "At the end of your Movement phase, for each TYRANIDS SYNAPSE unit from your army, you can select one friendly GENESTEALER CULTS unit (excluding PURESTRAIN GENESTEALER and PATRIARCH units) and one friendly TYRANIDS unit each within 9\" of and visible to that Synapse unit. If you do, that GENESTEALER CULTS unit from your army suffers D3+1 mortal wounds and one model in the selected TYRANIDS unit regains up to that many lost wounds and until the start of your next Movement phase, each time a model in the selected TYRANIDS unit makes an attack, add 1 to the Hit roll.\n\nTYRANIDS units from your army have the following ability:\n\nCatalyst (Aura): While an enemy unit is within 6\" of this unit, each time a friendly GENESTEALER CULTS unit makes an attack that targets that enemy unit, add 1 to the Hit roll.",
+        "description": "At the end of your Movement phase, for each TYRANIDS SYNAPSE unit from your army, you can select one friendly GENESTEALER CULTS unit (excluding PURESTRAIN GENESTEALER and PATRIARCH units) and one friendly TYRANIDS unit each within 9\"of and visible to that Synapse unit. If you do, that GENESTEALER CULTS unit from your army suffers D3+1 mortal wounds and one model in the selected TYRANIDS unit regains up to that many lost wounds and until the start of your next Movement phase, each time a model in the selected TYRANIDS unit makes an attack, add 1 to the Hit roll.\n\nTYRANIDS units from your army have the following ability:\n\nCatalyst (Aura):While an enemy unit is within 6\"of this unit, each time a friendly GENESTEALER CULTS unit makes an attack that targets that enemy unit, add 1 to the Hit roll.",
         "phases": [
             "Command",
             "Movement",
@@ -1632,7 +1682,7 @@
         "detachment": "Questor Forgepact",
         "detachment_id": "",
         "legend": "",
-        "description": "IMPERIAL KNIGHT units from your army have the following the ability:\n\nSacristan Pledge: In your Command phase, one model in this unit regains 1 lost wound. If this unit is within 3\" of one or more friendly TECH‐PRIEST models, one model in this unit regains up to D3 lost wounds instead.\n\nADEPTUS MECHANICUS units from your army have the following ability:\n\nDivine Inspiration: Each time a model in this unit makes a ranged attack, re‐roll a Hit roll of 1. If this unit is within 6\" of one or more friendly IMPERIAL KNIGHTS units, re‐roll a Wound roll of 1 as well.",
+        "description": "IMPERIAL KNIGHT units from your army have the following the ability:\n\nSacristan Pledge:In your Command phase, one model in this unit regains 1 lost wound. If this unit is within 3\"of one or more friendly TECH‐PRIEST models, one model in this unit regains up to D3 lost wounds instead.\n\nADEPTUS MECHANICUS units from your army have the following ability:\n\nDivine Inspiration:Each time a model in this unit makes a ranged attack, re‐roll a Hit roll of 1. If this unit is within 6\"of one or more friendly IMPERIAL KNIGHTS units, re‐roll a Wound roll of 1 as well.",
         "phases": [
             "Command",
             "Shooting"
@@ -1645,7 +1695,7 @@
         "detachment": "Gate Warden Lance",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the first battle round, select two objective markers on the battlefield to be your foundations. When you draw a line from any part of one of your foundations to the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\n\nWhile an IMPERIAL KNIGHTS unit from your army is on your defensive line, that unit has the following ability:\n\nAgainst the Horde: Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.&#x20;\n\nEach time one of your foundations is removed from the battlefield (e.g. by a Primary Mission rule), just after it is removed, select a new objective marker on the battlefield to be one of your foundations.",
+        "description": "At the start of the first battle round, select two objective markers on the battlefield to be your foundations. When you draw a line from any part of one of your foundations to the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\n\nWhile an IMPERIAL KNIGHTS unit from your army is on your defensive line, that unit has the following ability:\n\nAgainst the Horde:Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.&#x20;\n\nEach time one of your foundations is removed from the battlefield (e.g. by a Primary Mission rule), just after it is removed, select a new objective marker on the battlefield to be one of your foundations.",
         "phases": [
             "Pregame",
             "Command",
@@ -1660,7 +1710,7 @@
         "detachment": "Spearhead-at-Arms",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a model from your army uses its Bondsman ability, if no other model from your army has used that Bondsman ability that turn, you can select up to three friendly ARMIGER models (instead of one) within 12\" of that model, or within 15\" of that model while your army is Honoured (you still cannot select a model that is already being affected by a Bondsman ability). Until the start of your next Command phase, those models are affected by that Bondsman ability.",
+        "description": "Each time a model from your army uses its Bondsman ability, if no other model from your army has used that Bondsman ability that turn, you can select up to three friendly ARMIGER models (instead of one) within 12\"of that model, or within 15\"of that model while your army is Honoured (you still cannot select a model that is already being affected by a Bondsman ability). Until the start of your next Command phase, those models are affected by that Bondsman ability.",
         "phases": [
             "Command"
         ]
@@ -1687,12 +1737,25 @@
     },
     {
         "id": "",
+        "name": "Knights of Legend",
+        "faction_id": "QI",
+        "detachment": "Freeblade Company",
+        "detachment_id": "",
+        "legend": "",
+        "description": "IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.",
+        "phases": [
+            "Command",
+            "Saves"
+        ]
+    },
+    {
+        "id": "",
         "name": "Technosorcerous Augmentations",
         "faction_id": "NEC",
         "detachment": "Cryptek Conclave",
         "detachment_id": "",
         "legend": "",
-        "description": "■ Ranged weapons equipped by CRYPTEK models from your army have the [ASSAULT] ability.\n■ In your Shooting phase, each time a CRYPTEK unit from your army is selected to shoot, select one of the following abilities: [ANTI‑INFANTRY 3+], [ANTI‑MOUNTED 4+], [ASSAULT], [HEAVY], [IGNORES COVER]. Until the end of the phase, ranged weapons equipped by models in that unit have that ability.",
+        "description": "■ Ranged weapons equipped by CRYPTEK models from your army have the [ASSAULT] ability.\n■ In your Shooting phase, each time a CRYPTEK unit from your army is selected to shoot, select one of the following abilities:[ANTI‑INFANTRY 3+], [ANTI‑MOUNTED 4+], [ASSAULT], [HEAVY], [IGNORES COVER]. Until the end of the phase, ranged weapons equipped by models in that unit have that ability.",
         "phases": [
             "Shooting"
         ]
@@ -1740,7 +1803,7 @@
         "detachment": "Hypercrypt Legion",
         "detachment_id": "",
         "legend": "",
-        "description": "At the end of your opponent’s turn, you can select a number of NECRONS units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\n\n■ Incursion: Up to 1 unit\n■ Strike Force: Up to 2 units\n■ Onslaught: Up to 3 units\n\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+        "description": "At the end of your opponent’s turn, you can select a number of NECRONS units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\n\n■ Incursion:Up to 1 unit\n■ Strike Force:Up to 2 units\n■ Onslaught:Up to 3 units\n\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
         "phases": [
             "Movement"
         ]
@@ -1752,7 +1815,7 @@
         "detachment": "Pantheon of Woe",
         "detachment_id": "",
         "legend": "",
-        "description": "NECRONS MONSTER units from your army have the following ability:\n\nDistortion Fields (Aura): While an enemy unit is within 6\" of this unit, it is unravelling. While an enemy unit is unravelling, each time an attack targets that unit, improve the Armour Penetration characteristic of that attack by 1.\n\nAt the start of each phase, for each NECRONS MONSTER unit from your army, that unit can suffer 3 mortal wounds. If it does, until the end of the phase, the range of that unit’s Distortion Fields Aura ability is increased to 9\".\n\nDesigner’s Note: If your army contains more than one TRANSCENDENT C’TAN unit, each of those units must take the Reletavistic Tether ability.\nNecrodermal Binding Abilities: This eldritch device fetters and directs the Deceiver’s powers within a vortex that devours lesser wits entirely.\n\nC’TAN SHARD OF THE DECEIVER model only. This model has the following ability:\n\nLord of Deceit (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP.The energies of this binding latch onto enemy targets and shunt the shard into alignment with them.\n\nC’TAN SHARD OF THE NIGHTBRINGER model only. This model is eligible to declare a charge in a turn in which it Advanced.This device bleeds off the Void Dragon shard’s energies and earths them violently through nearby machines.\n\nC’TAN SHARD OF THE VOID DRAGON model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit visible to the bearer. That unit must take a Leadership test. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll and, if that Leadership test was failed, subtract 1 from the Wound roll as well.This binding uses atomic resonance magnetism to compel the shard into the midst of the foe.\n\nTRANSCENDENT C’TAN model only. In your turn, each time this model is set up on the battlefield using the Deep Strike or Transdimensional Displacement abilities, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units. When doing so, if this model is set up within 9\" of one or more enemy units, until the end of the turn, it is not eligible to declare a charge.",
+        "description": "NECRONS MONSTER units from your army have the following ability:\n\nDistortion Fields (Aura): While an enemy unit is within 6\"of this unit, it is unravelling. While an enemy unit is unravelling, each time an attack targets that unit, improve the Armour Penetration characteristic of that attack by 1.\n\nAt the start of each phase, for each NECRONS MONSTER unit from your army, that unit can suffer 3 mortal wounds. If it does, until the end of the phase, the range of that unit’s Distortion Fields Aura ability is increased to 9\".\n\nDesigner’s Note: If your army contains more than one TRANSCENDENT C’TAN unit, each of those units must take the Reletavistic Tether ability.\nNecrodermal Binding Abilities: This eldritch device fetters and directs the Deceiver’s powers within a vortex that devours lesser wits entirely.\n\nC’TAN SHARD OF THE DECEIVER model only. This model has the following ability:\n\nLord of Deceit (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\"of this model, increase the cost of that use of that Stratagem by 1CP.The energies of this binding latch onto enemy targets and shunt the shard into alignment with them.\n\nC’TAN SHARD OF THE NIGHTBRINGER model only. This model is eligible to declare a charge in a turn in which it Advanced.This device bleeds off the Void Dragon shard’s energies and earths them violently through nearby machines.\n\nC’TAN SHARD OF THE VOID DRAGON model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit visible to the bearer. That unit must take a Leadership test. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll and, if that Leadership test was failed, subtract 1 from the Wound roll as well.This binding uses atomic resonance magnetism to compel the shard into the midst of the foe.\n\nTRANSCENDENT C’TAN model only. In your turn, each time this model is set up on the battlefield using the Deep Strike or Transdimensional Displacement abilities, it can be set up anywhere on the battlefield that is more than 6\"horizontally away from all enemy units. When doing so, if this model is set up within 9\"of one or more enemy units, until the end of the turn, it is not eligible to declare a charge.",
         "phases": [
             "Command",
             "Movement",
@@ -1890,7 +1953,7 @@
         "detachment": "Taktikal Brigade",
         "detachment_id": "",
         "legend": "",
-        "description": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each BOSS SNIKROT, MEK and WARBOSS model in your army can issue Taktiks abilities.\n\nTo do so, select one of the Taktiks abilities below and select one friendly ORKS unit within 6\" of that model to issue them to. That model must take a Leadership test: if failed, the selected unit suffers 1 mortal wound. Until the start of your next Command phase, the selected unit is affected by the selected Taktik. A unit cannot have Taktiks issued to it in this way more than once per battle round.\n\nTaktiks abilities cannot be issued to Battle‑shocked units, and if a unit affected by Taktiks becomes Battle‑shocked, all Taktiks cease to affect that unit while it is Battle‑shocked.\n\nGet Stuck In: You can re‑roll Charge rolls made for this unit.\n\nGet On Wiv It: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\n\nSneaky Stalkin’: INFANTRY and MOUNTED models (excluding MEGANOBZ) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.\n\nShoota Drills: Each time an INFANTRY or MOUNTED model in this unit makes a ranged attack, add 1 to the Hit roll.",
+        "description": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each BOSS SNIKROT, MEK and WARBOSS model in your army can issue Taktiks abilities.\n\nTo do so, select one of the Taktiks abilities below and select one friendly ORKS unit within 6\"of that model to issue them to. That model must take a Leadership test:if failed, the selected unit suffers 1 mortal wound. Until the start of your next Command phase, the selected unit is affected by the selected Taktik. A unit cannot have Taktiks issued to it in this way more than once per battle round.\n\nTaktiks abilities cannot be issued to Battle‑shocked units, and if a unit affected by Taktiks becomes Battle‑shocked, all Taktiks cease to affect that unit while it is Battle‑shocked.\n\nGet Stuck In:You can re‑roll Charge rolls made for this unit.\n\nGet On Wiv It:Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\n\nSneaky Stalkin’:INFANTRY and MOUNTED models (excluding MEGANOBZ) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.\n\nShoota Drills:Each time an INFANTRY or MOUNTED model in this unit makes a ranged attack, add 1 to the Hit roll.",
         "phases": [
             "Command",
             "Movement",
@@ -1906,7 +1969,7 @@
         "detachment": "More Dakka!",
         "detachment_id": "",
         "legend": "",
-        "description": "Ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [ASSAULT] ability.\n\nWhile the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by ORKS INFANTRY  and ORKS WALKER models from your army have the [SUSTAINED HITS 1] ability.",
+        "description": "Ranged weapons equipped by ORKS INFANTRY and ORKS WALKER models from your army have the [ASSAULT] ability.\n\nWhile the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by ORKS INFANTRYand ORKS WALKER models from your army have the [SUSTAINED HITS 1] ability.",
         "phases": [
             "Shooting",
             "Fight"
@@ -1919,9 +1982,8 @@
         "detachment": "Freebooter Krew",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, select one objective marker. Until the start of the next battle round, that objective marker is your loot objective.\n\nEach time a model in an ORKS INFANTRY, ORKS MOUNTED or ORKS WALKER unit from your army makes an attack, that attack has the [SUSTAINED HITS 1] ability if either or both of the following are true:\n\n■  That model’s unit is within range of your loot objective.\n■ That attack targets a unit within range of your loot objective.",
+        "description": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your loot objective.\n\nEach time a model in an ORKS INFANTRY, ORKS MOUNTED or ORKS WALKER unit from your army makes an attack, that attack has the [SUSTAINED HITS 1] ability if either or both of the following are true:\n\n\n■ That model’s unit is within range of your loot objective.\n■ That attack targets a unit within range of your loot objective.",
         "phases": [
-            "Pregame",
             "Command",
             "Shooting",
             "Fight"
@@ -2032,12 +2094,25 @@
     },
     {
         "id": "",
+        "name": "Adaptive Defence",
+        "faction_id": "SM",
+        "detachment": "Ceramite Sentinels",
+        "detachment_id": "",
+        "legend": "",
+        "description": "Each time an ADEPTUS ASTARTES model from your army makes an attack, if that model’s unit is within a terrain feature, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.\n\nADEPTUS ASTARTES units from your army gain the ENTRENCHED keyword while all of the following are true:\n\n■ That unit is within a terrain feature.\n■ That unit was not set up on the battlefield this turn.\n■ No model in that unit has moved more than 3” this turn.",
+        "phases": [
+            "Shooting",
+            "Fight"
+        ]
+    },
+    {
+        "id": "",
         "name": "Psychic Disciplines",
         "faction_id": "SM",
         "detachment": "Librarius Conclave",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, select one of the following Psychic Disciplines. Until the end of the battle round, that Psychic Discipline is active and its effects apply to all ADEPTUS ASTARTES PSYKER units from your army.\nBiomancy Discipline: Add 2\" to the Move characteristic of models in this unit.\nDivination Discipline: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.\nPyromancy Discipline: Each time a ranged attack made by a model in this unit targets an enemy unit within 12\", improve the Armour Penetration characteristic of that attack by 1.\nTelekinesis Discipline: Each time a ranged attack targets this unit, subtract 1 from the Strength characteristic of that attack.\nTelepathy Discipline: Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Weapon Skill or Ballistic Skill characteristics and/or any or all modifiers to the Hit roll.",
+        "description": "At the start of the battle round, select one of the following Psychic Disciplines. Until the end of the battle round, that Psychic Discipline is active and its effects apply to all ADEPTUS ASTARTES PSYKER units from your army.\nBiomancy Discipline: Add 2\"to the Move characteristic of models in this unit.\nDivination Discipline: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.\nPyromancy Discipline: Each time a ranged attack made by a model in this unit targets an enemy unit within 12\",improve the Armour Penetration characteristic of that attack by 1.\nTelekinesis Discipline: Each time a ranged attack targets this unit, subtract 1 from the Strength characteristic of that attack.\nTelepathy Discipline: Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Weapon Skill or Ballistic Skill characteristics and/or any or all modifiers to the Hit roll.",
         "phases": [
             "Pregame",
             "Command",
@@ -2067,7 +2142,7 @@
         "detachment": "Vanguard Spearhead",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
+        "description": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\",subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
         "phases": [
             "Shooting"
         ]
@@ -2079,7 +2154,7 @@
         "detachment": "Forgefather’s Seekers",
         "detachment_id": "",
         "legend": "",
-        "description": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
+        "description": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\",add 1 to the Strength characteristic of that attack.",
         "phases": [
             "Shooting"
         ]
@@ -2118,7 +2193,7 @@
         "detachment": "Shadowmark Talon",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
+        "description": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\",subtract 1 from the Hit roll and the target has the Benefit of Cover against that attack.",
         "phases": [
             "Shooting"
         ]
@@ -2183,7 +2258,7 @@
         "detachment": "Firestorm Assault Force",
         "detachment_id": "",
         "legend": "",
-        "description": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
+        "description": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\",add 1 to the Strength characteristic of that attack.",
         "phases": [
             "Shooting"
         ]
@@ -2208,7 +2283,7 @@
         "detachment": "Saga of the Beastslayer",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time an ADEPTUS ASTARTES model from your army makes an attack, if that attack targets a CHARACTER, MONSTER or VEHICLE unit or if your Saga is completed (see below), that attack has the [LETHAL HITS] ability.\nSaga of the Beastslayer: At the start of the first battle round, your Beastslayer tally is 0, and you determine your Beastslayer target by halving the number of units from your opponent’s army (including those embarked within TRANSPORTS) that have one or more of the following keywords (rounding up): CHARACTER, MONSTER, VEHICLE.\n\nEach time an ADEPTUS ASTARTES unit from your army shoots or fights, after all of those attacks have been resolved, add 1 to your Beastslayer tally for each enemy unit with one or more of the following keywords destroyed by those attacks: CHARACTER, MONSTER, VEHICLE.\n\nOnce your Beastslayer tally is equal to or greater than your Beastslayer target, your Saga is completed.",
+        "description": "Each time an ADEPTUS ASTARTES model from your army makes an attack, if that attack targets a CHARACTER, MONSTER or VEHICLE unit or if your Saga is completed (see below), that attack has the [LETHAL HITS] ability.\nSaga of the Beastslayer: At the start of the first battle round, your Beastslayer tally is 0, and you determine your Beastslayer target by halving the number of units from your opponent’s army (including those embarked within TRANSPORTS) that have one or more of the following keywords (rounding up):CHARACTER, MONSTER, VEHICLE.\n\nEach time an ADEPTUS ASTARTES unit from your army shoots or fights, after all of those attacks have been resolved, add 1 to your Beastslayer tally for each enemy unit with one or more of the following keywords destroyed by those attacks:CHARACTER, MONSTER, VEHICLE.\n\nOnce your Beastslayer tally is equal to or greater than your Beastslayer target, your Saga is completed.",
         "phases": [
             "Pregame",
             "Command",
@@ -2224,7 +2299,7 @@
         "detachment": "Champions of Fenris",
         "detachment_id": "",
         "legend": "",
-        "description": "At the end of your opponent’s Charge phase, each ADEPTUS ASTARTES INFANTRY and ADEPTUS ASTARTES WALKER unit from your army that is within 3\" of one or more enemy units and would be eligible to declare a charge against one or more of those units can declare a charge against one or more of those units, and you resolve that charge as if it were your Charge phase. If that charge is successful, your unit does not receive any Charge bonus this turn.\n\nWhile ADEPTUS ASTARTES TERMINATOR units from your army are not Battle‑shocked, add 1 to the Objective Control characteristic of models in those units.",
+        "description": "At the end of your opponent’s Charge phase, each ADEPTUS ASTARTES INFANTRY and ADEPTUS ASTARTES WALKER unit from your army that is within 3\"of one or more enemy units and would be eligible to declare a charge against one or more of those units can declare a charge against one or more of those units, and you resolve that charge as if it were your Charge phase. If that charge is successful, your unit does not receive any Charge bonus this turn.\n\nWhile ADEPTUS ASTARTES TERMINATOR units from your army are not Battle‑shocked, add 1 to the Objective Control characteristic of models in those units.",
         "phases": [
             "Command",
             "Charge"
@@ -2289,7 +2364,7 @@
         "detachment": "Retaliation Cadre",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 9\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+        "description": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\",improve the Strength characteristic of that attack by 1. If that attack targets a unit within 9\",improve the Armour Penetration characteristic of that attack by 1 as well.",
         "phases": [
             "Shooting"
         ]
@@ -2340,7 +2415,7 @@
         "detachment": "Experimental Prototype Cadre",
         "detachment_id": "",
         "legend": "",
-        "description": "Add 6\" to the Range characteristic of ranged weapons equipped by T’AU EMPIRE models from your army.",
+        "description": "Add 6\"to the Range characteristic of ranged weapons equipped by T’AU EMPIRE models from your army.",
         "phases": [
             "Shooting"
         ]
@@ -2365,7 +2440,7 @@
         "detachment": "Auxiliary Cadre",
         "detachment_id": "",
         "legend": "",
-        "description": "KROOT and VESPID STINGWINGS units from your army have the following ability:\n\nTargeting Triangulation (Aura): While an enemy unit is within 9\" of and visible to this unit, each time a ranged attack made by a friendly T’AU EMPIRE model (excluding KROOT, VESPID STINGWINGS and TITANIC models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.\n\nT’AU EMPIRE units (excluding KROOT and VESPID STINGWINGS units) from your army have the following ability:\n\nLocalised Stealth Projectors (Aura): While a friendly KROOT or VESPID STINGWINGS unit is wholly within 6\" of and visible to this unit, that KROOT or VESPID STINGWINGS unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+        "description": "KROOT and VESPID STINGWINGS units from your army have the following ability:\n\nTargeting Triangulation (Aura):While an enemy unit is within 9\"of and visible to this unit, each time a ranged attack made by a friendly T’AU EMPIRE model (excluding KROOT, VESPID STINGWINGS and TITANIC models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.\n\nT’AU EMPIRE units (excluding KROOT and VESPID STINGWINGS units) from your army have the following ability:\n\nLocalised Stealth Projectors (Aura):While a friendly KROOT or VESPID STINGWINGS unit is wholly within 6\"of and visible to this unit, that KROOT or VESPID STINGWINGS unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
         "phases": [
             "Shooting"
         ]
@@ -2377,7 +2452,7 @@
         "detachment": "Changehost of Deceit",
         "detachment_id": "",
         "legend": "",
-        "description": "SCINTILLATING LEGIONS units from your army have the following the ability:\n\nDaemonic Illusions (Aura): While a friendly THOUSAND SONS PSYKER unit is within 6\" of and visible to this unit, models in that unit have a 4+ invulnerable save against ranged attacks.\n\nTHOUSAND SONS units from your army have the following ability:\n\nMortal Sorcery (Aura): While a friendly SCINTILLATING LEGIONS PSYKER unit is within 6\" of and visible to this unit, that SCINTILLATING LEGIONS unit has the Cabal of Sorcerers ability.",
+        "description": "SCINTILLATING LEGIONS units from your army have the following the ability:\n\nDaemonic Illusions (Aura): While a friendly THOUSAND SONS PSYKER unit is within 6\"of and visible to this unit, models in that unit have a 4+ invulnerable save against ranged attacks.\n\nTHOUSAND SONS units from your army have the following ability:\n\nMortal Sorcery (Aura): While a friendly SCINTILLATING LEGIONS PSYKER unit is within 6\"of and visible to this unit, that SCINTILLATING LEGIONS unit has the Cabal of Sorcerers ability.",
         "phases": [
             "Shooting",
             "Saves"
@@ -2390,7 +2465,7 @@
         "detachment": "Warpforged Cabal",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a THOUSAND SONS VEHICLE unit from your army is selected to shoot or fight, apply one of the following when resolving those attacks:\n\n■ If that VEHICLE unit is within 6\" of one or more friendly THOUSAND SONS PSYKER models, you can re-roll one Hit roll, one Wound roll and one Damage roll.\n■ Otherwise, you can re-roll one Hit roll, one Wound roll or one Damage roll.\n\nEach time a THOUSAND SONS VEHICLE model from your army with the Deadly Demise ability is destroyed while it is within 6\" of one or more friendly THOUSAND SONS PSYKER models, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 5+ instead of only a 6.",
+        "description": "Each time a THOUSAND SONS VEHICLE unit from your army is selected to shoot or fight, apply one of the following when resolving those attacks:\n\n■ If that VEHICLE unit is within 6\"of one or more friendly THOUSAND SONS PSYKER models, you can re-roll one Hit roll, one Wound roll and one Damage roll.\n■ Otherwise, you can re-roll one Hit roll, one Wound roll or one Damage roll.\n\nEach time a THOUSAND SONS VEHICLE model from your army with the Deadly Demise ability is destroyed while it is within 6\"of one or more friendly THOUSAND SONS PSYKER models, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 5+ instead of only a 6.",
         "phases": [
             "Shooting",
             "Fight",
@@ -2421,7 +2496,7 @@
         "detachment": "Grand Coven",
         "detachment_id": "",
         "legend": "",
-        "description": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.\nPsychic Maelstrom: Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.\nWrath of the Immaterium: Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.",
+        "description": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\"to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.\nPsychic Maelstrom: Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.\nWrath of the Immaterium: Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.",
         "phases": [
             "Command",
             "Shooting",
@@ -2461,7 +2536,7 @@
         "detachment": "Synaptic Nexus",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a TYRANIDS unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n\n■ Synaptic Augmentation: While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n■ Surging Vitality: While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n■ Goaded to Slaughter: While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
+        "description": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a TYRANIDS unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n\n■ Synaptic Augmentation:While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n■ Surging Vitality:While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n■ Goaded to Slaughter:While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
         "phases": [
             "Pregame",
             "Command",
@@ -2478,7 +2553,7 @@
         "detachment": "Subterranean Assault",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a TYRANIDS model from your army makes an attack, re-roll a Hit roll of 1.\n\nEach time a BURROWER unit from your army is set up on the battlefield from Reserves, place a 40mm circular Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units.\n\nIn the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units.\n\nIf an enemy model (excluding AIRCRAFT) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
+        "description": "Each time a TYRANIDS model from your army makes an attack, re-roll a Hit roll of 1.\n\nEach time a BURROWER unit from your army is set up on the battlefield from Reserves, place a 40mm circular Tunnel Marker anywhere on the battlefield within 1\"of that unit and more than 3\"horizontally away from all enemy units.\n\nIn the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\"of one of your Tunnel Markers and more than 6\"horizontally away from any enemy units.\n\nIf an enemy model (excluding AIRCRAFT) ends any kind of move within 3\"of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
         "phases": [
             "Movement",
             "Shooting",
@@ -2492,7 +2567,7 @@
         "detachment": "Warrior Bioform Onslaught",
         "detachment_id": "",
         "legend": "",
-        "description": "TYRANID WARRIORS and WINGED TYRANID PRIME units from your army have a 5+ invulnerable save.",
+        "description": "TYRANID WARRIORS, TYRANID PRIME WITH LASH WHIP and WINGED TYRANID PRIME units from your army have a 5+ invulnerable save.",
         "phases": [
             "Saves"
         ]
@@ -2518,7 +2593,7 @@
         "detachment": "Unending Swarm",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if one or more models from one or more ENDLESS MULTITUDE units from your army were destroyed as a result of those attacks, each such unit can make a Surge move. To do so, roll one D6: that unit can be moved a distance in inches up to the result, but that unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of enemy units. A unit cannot make a Surge move while it is Battle-shocked.",
+        "description": "Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if one or more models from one or more ENDLESS MULTITUDE units from your army were destroyed as a result of those attacks, each such unit can make a Surge move. To do so, roll one D6:that unit can be moved a distance in inches up to the result, but that unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of enemy units. A unit cannot make a Surge move while it is Battle-shocked.",
         "phases": [
             "Shooting"
         ]
@@ -2565,7 +2640,7 @@
         "detachment": "Assimilation Swarm",
         "detachment_id": "",
         "legend": "",
-        "description": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\n■ One model in that unit regains up to D3+1 lost wounds.\n■ One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
+        "description": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\"of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\n■ One model in that unit regains up to D3+1 lost wounds.\n■ One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
         "phases": [
             "Command"
         ]
@@ -2591,7 +2666,7 @@
         "detachment": "Persecution Prospect",
         "detachment_id": "",
         "legend": "",
-        "description": "LEAGUES OF VOTANN units from your army have the following ability:\n\nGuerrilla Adepts: In your Shooting phase, just after this unit is selected to shoot, this unit can use this ability. If it does, select one enemy unit (excluding MONSTERS and VEHICLES). Until the end of the phase, attacks made by models in this unit can only target that enemy unit (and only if it is an eligible target) and, after resolving those attacks, if one or more of those attacks hit that enemy unit, until the start of your next Shooting phase, that enemy unit is assailed (this simply labels that unit for the purposes of this ability and some Enhancements and Stratagems). If that unit is already assailed, until the start of your next Shooting phase, it is also pinned. While a unit is pinned, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it.",
+        "description": "LEAGUES OF VOTANN units from your army have the following ability:\n\nGuerrilla Adepts: In your Shooting phase, just after this unit is selected to shoot, this unit can use this ability. If it does, select one enemy unit (excluding MONSTERS and VEHICLES). Until the end of the phase, attacks made by models in this unit can only target that enemy unit (and only if it is an eligible target) and, after resolving those attacks, if one or more of those attacks hit that enemy unit, until the start of your next Shooting phase, that enemy unit is assailed (this simply labels that unit for the purposes of this ability and some Enhancements and Stratagems). If that unit is already assailed, until the start of your next Shooting phase, it is also pinned. While a unit is pinned, subtract 2\"from its Move characteristic and subtract 2 from Charge rolls made for it.",
         "phases": [
             "Command",
             "Movement",
@@ -2653,7 +2728,7 @@
         "detachment": "Brandfast Oathband",
         "detachment_id": "",
         "legend": "",
-        "description": "LEAGUES OF VOTANN TRANSPORT units from your army have the following ability:&#x20;\n\nFirebase Control (Aura): While a friendly LEAGUES OF VOTANN INFANTRY unit is wholly within 6\" of this TRANSPORT, ranged weapons equipped by models in that INFANTRY unit have the [SUSTAINED HITS 1] ability.",
+        "description": "LEAGUES OF VOTANN TRANSPORT units from your army have the following ability:&#x20;\n\nFirebase Control (Aura): While a friendly LEAGUES OF VOTANN INFANTRY unit is wholly within 6\"of this TRANSPORT, ranged weapons equipped by models in that INFANTRY unit have the [SUSTAINED HITS 1] ability.",
         "phases": [
             "Shooting",
             "Fight"
@@ -2680,7 +2755,7 @@
         "detachment": "Possessed Slaughterband",
         "detachment_id": "",
         "legend": "",
-        "description": "WORLD EATERS POSSESSED units from your army have the following ability:\n\nBrazen Fury: In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Brazen Fury move. To do so, roll one D6: models in this unit move a number of inches up to this result, but this unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Brazen Fury move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Brazen Fury move per phase.",
+        "description": "WORLD EATERS POSSESSED units from your army have the following ability:\n\nBrazen Fury: In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Brazen Fury move. To do so, roll one D6:models in this unit move a number of inches up to this result, but this unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Brazen Fury move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Brazen Fury move per phase.",
         "phases": [
             "Shooting",
             "Saves"
@@ -2693,7 +2768,7 @@
         "detachment": "Vessels of Wrath",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of the battle round, after activating Blessings of Khorne, you can select one or more models from your army from those listed below (including models that are embarked within TRANSPORTS):\n\n■ WORLD EATERS CHARACTER (excluding EPIC HEROES)\n■ Eightbound Champion\n■ Exalted Eightbound Champion\n■ Khorne Berzerker Champion\n■ World Eaters Terminator Champion\n\nYou can select the same type of model multiple times. The maximum number of models you can select depends on the battle size, as follows:\n\nIncursion: 2 Models\nStrike Force: 3 Models\nOnslaught: 4 Models\n\nUntil the end of the battle round, each of those models has the VESSEL OF WRATH keyword (we recommend marking such models with a suitable token). Then, select one Blessing of Khorne that is not currently active for your army. Until the end of the battle round, that Blessing of Khorne is active for VESSEL OF WRATH units from your army in addition to any others that are active for your army",
+        "description": "At the start of the battle round, after activating Blessings of Khorne, you can select one or more models from your army from those listed below (including models that are embarked within TRANSPORTS):\n\n■ WORLD EATERS CHARACTER (excluding EPIC HEROES)\n■ Eightbound Champion\n■ Exalted Eightbound Champion\n■ Khorne Berzerker Champion\n■ World Eaters Terminator Champion\n\nYou can select the same type of model multiple times. The maximum number of models you can select depends on the battle size, as follows:\n\nIncursion:2 Models\nStrike Force:3 Models\nOnslaught:4 Models\n\nUntil the end of the battle round, each of those models has the VESSEL OF WRATH keyword (we recommend marking such models with a suitable token). Then, select one Blessing of Khorne that is not currently active for your army. Until the end of the battle round, that Blessing of Khorne is active for VESSEL OF WRATH units from your army in addition to any others that are active for your army",
         "phases": [
             "Pregame",
             "Command",
@@ -2707,7 +2782,7 @@
         "detachment": "Khorne Daemonkin",
         "detachment_id": "",
         "legend": "",
-        "description": "Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n\n■ Enraged Abjuration [2BTP]\nBLOOD LEGIONS and WORLD EATERS models from your army have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.\n\n■ Daemonic Rage [3BTP]\nMelee weapons equipped by BLOOD LEGIONS units from your army have the [LANCE] ability.\n\n■ Boon of Blood [4BTP]\nBLOOD LEGIONS units from your army have a 4+ invulnerable save.\n\n■ Might of Khorne [5BTP]\nBLOOD LEGIONS units from your army gain the Blessings of Khorne ability.",
+        "description": "Each time a BLOOD LEGIONS or WORLD EATERS unit from your army destroys an enemy unit, roll one D6:on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n\n■ Enraged Abjuration [2BTP]\nBLOOD LEGIONS and WORLD EATERS models from your army have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.\n\n■ Daemonic Rage [3BTP]\nMelee weapons equipped by BLOOD LEGIONS units from your army have the [LANCE] ability.\n\n■ Boon of Blood [4BTP]\nBLOOD LEGIONS units from your army have a 4+ invulnerable save.\n\n■ Might of Khorne [5BTP]\nBLOOD LEGIONS units from your army gain the Blessings of Khorne ability.",
         "phases": [
             "Command",
             "Shooting",
@@ -2722,7 +2797,7 @@
         "detachment": "Cult of Blood",
         "detachment_id": "",
         "legend": "",
-        "description": "At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below. Until the start of your next Command phase, that ability is active and its effects apply to all WORLD EATERS TITANIC and WORLD EATERS MONSTER units from your army. You can only select each Idols of Khorne ability once per battle.\nIdol of Infinite Rage (Aura): While a friendly JAKHALS or GOREMONGERS unit is within 6\" of this model (or within 9\" if this model is TITANIC), each time a model in that unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll.\nIdol of Burning Wrath (Aura): While a friendly JAKHALS or GOREMONGERS unit is within 6\" of this model (or within 9\" if this model is TITANIC), add 1\" to the Move characteristic of models in that unit and add 1 to Advance and Charge rolls made for that unit.\nIdol of Blessed Blood (Aura): While a friendly JAKHALS or GOREMONGERS unit is within 6\" of this model (or within 9\" if this model is TITANIC), models in that unit have a 4+ invulnerable save.",
+        "description": "At the start of your Command phase, you can select one of the Idols of Khorne abilities listed below. Until the start of your next Command phase, that ability is active and its effects apply to all WORLD EATERS TITANIC and WORLD EATERS MONSTER units from your army. You can only select each Idols of Khorne ability once per battle.\nIdol of Infinite Rage (Aura): While a friendly JAKHALS or GOREMONGERS unit is within 6\"of this model (or within 9\"if this model is TITANIC), each time a model in that unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll.\nIdol of Burning Wrath (Aura): While a friendly JAKHALS or GOREMONGERS unit is within 6\"of this model (or within 9\"if this model is TITANIC), add 1\"to the Move characteristic of models in that unit and add 1 to Advance and Charge rolls made for that unit.\nIdol of Blessed Blood (Aura): While a friendly JAKHALS or GOREMONGERS unit is within 6\"of this model (or within 9\"if this model is TITANIC), models in that unit have a 4+ invulnerable save.",
         "phases": [
             "Command",
             "Movement",
