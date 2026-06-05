@@ -28,6 +28,15 @@ import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import { arraysEqual } from "@/utils/StoreHelper";
 import Settings from "@/types/Settings";
 import { samplePreload, testingPreload } from "@/utils/PreloadedLists";
+import StoredRoster from "@/types/StoredRoster";
+import type { Stratagem as GameStratagem, AbilityView } from "@/data/dataset";
+import {
+    buildStoredRoster,
+    rosterUnitRows,
+    stratagemsForPhase,
+    armyAbilities,
+    type RosterUnitRow,
+} from "@/data/rosterSelectors";
 
 // Normalize American → British spelling and common variants for matching
 const SPELLING_NORMALIZATIONS: [RegExp, string][] = [
@@ -58,6 +67,12 @@ import Note from "@/types/Note";
 interface StoreState {
     isFirstVisit: boolean;
     storedLists: StoredList[];
+    /**
+     * Native roster model (40kdc Roster + app overlay), index-aligned with
+     * storedLists. Transitional dual-write while UI surfaces migrate off
+     * ListUnit; becomes the only model once the legacy path is deleted.
+     */
+    storedRosters: (StoredRoster | undefined)[];
     activeList: number;
     settings: Settings;
     currentSaveVersion: number;
@@ -112,6 +127,12 @@ interface StoreState {
     getStratagemsByPhase: (phase: Phase) => Stratagem[];
     getStratagems: () => Stratagem[];
     getArmyAbilities: () => Ability[];
+    /** Mirror the latest parse into the native roster model (dual-write). */
+    syncRosterAt: (text: string, name: string, uuid?: string) => void;
+    getActiveRoster: () => StoredRoster | null;
+    getRosterUnits: () => RosterUnitRow[];
+    getRosterStratagemsByPhase: (phase: Phase) => GameStratagem[];
+    getRosterArmyAbilities: () => AbilityView[];
     getListIndexByUUID: (uuid: string | undefined) => number;
     attachUnitToLeader: (
         listIndex: number,
@@ -131,6 +152,10 @@ const useStore = create<StoreState>()(
                 currentSaveVersion: getCurrentStateVersion(),
                 // storedLists: testingPreload,
                 storedLists: samplePreload,
+                storedRosters: samplePreload.map((list) => ({
+                    ...buildStoredRoster(list.text, list.name ?? ""),
+                    uuid: list.uuid,
+                })),
                 activeList: -1,
                 settings: {
                     listSort: SortOptions.Name,
@@ -157,6 +182,7 @@ const useStore = create<StoreState>()(
                         get().storedLists[get().activeList].units.length > 0;
                     if (!hasUnits) {
                         get().storedLists.pop();
+                        get().storedRosters.pop();
                     }
                     set({
                         currentSaveVersion: getCurrentStateVersion(),
@@ -185,7 +211,15 @@ const useStore = create<StoreState>()(
                     const storedLists = get().storedLists;
 
                     const newStoredLists = [...storedLists, newList];
-                    set({ storedLists: newStoredLists });
+                    const newStoredRosters = [...get().storedRosters];
+                    newStoredRosters[newStoredLists.length - 1] = {
+                        ...buildStoredRoster(text || "", ""),
+                        uuid: newList.uuid,
+                    };
+                    set({
+                        storedLists: newStoredLists,
+                        storedRosters: newStoredRosters,
+                    });
                     get().setActiveList(newList.uuid);
                 },
                 getActiveList: () => {
@@ -204,7 +238,19 @@ const useStore = create<StoreState>()(
                         };
                         const updatedStoredLists = [...lists];
                         updatedStoredLists[listIndex] = updatedList;
-                        return { storedLists: updatedStoredLists };
+                        const updatedStoredRosters = [...state.storedRosters];
+                        const roster = updatedStoredRosters[listIndex];
+                        if (roster) {
+                            updatedStoredRosters[listIndex] = {
+                                ...roster,
+                                name: listName,
+                                updated: Date.now().toString(),
+                            };
+                        }
+                        return {
+                            storedLists: updatedStoredLists,
+                            storedRosters: updatedStoredRosters,
+                        };
                     });
                 },
                 editList: (
@@ -236,7 +282,13 @@ const useStore = create<StoreState>()(
                         const updatedStoredLists = state.storedLists.filter(
                             (_, index) => index !== listIndex,
                         );
-                        return { storedLists: updatedStoredLists };
+                        const updatedStoredRosters = state.storedRosters.filter(
+                            (_, index) => index !== listIndex,
+                        );
+                        return {
+                            storedLists: updatedStoredLists,
+                            storedRosters: updatedStoredRosters,
+                        };
                     });
                 },
                 refreshArmy: (uuid: string) => {
@@ -250,15 +302,66 @@ const useStore = create<StoreState>()(
                     name: string,
                     uuid?: string,
                 ): boolean => {
+                    let parsed = false;
+                    let routed = false;
                     try {
                         const json = JSON.parse(text);
                         if (json.roster) {
-                            return get().parseNRJson(text, name, uuid);
+                            parsed = get().parseNRJson(text, name, uuid);
+                            routed = true;
                         }
                     } catch {
                         // Not JSON, fall through to listforge parser
                     }
-                    return get().parseTextListforge(text, name, uuid);
+                    if (!routed) {
+                        parsed = get().parseTextListforge(text, name, uuid);
+                    }
+                    // Dual-write (transitional): mirror every successful parse
+                    // into the native 40kdc roster model at the same index.
+                    if (parsed) {
+                        get().syncRosterAt(text, name, uuid);
+                    }
+                    return parsed;
+                },
+                syncRosterAt: (
+                    text: string,
+                    name: string,
+                    uuid?: string,
+                ) => {
+                    const activeList = get().activeList;
+                    const listIndex = get().getListIndexByUUID(uuid);
+                    const index = activeList >= 0 ? activeList : listIndex;
+                    if (index < 0 || index >= get().storedLists.length) {
+                        return;
+                    }
+                    const previous = get().storedRosters[index];
+                    const legacyUuid = get().storedLists[index]?.uuid;
+                    const stored = buildStoredRoster(text, name, previous);
+                    const updated = [...get().storedRosters];
+                    updated[index] = {
+                        ...stored,
+                        uuid: legacyUuid ?? stored.uuid,
+                    };
+                    set({ storedRosters: updated });
+                },
+                getActiveRoster: () => {
+                    const index = get().activeList;
+                    if (index < 0) return null;
+                    return get().storedRosters[index] ?? null;
+                },
+                getRosterUnits: () => {
+                    const stored = get().getActiveRoster();
+                    return stored ? rosterUnitRows(stored) : [];
+                },
+                getRosterStratagemsByPhase: (phase: Phase) => {
+                    const stored = get().getActiveRoster();
+                    return stored
+                        ? stratagemsForPhase(stored.roster, phase)
+                        : [];
+                },
+                getRosterArmyAbilities: () => {
+                    const stored = get().getActiveRoster();
+                    return stored ? armyAbilities(stored.roster) : [];
                 },
                 parseNRJson: (
                     text: string,
@@ -981,7 +1084,24 @@ const useStore = create<StoreState>()(
                                     }),
                                 ),
                             };
-                            return { storedLists: updatedStoredLists };
+                            const updatedStoredRosters = [
+                                ...state.storedRosters,
+                            ];
+                            const roster = updatedStoredRosters[activeList];
+                            if (roster) {
+                                updatedStoredRosters[activeList] = {
+                                    ...roster,
+                                    phase,
+                                    unitState: roster.unitState.map((u) => ({
+                                        ...u,
+                                        toggled: true,
+                                    })),
+                                };
+                            }
+                            return {
+                                storedLists: updatedStoredLists,
+                                storedRosters: updatedStoredRosters,
+                            };
                         });
                     }
                 },
