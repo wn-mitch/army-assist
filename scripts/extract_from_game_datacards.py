@@ -441,6 +441,12 @@ def transform_datasheet(ds: dict) -> dict:
 
 _COMPOSITION_COUNT_RE = re.compile(r"^\s*(\d+(?:-\d+)?)\s+(.+?)\s*$")
 
+# Multi-model composition entries combine several model lines into one string
+# using comma + " and " (e.g. "1 Jakhal Pack Leader, 1 Dishonoured and 8 Jakhals").
+# Split on these combinators before applying _COMPOSITION_COUNT_RE so each role
+# becomes its own model row downstream.
+_COMPOSITION_PART_SPLIT_RE = re.compile(r",\s+|\s+and\s+")
+
 
 def transform_models(ds: dict) -> list:
     abilities = ds.get("abilities", {})
@@ -484,38 +490,44 @@ def transform_models(ds: dict) -> list:
         existing_lower = {m["name"].lower() for m in models}
         line = len(models) + 1
         for entry in ds.get("composition", []):
-            match = _COMPOSITION_COUNT_RE.match(entry)
-            if not match:
+            # Skip choice-style composition entries entirely — "1 Sergeant or 1
+            # Lieutenant" describes a unit-level option, not multiple models.
+            if " or " in entry.lower():
                 continue
-            name = match.group(2).strip()
-            # Skip choice-style entries ("A or B") — they're not single-model names.
-            if " or " in name.lower():
-                continue
-            lower = name.lower()
-            # Dedupe case-insensitive, tolerant of singular/plural.
-            if (
-                lower in existing_lower
-                or (lower.endswith("s") and lower[:-1] in existing_lower)
-                or f"{lower}s" in existing_lower
-            ):
-                continue
-            existing_lower.add(lower)
-            models.append({
-                "datasheet_id": ds["id"],
-                "line": str(line),
-                "name": name,
-                "M": primary.get("m", ""),
-                "T": primary.get("t", ""),
-                "Sv": primary.get("sv", ""),
-                "inv_sv": inv_sv,
-                "inv_sv_descr": inv_descr,
-                "W": primary.get("w", ""),
-                "Ld": primary.get("ld", ""),
-                "OC": primary.get("oc", ""),
-                "base_size": base_size,
-                "base_size_descr": "",
-            })
-            line += 1
+            # Split combined entries like "1 Jakhal Pack Leader, 1 Dishonoured and
+            # 8 Jakhals" into individual count-prefixed parts. Single-model entries
+            # ("4-9 Infernus Marines") split into a one-element list and behave as
+            # before.
+            for part in _COMPOSITION_PART_SPLIT_RE.split(entry):
+                match = _COMPOSITION_COUNT_RE.match(part)
+                if not match:
+                    continue
+                name = match.group(2).strip()
+                lower = name.lower()
+                # Dedupe case-insensitive, tolerant of singular/plural.
+                if (
+                    lower in existing_lower
+                    or (lower.endswith("s") and lower[:-1] in existing_lower)
+                    or f"{lower}s" in existing_lower
+                ):
+                    continue
+                existing_lower.add(lower)
+                models.append({
+                    "datasheet_id": ds["id"],
+                    "line": str(line),
+                    "name": name,
+                    "M": primary.get("m", ""),
+                    "T": primary.get("t", ""),
+                    "Sv": primary.get("sv", ""),
+                    "inv_sv": inv_sv,
+                    "inv_sv_descr": inv_descr,
+                    "W": primary.get("w", ""),
+                    "Ld": primary.get("ld", ""),
+                    "OC": primary.get("oc", ""),
+                    "base_size": base_size,
+                    "base_size_descr": "",
+                })
+                line += 1
 
     return models
 
