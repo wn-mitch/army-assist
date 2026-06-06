@@ -1496,7 +1496,7 @@ Riptide Battlesuit [190 pts]: Riptide fists, Ion accelerator, Twin smart missile
 ## Dedicated Transport [85 pts]
 Devilfish [85 pts]: Accelerator burst cannon, Armoured hull, 2x Seeker missile, 2 Smart missile systems (2x Smart missile system)`;
 
-const SampleListForgeText = `Xenos - T'au Empire - Auxiliary Cadre
+const SampleListForgeText = `Xenos - T'au Empire - Auxiliary Cadre (745 Points)
 Commander Farsight (95 pts)
   • Dawn Blade
   • High-intensity plasma rifle
@@ -1548,7 +1548,7 @@ Ghostkeel Battlesuit (160 pts)
   • Fusion collider
   • Twin fusion blaster`;
 
-const JudiciarText = `Imperium - Space Marines - Gladius Task Force
+const JudiciarText = `Imperium - Space Marines - Gladius Task Force (75 Points)
 Judiciar (75 pts)
   • Absolvor bolt pistol
   • Executioner relic blade`;

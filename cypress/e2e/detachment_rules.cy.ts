@@ -50,3 +50,17 @@ describe("Detachment rules test", () => {
     cy.get('#army-rule-button').contains("Adeptus Custodes")
   });
 });
+
+describe("Force dispositions", () => {
+  it("shows the five dispositions on the pre-game screen", () => {
+    cy.visit("/");
+    cy.get('#close-button').click()
+    cy.contains("FNF Tau").click()
+    cy.get('#force-dispositions-button').click();
+    cy.contains("Take and Hold")
+    cy.contains("Reconnaissance")
+    // Dispositions are a pre-game concern only.
+    cy.get("#Shooting-button").click();
+    cy.get('#force-dispositions-button').should("not.exist");
+  });
+});
