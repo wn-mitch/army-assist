@@ -12,6 +12,7 @@ import EditListModal from "./ListCardComponents/EditListModal";
 import DeleteListButton from "./ListCardComponents/DeleteListButton";
 import RefreshArmyButton from "./ListCardComponents/RefreshArmyButton";
 import { formatDate} from "@/utils/ListHelper";
+import { buttonClasses } from "@/components/ui/buttonStyles";
 
 const ListRow = ({ list, index }: { list: StoredRoster; index: number }) => {
   const setActiveList = useStore((state) => state.setActiveList);
@@ -80,7 +81,14 @@ const ListRow = ({ list, index }: { list: StoredRoster; index: number }) => {
         ) : (
           <div className="">
             <Menu as="div" className="relative inline-block text-left">
-              <Menu.Button className="inline-flex justify-center w-full rounded border border-border shadow-sm px-2 py-1 bg-panel text-sm font-medium text-text hover:bg-panel-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+              <Menu.Button
+                className={buttonClasses(
+                  "standard",
+                  "sm",
+                  "inline-flex justify-center w-full border border-border"
+                )}
+                aria-label="List actions"
+              >
                 <EllipsisVerticalIcon className="h-5 w-5" aria-hidden="true" />
               </Menu.Button>
               <Transition

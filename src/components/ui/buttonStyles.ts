@@ -38,6 +38,14 @@ const GHOST_ICON =
   "rounded p-2 text-text-muted hover:bg-panel-hover hover:text-text " +
   `transition-colors ${FOCUS_DISABLED}`;
 
+/**
+ * Rows inside a HeadlessUI Menu (dropdown actions). Flat, full-width, quiet;
+ * append e.g. `text-danger` for destructive rows.
+ */
+export const menuItemClasses =
+  "block w-full text-left px-4 py-2 text-sm text-text " +
+  "hover:bg-panel-hover transition-colors";
+
 export function buttonClasses(
   variant: ButtonVariant = "standard",
   size: ButtonSize = "sm",

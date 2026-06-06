@@ -1,6 +1,7 @@
 import useStore from "@/store/store";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import React from "react";
+import { buttonClasses, menuItemClasses } from "@/components/ui/buttonStyles";
 
 const RefreshArmyButton = ({
   uuid,
@@ -14,20 +15,19 @@ const RefreshArmyButton = ({
     (state) => state.settings.listDisplaySetting
   );
 
-  const buttonClasses = () => {
-    if (isDropdown) {
-      return "block text-text px-4 py-2 text-sm";
-    } else {
-      return listDisplaySetting
-        ? "bg-success text-white hover:bg-success/85 rounded p-1 shadow-sm mx-2 rounded-2xl"
-        : "flex flex-grow justify-center bg-success text-white hover:bg-success/85 rounded p-1 shadow-sm";
-    }
-  };
+  const classes = isDropdown
+    ? menuItemClasses
+    : buttonClasses(
+        "standard",
+        "sm",
+        listDisplaySetting ? "mx-2" : "flex flex-grow justify-center"
+      );
 
   return (
     <button
-      className={buttonClasses()}
+      className={classes}
       id={`refresh-list-${uuid}-button`}
+      aria-label="Refresh army"
       onClick={() => {
         refreshArmy(uuid);
         window.alert("Army Refreshed!");
@@ -36,7 +36,7 @@ const RefreshArmyButton = ({
       {isDropdown ? (
         <span>Refresh Army</span>
       ) : (
-        <ArrowPathIcon className="h-8 w-8" />
+        <ArrowPathIcon className="h-6 w-6" />
       )}
     </button>
   );

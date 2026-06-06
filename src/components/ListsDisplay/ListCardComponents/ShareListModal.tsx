@@ -6,6 +6,10 @@ import useStore from "@/store/store";
 import StoredRoster from "@/types/StoredRoster";
 import { FaCopy } from "react-icons/fa";
 import Button from "@/components/ui/Button";
+import {
+  buttonClasses as variantClasses,
+  menuItemClasses,
+} from "@/components/ui/buttonStyles";
 
 interface ShareListModalProps {
   list: StoredRoster;
@@ -29,12 +33,13 @@ const ShareListModal: React.FC<ShareListModalProps> = ({
 
   const buttonClasses = () => {
     if (isDropdown) {
-      return "block text-text px-4 py-2 text-sm";
-    } else {
-      return listDisplaySetting
-        ? "bg-accent text-accent-foreground hover:bg-accent-hover rounded p-1 shadow-sm mx-2 rounded-2xl"
-        : "flex flex-grow justify-center bg-accent text-accent-foreground hover:bg-accent-hover rounded p-1 shadow-sm";
+      return menuItemClasses;
     }
+    return variantClasses(
+      "standard",
+      "sm",
+      listDisplaySetting ? "mx-2" : "flex flex-grow justify-center"
+    );
   };
 
   const copListToClipboard = async () => {
@@ -67,7 +72,7 @@ const ShareListModal: React.FC<ShareListModalProps> = ({
         {isDropdown ? (
           <span>Share QR Code</span>
         ) : (
-          <ShareIcon className="h-8 w-8" />
+          <ShareIcon className="h-6 w-6" />
         )}
       </button>
 

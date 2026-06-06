@@ -8,6 +8,10 @@ import {
 } from "@/data/rosterSelectors";
 import useStore from "@/store/store";
 import Button from "@/components/ui/Button";
+import {
+  buttonClasses as variantClasses,
+  menuItemClasses,
+} from "@/components/ui/buttonStyles";
 
 interface EditListModalProps {
   list: StoredRoster;
@@ -37,12 +41,13 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
 
   const buttonClasses = () => {
     if (isDropdown) {
-      return "block text-text px-4 py-2 text-sm";
-    } else {
-      return listDisplaySetting
-        ? "text-text bg-panel hover:bg-panel-hover rounded p-1 shadow-sm mx-2 rounded-2xl"
-        : "flex flex-grow justify-center text-text bg-panel hover:bg-panel-hover rounded p-1 shadow-sm";
+      return menuItemClasses;
     }
+    return variantClasses(
+      "standard",
+      "sm",
+      listDisplaySetting ? "mx-2" : "flex flex-grow justify-center"
+    );
   };
 
   const placeholderText = () => {
@@ -62,7 +67,7 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
         aria-label="Open Edit List Panel"
         id={`edit-list-${list.uuid}-button`}
       >
-        {isDropdown ? <span>Edit List</span> : <PencilSquareIcon className="h-8 w-8" />}
+        {isDropdown ? <span>Edit List</span> : <PencilSquareIcon className="h-6 w-6" />}
       </button>
 
       <Dialog
@@ -97,14 +102,16 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
                   className="block w-full resize-none h-full rounded bg-panel px-3 py-1.5 text-base text-text outline outline-1 -outline-offset-1 outline-panel-border placeholder:text-text-dim focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6"
                   onChange={(event) => setNewListName(event.target.value)}
                 />
-                <button
+                <Button
+                  variant="accent"
+                  size="md"
                   onClick={handleSave}
-                  className="flex items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold text-white bg-success hover:bg-success/85 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-success"
+                  className="flex items-center gap-x-1.5"
                   id="save-button"
                 >
                   <CheckCircleIcon className="h-5 w-5" aria-hidden="true" />
                   Save
-                </button>
+                </Button>
               </div>
             </div>
 
