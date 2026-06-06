@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import useStore from "@/store/store";
 import ArmyRuleDisplay from "../ArmyDisplay/ArmyRuleDisplay";
-import ForceDispositions from "../ArmyDisplay/ForceDispositions";
 import StratagemPanel from "../ArmyDisplay/StratagemPanel";
 import ScrollToTopButton from "../ScrollToTopButton";
 import PhaseFilter from "../ArmyDisplay/PhaseFilter";
@@ -25,7 +24,6 @@ function ListDisplay() {
     <div className="flex flex-col gap-2 w-full">
       <PhaseFilter />
       <ArmyRuleDisplay />
-      <ForceDispositions />
       <ul
         role="list"
         className="columns-1 lg:columns-2 2xl:columns-3 gap-1 auto-rows-min"

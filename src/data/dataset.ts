@@ -20,7 +20,6 @@ export {
   stratagems,
   missions,
   missionMatchups,
-  forceDispositions,
 } from "@alpaca-software/40kdc-data";
 
 // Unit compositions are a plain array on the Dataset instance (no Collection
@@ -82,7 +81,6 @@ export type {
   LeaderAttachment,
   Stratagem,
   Mission,
-  ForceDisposition,
   UnitComposition,
   StatValue,
   EntityId,
