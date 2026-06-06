@@ -6,6 +6,11 @@ interface Settings {
   cardsCollapse: boolean;
   showKeywords: boolean;
   isDarkMode: boolean;
+  /**
+   * Faction theme palette id (src/theme/palettes.ts), or "" for auto:
+   * resolve the theme from the active roster's faction.
+   */
+  factionThemeId: string;
   cardsGroup: boolean;
   weaponsFilter: boolean;
   activePhases: {

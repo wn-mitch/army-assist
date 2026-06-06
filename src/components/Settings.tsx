@@ -5,6 +5,7 @@ import Phase from "@/types/Phase";
 import useStore from "@/store/store";
 import SortOptions from "@/types/SortOptions";
 import SettingsOption from "./ArmyDisplay/UnitCardComponents/SettingsOption";
+import { allFactions } from "@/theme/palettes";
 
 function Settings() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,11 @@ function Settings() {
 
   const isDarkMode = useStore((state) => state.settings.isDarkMode);
   const setIsDarkMode = useStore((state) => state.setIsDarkMode);
+
+  const factionThemeId = useStore(
+    (state) => state.settings.factionThemeId ?? ""
+  );
+  const setFactionThemeId = useStore((state) => state.setFactionThemeId);
 
   const cardsGroup = useStore((state) => state.settings.cardsGroup);
   const setCardsGroup = useStore((state) => state.setCardsGroup);
@@ -170,6 +176,56 @@ function Settings() {
                 onChange={() => setIsDarkMode(!isDarkMode)}
                 id={""}
               />
+            </div>
+
+            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                Faction Theme
+              </h2>
+              <p className="text-sm">
+                Auto follows the faction of the list you open.
+              </p>
+              <div className="mt-2 grid grid-cols-2 gap-1">
+                <button
+                  onClick={() => setFactionThemeId("")}
+                  aria-pressed={factionThemeId === ""}
+                  className={`flex items-center gap-2 px-2 py-1 rounded text-sm font-medium text-left transition-colors ${
+                    factionThemeId === ""
+                      ? "bg-gray-500 text-white"
+                      : "bg-gray-100 text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-600"
+                  }`}
+                  id="faction-theme-auto"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="w-3 h-3 rounded-full inline-block shrink-0 ring-1 ring-inset ring-gray-400 bg-[conic-gradient(from_0deg,#14b8a6,#3b82f6,#dc2626,#f59e0b,#14b8a6)]"
+                  />
+                  Auto (list faction)
+                </button>
+                {allFactions.map((theme) => (
+                  <button
+                    key={theme.id}
+                    onClick={() => setFactionThemeId(theme.id)}
+                    aria-pressed={factionThemeId === theme.id}
+                    title={theme.tagline}
+                    className={`flex items-center gap-2 px-2 py-1 rounded text-sm font-medium text-left transition-colors ${
+                      factionThemeId === theme.id
+                        ? "bg-gray-500 text-white"
+                        : "bg-gray-100 text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-600"
+                    }`}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="w-3 h-3 rounded-full inline-block shrink-0 ring-1 ring-inset ring-gray-400"
+                      style={{
+                        backgroundColor:
+                          theme.palette[isDarkMode ? "dark" : "light"].accent,
+                      }}
+                    />
+                    {theme.name}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="mt-4">
