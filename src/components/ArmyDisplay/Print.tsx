@@ -51,9 +51,6 @@ function Print() {
   };
   const handleShow = () => setIsOpen(true);
 
-  const buttonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent w-full items-center justify-center mx-1 my-1";
-
   const printFn = useReactToPrint({
     contentRef: componentRef,
     documentTitle: `ArmyAssist.xyz - ${faction}`,
@@ -204,14 +201,16 @@ function Print() {
             </div>
 
             <div className="mt-4 flex w-full flex-col display-hidden">
-              <button
+              <Button
+                variant="accent"
+                size="md"
                 onClick={handleOnClick}
-                className={`${buttonClasses} bg-accent text-accent-foreground hover:bg-accent-hover`}
-                id="print-button"
+                className="w-full flex items-center justify-center gap-x-1.5"
+                id="print-modal-button"
               >
                 <PrinterIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Print
-              </button>
+              </Button>
             </div>
 
             <div className="mt-4 flex w-full flex-col">

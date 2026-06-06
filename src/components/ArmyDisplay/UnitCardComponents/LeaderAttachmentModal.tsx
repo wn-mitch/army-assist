@@ -141,13 +141,14 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
                   <span className="text-sm text-text">
                     {unitName(r)}
                   </span>
-                  <button
-                    className="ml-2 p-1 text-danger bg-danger/10 hover:bg-danger/20 rounded"
+                  <Button
+                    variant="ghost-icon"
+                    className="ml-2 text-danger hover:bg-danger/15 hover:text-danger"
                     onClick={() => detachRosterUnit(r.index)}
                     title="Detach unit"
                   >
                     <UserMinusIcon className="h-5 w-5" />
-                  </button>
+                  </Button>
                 </li>
               ))}
             </ul>
@@ -174,14 +175,15 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
                     <span className="text-sm text-text">
                       {unitName(r)}
                     </span>
-                    <button
-                      className="ml-2 p-1 text-success bg-success/10 hover:bg-success/20 rounded"
+                    <Button
+                      variant="ghost-icon"
+                      className="ml-2 text-success hover:bg-success/15 hover:text-success"
                       onClick={() => attachRosterUnit(r.index, row.index)}
                       disabled={attached.length >= 1}
                       title="Attach unit to leader"
                     >
                       <UserPlusIcon className="h-5 w-5" />
-                    </button>
+                    </Button>
                   </li>
                 ))}
             </ul>
@@ -223,13 +225,14 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
             <span className="text-sm font-semibold text-text">
               {unitName(currentLeader)}
             </span>
-            <button
-              className="ml-2 p-1 text-danger bg-danger/10 hover:bg-danger/20 rounded"
+            <Button
+              variant="ghost-icon"
+              className="ml-2 text-danger hover:bg-danger/15 hover:text-danger"
               onClick={handleDetach}
               title="Detach from leader"
             >
               <UserMinusIcon className="h-5 w-5" />
-            </button>
+            </Button>
           </div>
         </div>
       )}
@@ -260,13 +263,14 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
             </div>
 
             <div className="flex justify-end">
-              <button
-                className="inline-flex justify-center rounded border border-transparent bg-accent px-4 py-2 text-sm font-medium text-accent-foreground hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:bg-accent/50"
+              <Button
+                variant="accent"
+                size="md"
                 onClick={handleAttach}
                 disabled={selectedIndex === ""}
               >
                 Attach to Leader
-              </button>
+              </Button>
             </div>
           </>
         )}

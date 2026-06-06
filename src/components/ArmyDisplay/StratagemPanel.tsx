@@ -31,13 +31,15 @@ export default function StratagemPanel() {
 
   return (
     <>
-      <button
+      <Button
+        variant="accent"
+        size="md"
         onClick={() => setOpen(true)}
-        className="fixed bottom-4 left-4 bg-accent text-accent-foreground rounded p-2 font-bold hover:bg-accent-hover shadow-xl z-10"
+        className="fixed bottom-4 left-4 shadow-xl z-10"
         id="open-stratagems-button"
       >
         Open Stratagem Panel
-      </button>
+      </Button>
 
       <Dialog
         open={open}

@@ -1,5 +1,6 @@
 import useStore from "@/store/store";
 import React from "react";
+import Button from "@/components/ui/Button";
 
 export default function Pastebox() {
     const [text, setText] = React.useState("");
@@ -67,12 +68,14 @@ export default function Pastebox() {
                 </p>
             </div>
             <div className="flex mb-2 gap-2 mx-10">
-                <button
+                <Button
+                    variant="accent"
+                    size="md"
                     type="submit"
-                    className="inline-flex flex-1 items-center justify-center rounded bg-accent text-accent-foreground px-3 py-2 text-sm font-semibold shadow-sm hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    className="inline-flex flex-1 items-center justify-center"
                 >
                     Submit
-                </button>
+                </Button>
                 <input
                     ref={fileInputRef}
                     type="file"
@@ -80,13 +83,14 @@ export default function Pastebox() {
                     className="hidden"
                     onChange={handleFileUpload}
                 />
-                <button
+                <Button
+                    size="md"
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="inline-flex flex-1 items-center justify-center rounded bg-accent text-accent-foreground px-3 py-2 text-sm font-semibold shadow-sm hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    className="inline-flex flex-1 items-center justify-center"
                 >
                     Import NR File
-                </button>
+                </Button>
             </div>
         </form>
     );
