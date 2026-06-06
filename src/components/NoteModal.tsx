@@ -82,7 +82,7 @@ function NoteForm({
                 type="checkbox"
                 checked={selectedPhases.includes(phase)}
                 onChange={() => togglePhase(phase)}
-                className="rounded border-border accent-accent shadow-sm focus:border-accent focus:ring focus:ring-accent/30"
+                className="rounded border-border accent-accent shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
               />
               <span className="ml-2 mr-3 text-text-muted">
                 {phase}

@@ -249,7 +249,7 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
           <>
             <div className="mb-4">
               <select
-                className="mt-1 block w-full rounded border border-panel-border shadow-sm focus:border-accent focus:ring-accent bg-panel text-text p-2"
+                className="mt-1 block w-full rounded border border-panel-border shadow-sm focus:outline-none focus:border-accent bg-panel text-text p-2"
                 value={selectedIndex}
                 onChange={(e) => setSelectedIndex(e.target.value)}
               >

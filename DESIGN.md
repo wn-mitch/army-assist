@@ -96,9 +96,15 @@ import { buttonClasses } from "@/components/ui/buttonStyles";
   `disabled:opacity-50 disabled:pointer-events-none`. Both are built in.
 - **Danger means destructive.** Delete, reset, detach. Never dismissal:
   a red Close button trains users to ignore red.
-- **Toolbar destructive buttons** (e.g. Reset) stay `ghost-icon` rhythm with
-  a danger tint: `buttonClasses("ghost-icon", "sm", "text-danger
+- **Destructive icon buttons** (delete note, detach unit) stay `ghost-icon`
+  rhythm with a danger tint: `buttonClasses("ghost-icon", "sm", "text-danger
   hover:bg-danger/15 hover:text-danger")`.
+- **Dropdown menu rows** (HeadlessUI `Menu.Item`) use `menuItemClasses` from
+  the same module: flat, full-width, `hover:bg-panel-hover`; append
+  `text-danger` for destructive rows.
+- **Toggle buttons** (`aria-pressed`: faction theme picker, edit-force mode,
+  phase radios) are the one bespoke pattern: `accent` treatment when active,
+  ghost (`text-text-muted hover:bg-panel-hover hover:text-text`) when not.
 - Icon-only buttons always carry `aria-label` or `title`.
 
 ### Modal close convention
