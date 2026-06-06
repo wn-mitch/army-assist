@@ -8,7 +8,7 @@ import Note from "@/types/Note";
 
 import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import Settings from "@/types/Settings";
-import { testingPreload } from "@/utils/PreloadedLists";
+import { samplePreload } from "@/utils/PreloadedLists";
 import StoredRoster, { UnitOverlay } from "@/types/StoredRoster";
 import type { Stratagem as GameStratagem, AbilityView } from "@/data/dataset";
 import {
@@ -107,7 +107,7 @@ const useStore = create<StoreState>()(
             return {
                 isFirstVisit: true,
                 currentSaveVersion: getCurrentStateVersion(),
-                storedRosters: testingPreload.map((list) => ({
+                storedRosters: samplePreload.map((list) => ({
                     ...buildStoredRoster(list.text, list.name ?? ""),
                     uuid: list.uuid,
                 })),
