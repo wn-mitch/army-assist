@@ -1,60 +1,64 @@
-import ListUnit from "@/types/ListUnit";
-import datasheetAbilities from "@/assets/json/Datasheets_abilities.json";
 import React from "react";
-import AbilitySection from "./AbilitySection";
+
 import Phase from "@/types/Phase";
-import { getPhasedAbilities, getPhasedNotes } from "@/utils/UnitHelper";
-import CardValue from "./CardValue";
 import PrintSettings from "@/types/PrintSettings";
+import { formatSave, formatSkill, formatStat } from "@/data/format";
+import {
+  abilitiesForPhase,
+  feelNoPainAbility,
+  feelNoPainThreshold,
+  unitName,
+} from "@/data/rosterSelectors";
+
+import AbilitySection from "./AbilitySection";
+import CardValue from "./CardValue";
+import EnhancementSection from "./EnhancementSection";
 import NoteSection from "./NoteSection";
+import type { PrintRow } from "./PregameSection";
 
-function formatInvSaveDescr(descr: string): string {
-  if (!descr) return "";
-  const lower = descr.toLowerCase();
-  if (lower.includes("melee")) return "vs. Melee";
-  if (lower.includes("ranged")) return "vs. Ranged";
-  return descr;
-}
+const SavesSection = (rows: PrintRow[], settings: PrintSettings) => {
+  return rows.map(({ row, groupCount }, index) => {
+    const abilities = abilitiesForPhase(row.view, Phase.Saves);
+    const notes =
+      row.overlay.notes?.filter((note) => note.phases.includes(Phase.Saves)) ??
+      [];
 
-const SavesSection = (units: ListUnit[], settings: PrintSettings) => {
-  return units.map((unit) => {
-    const abilities = getPhasedAbilities(unit, Phase.Saves);
-    const notes = getPhasedNotes(unit, Phase.Saves);
+    const view = row.view;
+    const profile = view?.profileAt(0);
 
-    const invSave = unit.datasheetModel?.inv_sv;
-    const invSaveDescr = formatInvSaveDescr(unit.datasheetModel?.inv_sv_descr ?? "");
+    const saveText = profile ? formatSave(profile.Sv) : "-";
+    const invSaveText =
+      profile?.invuln_sv != null ? `${profile.invuln_sv}++` : "-";
 
-    const fnp = datasheetAbilities.find(
-      (ability) =>
-        ability.name.startsWith("Feel No Pain") &&
-        unit.datasheetModel &&
-        ability.datasheet_id === unit.datasheetModel.datasheet_id
-    );
-
-    const invSaveText = invSave !== "-" ? `${invSave}++` : "-";
-    const fnpText = fnp ? `FNP ${fnp.parameter}` : "-";
+    // Feel No Pain: prefer the DSL threshold; fall back to the ability name.
+    const fnp = feelNoPainAbility(view);
+    const fnpThreshold = feelNoPainThreshold(fnp);
+    let fnpText = "-";
+    if (fnp) {
+      fnpText = fnpThreshold !== undefined ? `FNP ${fnpThreshold}+` : fnp.name;
+    }
 
     return (
-      <>
+      <React.Fragment key={index}>
         <div className="border border-black break-inside-avoid first:mt-0 my-1">
           <div className="flex flex-row">
             <span className="flex-1 font-semibold text-center">
-              {unit.groupCount}x {unit.name}
+              {groupCount}x {unitName(row)}
             </span>
           </div>
           <div className="flex flex-row text-sm">
-            {CardValue("Sv", unit.datasheetModel?.Sv)}
+            {CardValue("Sv", saveText)}
             {CardValue("Inv", invSaveText)}
-            {invSaveDescr ? <span className="text-xs">({invSaveDescr})</span> : null}
             {CardValue("FNP", fnpText)}
-            {CardValue("T", unit.datasheetModel?.T)}
-            {CardValue("W", unit.datasheetModel?.W)}
-            {CardValue("Ld", unit.datasheetModel?.Ld)}
+            {CardValue("T", profile ? formatStat(profile.T) : "-")}
+            {CardValue("W", profile ? formatStat(profile.W) : "-")}
+            {CardValue("Ld", profile ? formatSkill(profile.Ld) : "-")}
           </div>
           {AbilitySection(abilities, settings)}
+          {EnhancementSection(row.rosterUnit)}
           {NoteSection(notes, settings)}
         </div>
-      </>
+      </React.Fragment>
     );
   });
 };

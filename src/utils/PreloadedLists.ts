@@ -268,7 +268,7 @@ Battle Size
 Detachment
 Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible
 
-Ancient in Terminator Armor [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)`;
+Ancient in Terminator Armour [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)`;
 
 const BroadsidesText = `Xenos - T'au Empire - Base Tau - [2000pts]
 
@@ -442,7 +442,7 @@ The Emperor's Champion [75pts]: Black Sword, Bolt Pistol
 
 ## Character [1490pts]
 Ancient [50pts]: Bolt Pistol, Bolt Rifle & Close Combat Weapon (Bolt Rifle, Close Combat Weapon)
-Ancient in Terminator Armor [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)
+Ancient in Terminator Armour [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)
 Apothecary [50pts]: Absolver Bolt Pistol, Close Combat Weapon, Reductor Pistol
 Apothecary Biologis [70pts]: Absolver Bolt Pistol, Close Combat Weapon
 Bladeguard Ancient [45pts]: Close Combat Weapon, Heavy Bolt Pistol
@@ -1313,7 +1313,7 @@ Show/Hide Options
 
 ## Battleline [1020 pts]
 Wraithblades [170 pts]:
-• 5x Wraithblade: Ghostaxe and Forceshield`;
+• 5x Wraithblade: Ghostaxe, Forceshield`;
 
 const PiranhasText = `Xenos - T'au Empire - Full - [605pts]
 
@@ -1555,7 +1555,7 @@ Judiciar (75 pts)
 
 const samplePreload = [
   {
-    uuid: "8a776952-8b58-4fd8-99f6-5db83d484da4",
+    uuid: "b1d3f0c2-2f6a-4c1e-9b2d-3a7e5c8f1a04",
     text: SampleListForgeText,
     textFormat: "listforge" as const,
     name: "(Sample) T'au Empire List",
@@ -1751,7 +1751,9 @@ const testingPreload = [
   {
     text: TauText,
     name: "2K Tau List",
-    uuid: v4(),
+    // Stable uuid the list-card / list-table specs target for edit, share,
+    // refresh and delete actions.
+    uuid: "8a776952-8b58-4fd8-99f6-5db83d484da4",
     ...defaultObject,
   },
 ];

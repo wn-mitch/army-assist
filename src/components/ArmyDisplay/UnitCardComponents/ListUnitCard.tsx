@@ -32,7 +32,22 @@ import {
   attachedUnitIndices,
   rosterUnitRows,
   type RosterUnitRow,
+  type RosterWeapon,
 } from "@/data/rosterSelectors";
+
+/**
+ * Every weapon on the resolved datasheet, paired with a count of 1, ordered by
+ * name. Used when the "Filter Weapons" setting is off so the card shows the
+ * unit's full datasheet armoury (matching the legacy `weaponsDatasheets`
+ * behaviour) rather than only the weapons present on the imported list.
+ */
+function allDatasheetWeapons(row: RosterUnitRow): RosterWeapon[] {
+  const view = row.view;
+  if (!view) return [];
+  return [...view.weapons]
+    .map((weapon) => ({ weapon, count: 1 }))
+    .sort((a, b) => a.weapon.name.localeCompare(b.weapon.name));
+}
 
 function ListUnitCard({
   row,
@@ -77,12 +92,13 @@ function ListUnitCard({
     .map((i) => rows[i])
     .filter((r): r is RosterUnitRow => r !== undefined);
 
-  // Weapons for the current combat phase.
-  const allWeapons = rosterWeapons(rosterUnit);
-  const filteredWeapons = weaponsFilter
-    ? visibleWeapons(allWeapons)
-    : allWeapons;
-  const phasedWeapons = weaponsForPhase(filteredWeapons, phase);
+  // Weapons for the current combat phase. With the filter on, show only the
+  // weapons present on the imported list (count > 0). With it off, fall back to
+  // the unit's full datasheet armoury so weapons absent from the list (e.g.
+  // alternate loadouts) are still visible.
+  const phasedWeapons = weaponsFilter
+    ? weaponsForPhase(visibleWeapons(rosterWeapons(rosterUnit)), phase)
+    : weaponsForPhase(allDatasheetWeapons(row), phase);
 
   let characteristic: React.ReactNode;
   let toggled = true;
@@ -179,8 +195,10 @@ function ListUnitCard({
           )}
         </div>
 
-        {/* Buttons only in main view, not the nested attached view. */}
-        {!isAttachedView && (
+        {/* Buttons only in main view, not the nested attached view. Rendered
+            only in force-edit mode, where it actually has children — otherwise
+            an empty container would inflate `.justify-center` element counts. */}
+        {!isAttachedView && forceEditMode && (
           <div className="flex justify-center items-center gap-1 mx-1">
             {(canBeLeader || canBeAttached) && forceEditMode && (
               <button

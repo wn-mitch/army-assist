@@ -36,8 +36,8 @@ function Print() {
   const faction = getActiveList().faction;
   const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
 
-  const getProcessedUnits = useStore((state) => state.getProcessedUnitList);
-  const processedUnits = getProcessedUnits();
+  const getRosterUnits = useStore((state) => state.getRosterUnits);
+  const rosterRows = getRosterUnits();
 
   const [filterCoreStratagems, setFilterCoreStratagems] = useState(true);
   const [truncateCoreAbilities, setTruncateCoreAbilities] = useState(true);
@@ -197,7 +197,7 @@ function Print() {
             </div>
 
             <div ref={componentRef} className="hidden print:block">
-              {PrintParent(text, processedUnits, settings)}
+              {PrintParent(text, rosterRows, settings)}
             </div>
 
             <div className="mt-4 flex w-full flex-col display-hidden">

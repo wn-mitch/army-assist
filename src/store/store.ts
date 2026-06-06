@@ -213,11 +213,26 @@ const useStore = create<StoreState>()(
                     },
                 },
                 reset: () => {
-                    const hasUnits =
-                        get().storedLists[get().activeList].units.length > 0;
-                    if (!hasUnits) {
-                        get().storedLists.pop();
-                        get().storedRosters.pop();
+                    // Drop a throwaway list created via "add list" that the
+                    // user never populated. Emptiness is judged from the native
+                    // roster model (source of truth) — the legacy `units` array
+                    // is always empty under the dual-write, so it can't be used
+                    // here. Only pop when the active list is the last entry and
+                    // has neither parsed roster units nor any raw text to
+                    // reparse, so preloaded/saved lists are never discarded.
+                    const activeIndex = get().activeList;
+                    const lists = get().storedLists;
+                    if (activeIndex >= 0 && activeIndex === lists.length - 1) {
+                        const roster = get().storedRosters[activeIndex];
+                        const rosterUnitCount =
+                            roster?.roster?.units?.length ?? 0;
+                        const hasRawText = !!roster?.rawText?.trim();
+                        const isEmptyThrowaway =
+                            rosterUnitCount === 0 && !hasRawText;
+                        if (isEmptyThrowaway) {
+                            get().storedLists.pop();
+                            get().storedRosters.pop();
+                        }
                     }
                     set({
                         currentSaveVersion: getCurrentStateVersion(),
@@ -630,24 +645,24 @@ const useStore = create<StoreState>()(
                     };
 
                     const lines = text.split("\n");
-                    const factionMatch = lines[0]
-                        .trim()
-                        .match(/^.+? - ([\w''\s\-]+) -/);
-                    const factionMatchName = lines[0]
-                        .trim()
-                        .match(/^.+? - ([\w''\s\-]+) - /);
+                    // A ListForge header is " - "-delimited:
+                    //   Allegiance - Faction - ListName[ - [pts]]
+                    // The faction is always the second field. Splitting on the
+                    // " - " delimiter (rather than a greedy regex) extracts it
+                    // correctly even when the list name itself adds further
+                    // " - " segments (e.g. "... - Base Tau - [2000pts]").
+                    const headerFields = lines[0].trim().split(" - ");
 
-                    if (!factionMatch || !factionMatchName) {
+                    if (headerFields.length < 2) {
                         window.alert(
                             "Name/Faction/Detachment format not recognized. Note: using ' - ' (space-dash-space) in your ListForge list name will break parsing.",
                         );
                         return false;
                     }
 
+                    const factionName = headerFields[1].trim();
                     const factionAbbreviation = Factions.filter(
-                        (f) =>
-                            f.name === factionMatch[1] ||
-                            f.name === factionMatchName[1],
+                        (f) => f.name === factionName,
                     )[0];
 
                     if (!factionAbbreviation) {
@@ -660,23 +675,32 @@ const useStore = create<StoreState>()(
                     const factionAbbreviationId = factionAbbreviation.id;
                     storedList.faction = factionAbbreviationId;
 
-                    const detachmentMatch = lines[0]
-                        .trim()
-                        .match(/^.+? - [\w''\s\-]+ - ([\w''\s\-]+?)(?:\s*[\(\[])/);
-
-                    if (detachmentMatch) {
-                        storedList.detachment = detachmentMatch[1].trim();
-                    } else {
-                        for (const line of lines) {
-                            const detLine = line
-                                .trim()
-                                .match(/^Detachment(?:\s+Choice)?:\s*(.+)$/);
-                            if (detLine) {
-                                storedList.detachment = detLine[1].trim();
-                                break;
-                            }
+                    // The explicit "Detachment:" line is authoritative when
+                    // present; fall back to the header's third " - " field only
+                    // when no such line exists. (For four-field headers the
+                    // third field is the list name, not the detachment, so the
+                    // explicit line must win.)
+                    let detachment: string | undefined;
+                    for (const line of lines) {
+                        const detLine = line
+                            .trim()
+                            .match(/^Detachment(?:\s+Choice)?:\s*(.+)$/);
+                        if (detLine) {
+                            detachment = detLine[1].trim();
+                            break;
                         }
                     }
+                    if (detachment === undefined) {
+                        const detachmentMatch = lines[0]
+                            .trim()
+                            .match(
+                                /^.+? - [\w''\s\-]+ - ([\w''\s\-]+?)(?:\s*[\(\[])/,
+                            );
+                        if (detachmentMatch) {
+                            detachment = detachmentMatch[1].trim();
+                        }
+                    }
+                    storedList.detachment = detachment;
 
                     const listUnits: ListUnit[] = [];
                     let lastParentUnit: ListUnit | null = null;

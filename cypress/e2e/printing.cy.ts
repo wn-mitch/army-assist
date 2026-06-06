@@ -19,6 +19,14 @@ describe("Printing Modal Test", () => {
     cy.contains("Print Pages").should("not.exist");
   });
   
+  it("should render a known unit in the print preview", () => {
+    cy.get("#print-button").click();
+    cy.contains("Print Pages").should("be.visible");
+    // The print container is hidden (print:block) but present in the DOM;
+    // a known roster unit should be plumbed through to the printed pages.
+    cy.get(".print-container").contains("Commander Farsight").should("exist");
+  });
+
   it("should open the tau list then toggle all options without crashing", () => {
     cy.get('#print-button').click();
     cy.get('#Units-setting').click()

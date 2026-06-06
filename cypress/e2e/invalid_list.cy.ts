@@ -11,11 +11,11 @@ describe("Invalid list submission to verify the presence of the error", () => {
             alertCount++;
             if (alertCount === 1) {
                 expect(str).to.equal(
-                    "Name/Faction/Detachment format not recognized",
+                    "Name/Faction/Detachment format not recognized. Note: using ' - ' (space-dash-space) in your ListForge list name will break parsing.",
                 );
             } else if (alertCount === 2) {
                 expect(str).to.equal(
-                    "Error: Invalid List Format. Use the ListForge format (listforge.club). If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!",
+                    "Error: Invalid List Format. Use the ListForge format (listforge.club) or import a New Recruit (.json) file. If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!",
                 );
             } else {
                 throw new Error("Unexpected alert fired");

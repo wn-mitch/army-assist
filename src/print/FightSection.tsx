@@ -1,30 +1,41 @@
-import ListUnit from "@/types/ListUnit";
 import React from "react";
-import AbilitySection from "./AbilitySection";
+
 import Phase from "@/types/Phase";
-import { getPhasedAbilities, getPhasedNotes, filterWeaponsByCount } from "@/utils/UnitHelper";
 import PrintSettings from "@/types/PrintSettings";
+import {
+  abilitiesForPhase,
+  rosterWeapons,
+  visibleWeapons,
+  weaponsForPhase,
+  unitName,
+} from "@/data/rosterSelectors";
+import { formatSkill, formatAP } from "@/data/format";
+
+import AbilitySection from "./AbilitySection";
+import EnhancementSection from "./EnhancementSection";
 import NoteSection from "./NoteSection";
+import { weaponRows } from "./weaponRows";
+import type { PrintRow } from "./PregameSection";
 
-const FightSection = (units: ListUnit[], settings: PrintSettings) => {
-  return units.map((unit) => {
-    const abilities = getPhasedAbilities(unit, Phase.Fight);
-    const notes = getPhasedNotes(unit, Phase.Fight);
-    
-    const weapons = settings.weaponsFilter
-      ? filterWeaponsByCount(unit.weaponsDatasheets, unit.count)
-      : unit.weaponsDatasheets;
+const FightSection = (rows: PrintRow[], settings: PrintSettings) => {
+  return rows.map(({ row, groupCount }, index) => {
+    const abilities = abilitiesForPhase(row.view, Phase.Fight);
+    const notes =
+      row.overlay.notes?.filter((note) => note.phases.includes(Phase.Fight)) ??
+      [];
 
-    const filteredWeapons = weapons.filter(
-      (wargear) => wargear.type !== "Ranged"
-    );
+    const allWeapons = rosterWeapons(row.rosterUnit);
+    const filtered = settings.weaponsFilter
+      ? visibleWeapons(allWeapons)
+      : allWeapons;
+    const weapons = weaponRows(weaponsForPhase(filtered, Phase.Fight));
 
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         <div className="border border-black break-inside-avoid first:mt-0 my-1">
           <div className="flex flex-row">
             <span className="flex-1 font-semibold text-center">
-              {unit.groupCount}x {unit.name}
+              {groupCount}x {unitName(row)}
             </span>
           </div>
           <table className="text-sm">
@@ -41,27 +52,24 @@ const FightSection = (units: ListUnit[], settings: PrintSettings) => {
               </tr>
             </thead>
             <tbody>
-              {filteredWeapons.map((weapon) => {
-                return (
-                  <tr>
-                    <td className="pl-1">{weapon.name}</td>
-                    <td className="text-center">
-                      {unit.count && weapon.name && weapon.name in unit.count
-                        ? unit.count[weapon.name]
-                        : 0}
-                    </td>
-                    <td className="text-center">{weapon.A}</td>
-                    <td className="text-center">{weapon.BS_WS}+</td>
-                    <td className="text-center">{weapon.S}</td>
-                    <td className="text-center">{weapon.AP}</td>
-                    <td className="text-center">{weapon.D}</td>
-                    <td className="text-center">{weapon.description}</td>
-                  </tr>
-                );
-              })}
+              {weapons.map((weapon, wIndex) => (
+                <tr key={wIndex}>
+                  <td className="pl-1">
+                    {weapon.isSubProfile ? `➤ ${weapon.name}` : weapon.name}
+                  </td>
+                  <td className="text-center">{weapon.count}</td>
+                  <td className="text-center">{weapon.attacks}</td>
+                  <td className="text-center">{formatSkill(weapon.skill)}</td>
+                  <td className="text-center">{weapon.strength}</td>
+                  <td className="text-center">{formatAP(weapon.ap)}</td>
+                  <td className="text-center">{weapon.damage}</td>
+                  <td className="text-center">{weapon.keywords.join(", ")}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
           {AbilitySection(abilities, settings)}
+          {EnhancementSection(row.rosterUnit)}
           {NoteSection(notes, settings)}
         </div>
       </React.Fragment>

@@ -2,13 +2,21 @@
 
 describe("Stratagems modal tests", () => {
   beforeEach(() => {
+    // Start from the seeded default state every time. The persisted zustand
+    // store otherwise carries over the active list's phase (and an open panel)
+    // from a prior test/spec, which races with the phase switch below.
+    cy.clearLocalStorage();
     cy.visit("/");
     cy.get("#close-button").click();
     cy.contains("FNF Tau").click();
     // Lists open on the Pregame screen, which has no stratagems — enter the
-    // Command phase before opening the panel.
+    // Command phase before opening the panel. Assert the phase is selected
+    // before opening so the Command-phase stratagems are computed first.
     cy.get("#Command-button").click();
     cy.get('#open-stratagems-button').click();
+    // Ensure the Command-phase stratagems have rendered before each test body
+    // runs, so tests never race the panel's initial population.
+    cy.contains("COMMAND RE-ROLL");
   })
   
   it("should open the stratagem flyout, close it with escape, change phase, then see new stratagems", () => {

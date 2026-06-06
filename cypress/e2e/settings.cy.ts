@@ -20,13 +20,13 @@ describe("Settings Tests", () => {
   describe("Active Phases Tests", () => {
     it("should paste in the fnf tau list and toggle off charge phase", () => {
       cy.contains("2K Tau List").click();
-      cy.contains("Fight");
+      cy.get("#Charge-button").should("exist");
       cy.get("#reset-button").click();
       cy.get("#settings-button").click();
       cy.get(":nth-child(5) > .flex > .group > .appearance-none").click();
       cy.get(".mt-4 > .px-4").click();
       cy.contains("2K Tau List").click();
-      cy.contains("Fight").should("not.exist");
+      cy.get("#Charge-button").should("not.exist");
     });
   });
   describe("List Sort Order Tests", () => {
@@ -96,7 +96,7 @@ describe("Settings Tests", () => {
     it("should show keywords by default, then remove them", () => {
       cy.contains("Ancient in Terminator Armor").click();
       cy.contains(
-        "Adeptus Astartes, Deathwing, Infantry, Imperium, Character, Terminator, Ancient"
+        "Infantry, Character, Imperium, Terminator, Ancient, Adeptus Astartes"
       );
       cy.get("#reset-button").click();
       cy.get("#settings-button").click();
@@ -106,7 +106,7 @@ describe("Settings Tests", () => {
       cy.get(".mt-4 > .px-4").click();
       cy.contains("Ancient in Terminator Armor").click();
       cy.contains(
-        "Adeptus Astartes, Deathwing, Infantry, Imperium, Character, Terminator, Ancient"
+        "Infantry, Character, Imperium, Terminator, Ancient, Adeptus Astartes"
       ).should("not.exist");
     });
   });
@@ -125,13 +125,17 @@ describe("Settings Tests", () => {
   describe("Truncate core rules test", () => {
     it("should see the core rules, toggle the setting, then see them disappear", () => {
       cy.contains("2K Tau List").click();
-      cy.get(':nth-child(7) > .gap-1 > :nth-child(2) > .ml-1 > .flex > .font-thin').contains("See Core Rules")
+      // Core abilities (e.g. Stealth Battlesuits' Infiltrators) surface on the
+      // Pregame screen and are truncated to "See Core Rules" by default.
+      cy.contains("See Core Rules").should("exist");
       cy.get("#settings-button").click();
       cy.get(
         ":nth-child(8) > .relative > .flex > .group > .appearance-none"
       ).click();
       cy.get(".mt-4 > .px-4").click();
-      cy.get(':nth-child(7) > .gap-1 > :nth-child(2) > .ml-1 > .flex > .font-thin').contains("During deployment, if every model in a unit has this ability, then when you set it up, it can be set up anywhere on the battlefield that is more than 9\" horizontally away from the enemy deployment zone and all enemy models.")
+      // With truncation off, the DSL-derived ability text is shown instead.
+      cy.contains("See Core Rules").should("not.exist");
+      cy.contains("unit gains infiltrate").should("exist");
     });
   });
   describe("Dark Mode Tests", () => {
