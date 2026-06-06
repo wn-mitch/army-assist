@@ -20,6 +20,7 @@ import PhaseAbilities from "./PhaseAbilities";
 import NoteModal from "@/components/NoteModal";
 import PhaseNotes from "./PhaseNotes";
 import LeaderAttachmentModal from "./LeaderAttachmentModal";
+import Button from "@/components/ui/Button";
 
 import { dataset } from "@/data/dataset";
 import {
@@ -201,8 +202,9 @@ function ListUnitCard({
         {!isAttachedView && forceEditMode && (
           <div className="flex justify-center items-center gap-1 mx-1">
             {(canBeLeader || canBeAttached) && forceEditMode && (
-              <button
-                className="m-auto flex shadow-sm rounded bg-accent/15 my-1 text-accent hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+              <Button
+                variant="ghost-icon"
+                className="m-auto my-1"
                 onClick={(e) => {
                   e.stopPropagation();
                   setLeaderModalVisible(true);
@@ -211,8 +213,8 @@ function ListUnitCard({
                   canBeLeader ? "Manage attached units" : "Attach to leader"
                 }
               >
-                <UserGroupIcon className="h-8 w-8 p-1" />
-              </button>
+                <UserGroupIcon className="h-6 w-6" />
+              </Button>
             )}
             {forceEditMode && <NoteModal row={row} />}
           </div>
@@ -220,17 +222,19 @@ function ListUnitCard({
 
         {cardsCollapse && !isAttachedView && (
           <div className="flex justify-center items-center">
-            <button
-              className="m-auto flex shadow-md rounded-xl bg-panel border-panel-border my-1 text-text hover:bg-panel-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-panel-border"
+            <Button
+              variant="ghost-icon"
+              className="m-auto my-1"
               id={`toggle-${name}-button`}
               onClick={() => toggleRosterUnit(row.index)}
+              aria-label={cardToggled ? "Collapse card" : "Expand card"}
             >
               {cardToggled ? (
-                <ChevronDownIcon className="h-8 w-8" />
+                <ChevronDownIcon className="h-6 w-6" />
               ) : (
-                <ChevronUpIcon className="h-8 w-8" />
+                <ChevronUpIcon className="h-6 w-6" />
               )}
-            </button>
+            </Button>
           </div>
         )}
       </div>

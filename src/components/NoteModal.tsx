@@ -93,18 +93,17 @@ function NoteForm({
       </div>
 
       <div className="flex space-x-3">
-        <button
-          className="px-4 py-2 bg-accent text-accent-foreground font-bold rounded w-full transition-colors hover:bg-accent-hover"
+        <Button
+          variant="accent"
+          size="md"
+          className="w-full"
           onClick={handleSave}
         >
           Save
-        </button>
-        <button
-          className="px-4 py-2 bg-danger text-white font-bold rounded w-full transition-colors hover:bg-danger/85"
-          onClick={onCancel}
-        >
+        </Button>
+        <Button size="md" className="w-full" onClick={onCancel}>
           Cancel
-        </button>
+        </Button>
       </div>
     </div>
   );
@@ -141,18 +140,21 @@ function UnitNote({
           </div>
         </div>
         <div className="flex gap-2">
-          <button
+          <Button
+            variant="ghost-icon"
             onClick={() => onEdit(index)}
-            className="p-1 rounded bg-accent text-accent-foreground hover:bg-accent-hover transition-colors"
+            aria-label="Edit note"
           >
             <PencilIcon className="h-4 w-4" />
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="ghost-icon"
+            className="text-danger hover:bg-danger/15 hover:text-danger"
             onClick={() => onDelete(index)}
-            className="p-1 rounded bg-danger text-white hover:bg-danger/85 transition-colors"
+            aria-label="Delete note"
           >
             <TrashIcon className="h-4 w-4" />
-          </button>
+          </Button>
         </div>
       </div>
     </li>
@@ -222,12 +224,15 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
 
   return (
     <>
-      <button
-        className="m-auto flex shadow-sm rounded bg-accent/15 my-1 text-accent hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+      <Button
+        variant="ghost-icon"
+        className="m-auto my-1"
         onClick={handleShow}
+        aria-label="Manage notes"
+        title="Manage notes"
       >
-        <PencilIcon className="h-8 w-8 p-1" />
-      </button>
+        <PencilIcon className="h-6 w-6" />
+      </Button>
 
       <Dialog
         open={isOpen}
@@ -264,12 +269,14 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
                   </p>
                 )}
                 <div className="mt-4">
-                  <button
-                    className="px-4 py-2 bg-accent text-accent-foreground font-bold rounded w-full transition-colors hover:bg-accent-hover"
+                  <Button
+                    variant="accent"
+                    size="md"
+                    className="w-full"
                     onClick={handleStartAddingNote}
                   >
                     New Note
-                  </button>
+                  </Button>
                 </div>
               </>
             )}
