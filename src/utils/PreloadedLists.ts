@@ -1496,57 +1496,78 @@ Riptide Battlesuit [190 pts]: Riptide fists, Ion accelerator, Twin smart missile
 ## Dedicated Transport [85 pts]
 Devilfish [85 pts]: Accelerator burst cannon, Armoured hull, 2x Seeker missile, 2 Smart missile systems (2x Smart missile system)`;
 
-const SampleListForgeText = `Xenos - T'au Empire - Auxiliary Cadre (745 Points)
-Commander Farsight (95 pts)
-  • Dawn Blade
-  • High-intensity plasma rifle
-Cadre Fireblade (50 pts)
-  • Close combat weapon
-  • Fireblade pulse rifle
-Strike Team (75 pts)
-  • 1x Fire Warrior Shas'ui
+/**
+ * The dashboard sample: a World Eaters / Possessed Slaughterband tournament
+ * list. World Eaters is deliberate: as of 40kdc-data 0.5.3 it is the only
+ * faction whose detachments carry linked rules, described stratagems, and
+ * enhancement abilities, so the sample demos the rules surfaces with real
+ * content. Encoded as ListForge text (the WTC export of this list trips an
+ * upstream parser bug that drops single-line units). Every unit and weapon
+ * resolves; Slaughterbound -> Eightbound demos leader attachment.
+ */
+const SampleListForgeText = `Chaos - World Eaters - Possessed Slaughterband (2000 Points)
+Angron (340 pts)
+  • Warlord
+  • Samni'arius and Spinegrinder
+Khârn the Betrayer (100 pts)
+  • Gorechild
+  • Plasma pistol
+Slaughterbound (100 pts)
+  • Lacerator and daemonic claw
+Slaughterbound (100 pts)
+  • Lacerator and daemonic claw
+Slaughterbound (100 pts)
+  • Lacerator and daemonic claw
+Eightbound (270 pts)
+  • 1x Eightbound Champion
+    • Chainblades
+  • 5x Eightbound
+    • 5x Chainblades
+Eightbound (135 pts)
+  • 1x Eightbound Champion
+    • Chainblades
+  • 2x Eightbound
+    • 2x Chainblades
+Eightbound (135 pts)
+  • 1x Eightbound Champion
+    • Chainblades
+  • 2x Eightbound
+    • 2x Chainblades
+Exalted Eightbound (140 pts)
+  • 1x Exalted Eightbound Champion
+    • Chainblades
+  • 2x Exalted Eightbound
+    • 2x Chainblades
+Exalted Eightbound (140 pts)
+  • 1x Exalted Eightbound Champion
+    • Chainblades
+  • 2x Exalted Eightbound
+    • 2x Chainblades
+Goremongers (75 pts)
+  • 1x Blood Herald
+    • Autopistol
+    • Chainblade
     • Close combat weapon
-    • Pulse pistol
-    • Pulse rifle
-    • Support turret
-    • Guardian Drone
-    • Shield Drone
-  • 9x Fire Warrior w/ pulse rifle
-    • Close combat weapon
-    • Pulse pistol
-    • Pulse rifle
-Kroot Carnivores (65 pts)
-  • 1x Long-quill
-    • Close combat weapon
-    • Kroot pistol
-    • Kroot rifle
-  • 9x Kroot Carnivores
-    • Close combat weapon
-    • Kroot rifle
-Stealth Battlesuits (60 pts)
-  • 1x Stealth Shas'vre
-    • Battlesuit fists
-    • Burst cannon
-  • 2x Stealth Shas'ui w/ burst cannon
-    • Battlesuit fists
-    • Burst cannon
-Broadside Battlesuits (90 pts)
-  • 1x Broadside Shas'vre
-    • Crushing bulk
-    • Heavy rail rifle
-    • Seeker missile
-    • Twin plasma rifle
-Crisis Sunforge Battlesuits (150 pts)
-  • 1x Crisis Sunforge Shas'vre
-    • 2x Fusion blaster
-    • Battlesuit fists
-  • 2x Crisis Sunforge Shas'ui
-    • Battlesuit fists
-    • 2x Fusion blaster
-Ghostkeel Battlesuit (160 pts)
-  • Ghostkeel fists
-  • Fusion collider
-  • Twin fusion blaster`;
+  • 7x Goremonger
+    • 7x Autopistol
+    • 7x Chainblade
+    • 7x Close combat weapon
+Jakhals (65 pts)
+  • 1x Jakhal Pack Leader
+    • Autopistol
+    • Chainblades
+  • 1x Dishonoured
+    • Skullsmasher and mangler
+  • 8x Jakhal
+    • 8x Autopistol
+    • 7x Chainblades
+    • Mauler chainblade
+Maulerfiend (150 pts)
+  • Maulerfiend fists
+  • Lasher tendrils
+Maulerfiend (150 pts)
+  • Maulerfiend fists
+  • Lasher tendrils`;
 
 const JudiciarText = `Imperium - Space Marines - Gladius Task Force (75 Points)
 Judiciar (75 pts)
@@ -1555,10 +1576,10 @@ Judiciar (75 pts)
 
 const samplePreload = [
   {
-    uuid: "b1d3f0c2-2f6a-4c1e-9b2d-3a7e5c8f1a04",
+    uuid: "7e4c9a1b-5d28-4f6e-8b3a-2c1d9e7f4a05",
     text: SampleListForgeText,
     textFormat: "listforge" as const,
-    name: "(Sample) T'au Empire List",
+    name: "(Sample) World Eaters List",
     units: [],
     phase: Phase.Pregame,
     faction: undefined,

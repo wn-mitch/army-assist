@@ -18,7 +18,7 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
  *   desktop uses the #<Phase>-button radio ids (they only exist >768px).
  */
 
-const SAMPLE_LIST = "(Sample) T'au Empire List";
+const SAMPLE_LIST = "(Sample) World Eaters List";
 
 function shotDir(projectName: string): string {
   const dir = path.join(HERE, "screenshots", projectName);
@@ -184,11 +184,11 @@ test("light mode and faction theme", async ({ page }, testInfo) => {
   await setPhase(page, isPhone, "Shooting");
   await shoot(page, testInfo.project.name, "05-light-mode-shooting");
 
-  // Faction theme override: World Eaters has a strong accent shift away from
-  // the sample list's auto-resolved T'au palette.
+  // Faction theme override: T'au has a strong accent shift away from the
+  // sample list's auto-resolved World Eaters palette.
   await openSettings(page);
-  await page.getByRole("button", { name: "World Eaters" }).click();
+  await page.getByRole("button", { name: "T'au Empire" }).click();
   await darkModeCheckbox.click({ force: true });
   await closeOpenDialog(page);
-  await shoot(page, testInfo.project.name, "06-world-eaters-dark");
+  await shoot(page, testInfo.project.name, "06-theme-override-dark");
 });
