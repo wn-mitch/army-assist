@@ -9,6 +9,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import useStore from "@/store/store";
 import { describeStratagem } from "@/data/rosterSelectors";
 import Phase from "@/types/Phase";
+import Button from "@/components/ui/Button";
 
 /** "battle-tactic" → "Battle Tactic" for the GW category chip. */
 const titleCase = (kebab: string) =>
@@ -63,17 +64,18 @@ export default function StratagemPanel() {
                       <DialogTitle className="text-md font-heading uppercase tracking-wider text-text inline-flex">
                         {phase} Phase Stratagems
                       </DialogTitle>
-                      <div className="ml-3 flex h-7 items-center">
-                        <button
+                      <div className="ml-3 flex items-center">
+                        <Button
+                          variant="ghost-icon"
                           type="button"
                           onClick={() => setOpen(false)}
                           id="close-stratagem-panel-button"
-                          className="relative rounded text-text hover:text-text-muted focus:outline-none focus:ring-2 focus:ring-panel-border focus:ring-offset-2"
+                          className="relative"
                         >
                           <span className="absolute -inset-2.5" />
                           <span className="sr-only">Close panel</span>
                           <XMarkIcon aria-hidden="true" className="h-8 w-8" />
-                        </button>
+                        </Button>
                       </div>
                     </div>
                   </div>

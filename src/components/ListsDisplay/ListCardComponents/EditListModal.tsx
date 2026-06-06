@@ -7,6 +7,7 @@ import {
   rosterDetachmentName,
 } from "@/data/rosterSelectors";
 import useStore from "@/store/store";
+import Button from "@/components/ui/Button";
 
 interface EditListModalProps {
   list: StoredRoster;
@@ -33,9 +34,6 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
     editList(list.uuid, newListName, newListText);
     handleClose();
   };
-
-  const closeButtonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
 
   const buttonClasses = () => {
     if (isDropdown) {
@@ -127,14 +125,15 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
               />
             </div>
             <div className="mt-4 flex w-full flex-col">
-              <button
-                onPointerDown={handleClose}
-                className={`${closeButtonClasses} bg-danger hover:bg-danger/85`}
+              <Button
+                size="md"
+                className="w-full flex items-center justify-center gap-x-1.5"
+                onClick={handleClose}
                 id="close-button"
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Tap Here to Close
-              </button>
+                Close
+              </Button>
             </div>
           </DialogPanel>
         </div>

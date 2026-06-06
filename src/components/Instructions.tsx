@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { FaDiscord, FaLinkedin, FaPatreon } from "react-icons/fa";
 import useStore from "@/store/store";
+import Button from "@/components/ui/Button";
 
 function Instructions() {
     const [isOpen, setIsOpen] = useState(false);
@@ -44,8 +45,8 @@ function Instructions() {
         window.open(url, "_blank", "noopener noreferrer");
     };
 
-    const buttonClasses =
-        "button flex flex-row items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent w-full items-center justify-center mx-1 my-1";
+    const linkButtonClasses =
+        "w-full flex items-center justify-center gap-x-1.5 mx-1 my-1";
 
     return (
         <>
@@ -67,15 +68,15 @@ function Instructions() {
                     <DialogPanel className="fixed inset-0 bg-black/50" />
 
                     <div className="my-5 bg-panel-surface border border-panel-border shadow-xl rounded-lg lg:w-3/4 max-w-2xl mx-auto p-4 relative z-20">
-                        <button
-                            id="close-changelog"
-                            onTouchEnd={handleClose}
-                            onPointerDown={handleClose}
-                            onPointerUp={handleClose}
-                            className="absolute top-2 right-2 text-text-muted hover:text-text cursor-pointer"
+                        <Button
+                            variant="ghost-icon"
+                            id="close-instructions"
+                            onClick={handleClose}
+                            className="absolute top-2 right-2"
+                            aria-label="Close Instructions"
                         >
                             <XCircleIcon className="h-8 w-8" />
-                        </button>
+                        </Button>
                         <DialogTitle className="text-lg font-heading font-bold uppercase tracking-wider text-center pb-1">
                             Instructions
                         </DialogTitle>
@@ -107,79 +108,68 @@ function Instructions() {
 
                         <div className="mt-4 flex w-full flex-col">
                             <div className="flex flex-col lg:flex-row">
-                                <button
+                                <Button
+                                    size="md"
                                     id="linkedin-link"
-                                    onTouchEnd={() =>
-                                        openLink(
-                                            "https://www.linkedin.com/in/will--mitch/",
-                                        )
-                                    }
                                     onClick={() =>
                                         openLink(
                                             "https://www.linkedin.com/in/will--mitch/",
                                         )
                                     }
-                                    className={`${buttonClasses} text-text bg-panel border border-panel-border hover:bg-panel-hover`}
+                                    className={linkButtonClasses}
                                 >
                                     <FaLinkedin
                                         aria-hidden="true"
                                         className="-ml-0.5 h-5 w-5"
                                     />
                                     Contact me on LinkedIn
-                                </button>
-                                <button
+                                </Button>
+                                <Button
+                                    size="md"
                                     id="patreon-link"
-                                    onTouchEnd={() =>
-                                        openLink(
-                                            "https://patreon.com/ArmyAssist",
-                                        )
-                                    }
                                     onClick={() =>
                                         openLink(
                                             "https://patreon.com/ArmyAssist",
                                         )
                                     }
-                                    className={`${buttonClasses} text-text bg-panel border border-panel-border hover:bg-panel-hover`}
+                                    className={linkButtonClasses}
                                 >
                                     <FaPatreon
                                         aria-hidden="true"
                                         className="-ml-0.5 h-5 w-5"
                                     />
                                     Support me on Patreon
-                                </button>
-                                <button
+                                </Button>
+                                <Button
+                                    variant="accent"
+                                    size="md"
                                     id="discord-link"
-                                    onTouchEnd={() =>
-                                        openLink(
-                                            "https://discord.gg/hVVtGuybhw",
-                                        )
-                                    }
                                     onClick={() =>
                                         openLink(
                                             "https://discord.gg/hVVtGuybhw",
                                         )
                                     }
-                                    className={`${buttonClasses} bg-accent text-accent-foreground hover:bg-accent-hover`}
+                                    className={linkButtonClasses}
                                 >
                                     <FaDiscord
                                         aria-hidden="true"
                                         className="-ml-0.5 h-5 w-5"
                                     />
                                     Join the Discord
-                                </button>
+                                </Button>
                             </div>
-                            <button
-                                onTouchEnd={handleClose}
+                            <Button
+                                size="md"
                                 onClick={handleClose}
-                                className={`${buttonClasses} bg-danger text-white hover:bg-danger/85`}
+                                className={linkButtonClasses}
                                 id="close-button"
                             >
                                 <XCircleIcon
                                     aria-hidden="true"
                                     className="-ml-0.5 h-5 w-5"
                                 />
-                                Tap Here to Close
-                            </button>
+                                Close
+                            </Button>
                         </div>
 
                         <div className="mt-4 text-center text-text-dim">

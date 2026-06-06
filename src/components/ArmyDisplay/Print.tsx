@@ -9,6 +9,7 @@ import PrintSettings from "@/types/PrintSettings";
 import ContentOption from "@/types/ContentOption";
 import SettingsOption from "./UnitCardComponents/SettingsOption";
 import { rosterFactionName } from "@/data/rosterSelectors";
+import Button from "@/components/ui/Button";
 
 function Print() {
   const [isOpen, setIsOpen] = useState(false);
@@ -214,14 +215,15 @@ function Print() {
             </div>
 
             <div className="mt-4 flex w-full flex-col">
-              <button
-                onPointerDown={handleClose}
-                className={`${buttonClasses} bg-danger text-white hover:bg-danger/85`}
+              <Button
+                size="md"
+                className="w-full flex items-center justify-center gap-x-1.5"
+                onClick={handleClose}
                 id="close-button"
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Tap Here to Close
-              </button>
+                Close
+              </Button>
             </div>
           </DialogPanel>
         </div>

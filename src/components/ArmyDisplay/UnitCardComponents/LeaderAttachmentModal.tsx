@@ -12,6 +12,7 @@ import {
   effectiveLeaderIndex,
   type RosterUnitRow,
 } from "@/data/rosterSelectors";
+import Button from "@/components/ui/Button";
 
 interface LeaderAttachmentModalProps {
   visible: boolean;
@@ -81,15 +82,21 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
                   className="font-heading font-bold uppercase tracking-wider text-lg leading-6 text-text flex justify-between items-center"
                 >
                   <span>{title}</span>
-                  <button
+                  <Button
+                    variant="ghost-icon"
                     type="button"
-                    className="rounded text-text-dim hover:text-text-muted"
                     onClick={onClose}
+                    aria-label="Close"
                   >
                     <XMarkIcon className="h-6 w-6" />
-                  </button>
+                  </Button>
                 </Dialog.Title>
                 <div className="mt-4">{body}</div>
+                <div className="mt-4">
+                  <Button size="md" className="w-full" onClick={onClose}>
+                    Close
+                  </Button>
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>

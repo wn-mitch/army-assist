@@ -8,6 +8,7 @@ import {
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import changelogData from "@/assets/json/Changelog.json";
 import { getCurrentVersion } from "@/utils/VersionHelper";
+import Button from "@/components/ui/Button";
 
 function Changelog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,13 +56,15 @@ function Changelog() {
           <DialogPanel className="fixed inset-0 bg-black/50" />
 
           <div className="bg-panel-surface border border-panel-border shadow-xl rounded-lg w-5/6 lg:w-3/4 mx-auto p-6 relative z-20">
-            <button
+            <Button
+              variant="ghost-icon"
               id="close-changelog"
-              onPointerDown={handleClose}
-              className="absolute top-2 right-2 text-text-muted hover:text-text"
+              onClick={handleClose}
+              className="absolute top-2 right-2"
+              aria-label="Close Changelog"
             >
               <XCircleIcon className="h-8 w-8" />
-            </button>
+            </Button>
             <DialogTitle className="text-xl font-heading font-bold uppercase tracking-wider text-center text-text">
               Changelog
             </DialogTitle>
@@ -93,12 +96,9 @@ function Changelog() {
             </div>
 
             <div className="mt-4">
-              <button
-                onPointerDown={handleClose}
-                className="px-4 py-2 bg-danger text-white font-bold rounded w-full transition-colors hover:bg-danger/85"
-              >
+              <Button size="md" className="w-full" onClick={handleClose}>
                 Close
-              </button>
+              </Button>
             </div>
           </div>
         </div>

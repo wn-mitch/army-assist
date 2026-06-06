@@ -5,6 +5,7 @@ import { linkBuilder, qrCode } from "@/utils/ListHelper";
 import useStore from "@/store/store";
 import StoredRoster from "@/types/StoredRoster";
 import { FaCopy } from "react-icons/fa";
+import Button from "@/components/ui/Button";
 
 interface ShareListModalProps {
   list: StoredRoster;
@@ -25,9 +26,6 @@ const ShareListModal: React.FC<ShareListModalProps> = ({
     setOpen(false);
   };
   const handleShow = () => setOpen(true);
-
-  const closeButtonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
 
   const buttonClasses = () => {
     if (isDropdown) {
@@ -89,25 +87,28 @@ const ShareListModal: React.FC<ShareListModalProps> = ({
             </div>
 
             <div className="mt-4 px-8 flex w-full flex-col">
-              <button
-                onPointerDown={() => copListToClipboard()}
-                className={`${closeButtonClasses} bg-accent hover:bg-accent-hover shadow-sm px-8`}
+              <Button
+                variant="accent"
+                size="md"
+                className="w-full flex items-center justify-center gap-x-1.5"
+                onClick={() => copListToClipboard()}
                 id="copy-button"
               >
                 <FaCopy aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                 Copy List Link
-              </button>
+              </Button>
             </div>
 
             <div className="mt-4 flex w-full flex-col">
-              <button
-                onPointerDown={handleClose}
-                className={`${closeButtonClasses} bg-danger hover:bg-danger/85`}
+              <Button
+                size="md"
+                className="w-full flex items-center justify-center gap-x-1.5"
+                onClick={handleClose}
                 id="close-button"
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
-                Tap Here to Close
-              </button>
+                Close
+              </Button>
             </div>
           </DialogPanel>
         </div>

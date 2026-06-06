@@ -6,6 +6,7 @@ import Note from "@/types/Note";
 import useStore from "@/store/store";
 import type { RosterUnitRow } from "@/data/rosterSelectors";
 import { unitName } from "@/data/rosterSelectors";
+import Button from "@/components/ui/Button";
 
 function NoteForm({
   note,
@@ -301,12 +302,9 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
 
             {!isAddingNote && editingNoteIndex === null && (
               <div className="mt-4">
-                <button
-                  onPointerDown={handleClose}
-                  className="px-4 py-2 bg-danger text-white font-bold rounded w-full transition-colors hover:bg-danger/85"
-                >
+                <Button size="md" className="w-full" onClick={handleClose}>
                   Close
-                </button>
+                </Button>
               </div>
             )}
           </DialogPanel>
