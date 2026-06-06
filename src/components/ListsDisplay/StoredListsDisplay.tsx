@@ -6,7 +6,7 @@ import TileLayout from "./TileLayout";
 import DisplaySettingToggle from "./DisplaySettingToggle";
 
 const StoredListDisplay = () => {
-  const storedLists = useStore((state) => state.storedLists);
+  const storedRosters = useStore((state) => state.storedRosters);
   const displaySetting = useStore((state) => state.settings.listDisplaySetting);
 
   return (
@@ -15,9 +15,9 @@ const StoredListDisplay = () => {
       id="stored-lists-display"
     >
       {displaySetting ? (
-        <TableLayout storedLists={storedLists} />
+        <TableLayout storedRosters={storedRosters} />
       ) : (
-        <TileLayout storedLists={storedLists} />
+        <TileLayout storedRosters={storedRosters} />
       )}
       <DisplaySettingToggle />
       <ScrollToTopButton />

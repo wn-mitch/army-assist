@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { PencilSquareIcon, XCircleIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
-import StoredList from "@/types/StoredList";
+import StoredRoster from "@/types/StoredRoster";
+import {
+  rosterFactionName,
+  rosterDetachmentName,
+} from "@/data/rosterSelectors";
 import useStore from "@/store/store";
 
 interface EditListModalProps {
-  list: StoredList;
+  list: StoredRoster;
   isDropdown: boolean;
 }
 
@@ -17,7 +21,7 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
 
   const [open, setOpen] = useState(false);
   const [newListName, setNewListName] = useState(list.name || "");
-  const [newListText, setNewListText] = useState(list.text || "");
+  const [newListText, setNewListText] = useState(list.rawText || "");
 
   const handleClose = () => {
     setOpen(false);
@@ -46,11 +50,10 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
   const placeholderText = () => {
     if (list.name) {
       return list.name;
-    } else {
-      return list.faction && list.detachment
-        ? `${list.faction} - ${list.detachment}`
-        : "";
     }
+    const faction = rosterFactionName(list);
+    const detachment = rosterDetachmentName(list);
+    return faction && detachment ? `${faction} - ${detachment}` : "";
   };
 
   return (

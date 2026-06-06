@@ -1,5 +1,9 @@
 import useStore from "@/store/store";
-import StoredList from "@/types/StoredList";
+import StoredRoster from "@/types/StoredRoster";
+import {
+  rosterFactionName,
+  rosterDetachmentName,
+} from "@/data/rosterSelectors";
 import React, { useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
@@ -9,18 +13,19 @@ import DeleteListButton from "./ListCardComponents/DeleteListButton";
 import RefreshArmyButton from "./ListCardComponents/RefreshArmyButton";
 import { formatDate} from "@/utils/ListHelper";
 
-const ListRow = ({ list, index }: { list: StoredList; index: number }) => {
+const ListRow = ({ list, index }: { list: StoredRoster; index: number }) => {
   const setActiveList = useStore((state) => state.setActiveList);
+
+  const faction = rosterFactionName(list);
+  const detachment = rosterDetachmentName(list);
 
   const listName = () => {
     if (list.name && list.name !== "") {
       return list.name;
+    } else if (faction) {
+      return `${faction} - ${detachment}`;
     } else {
-      if (list.faction) {
-        return `${list.faction} - ${list.detachment}`;
-      } else {
-        return `Unprocessed List - Refresh`;
-      }
+      return `Unprocessed List - Refresh`;
     }
   };
 
@@ -47,10 +52,10 @@ const ListRow = ({ list, index }: { list: StoredList; index: number }) => {
         {listName()}
       </td>
       <td className="whitespace-nowrap px-3 text-gray-500 dark:text-gray-300">
-        {list.faction ? list.faction : "-"}
+        {faction ? faction : "-"}
       </td>
       <td className="whitespace-nowrap px-3 text-gray-500 dark:text-gray-300">
-        {list.detachment ? list.detachment : "-"}
+        {detachment ? detachment : "-"}
       </td>
       <td className="whitespace-nowrap px-3 text-gray-500 dark:text-gray-300">
         {formatDate(list.created)}

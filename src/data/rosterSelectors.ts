@@ -2,6 +2,8 @@ import { v4 } from "uuid";
 
 import {
   dataset,
+  factions,
+  detachments,
   resolveRosterUnit,
   resolveRosterWargear,
   tryImportRoster,
@@ -94,6 +96,26 @@ export function buildStoredRoster(
     created: previous?.created ?? Date.now().toString(),
     updated: Date.now().toString(),
   };
+}
+
+/**
+ * Display name for a stored roster's faction, resolved from the dataset. Falls
+ * back to the raw faction id, then "" when no roster/faction is present.
+ */
+export function rosterFactionName(stored: StoredRoster | undefined): string {
+  const id = stored?.roster?.faction_id;
+  if (!id) return "";
+  return factions.get(id)?.name ?? id;
+}
+
+/**
+ * Display name for a stored roster's detachment, resolved from the dataset.
+ * Falls back to the raw detachment id, then "" when none is present.
+ */
+export function rosterDetachmentName(stored: StoredRoster | undefined): string {
+  const id = stored?.roster?.detachment_id;
+  if (!id) return "";
+  return detachments.get(id)?.name ?? id;
 }
 
 /** Roster units joined with dataset views and overlays, ready for the UI. */
@@ -439,8 +461,8 @@ export interface DisplayCard {
 }
 
 /**
- * Build the ordered list of cards for the army display, reimplementing the
- * legacy `getProcessedUnitList` semantics over RosterUnitRow:
+ * Build the ordered list of cards for the army display, deriving them from
+ * the native RosterUnitRow model:
  *   - units attached under a leader are excluded (rendered nested in the card),
  *   - when `group` is set, identical units (same identity + wargear multiset)
  *     collapse to one card carrying a `[Nx]` count,

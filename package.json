@@ -13,11 +13,10 @@
         "cy:run_all": "rm -f results.txt && cypress run >> results.txt",
         "cy:run_fast": "rm -f results.txt && cypress run --spec 'cypress/e2e/*.cy.ts' >> results.txt",
         "deploy:wrangler": "wrangler pages deploy dist",
-        "convert:phases": "source venv/bin/activate && python3 src/assets/convert.py && python3 src/assets/phases.py",
         "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist"
     },
     "dependencies": {
-        "@alpaca-software/40kdc-data": "^0.5.2",
+        "@alpaca-software/40kdc-data": "^0.5.3",
         "@headlessui/react": "^2.2.0",
         "@heroicons/react": "^2.2.0",
         "@types/pako": "^2.0.3",

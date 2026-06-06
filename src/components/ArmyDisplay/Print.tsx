@@ -8,6 +8,7 @@ import PhaseOption from "@/types/PhaseOption";
 import PrintSettings from "@/types/PrintSettings";
 import ContentOption from "@/types/ContentOption";
 import SettingsOption from "./UnitCardComponents/SettingsOption";
+import { rosterFactionName } from "@/data/rosterSelectors";
 
 function Print() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,10 @@ function Print() {
     }));
   };
 
-  const getActiveList = useStore((state) => state.getActiveList);
-  const text = getActiveList().text;
-  const faction = getActiveList().faction;
+  const getActiveRoster = useStore((state) => state.getActiveRoster);
+  const activeRoster = getActiveRoster();
+  const text = activeRoster?.rawText ?? "";
+  const faction = activeRoster ? rosterFactionName(activeRoster) : "";
   const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
 
   const getRosterUnits = useStore((state) => state.getRosterUnits);

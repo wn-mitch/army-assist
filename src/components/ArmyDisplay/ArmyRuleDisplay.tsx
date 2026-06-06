@@ -4,10 +4,9 @@ import { Disclosure, DisclosureButton } from "@headlessui/react";
 
 import { factions, detachments, type AbilityView } from "@/data/dataset";
 import { toGamePhase } from "@/data/phaseMap";
+import Phase from "@/types/Phase";
 
 const ArmyRuleDisplay = () => {
-  const activeList = useStore((state) => state.activeList);
-  const storedLists = useStore((state) => state.storedLists);
   const getActiveRoster = useStore((state) => state.getActiveRoster);
   const getRosterArmyAbilities = useStore(
     (state) => state.getRosterArmyAbilities,
@@ -15,7 +14,7 @@ const ArmyRuleDisplay = () => {
 
   const phase =
     useStore((state) => state.storedRosters[state.activeList]?.phase) ??
-    storedLists[activeList].phase;
+    Phase.Pregame;
   const roster = getActiveRoster()?.roster ?? null;
 
   // Display names come from the dataset; the roster stores entity ids. Fall

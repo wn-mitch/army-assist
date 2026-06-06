@@ -8,6 +8,7 @@ import {
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import useStore from "@/store/store";
 import { describeStratagem } from "@/data/rosterSelectors";
+import Phase from "@/types/Phase";
 
 /** "battle-tactic" → "Battle Tactic" for the GW category chip. */
 const titleCase = (kebab: string) =>
@@ -19,8 +20,9 @@ const titleCase = (kebab: string) =>
 export default function StratagemPanel() {
   const [open, setOpen] = useState(false);
 
-  const phase = useStore((state) => (state.storedRosters[state.activeList]?.phase ??
-      state.storedLists[state.activeList].phase));
+  const phase = useStore(
+    (state) => state.storedRosters[state.activeList]?.phase ?? Phase.Pregame,
+  );
   const getRosterStratagemsByPhase = useStore(
     (state) => state.getRosterStratagemsByPhase,
   );

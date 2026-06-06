@@ -14,9 +14,13 @@ describe("Stratagems modal tests", () => {
     // before opening so the Command-phase stratagems are computed first.
     cy.get("#Command-button").click();
     cy.get('#open-stratagems-button').click();
-    // Ensure the Command-phase stratagems have rendered before each test body
-    // runs, so tests never race the panel's initial population.
-    cy.contains("COMMAND RE-ROLL");
+    // Ensure the panel has fully opened and its Command-phase stratagems have
+    // painted before each test body runs, so tests never race the panel's
+    // open transition / initial population. Gate on the panel being visible
+    // (not merely present mid-transition) and a Command stratagem being
+    // visible inside it.
+    cy.get("#stratagem-panel").should("be.visible");
+    cy.contains("COMMAND RE-ROLL").should("be.visible");
   })
   
   it("should open the stratagem flyout, close it with escape, change phase, then see new stratagems", () => {

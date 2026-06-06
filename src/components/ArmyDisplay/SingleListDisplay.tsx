@@ -14,17 +14,21 @@ const SingleListDisplay = ({
   const rawText = stored?.rawText ?? "";
   const uuid = stored?.uuid;
   const name = stored?.name;
-  const hasUnits = (stored?.roster?.units.length ?? 0) > 0;
+  const hasRoster = !!stored?.roster;
   const hasText = rawText.length > 0;
+  // A failed import records importFailure with the rawText preserved. Don't
+  // auto-retry those (it would loop on unparseable text) — surface the Pastebox.
+  const importFailed = !!stored?.importFailure;
 
-  // Reparse on demand: parseText dual-writes the native roster at this index.
+  // Reparse on demand: a list with text but no parsed roster and no recorded
+  // failure was never imported (e.g. a legacy/url add). Parse it once.
   useEffect(() => {
-    if (!hasUnits && hasText) {
+    if (!hasRoster && hasText && !importFailed) {
       parseText(rawText, name ?? "", uuid);
     }
-  }, [hasUnits, hasText, rawText, name, uuid, parseText]);
+  }, [hasRoster, hasText, importFailed, rawText, name, uuid, parseText]);
 
-  if (!hasUnits && !hasText) {
+  if (!hasRoster) {
     return <Pastebox />;
   } else {
     return <ListDisplay />;

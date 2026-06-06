@@ -62,17 +62,18 @@ describe("List Card Tests", () => {
       cy.get("#edit-list-8a776952-8b58-4fd8-99f6-5db83d484da4-button").click();
       cy.get("#list-name").clear();
       cy.get("#save-button").click();
-      // Saving reparses the list; with no name it falls back to the resolved
-      // faction/detachment, never a raw "undefined - undefined".
+      // Saving reparses the list; with no user-given name the roster's own
+      // name ("Base Tau", from the list header) surfaces, never a raw
+      // "undefined - undefined".
       cy.contains("undefined - undefined").should("not.exist");
-      cy.contains("TAU - Auxiliary Cadre").should("exist");
+      cy.contains("Base Tau").should("exist");
       cy.get(
         "#refresh-list-8a776952-8b58-4fd8-99f6-5db83d484da4-button"
       ).click();
       cy.on("window:alert", (alertText) => {
         expect(alertText).to.equal("Army Refreshed!");
       });
-      cy.contains("TAU - Auxiliary Cadre");
+      cy.contains("Base Tau");
     });
   });
 

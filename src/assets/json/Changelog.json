@@ -1,5 +1,16 @@
 [
     {
+        "version": "3.0.0",
+        "stateVersion": 28,
+        "date": "6/5/26",
+        "changes": [
+            "11th edition! The entire data layer is now powered by the 40kdc community dataset (@alpaca-software/40kdc-data).",
+            "Import now auto-detects ListForge text and share links, NewRecruit JSON and text exports, GW app lists, and Rosterizer.",
+            "Rules text is generated from the 40kdc structured ability data — the old scraped text is gone.",
+            "Saved lists are migrated automatically by re-importing their original text."
+        ]
+    },
+    {
         "version": "2.1.1",
         "stateVersion": 27,
         "date": "4/7/26",
