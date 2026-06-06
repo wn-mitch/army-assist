@@ -28,7 +28,7 @@ import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import { arraysEqual } from "@/utils/StoreHelper";
 import Settings from "@/types/Settings";
 import { samplePreload, testingPreload } from "@/utils/PreloadedLists";
-import StoredRoster from "@/types/StoredRoster";
+import StoredRoster, { UnitOverlay } from "@/types/StoredRoster";
 import type { Stratagem as GameStratagem, AbilityView } from "@/data/dataset";
 import {
     buildStoredRoster,
@@ -133,6 +133,14 @@ interface StoreState {
     getRosterUnits: () => RosterUnitRow[];
     getRosterStratagemsByPhase: (phase: Phase) => GameStratagem[];
     getRosterArmyAbilities: () => AbilityView[];
+    toggleRosterUnit: (unitIndex: number) => void;
+    addRosterNote: (unitIndex: number, note: Note) => void;
+    editRosterNote: (
+        unitIndex: number,
+        noteIndex: number,
+        updatedNote: Note,
+    ) => void;
+    deleteRosterNote: (unitIndex: number, noteIndex: number) => void;
     getListIndexByUUID: (uuid: string | undefined) => number;
     attachUnitToLeader: (
         listIndex: number,
@@ -147,6 +155,30 @@ interface StoreState {
 const useStore = create<StoreState>()(
     persist(
         (set, get) => {
+            /** Apply an updater to one unit's overlay on the active roster. */
+            const updateRosterOverlay = (
+                unitIndex: number,
+                update: (overlay: UnitOverlay) => UnitOverlay,
+            ): void => {
+                const activeList = get().activeList;
+                if (activeList < 0) return;
+                const stored = get().storedRosters[activeList];
+                if (!stored || unitIndex < 0) return;
+                const unitState = [...stored.unitState];
+                const current = unitState[unitIndex] ?? {
+                    toggled: true,
+                    notes: [],
+                };
+                unitState[unitIndex] = update(current);
+                const updated = [...get().storedRosters];
+                updated[activeList] = {
+                    ...stored,
+                    unitState,
+                    updated: Date.now().toString(),
+                };
+                set({ storedRosters: updated });
+            };
+
             return {
                 isFirstVisit: true,
                 currentSaveVersion: getCurrentStateVersion(),
@@ -362,6 +394,38 @@ const useStore = create<StoreState>()(
                 getRosterArmyAbilities: () => {
                     const stored = get().getActiveRoster();
                     return stored ? armyAbilities(stored.roster) : [];
+                },
+                toggleRosterUnit: (unitIndex: number) => {
+                    updateRosterOverlay(unitIndex, (overlay) => ({
+                        ...overlay,
+                        toggled: !overlay.toggled,
+                    }));
+                },
+                addRosterNote: (unitIndex: number, note: Note) => {
+                    updateRosterOverlay(unitIndex, (overlay) => ({
+                        ...overlay,
+                        notes: [...overlay.notes, note],
+                    }));
+                },
+                editRosterNote: (
+                    unitIndex: number,
+                    noteIndex: number,
+                    updatedNote: Note,
+                ) => {
+                    updateRosterOverlay(unitIndex, (overlay) => ({
+                        ...overlay,
+                        notes: overlay.notes.map((n, i) =>
+                            i === noteIndex ? updatedNote : n,
+                        ),
+                    }));
+                },
+                deleteRosterNote: (unitIndex: number, noteIndex: number) => {
+                    updateRosterOverlay(unitIndex, (overlay) => ({
+                        ...overlay,
+                        notes: overlay.notes.filter(
+                            (_, i) => i !== noteIndex,
+                        ),
+                    }));
                 },
                 parseNRJson: (
                     text: string,
