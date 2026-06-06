@@ -45,7 +45,7 @@ function Settings() {
     <>
       <button
         onClick={handleShow}
-        className="bg-gray-500 text-white rounded p-2 font-bold hover:bg-gray-700 mx-1"
+        className="text-text-muted hover:bg-panel-hover hover:text-text rounded p-2 font-bold mx-1 transition-colors"
         aria-label="Open Settings Panel"
         id="settings-button"
       >
@@ -59,16 +59,16 @@ function Settings() {
       >
         <div className="flex items-center justify-center min-h-screen">
           <div
-            className="fixed inset-0 bg-black opacity-50"
+            className="fixed inset-0 bg-black/50"
             aria-hidden="true"
           />
-          <DialogPanel className="bg-white dark:bg-gray-800 rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
-            <DialogTitle className="text-xl font-bold text-center text-gray-800 dark:text-gray-200">
+          <DialogPanel className="bg-panel-surface border border-panel-border shadow-xl rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
+            <DialogTitle className="text-xl font-heading font-bold uppercase tracking-wider text-center text-text">
               Settings
             </DialogTitle>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg dark:bg-gray-700">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Active Phases
               </h2>
               <div className="mt-2 columns-3">
@@ -78,10 +78,10 @@ function Settings() {
                     label={phase}
                     checked={activePhases[phase as Phase]}
                     onChange={() => togglePhase(phase as Phase)}
-                    className={`outline outline-2 -outline-offset-1 focus:outline-gray-700 dark:outline-gray-gray-600 m-1 rounded-lg first:mt-0 p-1 font-semibold text-gray-200 ${
+                    className={`m-1 rounded first:mt-0 p-1 font-semibold transition-colors ${
                       activePhases[phase as Phase]
-                        ? "bg-gray-500  hover:bg-gray-600 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 dark:hover:text-gray-100 text-white"
-                        : "bg-gray-100 hover:bg-gray-600 text-gray-800 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-white"
+                        ? "bg-accent text-accent-foreground hover:bg-accent-hover"
+                        : "bg-panel text-text-muted hover:bg-panel-hover hover:text-text"
                     }`}
                     id={""}
                   />
@@ -89,11 +89,11 @@ function Settings() {
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 List Sort
               </h2>
-              <div className="mt-2 divide-y divide-gray-800 dark:divide-gray-200 border-b border-t dark:border-gray-200 border-gray-800">
+              <div className="mt-2 divide-y divide-border border-b border-t border-border">
                 {Object.values(SortOptions).map((sortOption) => (
                   <SettingsOption
                     key={sortOption}
@@ -106,8 +106,8 @@ function Settings() {
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Cards Collapse
               </h2>
               <SettingsOption
@@ -118,8 +118,8 @@ function Settings() {
               />
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Cards Group
               </h2>
               <SettingsOption
@@ -130,8 +130,8 @@ function Settings() {
               />
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Show Datacard Keywords
               </h2>
               <SettingsOption
@@ -142,8 +142,8 @@ function Settings() {
               />
             </div>
             
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Filter Weapons
               </h2>
               <SettingsOption
@@ -154,8 +154,8 @@ function Settings() {
               />
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Truncate Core Rules
               </h2>
               <SettingsOption
@@ -166,8 +166,8 @@ function Settings() {
               />
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Enable Dark Mode
               </h2>
               <SettingsOption
@@ -178,8 +178,8 @@ function Settings() {
               />
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Faction Theme
               </h2>
               <p className="text-sm">
@@ -191,14 +191,14 @@ function Settings() {
                   aria-pressed={factionThemeId === ""}
                   className={`flex items-center gap-2 px-2 py-1 rounded text-sm font-medium text-left transition-colors ${
                     factionThemeId === ""
-                      ? "bg-gray-500 text-white"
-                      : "bg-gray-100 text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-600"
+                      ? "bg-accent text-accent-foreground"
+                      : "bg-panel text-text-muted hover:bg-panel-hover hover:text-text"
                   }`}
                   id="faction-theme-auto"
                 >
                   <span
                     aria-hidden="true"
-                    className="w-3 h-3 rounded-full inline-block shrink-0 ring-1 ring-inset ring-gray-400 bg-[conic-gradient(from_0deg,#14b8a6,#3b82f6,#dc2626,#f59e0b,#14b8a6)]"
+                    className="w-3 h-3 rounded-full inline-block shrink-0 ring-1 ring-inset ring-border bg-[conic-gradient(from_0deg,#14b8a6,#3b82f6,#dc2626,#f59e0b,#14b8a6)]"
                   />
                   Auto (list faction)
                 </button>
@@ -210,13 +210,13 @@ function Settings() {
                     title={theme.tagline}
                     className={`flex items-center gap-2 px-2 py-1 rounded text-sm font-medium text-left transition-colors ${
                       factionThemeId === theme.id
-                        ? "bg-gray-500 text-white"
-                        : "bg-gray-100 text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-600"
+                        ? "bg-accent text-accent-foreground"
+                        : "bg-panel text-text-muted hover:bg-panel-hover hover:text-text"
                     }`}
                   >
                     <span
                       aria-hidden="true"
-                      className="w-3 h-3 rounded-full inline-block shrink-0 ring-1 ring-inset ring-gray-400"
+                      className="w-3 h-3 rounded-full inline-block shrink-0 ring-1 ring-inset ring-border"
                       style={{
                         backgroundColor:
                           theme.palette[isDarkMode ? "dark" : "light"].accent,
@@ -231,7 +231,7 @@ function Settings() {
             <div className="mt-4">
               <button
                 onPointerDown={handleClose}
-                className="px-4 py-2 bg-red-700 font-bold text-white rounded w-full dark:bg-gray-500"
+                className="px-4 py-2 bg-danger text-white font-bold rounded w-full transition-colors hover:bg-danger/85"
               >
                 Close
               </button>

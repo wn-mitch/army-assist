@@ -15,7 +15,7 @@ const PregamePhase = ({
     return [<></>, false];
   }
   return [
-    <div className="text-center text-xl font-semibold items-center justify-center align-middle flex flex-col h-full dark:text-gray-200 text-gray-800">
+    <div className="text-center text-xl font-semibold items-center justify-center align-middle flex flex-col h-full text-text">
       Deployed?
     </div>,
     true,

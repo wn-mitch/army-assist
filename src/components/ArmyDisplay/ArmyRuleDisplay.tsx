@@ -56,10 +56,10 @@ const ArmyRuleDisplay = () => {
               id="army-rule-button"
               className={({ open }) =>
                 classNames(
-                  "font-semibold py-2 rounded-lg w-full shadow-sm dark:font-bold",
+                  "font-heading uppercase tracking-wider font-bold py-2 rounded w-full shadow-sm",
                   open
-                    ? "bg-gray-500  hover:bg-gray-600 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 dark:hover:text-gray-100 text-white"
-                    : "bg-gray-100 hover:bg-gray-600 text-gray-800 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-white"
+                    ? "bg-accent text-accent-foreground hover:bg-accent-hover"
+                    : "text-text-muted hover:bg-panel-hover hover:text-text"
                 )
               }
             >
@@ -79,19 +79,19 @@ const ArmyRuleDisplay = () => {
                   {abilities.map((ability, index) => (
                     <li
                       key={index}
-                      className={`flex flex-col break-inside-avoid first:mt-0 m-1 p-1 bg-white dark:bg-gray-800 rounded-lg`}
+                      className={`flex flex-col break-inside-avoid first:mt-0 m-1 p-1 bg-surface rounded`}
                     >
-                      <div className="text-md text-gray-900 dark:text-gray-100">
+                      <div className="text-md text-text">
                         {ability.name} - {ruleType(ability)} Rule
                       </div>
-                      <div className="text-sm font-thin text-gray-800 dark:text-gray-200 dark:font-normal">
+                      <div className="text-sm font-thin text-text dark:font-normal">
                         {ability.describe()}
                       </div>
                     </li>
                   ))}
                 </div>
               ) : (
-                <div className="text-sm font-thin text-gray-800 text-center dark:text-gray-200 dark:font-normal">
+                <div className="text-sm font-thin text-text text-center dark:font-normal">
                   No Army or Detachment Rule in Phase
                 </div>
               )}

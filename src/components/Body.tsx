@@ -16,7 +16,7 @@ function Body() {
   };
 
   return (
-    <div className="flex flex-1 bg-gray-200 dark:bg-gray-900">
+    <div className="flex flex-1 bg-bg">
       {bodyContent()}
     </div>
   );

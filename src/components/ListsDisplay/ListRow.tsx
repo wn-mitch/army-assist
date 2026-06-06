@@ -45,22 +45,22 @@ const ListRow = ({ list, index }: { list: StoredRoster; index: number }) => {
   return (
     <tr
       key={index}
-      className="hover:bg-gray-100 hover:dark:bg-gray-900 cursor-pointer"
+      className="hover:bg-panel-hover cursor-pointer"
       onClick={() => setActiveList(list.uuid)}
     >
-      <td className="whitespace-nowrap px-3 text-md font-semibold text-gray-900 dark:text-gray-100">
+      <td className="whitespace-nowrap px-3 text-md font-semibold text-text">
         {listName()}
       </td>
-      <td className="whitespace-nowrap px-3 text-gray-500 dark:text-gray-300">
+      <td className="whitespace-nowrap px-3 text-text-muted">
         {faction ? faction : "-"}
       </td>
-      <td className="whitespace-nowrap px-3 text-gray-500 dark:text-gray-300">
+      <td className="whitespace-nowrap px-3 text-text-muted">
         {detachment ? detachment : "-"}
       </td>
-      <td className="whitespace-nowrap px-3 text-gray-500 dark:text-gray-300">
+      <td className="whitespace-nowrap px-3 text-text-muted">
         {formatDate(list.created)}
       </td>
-      <td className="whitespace-nowrap px-3 text-gray-500 dark:text-gray-300">
+      <td className="whitespace-nowrap px-3 text-text-muted">
         {formatDate(list.updated)}
       </td>
       <td
@@ -80,7 +80,7 @@ const ListRow = ({ list, index }: { list: StoredRoster; index: number }) => {
         ) : (
           <div className="">
             <Menu as="div" className="relative inline-block text-left">
-              <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-2 py-1 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <Menu.Button className="inline-flex justify-center w-full rounded border border-border shadow-sm px-2 py-1 bg-panel text-sm font-medium text-text hover:bg-panel-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
                 <EllipsisVerticalIcon className="h-5 w-5" aria-hidden="true" />
               </Menu.Button>
               <Transition
@@ -92,7 +92,7 @@ const ListRow = ({ list, index }: { list: StoredRoster; index: number }) => {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
               >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-30 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 z-10 mt-2 w-30 origin-top-right rounded-md bg-panel-surface shadow-lg ring-1 ring-border focus:outline-none">
                   <div className="py-1">
                     <Menu>
                       {() => (

@@ -51,7 +51,7 @@ function Print() {
   const handleShow = () => setIsOpen(true);
 
   const buttonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
+    "button flex flex-row items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent w-full items-center justify-center mx-1 my-1";
 
   const printFn = useReactToPrint({
     contentRef: componentRef,
@@ -75,7 +75,7 @@ function Print() {
     <>
       <button
         onClick={handleShow}
-        className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
+        className="text-text-muted hover:bg-panel-hover hover:text-text rounded p-2 font-bold mx-1 transition-colors"
         aria-label="Open Print Panel"
         id="print-button"
       >
@@ -85,15 +85,15 @@ function Print() {
       <Dialog
         open={isOpen}
         onClose={handleClose}
-        className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap text-black dark:text-gray-100"
+        className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap text-text"
       >
         <div className="flex items-center justify-center min-h-screen">
           <div
-            className="fixed inset-0 bg-black opacity-50"
+            className="fixed inset-0 bg-black/50"
             aria-hidden="true"
           />
-          <DialogPanel className="bg-white dark:bg-gray-800 rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
-            <DialogTitle className="text-lg font-bold text-center pb-1">
+          <DialogPanel className="bg-panel-surface border border-panel-border shadow-xl rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
+            <DialogTitle className="text-lg font-heading font-bold uppercase tracking-wider text-center pb-1">
               Print Pages
             </DialogTitle>
             <div className="flex flex-row">
@@ -105,11 +105,11 @@ function Print() {
               </span>
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Content Options
               </h2>
-              <div className="mt-2 divide-y divide-gray-800 dark:divide-gray-200 border-b border-t dark:border-gray-200 border-gray-800">
+              <div className="mt-2 divide-y divide-border border-b border-t border-border">
                 {Object.keys(contentOptionSetting).map((contentOption) => (
                   <SettingsOption
                     key={contentOption}
@@ -128,11 +128,11 @@ function Print() {
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Truncate Core Rules Descriptions
               </h2>
-              <div className="mt-2 divide-y divide-gray-200 border-b border-t border-gray-200">
+              <div className="mt-2 divide-y divide-border border-b border-t border-border">
                 <SettingsOption
                   label={
                     'Shorten the core rules descriptions? This will cause rules such as "Infiltrators" and "Bodyguard" to have their description removed to save space.'
@@ -146,11 +146,11 @@ function Print() {
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Stratagem Filtering Options
               </h2>
-              <div className="mt-2 divide-y divide-gray-200 border-b border-t border-gray-200">
+              <div className="mt-2 divide-y divide-border border-b border-t border-border">
                 <SettingsOption
                   label={"Filter out core stratagems?"}
                   id={`filter-core-stratagems-setting`}
@@ -162,11 +162,11 @@ function Print() {
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Stratagems Split By Phase
               </h2>
-              <div className="mt-2 divide-y divide-gray-800 dark:divide-gray-200 border-b border-t dark:border-gray-200 border-gray-800">
+              <div className="mt-2 divide-y divide-border border-b border-t border-border">
                 {Object.values(PhaseOption).map((phaseOption) => (
                   <SettingsOption
                     key={phaseOption}
@@ -181,11 +181,11 @@ function Print() {
               </div>
             </div>
 
-            <div className="mt-3 bg-gray-200 shadow-sm p-2 rounded-lg text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+            <div className="mt-3 bg-surface border border-border shadow-sm p-2 rounded text-text">
+              <h2 className="text-lg font-heading font-semibold uppercase tracking-wider text-text">
                 Column Layout
               </h2>
-              <div className="mt-2 divide-y divide-gray-800 dark:divide-gray-200 border-b border-t dark:border-gray-200 border-gray-800">
+              <div className="mt-2 divide-y divide-border border-b border-t border-border">
                 {([1, 2, 3] as const).map((count) => (
                   <SettingsOption
                     key={count}
@@ -205,7 +205,7 @@ function Print() {
             <div className="mt-4 flex w-full flex-col display-hidden">
               <button
                 onClick={handleOnClick}
-                className={`${buttonClasses} bg-indigo-700 hover:bg-indigo-600`}
+                className={`${buttonClasses} bg-accent text-accent-foreground hover:bg-accent-hover`}
                 id="print-button"
               >
                 <PrinterIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
@@ -216,7 +216,7 @@ function Print() {
             <div className="mt-4 flex w-full flex-col">
               <button
                 onPointerDown={handleClose}
-                className={`${buttonClasses} bg-red-700 hover:bg-red-600`}
+                className={`${buttonClasses} bg-danger text-white hover:bg-danger/85`}
                 id="close-button"
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />

@@ -9,12 +9,12 @@ const AddListRow = () => {
     <tr
       key={"add"}
       id="add-list-button"
-      className="text-center hover:bg-gray-100 hover:dark:bg-gray-900 cursor-pointer"
+      className="text-center hover:bg-panel-hover cursor-pointer"
       onClick={() => addList()}
     >
       <td
         colSpan={6}
-        className="px-3 py-3 text-center font-semibold text-gray-900 dark:text-gray-100 cursor-pointer"
+        className="px-3 py-3 text-center font-semibold text-text cursor-pointer"
       >
         <div className="flex justify-center items-center gap-2">
           <span>Add New List</span>

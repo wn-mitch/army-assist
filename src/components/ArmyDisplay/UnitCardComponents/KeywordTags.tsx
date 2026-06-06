@@ -17,7 +17,7 @@ const KeywordTags = ({ keywords }: { keywords: string[] | undefined }) => {
   const compArray = [""];
   if (JSON.stringify(keywords) == JSON.stringify(compArray)) {
     return (
-      <td className="w-1/4 overflow-clip text-gray-800 dark:text-white">-</td>
+      <td className="w-1/4 overflow-clip text-text">-</td>
     );
   } else {
     return (
@@ -44,7 +44,7 @@ const KeywordTags = ({ keywords }: { keywords: string[] | undefined }) => {
                   return (
                     <div
                       key={crypto.randomUUID()}
-                      className="first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-700 ring-2 dark:ring-1 ring-gray-300 dark:ring-gray-600 ring-inset truncate"
+                      className="first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded text-text bg-surface ring-2 dark:ring-1 ring-border ring-inset truncate"
                     >
                       <span className="font-semibold whitespace-nowrap">
                         {keyword}

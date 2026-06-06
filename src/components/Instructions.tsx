@@ -45,13 +45,13 @@ function Instructions() {
     };
 
     const buttonClasses =
-        "button flex flex-row items-center gap-x-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
+        "button flex flex-row items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent w-full items-center justify-center mx-1 my-1";
 
     return (
         <>
             <button
                 onClick={handleShow}
-                className="bg-gray-500 text-gray-200 rounded p-2 font-bold hover:bg-gray-700 mx-1"
+                className="text-text-muted hover:bg-panel-hover hover:text-text rounded p-2 font-bold mx-1 transition-colors"
                 aria-label="Open Instructions Panel"
                 id="instructions-button"
             >
@@ -61,22 +61,22 @@ function Instructions() {
             <Dialog
                 open={isOpen}
                 onClose={() => {}}
-                className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap text-black dark:text-gray-100"
+                className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap text-text"
             >
                 <div className="flex items-center justify-center min-h-screen">
-                    <DialogPanel className="fixed inset-0 bg-black opacity-30" />
+                    <DialogPanel className="fixed inset-0 bg-black/50" />
 
-                    <div className="my-5 bg-white dark:bg-gray-800 rounded-lg lg:w-3/4 max-w-2xl mx-auto p-4 relative z-20">
+                    <div className="my-5 bg-panel-surface border border-panel-border shadow-xl rounded-lg lg:w-3/4 max-w-2xl mx-auto p-4 relative z-20">
                         <button
                             id="close-changelog"
                             onTouchEnd={handleClose}
                             onPointerDown={handleClose}
                             onPointerUp={handleClose}
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 cursor-pointer"
+                            className="absolute top-2 right-2 text-text-muted hover:text-text cursor-pointer"
                         >
                             <XCircleIcon className="h-8 w-8" />
                         </button>
-                        <DialogTitle className="text-lg font-bold text-center pb-1">
+                        <DialogTitle className="text-lg font-heading font-bold uppercase tracking-wider text-center pb-1">
                             Instructions
                         </DialogTitle>
                         <ol className="list-decimal list-inside text-base">
@@ -94,15 +94,15 @@ function Instructions() {
                             </li>
                         </ol>
 
-                        <DialogTitle className="text-lg font-bold text-center py-1">
+                        <DialogTitle className="text-lg font-heading font-bold uppercase tracking-wider text-center py-1">
                             About Me
                         </DialogTitle>
                         <p className="text-base">
                             Hi, I’m Will Mitchell (aka TheAlpacalypse), the
                             developer behind ArmyAssist. Your feedback and
-                            suggestions are invaluable — please come connect
-                            with me on Discord or Patreon. Let’s build something
-                            awesome together!
+                            suggestions are invaluable: come connect with me on
+                            Discord or Patreon. Let’s build something awesome
+                            together!
                         </p>
 
                         <div className="mt-4 flex w-full flex-col">
@@ -119,7 +119,7 @@ function Instructions() {
                                             "https://www.linkedin.com/in/will--mitch/",
                                         )
                                     }
-                                    className={`${buttonClasses} bg-sky-700 hover:bg-sky-800`}
+                                    className={`${buttonClasses} text-text bg-panel border border-panel-border hover:bg-panel-hover`}
                                 >
                                     <FaLinkedin
                                         aria-hidden="true"
@@ -139,7 +139,7 @@ function Instructions() {
                                             "https://patreon.com/ArmyAssist",
                                         )
                                     }
-                                    className={`${buttonClasses} bg-rose-600 hover:bg-rose-500`}
+                                    className={`${buttonClasses} text-text bg-panel border border-panel-border hover:bg-panel-hover`}
                                 >
                                     <FaPatreon
                                         aria-hidden="true"
@@ -159,7 +159,7 @@ function Instructions() {
                                             "https://discord.gg/hVVtGuybhw",
                                         )
                                     }
-                                    className={`${buttonClasses} bg-gray-600 hover:bg-gray-500`}
+                                    className={`${buttonClasses} bg-accent text-accent-foreground hover:bg-accent-hover`}
                                 >
                                     <FaDiscord
                                         aria-hidden="true"
@@ -171,7 +171,7 @@ function Instructions() {
                             <button
                                 onTouchEnd={handleClose}
                                 onClick={handleClose}
-                                className={`${buttonClasses} bg-red-700 hover:bg-red-600`}
+                                className={`${buttonClasses} bg-danger text-white hover:bg-danger/85`}
                                 id="close-button"
                             >
                                 <XCircleIcon
@@ -182,8 +182,9 @@ function Instructions() {
                             </button>
                         </div>
 
-                        <div className="mt-4 text-center text-gray-500">
-                            Data from game-datacards
+                        <div className="mt-4 text-center text-text-dim">
+                            Data from the 40k Data Consortium
+                            (@alpaca-software/40kdc-data)
                         </div>
                     </div>
                 </div>

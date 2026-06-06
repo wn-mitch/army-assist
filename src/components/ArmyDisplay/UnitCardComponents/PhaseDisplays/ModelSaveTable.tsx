@@ -21,7 +21,7 @@ function ModelSaveTable({
 }) {
   return (
     <table className="table-auto w-full overflow-auto">
-      <thead className="border dark:border-gray-600">
+      <thead className="border border-border">
         <tr>
           <TableHeaderCell className="w-1/6 pl-1">Sv</TableHeaderCell>
           <TableHeaderCell className="w-1/6">Inv</TableHeaderCell>
@@ -32,11 +32,11 @@ function ModelSaveTable({
         </tr>
       </thead>
       <tbody>
-        <tr className="text-sm border dark:border-gray-600">
+        <tr className="text-sm border border-border">
           <TableCell className="w-1/6 pl-1 dark:font-semibold">{save}</TableCell>
           <TableCell className="w-1/6 dark:font-semibold">
             {invSave !== "-" ? `${invSave}` : "-"}
-            {invSaveDescr ? <div className="text-xs text-gray-500 dark:text-gray-400">({invSaveDescr})</div> : null}
+            {invSaveDescr ? <div className="text-xs text-text-muted">({invSaveDescr})</div> : null}
           </TableCell>
           <TableCell className="w-1/6 dark:font-semibold">{fnp ? `${fnp}` : "-"}</TableCell>
           <TableCell className="w-1/6 dark:font-semibold">{toughness}</TableCell>

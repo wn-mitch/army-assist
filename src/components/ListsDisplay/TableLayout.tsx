@@ -54,9 +54,9 @@ const TableLayout = ({
   });
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg lg:m-2">
+    <div className="bg-surface border border-border rounded lg:m-2">
       <div className="inline-block min-w-full align-middle sm:px-6">
-        <table className="min-w-full divide-y divide-gray-200 my-2">
+        <table className="min-w-full divide-y divide-border my-2">
           <thead>
             <tr>
               {(
@@ -71,7 +71,7 @@ const TableLayout = ({
                 <th
                   key={field}
                   scope="col"
-                  className="px-3 py-2 text-left text-sm font-semibold text-gray-900 dark:text-gray-100 cursor-pointer"
+                  className="px-3 py-2 text-left text-sm font-heading font-semibold uppercase tracking-wider text-text-muted cursor-pointer"
                   onClick={() => handleSort(field)}
                 >
                   <div className="group inline-flex items-center">
@@ -81,12 +81,12 @@ const TableLayout = ({
                         {sortOrder === "asc" ? (
                           <ChevronUpIcon
                             aria-hidden="true"
-                            className="h-5 w-5 text-gray-500 dark:text-gray-300"
+                            className="h-5 w-5 text-text-muted"
                           />
                         ) : (
                           <ChevronDownIcon
                             aria-hidden="true"
-                            className="h-5 w-5 text-gray-500 dark:text-gray-300"
+                            className="h-5 w-5 text-text-muted"
                           />
                         )}
                       </span>
@@ -99,7 +99,7 @@ const TableLayout = ({
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 bg-gray-50 dark:bg-gray-800">
+          <tbody className="divide-y divide-border bg-surface">
             {sortedLists.map((list, index) => (
               <ListRow key={index} list={list} index={index} />
             ))}

@@ -35,15 +35,15 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
   };
 
   const closeButtonClasses =
-    "button flex flex-row items-center gap-x-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
+    "button flex flex-row items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full items-center justify-center mx-1 my-1";
 
   const buttonClasses = () => {
     if (isDropdown) {
-      return "block text-gray-700 px-4 py-2 text-sm";
+      return "block text-text px-4 py-2 text-sm";
     } else {
       return listDisplaySetting
-        ? "bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 dark:text-white hover:text-white dark:hover:bg-gray-400 rounded-lg p-1 shadow-sm shadow-gray-500 dark:shadow-gray-600 mx-2 rounded-2xl"
-        : "flex flex-grow justify-center bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 hover:text-white dark:hover:bg-gray-400 rounded-lg p-1 shadow-sm shadow-gray-500 dark:shadow-gray-700";
+        ? "text-text bg-panel hover:bg-panel-hover rounded p-1 shadow-sm mx-2 rounded-2xl"
+        : "flex flex-grow justify-center text-text bg-panel hover:bg-panel-hover rounded p-1 shadow-sm";
     }
   };
 
@@ -70,21 +70,21 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
       <Dialog
         open={open}
         onClose={handleClose}
-        className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap text-gray-800 dark:text-gray-100"
+        className="fixed z-10 inset-0 overflow-y-scroll overflow-x-wrap text-text"
       >
         <div className="flex items-center justify-center min-h-screen">
           <div
-            className="fixed inset-0 bg-black opacity-50"
+            className="fixed inset-0 bg-black/50"
             aria-hidden="true"
           />
-          <DialogPanel className="bg-white dark:bg-gray-800 rounded-lg w-full lg:w-1/2 max-w-2xl p-4 z-20">
-            <DialogTitle className="text-lg font-bold text-center pb-1">
+          <DialogPanel className="bg-panel-surface border border-panel-border rounded-lg shadow-xl w-full lg:w-1/2 max-w-2xl p-4 z-20">
+            <DialogTitle className="font-heading font-bold uppercase tracking-wider text-lg text-text text-center pb-1">
               Edit List
             </DialogTitle>
             <div>
               <label
                 htmlFor="list-name"
-                className="block text-md/6 font-medium text-gray-900 dark:text-gray-100"
+                className="block text-md/6 font-medium text-text"
               >
                 List Name
               </label>
@@ -96,12 +96,12 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
                   placeholder={placeholderText()}
                   value={newListName}
                   aria-describedby="email-description"
-                  className="block w-full resize-none h-full rounded-md bg-white dark:bg-gray-900 px-3 py-1.5 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:gray-indigo-700 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 dark:focus:outline-gray-400 sm:text-sm/6"
+                  className="block w-full resize-none h-full rounded bg-panel px-3 py-1.5 text-base text-text outline outline-1 -outline-offset-1 outline-panel-border placeholder:text-text-dim focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6"
                   onChange={(event) => setNewListName(event.target.value)}
                 />
                 <button
                   onClick={handleSave}
-                  className="flex items-center gap-x-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white bg-green-600 hover:bg-green-500 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                  className="flex items-center gap-x-1.5 rounded px-4 py-2 text-sm font-semibold text-white bg-success hover:bg-success/85 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-success"
                   id="save-button"
                 >
                   <CheckCircleIcon className="h-5 w-5" aria-hidden="true" />
@@ -113,7 +113,7 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
             <div className="mt-4">
               <label
                 htmlFor="list-text"
-                className="block text-md/6 font-medium text-gray-900 dark:text-gray-100"
+                className="block text-md/6 font-medium text-text"
               >
                 List Text
               </label>
@@ -122,14 +122,14 @@ const EditListModal: React.FC<EditListModalProps> = ({ list, isDropdown }) => {
                 name="list-text"
                 rows={10}
                 value={newListText}
-                className="mt-2 block w-full resize-vertical rounded-md bg-white dark:bg-gray-900 px-3 py-2 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 dark:focus:outline-gray-400 sm:text-sm/6"
+                className="mt-2 block w-full resize-vertical rounded bg-panel px-3 py-2 text-base text-text outline outline-1 -outline-offset-1 outline-panel-border placeholder:text-text-dim focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6"
                 onChange={(event) => setNewListText(event.target.value)}
               />
             </div>
             <div className="mt-4 flex w-full flex-col">
               <button
                 onPointerDown={handleClose}
-                className={`${closeButtonClasses} bg-red-700 hover:bg-red-600`}
+                className={`${closeButtonClasses} bg-danger hover:bg-danger/85`}
                 id="close-button"
               >
                 <XCircleIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />

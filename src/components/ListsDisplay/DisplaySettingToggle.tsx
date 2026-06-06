@@ -10,13 +10,13 @@ const DisplaySettingToggle = () => {
     (state) => state.setListDisplaySetting
   );
 
-  const onClasses = "bg-white text-blue-600 rounded-md hover:bg-gray-100";
-  const offClasses = "text-white bg-blue-700 rounded-md hover:bg-blue-800";
+  const onClasses = "bg-accent text-accent-foreground rounded hover:bg-accent-hover";
+  const offClasses = "text-text bg-panel rounded hover:bg-panel-hover";
 
   return (
     <button
       onClick={() => toggleListDisplaySetting(!listDisplaySetting)}
-      className="fixed bottom-4 right-20 bg-blue-600 text-white rounded-md p-2 font-bold hover:bg-blue-700 shadow-xl flex items-center gap-2"
+      className="fixed bottom-4 right-20 bg-accent text-accent-foreground rounded p-2 font-bold hover:bg-accent-hover shadow-xl flex items-center gap-2"
       aria-label="Toggle the display setting"
       id="display-toggle"
     >

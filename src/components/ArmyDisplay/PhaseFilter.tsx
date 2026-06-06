@@ -39,19 +39,19 @@ function PhaseFilter() {
       {isDropdown ? (
         <div className="px-3 mt-2 mb-1" id="collapsed-phases">
           <Listbox value={phase} onChange={setPhase}>
-            <ListboxButton className="cursor-pointer grid w-full grid-cols-1 rounded-md bg-white py-1.5 pl-3 pr-2 text-left text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 sm:text-sm shadow-sm dark:bg-gray-800 dark:text-gray-300 dark:outline-gray-600 dark:focus:outline-gray-600 dark:shadow-md">
+            <ListboxButton className="cursor-pointer grid w-full grid-cols-1 rounded bg-panel py-1.5 pl-3 pr-2 text-left text-text outline outline-1 -outline-offset-1 outline-panel-border focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm shadow-sm">
               <span className="col-start-1 row-start-1 truncate pr-6">
                 {phase}
               </span>
               <ChevronUpDownIcon
                 aria-hidden="true"
-                className="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-500 sm:size-4 dark:text-gray-300"
+                className="col-start-1 row-start-1 size-5 self-center justify-self-end text-text-muted sm:size-4"
               />
             </ListboxButton>
 
             <ListboxOptions
               transition
-              className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-xl shadow-lg ring-1 ring-black/5 focus:outline-none data-[closed]:data-[leave]:opacity-0 data-[leave]:transition data-[leave]:duration-100 data-[leave]:ease-in sm:text-sm left-0 right-0 dark:bg-gray-800 dark:text-gray-300 dark:ring-gray-600"
+              className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded bg-panel-surface text-text py-1 text-xl shadow-lg ring-1 ring-panel-border focus:outline-none data-[closed]:data-[leave]:opacity-0 data-[leave]:transition data-[leave]:duration-100 data-[leave]:ease-in sm:text-sm left-0 right-0"
             >
               {Object.values(Phase).map(
                 (currentPhase) =>
@@ -60,13 +60,13 @@ function PhaseFilter() {
                       key={currentPhase}
                       value={currentPhase}
                       id={`${currentPhase}-button`}
-                      className="group relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 data-[focus]:bg-gray-600 data-[focus]:text-white data-[focus]:outline-none dark:text-gray-100"
+                      className="group relative cursor-pointer select-none py-2 pl-3 pr-9 text-text data-[focus]:bg-panel-hover data-[focus]:text-text data-[focus]:outline-none"
                     >
                       <span className="block truncate font-normal group-data-[selected]:font-semibold">
                         {currentPhase}
                       </span>
 
-                      <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-gray-600 group-[&:not([data-selected])]:hidden group-data-[focus]:text-white">
+                      <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-accent group-[&:not([data-selected])]:hidden group-data-[focus]:text-text">
                         <CheckIcon aria-hidden="true" className="size-5" />
                       </span>
                     </ListboxOption>
@@ -90,10 +90,10 @@ function PhaseFilter() {
                   value={currentPhase}
                   className={({ checked }) =>
                     classNames(
-                      "flex flex-grow items-center justify-center rounded-md px-3 py-3 text-sm font-semibold uppercase ring-gray-800 dark:ring-gray-200 shadow-sm dark:font-bold cursor-pointer focus:outline-none outline outline-2 -outline-offset-1 focus:outline-gray-800 dark:outline-gray-600",
+                      "flex flex-grow items-center justify-center rounded px-3 py-3 text-sm font-heading uppercase tracking-wider font-bold shadow-sm cursor-pointer focus:outline-none outline outline-2 -outline-offset-1 focus:outline-accent",
                       checked
-                        ? "bg-gray-500  hover:bg-gray-600 dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-gray-200 dark:hover:text-gray-100 text-white"
-                        : "bg-gray-100 hover:bg-gray-600 text-gray-800 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 hover:text-white"
+                        ? "bg-accent text-accent-foreground hover:bg-accent-hover"
+                        : "text-text-muted hover:bg-panel-hover hover:text-text"
                     )
                   }
                 >

@@ -17,10 +17,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-800 dark:bg-gray-950 px-2 py-2">
+    <header className="bg-panel border-b border-panel-border px-2 py-2">
       <div className="min-w-0 flex items-center justify-between">
         <div className="flex flex-row justify-center items-center">
-          <h2 className="text-xl font-bold text-white dark:text-gray-100 inline-flex">
+          <h2 className="text-xl font-heading font-bold uppercase tracking-wider text-text inline-flex">
             ArmyAssist.xyz
           </h2>
           <Changelog />
@@ -31,11 +31,11 @@ const Header = () => {
                 <button
                   key="edit-force"
                   onClick={handleEditForceToggle}
-                  className={`bg-${
-                    editForceMode ? "blue-600" : "gray-500"
-                  } text-white rounded p-2 font-bold hover:bg-${
-                    editForceMode ? "blue-700" : "gray-700"
-                  } mx-1 transition-colors`}
+                  className={`rounded p-2 font-bold mx-1 transition-colors ${
+                    editForceMode
+                      ? "bg-accent text-accent-foreground hover:bg-accent-hover"
+                      : "text-text-muted hover:bg-panel-hover hover:text-text"
+                  }`}
                   aria-label={`${
                     editForceMode ? "Disable" : "Enable"
                   } Edit Force Mode`}

@@ -69,7 +69,7 @@ const WeaponPhaseTable = ({
   return (
     <div className="overflow-x-auto w-full">
       <table className="table-auto w-full">
-        <thead className="border dark:border-gray-600">
+        <thead className="border border-border">
           <tr>
             <TableHeaderCell className="w-1/5 pl-1">Name</TableHeaderCell>
             {phase !== Phase.Fight && (
@@ -88,10 +88,10 @@ const WeaponPhaseTable = ({
           {rows.map((row, index) => (
             <tr
               key={index}
-              className={`border dark:border-gray-600 ${
+              className={`border border-border ${
                 index % 2 === 0
                   ? ""
-                  : "bg-gray-100 group-hover:bg-gray-200 dark:bg-gray-900 dark:group-hover:bg-gray-800"
+                  : "bg-panel-surface group-hover:bg-panel-hover"
               } `}
             >
               <TableCell className="w-1/4 px-1 font-semibold dark:font-bold">

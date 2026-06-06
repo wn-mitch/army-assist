@@ -159,8 +159,8 @@ function ListUnitCard({
   }
 
   const cardClasses = isAttachedView
-    ? "ml-4 p-2 border border-gray-200 dark:border-gray-700 rounded-md mb-2 bg-gray-50 dark:bg-gray-800"
-    : "group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800 last:mb-20";
+    ? "ml-4 p-2 border border-border rounded mb-2 bg-surface"
+    : "group mx-4 my-2 px-3 py-1 rounded border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer shadow-sm bg-surface border-border focus:outline-accent focus:outline focus:outline-2 focus:-outline-offset-2 hover:bg-panel-hover last:mb-20";
 
   return (
     <ul
@@ -171,25 +171,25 @@ function ListUnitCard({
         <div
           className={`flex flex-row font-semibold text-xl align-middle items-center flex-grow ${fadedClasses}`}
         >
-          <div className="flex-row text-gray-800 dark:text-gray-400 break-inside-avoid mr-1">
+          <div className="flex-row text-text-muted break-inside-avoid mr-1">
             {groupingNumber}
           </div>
-          <div className="flex-1 flex-row flex-grow text-black dark:text-gray-50">
+          <div className="flex-1 flex-row flex-grow text-text font-heading uppercase tracking-wider">
             {name}
             {!resolved && (
-              <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-amber-200 text-amber-800 dark:bg-amber-600 dark:text-amber-50">
+              <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-warning/20 text-warning">
                 unresolved
               </span>
             )}
             {!resolved && candidates.length > 0 && (
-              <div className="text-xs font-normal text-gray-600 dark:text-gray-400">
+              <div className="text-xs font-normal text-text-muted">
                 did you mean: {candidates.map((c) => c.name).join(", ")}
               </div>
             )}
           </div>
 
           {showKeywords && (
-            <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-300 dark:font-normal break-words">
+            <div className="flex-shrink font-light text-sm text-text-muted px-2 text-right dark:font-normal break-words">
               {keywords}
             </div>
           )}
@@ -202,7 +202,7 @@ function ListUnitCard({
           <div className="flex justify-center items-center gap-1 mx-1">
             {(canBeLeader || canBeAttached) && forceEditMode && (
               <button
-                className="m-auto flex shadow-md rounded-xl bg-indigo-300 border-indigo-300 my-1 text-indigo-700 hover:bg-indigo-400 hover:text-indigo-200 dark:bg-indigo-500 dark:text-indigo-200 dark:hover:bg-indigo-600 dark:hover:text-indigo-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-indigo-400"
+                className="m-auto flex shadow-sm rounded bg-accent/15 my-1 text-accent hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
                 onClick={(e) => {
                   e.stopPropagation();
                   setLeaderModalVisible(true);
@@ -221,7 +221,7 @@ function ListUnitCard({
         {cardsCollapse && !isAttachedView && (
           <div className="flex justify-center items-center">
             <button
-              className="m-auto flex shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200 dark:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:focus:ring-gray-400"
+              className="m-auto flex shadow-md rounded-xl bg-panel border-panel-border my-1 text-text hover:bg-panel-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-panel-border"
               id={`toggle-${name}-button`}
               onClick={() => toggleRosterUnit(row.index)}
             >
@@ -243,8 +243,8 @@ function ListUnitCard({
           <div className="">{phasedNotes}</div>
 
           {attachedRows.length > 0 && !isAttachedView && (
-            <div className="mt-2 border-t pt-2">
-              <div className="font-bold mb-1 text-gray-900 dark:text-gray-100">
+            <div className="mt-2 border-t border-border pt-2">
+              <div className="font-heading uppercase tracking-wider font-bold mb-1 text-text">
                 Attached Units:
               </div>
               {attachedRows.map((attachedRow) => (
