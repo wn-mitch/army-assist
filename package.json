@@ -10,8 +10,8 @@
         "test": "playwright test",
         "preview": "vite preview",
         "build_preview": "tsc -b && vite build && vite preview",
-        "deploy:wrangler": "wrangler pages deploy dist",
-        "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist"
+        "deploy:wrangler": "wrangler pages deploy dist --branch=main",
+        "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist --branch=main"
     },
     "dependencies": {
         "@alpaca-software/40kdc-data": "^0.5.3",
