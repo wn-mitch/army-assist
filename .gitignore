@@ -28,3 +28,7 @@ tsconfig.tsbuildinfo
 coverage/*
 .nyc_output/out.json
 tsconfig.tsbuildinfo
+e2e/screenshots/
+e2e/test-results/
+playwright-report/
+e2e/screenshots-baseline/
