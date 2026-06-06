@@ -2,20 +2,46 @@ import React from "react";
 import useStore from "@/store/store";
 import { Disclosure, DisclosureButton } from "@headlessui/react";
 
-const ArmyRuleDisplay = () => {
-  const activeList = useStore((state) => state.activeList);
-  const storedLists = useStore((state) => state.storedLists);
+import { factions, detachments, type AbilityView } from "@/data/dataset";
+import { toGamePhase } from "@/data/phaseMap";
+import Phase from "@/types/Phase";
 
-  const phase = storedLists[activeList].phase;
-  const faction = storedLists[activeList].faction;
-  const detachment =
-    storedLists[activeList].detachment || "No Detachment Provided";
-  const getArmyAbilities = useStore((state) => state.getArmyAbilities);
-  const abilities = getArmyAbilities().filter((ability) =>
-    ability.phases.includes(phase)
+const ArmyRuleDisplay = () => {
+  const getActiveRoster = useStore((state) => state.getActiveRoster);
+  const getRosterArmyAbilities = useStore(
+    (state) => state.getRosterArmyAbilities,
   );
 
+  const phase =
+    useStore((state) => state.storedRosters[state.activeList]?.phase) ??
+    Phase.Pregame;
+  const roster = getActiveRoster()?.roster ?? null;
+
+  // Display names come from the dataset; the roster stores entity ids. Fall
+  // back to the raw id when a lookup misses (e.g. unresolved detachment).
+  const faction = roster?.faction_id
+    ? (factions.get(roster.faction_id)?.name ?? roster.faction_id)
+    : "Unknown Faction";
+  const detachment = roster?.detachment_id
+    ? (detachments.get(roster.detachment_id)?.name ?? roster.detachment_id)
+    : "No Detachment Provided";
+
+  // Army/detachment rules act in game phases; the UI-only Pregame/Saves
+  // screens surface none. A rule with no phase mappings (most of the 11e
+  // seed so far) is treated as always-relevant and shows in every game phase
+  // — upstream phase mappings narrow this automatically as they land.
+  const gamePhase = toGamePhase(phase);
+  const abilities = gamePhase
+    ? getRosterArmyAbilities().filter(
+        (ability) =>
+          ability.phases.length === 0 || ability.phases.includes(gamePhase),
+      )
+    : [];
+
   const abilitiesInPhase = abilities.length !== 0;
+
+  const ruleType = (ability: AbilityView) =>
+    ability.raw.ability_type === "detachment" ? "Detachment" : "Army";
 
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
@@ -56,10 +82,10 @@ const ArmyRuleDisplay = () => {
                       className={`flex flex-col break-inside-avoid first:mt-0 m-1 p-1 bg-white dark:bg-gray-800 rounded-lg`}
                     >
                       <div className="text-md text-gray-900 dark:text-gray-100">
-                        {ability.name} - {ability.type} Rule
+                        {ability.name} - {ruleType(ability)} Rule
                       </div>
                       <div className="text-sm font-thin text-gray-800 dark:text-gray-200 dark:font-normal">
-                        {ability.description}
+                        {ability.describe()}
                       </div>
                     </li>
                   ))}

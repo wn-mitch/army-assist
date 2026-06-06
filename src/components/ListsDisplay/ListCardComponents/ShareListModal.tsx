@@ -3,11 +3,11 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { ShareIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { linkBuilder, qrCode } from "@/utils/ListHelper";
 import useStore from "@/store/store";
-import StoredList from "@/types/StoredList";
+import StoredRoster from "@/types/StoredRoster";
 import { FaCopy } from "react-icons/fa";
 
 interface ShareListModalProps {
-  list: StoredList;
+  list: StoredRoster;
   isDropdown: boolean;
 }
 
@@ -44,7 +44,7 @@ const ShareListModal: React.FC<ShareListModalProps> = ({
       await navigator.clipboard
         .write([
           new ClipboardItem({
-            "text/plain": new Blob([linkBuilder(list.text)], {
+            "text/plain": new Blob([linkBuilder(list.rawText)], {
               type: "text/plain",
             }),
           }),
@@ -56,7 +56,7 @@ const ShareListModal: React.FC<ShareListModalProps> = ({
     }
   };
 
-  const qr = qrCode(list.text);
+  const qr = qrCode(list.rawText);
 
   return (
     <>

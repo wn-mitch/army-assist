@@ -4,22 +4,14 @@ describe("Invalid list submission to verify the presence of the error", () => {
         cy.get("button#close-changelog").click();
     });
 
-    it("Enter the text asdf, hits enter and sees the alerts", () => {
+    it("Enter the text asdf, hits enter and sees a single alert", () => {
         let alertCount = 0;
 
         cy.on("window:alert", (str) => {
             alertCount++;
-            if (alertCount === 1) {
-                expect(str).to.equal(
-                    "Name/Faction/Detachment format not recognized",
-                );
-            } else if (alertCount === 2) {
-                expect(str).to.equal(
-                    "Error: Invalid List Format. Use the ListForge format (listforge.club). If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!",
-                );
-            } else {
-                throw new Error("Unexpected alert fired");
-            }
+            expect(str).to.equal(
+                "Could not read this list. Supported formats: ListForge (text or share link), NewRecruit (JSON file or text export), GW app, Rosterizer. If your list is one of these, this is a parser bug — the dev can fix it with a copy of your list!",
+            );
         });
 
         cy.get("#add-list-button").click();
@@ -27,7 +19,11 @@ describe("Invalid list submission to verify the presence of the error", () => {
             delay: 0,
             parseSpecialCharSequences: false,
         });
-        cy.get("button[type='submit']").click();
+        cy.get("button[type='submit']")
+            .click()
+            .then(() => {
+                expect(alertCount).to.equal(1);
+            });
     });
 
     it("Enter the text asdf, hits enter, clears the alert, and the text is cleared", () => {

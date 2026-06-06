@@ -4,7 +4,8 @@ import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 import Phase from "@/types/Phase";
 import Note from "@/types/Note";
 import useStore from "@/store/store";
-import ListUnit from "@/types/ListUnit";
+import type { RosterUnitRow } from "@/data/rosterSelectors";
+import { unitName } from "@/data/rosterSelectors";
 
 function NoteForm({
   note,
@@ -157,7 +158,7 @@ function UnitNote({
   );
 }
 
-function NoteModal({ unit }: { unit: ListUnit }) {
+function NoteModal({ row }: { row: RosterUnitRow }) {
   const [isOpen, setIsOpen] = useState(false);
   const [editingNoteIndex, setEditingNoteIndex] = useState<number | null>(null);
   const [isAddingNote, setIsAddingNote] = useState(false);
@@ -165,9 +166,11 @@ function NoteModal({ unit }: { unit: ListUnit }) {
   const handleClose = () => setIsOpen(false);
   const handleShow = () => setIsOpen(true);
 
-  const addNewNote = useStore((state) => state.addNewNote);
-  const editNote = useStore((state) => state.editNote);
-  const deleteNote = useStore((state) => state.deleteNote);
+  const addRosterNote = useStore((state) => state.addRosterNote);
+  const editRosterNote = useStore((state) => state.editRosterNote);
+  const deleteRosterNote = useStore((state) => state.deleteRosterNote);
+
+  const notes = row.overlay.notes;
 
   const handleStartAddingNote = () => {
     setIsAddingNote(true);
@@ -181,18 +184,18 @@ function NoteModal({ unit }: { unit: ListUnit }) {
 
   const handleDeleteNote = (index: number) => {
     if (window.confirm("Are you sure you want to delete this note?")) {
-      deleteNote(unit, index);
+      deleteRosterNote(row.index, index);
     }
   };
 
   const handleSaveNewNote = (note: Note) => {
-    addNewNote(unit, note);
+    addRosterNote(row.index, note);
     setIsAddingNote(false);
   };
 
   const handleUpdateNote = (note: Note) => {
     if (editingNoteIndex !== null) {
-      editNote(unit, editingNoteIndex, note);
+      editRosterNote(row.index, editingNoteIndex, note);
       setEditingNoteIndex(null);
     }
   };
@@ -237,14 +240,14 @@ function NoteModal({ unit }: { unit: ListUnit }) {
           />
           <DialogPanel className="bg-white dark:bg-gray-800 rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
             <DialogTitle className="text-xl font-bold text-center text-gray-800 dark:text-gray-200">
-              Notes for {unit.name}
+              Notes for {unitName(row)}
             </DialogTitle>
 
             {!isAddingNote && editingNoteIndex === null && (
               <>
-                {unit.notes && unit.notes.length > 0 ? (
+                {notes && notes.length > 0 ? (
                   <ul className="mt-4 space-y-2">
-                    {unit.notes.map((note, index) => (
+                    {notes.map((note, index) => (
                       <UnitNote
                         key={index}
                         note={note}
@@ -283,13 +286,13 @@ function NoteModal({ unit }: { unit: ListUnit }) {
               </div>
             )}
 
-            {editingNoteIndex !== null && unit.notes && (
+            {editingNoteIndex !== null && notes && (
               <div className="mt-4">
                 <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
                   Edit Note
                 </h3>
                 <NoteForm
-                  note={unit.notes[editingNoteIndex]}
+                  note={notes[editingNoteIndex]}
                   onSave={handleUpdateNote}
                   onCancel={handleCancelEdit}
                 />

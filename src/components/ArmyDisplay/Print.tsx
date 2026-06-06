@@ -8,6 +8,7 @@ import PhaseOption from "@/types/PhaseOption";
 import PrintSettings from "@/types/PrintSettings";
 import ContentOption from "@/types/ContentOption";
 import SettingsOption from "./UnitCardComponents/SettingsOption";
+import { rosterFactionName } from "@/data/rosterSelectors";
 
 function Print() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,13 +32,14 @@ function Print() {
     }));
   };
 
-  const getActiveList = useStore((state) => state.getActiveList);
-  const text = getActiveList().text;
-  const faction = getActiveList().faction;
+  const getActiveRoster = useStore((state) => state.getActiveRoster);
+  const activeRoster = getActiveRoster();
+  const text = activeRoster?.rawText ?? "";
+  const faction = activeRoster ? rosterFactionName(activeRoster) : "";
   const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
 
-  const getProcessedUnits = useStore((state) => state.getProcessedUnitList);
-  const processedUnits = getProcessedUnits();
+  const getRosterUnits = useStore((state) => state.getRosterUnits);
+  const rosterRows = getRosterUnits();
 
   const [filterCoreStratagems, setFilterCoreStratagems] = useState(true);
   const [truncateCoreAbilities, setTruncateCoreAbilities] = useState(true);
@@ -197,7 +199,7 @@ function Print() {
             </div>
 
             <div ref={componentRef} className="hidden print:block">
-              {PrintParent(text, processedUnits, settings)}
+              {PrintParent(text, rosterRows, settings)}
             </div>
 
             <div className="mt-4 flex w-full flex-col display-hidden">

@@ -1,5 +1,9 @@
 import useStore from "@/store/store";
-import StoredList from "@/types/StoredList";
+import StoredRoster from "@/types/StoredRoster";
+import {
+  rosterFactionName,
+  rosterDetachmentName,
+} from "@/data/rosterSelectors";
 import { ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import ShareListModal from "./ListCardComponents/ShareListModal";
@@ -8,19 +12,18 @@ import DeleteListButton from "./ListCardComponents/DeleteListButton";
 import RefreshArmyButton from "./ListCardComponents/RefreshArmyButton";
 import { formatDate } from "@/utils/ListHelper";
 
-const ListCard = ({ list }: { list: StoredList; index: number }) => {
+const ListCard = ({ list }: { list: StoredRoster; index: number }) => {
   const setActiveList = useStore((state) => state.setActiveList);
 
   const listName = () => {
     if (list.name && list.name !== "") {
       return list.name;
-    } else {
-      if (list.faction) {
-        return `${list.faction} - ${list.detachment}`;
-      } else {
-        return `Unprocessed List - Refresh`;
-      }
     }
+    const faction = rosterFactionName(list);
+    if (faction) {
+      return `${faction} - ${rosterDetachmentName(list)}`;
+    }
+    return `Unprocessed List - Refresh`;
   };
 
   return (

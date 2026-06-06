@@ -1,36 +1,49 @@
 import React from "react";
 
 import Phase from "@/types/Phase";
-import Enhancement from "@/types/Enhancement";
-import ListUnit from "@/types/ListUnit";
+import type { RosterUnit } from "@/data/dataset";
+import {
+  unitEnhancement,
+  describeEnhancement,
+} from "@/data/rosterSelectors";
 
+/**
+ * Enhancement on a roster unit. The package Enhancement record carries no
+ * per-phase scoping (unlike the legacy model), so the enhancement is shown in
+ * every phase whenever the unit has one. Description text is the linked
+ * ability's DSL description; points come from the Enhancement record.
+ */
 const PhaseEnhancements: React.FC<{
-  unit: ListUnit;
+  rosterUnit: RosterUnit;
+  // `phase` is accepted for parity with the other phase blocks; the package
+  // carries no per-phase enhancement scoping so it isn't used to filter.
   phase: Phase;
-}> = ({ unit, phase }) => {
-  const phasedEnhancements = unit.enhancements.filter(
-    (enhancement: Enhancement) => enhancement.phases.includes(phase)
-  );
+}> = ({ rosterUnit }) => {
+  const enhancement = unitEnhancement(rosterUnit);
+
+  if (!enhancement) {
+    return [<div className="ml-1" />, false];
+  }
+
+  const description = describeEnhancement(enhancement);
 
   const enhancementList = (
     <div className="ml-1">
-      {phasedEnhancements.map((enhancement, index) => (
-        <li
-          key={index}
-          className={`flex flex-col break-inside-avoid first:mt-0`}
-        >
-          <div className="text-md dark:font-semibold dark:text-gray-100">
-            {enhancement.name}
+      <li className={`flex flex-col break-inside-avoid first:mt-0`}>
+        <div className="text-md dark:font-semibold dark:text-gray-100">
+          {enhancement.name}
+          {typeof enhancement.cost === "number" ? ` (${enhancement.cost} pts)` : ""}
+        </div>
+        {description && (
+          <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200 whitespace-pre-line">
+            {description}
           </div>
-          <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200">
-            {enhancement.description}
-          </div>
-        </li>
-      ))}
+        )}
+      </li>
     </div>
   );
 
-  return [enhancementList, phasedEnhancements.length > 0];
+  return [enhancementList, true];
 };
 
 export default PhaseEnhancements;

@@ -7,36 +7,36 @@ This is the scoped tracker for the army-assist repo's 11e migration work. Cross-
 
 ## Status
 
-- **10e freeze**: tag [`10e-final`](https://github.com/wn-mitch/army-assist/releases/tag/10e-final) at `origin/main` (commit `f8876fb`, the most recent 10e data-pipeline refresh) — first tag in this repo. Marks the last pure-10e state.
-- **`main`**: 11th edition development begins from here. The data pipeline already swung to `game-datacards` extraction during the 10e end-game; the 11e migration takes it further and replaces the Wahapedia HTML regex path entirely.
-- **Branch option**: cut `10e-archive` branch from `10e-final` if/when the team wants to land critical 10e-only fixes after migration begins. Not done by default.
-
----
+- **10e freeze**: tag [`10e-final`](https://github.com/wn-mitch/army-assist/releases/tag/10e-final) (GitHub Release) at the final 10e data-pipeline fix (`fa64102`). Marks the last pure-10e state.
+- **Migration**: executed on `wnmitch/11e-migration` (PR #17). The app is a pure consumer of `@alpaca-software/40kdc-data` (≥0.5.3): the package's `Roster` is the native data model, all display text derives from the DSL describers, and the entire legacy data layer (regex parsers, ~20MB embedded JSON, ListUnit/StoredList types, game-datacards extraction script) is deleted. Saved lists migrate by re-importing their original raw text (state version 28).
 
 ## Tasks
 
-- [ ] Audit `src/store/`, `src/types/` for in-app data shape; map to `40kdc-data` core schema. Where fields diverge, prefer the schema's shape and translate at the boundary.
-- [ ] Replace Wahapedia regex import (`README.md` regex blob, `src/utils/`) with `40kdc-data` artifact consumption + generated TypeScript types. The `game-datacards` extraction pipeline that landed during the 10e tail (see `scripts/extract_from_game_datacards.py`) can stay as a bridge until the 40kdc-data npm package is stable; long-term it goes away.
-- [ ] Wait for `40kdc-data` 11e `game-version` artifact (npm package + Rust crate). Once published, version-pin and migrate.
-- [ ] `ROADMAP.md` 11e-relevant items already enumerated:
-  - Pre-game phase modal (force-disposition fits here).
-  - Keyword highlighting on the movement screen.
-  - Stratagem flyout (DSL-driven once `40kdc-data` Ability DSL primitives are wired).
-- [ ] Print system: re-test against 11e card layouts. Structural changes from 10e look minor; spot-check rather than rewrite.
-- [ ] Force-disposition surface in the pre-game phase modal: read disposition from the parsed list (driven by GW's encoding once published), surface inline. Avoid deriving — `40kdc-data` is authoritative.
-- [ ] Cover audit: 11e cover is `−1 BS` to the attacker, not `+1 save` to the defender. Anywhere the UI explains cover, update the framing. Where the unit stat surface shows an effective save against shooting, recompute against the new model.
-- [ ] Engagement range copy: 2" in 11e (was 1"). Surface anywhere the movement screen highlights engagement.
+- [x] Audit `src/store/`, `src/types/` for in-app data shape; map to `40kdc-data` core schema. **Outcome: the package `Roster` became the native model outright** — `StoredRoster` = raw text + verbatim Roster + app overlay (notes/toggles/casualties); no boundary translation, legacy types deleted.
+- [x] Replace Wahapedia regex import with `40kdc-data` consumption. `tryImportRoster` auto-detects ListForge text + share links, NewRecruit JSON/WTC/simple, GW app, Rosterizer (the listforge-text adapter and several NR-simple robustness fixes were upstreamed in 0.5.1). The bridge script is deleted.
+- [x] Version-pin and migrate. Package consumed from npm (`^0.5.3`); upstream releases cut this migration: 0.5.1 (importer + browser-safe barrel), 0.5.2 (core stratagems), 0.5.3 (force dispositions).
+- [ ] `ROADMAP.md` 11e-relevant items:
+  - [x] Pre-game force-disposition surface (see below).
+  - [ ] Keyword highlighting on the movement screen (post-migration).
+  - [x] Stratagem flyout is DSL-driven (linked-ability `describe()` text).
+- [x] Print system: fully ported to roster data (not just spot-checked — the section components consume `RosterUnitRow` + dataset views; enhancements now print per unit).
+- [x] Force-disposition surface on the pre-game screen: renders `dataset.forceDispositions` (all five as reference until detachment grants/GW list encoding publish upstream — `detachment.force_dispositions` is wired and takes over automatically).
+- [x] Cover audit: the app never explained cover mechanics — the only touchpoint is the "Ignores Cover" keyword tag (name + icon, still valid in 11e). Effect semantics live in the package DSL. No copy changes needed.
+- [x] Engagement range copy: no 1"/engagement prose existed in the app. No changes needed.
 
-## Critical files
+## Upstream follow-ups (40kdc-data — flagged during this migration)
 
-- `src/store/`, `src/types/`, `src/utils/` — in-app data shape and import pipeline.
-- `src/components/` — pre-game phase modal surface.
-- `src/print/` — print layout (verify against 11e card structure).
-- `ROADMAP.md` — keeps the 11e-relevant near-term items.
-- `scripts/extract_from_game_datacards.py` — bridge until `40kdc-data` npm package supersedes it.
+- Detachment rules: 184/190 detachments lack `detachment_rule_id`; the app's fallback (`ability.detachment_id`) picks them up as they land.
+- Faction-rule abilities missing: `martial-katah` (Custodes), `strands-of-fate` (Aeldari), `the-red-thirst` (BA), `nurgles-gift` (DG).
+- Faction rules carry no phase mappings (1/46) — the app shows empty-phase rules in every game phase until mappings land.
+- Core stratagems have `ability_id: null` (no DSL effects yet) — panel shows name/CP/timing without rules text.
+- NR-simple `Detachments:` (plural) config key unparsed.
+- Per-model stat profiles (`model_constraint.model_name` unconsumed) — sergeants share the primary stat row.
+- Degrading-profile ("Damaged") display data not modeled in the DSL.
+- `launch` dataslate (2026-06-20): bump the dep to clear `points_provisional`.
 
 ## Verification
 
-- [ ] Existing Cypress suite passes against 11e fixtures.
-- [ ] A roster (e.g. `lists/world-eaters.txt`) loads identically in `army-assist` and `shadowboxing` with the same keyword and disposition derivation — cross-repo consistency check.
-- [ ] Pre-game phase modal surfaces the parsed disposition correctly across the five archetypes.
+- [x] Cypress suite passes against 11e fixtures — 75/75 (includes new `save_migration.cy.ts` covering the v27→v28 localStorage migration, and force-disposition coverage).
+- [x] Cross-repo consistency: all 44 `src/assets/lists/*.txt` fixtures import through the same `tryImportRoster` the package pins via its conformance corpus (TS/Rust/Python parity-checked upstream).
+- [x] Pre-game surface renders the five archetypes; per-list dispositions activate when the list encoding publishes.

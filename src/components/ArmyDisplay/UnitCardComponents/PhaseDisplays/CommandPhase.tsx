@@ -1,25 +1,25 @@
 import React from "react";
 
 import LeadershipOCTable from "./LeadershipOCTable";
-import ListUnit from "@/types/ListUnit";
+import type { UnitView } from "@/data/dataset";
+import { formatSkill, formatStat } from "@/data/format";
 
 const CommandPhase = ({
-  unit,
+  view,
 }: {
-  unit: ListUnit;
+  view: UnitView | undefined;
 }): [React.ReactNode, boolean] => {
-  if (!unit.datasheetModel) {
-    window.alert("Error!");
+  if (!view) {
     return [<></>, false];
-  } else {
-    return [
-      <LeadershipOCTable
-        leadership={unit.datasheetModel.Ld}
-        oc={unit.datasheetModel.OC}
-      />,
-      true,
-    ];
   }
+  const profile = view.profileAt(0);
+  return [
+    <LeadershipOCTable
+      leadership={formatSkill(profile.Ld)}
+      oc={formatStat(profile.OC)}
+    />,
+    true,
+  ];
 };
 
 export default CommandPhase;

@@ -1,30 +1,41 @@
-import React from "react";
+import React, { useMemo } from "react";
 import useStore from "@/store/store";
 import ArmyRuleDisplay from "../ArmyDisplay/ArmyRuleDisplay";
+import ForceDispositions from "../ArmyDisplay/ForceDispositions";
 import StratagemPanel from "../ArmyDisplay/StratagemPanel";
 import ScrollToTopButton from "../ScrollToTopButton";
 import PhaseFilter from "../ArmyDisplay/PhaseFilter";
 import ListUnitCard from "../ArmyDisplay/UnitCardComponents/ListUnitCard";
+import { displayCards, rosterUnitRows } from "@/data/rosterSelectors";
 
 function ListDisplay() {
-  const getProcessedUnits = useStore((state) => state.getProcessedUnitList);
-  const processedUnits = getProcessedUnits();
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // Select the stable stored roster; derive rows via useMemo so the selector
+  // doesn't return a fresh array each render (which would loop Zustand).
+  const stored = useStore((state) => state.storedRosters[state.activeList]);
   const sortSetting = useStore((state) => state.settings.listSort);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const groupedSetting = useStore((state) => state.settings.cardsGroup);
+
+  const rows = useMemo(() => (stored ? rosterUnitRows(stored) : []), [stored]);
+  const cards = useMemo(
+    () => displayCards(rows, sortSetting, groupedSetting),
+    [rows, sortSetting, groupedSetting],
+  );
 
   return (
     <div className="flex flex-col gap-2 w-full">
       <PhaseFilter />
       <ArmyRuleDisplay />
+      <ForceDispositions />
       <ul
         role="list"
         className="columns-1 lg:columns-2 2xl:columns-3 gap-1 auto-rows-min"
       >
-        {processedUnits.map((unit) => (
-          <ListUnitCard key={unit.id} unit={unit} />
+        {cards.map((card) => (
+          <ListUnitCard
+            key={card.row.index}
+            row={card.row}
+            groupCount={card.groupCount}
+          />
         ))}
       </ul>
       <StratagemPanel />

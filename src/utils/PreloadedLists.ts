@@ -268,7 +268,7 @@ Battle Size
 Detachment
 Show/Hide Options: Agents of the Imperium are visible, Imperial Knights are visible
 
-Ancient in Terminator Armor [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)`;
+Ancient in Terminator Armour [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)`;
 
 const BroadsidesText = `Xenos - T'au Empire - Base Tau - [2000pts]
 
@@ -442,7 +442,7 @@ The Emperor's Champion [75pts]: Black Sword, Bolt Pistol
 
 ## Character [1490pts]
 Ancient [50pts]: Bolt Pistol, Bolt Rifle & Close Combat Weapon (Bolt Rifle, Close Combat Weapon)
-Ancient in Terminator Armor [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)
+Ancient in Terminator Armour [75pts]: Storm Bolter and Melee Weapon (Storm Bolter, Power Fist)
 Apothecary [50pts]: Absolver Bolt Pistol, Close Combat Weapon, Reductor Pistol
 Apothecary Biologis [70pts]: Absolver Bolt Pistol, Close Combat Weapon
 Bladeguard Ancient [45pts]: Close Combat Weapon, Heavy Bolt Pistol
@@ -1313,7 +1313,7 @@ Show/Hide Options
 
 ## Battleline [1020 pts]
 Wraithblades [170 pts]:
-• 5x Wraithblade: Ghostaxe and Forceshield`;
+• 5x Wraithblade: Ghostaxe, Forceshield`;
 
 const PiranhasText = `Xenos - T'au Empire - Full - [605pts]
 
@@ -1496,7 +1496,7 @@ Riptide Battlesuit [190 pts]: Riptide fists, Ion accelerator, Twin smart missile
 ## Dedicated Transport [85 pts]
 Devilfish [85 pts]: Accelerator burst cannon, Armoured hull, 2x Seeker missile, 2 Smart missile systems (2x Smart missile system)`;
 
-const SampleListForgeText = `Xenos - T'au Empire - Auxiliary Cadre
+const SampleListForgeText = `Xenos - T'au Empire - Auxiliary Cadre (745 Points)
 Commander Farsight (95 pts)
   • Dawn Blade
   • High-intensity plasma rifle
@@ -1548,19 +1548,19 @@ Ghostkeel Battlesuit (160 pts)
   • Fusion collider
   • Twin fusion blaster`;
 
-const JudiciarText = `Imperium - Space Marines - Gladius Task Force
+const JudiciarText = `Imperium - Space Marines - Gladius Task Force (75 Points)
 Judiciar (75 pts)
   • Absolvor bolt pistol
   • Executioner relic blade`;
 
 const samplePreload = [
   {
-    uuid: "8a776952-8b58-4fd8-99f6-5db83d484da4",
+    uuid: "b1d3f0c2-2f6a-4c1e-9b2d-3a7e5c8f1a04",
     text: SampleListForgeText,
     textFormat: "listforge" as const,
     name: "(Sample) T'au Empire List",
     units: [],
-    phase: Phase.Command,
+    phase: Phase.Pregame,
     faction: undefined,
     detachment: undefined,
     created: Date.now().toString(),
@@ -1571,7 +1571,7 @@ const samplePreload = [
 const defaultObject = {
   units: [],
   textFormat: "listforge" as const,
-  phase: Phase.Command,
+  phase: Phase.Pregame,
   faction: undefined,
   detachment: undefined,
   created: Date.now().toString(),
@@ -1746,6 +1746,14 @@ const testingPreload = [
     text: JudiciarText,
     name: "Judiciar Invuln Test",
     uuid: v4(),
+    ...defaultObject,
+  },
+  {
+    text: TauText,
+    name: "2K Tau List",
+    // Stable uuid the list-card / list-table specs target for edit, share,
+    // refresh and delete actions.
+    uuid: "8a776952-8b58-4fd8-99f6-5db83d484da4",
     ...defaultObject,
   },
 ];

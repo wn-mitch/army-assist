@@ -1,23 +1,25 @@
 import React from "react";
 
-import ListUnit from "@/types/ListUnit";
+import type { UnitView } from "@/data/dataset";
 
+/**
+ * Pregame screen body. Deployment-relevant abilities are surfaced separately
+ * by PhaseAbilities; the card body just prompts for the deploy decision.
+ */
 const PregamePhase = ({
-  unit,
+  view,
 }: {
-  unit: ListUnit;
+  view: UnitView | undefined;
 }): [React.ReactNode, boolean] => {
-  if (!unit.datasheetModel) {
-    window.alert("Error!");
+  if (!view) {
     return [<></>, false];
-  } else {
-    return [
-      <div className="text-center text-xl font-semibold items-center justify-center align-middle flex flex-col h-full dark:text-gray-200 text-gray-800">
-        Deployed?
-      </div>,
-      true,
-    ];
   }
+  return [
+    <div className="text-center text-xl font-semibold items-center justify-center align-middle flex flex-col h-full dark:text-gray-200 text-gray-800">
+      Deployed?
+    </div>,
+    true,
+  ];
 };
 
 export default PregamePhase;

@@ -16,7 +16,7 @@ export default function Pastebox() {
 
         if (!result) {
             window.alert(
-                "Error: Invalid List Format. Use the ListForge format (listforge.club) or import a New Recruit (.json) file. If the list format is correct, this is likely caused by a parser bug, and the dev can fix it with a copy of your list!",
+                "Could not read this list. Supported formats: ListForge (text or share link), NewRecruit (JSON file or text export), GW app, Rosterizer. If your list is one of these, this is a parser bug — the dev can fix it with a copy of your list!",
             );
             setText("");
         }
@@ -56,7 +56,7 @@ export default function Pastebox() {
                     id="comment"
                     name="comment"
                     rows={5}
-                    placeholder="Paste in your Army List from ListForge (listforge.club), or use the Import button below to upload a New Recruit JSON file."
+                    placeholder="Paste your army list — ListForge text or share link, NewRecruit export (.json file or text), GW app text, or Rosterizer."
                     className="block w-full resize-none h-full rounded-md bg-white dark:bg-gray-900 px-3 py-1.5 text-base text-gray-900 dark:text-gray-100 outline outline-1 -outline-offset-1 outline-gray-300 dark:outline-gray-700 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 dark:focus:outline-gray-400 sm:text-sm/6"
                     value={text}
                     onChange={handleChange}

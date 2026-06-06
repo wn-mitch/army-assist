@@ -29,22 +29,28 @@ const KeywordTags = ({ keywords }: { keywords: string[] | undefined }) => {
               .map((keyword) => {
                 const match = keyword.match(/([A-Za-z\s-]+)([\d+]+)?/);
 
-                if (!match) {
-                  window.alert(`Unknown keyword format: ${keyword}`);
-                  return null;
-                }
-
-                const baseTag = match[1].trim();
-                const count = match[2] ? match[2] : "";
+                const baseTag = match ? match[1].trim() : keyword.trim();
+                const count = match && match[2] ? match[2] : "";
 
                 const tagDetail = getParameterCaseInsensitive(
                   tagDetails,
                   baseTag
                 );
 
+                // Keywords the catalog doesn't style yet (new package entries,
+                // faction-specific weapon rules) render as a neutral badge
+                // rather than blocking the UI with an alert.
                 if (!tagDetail) {
-                  window.alert(`Unknown tag: ${baseTag}`);
-                  return null;
+                  return (
+                    <div
+                      key={crypto.randomUUID()}
+                      className="first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-700 ring-2 dark:ring-1 ring-gray-300 dark:ring-gray-600 ring-inset truncate"
+                    >
+                      <span className="font-semibold whitespace-nowrap">
+                        {keyword}
+                      </span>
+                    </div>
+                  );
                 }
 
                 let dice = false;
