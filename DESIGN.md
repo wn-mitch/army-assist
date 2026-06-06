@@ -67,19 +67,48 @@ neutral grays toward the faction hue — never pure `#000`/`#fff`.
 
 ### Buttons
 
+All buttons go through `src/components/ui/Button.tsx`. Do not hand-write
+button token classes; use the component, or `buttonClasses(variant, size,
+extra)` from `src/components/ui/buttonStyles.ts` for elements that can't be
+a `<Button>` (HeadlessUI `Menu.Item` render props, links styled as buttons).
+
 ```jsx
-// Standard
-<button className="px-2 py-1 rounded text-sm font-medium transition-colors
-  text-text bg-panel hover:bg-panel-hover">Label</button>
+import Button from "@/components/ui/Button";
+import { buttonClasses } from "@/components/ui/buttonStyles";
 
-// Active/accent
-<button className="px-2 py-1 rounded text-sm font-medium transition-colors
-  bg-accent text-accent-foreground hover:bg-accent-hover">Active</button>
-
-// Danger
-<button className="py-2 rounded text-sm font-medium transition-colors
-  text-danger bg-danger/5 hover:bg-danger/15">Delete</button>
+<Button variant="standard">Close</Button>          // neutral action, dismissal
+<Button variant="accent" size="md">Save</Button>   // THE primary action (≤1 per view)
+<Button variant="danger">Delete</Button>           // destructive; quiet tint
+<Button variant="ghost-icon" aria-label="Settings">
+  <CogIcon className="h-8 w-8" />                  // toolbar/inline icon button
+</Button>
 ```
+
+- **Variants:** `standard` (`text-text bg-panel hover:bg-panel-hover`),
+  `accent` (`bg-accent text-accent-foreground hover:bg-accent-hover`),
+  `danger` (`text-danger bg-danger/5 hover:bg-danger/15`), `ghost-icon`
+  (`p-2 text-text-muted hover:bg-panel-hover hover:text-text`; the icon
+  child carries its size).
+- **Sizes:** `sm` (`px-2 py-1`, default) and `md` (`px-4 py-2`, full-width
+  modal CTAs). Weight is always `font-medium`; never `font-bold` on buttons.
+- **States:** focus is `focus-visible:outline-2 outline-accent` (never
+  `ring-offset`, which draws a box on dark backgrounds); disabled is
+  `disabled:opacity-50 disabled:pointer-events-none`. Both are built in.
+- **Danger means destructive.** Delete, reset, detach. Never dismissal:
+  a red Close button trains users to ignore red.
+- **Toolbar destructive buttons** (e.g. Reset) stay `ghost-icon` rhythm with
+  a danger tint: `buttonClasses("ghost-icon", "sm", "text-danger
+  hover:bg-danger/15 hover:text-danger")`.
+- Icon-only buttons always carry `aria-label` or `title`.
+
+### Modal close convention
+
+Phone-first: every modal keeps a full-width bottom
+`<Button variant="standard" size="md" className="w-full">Close</Button>`
+(thumb reach beats minimal chrome). A `ghost-icon` X in the header is an
+optional addition for long modals. Close handlers use `onClick` — never
+`onPointerDown`/`onTouchEnd`, which fire on touch-scroll start and dismiss
+the modal mid-scroll.
 
 ### Modals (HeadlessUI Dialog)
 
