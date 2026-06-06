@@ -59,27 +59,18 @@ const KeywordTags = ({ keywords }: { keywords: string[] | undefined }) => {
                 }
 
                 return (
-                  <React.Fragment key={crypto.randomUUID()}>
-                    <div
-                      data-tooltip-target={`keyword-tooltip-${baseTag}`}
-                      className={`first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 dark:ring-1 ${tagDetail.ringColor} ring-inset truncate`}
-                    >
-                      {tagDetail.icon}
-                      <span className="font-semibold whitespace-nowrap">
-                        {dice
-                          ? ` ${tagDetail.name}${count}`
-                          : ` ${tagDetail.name} ${count}`}
-                      </span>
-                    </div>
-                    <div
-                      id={`keyword-tooltip-${baseTag}`}
-                      role="tooltip"
-                      className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700"
-                    >
-                      {tagDetail.name}
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </React.Fragment>
+                  <div
+                    key={crypto.randomUUID()}
+                    title={tagDetail.name}
+                    className={`first:mt-0.5 last:mb-0.5 my-0.25 inline-flex font-semibold items-center px-1 rounded ${tagDetail.textColor} ${tagDetail.bgColor} ring-2 dark:ring-1 ${tagDetail.ringColor} ring-inset truncate`}
+                  >
+                    {tagDetail.icon}
+                    <span className="font-semibold whitespace-nowrap">
+                      {dice
+                        ? ` ${tagDetail.name}${count}`
+                        : ` ${tagDetail.name} ${count}`}
+                    </span>
+                  </div>
                 );
               })}
         </div>

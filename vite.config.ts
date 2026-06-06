@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 import istanbul from "vite-plugin-istanbul";
 import { fileURLToPath } from "url";
 
@@ -7,6 +8,7 @@ import { fileURLToPath } from "url";
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     istanbul({
       include: "src/**/*",
       exclude: ["node_modules", "test/"],
@@ -36,7 +38,7 @@ export default defineConfig({
         manualChunks: {
           // Define manual chunks
           react: ['react', 'react-dom'],
-          vendor: ['zustand', 'clsx', 'flowbite'],
+          vendor: ['zustand', 'clsx'],
         },
       },
     },

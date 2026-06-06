@@ -1,34 +1,133 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
+/* Class-based dark mode (Tailwind v4 defaults to media-query).
+   App.tsx toggles the `dark` class on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* Rich Neutral (teal) — default theme, faction-neutral.
+       The faction theme system overrides these properties on
+       document.documentElement at runtime (src/theme/). */
+    --color-bg: #0f0f11;
+    --color-bg-dark: #0a0a0c;
+    --color-surface: #1b1b1f;
+    --color-border: #2e2e34;
+    --color-text: #ededf0;
+    --color-text-muted: #a8a8b2; /* AAA 7.9:1 on --color-bg */
+    --color-text-dim: #8a8a94; /* AA  5.1:1 on --color-bg */
+    --color-accent: #14b8a6;
+    --color-accent-foreground: #0a1f1c;
+    --color-accent-hover: #0d9488;
+
+    /* Dense game UI panels — darker tier */
+    --color-panel: #0c0c0e;
+    --color-panel-surface: #151517;
+    --color-panel-border: #262629;
+    --color-panel-hover: #1e1e22;
+
+    /* Semantic — faction-independent */
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+
+    /* Typography */
+    --font-heading: "Barlow Condensed", system-ui, sans-serif;
+    --font-body: "Barlow", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    /* Border radius — angular, industrial */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px; /* floating overlays (modals) only */
+
+    /* Elevation — layered rim-lit shadows for near-black backgrounds */
+    --shadow-sm: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+        0 1px 0 0 rgba(0, 0, 0, 0.6), 0 4px 8px -2px rgba(0, 0, 0, 0.8);
+    --shadow-md: 0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+        0 2px 0 0 rgba(0, 0, 0, 0.8), 0 10px 20px -4px rgba(0, 0, 0, 0.95);
+    --shadow-xl: 0 1px 0 0 rgba(255, 255, 255, 0.14) inset,
+        0 -1px 0 0 rgba(0, 0, 0, 0.6) inset, 0 4px 0 0 rgba(0, 0, 0, 0.9),
+        0 20px 30px -6px rgba(0, 0, 0, 0.95),
+        0 40px 80px -20px rgba(0, 0, 0, 0.8);
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Scrollbar — thin, matches panel chrome */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-panel-border) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--color-panel-border);
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-dim);
+}
 
 @media all {
-  .page-break {
-    display: none;
-  }
+    .page-break {
+        display: none;
+    }
 }
 
 @media print {
-  html, body {
-    height: initial !important;
-    overflow: initial !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-}
+    /* The print tree (src/print/) uses fixed light colors; this re-declares
+       the Neutral light palette on :root so any stray token-classed element
+       still prints ink-friendly regardless of the active screen theme.
+       !important: the faction theme system sets these as inline styles on
+       <html>, which would otherwise win over a stylesheet rule. */
+    :root {
+        --color-bg: #f0f0f3 !important;
+        --color-bg-dark: #e2e2e7 !important;
+        --color-surface: #f8f8fa !important;
+        --color-border: #c4c4cc !important;
+        --color-text: #111114 !important;
+        --color-text-muted: #46464f !important;
+        --color-text-dim: #6b6b76 !important;
+        --color-accent: #0d9488 !important;
+        --color-accent-foreground: #ffffff !important;
+        --color-accent-hover: #0a7c72 !important;
+        --color-panel: #e8e8ec !important;
+        --color-panel-surface: #f0f0f3 !important;
+        --color-panel-border: #ccccd4 !important;
+        --color-panel-hover: #dcdce2 !important;
+    }
 
-@media print {
-  .page-break {
-    margin-top: 1rem;
-    display: block;
-    break-before: auto;
-  }
+    html,
+    body {
+        height: initial !important;
+        overflow: initial !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background: #ffffff;
+    }
+
+    .page-break {
+        margin-top: 1rem;
+        display: block;
+        break-before: auto;
+    }
 }
 
 @page {
-  size: auto;
-  margin: 5mm;
+    size: auto;
+    margin: 5mm;
 }
