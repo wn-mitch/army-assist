@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
+import Button from "@/components/ui/Button";
 
 const ScrollToTopButton = () => {
   const scrollToTop = () => {
@@ -7,14 +8,17 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <button
+    <Button
+      variant="ghost-icon"
       onClick={scrollToTop}
-      className="fixed bottom-4 right-4 bg-accent text-accent-foreground rounded p-2 font-bold hover:bg-accent-hover shadow-xl"
+      // Floating utility: panel fill so it reads over content, but never
+      // accent — the stratagem opener owns the floating CTA slot.
+      className="fixed bottom-4 right-4 bg-panel shadow-xl"
       aria-label="Scroll to the top of the page"
       id="scroll-to-top-button"
     >
-      <ArrowUpIcon className="p-1 h-8 w-8" />
-    </button>
+      <ArrowUpIcon className="h-8 w-8" />
+    </Button>
   );
 };
 

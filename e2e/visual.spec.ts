@@ -177,6 +177,8 @@ test("light mode and faction theme", async ({ page }, testInfo) => {
 
   await openSettings(page);
   await darkModeCheckbox.click({ force: true });
+  // Assert the toggle actually landed: App.tsx drops the `dark` class.
+  await expect(page.locator("html")).not.toHaveClass(/dark/);
   await closeOpenDialog(page);
   await openSampleList(page);
   await setPhase(page, isPhone, "Shooting");
