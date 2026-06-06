@@ -43,6 +43,8 @@ export {
   exportRoster,
   resolveRosterUnit,
   resolveRosterWargear,
+  resolveAttachedLeader,
+  resolveAttachmentPartners,
 } from "@alpaca-software/40kdc-data";
 
 // DSL → English translation helpers. Display text for abilities, stratagems,
@@ -59,6 +61,7 @@ export {
   Dataset,
   UnitView,
   WeaponView,
+  WeaponKeywordView,
   AbilityView,
   FactionView,
 } from "@alpaca-software/40kdc-data";
@@ -76,6 +79,7 @@ export type {
   Faction,
   Detachment,
   Enhancement,
+  LeaderAttachment,
   Stratagem,
   Mission,
   ForceDisposition,

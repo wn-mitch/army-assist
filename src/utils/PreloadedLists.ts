@@ -1560,7 +1560,7 @@ const samplePreload = [
     textFormat: "listforge" as const,
     name: "(Sample) T'au Empire List",
     units: [],
-    phase: Phase.Command,
+    phase: Phase.Pregame,
     faction: undefined,
     detachment: undefined,
     created: Date.now().toString(),
@@ -1571,7 +1571,7 @@ const samplePreload = [
 const defaultObject = {
   units: [],
   textFormat: "listforge" as const,
-  phase: Phase.Command,
+  phase: Phase.Pregame,
   faction: undefined,
   detachment: undefined,
   created: Date.now().toString(),
@@ -1745,6 +1745,12 @@ const testingPreload = [
   {
     text: JudiciarText,
     name: "Judiciar Invuln Test",
+    uuid: v4(),
+    ...defaultObject,
+  },
+  {
+    text: TauText,
+    name: "2K Tau List",
     uuid: v4(),
     ...defaultObject,
   },

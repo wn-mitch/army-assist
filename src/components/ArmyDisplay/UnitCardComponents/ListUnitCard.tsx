@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import {
   ChevronDownIcon,
   ChevronUpIcon,
@@ -7,7 +7,6 @@ import {
 
 import useStore from "@/store/store";
 
-import ListUnit from "@/types/ListUnit";
 import Phase from "@/types/Phase";
 
 import PregamePhase from "./PhaseDisplays/PregamePhase";
@@ -21,79 +20,87 @@ import PhaseAbilities from "./PhaseAbilities";
 import NoteModal from "@/components/NoteModal";
 import PhaseNotes from "./PhaseNotes";
 import LeaderAttachmentModal from "./LeaderAttachmentModal";
-import { filterWeaponsByCount } from "@/utils/UnitHelper";
+
+import { dataset } from "@/data/dataset";
+import {
+  unitName,
+  unitKeywords,
+  rosterWeapons,
+  visibleWeapons,
+  weaponsForPhase,
+  effectiveLeaderIndex,
+  attachedUnitIndices,
+  rosterUnitRows,
+  type RosterUnitRow,
+} from "@/data/rosterSelectors";
 
 function ListUnitCard({
-  unit,
+  row,
+  groupCount,
   isAttachedView = false,
 }: {
-  unit: ListUnit;
+  row: RosterUnitRow;
+  groupCount?: number;
   isAttachedView?: boolean;
 }) {
-  // ALL hooks must be called unconditionally at the top
+  // ALL hooks must be called unconditionally at the top.
   const [leaderModalVisible, setLeaderModalVisible] = useState(false);
-  const activeList = useStore((state) => state.activeList);
-  const storedLists = useStore((state) => state.storedLists);
-  const phase = storedLists[activeList].phase;
-  const toggleUnit = useStore((state) => state.toggleUnit);
+  const stored = useStore((state) => state.storedRosters[state.activeList]);
+  const phase = stored?.phase ?? Phase.Pregame;
+  // Derive rows via useMemo so we don't return a fresh array from the selector
+  // (which would trigger an infinite Zustand render loop).
+  const rows = useMemo(
+    () => (stored ? rosterUnitRows(stored) : []),
+    [stored],
+  );
+  const toggleRosterUnit = useStore((state) => state.toggleRosterUnit);
   const cardsCollapse = useStore((state) => state.settings.cardsCollapse);
   const cardsGroup = useStore((state) => state.settings.cardsGroup);
   const showKeywords = useStore((state) => state.settings.showKeywords);
   const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
   const forceEditMode = useStore((state) => state.settings.editForceMode);
 
-  // Check if this unit can be a leader or be attached to one
-  const getAttachableUnits = useStore((state) => state.getAttachableUnits);
-  const getLeadersForUnit = useStore((state) => state.getLeadersForUnit);
+  const { rosterUnit, view, overlay } = row;
+  const resolved = rosterUnit.ref.resolved;
+  const candidates = rosterUnit.ref.candidates ?? [];
 
-  const possibleLeaderUnits =
-    unit.datasheet &&
-    unit.datasheet.id &&
-    getLeadersForUnit(unit.datasheet.id.toString());
-  const possibleAttachedUnits =
-    unit.datasheet &&
-    unit.datasheet.id &&
-    getAttachableUnits(unit.datasheet.id.toString());
-
-  const canBeAttached =
-    (possibleLeaderUnits && possibleLeaderUnits.length > 0) || false;
+  // Leader-attachment eligibility from the dataset attachment graph.
+  const unitId = view?.id;
   const canBeLeader =
-    (possibleAttachedUnits && possibleAttachedUnits.length > 0) || false;
+    !!unitId && dataset.bodyguardsAttachableFrom(unitId).length > 0;
+  const canBeAttached =
+    !!unitId && dataset.leadersAttachableTo(unitId).length > 0;
 
-  // Get any attached units
-  const attachedUnits = unit.attached_units
-    ? storedLists[activeList].units.filter((u) =>
-        unit.attached_units?.includes(String(u.id))
-      )
-    : [];
+  // Units rendered nested under this card (its effective bodyguards).
+  const attachedIndices = attachedUnitIndices(rows, row.index);
+  const attachedRows = attachedIndices
+    .map((i) => rows[i])
+    .filter((r): r is RosterUnitRow => r !== undefined);
 
-  // Calculate initial state that would be used if we're rendering normally
+  // Weapons for the current combat phase.
+  const allWeapons = rosterWeapons(rosterUnit);
+  const filteredWeapons = weaponsFilter
+    ? visibleWeapons(allWeapons)
+    : allWeapons;
+  const phasedWeapons = weaponsForPhase(filteredWeapons, phase);
+
   let characteristic: React.ReactNode;
   let toggled = true;
 
-  const filteredWeapons = weaponsFilter
-    ? filterWeaponsByCount(unit.weaponsDatasheets, unit.count)
-    : unit.weaponsDatasheets;
-
-  const phasedWeapons = filteredWeapons.filter((wargear) =>
-    phase === "Shooting" ? wargear.type === "Ranged" : wargear.type === "Melee"
-  );
-
   switch (phase) {
     case Phase.Pregame:
-      [characteristic, toggled] = PregamePhase({ unit });
+      [characteristic, toggled] = PregamePhase({ view });
       break;
     case Phase.Command:
-      [characteristic, toggled] = CommandPhase({ unit });
+      [characteristic, toggled] = CommandPhase({ view });
       break;
     case Phase.Movement:
-      [characteristic, toggled] = MovementPhase({ unit });
+      [characteristic, toggled] = MovementPhase({ view });
       break;
     case Phase.Shooting:
     case Phase.Fight:
       [characteristic, toggled] = ShootingOrFightPhase({
-        counts: unit.count || {},
-        phasedWeapons,
+        weapons: phasedWeapons,
         phase,
       });
       break;
@@ -101,48 +108,46 @@ function ListUnitCard({
       [characteristic, toggled] = ChargePhase();
       break;
     case Phase.Saves:
-      [characteristic, toggled] = SavesPhase({ unit });
+      [characteristic, toggled] = SavesPhase({ view });
       break;
   }
 
-  // @ts-expect-error - This works. Not sure why flagged.
-  const [phasedAbilities, abilitiesToggle] = PhaseAbilities({
-    unit,
-    phase,
-  });
+  // @ts-expect-error - phase blocks return a [node, boolean] tuple.
+  const [phasedAbilities, abilitiesToggle] = PhaseAbilities({ view, phase });
 
   const [phasedEnhancements, enhancementsToggle] = PhaseEnhancements({
-    unit,
+    rosterUnit,
     phase,
   });
 
-  const [phasedNotes, notesToggle] = PhaseNotes({
-    unit,
-    phase,
-  });
+  const [phasedNotes, notesToggle] = PhaseNotes({ overlay, phase });
 
   const cardToggled =
-    unit.toggled &&
+    overlay.toggled &&
     (toggled || abilitiesToggle || enhancementsToggle || notesToggle);
 
   const fadedClasses = cardToggled ? "" : "opacity-50";
 
-  const groupingNumber = cardsGroup ? `[${unit.groupCount}x]` : "";
+  const groupingNumber =
+    cardsGroup && groupCount ? `[${groupCount}x]` : "";
 
-  // Skip rendering this unit if it's attached to a leader (will be shown with the leader)
-  // Instead of returning null, render an empty element to maintain hook consistency
-  if (unit.attached_to_leader_id && !isAttachedView) {
-    return <div className="hidden"></div>; // Empty div instead of null
+  const name = unitName(row);
+  const keywords = unitKeywords(row);
+
+  // Skip rendering if attached under a leader (shown nested with the leader).
+  if (
+    !isAttachedView &&
+    effectiveLeaderIndex(rows, row.index) !== null
+  ) {
+    return <div className="hidden"></div>;
   }
 
-  // Determine styling based on whether this is a standalone card or an attached unit view
   const cardClasses = isAttachedView
     ? "ml-4 p-2 border border-gray-200 dark:border-gray-700 rounded-md mb-2 bg-gray-50 dark:bg-gray-800"
     : "group mx-4 my-2 px-3 py-1 rounded-lg border col-span-1 flex flex-col break-inside-avoid first:mt-0 cursor-pointer shadow-sm bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-700 focus:outline-gray-800 focus:outline focus:outline-2 focus:-outline-offset-2 dark:focus:outline-gray-800 dark:focus:outline dark:focus:outline-2 dark:focus:-outline-offset-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:border-gray-800 last:mb-20";
 
   return (
     <ul
-      key={unit.datasheet_id}
       tabIndex={isAttachedView ? -1 : 0}
       className={`${cardClasses} ${fadedClasses}`}
     >
@@ -154,17 +159,27 @@ function ListUnitCard({
             {groupingNumber}
           </div>
           <div className="flex-1 flex-row flex-grow text-black dark:text-gray-50">
-            {unit.name}
+            {name}
+            {!resolved && (
+              <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-amber-200 text-amber-800 dark:bg-amber-600 dark:text-amber-50">
+                unresolved
+              </span>
+            )}
+            {!resolved && candidates.length > 0 && (
+              <div className="text-xs font-normal text-gray-600 dark:text-gray-400">
+                did you mean: {candidates.map((c) => c.name).join(", ")}
+              </div>
+            )}
           </div>
 
           {showKeywords && (
             <div className="flex-shrink font-light text-sm text-gray-600 px-2 text-right dark:text-gray-300 dark:font-normal break-words">
-              {unit.keywords}
+              {keywords}
             </div>
           )}
         </div>
 
-        {/* Only show buttons in main view, not in attached view */}
+        {/* Buttons only in main view, not the nested attached view. */}
         {!isAttachedView && (
           <div className="flex justify-center items-center gap-1 mx-1">
             {(canBeLeader || canBeAttached) && forceEditMode && (
@@ -181,7 +196,7 @@ function ListUnitCard({
                 <UserGroupIcon className="h-8 w-8 p-1" />
               </button>
             )}
-            {forceEditMode && <NoteModal unit={unit} />}
+            {forceEditMode && <NoteModal row={row} />}
           </div>
         )}
 
@@ -189,8 +204,8 @@ function ListUnitCard({
           <div className="flex justify-center items-center">
             <button
               className="m-auto flex shadow-md rounded-xl bg-gray-300 border-gray-300 my-1 text-gray-700 hover:bg-gray-400 hover:text-gray-200 dark:bg-gray-500 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:focus:ring-gray-400"
-              id={`toggle-${unit.name}-button`}
-              onClick={() => toggleUnit(unit)}
+              id={`toggle-${name}-button`}
+              onClick={() => toggleRosterUnit(row.index)}
             >
               {cardToggled ? (
                 <ChevronDownIcon className="h-8 w-8" />
@@ -202,7 +217,6 @@ function ListUnitCard({
         )}
       </div>
 
-      {/* Always show content for attached view or if expanded in main view */}
       {(isAttachedView || !(cardsCollapse && !cardToggled)) && (
         <div className="flex flex-col gap-1">
           <div className="">{characteristic}</div>
@@ -210,16 +224,15 @@ function ListUnitCard({
           <div className="">{phasedEnhancements}</div>
           <div className="">{phasedNotes}</div>
 
-          {/* Display attached units if this is a leader */}
-          {attachedUnits.length > 0 && !isAttachedView && (
+          {attachedRows.length > 0 && !isAttachedView && (
             <div className="mt-2 border-t pt-2">
               <div className="font-bold mb-1 text-gray-900 dark:text-gray-100">
                 Attached Units:
               </div>
-              {attachedUnits.map((attachedUnit) => (
+              {attachedRows.map((attachedRow) => (
                 <ListUnitCard
-                  key={`attached-${attachedUnit.id}`}
-                  unit={attachedUnit}
+                  key={`attached-${attachedRow.index}`}
+                  row={attachedRow}
                   isAttachedView={true}
                 />
               ))}
@@ -232,7 +245,8 @@ function ListUnitCard({
         <LeaderAttachmentModal
           visible={leaderModalVisible}
           onClose={() => setLeaderModalVisible(false)}
-          unit={unit}
+          row={row}
+          rows={rows}
           isLeader={canBeLeader}
         />
       )}

@@ -3,27 +3,18 @@ import React from "react";
 import WeaponPhaseTable from "./WeaponPhaseTable";
 
 import Phase from "@/types/Phase";
-import DatasheetWargear from "@/types/DatasheetWargear";
+import type { RosterWeapon } from "@/data/rosterSelectors";
 
 const ShootingOrFightPhase = ({
-  counts,
-  phasedWeapons,
+  weapons,
   phase,
 }: {
-  counts: Record<string, number>;
-  phasedWeapons: DatasheetWargear[];
+  weapons: RosterWeapon[];
   phase: Phase;
 }): [React.ReactNode, boolean] => {
-  const toggled = phasedWeapons.length > 0;
+  const toggled = weapons.length > 0;
 
-  return [
-    <WeaponPhaseTable
-      counts={counts}
-      weaponDatasheets={phasedWeapons}
-      phase={phase}
-    />,
-    toggled,
-  ];
+  return [<WeaponPhaseTable weapons={weapons} phase={phase} />, toggled];
 };
 
 export default ShootingOrFightPhase;

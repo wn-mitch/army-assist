@@ -12,7 +12,8 @@ import {
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/outline";
 
 function PhaseFilter() {
-  const phase = useStore((state) => state.storedLists[state.activeList].phase);
+  const phase = useStore((state) => (state.storedRosters[state.activeList]?.phase ??
+      state.storedLists[state.activeList].phase));
   const activePhases = useStore((state) => state.settings.activePhases);
   const setPhase = useStore((state) => state.setPhase);
   const [isDropdown, setIsDropdown] = useState(window.innerWidth <= 768);

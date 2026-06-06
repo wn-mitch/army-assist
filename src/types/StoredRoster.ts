@@ -12,6 +12,13 @@ export interface UnitOverlay {
   notes: Note[];
   /** Casualty tracking, keyed by composition model name. */
   modelCounts?: Record<string, number>;
+  /**
+   * User-driven leader attachment override:
+   *   - `undefined` → follow the roster-inferred `leader_attachment`,
+   *   - a number    → user attached this unit to that unit index,
+   *   - `null`      → user explicitly detached (ignore the inferred link).
+   */
+  attachedToLeaderIndex?: number | null;
 }
 
 /** Structured import failure, preserved so the UI can explain what happened. */

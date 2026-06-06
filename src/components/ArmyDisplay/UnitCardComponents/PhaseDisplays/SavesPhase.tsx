@@ -1,50 +1,46 @@
 import React from "react";
 
-import datasheetAbilities from "@/assets/json/Datasheets_abilities.json";
 import ModelSaveTable from "./ModelSaveTable";
-import ListUnit from "@/types/ListUnit";
-
-function formatInvSaveDescr(descr: string): string {
-  if (!descr) return "";
-  const lower = descr.toLowerCase();
-  if (lower.includes("melee")) return "vs. Melee";
-  if (lower.includes("ranged")) return "vs. Ranged";
-  return descr;
-}
+import type { UnitView } from "@/data/dataset";
+import { formatSave, formatSkill, formatStat } from "@/data/format";
+import {
+  feelNoPainAbility,
+  feelNoPainThreshold,
+} from "@/data/rosterSelectors";
 
 const SavesPhase = ({
-  unit,
+  view,
 }: {
-  unit: ListUnit;
+  view: UnitView | undefined;
 }): [React.ReactNode, boolean] => {
-  if(!unit.datasheetModel) {
-    window.alert("Error!")
-    return[<></>, false];
+  if (!view) {
+    return [<></>, false];
   }
 
-  const save = unit.datasheetModel.Sv;
-  const invSave = unit.datasheetModel.inv_sv;
-  const invSaveDescr = formatInvSaveDescr(unit.datasheetModel.inv_sv_descr);
+  const profile = view.profileAt(0);
 
-  const fnp = datasheetAbilities.find(
-    (ability) =>
-      ability.name.startsWith("Feel No Pain") && unit.datasheetModel &&
-      ability.datasheet_id === unit.datasheetModel.datasheet_id
-  );
+  const saveText = formatSave(profile.Sv);
+  const invSaveText =
+    profile.invuln_sv != null ? `${profile.invuln_sv}++` : "-";
 
-  const saveText = `${save}`;
-  const invSaveText = invSave !== "-" ? `${invSave}++` : "-";
-  const fnpText = fnp ? `FNP ${fnp.parameter}` : "-";
+  // Feel No Pain: prefer the threshold from the DSL effect; fall back to the
+  // ability's own name text when the DSL carries no numeric threshold.
+  const fnp = feelNoPainAbility(view);
+  const fnpThreshold = feelNoPainThreshold(fnp);
+  let fnpText = "-";
+  if (fnp) {
+    fnpText =
+      fnpThreshold !== undefined ? `FNP ${fnpThreshold}+` : fnp.name;
+  }
 
   return [
     <ModelSaveTable
       save={saveText}
       invSave={invSaveText}
-      invSaveDescr={invSaveDescr}
       fnp={fnpText}
-      toughness={unit.datasheetModel.T}
-      wounds={unit.datasheetModel.W}
-      leadership={unit.datasheetModel.Ld}
+      toughness={formatStat(profile.T)}
+      wounds={formatStat(profile.W)}
+      leadership={formatSkill(profile.Ld)}
     />,
     true,
   ];

@@ -8,16 +8,21 @@ const SingleListDisplay = ({
 }: {
   activeListIndex: number;
 }) => {
-  const activeList = useStore((state) => state.storedLists[activeListIndex]);
+  const stored = useStore((state) => state.storedRosters[activeListIndex]);
   const parseText = useStore((state) => state.parseText);
-  const hasUnits = activeList.units.length > 0;
-  const hasText = activeList.text;
-  
+
+  const rawText = stored?.rawText ?? "";
+  const uuid = stored?.uuid;
+  const name = stored?.name;
+  const hasUnits = (stored?.roster?.units.length ?? 0) > 0;
+  const hasText = rawText.length > 0;
+
+  // Reparse on demand: parseText dual-writes the native roster at this index.
   useEffect(() => {
     if (!hasUnits && hasText) {
-      parseText(activeList.text, activeList.name ?? "", activeListIndex.toString());
+      parseText(rawText, name ?? "", uuid);
     }
-  }, [hasUnits, hasText, activeList.text, activeList.name, parseText]);
+  }, [hasUnits, hasText, rawText, name, uuid, parseText]);
 
   if (!hasUnits && !hasText) {
     return <Pastebox />;

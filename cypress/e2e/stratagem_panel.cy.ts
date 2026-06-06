@@ -5,6 +5,9 @@ describe("Stratagems modal tests", () => {
     cy.visit("/");
     cy.get("#close-button").click();
     cy.contains("FNF Tau").click();
+    // Lists open on the Pregame screen, which has no stratagems — enter the
+    // Command phase before opening the panel.
+    cy.get("#Command-button").click();
     cy.get('#open-stratagems-button').click();
   })
   

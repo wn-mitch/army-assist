@@ -1,21 +1,71 @@
 import React from "react";
 
-import DatasheetWargear from "@/types/DatasheetWargear";
-
 import TableCell from "./TableComponents.tsx/TableCell";
 import TableHeaderCell from "./TableComponents.tsx/TableHeaderCell";
 import Phase from "@/types/Phase";
 import KeywordTags from "../KeywordTags";
+import { weaponKeywordStrings, type RosterWeapon } from "@/data/rosterSelectors";
+import {
+  formatRange,
+  formatStat,
+  formatSkill,
+  formatAP,
+} from "@/data/format";
+
+/** One render row: a single weapon profile with the carrying unit's count. */
+interface ProfileRow {
+  /** Display name (weapon name, or weapon + profile name for multi-profile). */
+  name: string;
+  /** True for the second+ profile of a multi-profile weapon (indented). */
+  isSubProfile: boolean;
+  range: number | "Melee" | undefined;
+  attacks: string;
+  /** Ballistic/Weapon skill: numeric or null (torrent). */
+  skill: number | null;
+  strength: string;
+  ap: number;
+  damage: string;
+  /** Weapon-keyword display names for this profile. */
+  keywords: string[];
+  /** Count shown only on the weapon's first profile row. */
+  count: number | "";
+}
+
+function toRows(weapons: RosterWeapon[]): ProfileRow[] {
+  const rows: ProfileRow[] = [];
+  for (const { weapon, count } of weapons) {
+    const profiles = weapon.raw.profiles;
+    const multi = profiles.length > 1;
+    profiles.forEach((profile, i) => {
+      const stats = profile.stats;
+      const skill = stats.BS ?? stats.WS ?? null;
+      const keywords = weaponKeywordStrings(weapon, i);
+      rows.push({
+        name: multi ? `${weapon.name} - ${profile.name}` : weapon.name,
+        isSubProfile: multi && i > 0,
+        range: profile.range,
+        attacks: formatStat(stats.A),
+        skill,
+        strength: formatStat(stats.S),
+        ap: stats.AP,
+        damage: formatStat(stats.D),
+        keywords,
+        count: i === 0 ? count : "",
+      });
+    });
+  }
+  return rows;
+}
 
 const WeaponPhaseTable = ({
-  counts,
-  weaponDatasheets,
+  weapons,
   phase,
 }: {
-  counts: Record<string, number>;
-  weaponDatasheets: DatasheetWargear[];
+  weapons: RosterWeapon[];
   phase: Phase;
 }) => {
+  const rows = toRows(weapons);
+
   return (
     <div className="overflow-x-auto w-full">
       <table className="table-auto w-full">
@@ -35,62 +85,44 @@ const WeaponPhaseTable = ({
           </tr>
         </thead>
         <tbody>
-          {weaponDatasheets.map((weapon, index, arr) => {
-            const nextLineIsProfile =
-              arr[index + 1] &&
-              arr[index + 1].line_in_wargear &&
-              parseInt(arr[index + 1].line_in_wargear as string) > 1;
-
-            const currLineIsProfile =
-              weapon.line_in_wargear && parseInt(weapon.line_in_wargear) > 1;
-
-            const isWeaponProfile = nextLineIsProfile || currLineIsProfile;
-            const truncatedWeaponName = weapon?.name ? weapon.name.split(" - ") : [];
-
-            return (
-              <tr
-                key={index}
-                className={`border dark:border-gray-600 ${
-                  index % 2 === 0
-                    ? ""
-                    : "bg-gray-100 group-hover:bg-gray-200 dark:bg-gray-900 dark:group-hover:bg-gray-800"
-                } `}
-              >
-                <TableCell className="w-1/4 px-1 font-semibold dark:font-bold">
-                  {isWeaponProfile ? `➤ ${weapon.name}` : weapon.name}
-                </TableCell>
-                {phase !== Phase.Fight && (
-                  <TableCell className="w-1/12 dark:font-semibold">
-                    {weapon.range === "Melee"
-                      ? weapon.range
-                      : `${weapon.range}"`}
-                  </TableCell>
-                )}
+          {rows.map((row, index) => (
+            <tr
+              key={index}
+              className={`border dark:border-gray-600 ${
+                index % 2 === 0
+                  ? ""
+                  : "bg-gray-100 group-hover:bg-gray-200 dark:bg-gray-900 dark:group-hover:bg-gray-800"
+              } `}
+            >
+              <TableCell className="w-1/4 px-1 font-semibold dark:font-bold">
+                {row.isSubProfile ? `➤ ${row.name}` : row.name}
+              </TableCell>
+              {phase !== Phase.Fight && (
                 <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.name ? counts[truncatedWeaponName[0] || weapon.name] : 0}
+                  {formatRange(row.range)}
                 </TableCell>
-                <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.A}
-                </TableCell>
-                <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.BS_WS === "N/A" ? weapon.BS_WS : `${weapon.BS_WS}+`}
-                </TableCell>
-                <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.S}
-                </TableCell>
-                <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.AP}
-                </TableCell>
-                <TableCell className="w-1/12 dark:font-semibold">
-                  {weapon.D}
-                </TableCell>
-                <KeywordTags
-                  key={index}
-                  keywords={weapon.description?.split(", ")}
-                />
-              </tr>
-            );
-          })}
+              )}
+              <TableCell className="w-1/12 dark:font-semibold">
+                {row.count}
+              </TableCell>
+              <TableCell className="w-1/12 dark:font-semibold">
+                {row.attacks}
+              </TableCell>
+              <TableCell className="w-1/12 dark:font-semibold">
+                {formatSkill(row.skill)}
+              </TableCell>
+              <TableCell className="w-1/12 dark:font-semibold">
+                {row.strength}
+              </TableCell>
+              <TableCell className="w-1/12 dark:font-semibold">
+                {formatAP(row.ap)}
+              </TableCell>
+              <TableCell className="w-1/12 dark:font-semibold">
+                {row.damage}
+              </TableCell>
+              <KeywordTags keywords={row.keywords} />
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

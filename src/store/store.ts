@@ -27,7 +27,7 @@ import LeaderAttachment from "@/types/LeaderAttachment";
 import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import { arraysEqual } from "@/utils/StoreHelper";
 import Settings from "@/types/Settings";
-import { samplePreload, testingPreload } from "@/utils/PreloadedLists";
+import { testingPreload } from "@/utils/PreloadedLists";
 import StoredRoster, { UnitOverlay } from "@/types/StoredRoster";
 import type { Stratagem as GameStratagem, AbilityView } from "@/data/dataset";
 import {
@@ -141,6 +141,10 @@ interface StoreState {
         updatedNote: Note,
     ) => void;
     deleteRosterNote: (unitIndex: number, noteIndex: number) => void;
+    /** User-attach a unit to a leader by their roster indices. */
+    attachRosterUnit: (unitIndex: number, leaderIndex: number) => void;
+    /** User-detach a unit from any leader (explicit detach). */
+    detachRosterUnit: (unitIndex: number) => void;
     getListIndexByUUID: (uuid: string | undefined) => number;
     attachUnitToLeader: (
         listIndex: number,
@@ -182,9 +186,8 @@ const useStore = create<StoreState>()(
             return {
                 isFirstVisit: true,
                 currentSaveVersion: getCurrentStateVersion(),
-                // storedLists: testingPreload,
-                storedLists: samplePreload,
-                storedRosters: samplePreload.map((list) => ({
+                storedLists: testingPreload,
+                storedRosters: testingPreload.map((list) => ({
                     ...buildStoredRoster(list.text, list.name ?? ""),
                     uuid: list.uuid,
                 })),
@@ -425,6 +428,21 @@ const useStore = create<StoreState>()(
                         notes: overlay.notes.filter(
                             (_, i) => i !== noteIndex,
                         ),
+                    }));
+                },
+                attachRosterUnit: (
+                    unitIndex: number,
+                    leaderIndex: number,
+                ) => {
+                    updateRosterOverlay(unitIndex, (overlay) => ({
+                        ...overlay,
+                        attachedToLeaderIndex: leaderIndex,
+                    }));
+                },
+                detachRosterUnit: (unitIndex: number) => {
+                    updateRosterOverlay(unitIndex, (overlay) => ({
+                        ...overlay,
+                        attachedToLeaderIndex: null,
                     }));
                 },
                 parseNRJson: (

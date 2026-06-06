@@ -1,15 +1,14 @@
 import React from "react";
 
 import Phase from "@/types/Phase";
-import ListUnit from "@/types/ListUnit";
+import type { UnitOverlay } from "@/types/StoredRoster";
 
 const PhaseNotes: React.FC<{
-  unit: ListUnit;
+  overlay: UnitOverlay;
   phase: Phase;
-}> = ({ unit, phase }) => {
-  const phasedNotes = unit.notes?.filter(
-    (note) => note.phases.includes(phase)
-  ) || [];  
+}> = ({ overlay, phase }) => {
+  const phasedNotes =
+    overlay.notes?.filter((note) => note.phases.includes(phase)) || [];
 
   const noteList = (
     <div className="ml-1">

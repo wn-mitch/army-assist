@@ -7,33 +7,24 @@ import {
 } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import useStore from "@/store/store";
+import { describeStratagem } from "@/data/rosterSelectors";
+
+/** "battle-tactic" → "Battle Tactic" for the GW category chip. */
+const titleCase = (kebab: string) =>
+  kebab
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 
 export default function StratagemPanel() {
   const [open, setOpen] = useState(false);
 
-  const phase = useStore((state) => state.storedLists[state.activeList].phase);
-  const getStratagemsByPhase = useStore((state) => state.getStratagemsByPhase);
-  const stratagems = getStratagemsByPhase(phase);
-
-  const formatDescription = (description: string) => {
-    const keywords = ["WHEN:", "TARGET:", "EFFECT:", "RESTRICTIONS:", "PHASE:"];
-    let formattedDescription = description;
-    keywords.forEach((keyword) => {
-      const regex = new RegExp(`(${keyword})`, "g");
-      formattedDescription = formattedDescription.replace(regex, "\n$1");
-    });
-    return formattedDescription.split("\n").map((part, index, arr) => {
-      if (part) {
-        return (
-          <span key={index}>
-            {part}
-            <br />
-            {index === arr.length - 1 ? "" : <hr />}
-          </span>
-        );
-      }
-    });
-  };
+  const phase = useStore((state) => (state.storedRosters[state.activeList]?.phase ??
+      state.storedLists[state.activeList].phase));
+  const getRosterStratagemsByPhase = useStore(
+    (state) => state.getRosterStratagemsByPhase,
+  );
+  const stratagems = getRosterStratagemsByPhase(phase);
 
   return (
     <>
@@ -96,7 +87,7 @@ export default function StratagemPanel() {
                           </div>
                           <div className="flex lg:flex-row flex-col justify-center items-center">
                             <div className="flex-shrink font-light text-sm text-gray-600 px-2 lg:text-right dark:text-gray-400 dark:font-normal text-center">
-                              {stratagem.type}
+                              {titleCase(stratagem.type)}
                             </div>
                             <div className="m-2 px-0.5 shadow-md rounded-lg bg-gray-700 my-1 text-gray-100 dark:bg-gray-200 dark:text-gray-800 dark:font-semibold">
                               {stratagem.cp_cost} CP
@@ -105,7 +96,11 @@ export default function StratagemPanel() {
                         </div>
 
                         <div className="font-normal dark:font-semibold text-sm text-gray-800 dark:text-gray-200">
-                          {formatDescription(stratagem.description)}
+                          {describeStratagem(stratagem)}
+                        </div>
+                        <div className="font-light text-xs text-gray-600 dark:text-gray-400">
+                          {titleCase(stratagem.timing)} ·{" "}
+                          {titleCase(stratagem.player_turn)} turn
                         </div>
                       </li>
                     ))}

@@ -1,54 +1,36 @@
 import React from "react";
 
 import Phase from "@/types/Phase";
-import Ability from "@/types/Ability";
-import ListUnit from "@/types/ListUnit";
+import type { UnitView, AbilityView } from "@/data/dataset";
 import useStore from "@/store/store";
+import { abilitiesForPhase, isCoreAbility } from "@/data/rosterSelectors";
 
 const PhaseAbilities: React.FC<{
-  unit: ListUnit;
+  view: UnitView | undefined;
   phase: Phase;
-}> = ({ unit, phase }) => {
-  const phaseAbilities = unit.abilities.filter((ability: Ability) =>
-    ability.phases.includes(phase)
+}> = ({ view, phase }) => {
+  const phaseAbilities = abilitiesForPhase(view, phase);
+
+  const truncateCoreAbilities = useStore(
+    (state) => state.settings.truncateCoreRules,
   );
 
-  const truncateCoreAbilities = useStore((state) => state.settings.truncateCoreRules);
-
-  const description = (ability: Ability) => {
-    if (ability.type === "Core") {
-      if (truncateCoreAbilities) {
-        return "See Core Rules";
-      } else {
-        return ability.description;
-      }
-    } else {
-      return ability.description;
+  // Display text comes from the DSL describer — the dataset carries no prose.
+  const description = (ability: AbilityView) => {
+    if (isCoreAbility(ability) && truncateCoreAbilities) {
+      return "See Core Rules";
     }
+    return ability.describe();
   };
 
-  const damagedSection = () => {
-    return unit.datasheet &&
-      (phase === Phase.Shooting ||
-        phase === Phase.Saves ||
-        phase === Phase.Fight) &&
-      unit.datasheet.damaged_w !== "" ? (
-      <li className={`flex flex-col break-inside-avoid first:mt-0`}>
-        <div className="text-md dark:font-semibold text-gray-900 dark:text-gray-100">
-          Damaged: {unit.datasheet.damaged_w} W Remaining
-        </div>
-        <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200">
-          {unit.datasheet.damaged_description}
-        </div>
-      </li>
-    ) : (
-      <></>
-    );
-  };
+  // NOTE: the legacy card showed a "Damaged: N W Remaining" prose block in the
+  // Shooting/Saves/Fight phases. The 40kdc DSL does not yet model degrading
+  // profiles as displayable prose, so that block is intentionally dropped here.
+  // It returns once the DSL models degrading profiles.
 
   const abilitiesList = (
     <div className="ml-1">
-      {phaseAbilities.map((ability: Ability, index: number) => (
+      {phaseAbilities.map((ability, index) => (
         <li
           key={index}
           className={`flex flex-col break-inside-avoid first:mt-0`}
@@ -56,12 +38,11 @@ const PhaseAbilities: React.FC<{
           <div className="text-md dark:font-semibold text-gray-900 dark:text-gray-100">
             {ability.name}
           </div>
-          <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200">
+          <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200 whitespace-pre-line">
             {description(ability)}
           </div>
         </li>
       ))}
-      {damagedSection()}
     </div>
   );
 
