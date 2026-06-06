@@ -190,7 +190,7 @@ function ListUnitCard({
           </div>
 
           {showKeywords && (
-            <div className="flex-shrink font-light text-sm text-text-muted px-2 text-right dark:font-normal break-words">
+            <div className="flex-shrink font-normal text-sm text-text-muted px-2 text-right break-words">
               {keywords}
             </div>
           )}

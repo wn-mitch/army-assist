@@ -84,14 +84,14 @@ const ArmyRuleDisplay = () => {
                       <div className="text-md text-text">
                         {ability.name} - {ruleType(ability)} Rule
                       </div>
-                      <div className="text-sm font-thin text-text dark:font-normal">
+                      <div className="text-sm font-normal text-text">
                         {ability.describe()}
                       </div>
                     </li>
                   ))}
                 </div>
               ) : (
-                <div className="text-sm font-thin text-text text-center dark:font-normal">
+                <div className="text-sm font-normal text-text text-center">
                   No Army or Detachment Rule in Phase
                 </div>
               )}

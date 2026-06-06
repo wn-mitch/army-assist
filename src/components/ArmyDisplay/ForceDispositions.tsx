@@ -59,7 +59,7 @@ const ForceDispositions = () => {
                     <div className="text-md text-text">
                       {disposition.name}
                     </div>
-                    <div className="text-sm font-thin text-text dark:font-normal">
+                    <div className="text-sm font-normal text-text">
                       {disposition.text}
                     </div>
                   </li>

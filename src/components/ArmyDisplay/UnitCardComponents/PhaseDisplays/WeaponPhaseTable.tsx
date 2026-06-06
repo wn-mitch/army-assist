@@ -86,38 +86,31 @@ const WeaponPhaseTable = ({
         </thead>
         <tbody>
           {rows.map((row, index) => (
-            <tr
-              key={index}
-              className={`border border-border ${
-                index % 2 === 0
-                  ? ""
-                  : "bg-panel-surface group-hover:bg-panel-hover"
-              } `}
-            >
-              <TableCell className="w-1/4 px-1 font-semibold dark:font-bold">
+            <tr key={index} className="border border-border">
+              <TableCell className="w-1/4 px-1 font-bold">
                 {row.isSubProfile ? `➤ ${row.name}` : row.name}
               </TableCell>
               {phase !== Phase.Fight && (
-                <TableCell className="w-1/12 dark:font-semibold">
+                <TableCell className="w-1/12 font-semibold">
                   {formatRange(row.range)}
                 </TableCell>
               )}
-              <TableCell className="w-1/12 dark:font-semibold">
+              <TableCell className="w-1/12 font-semibold">
                 {row.count}
               </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
+              <TableCell className="w-1/12 font-semibold">
                 {row.attacks}
               </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
+              <TableCell className="w-1/12 font-semibold">
                 {formatSkill(row.skill)}
               </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
+              <TableCell className="w-1/12 font-semibold">
                 {row.strength}
               </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
+              <TableCell className="w-1/12 font-semibold">
                 {formatAP(row.ap)}
               </TableCell>
-              <TableCell className="w-1/12 dark:font-semibold">
+              <TableCell className="w-1/12 font-semibold">
                 {row.damage}
               </TableCell>
               <KeywordTags keywords={row.keywords} />

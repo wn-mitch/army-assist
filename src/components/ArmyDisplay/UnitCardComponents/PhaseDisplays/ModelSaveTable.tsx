@@ -33,15 +33,15 @@ function ModelSaveTable({
       </thead>
       <tbody>
         <tr className="text-sm border border-border">
-          <TableCell className="w-1/6 pl-1 dark:font-semibold">{save}</TableCell>
-          <TableCell className="w-1/6 dark:font-semibold">
+          <TableCell className="w-1/6 pl-1 font-semibold">{save}</TableCell>
+          <TableCell className="w-1/6 font-semibold">
             {invSave !== "-" ? `${invSave}` : "-"}
             {invSaveDescr ? <div className="text-xs text-text-muted">({invSaveDescr})</div> : null}
           </TableCell>
-          <TableCell className="w-1/6 dark:font-semibold">{fnp ? `${fnp}` : "-"}</TableCell>
-          <TableCell className="w-1/6 dark:font-semibold">{toughness}</TableCell>
-          <TableCell className="w-1/6 dark:font-semibold">{wounds}</TableCell>
-          <TableCell className="w-1/6 dark:font-semibold">{leadership}</TableCell>
+          <TableCell className="w-1/6 font-semibold">{fnp ? `${fnp}` : "-"}</TableCell>
+          <TableCell className="w-1/6 font-semibold">{toughness}</TableCell>
+          <TableCell className="w-1/6 font-semibold">{wounds}</TableCell>
+          <TableCell className="w-1/6 font-semibold">{leadership}</TableCell>
         </tr>
       </tbody>
     </table>

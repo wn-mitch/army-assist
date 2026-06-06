@@ -62,7 +62,7 @@ export default function Pastebox() {
                     value={text}
                     onChange={handleChange}
                 />
-                <p className="mt-1 text-xs text-text-dim">
+                <p className="mt-1 text-xs text-text-muted">
                     Tip: avoid using &quot; - &quot; (space-dash-space) in your
                     ListForge list name.
                 </p>

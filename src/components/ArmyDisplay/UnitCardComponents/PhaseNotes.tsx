@@ -17,10 +17,10 @@ const PhaseNotes: React.FC<{
           key={index}
           className={`flex flex-col break-inside-avoid first:mt-0`}
         >
-          <div className="text-md dark:font-semibold text-text">
+          <div className="text-md font-semibold text-text">
             {note.title}
           </div>
-          <div className="font-thin dark:font-normal text-sm text-text">
+          <div className="font-normal text-sm text-text">
             {note.content}
           </div>
         </li>

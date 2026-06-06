@@ -35,10 +35,10 @@ const PhaseAbilities: React.FC<{
           key={index}
           className={`flex flex-col break-inside-avoid first:mt-0`}
         >
-          <div className="text-md dark:font-semibold text-text">
+          <div className="text-md font-semibold text-text">
             {ability.name}
           </div>
-          <div className="font-thin dark:font-normal text-sm text-text whitespace-pre-line">
+          <div className="font-normal text-sm text-text whitespace-pre-line">
             {description(ability)}
           </div>
         </li>

@@ -92,7 +92,7 @@ export default function StratagemPanel() {
                             {stratagem.name}
                           </div>
                           <div className="flex lg:flex-row flex-col justify-center items-center">
-                            <div className="flex-shrink font-light text-sm text-text-muted px-2 lg:text-right dark:font-normal text-center">
+                            <div className="flex-shrink font-normal text-sm text-text-muted px-2 lg:text-right text-center">
                               {titleCase(stratagem.type)}
                             </div>
                             <div className="m-2 px-0.5 shadow-md rounded bg-accent my-1 text-accent-foreground">
@@ -101,10 +101,10 @@ export default function StratagemPanel() {
                           </div>
                         </div>
 
-                        <div className="font-normal dark:font-semibold text-sm text-text">
+                        <div className="font-semibold text-sm text-text">
                           {describeStratagem(stratagem)}
                         </div>
-                        <div className="font-light text-xs text-text-muted">
+                        <div className="font-normal text-xs text-text-muted">
                           {titleCase(stratagem.timing)} ·{" "}
                           {titleCase(stratagem.player_turn)} turn
                         </div>
