@@ -30,12 +30,12 @@ const PhaseEnhancements: React.FC<{
   const enhancementList = (
     <div className="ml-1">
       <li className={`flex flex-col break-inside-avoid first:mt-0`}>
-        <div className="text-md dark:font-semibold dark:text-gray-100">
+        <div className="text-md dark:font-semibold text-text">
           {enhancement.name}
           {typeof enhancement.cost === "number" ? ` (${enhancement.cost} pts)` : ""}
         </div>
         {description && (
-          <div className="font-thin dark:font-normal text-sm text-gray-800 dark:text-gray-200 whitespace-pre-line">
+          <div className="font-thin dark:font-normal text-sm text-text whitespace-pre-line">
             {description}
           </div>
         )}

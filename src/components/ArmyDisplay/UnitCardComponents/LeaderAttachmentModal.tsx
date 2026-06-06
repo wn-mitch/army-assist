@@ -61,7 +61,7 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black bg-opacity-25" />
+          <div className="fixed inset-0 bg-black/50" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -75,15 +75,15 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-lg bg-panel-surface border border-panel-border p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title
                   as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900 dark:text-white flex justify-between items-center"
+                  className="font-heading font-bold uppercase tracking-wider text-lg leading-6 text-text flex justify-between items-center"
                 >
                   <span>{title}</span>
                   <button
                     type="button"
-                    className="rounded-md text-gray-400 hover:text-gray-500"
+                    className="rounded text-text-dim hover:text-text-muted"
                     onClick={onClose}
                   >
                     <XMarkIcon className="h-6 w-6" />
@@ -117,25 +117,25 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
       "Manage Attached Units",
       <>
         <div className="mb-4">
-          <h4 className="text-md font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <h4 className="text-md font-heading uppercase tracking-wider text-text-muted mb-2">
             Currently Attached Units
           </h4>
           {attached.length === 0 ? (
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-text-muted">
               No units attached to this leader
             </p>
           ) : (
-            <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+            <ul className="divide-y divide-panel-border">
               {attached.map((r) => (
                 <li
                   key={r.index}
                   className="py-2 flex justify-between items-center"
                 >
-                  <span className="text-sm text-gray-800 dark:text-gray-200">
+                  <span className="text-sm text-text">
                     {unitName(r)}
                   </span>
                   <button
-                    className="ml-2 p-1 text-red-600 hover:bg-red-100 rounded"
+                    className="ml-2 p-1 text-danger bg-danger/10 hover:bg-danger/20 rounded"
                     onClick={() => detachRosterUnit(r.index)}
                     title="Detach unit"
                   >
@@ -148,15 +148,15 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
         </div>
 
         <div>
-          <h4 className="text-md font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <h4 className="text-md font-heading uppercase tracking-wider text-text-muted mb-2">
             Available Units
           </h4>
           {attachable.length === 0 ? (
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-text-muted">
               No units available to attach
             </p>
           ) : (
-            <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+            <ul className="divide-y divide-panel-border">
               {attachable
                 .filter((r) => effectiveLeaderIndex(rows, r.index) !== row.index)
                 .map((r) => (
@@ -164,11 +164,11 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
                     key={r.index}
                     className="py-2 flex justify-between items-center"
                   >
-                    <span className="text-sm text-gray-800 dark:text-gray-200">
+                    <span className="text-sm text-text">
                       {unitName(r)}
                     </span>
                     <button
-                      className="ml-2 p-1 text-green-600 hover:bg-green-100 rounded"
+                      className="ml-2 p-1 text-success bg-success/10 hover:bg-success/20 rounded"
                       onClick={() => attachRosterUnit(r.index, row.index)}
                       disabled={attached.length >= 1}
                       title="Attach unit to leader"
@@ -209,15 +209,15 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
     <>
       {currentLeader && (
         <div className="mb-4">
-          <h4 className="text-md font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <h4 className="text-md font-heading uppercase tracking-wider text-text-muted mb-2">
             Currently Attached To
           </h4>
-          <div className="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-3 rounded">
-            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">
+          <div className="flex items-center justify-between bg-panel p-3 rounded">
+            <span className="text-sm font-semibold text-text">
               {unitName(currentLeader)}
             </span>
             <button
-              className="ml-2 p-1 text-red-600 hover:bg-red-100 rounded"
+              className="ml-2 p-1 text-danger bg-danger/10 hover:bg-danger/20 rounded"
               onClick={handleDetach}
               title="Detach from leader"
             >
@@ -228,18 +228,18 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
       )}
 
       <div>
-        <h4 className="text-md font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <h4 className="text-md font-heading uppercase tracking-wider text-text-muted mb-2">
           Available Leaders
         </h4>
         {availableLeaders.length === 0 ? (
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-text-muted">
             No leaders available
           </p>
         ) : (
           <>
             <div className="mb-4">
               <select
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-white dark:bg-gray-700 dark:text-white p-2"
+                className="mt-1 block w-full rounded border border-panel-border shadow-sm focus:border-accent focus:ring-accent bg-panel text-text p-2"
                 value={selectedIndex}
                 onChange={(e) => setSelectedIndex(e.target.value)}
               >
@@ -254,7 +254,7 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
 
             <div className="flex justify-end">
               <button
-                className="inline-flex justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:bg-blue-300"
+                className="inline-flex justify-center rounded border border-transparent bg-accent px-4 py-2 text-sm font-medium text-accent-foreground hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:bg-accent/50"
                 onClick={handleAttach}
                 disabled={selectedIndex === ""}
               >

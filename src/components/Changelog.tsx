@@ -39,7 +39,7 @@ function Changelog() {
     <>
       <button
         onClick={handleShow}
-        className="bg-gray-500 text-gray-200 rounded p-2 font-semibold hover:bg-gray-700 mx-2"
+        className="font-mono text-xs text-text-muted hover:text-text hover:bg-panel-hover rounded px-2 py-1 mx-2 transition-colors"
         id="changelog-button"
       >
         v{currentVersion}
@@ -52,17 +52,17 @@ function Changelog() {
         id="changelog-modal"
       >
         <div className="flex items-center justify-center min-h-screen">
-          <DialogPanel className="fixed inset-0 bg-black opacity-30" />
+          <DialogPanel className="fixed inset-0 bg-black/50" />
 
-          <div className="bg-white dark:bg-gray-800 rounded-lg w-5/6 lg:w-3/4 mx-auto p-6 relative z-20">
+          <div className="bg-panel-surface border border-panel-border shadow-xl rounded-lg w-5/6 lg:w-3/4 mx-auto p-6 relative z-20">
             <button
               id="close-changelog"
               onPointerDown={handleClose}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300"
+              className="absolute top-2 right-2 text-text-muted hover:text-text"
             >
               <XCircleIcon className="h-8 w-8" />
             </button>
-            <DialogTitle className="text-xl font-bold text-center dark:text-gray-200 text-gray-800">
+            <DialogTitle className="text-xl font-heading font-bold uppercase tracking-wider text-center text-text">
               Changelog
             </DialogTitle>
             <Description className="mt-2"></Description>
@@ -71,22 +71,19 @@ function Changelog() {
               {changelogData.map((entry, index) => (
                 <div
                   key={index}
-                  className="mb-4 bg-gray-100 shadow-sm p-2 rounded-lg dark:bg-gray-700"
+                  className="mb-4 bg-surface border border-border shadow-sm p-2 rounded"
                 >
                   <div className="flex flex-row align-middle items-center">
-                    <h3 className="text-lg font-bold dark:text-gray-200 text-gray-800">
+                    <h3 className="text-lg font-heading font-bold tracking-wider text-text">
                       {entry.version}
                     </h3>
-                    <p className="ml-2 text-sm text-gray-500 dark:text-gray-300">
+                    <p className="ml-2 text-sm font-mono text-text-muted">
                       {entry.date}
                     </p>
                   </div>
                   <ul className="list-disc list-inside">
                     {entry.changes.map((change, idx) => (
-                      <li
-                        key={idx}
-                        className="text-sm text-gray-700 dark:text-gray-300"
-                      >
+                      <li key={idx} className="text-sm text-text">
                         {change}
                       </li>
                     ))}
@@ -98,7 +95,7 @@ function Changelog() {
             <div className="mt-4">
               <button
                 onPointerDown={handleClose}
-                className="px-4 py-2 bg-red-700 font-bold text-white rounded w-full dark:bg-gray-500"
+                className="px-4 py-2 bg-danger text-white font-bold rounded w-full transition-colors hover:bg-danger/85"
               >
                 Close
               </button>

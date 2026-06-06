@@ -8,7 +8,7 @@ import Note from "@/types/Note";
 
 import { getCurrentStateVersion } from "@/utils/VersionHelper";
 import Settings from "@/types/Settings";
-import { testingPreload } from "@/utils/PreloadedLists";
+import { samplePreload } from "@/utils/PreloadedLists";
 import StoredRoster, { UnitOverlay } from "@/types/StoredRoster";
 import type { Stratagem as GameStratagem, AbilityView } from "@/data/dataset";
 import {
@@ -52,6 +52,7 @@ interface StoreState {
     setCardsCollapse: (cardsCollapse: boolean) => void;
     setShowKeywords: (showKeywords: boolean) => void;
     setIsDarkMode: (isDarkMode: boolean) => void;
+    setFactionThemeId: (factionThemeId: string) => void;
     setCardsGroup: (cardsGroup: boolean) => void;
     setWeaponsFilter: (weaponsFilter: boolean) => void;
     setTruncateCoreRules: (truncateCoreRules: boolean) => void;
@@ -106,7 +107,7 @@ const useStore = create<StoreState>()(
             return {
                 isFirstVisit: true,
                 currentSaveVersion: getCurrentStateVersion(),
-                storedRosters: testingPreload.map((list) => ({
+                storedRosters: samplePreload.map((list) => ({
                     ...buildStoredRoster(list.text, list.name ?? ""),
                     uuid: list.uuid,
                 })),
@@ -116,6 +117,7 @@ const useStore = create<StoreState>()(
                     cardsCollapse: true,
                     showKeywords: true,
                     isDarkMode: true,
+                    factionThemeId: "",
                     cardsGroup: true,
                     weaponsFilter: true,
                     truncateCoreRules: true,
@@ -351,6 +353,11 @@ const useStore = create<StoreState>()(
                         settings: { ...state.settings, isDarkMode },
                     }));
                 },
+                setFactionThemeId: (factionThemeId: string) => {
+                    set((state) => ({
+                        settings: { ...state.settings, factionThemeId },
+                    }));
+                },
                 setCardsGroup: (cardsGroup: boolean) => {
                     set((state) => ({
                         settings: { ...state.settings, cardsGroup },
@@ -388,6 +395,26 @@ const useStore = create<StoreState>()(
             storage: createJSONStorage(() => localStorage),
             version: getCurrentStateVersion(),
             migrate: migrateState,
+            // The default persist merge is shallow: a persisted `settings`
+            // object would replace the initializer's wholesale, dropping
+            // defaults for any setting added after the user's state was
+            // saved (e.g. factionThemeId). Deep-merge the settings level so
+            // new settings pick up their defaults without a version bump.
+            merge: (persisted, current) => {
+                const persistedState = (persisted ?? {}) as Partial<StoreState>;
+                return {
+                    ...current,
+                    ...persistedState,
+                    settings: {
+                        ...current.settings,
+                        ...(persistedState.settings ?? {}),
+                        activePhases: {
+                            ...current.settings.activePhases,
+                            ...(persistedState.settings?.activePhases ?? {}),
+                        },
+                    },
+                };
+            },
         },
     ),
 );

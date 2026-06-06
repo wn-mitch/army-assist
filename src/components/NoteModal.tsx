@@ -41,7 +41,7 @@ function NoteForm({
       <div>
         <label
           htmlFor="note-title"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          className="block text-sm font-medium text-text-muted"
         >
           Title
         </label>
@@ -50,14 +50,14 @@ function NoteForm({
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          className="mt-1 block w-full bg-panel border border-panel-border rounded shadow-sm p-2 text-text placeholder:text-text-dim focus:outline-none focus:border-accent"
         />
       </div>
 
       <div>
         <label
           htmlFor="note-content"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          className="block text-sm font-medium text-text-muted"
         >
           Content
         </label>
@@ -66,12 +66,12 @@ function NoteForm({
           value={content}
           onChange={(e) => setContent(e.target.value)}
           rows={4}
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          className="mt-1 block w-full bg-panel border border-panel-border rounded shadow-sm p-2 text-text placeholder:text-text-dim focus:outline-none focus:border-accent"
         />
       </div>
 
       <div>
-        <p className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        <p className="block text-sm font-medium text-text-muted mb-2">
           Phases
         </p>
         <div className="flex flex-wrap gap-2">
@@ -81,9 +81,9 @@ function NoteForm({
                 type="checkbox"
                 checked={selectedPhases.includes(phase)}
                 onChange={() => togglePhase(phase)}
-                className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                className="rounded border-border accent-accent shadow-sm focus:border-accent focus:ring focus:ring-accent/30"
               />
-              <span className="ml-2 mr-3 text-gray-700 dark:text-gray-300">
+              <span className="ml-2 mr-3 text-text-muted">
                 {phase}
               </span>
             </label>
@@ -93,13 +93,13 @@ function NoteForm({
 
       <div className="flex space-x-3">
         <button
-          className="px-4 py-2 bg-green-700 font-bold text-white rounded w-full dark:bg-green-500"
+          className="px-4 py-2 bg-accent text-accent-foreground font-bold rounded w-full transition-colors hover:bg-accent-hover"
           onClick={handleSave}
         >
           Save
         </button>
         <button
-          className="px-4 py-2 bg-red-500 font-bold text-white rounded w-full"
+          className="px-4 py-2 bg-danger text-white font-bold rounded w-full transition-colors hover:bg-danger/85"
           onClick={onCancel}
         >
           Cancel
@@ -121,18 +121,18 @@ function UnitNote({
   onDelete: (index: number) => void;
 }) {
   return (
-    <li className="p-2 bg-gray-100 dark:bg-gray-700 rounded">
+    <li className="p-2 bg-surface border border-border rounded">
       <div className="flex justify-between items-start">
         <div className="flex-grow">
-          <h3 className="font-semibold text-gray-800 dark:text-gray-200">
+          <h3 className="font-semibold text-text">
             {note.title}
           </h3>
-          <p className="text-gray-600 dark:text-gray-300">{note.content}</p>
+          <p className="text-text-muted">{note.content}</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {note.phases.map((phase, phaseIndex) => (
               <span
                 key={phaseIndex}
-                className="px-2 py-1 bg-blue-200 dark:bg-blue-600 text-white rounded"
+                className="px-2 py-1 bg-accent/15 text-accent text-sm rounded"
               >
                 {phase}
               </span>
@@ -142,13 +142,13 @@ function UnitNote({
         <div className="flex gap-2">
           <button
             onClick={() => onEdit(index)}
-            className="p-1 rounded bg-green-500 text-white hover:bg-green-600"
+            className="p-1 rounded bg-accent text-accent-foreground hover:bg-accent-hover transition-colors"
           >
             <PencilIcon className="h-4 w-4" />
           </button>
           <button
             onClick={() => onDelete(index)}
-            className="p-1 rounded bg-red-500 text-white hover:bg-red-600"
+            className="p-1 rounded bg-danger text-white hover:bg-danger/85 transition-colors"
           >
             <TrashIcon className="h-4 w-4" />
           </button>
@@ -222,7 +222,7 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
   return (
     <>
       <button
-        className="m-auto flex shadow-md rounded-xl bg-green-300 border-green-300 my-1 text-green-700 hover:bg-green-400 hover:text-green-200 dark:bg-green-500 dark:text-green-200 dark:hover:bg-green-600 dark:hover:text-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:focus:ring-green-400"
+        className="m-auto flex shadow-sm rounded bg-accent/15 my-1 text-accent hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
         onClick={handleShow}
       >
         <PencilIcon className="h-8 w-8 p-1" />
@@ -235,11 +235,11 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
       >
         <div className="flex items-center justify-center min-h-screen">
           <div
-            className="fixed inset-0 bg-black opacity-50"
+            className="fixed inset-0 bg-black/50"
             aria-hidden="true"
           />
-          <DialogPanel className="bg-white dark:bg-gray-800 rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
-            <DialogTitle className="text-xl font-bold text-center text-gray-800 dark:text-gray-200">
+          <DialogPanel className="bg-panel-surface border border-panel-border shadow-xl rounded-lg w-full lg:w-3/4 max-w-lg p-4 z-20">
+            <DialogTitle className="text-xl font-heading font-bold uppercase tracking-wider text-center text-text">
               Notes for {unitName(row)}
             </DialogTitle>
 
@@ -258,13 +258,13 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
                     ))}
                   </ul>
                 ) : (
-                  <p className="mt-4 text-gray-600 dark:text-gray-300">
+                  <p className="mt-4 text-text-muted">
                     No notes available.
                   </p>
                 )}
                 <div className="mt-4">
                   <button
-                    className="px-4 py-2 bg-green-700 font-bold text-white rounded w-full dark:bg-green-500"
+                    className="px-4 py-2 bg-accent text-accent-foreground font-bold rounded w-full transition-colors hover:bg-accent-hover"
                     onClick={handleStartAddingNote}
                   >
                     New Note
@@ -275,7 +275,7 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
 
             {isAddingNote && (
               <div className="mt-4">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                <h3 className="font-heading font-semibold uppercase tracking-wider text-text mb-2">
                   Add New Note
                 </h3>
                 <NoteForm
@@ -288,7 +288,7 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
 
             {editingNoteIndex !== null && notes && (
               <div className="mt-4">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                <h3 className="font-heading font-semibold uppercase tracking-wider text-text mb-2">
                   Edit Note
                 </h3>
                 <NoteForm
@@ -303,7 +303,7 @@ function NoteModal({ row }: { row: RosterUnitRow }) {
               <div className="mt-4">
                 <button
                   onPointerDown={handleClose}
-                  className="px-4 py-2 bg-red-700 font-bold text-white rounded w-full dark:bg-red-500"
+                  className="px-4 py-2 bg-danger text-white font-bold rounded w-full transition-colors hover:bg-danger/85"
                 >
                   Close
                 </button>

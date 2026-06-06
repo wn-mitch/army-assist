@@ -2,12 +2,15 @@
     {
         "version": "3.0.0",
         "stateVersion": 28,
-        "date": "6/5/26",
+        "date": "6/6/26",
         "changes": [
             "11th edition! The entire data layer is now powered by the 40kdc community dataset (@alpaca-software/40kdc-data).",
             "Import now auto-detects ListForge text and share links, NewRecruit JSON and text exports, GW app lists, and Rosterizer.",
-            "Rules text is generated from the 40kdc structured ability data — the old scraped text is gone.",
-            "Saved lists are migrated automatically by re-importing their original text."
+            "Rules text is generated from the 40kdc structured ability data. The old scraped text is gone.",
+            "Saved lists are migrated automatically by re-importing their original text.",
+            "New pre-game screen surface: Force Dispositions, the five 11th edition strategic archetypes, with per-detachment grants activating as the dataset publishes them.",
+            "The print system is rebuilt on the roster data: phase-split or combined layouts, 1/2/3 column output, and enhancements now print per unit.",
+            "Full visual redesign in the shared 40kdc family design language: industrial dark theme, new typography, and 14 faction themes (dark and light) that can follow your list's faction automatically. Pick a theme in Settings or leave it on Auto."
         ]
     },
     {

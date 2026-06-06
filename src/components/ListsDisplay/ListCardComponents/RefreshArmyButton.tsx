@@ -16,11 +16,11 @@ const RefreshArmyButton = ({
 
   const buttonClasses = () => {
     if (isDropdown) {
-      return "block text-gray-700 px-4 py-2 text-sm";
+      return "block text-text px-4 py-2 text-sm";
     } else {
       return listDisplaySetting
-        ? "bg-green-400 dark:bg-green-600 hover:bg-green-500 dark:text-white hover:text-white dark:hover:bg-green-400 rounded-lg p-1 shadow-sm shadow-green-500 dark:shadow-green-600 mx-2 rounded-2xl"
-        : "flex flex-grow justify-center bg-green-400 dark:bg-green-600 hover:bg-green-500 hover:text-white dark:hover:bg-green-400 rounded-lg p-1 shadow-sm shadow-green-500 dark:shadow-green-700";
+        ? "bg-success text-white hover:bg-success/85 rounded p-1 shadow-sm mx-2 rounded-2xl"
+        : "flex flex-grow justify-center bg-success text-white hover:bg-success/85 rounded p-1 shadow-sm";
     }
   };
 

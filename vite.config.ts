@@ -1,21 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import istanbul from "vite-plugin-istanbul";
+import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath } from "url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    istanbul({
-      include: "src/**/*",
-      exclude: ["node_modules", "test/"],
-      cypress: true,
-      extension: [".js", ".ts", ".vue", ".tsx", ".jsx"],
-      requireEnv: false,
-      forceBuildInstrument:true,
-    }),
-  ],
+  plugins: [react(), tailwindcss()],
   server: {
     watch: {
       usePolling: true,
@@ -36,7 +26,7 @@ export default defineConfig({
         manualChunks: {
           // Define manual chunks
           react: ['react', 'react-dom'],
-          vendor: ['zustand', 'clsx', 'flowbite'],
+          vendor: ['zustand', 'clsx'],
         },
       },
     },

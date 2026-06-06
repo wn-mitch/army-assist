@@ -124,7 +124,7 @@ const PrintParent = (
 
     return (
       <div className="break-after-page">
-        <h1 className="text-xl font-bold dark:text-gray-200 text-center">
+        <h1 className="text-xl font-bold text-black text-center">
           {phase}
         </h1>
         {settings.contentOptionSetting.Units && (
