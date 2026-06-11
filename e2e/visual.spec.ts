@@ -162,6 +162,73 @@ test("modals", async ({ page }, testInfo) => {
   await closeOpenDialog(page);
 });
 
+test("provisional auto-attachment badge and detach", async ({
+  page,
+}, testInfo) => {
+  await dismissFirstVisitModal(page);
+
+  // Import a ListForge list whose support character (a Cryptek that can't
+  // operate alone) is auto-attached by the importer to an eligible bodyguard,
+  // while a `leader`-role epic hero (Imotekh) is left solo. ListForge marks
+  // characters by section, so the inference actually fires (newrecruit-simple
+  // doesn't encode is_character inline, so it wouldn't).
+  const listText = fs.readFileSync(
+    path.join(HERE, "fixtures", "necron_attach.txt"),
+    "utf8",
+  );
+
+  // A fresh list opens straight into the Pastebox (no parsed roster yet).
+  await page.locator("#add-list-button").click();
+  await page.locator("#comment").fill(listText);
+  await page.getByRole("button", { name: "Submit" }).click();
+
+  // Army view is up once the phase filter renders.
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+
+  // Exactly one auto-attached badge: the Technomancer under Immortals. Imotekh
+  // (a leader) must NOT be auto-attached — a second badge would mean the
+  // pre-1.0.6 over-eager inference regressed.
+  await expect(page.getByText("auto-attached")).toHaveCount(1);
+  await shoot(page, testInfo.project.name, "07-provisional-attachment");
+
+  // Detaching the guessed link clears the badge (the unit becomes top-level).
+  // Exact match: a substring match would also catch "Hide Detachment Rules".
+  await page.getByRole("button", { name: "detach", exact: true }).click();
+  await expect(page.getByText("auto-attached")).toHaveCount(0);
+});
+
+test("army rules show verbatim GW text", async ({ page }, testInfo) => {
+  const isPhone = testInfo.project.name === "phone";
+  await dismissFirstVisitModal(page);
+
+  // Import an Aeldari list. Its army rule (Strands of Fate) has authored GW raw
+  // text in the vendored ability-text store, so the rules panel must render that
+  // prose verbatim rather than the DSL describer's terser approximation.
+  const listText = fs.readFileSync(
+    path.join(HERE, "..", "src", "assets", "lists", "nr_aeldari.txt"),
+    "utf8",
+  );
+  await page.locator("#add-list-button").click();
+  await page.locator("#comment").fill(listText);
+  await page.getByRole("button", { name: "Submit" }).click();
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+
+  // Army/detachment rules only surface in game phases; open the disclosure.
+  await setPhase(page, isPhone, "Shooting");
+  await page.locator("#army-rule-button").click();
+
+  // A verbatim GW phrase the DSL describer never emits — proves the override,
+  // not the fallback, is what renders.
+  await expect(
+    page.getByText("generate Fate dice by rolling a number of D6"),
+  ).toBeVisible();
+  await shoot(page, testInfo.project.name, "08-army-rule-gw-text");
+});
+
 test("light mode and faction theme", async ({ page }, testInfo) => {
   const isPhone = testInfo.project.name === "phone";
   await dismissFirstVisitModal(page);

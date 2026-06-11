@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite --host",
+        "vendor:abilities": "curl -fsSL https://raw.githubusercontent.com/bmerrill17/40kdc-abilities/main/index.json | jq 'map_values(.raw_text)' > src/assets/json/abilityText.json",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "test": "playwright test",
@@ -14,7 +15,7 @@
         "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist --branch=main"
     },
     "dependencies": {
-        "@alpaca-software/40kdc-data": "^0.5.3",
+        "@alpaca-software/40kdc-data": "^1.0.6",
         "@headlessui/react": "^2.2.0",
         "@heroicons/react": "^2.2.0",
         "@types/pako": "^2.0.3",

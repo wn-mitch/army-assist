@@ -3,7 +3,11 @@ import React from "react";
 import Phase from "@/types/Phase";
 import type { UnitView, AbilityView } from "@/data/dataset";
 import useStore from "@/store/store";
-import { abilitiesForPhase, isCoreAbility } from "@/data/rosterSelectors";
+import {
+  abilitiesForPhase,
+  describeAbilityView,
+  isCoreAbility,
+} from "@/data/rosterSelectors";
 
 const PhaseAbilities: React.FC<{
   view: UnitView | undefined;
@@ -15,12 +19,12 @@ const PhaseAbilities: React.FC<{
     (state) => state.settings.truncateCoreRules,
   );
 
-  // Display text comes from the DSL describer — the dataset carries no prose.
+  // Display text is the GW raw text where vendored, else the DSL describer.
   const description = (ability: AbilityView) => {
     if (isCoreAbility(ability) && truncateCoreAbilities) {
       return "See Core Rules";
     }
-    return ability.describe();
+    return describeAbilityView(ability);
   };
 
   // NOTE: the legacy card showed a "Damaged: N W Remaining" prose block in the

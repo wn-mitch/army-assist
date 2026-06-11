@@ -12,8 +12,8 @@ import Phase from "@/types/Phase";
 import Button from "@/components/ui/Button";
 
 /** "battle-tactic" → "Battle Tactic" for the GW category chip. */
-const titleCase = (kebab: string) =>
-  kebab
+const titleCase = (kebab: string | undefined) =>
+  (kebab ?? "")
     .split("-")
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
@@ -92,16 +92,18 @@ export default function StratagemPanel() {
                             {stratagem.name}
                           </div>
                           <div className="flex lg:flex-row flex-col justify-center items-center">
-                            <div className="flex-shrink font-normal text-sm text-text-muted px-2 lg:text-right text-center">
-                              {titleCase(stratagem.type)}
-                            </div>
+                            {stratagem.type && (
+                              <div className="flex-shrink font-normal text-sm text-text-muted px-2 lg:text-right text-center">
+                                {titleCase(stratagem.type)}
+                              </div>
+                            )}
                             <div className="m-2 px-0.5 shadow-md rounded bg-accent my-1 text-accent-foreground">
                               {stratagem.cp_cost} CP
                             </div>
                           </div>
                         </div>
 
-                        <div className="font-semibold text-sm text-text">
+                        <div className="font-semibold text-sm text-text whitespace-pre-line">
                           {describeStratagem(stratagem)}
                         </div>
                         <div className="font-normal text-xs text-text-muted">

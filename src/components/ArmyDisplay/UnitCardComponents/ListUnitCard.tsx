@@ -29,7 +29,7 @@ import {
   rosterWeapons,
   visibleWeapons,
   weaponsForPhase,
-  effectiveLeaderIndex,
+  effectiveLeaderInfo,
   attachedUnitIndices,
   rosterUnitRows,
   type RosterUnitRow,
@@ -70,6 +70,7 @@ function ListUnitCard({
     [stored],
   );
   const toggleRosterUnit = useStore((state) => state.toggleRosterUnit);
+  const detachRosterUnit = useStore((state) => state.detachRosterUnit);
   const cardsCollapse = useStore((state) => state.settings.cardsCollapse);
   const cardsGroup = useStore((state) => state.settings.cardsGroup);
   const showKeywords = useStore((state) => state.settings.showKeywords);
@@ -86,6 +87,11 @@ function ListUnitCard({
     !!unitId && dataset.bodyguardsAttachableFrom(unitId).length > 0;
   const canBeAttached =
     !!unitId && dataset.leadersAttachableTo(unitId).length > 0;
+
+  // This unit's own effective leader, and whether that link was guessed by the
+  // importer (provisional) rather than set by the user. In the nested attached
+  // view we surface a provisional link so the user can detach a bad guess.
+  const leaderInfo = effectiveLeaderInfo(rows, row.index);
 
   // Units rendered nested under this card (its effective bodyguards).
   const attachedIndices = attachedUnitIndices(rows, row.index);
@@ -152,10 +158,7 @@ function ListUnitCard({
   const keywords = unitKeywords(row);
 
   // Skip rendering if attached under a leader (shown nested with the leader).
-  if (
-    !isAttachedView &&
-    effectiveLeaderIndex(rows, row.index) !== null
-  ) {
+  if (!isAttachedView && leaderInfo.index !== null) {
     return <div className="hidden"></div>;
   }
 
@@ -181,6 +184,27 @@ function ListUnitCard({
               <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-warning/20 text-warning">
                 unresolved
               </span>
+            )}
+            {isAttachedView && leaderInfo.provisional && (
+              <>
+                <span
+                  className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-warning/20 text-warning"
+                  title="Auto-detected on import — the source list doesn't record attachments, so this is a guess. Detach if it's wrong."
+                >
+                  auto-attached
+                </span>
+                <Button
+                  variant="danger"
+                  className="ml-2 align-middle text-xs normal-case font-normal tracking-normal"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    detachRosterUnit(row.index);
+                  }}
+                  title="Detach this unit from its leader"
+                >
+                  detach
+                </Button>
+              </>
             )}
             {!resolved && candidates.length > 0 && (
               <div className="text-xs font-normal text-text-muted">

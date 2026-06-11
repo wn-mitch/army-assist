@@ -17,17 +17,23 @@ function PhaseFilter() {
   );
   const activePhases = useStore((state) => state.settings.activePhases);
   const setPhase = useStore((state) => state.setPhase);
-  const [isDropdown, setIsDropdown] = useState(window.innerWidth <= 768);
-
-  const handleResize = () => {
-    setIsDropdown(window.innerWidth <= 768);
-  };
+  // Mobile shows a Listbox dropdown, desktop a radio row. Drive the choice from
+  // a media query, not a one-shot innerWidth read: on first mount a mobile
+  // browser can report a still-settling (wide) layout viewport, and no resize
+  // event necessarily follows to correct it. matchMedia re-syncs on mount and
+  // fires whenever the breakpoint is crossed.
+  const [isDropdown, setIsDropdown] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 768px)").matches,
+  );
 
   React.useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    const mql = window.matchMedia("(max-width: 768px)");
+    const sync = () => setIsDropdown(mql.matches);
+    sync();
+    mql.addEventListener("change", sync);
+    return () => mql.removeEventListener("change", sync);
   }, []);
 
   function classNames(...classes: string[]) {

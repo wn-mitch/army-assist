@@ -1,6 +1,7 @@
 import React from "react";
 
 import type { AbilityView } from "@/data/dataset";
+import { describeAbilityView } from "@/data/rosterSelectors";
 import { toAppPhase } from "@/data/phaseMap";
 
 const ArmyDetachmentRuleSection = (
@@ -30,7 +31,7 @@ const ArmyDetachmentRuleSection = (
             </div>
             <div className="flex flex-row">
               <span className="flex-1 text-sm text-center whitespace-pre-line">
-                {ability.describe()}
+                {describeAbilityView(ability)}
               </span>
             </div>
           </div>

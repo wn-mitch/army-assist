@@ -10,12 +10,14 @@ import {
   type Roster,
   type RosterUnit,
   type RosterWargear,
+  type Detachment,
   type Stratagem,
   type Enhancement,
   type UnitView,
   type WeaponView,
   type AbilityView,
 } from "@/data/dataset";
+import { gwAbilityText } from "@/data/abilityText";
 import { toGamePhase } from "@/data/phaseMap";
 import Phase from "@/types/Phase";
 import SortOptions from "@/types/SortOptions";
@@ -109,13 +111,35 @@ export function rosterFactionName(stored: StoredRoster | undefined): string {
 }
 
 /**
- * Display name for a stored roster's detachment, resolved from the dataset.
- * Falls back to the raw detachment id, then "" when none is present.
+ * Display name for a stored roster's detachment(s), resolved from the dataset.
+ * 11e lists can field several detachments under a detachment-point cap, so the
+ * names are joined with " + " in parse order (order is load-bearing). Each name
+ * resolves from the dataset, falling back to the as-written `raw_name` when the
+ * detachment didn't resolve. Returns "" when the roster has no detachment.
  */
 export function rosterDetachmentName(stored: StoredRoster | undefined): string {
-  const id = stored?.roster?.detachment_id;
-  if (!id) return "";
-  return detachments.get(id)?.name ?? id;
+  const entries = stored?.roster?.detachments ?? [];
+  return entries
+    .map((entry) => {
+      const resolved = entry.ref.id
+        ? detachments.get(entry.ref.id)?.name
+        : undefined;
+      return resolved ?? entry.ref.raw_name;
+    })
+    .filter((name) => name !== "")
+    .join(" + ");
+}
+
+/**
+ * Resolved dataset Detachment entities for a roster, in parse order. Skips
+ * entries whose name didn't resolve against the dataset (`ref.id` null or a
+ * lookup miss). Order is preserved as-is — never sorted.
+ */
+function rosterDetachments(roster: Roster | null): Detachment[] {
+  if (!roster) return [];
+  return roster.detachments
+    .map((entry) => (entry.ref.id ? detachments.get(entry.ref.id) : undefined))
+    .filter((d): d is Detachment => d !== undefined);
 }
 
 /** Roster units joined with dataset views and overlays, ready for the UI. */
@@ -148,22 +172,39 @@ export function stratagemsForPhase(
 export function allStratagems(roster: Roster | null): Stratagem[] {
   if (!roster) return [];
   const core = dataset.stratagems.all.filter((s) => s.category === "core");
-  const detachment = roster.detachment_id
-    ? dataset.detachments.get(roster.detachment_id)
-    : undefined;
-  const detachmentStratagems = (detachment?.stratagem_ids ?? [])
-    .map((id) => dataset.stratagems.get(id))
-    .filter((s): s is Stratagem => s !== undefined);
+  // Collect each detachment's stratagems in parse order, de-duped so two
+  // detachments that share a stratagem don't list it twice.
+  const detachmentStratagems: Stratagem[] = [];
+  const seen = new Set<string>();
+  for (const detachment of rosterDetachments(roster)) {
+    for (const id of detachment.stratagem_ids ?? []) {
+      if (seen.has(id)) continue;
+      const stratagem = dataset.stratagems.get(id);
+      if (stratagem) {
+        seen.add(id);
+        detachmentStratagems.push(stratagem);
+      }
+    }
+  }
   return [...core, ...detachmentStratagems];
 }
 
 /**
- * Display text for a stratagem: the linked ability's DSL-derived description.
- * The dataset carries no rules prose.
+ * Display text for an ability view: the vendored GW raw text where available,
+ * falling back to the DSL-derived `describe()` while authoring catches up.
+ */
+export function describeAbilityView(view: AbilityView): string {
+  return gwAbilityText(view.id) ?? view.describe();
+}
+
+/**
+ * Display text for a stratagem: the linked ability's GW raw text, falling back
+ * to its DSL-derived description.
  */
 export function describeStratagem(stratagem: Stratagem): string {
   if (!stratagem.ability_id) return "";
-  return dataset.abilities.get(stratagem.ability_id)?.describe() ?? "";
+  const view = dataset.abilities.get(stratagem.ability_id);
+  return gwAbilityText(stratagem.ability_id) ?? view?.describe() ?? "";
 }
 
 /**
@@ -194,19 +235,27 @@ export function armyAbilities(roster: Roster | null): AbilityView[] {
   }
   for (const id of ruleIds) push(dataset.abilities.get(id));
 
-  // Detachment rule: the linked id on the detachment record, plus a fallback
-  // to abilities that declare the detachment directly. (Upstream data note:
-  // most 11e-seed detachments don't carry a rule link yet — this populates
-  // automatically as the dataset fills in.)
-  if (roster.detachment_id) {
-    const detachment = dataset.detachments.get(roster.detachment_id);
+  // Detachment rules: each detachment on the roster (11e lists can field
+  // several) contributes its linked rule in parse order, plus a fallback to
+  // abilities that declare any of these detachments directly. (Upstream data
+  // note: most 11e-seed detachments don't carry a rule link yet — this
+  // populates automatically as the dataset fills in.)
+  const detachmentIds = new Set<string>();
+  for (const entry of roster.detachments) {
+    const id = entry.ref.id;
+    if (!id) continue;
+    detachmentIds.add(id);
+    const detachment = dataset.detachments.get(id);
     if (detachment?.detachment_rule_id) {
       push(dataset.abilities.get(detachment.detachment_rule_id));
     }
+  }
+  if (detachmentIds.size > 0) {
     for (const ability of dataset.abilities.all) {
       if (
         ability.raw.ability_type === "detachment" &&
-        ability.raw.detachment_id === roster.detachment_id
+        ability.raw.detachment_id != null &&
+        detachmentIds.has(ability.raw.detachment_id)
       ) {
         push(ability);
       }
@@ -360,10 +409,14 @@ export function unitEnhancement(rosterUnit: RosterUnit): Enhancement | undefined
   return dataset.enhancements.get(ref.id);
 }
 
-/** Display text for an enhancement: its linked ability's DSL description. */
+/**
+ * Display text for an enhancement: its linked ability's GW raw text, falling
+ * back to the DSL-derived description.
+ */
 export function describeEnhancement(enhancement: Enhancement): string {
   if (!enhancement.ability_id) return "";
-  return dataset.abilities.get(enhancement.ability_id)?.describe() ?? "";
+  const view = dataset.abilities.get(enhancement.ability_id);
+  return gwAbilityText(enhancement.ability_id) ?? view?.describe() ?? "";
 }
 
 /* --- saves / defensive stats ------------------------------------------- */
@@ -395,25 +448,40 @@ export function feelNoPainThreshold(
 
 /* --- leader attachment ------------------------------------------------- */
 
+/** A unit's resolved leader plus whether that link was guessed by the importer. */
+export interface EffectiveLeader {
+  /** The leader's unit index, or null when the unit follows no leader. */
+  index: number | null;
+  /**
+   * True when the link came from the importer's inferred (`provisional`)
+   * `leader_attachment` rather than an explicit user attachment. The source
+   * roster doesn't encode attachments, so the importer auto-attaches support
+   * characters that can't operate alone — a guess the UI flags so the user can
+   * detach it.
+   */
+  provisional: boolean;
+}
+
 /**
- * Effective leader index for a unit, resolving the user override against the
+ * Effective leader for a unit, resolving the user override against the
  * roster-inferred attachment:
  *   - overlay `null`   → user explicitly detached → no leader,
- *   - overlay `number` → user attached to that unit index,
+ *   - overlay `number` → user attached to that unit index (authoritative,
+ *     never provisional),
  *   - overlay absent   → follow the importer's inferred `leader_attachment`
  *     (the leader is the unit whose `leader_attachment.bodyguard_ref` points
- *     at this unit).
- * Returns the leader's unit index, or null when the unit follows no leader.
+ *     at this unit); `provisional` mirrors that attachment's flag.
  */
-export function effectiveLeaderIndex(
+export function effectiveLeaderInfo(
   rows: RosterUnitRow[],
   unitIndex: number,
-): number | null {
+): EffectiveLeader {
   const row = rows[unitIndex];
-  if (!row) return null;
+  if (!row) return { index: null, provisional: false };
   const override = row.overlay.attachedToLeaderIndex;
-  if (override === null) return null;
-  if (typeof override === "number") return override;
+  if (override === null) return { index: null, provisional: false };
+  if (typeof override === "number")
+    return { index: override, provisional: false };
 
   // Inferred: find the leader whose bodyguard_ref resolves to this unit.
   const self = row.rosterUnit;
@@ -426,7 +494,18 @@ export function effectiveLeaderIndex(
     if (ref.id != null && selfId != null) return ref.id === selfId;
     return ref.raw_name === selfName;
   });
-  return leaderIdx === -1 ? null : leaderIdx;
+  if (leaderIdx === -1) return { index: null, provisional: false };
+  const provisional =
+    rows[leaderIdx].rosterUnit.leader_attachment?.provisional ?? false;
+  return { index: leaderIdx, provisional };
+}
+
+/** The leader's unit index, or null when the unit follows no leader. */
+export function effectiveLeaderIndex(
+  rows: RosterUnitRow[],
+  unitIndex: number,
+): number | null {
+  return effectiveLeaderInfo(rows, unitIndex).index;
 }
 
 /** Unit indices that render nested under `leaderIndex` (its bodyguards). */

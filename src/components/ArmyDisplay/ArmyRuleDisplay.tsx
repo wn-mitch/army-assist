@@ -2,7 +2,11 @@ import React from "react";
 import useStore from "@/store/store";
 import { Disclosure, DisclosureButton } from "@headlessui/react";
 
-import { factions, detachments, type AbilityView } from "@/data/dataset";
+import { factions, type AbilityView } from "@/data/dataset";
+import {
+  describeAbilityView,
+  rosterDetachmentName,
+} from "@/data/rosterSelectors";
 import { toGamePhase } from "@/data/phaseMap";
 import Phase from "@/types/Phase";
 
@@ -15,16 +19,19 @@ const ArmyRuleDisplay = () => {
   const phase =
     useStore((state) => state.storedRosters[state.activeList]?.phase) ??
     Phase.Pregame;
-  const roster = getActiveRoster()?.roster ?? null;
+  const activeRoster = getActiveRoster();
+  const roster = activeRoster?.roster ?? null;
 
   // Display names come from the dataset; the roster stores entity ids. Fall
-  // back to the raw id when a lookup misses (e.g. unresolved detachment).
+  // back to the raw id when a lookup misses (e.g. unresolved faction).
   const faction = roster?.faction_id
     ? (factions.get(roster.faction_id)?.name ?? roster.faction_id)
     : "Unknown Faction";
-  const detachment = roster?.detachment_id
-    ? (detachments.get(roster.detachment_id)?.name ?? roster.detachment_id)
-    : "No Detachment Provided";
+  // 11e lists can field several detachments; the shared selector joins their
+  // names with " + " (and the rules panel below stacks every detachment's
+  // rule). Empty string means no detachment resolved.
+  const detachmentName = rosterDetachmentName(activeRoster ?? undefined);
+  const detachment = detachmentName || "No Detachment Provided";
 
   // Army/detachment rules act in game phases; the UI-only Pregame/Saves
   // screens surface none. A rule with no phase mappings (most of the 11e
@@ -84,8 +91,8 @@ const ArmyRuleDisplay = () => {
                       <div className="text-md text-text">
                         {ability.name} - {ruleType(ability)} Rule
                       </div>
-                      <div className="text-sm font-normal text-text">
-                        {ability.describe()}
+                      <div className="text-sm font-normal text-text whitespace-pre-line">
+                        {describeAbilityView(ability)}
                       </div>
                     </li>
                   ))}

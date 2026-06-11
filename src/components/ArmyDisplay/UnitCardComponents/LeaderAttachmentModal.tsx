@@ -10,8 +10,19 @@ import { dataset } from "@/data/dataset";
 import {
   unitName,
   effectiveLeaderIndex,
+  effectiveLeaderInfo,
   type RosterUnitRow,
 } from "@/data/rosterSelectors";
+
+/** Inline "(auto)" tag for an importer-guessed (provisional) attachment. */
+const AutoTag: React.FC = () => (
+  <span
+    className="ml-2 text-xs font-normal uppercase tracking-wide text-warning"
+    title="Auto-detected on import — a guess, not from the source list."
+  >
+    (auto)
+  </span>
+);
 import Button from "@/components/ui/Button";
 
 interface LeaderAttachmentModalProps {
@@ -140,6 +151,9 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
                 >
                   <span className="text-sm text-text">
                     {unitName(r)}
+                    {effectiveLeaderInfo(rows, r.index).provisional && (
+                      <AutoTag />
+                    )}
                   </span>
                   <Button
                     variant="ghost-icon"
@@ -224,6 +238,7 @@ const LeaderAttachmentModal: React.FC<LeaderAttachmentModalProps> = ({
           <div className="flex items-center justify-between bg-panel p-3 rounded">
             <span className="text-sm font-semibold text-text">
               {unitName(currentLeader)}
+              {effectiveLeaderInfo(rows, row.index).provisional && <AutoTag />}
             </span>
             <Button
               variant="ghost-icon"
