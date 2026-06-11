@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alpaca-software/40kdc-data@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.npmjs.org/@alpaca-software/40kdc-data/-/40kdc-data-0.5.3.tgz"
-  integrity sha512-dXvvvnWmP9COZF0MCCVFkuL4iMkxsFlFEXaM5P58MdR/JOsE9tFcB8eAL70umZ7yejaKNPHDJidZroj4tsl4nQ==
+"@alpaca-software/40kdc-data@^0.5.14":
+  version "0.5.14"
+  resolved "https://registry.yarnpkg.com/@alpaca-software/40kdc-data/-/40kdc-data-0.5.14.tgz#30d53ec113c347c982a3589cbf8ab6a094926986"
+  integrity sha512-wUnWGB9CnMuF/Q1L66Pca4hYqcDN6K45mkmY3YbNPP026rwOQmuEk72qiVTX9ONCtFQo/khlDWtLPQRY6sp1/w==
   dependencies:
     ajv "^8.17.0"
     ajv-formats "^3.0.0"

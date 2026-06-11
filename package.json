@@ -14,7 +14,7 @@
         "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist --branch=main"
     },
     "dependencies": {
-        "@alpaca-software/40kdc-data": "^0.5.3",
+        "@alpaca-software/40kdc-data": "^0.5.14",
         "@headlessui/react": "^2.2.0",
         "@heroicons/react": "^2.2.0",
         "@types/pako": "^2.0.3",
