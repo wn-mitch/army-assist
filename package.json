@@ -1,7 +1,7 @@
 {
     "name": "army-assist",
     "private": true,
-    "version": "3.0.0",
+    "version": "3.0.1",
     "type": "module",
     "scripts": {
         "dev": "vite --host",
@@ -15,7 +15,7 @@
         "build:deploy:wrangler": "tsc -b && vite build && wrangler pages deploy dist --branch=main"
     },
     "dependencies": {
-        "@alpaca-software/40kdc-data": "^1.0.6",
+        "@alpaca-software/40kdc-data": "^1.0.11",
         "@headlessui/react": "^2.2.0",
         "@heroicons/react": "^2.2.0",
         "@types/pako": "^2.0.3",

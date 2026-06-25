@@ -1,5 +1,13 @@
 [
     {
+        "version": "3.0.1",
+        "stateVersion": 28,
+        "date": "6/25/26",
+        "changes": [
+            "Refreshed the 40kdc dataset: added new units across Orks, Astra Militarum, Space Marines, and Tyranids, along with their weapons and abilities."
+        ]
+    },
+    {
         "version": "3.0.0",
         "stateVersion": 28,
         "date": "6/6/26",
