@@ -1,5 +1,15 @@
 [
     {
+        "version": "3.0.2",
+        "stateVersion": 28,
+        "date": "6/29/26",
+        "changes": [
+            "Fixed printing producing blank pages on mobile and some browsers.",
+            "Fixed the mobile layout: the toolbar and list dashboard no longer overflow the screen.",
+            "Refreshed the 40kdc dataset to the latest release."
+        ]
+    },
+    {
         "version": "3.0.1",
         "stateVersion": 28,
         "date": "6/25/26",

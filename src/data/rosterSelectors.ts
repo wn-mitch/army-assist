@@ -439,10 +439,10 @@ export function feelNoPainThreshold(
   ability: AbilityView | undefined,
 ): number | undefined {
   if (!ability) return undefined;
-  const modifier = ability.raw.effect?.modifier as
-    | { threshold?: unknown }
+  const effect = ability.raw.effect as
+    | { modifier?: { threshold?: unknown } }
     | undefined;
-  const threshold = modifier?.threshold;
+  const threshold = effect?.modifier?.threshold;
   return typeof threshold === "number" ? threshold : undefined;
 }
 

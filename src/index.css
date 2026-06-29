@@ -88,6 +88,12 @@ body {
     }
 }
 
+/* The native-print sheet host (Print.tsx portals into document.body).
+   Hidden on screen; revealed and isolated under @media print below. */
+#print-root {
+    display: none;
+}
+
 @media print {
     /* The print tree (src/print/) uses fixed light colors; this re-declares
        the Neutral light palette on :root so any stray token-classed element
@@ -124,6 +130,16 @@ body {
         margin-top: 1rem;
         display: block;
         break-before: auto;
+    }
+
+    /* Native print isolation: hide all app/modal chrome, show only the
+       portalled print sheet. Replaces react-to-print's hidden iframe. */
+    body > *:not(#print-root) {
+        display: none !important;
+    }
+
+    #print-root {
+        display: block !important;
     }
 }
 

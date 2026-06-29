@@ -1,7 +1,7 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { PrinterIcon, XCircleIcon } from "@heroicons/react/24/outline";
-import { useReactToPrint } from "react-to-print";
+import { createPortal } from "react-dom";
 import useStore from "@/store/store";
 import PrintParent from "@/print/PrintParent";
 import PhaseOption from "@/types/PhaseOption";
@@ -13,7 +13,6 @@ import Button from "@/components/ui/Button";
 
 function Print() {
   const [isOpen, setIsOpen] = useState(false);
-  const componentRef = useRef(null);
 
   const [phaseOptionSetting, setPhaseOptionSetting] = useState(
     PhaseOption.Split
@@ -51,14 +50,16 @@ function Print() {
   };
   const handleShow = () => setIsOpen(true);
 
-  const printFn = useReactToPrint({
-    contentRef: componentRef,
-    documentTitle: `ArmyAssist.xyz - ${faction}`,
-  });
-
   const handleOnClick = useCallback(() => {
-    printFn();
-  }, [printFn]);
+    const prevTitle = document.title;
+    document.title = `ArmyAssist.xyz - ${faction}`;
+    const restore = () => {
+      document.title = prevTitle;
+      window.removeEventListener("afterprint", restore);
+    };
+    window.addEventListener("afterprint", restore);
+    window.print();
+  }, [faction]);
 
   const settings: PrintSettings = {
     phaseOptionSetting: phaseOptionSetting,
@@ -77,7 +78,7 @@ function Print() {
         aria-label="Open Print Panel"
         id="print-button"
       >
-        <PrinterIcon className="h-8 w-8" />
+        <PrinterIcon className="h-6 w-6 sm:h-8 sm:w-8" />
       </button>
 
       <Dialog
@@ -196,9 +197,10 @@ function Print() {
               </div>
             </div>
 
-            <div ref={componentRef} className="hidden print:block">
-              {PrintParent(text, rosterRows, settings)}
-            </div>
+            {createPortal(
+              <div id="print-root">{PrintParent(text, rosterRows, settings)}</div>,
+              document.body,
+            )}
 
             <div className="mt-4 flex w-full flex-col display-hidden">
               <Button

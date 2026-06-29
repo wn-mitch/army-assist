@@ -18,7 +18,7 @@ const ResetButton = () => {
       id="reset-button"
       aria-label="Back to list dashboard"
     >
-      <ArrowRightStartOnRectangleIcon className="h-8 w-8" />
+      <ArrowRightStartOnRectangleIcon className="h-6 w-6 sm:h-8 sm:w-8" />
     </Button>
   );
 };

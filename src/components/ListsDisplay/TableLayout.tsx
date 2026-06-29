@@ -55,7 +55,7 @@ const TableLayout = ({
 
   return (
     <div className="bg-surface border border-border rounded lg:m-2">
-      <div className="inline-block min-w-full align-middle sm:px-6">
+      <div className="block min-w-full align-middle overflow-x-auto sm:px-6">
         <table className="min-w-full divide-y divide-border my-2">
           <thead>
             <tr>

@@ -50,7 +50,7 @@ function Settings() {
         aria-label="Open Settings Panel"
         id="settings-button"
       >
-        <CogIcon className="h-8 w-8" />
+        <CogIcon className="h-6 w-6 sm:h-8 sm:w-8" />
       </button>
 
       <Dialog

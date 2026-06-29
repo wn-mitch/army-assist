@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alpaca-software/40kdc-data@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@alpaca-software/40kdc-data/-/40kdc-data-1.0.11.tgz#0b8d9b5d3aebdcc3c29fbb928a09df78b963efc6"
-  integrity sha512-ITZYxODpJsDJ82koxGGnou9Nx4TEWkhu2/chZAJOPuqj5/rq7vlNaWe9uziCBtIuenm27VJsr7/AzHGpNgznYg==
+"@alpaca-software/40kdc-data@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@alpaca-software/40kdc-data/-/40kdc-data-1.0.13.tgz#f1eaaa906a1d556b6d4b550978cd454b33af6161"
+  integrity sha512-Pa+4cNQYNj3oIpya+uqrCHEItX3BzG8/bRgIa4o5/MgPLioWCte0QC+7UZ9bxizCp6Wd7H7/Ha8IGQjudD+zNg==
   dependencies:
     ajv "^8.17.0"
     ajv-formats "^3.0.0"
@@ -2424,11 +2424,6 @@ react-svg-to-image@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/react-svg-to-image/-/react-svg-to-image-3.0.0.tgz"
   integrity sha512-6qV45Sx+2H4GSXlkoMc4msOhwXCLvTgkei8TybzIthBAVVvUrL4E2VuY1T9rduInnXajqkY+X5XKGHYteUlLZQ==
-
-react-to-print@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.npmjs.org/react-to-print/-/react-to-print-3.0.5.tgz"
-  integrity sha512-Z15MwMOzYCHWi26CZeFNwflAg7Nr8uWD6FTj+EkfIOjYyjr0MXGbI0c7rF4Fgrbj3XG9hFndb1ourxpPz2RAiA==
 
 react@^18.3.1:
   version "18.3.1"
