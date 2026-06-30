@@ -65,6 +65,10 @@ export {
   FactionView,
 } from "@alpaca-software/40kdc-data";
 
+// Per-profile melee/ranged classifier. 11e weapons can mix ranged and melee
+// profiles under one record, so phase bucketing is per-profile, not per-weapon.
+export { isMeleeProfile } from "@alpaca-software/40kdc-data";
+
 // Types the app references.
 export type {
   Roster,

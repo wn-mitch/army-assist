@@ -5,6 +5,7 @@ import {
   factions,
   detachments,
   resolveRosterUnit,
+  isMeleeProfile,
   resolveRosterWargear,
   tryImportRoster,
   type Roster,
@@ -352,13 +353,20 @@ export function visibleWeapons(weapons: RosterWeapon[]): RosterWeapon[] {
   return weapons.filter((w) => w.count > 0);
 }
 
-/** Ranged or melee subset of a unit's resolved weapons, by package type. */
+/**
+ * The subset of a unit's resolved weapons that contribute to a phase. 11e
+ * weapons can carry both ranged and melee profiles (e.g. The Wailing Doom), so
+ * a weapon belongs to a phase when it has at least one profile for that phase —
+ * the per-profile bucketing then happens at render time.
+ */
 export function weaponsForPhase(
   weapons: RosterWeapon[],
   phase: Phase,
 ): RosterWeapon[] {
-  const wanted = phase === Phase.Shooting ? "ranged" : "melee";
-  return weapons.filter((w) => w.weapon.raw.type === wanted);
+  const wantMelee = phase === Phase.Fight;
+  return weapons.filter((w) =>
+    w.weapon.raw.profiles.some((p) => isMeleeProfile(p) === wantMelee),
+  );
 }
 
 /* --- abilities --------------------------------------------------------- */

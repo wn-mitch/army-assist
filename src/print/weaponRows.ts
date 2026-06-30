@@ -1,5 +1,7 @@
 import { weaponKeywordStrings, type RosterWeapon } from "@/data/rosterSelectors";
+import { isMeleeProfile } from "@/data/dataset";
 import { formatStat } from "@/data/format";
+import Phase from "@/types/Phase";
 
 /**
  * One print row: a single weapon profile with the carrying unit's count.
@@ -25,17 +27,27 @@ export interface PrintWeaponRow {
   count: number | "";
 }
 
-export function weaponRows(weapons: RosterWeapon[]): PrintWeaponRow[] {
+export function weaponRows(
+  weapons: RosterWeapon[],
+  phase: Phase,
+): PrintWeaponRow[] {
+  const wantMelee = phase === Phase.Fight;
   const rows: PrintWeaponRow[] = [];
   for (const { weapon, count } of weapons) {
-    const profiles = weapon.raw.profiles;
-    const multi = profiles.length > 1;
-    profiles.forEach((profile, i) => {
+    // Bucket profiles by phase so a dual-profile weapon prints only its ranged
+    // profiles in the shooting section and its melee profiles in the fight
+    // section. Keep the ORIGINAL profile index for weaponKeywordStrings; derive
+    // multi/head-row from the filtered list. Mirrors WeaponPhaseTable.toRows.
+    const phaseProfiles = weapon.raw.profiles
+      .map((profile, i) => ({ profile, i }))
+      .filter(({ profile }) => isMeleeProfile(profile) === wantMelee);
+    const multi = phaseProfiles.length > 1;
+    phaseProfiles.forEach(({ profile, i }, j) => {
       const stats = profile.stats;
       const skill = stats.BS ?? stats.WS ?? null;
       rows.push({
         name: multi ? `${weapon.name} - ${profile.name}` : weapon.name,
-        isSubProfile: multi && i > 0,
+        isSubProfile: multi && j > 0,
         range: profile.range,
         attacks: formatStat(stats.A),
         skill,
@@ -43,7 +55,7 @@ export function weaponRows(weapons: RosterWeapon[]): PrintWeaponRow[] {
         ap: stats.AP,
         damage: formatStat(stats.D),
         keywords: weaponKeywordStrings(weapon, i),
-        count: i === 0 ? count : "",
+        count: j === 0 ? count : "",
       });
     });
   }

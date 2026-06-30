@@ -28,7 +28,7 @@ const FightSection = (rows: PrintRow[], settings: PrintSettings) => {
     const filtered = settings.weaponsFilter
       ? visibleWeapons(allWeapons)
       : allWeapons;
-    const weapons = weaponRows(weaponsForPhase(filtered, Phase.Fight));
+    const weapons = weaponRows(weaponsForPhase(filtered, Phase.Fight), Phase.Fight);
 
     return (
       <React.Fragment key={index}>

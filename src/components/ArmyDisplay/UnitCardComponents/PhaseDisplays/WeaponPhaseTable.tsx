@@ -5,6 +5,7 @@ import TableHeaderCell from "./TableComponents.tsx/TableHeaderCell";
 import Phase from "@/types/Phase";
 import KeywordTags from "../KeywordTags";
 import { weaponKeywordStrings, type RosterWeapon } from "@/data/rosterSelectors";
+import { isMeleeProfile } from "@/data/dataset";
 import {
   formatRange,
   formatStat,
@@ -31,18 +32,26 @@ interface ProfileRow {
   count: number | "";
 }
 
-function toRows(weapons: RosterWeapon[]): ProfileRow[] {
+function toRows(weapons: RosterWeapon[], phase: Phase): ProfileRow[] {
+  const wantMelee = phase === Phase.Fight;
   const rows: ProfileRow[] = [];
   for (const { weapon, count } of weapons) {
-    const profiles = weapon.raw.profiles;
-    const multi = profiles.length > 1;
-    profiles.forEach((profile, i) => {
+    // Bucket profiles by phase: a dual-profile weapon (e.g. The Wailing Doom)
+    // shows only its ranged profiles in shooting and its melee profiles in the
+    // fight phase. Keep each profile's ORIGINAL index — weaponKeywordStrings
+    // indexes the raw profiles array — but derive multi/head-row from the
+    // filtered list so the first phase-matching profile is the head row.
+    const phaseProfiles = weapon.raw.profiles
+      .map((profile, i) => ({ profile, i }))
+      .filter(({ profile }) => isMeleeProfile(profile) === wantMelee);
+    const multi = phaseProfiles.length > 1;
+    phaseProfiles.forEach(({ profile, i }, j) => {
       const stats = profile.stats;
       const skill = stats.BS ?? stats.WS ?? null;
       const keywords = weaponKeywordStrings(weapon, i);
       rows.push({
         name: multi ? `${weapon.name} - ${profile.name}` : weapon.name,
-        isSubProfile: multi && i > 0,
+        isSubProfile: multi && j > 0,
         range: profile.range,
         attacks: formatStat(stats.A),
         skill,
@@ -50,7 +59,7 @@ function toRows(weapons: RosterWeapon[]): ProfileRow[] {
         ap: stats.AP,
         damage: formatStat(stats.D),
         keywords,
-        count: i === 0 ? count : "",
+        count: j === 0 ? count : "",
       });
     });
   }
@@ -64,7 +73,7 @@ const WeaponPhaseTable = ({
   weapons: RosterWeapon[];
   phase: Phase;
 }) => {
-  const rows = toRows(weapons);
+  const rows = toRows(weapons, phase);
 
   return (
     <div className="overflow-x-auto w-full">
