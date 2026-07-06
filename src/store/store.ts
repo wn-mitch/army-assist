@@ -540,16 +540,57 @@ function toPhase(value: unknown): Phase {
     return Phase.Pregame;
 }
 
+/**
+ * A roster object persisted before the 40kdc `Roster` gained the plural
+ * `detachments[]` / `units[]` arrays rehydrates without those fields, so every
+ * selector that maps them throws (`Cannot read properties of undefined`) and
+ * blanks the app on load. Detect that shape and reparse from the saved text to
+ * restore the current model, carrying overlays via `buildStoredRoster`. On any
+ * failure keep the roster exactly as-is — a non-crashing stale roster beats a
+ * dropped list.
+ */
+function backfillRoster(
+    stored: StoredRoster | undefined,
+): StoredRoster | undefined {
+    if (!stored) return stored;
+    const roster = stored.roster;
+    if (!roster) return stored;
+    const shapeCurrent =
+        Array.isArray((roster as { detachments?: unknown }).detachments) &&
+        Array.isArray((roster as { units?: unknown }).units);
+    if (shapeCurrent) return stored;
+    if (!stored.rawText) return stored;
+    try {
+        const built = buildStoredRoster(stored.rawText, stored.name ?? "", stored);
+        // Keep the original object if the text no longer parses, rather than
+        // replacing a (stale) roster with a null one.
+        if (!built.roster) return stored;
+        return {
+            ...built,
+            uuid: stored.uuid,
+            phase: stored.phase,
+            created: stored.created,
+        };
+    } catch {
+        return stored;
+    }
+}
+
 function migrateState(
     persisted: unknown,
     version: number,
 ): PersistedLegacyState {
     const state = (persisted ?? {}) as PersistedLegacyState;
     if (version >= 28) {
-        // Already native; just drop any stray legacy key.
+        // Already native; drop any stray legacy key and backfill rosters saved
+        // under a pre-`detachments[]`/`units[]` package build (they crash the
+        // selectors on load until reparsed).
         const { storedLists: _legacy, ...rest } = state;
         void _legacy;
-        return rest;
+        const storedRosters = Array.isArray(state.storedRosters)
+            ? state.storedRosters.map(backfillRoster)
+            : state.storedRosters;
+        return { ...rest, storedRosters };
     }
 
     const legacyLists = Array.isArray(state.storedLists)

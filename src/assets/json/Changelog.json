@@ -1,5 +1,15 @@
 [
     {
+        "version": "3.0.3",
+        "stateVersion": 29,
+        "date": "7/6/26",
+        "changes": [
+            "Fixed a black screen that could appear on load with certain saved lists; affected lists are now repaired automatically.",
+            "Fixed multi-detachment lists (e.g. Leagues of Votann) importing without their army and detachment rules.",
+            "Fixed List Forge imports dropping attached leaders; characters now import attached to their bodyguard units."
+        ]
+    },
+    {
         "version": "3.0.2",
         "stateVersion": 28,
         "date": "6/29/26",

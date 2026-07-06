@@ -229,6 +229,79 @@ test("army rules show verbatim GW text", async ({ page }, testInfo) => {
   await shoot(page, testInfo.project.name, "08-army-rule-gw-text");
 });
 
+test("recovers pre-detachments[] saved lists without a black screen", async ({
+  page,
+}, testInfo) => {
+  // Regression: a roster persisted before the 40kdc `Roster` gained the plural
+  // `detachments[]` / `units[]` arrays rehydrates without those fields, and the
+  // selectors' unguarded `.map` blanked the whole app on load (the reported
+  // "black screen"). The store migration must backfill (reparse) such rosters,
+  // and the selector guards must never throw on the missing fields.
+  const pageErrors: string[] = [];
+  page.on("pageerror", (err) => pageErrors.push(err.message));
+
+  await dismissFirstVisitModal(page);
+
+  // Seed a real, current-shape roster into the persisted store.
+  const listText = fs.readFileSync(
+    path.join(HERE, "fixtures", "necron_attach.txt"),
+    "utf8",
+  );
+  await page.locator("#add-list-button").click();
+  await page.locator("#comment").fill(listText);
+  await page.getByRole("button", { name: "Submit" }).click();
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+
+  // Corrupt each shape-drifting field in turn, roll the persisted version back
+  // to the pre-migration 28, and confirm the app recovers on reload instead of
+  // crashing. "detachments" is the field from the real crash reports; "units"
+  // shares the same guard and backfill path.
+  for (const field of ["detachments", "units"] as const) {
+    await page.evaluate((dropField) => {
+      const raw = localStorage.getItem("army-storage");
+      if (!raw) throw new Error("expected persisted army-storage");
+      const parsed = JSON.parse(raw);
+      for (const sr of parsed.state?.storedRosters ?? []) {
+        if (sr.roster) delete sr.roster[dropField];
+      }
+      parsed.version = 28;
+      localStorage.setItem("army-storage", JSON.stringify(parsed));
+    }, field);
+
+    await page.goto("/");
+
+    // The app reopens the active list's army view. It rendering at all (the
+    // phase filter is visible) proves the migration backfilled the crashing
+    // roster rather than the selectors throwing and blanking the tree.
+    await expect(
+      page.locator("#collapsed-phases, #Pregame-button").first(),
+    ).toBeVisible();
+    expect(
+      pageErrors.filter((m) =>
+        m.includes("Cannot read properties of undefined"),
+      ),
+      `dropping roster.${field} must not crash the app`,
+    ).toEqual([]);
+
+    // The backfill reparsed the field back onto the persisted roster.
+    const restored = await page.evaluate((dropField) => {
+      const raw = localStorage.getItem("army-storage");
+      const parsed = JSON.parse(raw ?? "{}");
+      return (parsed.state?.storedRosters ?? []).every(
+        (sr: { roster: Record<string, unknown> | null }) =>
+          !sr.roster || Array.isArray(sr.roster[dropField]),
+      );
+    }, field);
+    expect(restored, `roster.${field} should be restored after reload`).toBe(
+      true,
+    );
+  }
+
+  await shoot(page, testInfo.project.name, "09-migration-recovery");
+});
+
 test("light mode and faction theme", async ({ page }, testInfo) => {
   const isPhone = testInfo.project.name === "phone";
   await dismissFirstVisitModal(page);

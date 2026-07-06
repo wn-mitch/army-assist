@@ -60,7 +60,7 @@ export function carryUnitState(
   const unitKey = (unit: RosterUnit) =>
     unit.ref.id ?? unit.ref.raw_name.toLowerCase();
 
-  const unclaimed = previous.units.map((unit, i) => ({
+  const unclaimed = (previous.units ?? []).map((unit, i) => ({
     key: unitKey(unit),
     overlay: previousState[i],
   }));
@@ -138,7 +138,9 @@ export function rosterDetachmentName(stored: StoredRoster | undefined): string {
  */
 function rosterDetachments(roster: Roster | null): Detachment[] {
   if (!roster) return [];
-  return roster.detachments
+  // `?? []` defends against rosters persisted before the plural `detachments[]`
+  // shape existed (see rosterDetachmentName above and store migrateState).
+  return (roster.detachments ?? [])
     .map((entry) => (entry.ref.id ? detachments.get(entry.ref.id) : undefined))
     .filter((d): d is Detachment => d !== undefined);
 }
@@ -146,7 +148,7 @@ function rosterDetachments(roster: Roster | null): Detachment[] {
 /** Roster units joined with dataset views and overlays, ready for the UI. */
 export function rosterUnitRows(stored: StoredRoster): RosterUnitRow[] {
   if (!stored.roster) return [];
-  return stored.roster.units.map((rosterUnit, index) => ({
+  return (stored.roster.units ?? []).map((rosterUnit, index) => ({
     index,
     rosterUnit,
     view: resolveRosterUnit(rosterUnit, dataset),
@@ -242,7 +244,7 @@ export function armyAbilities(roster: Roster | null): AbilityView[] {
   // note: most 11e-seed detachments don't carry a rule link yet — this
   // populates automatically as the dataset fills in.)
   const detachmentIds = new Set<string>();
-  for (const entry of roster.detachments) {
+  for (const entry of roster.detachments ?? []) {
     const id = entry.ref.id;
     if (!id) continue;
     detachmentIds.add(id);
