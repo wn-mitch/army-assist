@@ -38,10 +38,15 @@ async function shoot(page: Page, projectName: string, name: string) {
 
 async function dismissFirstVisitModal(page: Page) {
   await page.goto("/");
+  // Wait for the first-visit modal to actually render before clicking — under
+  // full-parallel load on the phone viewport the goto can settle before the
+  // dialog mounts, and clicking a not-yet-present close button flakes.
+  const dialog = page.locator("[role=dialog]");
+  await expect(dialog).toBeVisible();
   // The Instructions modal's bottom close button. Scope to the open dialog:
   // several modals reuse id="close-button".
   await page.locator("[role=dialog] #close-button").click();
-  await expect(page.locator("[role=dialog]")).toHaveCount(0);
+  await expect(dialog).toHaveCount(0);
 }
 
 async function openSampleList(page: Page) {
@@ -300,6 +305,51 @@ test("recovers pre-detachments[] saved lists without a black screen", async ({
   }
 
   await shoot(page, testInfo.project.name, "09-migration-recovery");
+});
+
+test("imports a real ListForge multi-detachment list with attached leaders", async ({
+  page,
+}, testInfo) => {
+  // End-to-end for the 1.0.21 ListForge importer fixes: a real Leagues of
+  // Votann export whose header carries two detachments plus a Force Disposition,
+  // and whose `Attached Units:` section attaches `leader`-role epic heroes
+  // (which the support-only inference never attaches). Pre-1.0.21 this imported
+  // with no detachment rules and with the leaders dropped as separate units.
+  const isPhone = testInfo.project.name === "phone";
+  const pageErrors: string[] = [];
+  page.on("pageerror", (e) => pageErrors.push(e.message));
+
+  await dismissFirstVisitModal(page);
+  const listText = fs.readFileSync(
+    path.join(HERE, "fixtures", "votann_attach.txt"),
+    "utf8",
+  );
+  await page.locator("#add-list-button").click();
+  await page.locator("#comment").fill(listText);
+  await page.getByRole("button", { name: "Submit" }).click();
+
+  // Army view renders (no black screen from an import-shape the app can't map).
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+  expect(
+    pageErrors.filter((m) => m.includes("Cannot read properties of undefined")),
+  ).toEqual([]);
+
+  // Bug 2: both detachments resolved (the header parser no longer mistakes the
+  // disposition for the faction), so the detachment name shows both.
+  await expect(page.getByText("Hearthfyre Arsenal").first()).toBeVisible();
+  await expect(page.getByText("Hearthguard Covenant").first()).toBeVisible();
+
+  // Bug 2 (rules): the detachment rule surfaces in a game phase.
+  await setPhase(page, isPhone, "Shooting");
+  await page.locator("#army-rule-button").click();
+
+  // Bug 3: the attached leader Kâhl imported (not dropped) and its bodyguard
+  // Einhyr Hearthguard is rendered nested under it, so both names are present.
+  await expect(page.getByText("Kâhl").first()).toBeVisible();
+
+  await shoot(page, testInfo.project.name, "10-votann-attach");
 });
 
 test("light mode and faction theme", async ({ page }, testInfo) => {

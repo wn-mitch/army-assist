@@ -1,0 +1,56 @@
+1.5k - Leagues of Votann - Priority Assets - Hearthfyre Arsenal, Hearthguard Covenant (1485 Points)
+
+Attached Units:
+Kâhl + Einhyr Hearthguard (205 pts)
+  Kâhl (75 pts)
+    • Rampart crest
+    • Forgewrought plasma axe
+    • Volkanite disintegrator
+    • Warlord
+    • E: Ironskein
+  Einhyr Hearthguard (130 pts)
+    • Hesyr
+      • EtaCarn plasma gun
+      • Graviton hammer
+      • Weavefield crest
+      • Exo-armour grenade launcher
+    • 4x Einhyr Hearthguard
+      • 4x Volkanite disintegrator
+      • 4x Plasma blade gauntlet
+      • 4x Exo-armour grenade launcher
+Memnyr Strategist + Ironkin Steeljacks with Heavy Volkanite Disintegrators (135 pts)
+  Memnyr Strategist (55 pts)
+    • Autoch-pattern bolt pistol
+    • Close combat weapon
+    • E: Mantle of Elders
+  Ironkin Steeljacks with Heavy Volkanite Disintegrators (80 pts)
+    • Steeljack Theyn
+      • Bolter and sword
+      • Preymark crest
+    • 2x Ironkin Steeljack
+      • 2x Heavy volkanite disintegrator
+      • 2x Plasma knife
+
+Character:
+Einhyr Champion (65 pts)
+  • Autoch-pattern combi-bolter
+  • Darkstar axe
+
+Battleline:
+Hearthkyn Warriors (100 pts)
+  • Theyn
+    • Autoch-pattern bolt pistol
+  • 5x Hearthkyn Warrior w/ ion blaster
+    • 5x Ion blaster
+
+Infantry:
+Einhyr Hearthguard (130 pts)
+  • Hesyr
+    • EtaCarn plasma gun
+  • 4x Einhyr Hearthguard
+    • 4x Volkanite disintegrator
+
+Vehicle:
+Hekaton Land Fortress (250 pts)
+  • MATR autocannon
+  • 2x Twin bolt cannon
