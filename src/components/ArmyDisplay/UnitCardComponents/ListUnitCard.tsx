@@ -3,6 +3,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   UserGroupIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 import useStore from "@/store/store";
@@ -76,6 +77,11 @@ function ListUnitCard({
   const showKeywords = useStore((state) => state.settings.showKeywords);
   const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
   const forceEditMode = useStore((state) => state.settings.editForceMode);
+  const toggleEditForceMode = useStore((state) => state.toggleEditForceMode);
+  const attachHintDismissed = useStore((state) => state.attachHintDismissed);
+  const setAttachHintDismissed = useStore(
+    (state) => state.setAttachHintDismissed,
+  );
 
   const { rosterUnit, view, overlay } = row;
   const resolved = rosterUnit.ref.resolved;
@@ -87,6 +93,23 @@ function ListUnitCard({
     !!unitId && dataset.bodyguardsAttachableFrom(unitId).length > 0;
   const canBeAttached =
     !!unitId && dataset.leadersAttachableTo(unitId).length > 0;
+
+  // One-time nudge toward Edit Force Mode: leader attachment lives behind that
+  // toggle, so a user who never enables it never sees the attach control. Show a
+  // tappable hint on attachment-eligible cards while edit mode is off and the
+  // user hasn't dismissed it. Tapping enables edit mode (and dismisses), which
+  // reveals the real UserGroup attach button below.
+  const showAttachHint =
+    !isAttachedView &&
+    !forceEditMode &&
+    !attachHintDismissed &&
+    (canBeLeader || canBeAttached);
+
+  const handleEnableAttach = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setAttachHintDismissed(true);
+    toggleEditForceMode(true);
+  };
 
   // This unit's own effective leader, and whether that link was guessed by the
   // importer (provisional) rather than set by the user. In the nested attached
@@ -262,6 +285,37 @@ function ListUnitCard({
           </div>
         )}
       </div>
+
+      {showAttachHint && (
+        <div className="mt-1 flex items-stretch gap-1">
+          <button
+            type="button"
+            onClick={handleEnableAttach}
+            className="flex flex-1 items-center gap-1.5 rounded border border-dashed border-border bg-panel-hover/40 px-2 py-1 text-left text-xs text-text-muted transition-colors hover:bg-panel-hover hover:text-text"
+            title="Turn on Edit Force Mode to attach units"
+          >
+            <UserGroupIcon className="h-4 w-4 shrink-0" />
+            <span>
+              {canBeLeader
+                ? "Attach a unit to this leader"
+                : "Attach this unit to a leader"}
+              <span className="text-text-dim"> — tap to enable editing</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setAttachHintDismissed(true);
+            }}
+            aria-label="Dismiss attach hint"
+            title="Dismiss"
+            className="rounded px-1.5 text-text-muted transition-colors hover:bg-panel-hover hover:text-text"
+          >
+            <XMarkIcon className="h-4 w-4" />
+          </button>
+        </div>
+      )}
 
       {(isAttachedView || !(cardsCollapse && !cardToggled)) && (
         <div className="flex flex-col gap-1">

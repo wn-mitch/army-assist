@@ -23,6 +23,12 @@ import {
 interface StoreState {
     isFirstVisit: boolean;
     /**
+     * Whether the user has dismissed (or acted on) the one-time hint that points
+     * to Edit Force Mode as the way to attach leaders. Persisted so the nudge
+     * shows once and then stays out of the way. Mirrors `isFirstVisit`.
+     */
+    attachHintDismissed: boolean;
+    /**
      * Native roster model (40kdc Roster + app overlay). The only saved-list
      * model — the legacy ListUnit/StoredList path was removed.
      */
@@ -48,6 +54,7 @@ interface StoreState {
     setPhase: (phase: Phase) => void;
     togglePhase: (phase: Phase) => void;
     setFirstVisit: (isFirstVisit: boolean) => void;
+    setAttachHintDismissed: (attachHintDismissed: boolean) => void;
     setListSort: (listSort: SortOptions) => void;
     setCardsCollapse: (cardsCollapse: boolean) => void;
     setShowKeywords: (showKeywords: boolean) => void;
@@ -106,6 +113,7 @@ const useStore = create<StoreState>()(
 
             return {
                 isFirstVisit: true,
+                attachHintDismissed: false,
                 currentSaveVersion: getCurrentStateVersion(),
                 storedRosters: samplePreload.map((list) => ({
                     ...buildStoredRoster(list.text, list.name ?? ""),
@@ -333,6 +341,8 @@ const useStore = create<StoreState>()(
                     }));
                 },
                 setFirstVisit: (isFirstVisit: boolean) => set({ isFirstVisit }),
+                setAttachHintDismissed: (attachHintDismissed: boolean) =>
+                    set({ attachHintDismissed }),
                 setListSort: (listSort: SortOptions) => {
                     set((state) => ({
                         settings: { ...state.settings, listSort },

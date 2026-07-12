@@ -39,6 +39,7 @@ const Header = () => {
                   aria-label={`${
                     editForceMode ? "Disable" : "Enable"
                   } Edit Force Mode`}
+                  title="Edit Force Mode — attach leaders and add unit notes"
                   id="edit-force-button"
                 >
                   <PencilSquareIcon className="h-6 w-6 sm:h-8 sm:w-8" />

@@ -90,6 +90,10 @@ function Instructions() {
                             <li>Copy the list text to your clipboard</li>
                             <li>Paste into the pastebox</li>
                             <li>
+                                Tap the pencil icon (Edit Force Mode) to attach
+                                leaders to their units and add unit notes
+                            </li>
+                            <li>
                                 Please report any issues you find in the discord
                                 below
                             </li>

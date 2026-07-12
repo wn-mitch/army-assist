@@ -352,6 +352,76 @@ test("imports a real ListForge multi-detachment list with attached leaders", asy
   await shoot(page, testInfo.project.name, "10-votann-attach");
 });
 
+async function importFixture(page: Page, fixture: string) {
+  const listText = fs.readFileSync(
+    path.join(HERE, "fixtures", fixture),
+    "utf8",
+  );
+  await page.locator("#add-list-button").click();
+  await page.locator("#comment").fill(listText);
+  await page.getByRole("button", { name: "Submit" }).click();
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+}
+
+test("attach hint enables edit force mode and reveals the attach control", async ({
+  page,
+}) => {
+  // The leader-attachment UI lives behind Edit Force Mode (off by default), so a
+  // user never sees it unless they toggle the header pencil. The per-card hint
+  // is the discoverable nudge: it appears on attachment-eligible cards while
+  // edit mode is off, and one tap turns edit mode on and reveals the real
+  // UserGroup attach button. necron_attach leaves Imotekh (a leader) solo, so at
+  // least one top-level card is attachment-eligible and shows the hint.
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "necron_attach.txt");
+
+  const hint = page.getByRole("button", { name: /tap to enable editing/i });
+  const attachButton = page
+    .getByTitle(/Manage attached units|Attach to leader/)
+    .first();
+
+  // Edit mode off: the hint is visible, the real attach control is not.
+  await expect(hint.first()).toBeVisible();
+  await expect(attachButton).toHaveCount(0);
+
+  // One tap turns on edit mode, hides the hint, and surfaces the attach button.
+  await hint.first().click();
+  await expect(page.getByRole("button", { name: /tap to enable editing/i })).toHaveCount(
+    0,
+  );
+  await expect(attachButton).toBeVisible();
+});
+
+test("attach hint dismissal persists across reload", async ({ page }) => {
+  // The dismiss "x" flips a persisted flag so the nudge shows once and stays
+  // gone — without enabling edit mode (that's the tap-the-bar path).
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "necron_attach.txt");
+
+  await expect(
+    page.getByRole("button", { name: /tap to enable editing/i }).first(),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Dismiss attach hint" }).first().click();
+  await expect(
+    page.getByRole("button", { name: /tap to enable editing/i }),
+  ).toHaveCount(0);
+  // Dismissing must NOT enable edit mode (only the bar tap does that).
+  await expect(
+    page.getByTitle(/Manage attached units|Attach to leader/),
+  ).toHaveCount(0);
+
+  await page.goto("/");
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: /tap to enable editing/i }),
+  ).toHaveCount(0);
+});
+
 test("light mode and faction theme", async ({ page }, testInfo) => {
   const isPhone = testInfo.project.name === "phone";
   await dismissFirstVisitModal(page);
