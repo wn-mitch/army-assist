@@ -13,12 +13,12 @@ export interface UnitOverlay {
   /** Casualty tracking, keyed by composition model name. */
   modelCounts?: Record<string, number>;
   /**
-   * User-driven leader attachment override:
+   * User-driven attachment override stored on the attaching character:
    *   - `undefined` → follow the roster-inferred `leader_attachment`,
-   *   - a number    → user attached this unit to that unit index,
-   *   - `null`      → user explicitly detached (ignore the inferred link).
+   *   - a number    → attach this character to that bodyguard roster index,
+   *   - `null`      → explicitly detach this character.
    */
-  attachedToLeaderIndex?: number | null;
+  attachedBodyguardIndex?: number | null;
 }
 
 /** Structured import failure, preserved so the UI can explain what happened. */

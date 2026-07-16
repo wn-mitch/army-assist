@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { decompressFromURL } from "@/utils/ListHelper";
 
 import Header from "@/components/Header";
+import RenderErrorBoundary from "@/components/RenderErrorBoundary";
 import Body from "./components/Body";
 import useStore from "./store/store";
 import { themeById, themeForFactionId } from "@/theme/factionThemeMap";
@@ -17,6 +18,7 @@ function App() {
             : undefined,
     );
     const addList = useStore((state) => state.addList);
+    const reset = useStore((state) => state.reset);
 
     useEffect(() => {
         const path = window.location.pathname.substring(1); // Remove the leading '/'
@@ -64,7 +66,9 @@ function App() {
     return (
         <div className="flex flex-col h-screen">
             <Header />
-            <Body />
+            <RenderErrorBoundary onRecover={reset}>
+                <Body />
+            </RenderErrorBoundary>
         </div>
     );
 }

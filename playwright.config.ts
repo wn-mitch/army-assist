@@ -12,6 +12,10 @@ export default defineConfig({
   outputDir: "e2e/test-results",
   timeout: 60_000,
   fullyParallel: true,
+  // The embedded rules bundle is large; seven or more parallel browser pages
+  // can starve initial app hydration and turn ready-state assertions into
+  // minute-long timeouts. Four workers keeps both projects concurrent.
+  workers: 4,
   reporter: [["list"]],
   use: {
     baseURL: "http://localhost:5198",

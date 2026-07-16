@@ -77,10 +77,10 @@ interface StoreState {
         updatedNote: Note,
     ) => void;
     deleteRosterNote: (unitIndex: number, noteIndex: number) => void;
-    /** User-attach a unit to a leader by their roster indices. */
-    attachRosterUnit: (unitIndex: number, leaderIndex: number) => void;
-    /** User-detach a unit from any leader (explicit detach). */
-    detachRosterUnit: (unitIndex: number) => void;
+    /** User-attach a character to a bodyguard by roster index. */
+    attachRosterUnit: (attachingIndex: number, bodyguardIndex: number) => void;
+    /** User-detach a character from its bodyguard. */
+    detachRosterUnit: (attachingIndex: number) => void;
     getListIndexByUUID: (uuid: string | undefined) => number;
 }
 
@@ -293,18 +293,18 @@ const useStore = create<StoreState>()(
                     }));
                 },
                 attachRosterUnit: (
-                    unitIndex: number,
-                    leaderIndex: number,
+                    attachingIndex: number,
+                    bodyguardIndex: number,
                 ) => {
-                    updateRosterOverlay(unitIndex, (overlay) => ({
+                    updateRosterOverlay(attachingIndex, (overlay) => ({
                         ...overlay,
-                        attachedToLeaderIndex: leaderIndex,
+                        attachedBodyguardIndex: bodyguardIndex,
                     }));
                 },
-                detachRosterUnit: (unitIndex: number) => {
-                    updateRosterOverlay(unitIndex, (overlay) => ({
+                detachRosterUnit: (attachingIndex: number) => {
+                    updateRosterOverlay(attachingIndex, (overlay) => ({
                         ...overlay,
-                        attachedToLeaderIndex: null,
+                        attachedBodyguardIndex: null,
                     }));
                 },
                 setPhase: (phase: Phase) => {
@@ -585,12 +585,88 @@ function backfillRoster(
         return stored;
     }
 }
+type V29UnitOverlay = UnitOverlay & {
+    attachedToLeaderIndex?: number | null;
+};
+
+function importedBodyguardIndex(
+    stored: StoredRoster,
+    attachingIndex: number,
+): number | null {
+    const units = stored.roster?.units;
+    const ref = units?.[attachingIndex]?.leader_attachment?.bodyguard_ref;
+    if (!units || !ref) return null;
+    if (ref.id != null) {
+        const byId = units.findIndex((unit) => unit.ref.id === ref.id);
+        if (byId !== -1) return byId;
+    }
+    const byName = units.findIndex(
+        (unit) => unit.ref.raw_name === ref.raw_name,
+    );
+    return byName === -1 ? null : byName;
+}
+
+function migrateV29Attachments(
+    stored: StoredRoster | undefined,
+): StoredRoster | undefined {
+    if (!stored) return stored;
+    const oldState = stored.unitState as V29UnitOverlay[];
+    const unitState = oldState.map((overlay) => {
+        const { attachedToLeaderIndex: _legacy, ...rest } = overlay;
+        void _legacy;
+        return rest;
+    });
+
+    for (let bodyguardIndex = 0; bodyguardIndex < oldState.length; bodyguardIndex++) {
+        const attachingIndex = oldState[bodyguardIndex]?.attachedToLeaderIndex;
+        if (
+            typeof attachingIndex !== "number" ||
+            attachingIndex < 0 ||
+            attachingIndex >= unitState.length ||
+            unitState[attachingIndex].attachedBodyguardIndex !== undefined
+        ) {
+            continue;
+        }
+        unitState[attachingIndex] = {
+            ...unitState[attachingIndex],
+            attachedBodyguardIndex: bodyguardIndex,
+        };
+    }
+
+    for (let bodyguardIndex = 0; bodyguardIndex < oldState.length; bodyguardIndex++) {
+        if (oldState[bodyguardIndex]?.attachedToLeaderIndex !== null) continue;
+        for (let attachingIndex = 0; attachingIndex < unitState.length; attachingIndex++) {
+            if (
+                importedBodyguardIndex(stored, attachingIndex) ===
+                bodyguardIndex
+            ) {
+                unitState[attachingIndex] = {
+                    ...unitState[attachingIndex],
+                    attachedBodyguardIndex: null,
+                };
+            }
+        }
+    }
+
+    return { ...stored, unitState };
+}
+
 
 function migrateState(
     persisted: unknown,
     version: number,
 ): PersistedLegacyState {
     const state = (persisted ?? {}) as PersistedLegacyState;
+    if (version === 29) {
+        const storedRosters = Array.isArray(state.storedRosters)
+            ? state.storedRosters.map((stored) =>
+                  migrateV29Attachments(backfillRoster(stored)),
+              )
+            : state.storedRosters;
+        const { storedLists: _legacy, ...rest } = state;
+        void _legacy;
+        return { ...rest, storedRosters };
+    }
     if (version >= 28) {
         // Already native; drop any stray legacy key and backfill rosters saved
         // under a pre-`detachments[]`/`units[]` package build (they crash the

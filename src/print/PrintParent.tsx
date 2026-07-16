@@ -18,23 +18,26 @@ import ArmyDetachmentRuleSection from "./ArmyDetachmentRuleSection";
 import useStore from "@/store/store";
 import {
   displayCards,
-  attachedUnitIndices,
+  attachedCharacterRows,
+  effectiveAttachments,
   allStratagems,
   type RosterUnitRow,
 } from "@/data/rosterSelectors";
 import { toGamePhase } from "@/data/phaseMap";
 import { qrCode } from "@/utils/ListHelper";
 
+type PrintParentProps = {
+  text: string;
+  rows: RosterUnitRow[];
+  settings: PrintSettings;
+};
+
 type ContentFunction = (
   rows: PrintRow[],
   settings: PrintSettings,
 ) => React.JSX.Element[];
 
-const PrintParent = (
-  text: string,
-  rows: RosterUnitRow[],
-  settings: PrintSettings,
-) => {
+const PrintParent = ({ text, rows, settings }: PrintParentProps) => {
   const marginTop = "5mm";
   const marginRight = "5mm";
   const marginBottom = "5mm";
@@ -60,43 +63,45 @@ const PrintParent = (
 
   const qr = qrCode(text);
 
-  // Top-level cards (leaders + standalone), grouped/sorted per the UI settings.
-  const cards = displayCards(rows, listSort, cardsGroup);
+  const attachments = effectiveAttachments(rows);
+  const cards = displayCards(rows, listSort, cardsGroup, attachments);
 
-  // Render a top-level card and its attached units (nested) for a phase.
+  // Render a bodyguard followed by all attached characters for a phase.
   const renderUnitForPhase = (
     card: { row: RosterUnitRow; groupCount: number },
     phase: Phase,
     settings: PrintSettings,
     contentFunction: ContentFunction,
   ) => {
-    const leaderContent = contentFunction(
+    const bodyguardContent = contentFunction(
       [{ row: card.row, groupCount: card.groupCount }],
       settings,
     );
 
-    const attachedRows = attachedUnitIndices(rows, card.row.index)
-      .map((i) => rows[i])
-      .filter((r): r is RosterUnitRow => r !== undefined);
-
-    if (attachedRows.length === 0) {
-      return leaderContent;
-    }
-
-    const attachedContent = attachedRows.flatMap((attachedRow) =>
-      contentFunction([{ row: attachedRow, groupCount: 1 }], settings),
+    const attachedCharacters = attachedCharacterRows(
+      rows,
+      card.row.index,
+      attachments,
     );
 
-    return leaderContent.map((element, index) => {
-      if (index === 0 && attachedContent.length > 0) {
+    if (attachedCharacters.length === 0) {
+      return bodyguardContent;
+    }
+
+    const characterContent = attachedCharacters.flatMap((character) =>
+      contentFunction([{ row: character, groupCount: 1 }], settings),
+    );
+
+    return bodyguardContent.map((element, index) => {
+      if (index === 0 && characterContent.length > 0) {
         return (
           <div
-            key={`leader-${card.row.index}-${phase}`}
+            key={`bodyguard-${card.row.index}-${phase}`}
             className="leader-unit-group my-1"
           >
             {element}
             <div className="ml-4 border-l-2 border-gray-400 pl-2">
-              {attachedContent}
+              {characterContent}
             </div>
           </div>
         );

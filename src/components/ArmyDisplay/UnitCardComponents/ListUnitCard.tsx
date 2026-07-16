@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo } from "react";
 import {
   ChevronDownIcon,
   ChevronUpIcon,
@@ -20,7 +20,6 @@ import PhaseEnhancements from "./PhaseEnhancements";
 import PhaseAbilities from "./PhaseAbilities";
 import NoteModal from "@/components/NoteModal";
 import PhaseNotes from "./PhaseNotes";
-import LeaderAttachmentModal from "./LeaderAttachmentModal";
 import Button from "@/components/ui/Button";
 
 import { dataset } from "@/data/dataset";
@@ -30,8 +29,8 @@ import {
   rosterWeapons,
   visibleWeapons,
   weaponsForPhase,
-  effectiveLeaderInfo,
-  attachedUnitIndices,
+  effectiveAttachments,
+  attachedCharacterRows,
   rosterUnitRows,
   type RosterUnitRow,
   type RosterWeapon,
@@ -55,13 +54,14 @@ function ListUnitCard({
   row,
   groupCount,
   isAttachedView = false,
+  onManageAttachments,
 }: {
   row: RosterUnitRow;
   groupCount?: number;
   isAttachedView?: boolean;
+  onManageAttachments: (index: number) => void;
 }) {
   // ALL hooks must be called unconditionally at the top.
-  const [leaderModalVisible, setLeaderModalVisible] = useState(false);
   const stored = useStore((state) => state.storedRosters[state.activeList]);
   const phase = stored?.phase ?? Phase.Pregame;
   // Derive rows via useMemo so we don't return a fresh array from the selector
@@ -87,23 +87,20 @@ function ListUnitCard({
   const resolved = rosterUnit.ref.resolved;
   const candidates = rosterUnit.ref.candidates ?? [];
 
-  // Leader-attachment eligibility from the dataset attachment graph.
+  // Attachment eligibility is independent: four current units can both host
+  // characters and attach to another unit.
   const unitId = view?.id;
-  const canBeLeader =
-    !!unitId && dataset.bodyguardsAttachableFrom(unitId).length > 0;
-  const canBeAttached =
+  const canHost =
     !!unitId && dataset.leadersAttachableTo(unitId).length > 0;
+  const canAttach =
+    !!unitId && dataset.bodyguardsAttachableFrom(unitId).length > 0;
 
-  // One-time nudge toward Edit Force Mode: leader attachment lives behind that
-  // toggle, so a user who never enables it never sees the attach control. Show a
-  // tappable hint on attachment-eligible cards while edit mode is off and the
-  // user hasn't dismissed it. Tapping enables edit mode (and dismisses), which
-  // reveals the real UserGroup attach button below.
+  // One-time nudge toward Edit Force Mode, where attachment controls live.
   const showAttachHint =
     !isAttachedView &&
     !forceEditMode &&
     !attachHintDismissed &&
-    (canBeLeader || canBeAttached);
+    (canHost || canAttach);
 
   const handleEnableAttach = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -111,16 +108,15 @@ function ListUnitCard({
     toggleEditForceMode(true);
   };
 
-  // This unit's own effective leader, and whether that link was guessed by the
-  // importer (provisional) rather than set by the user. In the nested attached
-  // view we surface a provisional link so the user can detach a bad guess.
-  const leaderInfo = effectiveLeaderInfo(rows, row.index);
+  const attachments = useMemo(() => effectiveAttachments(rows), [rows]);
+  const attachmentInfo = attachments.get(row.index) ?? {
+    bodyguardIndex: null,
+    role: "leader",
+    provisional: false,
+  };
 
-  // Units rendered nested under this card (its effective bodyguards).
-  const attachedIndices = attachedUnitIndices(rows, row.index);
-  const attachedRows = attachedIndices
-    .map((i) => rows[i])
-    .filter((r): r is RosterUnitRow => r !== undefined);
+  // Characters rendered beneath this bodyguard.
+  const attachedRows = attachedCharacterRows(rows, row.index, attachments);
 
   // Weapons for the current combat phase. With the filter on, show only the
   // weapons present on the imported list (count > 0). With it off, fall back to
@@ -180,8 +176,8 @@ function ListUnitCard({
   const name = unitName(row);
   const keywords = unitKeywords(row);
 
-  // Skip rendering if attached under a leader (shown nested with the leader).
-  if (!isAttachedView && leaderInfo.index !== null) {
+  // Attached characters render beneath their bodyguard.
+  if (!isAttachedView && attachmentInfo.bodyguardIndex !== null) {
     return <div className="hidden"></div>;
   }
 
@@ -208,14 +204,19 @@ function ListUnitCard({
                 unresolved
               </span>
             )}
-            {isAttachedView && leaderInfo.provisional && (
+            {isAttachedView && (
               <>
-                <span
-                  className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-warning/20 text-warning"
-                  title="Auto-detected on import — the source list doesn't record attachments, so this is a guess. Detach if it's wrong."
-                >
-                  auto-attached
+                <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-panel text-text-muted">
+                  {attachmentInfo.role === "leader" ? "Leader" : "Support"}
                 </span>
+                {attachmentInfo.provisional && (
+                  <span
+                    className="ml-2 align-middle text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded bg-warning/20 text-warning"
+                    title="Auto-detected on import — the source list doesn't record attachments, so this is a guess."
+                  >
+                    auto-attached
+                  </span>
+                )}
                 <Button
                   variant="danger"
                   className="ml-2 align-middle text-xs normal-case font-normal tracking-normal"
@@ -223,7 +224,7 @@ function ListUnitCard({
                     e.stopPropagation();
                     detachRosterUnit(row.index);
                   }}
-                  title="Detach this unit from its leader"
+                  title="Detach this character from its unit"
                 >
                   detach
                 </Button>
@@ -248,17 +249,16 @@ function ListUnitCard({
             an empty container would inflate `.justify-center` element counts. */}
         {!isAttachedView && forceEditMode && (
           <div className="flex justify-center items-center gap-1 mx-1">
-            {(canBeLeader || canBeAttached) && forceEditMode && (
+            {(canHost || canAttach) && (
               <Button
                 variant="ghost-icon"
                 className="m-auto my-1"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setLeaderModalVisible(true);
+                  onManageAttachments(row.index);
                 }}
-                title={
-                  canBeLeader ? "Manage attached units" : "Attach to leader"
-                }
+                aria-label={`Manage attachments for ${name}`}
+                title={canHost ? "Manage attachments" : "Attach to unit"}
               >
                 <UserGroupIcon className="h-6 w-6" />
               </Button>
@@ -292,13 +292,13 @@ function ListUnitCard({
             type="button"
             onClick={handleEnableAttach}
             className="flex flex-1 items-center gap-1.5 rounded border border-dashed border-border bg-panel-hover/40 px-2 py-1 text-left text-xs text-text-muted transition-colors hover:bg-panel-hover hover:text-text"
-            title="Turn on Edit Force Mode to attach units"
+            title="Turn on Edit Force Mode to manage attachments"
           >
             <UserGroupIcon className="h-4 w-4 shrink-0" />
             <span>
-              {canBeLeader
-                ? "Attach a unit to this leader"
-                : "Attach this unit to a leader"}
+              {canHost
+                ? "Manage this unit's attachments"
+                : "Attach this character to a unit"}
               <span className="text-text-dim"> — tap to enable editing</span>
             </span>
           </button>
@@ -327,13 +327,14 @@ function ListUnitCard({
           {attachedRows.length > 0 && !isAttachedView && (
             <div className="mt-2 border-t border-border pt-2">
               <div className="font-heading uppercase tracking-wider font-bold mb-1 text-text">
-                Attached Units:
+                Attached Characters:
               </div>
               {attachedRows.map((attachedRow) => (
                 <ListUnitCard
                   key={`attached-${attachedRow.index}`}
                   row={attachedRow}
                   isAttachedView={true}
+                  onManageAttachments={onManageAttachments}
                 />
               ))}
             </div>
@@ -341,15 +342,6 @@ function ListUnitCard({
         </div>
       )}
 
-      {leaderModalVisible && (
-        <LeaderAttachmentModal
-          visible={leaderModalVisible}
-          onClose={() => setLeaderModalVisible(false)}
-          row={row}
-          rows={rows}
-          isLeader={canBeLeader}
-        />
-      )}
     </ul>
   );
 }

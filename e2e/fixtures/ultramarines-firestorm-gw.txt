@@ -1,0 +1,65 @@
++++++++++++++++++++++++++++++++++++++++++++++++
++ FACTION KEYWORD: Imperium - Adeptus Astartes - Ultramarines
++ DETACHMENT: Firestorm Assault Force (Close-Range Eradication)
++ TOTAL ARMY POINTS: 960pts
++
++++++++++++++++++++++++++++++++++++++++++++++++
+
+CHARACTERS
+
+Bladeguard Ancient (45 pts)
+• 1x Close combat weapon
+
+Apothecary Biologis (70 pts)
+• 1x Absolver bolt pistol
+
+Captain in Terminator Armour (95 pts)
+• 1x Storm bolter
+• 1x Relic weapon
+• Warlord
+
+Techmarine (55 pts)
+• 1x Forge bolter
+
+BATTLELINE
+
+Assault Intercessor Squad (75 pts)
+• 1x Assault Intercessor Sergeant
+  • 1x Astartes chainsword
+• 4x Assault Intercessor
+  • 1x Astartes chainsword
+
+Intercessor Squad (80 pts)
+• 1x Intercessor Sergeant
+  • 1x Bolt rifle
+• 4x Intercessor
+  • 1x Bolt rifle
+
+OTHER DATASHEETS
+
+Aggressor Squad (120 pts)
+• 1x Aggressor Sergeant
+  • 1x Flamestorm gauntlets
+• 2x Aggressor
+  • 1x Flamestorm gauntlets
+
+Eradicator Squad (100 pts)
+• 1x Eradicator Sergeant
+  • 1x Melta rifle
+• 2x Eradicator
+  • 1x Melta rifle
+
+Inceptor Squad (120 pts)
+• 1x Inceptor Sergeant
+  • 1x Assault bolters
+• 2x Inceptor
+  • 1x Assault bolters
+
+Ballistus Dreadnought (130 pts)
+• 1x Ballistus lascannon
+
+Scout Squad (70 pts)
+• 1x Scout Sergeant
+  • 1x Boltgun
+• 4x Scout
+  • 1x Boltgun
