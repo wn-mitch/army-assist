@@ -1,0 +1,89 @@
+{
+  "name": "Librarius reproduction",
+  "generatedBy": "https://newrecruit.eu",
+  "roster": {
+    "name": "Librarius reproduction",
+    "xmlns": "http://www.battlescribe.net/schema/rosterSchema",
+    "costs": [
+      {
+        "name": "pts",
+        "value": 95
+      }
+    ],
+    "forces": [
+      {
+        "catalogueName": "Imperium - Salamanders",
+        "selections": [
+          {
+            "name": "Battle Size",
+            "type": "upgrade",
+            "selections": [
+              {
+                "name": "Strike Force (2000 Point limit)",
+                "type": "upgrade",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "name": "Detachment",
+            "type": "upgrade",
+            "selections": [
+              {
+                "name": "Forgefather's Seekers",
+                "type": "upgrade",
+                "number": 1,
+                "group": "Detachment"
+              },
+              {
+                "name": "Librarius Conclave",
+                "type": "upgrade",
+                "number": 1,
+                "group": "Detachment"
+              }
+            ]
+          },
+          {
+            "name": "Force Disposition",
+            "type": "upgrade",
+            "selections": [
+              {
+                "name": "Priority Assets",
+                "type": "upgrade",
+                "number": 1
+              }
+            ]
+          },
+          {
+            "name": "Vulkan He'stan",
+            "type": "model",
+            "number": 1,
+            "costs": [
+              {
+                "name": "pts",
+                "value": 95
+              }
+            ],
+            "categories": [
+              {
+                "name": "Epic Hero",
+                "primary": true
+              },
+              {
+                "name": "Faction: Salamanders",
+                "primary": false
+              }
+            ],
+            "selections": [
+              {
+                "name": "Warlord",
+                "type": "upgrade",
+                "number": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

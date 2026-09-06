@@ -234,6 +234,22 @@ test("army rules show verbatim GW text", async ({ page }, testInfo) => {
   await shoot(page, testInfo.project.name, "08-army-rule-gw-text");
 });
 
+test("renders a chapter roster with a shared detachment id", async ({
+  page,
+}) => {
+  const pageErrors: string[] = [];
+  page.on("pageerror", (error) => pageErrors.push(error.message));
+
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "salamanders-librarius.json");
+  await expect(page.getByText("Librarius Conclave").first()).toBeVisible();
+  expect(
+    pageErrors.filter((message) =>
+      message.includes("Ambiguous detachment lookup"),
+    ),
+  ).toEqual([]);
+});
+
 test("recovers pre-detachments[] saved lists without a black screen", async ({
   page,
 }, testInfo) => {
