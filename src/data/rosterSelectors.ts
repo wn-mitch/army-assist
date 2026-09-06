@@ -111,6 +111,17 @@ export function rosterFactionName(stored: StoredRoster | undefined): string {
   return factions.get(id)?.name ?? id;
 }
 
+function resolveRosterDetachment(
+  roster: Roster | null | undefined,
+  id: string,
+): Detachment | undefined {
+  const factionId = roster?.faction_id;
+  return (
+    (factionId ? detachments.getInFaction(id, factionId) : undefined) ??
+    detachments.getAny(id)
+  );
+}
+
 /**
  * Display name for a stored roster's detachment(s), resolved from the dataset.
  * 11e lists can field several detachments under a detachment-point cap, so the
@@ -123,7 +134,7 @@ export function rosterDetachmentName(stored: StoredRoster | undefined): string {
   return entries
     .map((entry) => {
       const resolved = entry.ref.id
-        ? detachments.get(entry.ref.id)?.name
+        ? resolveRosterDetachment(stored?.roster, entry.ref.id)?.name
         : undefined;
       return resolved ?? entry.ref.raw_name;
     })
@@ -141,7 +152,9 @@ function rosterDetachments(roster: Roster | null): Detachment[] {
   // `?? []` defends against rosters persisted before the plural `detachments[]`
   // shape existed (see rosterDetachmentName above and store migrateState).
   return (roster.detachments ?? [])
-    .map((entry) => (entry.ref.id ? detachments.get(entry.ref.id) : undefined))
+    .map((entry) =>
+      entry.ref.id ? resolveRosterDetachment(roster, entry.ref.id) : undefined,
+    )
     .filter((d): d is Detachment => d !== undefined);
 }
 
@@ -248,7 +261,7 @@ export function armyAbilities(roster: Roster | null): AbilityView[] {
     const id = entry.ref.id;
     if (!id) continue;
     detachmentIds.add(id);
-    const detachment = dataset.detachments.get(id);
+    const detachment = resolveRosterDetachment(roster, id);
     if (detachment?.detachment_rule_id) {
       push(dataset.abilities.get(detachment.detachment_rule_id));
     }
