@@ -11,6 +11,7 @@ import SettingsOption from "./UnitCardComponents/SettingsOption";
 import { rosterFactionName } from "@/data/rosterSelectors";
 import Button from "@/components/ui/Button";
 
+
 function Print() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,7 +40,7 @@ function Print() {
   const weaponsFilter = useStore((state) => state.settings.weaponsFilter);
 
   const getRosterUnits = useStore((state) => state.getRosterUnits);
-  const rosterRows = getRosterUnits();
+  const rosterRows = isOpen ? getRosterUnits() : [];
 
   const [filterCoreStratagems, setFilterCoreStratagems] = useState(true);
   const [truncateCoreAbilities, setTruncateCoreAbilities] = useState(true);
@@ -197,10 +198,17 @@ function Print() {
               </div>
             </div>
 
-            {createPortal(
-              <div id="print-root">{PrintParent(text, rosterRows, settings)}</div>,
-              document.body,
-            )}
+            {isOpen &&
+              createPortal(
+                <div id="print-root">
+                  <PrintParent
+                    text={text}
+                    rows={rosterRows}
+                    settings={settings}
+                  />
+                </div>,
+                document.body,
+              )}
 
             <div className="mt-4 flex w-full flex-col display-hidden">
               <Button

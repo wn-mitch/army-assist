@@ -10,8 +10,9 @@ import {
 /**
  * Enhancement on a roster unit. The package Enhancement record carries no
  * per-phase scoping (unlike the legacy model), so the enhancement is shown in
- * every phase whenever the unit has one. Description text is the linked
- * ability's DSL description; points come from the Enhancement record.
+ * every phase whenever the unit has one. Description text prefers the vendored
+ * raw source while DSL coverage is incomplete, then falls back to the linked
+ * community-authored description; points come from the Enhancement record.
  */
 const PhaseEnhancements: React.FC<{
   rosterUnit: RosterUnit;

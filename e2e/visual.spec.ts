@@ -37,16 +37,20 @@ async function shoot(page: Page, projectName: string, name: string) {
 }
 
 async function dismissFirstVisitModal(page: Page) {
+  // Visual tests exercise their own flows, not onboarding. Seed the persisted
+  // visit flag before the first application load so a delayed Instructions
+  // dialog cannot obscure a test's first interaction under parallel load.
+  // The sentinel preserves storage mutations that a test deliberately carries
+  // across a later reload.
+  await page.addInitScript(() => {
+    if (sessionStorage.getItem("visual-test-initialized")) return;
+    sessionStorage.setItem("visual-test-initialized", "true");
+    localStorage.setItem(
+      "army-storage",
+      JSON.stringify({ state: { isFirstVisit: false }, version: 30 }),
+    );
+  });
   await page.goto("/");
-  // Wait for the first-visit modal to actually render before clicking — under
-  // full-parallel load on the phone viewport the goto can settle before the
-  // dialog mounts, and clicking a not-yet-present close button flakes.
-  const dialog = page.locator("[role=dialog]");
-  await expect(dialog).toBeVisible();
-  // The Instructions modal's bottom close button. Scope to the open dialog:
-  // several modals reuse id="close-button".
-  await page.locator("[role=dialog] #close-button").click();
-  await expect(dialog).toHaveCount(0);
 }
 
 async function openSampleList(page: Page) {
@@ -150,7 +154,7 @@ test("modals", async ({ page }, testInfo) => {
   await shoot(page, project, "04-edit-force-mode");
 
   const leaderButton = page
-    .getByTitle(/Manage attached units|Attach to leader/)
+    .getByTitle(/Manage attachments|Attach to unit/)
     .first();
   await leaderButton.click();
   await shoot(page, project, "03-modal-leader-attachment");
@@ -159,7 +163,7 @@ test("modals", async ({ page }, testInfo) => {
   // The note trigger is the leader button's sibling in the action cluster.
   await page
     .locator(
-      'button[title="Manage attached units"] + button, button[title="Attach to leader"] + button',
+      'button[title="Manage attachments"] + button, button[title="Attach to unit"] + button',
     )
     .first()
     .click();
@@ -361,8 +365,8 @@ test("imports a real ListForge multi-detachment list with attached leaders", asy
   await setPhase(page, isPhone, "Shooting");
   await page.locator("#army-rule-button").click();
 
-  // Bug 3: the attached leader Kâhl imported (not dropped) and its bodyguard
-  // Einhyr Hearthguard is rendered nested under it, so both names are present.
+  // Bug 3: the imported leader and its bodyguard both render in the same
+  // bodyguard-rooted attachment group.
   await expect(page.getByText("Kâhl").first()).toBeVisible();
 
   await shoot(page, testInfo.project.name, "10-votann-attach");
@@ -380,6 +384,372 @@ async function importFixture(page: Page, fixture: string) {
     page.locator("#collapsed-phases, #Pregame-button").first(),
   ).toBeVisible();
 }
+test("Sororitas multi-attachment manager", async ({ page }, testInfo) => {
+  const isPhone = testInfo.project.name === "phone";
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "sororitas_attachment.txt");
+  await page.locator("#edit-force-button").click();
+
+  await page
+    .getByRole("button", {
+      name: "Manage attachments for Celestian Sacresants",
+    })
+    .click();
+  const dialog = page.getByRole("dialog");
+  const attachedCharacters = dialog.getByRole("list", {
+    name: "Attached characters",
+  });
+
+  await dialog.getByRole("button", { name: "Attach Palatine" }).click();
+  await expect(attachedCharacters).toContainText("Palatine");
+  await expect(attachedCharacters).toContainText("Leader");
+
+  await dialog.getByRole("button", { name: "Attach Imagifier" }).click();
+  await expect(attachedCharacters).toContainText("Imagifier");
+  await expect(attachedCharacters).toContainText("Support");
+
+  await dialog.getByText("Close", { exact: true }).click();
+  await setPhase(page, isPhone, "Fight");
+  await expect(
+    page.getByText("Fury of the Righteous", { exact: true }),
+  ).toBeVisible();
+  await shoot(page, testInfo.project.name, "11-sororitas-multi-attachment");
+});
+
+test("Sororitas multi-attachment character handoff", async ({ page }) => {
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "sororitas_attachment.txt");
+  await page.locator("#edit-force-button").click();
+
+  await page
+    .getByRole("button", { name: "Manage attachments for Palatine" })
+    .click();
+  const dialog = page.getByRole("dialog");
+  await dialog
+    .getByRole("button", { name: "Attach to Celestian Sacresants" })
+    .click();
+  await expect(
+    dialog.getByRole("heading", {
+      name: "Attachments: Celestian Sacresants",
+    }),
+  ).toBeVisible();
+});
+
+test("Tyranids display preserves rules, attachments, and abilities", async ({
+  page,
+}, testInfo) => {
+  const isPhone = testInfo.project.name === "phone";
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "tyranids-display.txt");
+  await setPhase(page, isPhone, "Command");
+
+  await page.locator("#army-rule-button").click();
+  await expect(
+    page.getByText("Shadow in the Warp - Army Rule", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Synapse - Army Rule", { exact: true }),
+  ).toBeVisible();
+  const warriorName = "Tyranid Warriors with Melee Bio-weapons";
+  const primeName = "Tyranid Prime with Lash Whip";
+  const topLevelCards = page.locator("ul.group");
+  const warriorCards = topLevelCards.filter({
+    has: page.getByText(warriorName, { exact: true }),
+  });
+  await expect(warriorCards).toHaveCount(3);
+
+  const attachedGroups = warriorCards.filter({
+    hasText: "Attached Characters:",
+  });
+  await expect(attachedGroups).toHaveCount(2);
+  for (let index = 0; index < 2; index += 1) {
+    await expect(
+      attachedGroups
+        .nth(index)
+        .locator("ul")
+        .filter({ hasText: primeName }),
+    ).toHaveCount(1);
+  }
+
+  const unattachedWarriors = warriorCards.filter({
+    hasNotText: "Attached Characters:",
+  });
+  await expect(unattachedWarriors).toHaveCount(1);
+  await expect(
+    unattachedWarriors.getByText("[2x]", { exact: true }),
+  ).toBeVisible();
+
+  const zoanthropes = topLevelCards.filter({
+    has: page.getByText("Zoanthropes", { exact: true }),
+  });
+  for (const abilityName of [
+    "Spirit Leech (Aura, Psychic)",
+    "Warp Field (Aura, Psychic)",
+  ]) {
+    await expect(
+      zoanthropes.getByText(abilityName, { exact: true }),
+    ).toBeVisible();
+  }
+  await setPhase(page, isPhone, "Fight");
+  await expect(
+    page.getByText("Shadow in the Warp - Army Rule", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Synapse - Army Rule", { exact: true }),
+  ).toBeVisible();
+  for (const abilityName of [
+    "Spirit Leech (Aura, Psychic)",
+    "Warp Field (Aura, Psychic)",
+  ]) {
+    await expect(
+      zoanthropes.getByText(abilityName, { exact: true }),
+    ).toBeVisible();
+  }
+  await shoot(page, testInfo.project.name, "12-tyranids-display-fight");
+});
+
+
+test("Champions enhancements render vendored raw text", async ({
+  page,
+}, testInfo) => {
+  const isPhone = testInfo.project.name === "phone";
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "sororitas_champions.txt");
+
+  for (const [name, sourcePhrase] of [
+    ["Sanctified Amulet", "cannot be set up within 12"],
+    ["Triptych of Judgement", "ignore any or all modifiers"],
+  ]) {
+    const heading = page
+      .locator("div.text-md")
+      .filter({ hasText: name })
+      .first();
+    await expect(heading).toBeVisible();
+    await expect(heading.locator("xpath=following-sibling::div[1]")).toContainText(
+      sourcePhrase,
+    );
+  }
+
+  await setPhase(page, isPhone, "Movement");
+  await page.locator("#open-stratagems-button").click();
+  const stratagem = page
+    .locator("#stratagem-panel li")
+    .filter({ hasText: "Indefatigable Dedication" });
+  await expect(stratagem).toBeVisible();
+});
+
+test("plural attachments keep leader and supports on one bodyguard", async ({
+  page,
+}) => {
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "sororitas_champions.txt");
+
+  const battleSisters = page
+    .getByText("Battle Sisters Squad", { exact: true })
+    .locator("xpath=ancestor::ul[1]");
+  await expect(battleSisters).toContainText("Attached Characters:");
+  for (const [name, role] of [
+    ["Palatine", "Leader"],
+    ["Dialogus", "Support"],
+    ["Imagifier", "Support"],
+  ] as const) {
+    const attachedCard = battleSisters
+      .locator("ul")
+      .filter({ hasText: name })
+      .first();
+    await expect(attachedCard).toContainText(role);
+  }
+
+  const dialogusCard = battleSisters
+    .locator("ul")
+    .filter({ hasText: "Dialogus" })
+    .first();
+  await dialogusCard
+    .getByRole("button", { name: "detach", exact: true })
+    .click();
+  await expect(battleSisters).not.toContainText("Dialogus");
+  await expect(battleSisters).toContainText("Palatine");
+  await expect(battleSisters).toContainText("Imagifier");
+
+  await page.locator("#edit-force-button").click();
+  const firstVahlCard = page
+    .locator("ul ul")
+    .filter({ hasText: "Morvenn Vahl" })
+    .first();
+  await firstVahlCard
+    .getByRole("button", { name: "detach", exact: true })
+    .click();
+
+  const detachedVahlCard = page
+    .getByText("Morvenn Vahl", { exact: true })
+    .locator("xpath=ancestor::ul[1]");
+  await detachedVahlCard
+    .getByRole("button", { name: "Manage attachments for Morvenn Vahl" })
+    .click();
+  const paragonChoices = page.getByRole("button", {
+    name: "Attach to Paragon Warsuits",
+  });
+  await expect(paragonChoices).toHaveCount(2);
+  await paragonChoices.nth(1).click();
+
+  const paragonCards = page
+    .getByText("Paragon Warsuits", { exact: true })
+    .locator("xpath=ancestor::ul[1]");
+  await expect(paragonCards).toHaveCount(2);
+  await expect(paragonCards.nth(0)).not.toContainText("Morvenn Vahl");
+  await expect(paragonCards.nth(1)).toContainText("Morvenn Vahl");
+  await page
+    .getByRole("dialog")
+    .getByText("Close", { exact: true })
+    .click();
+
+
+  await page.locator("#print-button").first().click();
+  const printGroups = page
+    .locator("#print-root .leader-unit-group")
+    .filter({ hasText: "Battle Sisters Squad" });
+  expect(await printGroups.count()).toBeGreaterThan(0);
+  await expect(printGroups.first()).toContainText("Palatine");
+  await expect(printGroups.first()).toContainText("Imagifier");
+  await expect(printGroups.first()).not.toContainText("Dialogus");
+});
+
+test("persisted attachment migration preserves overrides", async ({ page }) => {
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "sororitas_champions.txt");
+
+  const expected = await page.evaluate(() => {
+    const raw = localStorage.getItem("army-storage");
+    if (!raw) throw new Error("expected persisted army-storage");
+    const parsed = JSON.parse(raw);
+    const state = parsed.state;
+    const stored = state.storedRosters[state.activeList];
+    const units = stored.roster.units;
+    const byName = (name: string, occurrence = 0) => {
+      const matches = units
+        .map((unit: { ref: { raw_name: string } }, index: number) => ({
+          name: unit.ref.raw_name,
+          index,
+        }))
+        .filter((unit: { name: string }) => unit.name === name);
+      if (!matches[occurrence]) throw new Error(`missing ${name}`);
+      return matches[occurrence].index;
+    };
+    const palatine = byName("Palatine");
+    const battleSisters = byName("Battle Sisters Squad");
+    const vahl = byName("Morvenn Vahl");
+    const firstParagons = byName("Paragon Warsuits");
+    const secondParagons = byName("Paragon Warsuits", 1);
+
+    stored.unitState[battleSisters] = {
+      ...stored.unitState[battleSisters],
+      toggled: true,
+      notes: [
+        {
+          title: "Keep",
+          content: "Unrelated state",
+          phases: ["Command"],
+        },
+      ],
+      modelCounts: { "Battle Sister": 7 },
+      attachedToLeaderIndex: palatine,
+    };
+    stored.unitState[firstParagons] = {
+      ...stored.unitState[firstParagons],
+      attachedToLeaderIndex: null,
+    };
+    stored.unitState[secondParagons] = {
+      ...stored.unitState[secondParagons],
+      attachedToLeaderIndex: "malformed",
+    };
+    parsed.version = 29;
+    localStorage.setItem("army-storage", JSON.stringify(parsed));
+
+    return {
+      palatine,
+      battleSisters,
+      vahl,
+      firstParagons,
+      secondParagons,
+      settings: JSON.stringify(state.settings),
+      bodyguardOverlay: JSON.stringify({
+        toggled: true,
+        notes: [
+          {
+            title: "Keep",
+            content: "Unrelated state",
+            phases: ["Command"],
+          },
+        ],
+        modelCounts: { "Battle Sister": 7 },
+      }),
+      storedMetadata: JSON.stringify({
+        uuid: stored.uuid,
+        name: stored.name,
+        phase: stored.phase,
+        created: stored.created,
+        updated: stored.updated,
+      }),
+    };
+  });
+
+  await page.goto("/");
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+
+  const migrated = await page.evaluate(() => {
+    const parsed = JSON.parse(localStorage.getItem("army-storage") ?? "{}");
+    const state = parsed.state;
+    const stored = state.storedRosters[state.activeList];
+    return {
+      version: parsed.version,
+      settings: JSON.stringify(state.settings),
+      unitState: stored.unitState,
+      storedMetadata: JSON.stringify({
+        uuid: stored.uuid,
+        name: stored.name,
+        phase: stored.phase,
+        created: stored.created,
+        updated: stored.updated,
+      }),
+    };
+  });
+
+  expect(migrated.version).toBe(30);
+  expect(migrated.settings).toBe(expected.settings);
+  expect(migrated.storedMetadata).toBe(expected.storedMetadata);
+  expect(migrated.unitState[expected.palatine].attachedBodyguardIndex).toBe(
+    expected.battleSisters,
+  );
+  expect(migrated.unitState[expected.vahl].attachedBodyguardIndex).toBeNull();
+  expect(
+    Object.hasOwn(
+      migrated.unitState[expected.secondParagons],
+      "attachedBodyguardIndex",
+    ),
+  ).toBe(false);
+  expect(
+    JSON.stringify(migrated.unitState[expected.battleSisters]),
+  ).toBe(expected.bodyguardOverlay);
+  expect(JSON.stringify(migrated.unitState)).not.toContain(
+    "attachedToLeaderIndex",
+  );
+
+  await page.evaluate((palatineIndex) => {
+    const parsed = JSON.parse(localStorage.getItem("army-storage") ?? "{}");
+    const state = parsed.state;
+    const stored = state.storedRosters[state.activeList];
+    stored.unitState[palatineIndex].attachedBodyguardIndex = 999;
+    localStorage.setItem("army-storage", JSON.stringify(parsed));
+  }, expected.palatine);
+  await page.goto("/");
+  await expect(
+    page
+      .getByText("Palatine", { exact: true })
+      .locator("xpath=ancestor::ul[1]"),
+  ).toBeVisible();
+});
 
 test("attach hint enables edit force mode and reveals the attach control", async ({
   page,
@@ -395,7 +765,7 @@ test("attach hint enables edit force mode and reveals the attach control", async
 
   const hint = page.getByRole("button", { name: /tap to enable editing/i });
   const attachButton = page
-    .getByTitle(/Manage attached units|Attach to leader/)
+    .getByTitle(/Manage attachments|Attach to unit/)
     .first();
 
   // Edit mode off: the hint is visible, the real attach control is not.
@@ -426,7 +796,7 @@ test("attach hint dismissal persists across reload", async ({ page }) => {
   ).toHaveCount(0);
   // Dismissing must NOT enable edit mode (only the bar tap does that).
   await expect(
-    page.getByTitle(/Manage attached units|Attach to leader/),
+    page.getByTitle(/Manage attachments|Attach to unit/),
   ).toHaveCount(0);
 
   await page.goto("/");
@@ -436,6 +806,85 @@ test("attach hint dismissal persists across reload", async ({ page }) => {
   await expect(
     page.getByRole("button", { name: /tap to enable editing/i }),
   ).toHaveCount(0);
+});
+
+test("renders the faction-scoped Firestorm detachment without crashing", async ({
+  page,
+}, testInfo) => {
+  const isPhone = testInfo.project.name === "phone";
+  const pageErrors: string[] = [];
+  page.on("pageerror", (error) => pageErrors.push(error.message));
+
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "ultramarines-firestorm-gw.txt");
+
+  await expect(
+    page.locator("#collapsed-phases, #Pregame-button").first(),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: /Firestorm Assault Force/ }),
+  ).toBeVisible();
+
+  await setPhase(page, isPhone, "Shooting");
+  await page.locator("#army-rule-button").click();
+  await page.locator("#print-button").first().click();
+  await expect(page.locator("#print-root")).toBeAttached();
+  await page.getByRole("dialog").locator("#close-button").click();
+
+  await page.locator("#reset-button").click();
+  await expect(page.locator("#add-list-button")).toBeVisible();
+  await expect(
+    page.getByText("Firestorm Assault Force", { exact: false }).first(),
+  ).toBeVisible();
+  expect(
+    pageErrors.some((message) =>
+      message.includes("Ambiguous detachment lookup"),
+    ),
+  ).toBe(false);
+});
+
+test("recovers a persisted roster render failure without losing source text", async ({
+  page,
+}) => {
+  await dismissFirstVisitModal(page);
+  await importFixture(page, "necron_attach.txt");
+
+  const saved = await page.evaluate(() => {
+    const raw = localStorage.getItem("army-storage");
+    if (!raw) throw new Error("expected persisted army-storage");
+    const parsed = JSON.parse(raw);
+    const stored = parsed.state.storedRosters[parsed.state.activeList];
+    return { uuid: stored.uuid, rawText: stored.rawText };
+  });
+
+  await page.evaluate(() => {
+    const raw = localStorage.getItem("army-storage");
+    if (!raw) throw new Error("expected persisted army-storage");
+    const parsed = JSON.parse(raw);
+    const stored = parsed.state.storedRosters[parsed.state.activeList];
+    delete stored.roster.units[0].ref;
+    localStorage.setItem("army-storage", JSON.stringify(parsed));
+  });
+  await page.goto("/");
+
+  await expect(page.getByRole("alert")).toContainText(
+    "We couldn't display this list. Its source text is still saved.",
+  );
+  await expect(page.locator("#render-error-return-button")).toBeVisible();
+  await page.locator("#render-error-return-button").click();
+
+  await expect(page.locator("#add-list-button")).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate((uuid) => {
+        const raw = localStorage.getItem("army-storage");
+        const parsed = JSON.parse(raw ?? "{}");
+        return parsed.state?.storedRosters?.find(
+          (stored: { uuid: string }) => stored.uuid === uuid,
+        )?.rawText;
+      }, saved.uuid),
+    )
+    .toBe(saved.rawText);
 });
 
 test("light mode and faction theme", async ({ page }, testInfo) => {
